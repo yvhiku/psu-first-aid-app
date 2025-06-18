@@ -1,0 +1,105 @@
+name: first_aid_app
+description: "PGU first aid app"
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  google_fonts: ^6.2.1
+  flutter_native_splash: ^2.4.6
+  get: ^4.7.2
+  show_hide_password: ^0.0.2
+  flutter_otp_text_field: ^1.5.1+1
+  url_launcher: ^6.1.7
+  iconsax_flutter: ^1.0.0
+  yandex_mapkit: ^4.1.0
+  geolocator: ^14.0.1
+  country_picker: ^2.0.27
+  firebase_core: ^3.13.1
+  firebase_auth: ^5.5.4
+  cloud_firestore: ^5.6.8
+  firebase_storage: ^12.4.6
+  shared_preferences: ^2.5.3
+  provider: ^6.1.5
+  pinput: ^5.0.1
+  image_picker: ^1.1.2
+  firebase_app_check: ^0.3.2+6
+  google_sign_in: ^6.3.0
+  line_awesome_flutter: ^3.0.1
+  
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/icons/user_pin.png
+    - assets/icons/hospital_pin.png
+    - assets/images/healthcare.png
+    - assets/images/wsimg.png
+    - assets/logo/google.png
+    - assets/icons/asthma.png
+    - assets/icons/band-aid.png
+    - assets/icons/biting.png
+    - assets/icons/burn.png
+    - assets/icons/choking.png
+    - assets/icons/cpr.png
+    - assets/icons/customer-service.png
+    - assets/icons/dust.png
+    - assets/icons/epilepsy.png
+    - assets/icons/head.png
+    - assets/icons/heart-attack.png
+    - assets/icons/helping-person.png
+    - assets/icons/info.png
+    - assets/icons/injury.png
+    - assets/icons/insurance.png
+    - assets/icons/logo.png
+    - assets/icons/logout.png
+    - assets/icons/medicines.png
+    - assets/icons/poison.png
+    - assets/icons/recovery-pos.png
+    - assets/icons/service-to-others.png
+    - assets/icons/sore-eyes.png
+    - assets/icons/seizure.png
+    - assets/icons/spinal-injury.png
+    - assets/icons/sprain.png
+    - assets/icons/stroke.png
+    - assets/icons/sugar-blood-level.png
+    - assets/icons/world.png
+    - assets/icons/wound.png
+    - assets/icons/forgot-password.png
+    - assets/images/verification.png
+    - assets/images/otp.png
+    - assets/images/support.png
+    - assets/images/otp_verification.png
+    - assets/icons/saved.png
+    - assets/icons/notsaved.png
+    - assets/images/profile.png
+
+  fonts:
+    - family: poppins
+      fonts:
+        - asset: fonts/Poppins-Bold.ttf
+          weight: 700
+        - asset: fonts/Poppins-Italic.ttf
+          weight: 300
+        - asset: fonts/Poppins-Light.ttf
+          weight: 300
+        - asset: fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: fonts/Poppins-Regular.ttf
+          weight: 400
+        - asset: fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: fonts/Poppins-Thin.ttf
+          weight: 500
