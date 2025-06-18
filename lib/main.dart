@@ -1,3 +1,4 @@
+import 'package:firebase_app_check/firebase_app_check.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -10,6 +11,10 @@ import 'package:first_aid_app/src/features/core/controllers/widgets/navbar.dart'
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  await FirebaseAppCheck.instance.activate(
+    androidProvider: AndroidProvider.playIntegrity, // or .safetyNet
+    webProvider: ReCaptchaV3Provider('your-recaptcha-public-site-key'),
+  );
   Get.put(TopicController()); // Initialize GetX controller
   runApp(const MyApp());
 }
