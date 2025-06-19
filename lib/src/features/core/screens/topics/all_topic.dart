@@ -18,6 +18,7 @@ import 'package:first_aid_app/src/features/core/screens/topics/heart_condition.d
 import 'package:first_aid_app/src/features/core/screens/topics/poisons.dart';
 import 'package:first_aid_app/src/features/core/screens/topics/recovery_pos.dart';
 import 'package:first_aid_app/src/features/core/screens/topics/seizures.dart';
+import 'package:first_aid_app/src/features/core/screens/topics/shock.dart';
 import 'package:first_aid_app/src/features/core/screens/topics/spinal_injury.dart';
 import 'package:first_aid_app/src/features/core/screens/topics/sprainsstrains.dart';
 import 'package:first_aid_app/src/features/core/screens/topics/stroke.dart';
@@ -185,7 +186,7 @@ class AllTopicsScreen extends StatelessWidget {
         'screen': const HeartCondition(),
       },
       {'image': tSeizureimg, 'title': tSeizure, 'screen': const Seizures()},
-      {'image': tEpilepsyimg, 'title': tShock, 'screen': const Stack()},
+      {'image': tEpilepsyimg, 'title': tShock, 'screen': const Shock()},
       {
         'image': tSpinalInjuryimg,
         'title': tSpinalInjury,
@@ -225,26 +226,27 @@ class AllTopicsScreen extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 10),
-        SizedBox(
-          height: 400, // Reduced height for compact view
-          child: GridView.builder(
-            physics: const AlwaysScrollableScrollPhysics(),
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              crossAxisSpacing: 10,
-              mainAxisSpacing: 10,
-              childAspectRatio: 3, // Wider and shorter buttons
-            ),
-            itemCount: topics.length,
-            itemBuilder: (context, index) {
-              return _buildCompactButton(
-                context,
-                topics[index]['image'],
-                topics[index]['title'],
-                topics[index]['screen'],
-              );
-            },
+        // Remove fixed height constraint and let it expand naturally
+        GridView.builder(
+          shrinkWrap: true, // Important for scrolling inside Column
+          physics:
+              const NeverScrollableScrollPhysics(), // Let parent SingleChildScrollView handle scrolling
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            crossAxisSpacing: 10,
+            mainAxisSpacing: 10,
+            childAspectRatio: 3, // Wider and shorter buttons
+            mainAxisExtent: 80, // Fixed height for each item
           ),
+          itemCount: topics.length,
+          itemBuilder: (context, index) {
+            return _buildCompactButton(
+              context,
+              topics[index]['image'],
+              topics[index]['title'],
+              topics[index]['screen'],
+            );
+          },
         ),
       ],
     );
@@ -256,40 +258,40 @@ class AllTopicsScreen extends StatelessWidget {
     String text,
     Widget screen,
   ) {
-    return SizedBox(
-      height: 70, // Fixed smaller height
-      child: OutlinedButton(
-        style: OutlinedButton.styleFrom(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10.0),
-          ),
-          foregroundColor: Colors.black,
-          backgroundColor: Colors.white,
-          side: BorderSide(color: Colors.grey.shade300),
-          padding: const EdgeInsets.all(6.0),
+    return OutlinedButton(
+      onPressed: () {
+        // Required parameter
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => screen),
+        );
+      },
+      style: OutlinedButton.styleFrom(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10.0),
         ),
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => screen),
-          );
-        },
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Image(image: AssetImage(image), width: 30.0), // Smaller icon
-            // const SizedBox(height: 5.0), // Reduced spacing
-            Text(
+        foregroundColor: Colors.black,
+        backgroundColor: Colors.white,
+        side: BorderSide(color: Colors.grey.shade300),
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
+      ),
+      child: Row(
+        // Required parameter
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Image(image: AssetImage(image), width: 30, height: 30),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Text(
               text,
-              textAlign: TextAlign.center,
               style: const TextStyle(
-                fontSize: 12, // Smaller font
+                fontSize: 12,
                 fontWeight: FontWeight.w600,
                 fontFamily: "Poppins",
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
