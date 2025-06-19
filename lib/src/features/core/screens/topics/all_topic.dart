@@ -24,7 +24,6 @@ import 'package:first_aid_app/src/features/core/screens/topics/stroke.dart';
 import 'package:first_aid_app/src/features/core/screens/topics/wound_care.dart';
 import 'package:flutter/material.dart';
 
-
 class AllTopicsScreen extends StatelessWidget {
   const AllTopicsScreen({super.key});
 
@@ -276,10 +275,10 @@ class AllTopicsScreen extends StatelessWidget {
           );
         },
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Image(image: AssetImage(image), width: 30.0), // Smaller icon
-            const SizedBox(height: 5.0), // Reduced spacing
+            // const SizedBox(height: 5.0), // Reduced spacing
             Text(
               text,
               textAlign: TextAlign.center,
