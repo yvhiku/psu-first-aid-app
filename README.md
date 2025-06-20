@@ -77,5 +77,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 📬 Contact
 
 For questions or suggestions, please contact:
-- [Your Name](mailto:your.email@example.com)
+- [Fikri Mohamed](mailto:your.yvhiku@yandex.ru)
 - Project Link: [https://github.com/yvhiku/pgu-first-aid-app](https://github.com/yvhiku/pgu-first-aid-app)
