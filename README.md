@@ -4,7 +4,9 @@ Here's an improved, more professional version of your README with better formatt
 # 🚑 First Aid Emergency Guide
 
 [![Flutter Version](https://img.shields.io/badge/Flutter-3.19.5-blue)](https://flutter.dev)
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 [![GitHub Stars](https://img.shields.io/github/stars/yvhiku/pgu-first-aid-app?style=social)](https://github.com/yvhiku/pgu-first-aid-app/stargazers)
 
 A comprehensive first aid reference application providing immediate guidance for emergency medical situations.
