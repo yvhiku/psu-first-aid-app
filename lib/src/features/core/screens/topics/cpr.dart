@@ -84,7 +84,7 @@ class CprScreen extends StatelessWidget {
               number: '2',
               title: 'Call for Help',
               description:
-                  'If unresponsive, call emergency services (e.g., 911) or ask someone to call.',
+                  'If unresponsive, call emergency services (e.g., 112) or ask someone to call.',
             ),
             _buildStep(
               number: '3',
@@ -102,7 +102,7 @@ class CprScreen extends StatelessWidget {
               number: '5',
               title: 'Start Chest Compressions',
               description:
-                  'Place hands on the center of the chest. Push hard and fast (2 inches deep at 100-120 compressions per minute).',
+                  'Place hands on the center of the chest. Push hard and fast (5cm deep at 100-120 compressions per minute).',
             ),
             _buildStep(
               number: '6',
