@@ -9,7 +9,6 @@ Here's an improved, more professional version of your README with better formatt
 
 A comprehensive first aid reference application providing immediate guidance for emergency medical situations.
 
-![App Preview](assets/screenshots/app_preview.gif)
 
 ## ✨ Key Features
 
