@@ -23,6 +23,7 @@ class AuthProvider1 extends ChangeNotifier {
   UserModel? get userModel => _userModel;
 
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
+  final GoogleSignIn _googleSignIn = GoogleSignIn();
   final FirebaseFirestore _firebaseFirestore = FirebaseFirestore.instance;
   final FirebaseStorage _firebaseStorage = FirebaseStorage.instance;
 
@@ -156,6 +157,7 @@ class AuthProvider1 extends ChangeNotifier {
       notifyListeners();
 
       await _firebaseAuth.signOut();
+      await _googleSignIn.signOut();
       final s = await SharedPreferences.getInstance();
       await s.clear();
 
@@ -181,6 +183,7 @@ class AuthProvider1 extends ChangeNotifier {
     notifyListeners();
 
     try {
+      await _googleSignIn.signOut();
       final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
       if (googleUser == null) {
         _isLoading = false;

@@ -12,8 +12,8 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   await FirebaseAppCheck.instance.activate(
-    androidProvider: AndroidProvider.playIntegrity, // or .safetyNet
-    webProvider: ReCaptchaV3Provider('your-recaptcha-public-site-key'),
+    androidProvider: AndroidProvider.playIntegrity, 
+    webProvider: ReCaptchaV3Provider('6Lc7jmQrAAAAAGjhheIZB01-eIDIjWEO1Vu8ypsR'),
   );
   Get.put(TopicController()); // Initialize GetX controller
   runApp(const MyApp());

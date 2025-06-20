@@ -32,6 +32,8 @@ dependencies:
   firebase_app_check: ^0.3.2+6
   google_sign_in: ^6.3.0
   line_awesome_flutter: ^3.0.1
+  flutter_screenutil: ^5.9.3
+  cached_network_image: ^3.4.1
   
 
 dev_dependencies:

@@ -2,10 +2,8 @@ import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:first_aid_app/src/features/core/controllers/widgets/navbar.dart';
-import 'package:first_aid_app/src/features/core/screens/topics/all_topic.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
 
 class SavedScreen extends StatelessWidget {
   const SavedScreen({super.key});
@@ -18,47 +16,50 @@ class SavedScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(
-          Icons.menu,
-          color: Color.fromARGB(255, 139, 47, 49),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: tPrimaryColor),
+          onPressed: () => navigationController.selectedIndex.value = 0,
         ),
-        title: IconButton(
-          onPressed: () {},
-          icon: Image(image: AssetImage(tLogo), height: height * 0.05),
-        ),
+        title: Image.asset(tLogo, height: height * 0.05),
         centerTitle: true,
         elevation: 0,
         actions: [
-          Container(
-            margin: const EdgeInsets.only(right: 20, top: 7),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: tCardBgColor,
-            ),
+          PopupMenuButton<String>(
+            icon: const Icon(Icons.more_vert, color: tPrimaryColor),
+            onSelected: (value) async {
+              if (value == 'clear_all') {
+                final confirmed = await showDialog(
+                  context: context,
+                  builder: (context) => AlertDialog(
+                    title: const Text('Confirm'),
+                    content: const Text('Clear all saved topics?'),
+                    actions: [
+                      TextButton(
+                        onPressed: () => Navigator.pop(context, false),
+                        child: const Text('Cancel'),
+                      ),
+                      TextButton(
+                        onPressed: () => Navigator.pop(context, true),
+                        child: const Text('Clear', style: TextStyle(color: Colors.red)),
+                      ),
+                    ],
+                  ),
+                );
+                if (confirmed == true) {
+                  await topicController.clearAllTopics();
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('All saved topics cleared')),
+                  );
+                }
+              }
+            },
+            itemBuilder: (context) => [
+              const PopupMenuItem(
+                value: 'clear_all',
+                child: Text('Clear All'),
+              ),
+            ],
           ),
-          // PopupMenuButton<String>(
-          //   icon: const Icon(
-          //     Icons.more_vert,
-          //     color: Color.fromARGB(255, 139, 47, 49),
-          //   ),
-          //   onSelected: (value) {
-          //     if (value == 'clear_all') {
-          //       topicController.savedTopics.clear();
-          //     }
-          //   },
-          //   itemBuilder:
-          //       (context) => [
-          //         const PopupMenuItem(
-          //           value: 'settings',
-          //           child: Text('Settings'),
-          //         ),
-          //         const PopupMenuItem(value: 'help', child: Text('Help')),
-          //         const PopupMenuItem(
-          //           value: 'clear_all',
-          //           child: Text('Clear All'),
-          //         ),
-          //       ],
-          // ),
         ],
       ),
       body: Obx(() {
@@ -76,7 +77,7 @@ class SavedScreen extends StatelessWidget {
                 const SizedBox(height: 10),
                 TextButton(
                   onPressed: () {
-                    navigationController.selectedIndex.value = 1;
+                    navigationController.selectedIndex.value = 1; // Navigate to topics
                   },
                   child: const Text(
                     'Browse Topics',
@@ -88,46 +89,114 @@ class SavedScreen extends StatelessWidget {
           );
         }
 
-        return ListView.builder(
-          padding: const EdgeInsets.all(16),
-          itemCount: topicController.savedTopics.length,
-          itemBuilder: (context, index) {
-            final topic = topicController.savedTopics[index];
-            return Card(
-              elevation: 2,
-              margin: const EdgeInsets.only(bottom: 16),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
+        return Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: Text(
+                '${topicController.savedTopics.length} Saved Topics',
+                style: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey,
+                ),
               ),
-              child: ListTile(
-                leading: CircleAvatar(
-                  backgroundColor: Colors.grey[200],
-                  child: Image(
-                    image: AssetImage(topic['image'] ?? tDefaultTopicImg),
-                    width: 30,
-                  ),
-                ),
-                title: Text(
-                  topic['title'],
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                  ),
-                ),
-                trailing: IconButton(
-                  icon: const Icon(Icons.bookmark, color: Colors.red),
-                  onPressed: () => topicController.removeTopic(topic),
-                ),
-                onTap: () {
-                  if (topic['screen'] != null) {
-                    Get.to(() => topic['screen'] as Widget);
-                  } else {
-                    Get.to(() => AllTopicsScreen());
-                  }
+            ),
+            Expanded(
+              child: ListView.builder(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                itemCount: topicController.savedTopics.length,
+                itemBuilder: (context, index) {
+                  final topic = topicController.savedTopics[index];
+                  return Dismissible(
+                    key: Key(topic['title']),
+                    background: Container(
+                      color: Colors.red,
+                      alignment: Alignment.centerRight,
+                      padding: const EdgeInsets.only(right: 20),
+                      child: const Icon(Icons.delete, color: Colors.white),
+                    ),
+                    confirmDismiss: (direction) async {
+                      return await showDialog(
+                        context: context,
+                        builder: (context) => AlertDialog(
+                          title: const Text('Confirm'),
+                          content: const Text('Remove this topic from saved?'),
+                          actions: [
+                            TextButton(
+                              onPressed: () => Navigator.pop(context, false),
+                              child: const Text('Cancel'),
+                            ),
+                            TextButton(
+                              onPressed: () => Navigator.pop(context, true),
+                              child: const Text('Remove', style: TextStyle(color: Colors.red)),
+                            ),
+                          ],
+                        ),
+                      );
+                    },
+                    onDismissed: (direction) async {
+                      await topicController.removeTopic(topic);
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text('${topic['title']} removed'),
+                          action: SnackBarAction(
+                            label: 'Undo',
+                            onPressed: () async {
+                              await topicController.addTopic(topic);
+                            },
+                          ),
+                        ),
+                      );
+                    },
+                    child: Card(
+                      elevation: 2,
+                      margin: const EdgeInsets.only(bottom: 16),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: ListTile(
+                        leading: CircleAvatar(
+                          backgroundColor: Colors.grey[200],
+                          child: Image(
+                            image: AssetImage(topic['image'] ?? tDefaultTopicImg),
+                            width: 30,
+                          ),
+                        ),
+                        title: Text(
+                          topic['title'],
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                          ),
+                        ),
+                        trailing: IconButton(
+                          icon: const Icon(Icons.bookmark, color: Colors.red),
+                          onPressed: () async {
+                            await topicController.removeTopic(topic);
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text('${topic['title']} removed'),
+                                action: SnackBarAction(
+                                  label: 'Undo',
+                                  onPressed: () async {
+                                    await topicController.addTopic(topic);
+                                  },
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+                        onTap: () {
+                          Get.to(() => topicController.getScreenForTopic(topic));
+                        },
+                      ),
+                    ),
+                  );
                 },
               ),
-            );
-          },
+            ),
+          ],
         );
       }),
     );
