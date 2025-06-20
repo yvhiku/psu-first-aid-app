@@ -1,5 +1,6 @@
 import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
+import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -11,7 +12,7 @@ class CprScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': 'CPR Instructions',
+      'title': cprTitle,
       'image': tCprimg,
       'screen': const CprScreen(),
       'type': 'cpr',
@@ -19,11 +20,10 @@ class CprScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('CPR Instructions'),
+        title: const Text(cprTitle),
         actions: [
           Obx(
-            () => // In your topic screens (e.g., CprScreen)
-            IconButton(
+            () => IconButton(
               icon: Icon(
                 topicController.isTopicSaved(currentTopic)
                     ? Icons.bookmark
@@ -38,8 +38,8 @@ class CprScreen extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? 'Added to saved topics'
-                          : 'Removed from saved topics',
+                          ? addedToSavedTopics
+                          : removedFromSavedTopics,
                     ),
                   ),
                 );
@@ -56,7 +56,7 @@ class CprScreen extends StatelessWidget {
             Image.asset(tCprimg, fit: BoxFit.cover),
             const SizedBox(height: 20),
             const Text(
-              'Cardiopulmonary Resuscitation (CPR)',
+              cprHeading,
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
@@ -65,87 +65,47 @@ class CprScreen extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             const Text(
-              'Performing CPR can save a life when someone’s breathing or heartbeat has stopped.',
+              cprIntro,
               style: TextStyle(fontSize: 16),
             ),
             const Divider(height: 30),
             const Text(
-              'Steps to Perform CPR:',
+              cprStepsHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildStep(
-              number: '1',
-              title: 'Check Responsiveness',
-              description:
-                  'Tap the person’s shoulder and shout, "Are you okay?"',
-            ),
-            _buildStep(
-              number: '2',
-              title: 'Call for Help',
-              description:
-                  'If unresponsive, call emergency services (e.g., 112) or ask someone to call.',
-            ),
-            _buildStep(
-              number: '3',
-              title: 'Open the Airway',
-              description:
-                  'Tilt the head back slightly and lift the chin to open the airway.',
-            ),
-            _buildStep(
-              number: '4',
-              title: 'Check for Breathing',
-              description:
-                  'Look, listen, and feel for breathing (no more than 10 seconds).',
-            ),
-            _buildStep(
-              number: '5',
-              title: 'Start Chest Compressions',
-              description:
-                  'Place hands on the center of the chest. Push hard and fast (5cm deep at 100-120 compressions per minute).',
-            ),
-            _buildStep(
-              number: '6',
-              title: 'Give Rescue Breaths',
-              description:
-                  'After 30 compressions, give 2 breaths (pinch the nose, cover the mouth with yours, and blow until the chest rises).',
-            ),
-            _buildStep(
-              number: '7',
-              title: 'Continue CPR',
-              description:
-                  'Repeat cycles of 30 compressions and 2 breaths until help arrives or the person revives.',
-            ),
+            _buildStep('1', cprStep1Title, cprStep1Description),
+            _buildStep('2', cprStep2Title, cprStep2Description),
+            _buildStep('3', cprStep3Title, cprStep3Description),
+            _buildStep('4', cprStep4Title, cprStep4Description),
+            _buildStep('5', cprStep5Title, cprStep5Description),
+            _buildStep('6', cprStep6Title, cprStep6Description),
+            _buildStep('7', cprStep7Title, cprStep7Description),
             const Divider(height: 30),
             const Text(
-              'Important Notes:',
+              cprNotesHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildBulletPoint('Use an AED if available.'),
-            _buildBulletPoint('For infants, use 2 fingers for compressions.'),
-            _buildBulletPoint(
-              'Do not stop unless the person starts breathing or help arrives.',
-            ),
+            _buildBulletPoint(cprNote1),
+            _buildBulletPoint(cprNote2),
+            _buildBulletPoint(cprNote3),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Link to a CPR demo video or emergency call
+                // Link to CPR video or action
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: tPrimaryColor, // Use your app's primary color
-                foregroundColor: Colors.white, // Text color
-                minimumSize: const Size(
-                  double.infinity,
-                  50,
-                ), // Full width + height
+                backgroundColor: tPrimaryColor,
+                foregroundColor: Colors.white,
+                minimumSize: const Size(double.infinity, 50),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8.0), // Rounded corners
+                  borderRadius: BorderRadius.circular(8.0),
                 ),
-                elevation: 4, // Shadow
+                elevation: 4,
               ),
               child: const Text(
-                'Watch CPR Demonstration',
+                cprWatchDemoButton,
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
             ),
@@ -155,11 +115,7 @@ class CprScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildStep({
-    required String number,
-    required String title,
-    required String description,
-  }) {
+  static Widget _buildStep(String number, String title, String description) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: Row(
@@ -168,14 +124,14 @@ class CprScreen extends StatelessWidget {
           Container(
             width: 30,
             height: 30,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.red,
               shape: BoxShape.circle,
             ),
             child: Center(
               child: Text(
                 number,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
@@ -189,7 +145,8 @@ class CprScreen extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: 16),
                 ),
                 Text(description),
               ],
@@ -200,13 +157,13 @@ class CprScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildBulletPoint(String text) {
+  static Widget _buildBulletPoint(String text) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4.0),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('• ', style: TextStyle(fontSize: 16)),
+          const Text('• ', style: TextStyle(fontSize: 16)),
           Expanded(child: Text(text)),
         ],
       ),

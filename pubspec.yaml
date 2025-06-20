@@ -34,7 +34,8 @@ dependencies:
   line_awesome_flutter: ^3.0.1
   flutter_screenutil: ^5.9.3
   cached_network_image: ^3.4.1
-  
+  flutter_localizations:
+        sdk: flutter
 
 dev_dependencies:
   flutter_test:
@@ -105,3 +106,5 @@ flutter:
           weight: 600
         - asset: fonts/Poppins-Thin.ttf
           weight: 500
+flutter_intl:
+  enabled: true

@@ -1,4 +1,5 @@
 import 'package:first_aid_app/src/constants/image_strings.dart';
+import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,37 +11,36 @@ class DrugOverdoseScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': 'Drug Overdose',
+      'title': drugOverdoseTitle,
       'image': tDrugOverDoseimg,
       'screen': const DrugOverdoseScreen(),
     };
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Drug Overdose'),
+        title: const Text(drugOverdoseTitle),
         actions: [
-          Obx(
-            () => IconButton(
-              icon: Icon(
-                topicController.isTopicSaved(currentTopic)
-                    ? Icons.bookmark
-                    : Icons.bookmark_border,
-                color: topicController.isTopicSaved(currentTopic) ? Colors.red : null,
-              ),
-              onPressed: () {
-                topicController.toggleTopicSave(currentTopic);
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text(
-                      topicController.isTopicSaved(currentTopic)
-                          ? 'Added to saved topics'
-                          : 'Removed from saved topics',
+          Obx(() => IconButton(
+                icon: Icon(
+                  topicController.isTopicSaved(currentTopic)
+                      ? Icons.bookmark
+                      : Icons.bookmark_border,
+                  color:
+                      topicController.isTopicSaved(currentTopic) ? Colors.red : null,
+                ),
+                onPressed: () {
+                  topicController.toggleTopicSave(currentTopic);
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text(
+                        topicController.isTopicSaved(currentTopic)
+                            ? 'Added to saved topics'
+                            : 'Removed from saved topics',
+                      ),
                     ),
-                  ),
-                );
-              },
-            ),
-          ),
+                  );
+                },
+              )),
         ],
       ),
       body: SingleChildScrollView(
@@ -49,63 +49,54 @@ class DrugOverdoseScreen extends StatelessWidget {
           Image.asset(tDrugOverDoseimg, fit: BoxFit.cover),
           const SizedBox(height: 20),
           const Text(
-            'Drug Overdose First Aid',
+            drugOverdoseMainHeading,
             style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.red),
           ),
           const SizedBox(height: 10),
-          const Text(
-            'Recognize the signs of overdose and provide immediate help.',
-            style: TextStyle(fontSize: 16),
-          ),
+          const Text(drugOverdoseIntro, style: TextStyle(fontSize: 16)),
           const Divider(height: 30),
-          const Text(
-            'Signs of Drug Overdose:',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),
+          const Text(drugOverdoseSignsHeading,
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
           const SizedBox(height: 10),
-          const Text('- Unresponsiveness or unconsciousness'),
-          const Text('- Difficulty breathing or slow breathing'),
-          const Text('- Seizures or convulsions'),
-          const Text('- Vomiting, pale or clammy skin'),
+          const Text(drugOverdoseSigns1),
+          const Text(drugOverdoseSigns2),
+          const Text(drugOverdoseSigns3),
+          const Text(drugOverdoseSigns4),
           const Divider(height: 30),
-          const Text(
-            'First Aid Steps:',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),
+          const Text(drugOverdoseStepsHeading,
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
           const SizedBox(height: 10),
           _buildStep(
             number: '1',
-            title: 'Call Emergency Services',
-            description: 'Immediately call for professional medical help.',
+            title: drugOverdoseStep1Title,
+            description: drugOverdoseStep1Desc,
           ),
           _buildStep(
             number: '2',
-            title: 'Ensure Safety',
-            description: 'Make sure the person and yourself are safe from harm.',
+            title: drugOverdoseStep2Title,
+            description: drugOverdoseStep2Desc,
           ),
           _buildStep(
             number: '3',
-            title: 'Check Responsiveness and Breathing',
-            description: 'If unresponsive, check if they are breathing.',
+            title: drugOverdoseStep3Title,
+            description: drugOverdoseStep3Desc,
           ),
           _buildStep(
             number: '4',
-            title: 'Perform CPR if Needed',
-            description: 'If no breathing or pulse, start CPR until help arrives.',
+            title: drugOverdoseStep4Title,
+            description: drugOverdoseStep4Desc,
           ),
           _buildStep(
             number: '5',
-            title: 'Place in Recovery Position',
-            description: 'If breathing but unconscious, place on their side to keep airway clear.',
+            title: drugOverdoseStep5Title,
+            description: drugOverdoseStep5Desc,
           ),
           const Divider(height: 30),
-          const Text(
-            'Important Notes:',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),
+          const Text(drugOverdoseImportantNotes,
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
           const SizedBox(height: 10),
-          _buildBulletPoint('Do NOT induce vomiting unless instructed by a medical professional.'),
-          _buildBulletPoint('Try to identify the substance involved to inform emergency responders.'),
+          _buildBulletPoint(drugOverdoseNote1),
+          _buildBulletPoint(drugOverdoseNote2),
         ]),
       ),
     );
@@ -122,9 +113,10 @@ class DrugOverdoseScreen extends StatelessWidget {
         Container(
           width: 30,
           height: 30,
-          decoration: BoxDecoration(color: Colors.red, shape: BoxShape.circle),
+          decoration: const BoxDecoration(color: Colors.red, shape: BoxShape.circle),
           child: Center(
-            child: Text(number, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+            child: Text(number,
+                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
           ),
         ),
         const SizedBox(width: 10),

@@ -1,4 +1,5 @@
 import 'package:first_aid_app/src/constants/image_strings.dart';
+import 'package:first_aid_app/src/constants/text_strings.dart'; // Import your string constants here
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,14 +11,14 @@ class PoisonScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': 'Poisons',
+      'title': poisonTitle,
       'image': tPoisonimg,
       'screen': const PoisonScreen(),
     };
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Poisons'),
+        title: const Text(poisonTitle),
         actions: [
           Obx(() => IconButton(
                 icon: Icon(
@@ -32,8 +33,8 @@ class PoisonScreen extends StatelessWidget {
                     SnackBar(
                       content: Text(
                         topicController.isTopicSaved(currentTopic)
-                            ? 'Added to saved topics'
-                            : 'Removed from saved topics',
+                            ? addedToSavedTopicsText
+                            : removedFromSavedTopicsText,
                       ),
                     ),
                   );
@@ -49,48 +50,33 @@ class PoisonScreen extends StatelessWidget {
             Image.asset(tPoisonimg, fit: BoxFit.cover),
             const SizedBox(height: 20),
             const Text(
-              'Poisoning First Aid',
+              poisonHeading,
               style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.red),
             ),
             const SizedBox(height: 10),
             const Text(
-              'Immediate actions to take in case of poisoning.',
+              poisonIntro,
               style: TextStyle(fontSize: 16),
             ),
             const Divider(height: 30),
             const Text(
-              'First Aid Steps:',
+              poisonStepsHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildStep(
-              '1',
-              'Remove the person from the source of poison if safe to do so.',
-            ),
-            _buildStep(
-              '2',
-              'Call emergency services immediately or a poison control center.',
-            ),
-            _buildStep(
-              '3',
-              'Check the person’s airway, breathing, and circulation.',
-            ),
-            _buildStep(
-              '4',
-              'If the person is unconscious and not breathing, begin CPR.',
-            ),
-            _buildStep(
-              '5',
-              'Do not induce vomiting unless instructed by a medical professional.',
-            ),
+            _buildStep('1', poisonStep1),
+            _buildStep('2', poisonStep2),
+            _buildStep('3', poisonStep3),
+            _buildStep('4', poisonStep4),
+            _buildStep('5', poisonStep5),
             const Divider(height: 30),
             const Text(
-              'Important Notes:',
+              poisonNotesHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildBullet('Try to identify the poison and keep the container or sample for medical staff.'),
-            _buildBullet('Avoid giving food, drinks, or medications without medical advice.'),
+            _buildBullet(poisonNote1),
+            _buildBullet(poisonNote2),
           ],
         ),
       ),

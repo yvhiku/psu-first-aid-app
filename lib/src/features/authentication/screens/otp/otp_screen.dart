@@ -1,6 +1,7 @@
 import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
 import 'package:first_aid_app/src/constants/sizes.dart';
+import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/authentication/provider/auth_provider.dart';
 import 'package:first_aid_app/src/features/authentication/screens/contacts/contact_support.dart';
 import 'package:first_aid_app/src/features/authentication/screens/user_info/user_info.dart';
@@ -29,7 +30,7 @@ class _OtpScreenState extends State<OtpScreen> {
         Provider.of<AuthProvider1>(context, listen: true).isLoading;
     return Scaffold(
       appBar: AppBar(
-        title: const Text("OTP Verification"),
+        title: const Text(tOTPveri),
         centerTitle: true,
         elevation: 0,
         leading: IconButton(
@@ -54,7 +55,7 @@ class _OtpScreenState extends State<OtpScreen> {
                         ),
                         const SizedBox(height: tFormHeight),
                         const Text(
-                          "Verification",
+                          tveri,
                           style: TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
@@ -63,7 +64,7 @@ class _OtpScreenState extends State<OtpScreen> {
                         ),
                         const SizedBox(height: 10),
                         const Text(
-                          "Enter the OTP sent to your phone number",
+                          tenterotp,
                           style: TextStyle(
                             fontSize: 14,
                             color: Colors.black38,
@@ -127,10 +128,10 @@ class _OtpScreenState extends State<OtpScreen> {
                               if (otpCode != null) {
                                 verifyOtp(context, otpCode!);
                               } else {
-                                showSnackBar(context, "Enter 6-Digit Code");
+                                showSnackBar(context, tenter6digit);
                               }
                             },
-                            child: const Text("VERIFY"),
+                            child: const Text(tVerify),
                           ),
                         ),
                         const SizedBox(height: tFormHeight - 20),
@@ -138,7 +139,7 @@ class _OtpScreenState extends State<OtpScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             const Text(
-                              "Didn't receive any code?",
+                              tdidntrecievecode,
                               style: TextStyle(
                                 fontSize: 14,
                                 color: Colors.black38,
@@ -150,7 +151,7 @@ class _OtpScreenState extends State<OtpScreen> {
                                 // Add resend logic here
                               },
                               child: const Text(
-                                "Resend",
+                                tResend,
                                 style: TextStyle(
                                   fontSize: 14,
                                   color: tPrimaryColor,
@@ -170,11 +171,11 @@ class _OtpScreenState extends State<OtpScreen> {
                                     Get.to(() => const ContactSupportScreen()),
                             child: Text.rich(
                               TextSpan(
-                                text: "Need help? ",
+                                text: tNeedHelp,
                                 style: TextStyle(color: Colors.grey[600]),
                                 children: const [
                                   TextSpan(
-                                    text: "Contact Support",
+                                    text: tContactSupport,
                                     style: TextStyle(
                                       color: tPrimaryColor,
                                       fontWeight: FontWeight.bold,

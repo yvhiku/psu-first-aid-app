@@ -1,4 +1,5 @@
 import 'package:first_aid_app/src/constants/image_strings.dart';
+import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,7 +11,7 @@ class BurnScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': 'Burns',
+      'title': tBurns,
       'image': tBurnimg,
       'screen': const BurnScreen(),
       'type': 'Burns',
@@ -18,7 +19,7 @@ class BurnScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Burns'),
+        title: const Text(tBurns),
         actions: [
           Obx(() => IconButton(
                 icon: Icon(
@@ -35,8 +36,8 @@ class BurnScreen extends StatelessWidget {
                     SnackBar(
                       content: Text(
                         topicController.isTopicSaved(currentTopic)
-                            ? 'Added to saved topics'
-                            : 'Removed from saved topics',
+                            ? taddedtosaved
+                            : tremovedtopic,
                       ),
                     ),
                   );
@@ -52,37 +53,32 @@ class BurnScreen extends StatelessWidget {
             Image.asset(tBurnimg, fit: BoxFit.cover),
             const SizedBox(height: 20),
             const Text(
-              'First Aid for Burns',
+              tBurnsTitle,
               style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.red),
             ),
             const SizedBox(height: 10),
             const Text(
-              'Burns can range from mild to life-threatening. First aid helps reduce damage and pain.',
+              tBurns1,
               style: TextStyle(fontSize: 16),
             ),
             const Divider(height: 30),
             const Text(
-              'Steps to Treat Burns:',
+              tBurns2,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
-            _buildStep('1', 'Stop the Burning Process',
-                'Remove the person from the heat source and extinguish flames.'),
-            _buildStep('2', 'Cool the Burn',
-                'Use cool (not cold) running water for 10–20 minutes.'),
-            _buildStep('3', 'Protect the Area',
-                'Cover loosely with a clean, non-stick cloth or dressing.'),
-            _buildStep('4', 'Avoid Creams or Ice',
-                'Do not apply butter, ointments, or ice directly.'),
-            _buildStep('5', 'Seek Help',
-                'Call emergency services for severe or large burns.'),
+            _buildStep('1', tBurns3, tBurns4),
+            _buildStep('2', tBurns5, tBurns6),
+            _buildStep('3', tBurns7, tBurns8),
+            _buildStep('4', tBurns9, tBurns10),
+            _buildStep('5', tBurns11, tBurns12),
             const Divider(height: 30),
             const Text(
-              'Burn Severity:',
+              tBurns13,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
-            _buildBulletPoint('First-degree: Red, painful (like sunburn).'),
-            _buildBulletPoint('Second-degree: Blisters, intense pain.'),
-            _buildBulletPoint('Third-degree: Charred, white, painless — call 911.'),
+            _buildBulletPoint(tBurns14),
+            _buildBulletPoint(tBurns15),
+            _buildBulletPoint(tBurns16),
           ],
         ),
       ),

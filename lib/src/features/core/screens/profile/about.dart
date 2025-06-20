@@ -1,3 +1,4 @@
+import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 
 class AboutScreen extends StatelessWidget {
@@ -20,7 +21,7 @@ class AboutScreen extends StatelessWidget {
         child: ListView(
           children: const [
             Text(
-              'About PGU First Aid App',
+              tAboutPGUFA,
               style: TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 24,
@@ -29,38 +30,35 @@ class AboutScreen extends StatelessWidget {
             ),
             SizedBox(height: 16),
             Text(
-              'The PGU First Aid App is designed to provide essential first aid information to users in emergency situations. Developed with students and the public in mind, this app offers easy-to-follow guides on handling common injuries and health emergencies.',
+              taboutHeader,
               style: baseStyle,
             ),
             SizedBox(height: 24),
-            Text('Features:', style: boldStyle),
+            Text(taboutHeader1, style: boldStyle),
             SizedBox(height: 8),
             Text(
-              '- Step-by-step instructions for first aid procedures.\n'
-              '- Topics include CPR, burns, choking, fractures, bleeding, and more.\n'
-              '- Offline access to vital information.\n'
-              '- Clean and simple interface for quick navigation.',
+              taboutparagraph,
               style: baseStyle,
             ),
             SizedBox(height: 24),
-            Text('Who Developed This App?', style: boldStyle),
+            Text(taboutHeader2, style: boldStyle),
             SizedBox(height: 8),
             Text(
-              'This app was developed as part of a student project at PGU (Penza State University), with the goal of enhancing public safety awareness and response skills.',
+              taboutparagraph2,
               style: baseStyle,
             ),
             SizedBox(height: 24),
-            Text('Disclaimer:', style: boldStyle),
+            Text(taboutHeader3, style: boldStyle),
             SizedBox(height: 8),
             Text(
-              'This app is intended for educational purposes and general guidance only. It is not a substitute for professional medical advice or training. In a medical emergency, always contact emergency services or a healthcare professional.',
+              taboutparagraph3,
               style: baseStyle,
             ),
             SizedBox(height: 24),
-            Text('Contact Us:', style: boldStyle),
+            Text(taboutHeader4, style: boldStyle),
             SizedBox(height: 8),
             Text(
-              'For feedback or inquiries, please contact:\nyvhiku@yandex.ru',
+              taboutparagraph4,
               style: baseStyle,
             ),
           ],

@@ -56,7 +56,7 @@ class ProfileScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('No user data found', style: TextStyle(fontSize: 18)),
+            const Text(tUserNotFound, style: TextStyle(fontSize: 18)),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () => ap.getDataFromFirestore(),
@@ -73,7 +73,7 @@ class ProfileScreen extends StatelessWidget {
                 elevation: 0, // Remove shadow if desired
               ),
               child: const Text(
-                'Retry Loading',
+                tRetryLaoding,
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w500,

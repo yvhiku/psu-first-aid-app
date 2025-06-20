@@ -10,7 +10,7 @@ class ContactSupportScreen extends StatelessWidget {
 
   Future<void> _launchPhone(BuildContext context) async {
     const phoneNumber = '+79960808085';
-    final Uri phoneUri = Uri(scheme: 'tel', path: phoneNumber);
+    final Uri phoneUri = Uri(scheme: tTel, path: phoneNumber);
 
     try {
       if (await canLaunchUrl(phoneUri)) {
@@ -27,11 +27,11 @@ class ContactSupportScreen extends StatelessWidget {
 
   Future<void> _launchEmail(BuildContext context) async {
     const email = 'yvhiku@yandex.ru';
-    const subject = 'App Support Request';
+    const subject = tsubject;
     final Uri emailUri = Uri(
-      scheme: 'mailto',
+      scheme: tMailto,
       path: email,
-      queryParameters: {'subject': subject},
+      queryParameters: {tSubject1 : subject},
     );
 
     try {
@@ -54,12 +54,12 @@ class ContactSupportScreen extends StatelessWidget {
     return showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Cannot Make Call'),
+        title: const Text(tCannotmakecall),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('Please call this number directly:'),
+            const Text(tcallthisnum),
             const SizedBox(height: 10),
             SelectableText(
               phoneNumber,
@@ -74,17 +74,17 @@ class ContactSupportScreen extends StatelessWidget {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('OK'),
+            child: const Text(tOK),
           ),
           TextButton(
             onPressed: () {
               Clipboard.setData(ClipboardData(text: phoneNumber));
               ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Phone number copied')),
+                const SnackBar(content: Text(tcopyphone)),
               );
               Navigator.pop(context);
             },
-            child: const Text('COPY'),
+            child: const Text(tCopy),
           ),
         ],
       ),
@@ -95,12 +95,12 @@ class ContactSupportScreen extends StatelessWidget {
     return showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Cannot Send Email'),
+        title: const Text(tCannotsendemail),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('Please contact us at:'),
+            const Text(tPleasecontactusat),
             const SizedBox(height: 10),
             SelectableText(
               email,
@@ -115,17 +115,17 @@ class ContactSupportScreen extends StatelessWidget {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text('OK'),
+            child: const Text(tOK),
           ),
           TextButton(
             onPressed: () {
               Clipboard.setData(ClipboardData(text: email));
               ScaffoldMessenger.of(
                 context,
-              ).showSnackBar(const SnackBar(content: Text('Email copied')));
+              ).showSnackBar(const SnackBar(content: Text(tEmailcopied)));
               Navigator.pop(context);
             },
-            child: const Text('COPY'),
+            child: const Text(tCopy),
           ),
         ],
       ),
@@ -153,48 +153,48 @@ class ContactSupportScreen extends StatelessWidget {
             ),
             const SizedBox(height: tDefaultSize),
             Text(
-              "We're here to help!",
+              theretohelp,
               style: Theme.of(
                 context,
               ).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
             Text(
-              "Contact our support team through any of the following methods:",
+              tcontactoursupport,
               style: Theme.of(context).textTheme.bodyLarge,
             ),
             const SizedBox(height: tDefaultSize),
             _buildContactCard(
               context,
               icon: Icons.email,
-              title: "Email Support",
-              subtitle: "Get help via email",
-              actionText: "Send Email",
+              title: tEmailsupport,
+              subtitle: tGetHelpviaemail,
+              actionText: tSendemail,
               onTap: () => _launchEmail(context),
             ),
             _buildContactCard(
               context,
               icon: Icons.phone,
-              title: "Phone Support",
-              subtitle: "Call our support team",
-              actionText: "Call Now",
+              title: tPhonesupport,
+              subtitle: tCalloursupport,
+              actionText: tCallNow,
               onTap: () => _launchPhone(context),
             ),
             _buildContactCard(
               context,
               icon: Icons.chat_bubble,
-              title: "Live Chat",
-              subtitle: "Chat with an agent",
-              actionText: "Start Chat",
+              title: tLivechat,
+              subtitle: tchatwithagent,
+              actionText: tStartchat,
               onTap: () {
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text("Live chat coming soon!")),
+                  const SnackBar(content: Text(tchatagentcomingsoon)),
                 );
               },
             ),
             const SizedBox(height: tDefaultSize),
             Text(
-              "Frequently Asked Questions",
+              tFAQ,
               style: Theme.of(
                 context,
               ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
@@ -258,24 +258,24 @@ class ContactSupportScreen extends StatelessWidget {
   List<Widget> _buildFAQItems(BuildContext context) {
     final faqs = [
       {
-        "question": "How do I reset my password?",
-        "answer":
-            "You don't need to reset password cause you automatically login to your account using Google Account.",
+        tQuestion: tQuestion1,
+        tAnswer:
+            tAnswer1,
       },
       {
-        "question": "How do I contact customer service?",
-        "answer":
-            "Use any of the contact methods above or visit our website for more options.",
+        tQuestion: tQuestion2,
+        tAnswer:
+            tAnswer2,
       },
     ];
 
     return faqs.map((faq) {
       return ExpansionTile(
-        title: Text(faq["question"]!),
+        title: Text(faq[tQuestion]!),
         children: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-            child: Text(faq["answer"]!),
+            child: Text(faq[tAnswer]!),
           ),
         ],
       );

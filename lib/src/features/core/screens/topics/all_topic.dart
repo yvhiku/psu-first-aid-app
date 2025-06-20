@@ -217,7 +217,7 @@ class AllTopicsScreen extends StatelessWidget {
         const Padding(
           padding: EdgeInsets.symmetric(horizontal: 8.0),
           child: Text(
-            'More First Aid Topics',
+            tMotetopics,
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,

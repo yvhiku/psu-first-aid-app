@@ -1,4 +1,5 @@
 import 'package:first_aid_app/src/constants/image_strings.dart';
+import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,14 +11,14 @@ class WoundCare extends StatelessWidget {
   Widget build(BuildContext context) {
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': 'Wound Care',
+      'title': woundCareTitle,
       'image': tBandAidimg,
       'screen': const WoundCare(),
     };
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Wound Care'),
+        title: const Text(woundCareTitle),
         actions: [
           Obx(
             () => IconButton(
@@ -35,8 +36,8 @@ class WoundCare extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? 'Added to saved topics'
-                          : 'Removed from saved topics',
+                          ? addedToSavedTopicsText
+                          : removedFromSavedTopicsText,
                     ),
                   ),
                 );
@@ -53,62 +54,37 @@ class WoundCare extends StatelessWidget {
             Image.asset(tBandAidimg, fit: BoxFit.cover),
             const SizedBox(height: 16),
             const Text(
-              'Wound Care',
+              woundCareTitle,
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
             const Text(
-              'Proper wound care helps prevent infection and promotes faster healing.',
+              woundCareIntro,
               style: TextStyle(fontSize: 16),
             ),
             const SizedBox(height: 20),
             const Text(
-              'Steps for Basic Wound Care:',
+              woundCareStepsHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            _buildStep(
-              '1',
-              'Wash your hands thoroughly before touching the wound.',
-            ),
-            _buildStep(
-              '2',
-              'Stop the bleeding by applying gentle pressure with a clean cloth.',
-            ),
-            _buildStep(
-              '3',
-              'Clean the wound with clean water. Avoid using hydrogen peroxide or iodine directly as they may damage tissue.',
-            ),
-            _buildStep(
-              '4',
-              'Apply an antibiotic ointment to prevent infection.',
-            ),
-            _buildStep(
-              '5',
-              'Cover the wound with a sterile bandage or dressing.',
-            ),
-            _buildStep(
-              '6',
-              'Change the dressing daily or whenever it becomes wet or dirty.',
-            ),
-            _buildStep(
-              '7',
-              'Watch for signs of infection: increased redness, swelling, warmth, pain, or pus.',
-            ),
+            _buildStep('1', woundCareStep1),
+            _buildStep('2', woundCareStep2),
+            _buildStep('3', woundCareStep3),
+            _buildStep('4', woundCareStep4),
+            _buildStep('5', woundCareStep5),
+            _buildStep('6', woundCareStep6),
+            _buildStep('7', woundCareStep7),
             const SizedBox(height: 20),
             const Text(
-              'When to Seek Medical Help:',
+              woundCareMedicalHelpHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            _buildBullet('The wound is deep, large, or won’t stop bleeding.'),
-            _buildBullet('You see signs of infection.'),
-            _buildBullet(
-              'The wound was caused by a dirty or rusty object, or an animal bite.',
-            ),
-            _buildBullet(
-              'You have not had a tetanus shot in the last 5 years.',
-            ),
+            _buildBullet(woundCareMedicalHelp1),
+            _buildBullet(woundCareMedicalHelp2),
+            _buildBullet(woundCareMedicalHelp3),
+            _buildBullet(woundCareMedicalHelp4),
           ],
         ),
       ),
@@ -126,16 +102,11 @@ class WoundCare extends StatelessWidget {
             backgroundColor: Colors.red,
             child: Text(
               number,
-              style: const TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-              ),
+              style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
             ),
           ),
           const SizedBox(width: 12),
-          Expanded(
-            child: Text(description, style: const TextStyle(fontSize: 16)),
-          ),
+          Expanded(child: Text(description, style: const TextStyle(fontSize: 16))),
         ],
       ),
     );

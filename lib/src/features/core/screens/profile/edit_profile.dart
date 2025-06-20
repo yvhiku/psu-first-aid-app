@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
 import 'package:first_aid_app/src/constants/sizes.dart';
+import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/authentication/model/user_model.dart';
 import 'package:first_aid_app/src/features/authentication/provider/auth_provider.dart';
 import 'package:first_aid_app/src/features/authentication/screens/contacts/contact_support.dart';
@@ -42,7 +43,7 @@ class _UpdatedProfileScreen extends State<UpdatedProfileScreen> {
     final isLoading = Provider.of<AuthProvider1>(context, listen: true).isLoading;
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Edit Profile"),
+        title: const Text(tEditProfile),
         centerTitle: true,
         elevation: 0,
       ),
@@ -108,7 +109,7 @@ class _UpdatedProfileScreen extends State<UpdatedProfileScreen> {
                                 color: tPrimaryColor,
                               ),
                               decoration: InputDecoration(
-                                labelText: "Full Name",
+                                labelText: tFullname,
                                 labelStyle: GoogleFonts.poppins(
                                   fontSize: 14,
                                   color: Colors.grey.shade600,
@@ -142,7 +143,7 @@ class _UpdatedProfileScreen extends State<UpdatedProfileScreen> {
                                 color: tPrimaryColor,
                               ),
                               decoration: InputDecoration(
-                                labelText: "E-mail",
+                                labelText: tEmail,
                                 labelStyle: GoogleFonts.poppins(
                                   fontSize: 14,
                                   color: Colors.grey.shade600,
@@ -177,7 +178,7 @@ class _UpdatedProfileScreen extends State<UpdatedProfileScreen> {
                                 color: Colors.black87,
                               ),
                               decoration: InputDecoration(
-                                labelText: "Tell others about yourself",
+                                labelText: ttellothersaboutyou,
                                 labelStyle: GoogleFonts.poppins(
                                   fontSize: 14,
                                   color: Colors.grey[600],
@@ -217,7 +218,7 @@ class _UpdatedProfileScreen extends State<UpdatedProfileScreen> {
                                   padding: EdgeInsets.symmetric(vertical: tButtonHeight),
                                 ),
                                 onPressed: () => storeData(),
-                                child: const Text("CONTINUE"),
+                                child: const Text(tCONTINUE),
                               ),
                             ),
                             const SizedBox(height: tFormHeight - 15),
@@ -232,11 +233,11 @@ class _UpdatedProfileScreen extends State<UpdatedProfileScreen> {
                                 ),
                                 child: Text.rich(
                                   TextSpan(
-                                    text: "Need help? ",
+                                    text: tNeedHelp,
                                     style: TextStyle(color: Colors.grey[600]),
                                     children: const [
                                       TextSpan(
-                                        text: "Contact Support",
+                                        text: tContactSupport,
                                         style: TextStyle(
                                           color: tPrimaryColor,
                                           fontWeight: FontWeight.bold,
@@ -287,7 +288,7 @@ class _UpdatedProfileScreen extends State<UpdatedProfileScreen> {
         },
       );
     } else {
-      showSnackBar(context, "Please upload your profile photo");
+      showSnackBar(context, tPleaseuploadphoto);
     }
   }
 }

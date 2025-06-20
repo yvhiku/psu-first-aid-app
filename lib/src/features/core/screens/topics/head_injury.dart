@@ -1,4 +1,5 @@
 import 'package:first_aid_app/src/constants/image_strings.dart';
+import 'package:first_aid_app/src/constants/text_strings.dart'; // Your constants file for all strings
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,35 +11,37 @@ class HeadInjury extends StatelessWidget {
   Widget build(BuildContext context) {
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': 'Head Injury',
+      'title': headInjuryTitle,
       'image': tHeadimg,
       'screen': const HeadInjury(),
     };
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Head Injury'),
+        title: const Text(headInjuryTitle),
         actions: [
-          Obx(() => IconButton(
-                icon: Icon(
-                  topicController.isTopicSaved(currentTopic)
-                      ? Icons.bookmark
-                      : Icons.bookmark_border,
-                  color: topicController.isTopicSaved(currentTopic) ? Colors.red : null,
-                ),
-                onPressed: () {
-                  topicController.toggleTopicSave(currentTopic);
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text(
-                        topicController.isTopicSaved(currentTopic)
-                            ? 'Added to saved topics'
-                            : 'Removed from saved topics',
-                      ),
+          Obx(
+            () => IconButton(
+              icon: Icon(
+                topicController.isTopicSaved(currentTopic)
+                    ? Icons.bookmark
+                    : Icons.bookmark_border,
+                color: topicController.isTopicSaved(currentTopic) ? Colors.red : null,
+              ),
+              onPressed: () {
+                topicController.toggleTopicSave(currentTopic);
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text(
+                      topicController.isTopicSaved(currentTopic)
+                          ? taddedtosaved
+                          : tremovedtopic,
                     ),
-                  );
-                },
-              )),
+                  ),
+                );
+              },
+            ),
+          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -49,50 +52,50 @@ class HeadInjury extends StatelessWidget {
             Image.asset(tHeadimg, fit: BoxFit.cover),
             const SizedBox(height: 20),
             const Text(
-              'Head Injury First Aid',
+              headInjuryHeading,
               style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.red),
             ),
             const SizedBox(height: 10),
             const Text(
-              'Providing first aid for head injuries is crucial to prevent further damage and complications.',
+              headInjuryIntro,
               style: TextStyle(fontSize: 16),
             ),
             const Divider(height: 30),
             const Text(
-              'First Aid Steps:',
+              headInjuryStepsHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
             _buildStep(
               '1',
-              'Keep the person still and calm.',
-              'Avoid moving the head or neck to prevent spinal injury.',
+              headInjuryStep1Title,
+              headInjuryStep1Desc,
             ),
             _buildStep(
               '2',
-              'Check for any bleeding or wounds on the head.',
-              'Apply gentle pressure with a clean cloth if bleeding is present.',
+              headInjuryStep2Title,
+              headInjuryStep2Desc,
             ),
             _buildStep(
               '3',
-              'If the person is unconscious, ensure the airway is clear.',
+              headInjuryStep3Title,
             ),
             _buildStep(
               '4',
-              'If vomiting occurs, turn the person onto their side to prevent choking.',
+              headInjuryStep4Title,
             ),
             _buildStep(
               '5',
-              'Call emergency services immediately.',
+              headInjuryStep5Title,
             ),
             const Divider(height: 30),
             const Text(
-              'Important Notes:',
+              headInjuryNotesHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildBullet('Do not give the person food or drink.'),
-            _buildBullet('Avoid applying ice or cold packs without medical advice.'),
+            _buildBullet(headInjuryNote1),
+            _buildBullet(headInjuryNote2),
           ],
         ),
       ),

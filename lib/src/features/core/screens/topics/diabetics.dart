@@ -1,4 +1,5 @@
 import 'package:first_aid_app/src/constants/image_strings.dart';
+import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,14 +11,14 @@ class DiabeticsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': 'Diabetics',
+      'title': diabeticsTitle,
       'image': tDiabeticsimg,
       'screen': const DiabeticsScreen(),
     };
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Diabetics'),
+        title: const Text(diabeticsAppBarTitle),
         actions: [
           Obx(
             () => IconButton(
@@ -51,55 +52,55 @@ class DiabeticsScreen extends StatelessWidget {
             Image.asset(tDiabeticsimg, fit: BoxFit.cover),
             const SizedBox(height: 20),
             const Text(
-              'Diabetic Emergency First Aid',
+              diabeticsHeader,
               style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.red),
             ),
             const SizedBox(height: 10),
             const Text(
-              'Recognizing and managing diabetic emergencies such as hypoglycemia (low blood sugar) is critical.',
+              diabeticsIntro,
               style: TextStyle(fontSize: 16),
             ),
             const Divider(height: 30),
             const Text(
-              'Signs of Low Blood Sugar (Hypoglycemia):',
+              diabeticsSignsTitle,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            const Text('- Shakiness, sweating, confusion, dizziness, irritability, headache'),
+            const Text(diabeticsSignsList),
             const Divider(height: 30),
             const Text(
-              'First Aid Steps:',
+              diabeticsStepsTitle,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
             _buildStep(
               number: '1',
-              title: 'Check Responsiveness',
-              description: 'If the person is conscious, ask if they have diabetes.',
+              title: diabeticsStep1Title,
+              description: diabeticsStep1Desc,
             ),
             _buildStep(
               number: '2',
-              title: 'Give Sugar',
-              description: 'Give 15-20 grams of fast-acting sugar (fruit juice, glucose tablets, candy).',
+              title: diabeticsStep2Title,
+              description: diabeticsStep2Desc,
             ),
             _buildStep(
               number: '3',
-              title: 'Wait and Monitor',
-              description: 'Wait 15 minutes, then recheck symptoms. Repeat sugar intake if needed.',
+              title: diabeticsStep3Title,
+              description: diabeticsStep3Desc,
             ),
             _buildStep(
               number: '4',
-              title: 'Call Emergency Services',
-              description: 'If the person loses consciousness, becomes confused, or symptoms worsen, call for help immediately.',
+              title: diabeticsStep4Title,
+              description: diabeticsStep4Desc,
             ),
             const Divider(height: 30),
             const Text(
-              'Important Notes:',
+              diabeticsNotesTitle,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildBulletPoint('Do NOT give food or drink if the person is unconscious.'),
-            _buildBulletPoint('If unconscious, place in recovery position and call emergency services.'),
+            _buildBulletPoint(diabeticsNote1),
+            _buildBulletPoint(diabeticsNote2),
           ],
         ),
       ),
@@ -119,16 +120,21 @@ class DiabeticsScreen extends StatelessWidget {
           Container(
             width: 30,
             height: 30,
-            decoration: BoxDecoration(color: Colors.red, shape: BoxShape.circle),
+            decoration: const BoxDecoration(color: Colors.red, shape: BoxShape.circle),
             child: Center(
-              child: Text(number, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+              child: Text(number,
+                  style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
             ),
           ),
           const SizedBox(width: 10),
-          Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-            Text(description),
-          ])),
+          Expanded(
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                Text(title,
+                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                Text(description),
+              ])),
         ],
       ),
     );

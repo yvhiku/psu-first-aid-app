@@ -1,4 +1,4 @@
-import 'package:first_aid_app/src/constants/colors.dart';
+import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 
 class PrivacyPolicyScreen extends StatelessWidget {
@@ -16,7 +16,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Privacy Policy',
+          tPrivacyPolicy,
           style: TextStyle(fontFamily: 'Poppins'),
         ),
       ),
@@ -25,7 +25,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
         child: ListView(
           children: const [
             Text(
-              'Privacy Policy',
+              tPrivacyPolicy,
               style: TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 24,
@@ -34,50 +34,46 @@ class PrivacyPolicyScreen extends StatelessWidget {
             ),
             SizedBox(height: 16),
             Text(
-              'Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you use the First Aid App.',
+              tPrivacyPolicyHeader,
               style: baseStyle,
             ),
             SizedBox(height: 24),
-            Text('1. Information We Collect', style: boldStyle),
+            Text(tPrivacyQ1, style: boldStyle),
             SizedBox(height: 8),
             Text(
-              '- Personal information you provide, such as your name and email when signing up.\n'
-              '- Data related to app usage, saved topics, and preferences.',
+              tPrivacyA1,
               style: baseStyle,
             ),
             SizedBox(height: 24),
-            Text('2. How We Use Your Information', style: boldStyle),
+            Text(tPrivacyQ2, style: boldStyle),
             SizedBox(height: 8),
             Text(
-              '- To provide personalized features like saving topics.\n'
-              '- To improve the app and user experience.\n'
-              '- We do NOT share or sell your personal data to third parties.',
+              tPrivacyA2,
               style: baseStyle,
             ),
             SizedBox(height: 24),
-            Text('3. Data Security', style: boldStyle),
+            Text(tPrivacyQ3, style: boldStyle),
             SizedBox(height: 8),
             Text(
-              'We use secure authentication (Firebase Auth) and encrypted cloud storage (Firebase Storage & Firestore) to keep your data safe.',
+              tPrivacyA3,
               style: baseStyle,
             ),
             SizedBox(height: 24),
-            Text('4. Your Choices', style: boldStyle),
+            Text(tPrivacyQ4, style: boldStyle),
             SizedBox(height: 8),
             Text(
-              '- You can delete your account and all data at any time.\n'
-              '- Contact us for any questions or data requests.',
+              tPrivacyA4,
               style: baseStyle,
             ),
             SizedBox(height: 24),
-            Text('5. Changes to This Policy', style: boldStyle),
+            Text(tPrivacyQ5, style: boldStyle),
             SizedBox(height: 8),
             Text(
-              'We may update this policy from time to time. We will notify you of any major changes.',
+              tPrivacyA5,
               style: baseStyle,
             ),
             SizedBox(height: 24),
-            Text('Contact Us:\nyvhiku@yandex.ru', style: baseStyle),
+            Text(tcontactUsIn, style: baseStyle),
           ],
         ),
       ),

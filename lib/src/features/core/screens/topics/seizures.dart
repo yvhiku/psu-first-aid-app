@@ -1,4 +1,5 @@
 import 'package:first_aid_app/src/constants/image_strings.dart';
+import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,14 +11,14 @@ class Seizures extends StatelessWidget {
   Widget build(BuildContext context) {
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': 'Seizures',
+      'title': seizuresTitle,
       'image': tSeizureimg,
       'screen': const Seizures(),
     };
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Seizures'),
+        title: const Text(seizuresTitle),
         actions: [
           Obx(
             () => IconButton(
@@ -25,9 +26,7 @@ class Seizures extends StatelessWidget {
                 topicController.isTopicSaved(currentTopic)
                     ? Icons.bookmark
                     : Icons.bookmark_border,
-                color: topicController.isTopicSaved(currentTopic)
-                    ? Colors.red
-                    : null,
+                color: topicController.isTopicSaved(currentTopic) ? Colors.red : null,
               ),
               onPressed: () {
                 topicController.toggleTopicSave(currentTopic);
@@ -35,8 +34,8 @@ class Seizures extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? 'Added to saved topics'
-                          : 'Removed from saved topics',
+                          ? addedToSavedTopicsText
+                          : removedFromSavedTopicsText,
                     ),
                   ),
                 );
@@ -50,61 +49,37 @@ class Seizures extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.asset(
-              tSeizureimg, fit: BoxFit.cover
-            ),
+            Image.asset(tSeizureimg, fit: BoxFit.cover),
             const SizedBox(height: 16),
             const Text(
-              'Seizures',
+              seizuresHeading,
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
             const Text(
-              'A seizure is a sudden, uncontrolled electrical disturbance in the brain. It can cause changes in behavior, movements, or consciousness.',
+              seizuresIntro,
               style: TextStyle(fontSize: 16),
             ),
             const SizedBox(height: 20),
             const Text(
-              'First Aid for Seizures:',
+              seizuresFirstAidHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            _buildStep(
-              '1',
-              'Stay calm and keep others away from the person to avoid injury.',
-            ),
-            _buildStep(
-              '2',
-              'Protect their head by placing something soft underneath.',
-            ),
-            _buildStep(
-              '3',
-              'Turn the person onto their side to keep the airway clear.',
-            ),
-            _buildStep(
-              '4',
-              'Do not restrain their movements or put anything in their mouth.',
-            ),
-            _buildStep(
-              '5',
-              'Time the seizure. If it lasts longer than 5 minutes, call emergency services.',
-            ),
-            _buildStep(
-              '6',
-              'After the seizure, comfort and reassure the person as they regain consciousness.',
-            ),
+            _buildStep('1', seizuresStep1),
+            _buildStep('2', seizuresStep2),
+            _buildStep('3', seizuresStep3),
+            _buildStep('4', seizuresStep4),
+            _buildStep('5', seizuresStep5),
+            _buildStep('6', seizuresStep6),
             const SizedBox(height: 20),
             const Text(
-              'Important:',
+              seizuresImportantHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
-            _buildBullet(
-              'Call emergency services if this is the person’s first seizure.',
-            ),
-            _buildBullet(
-              'Seek medical help if the person has trouble breathing or does not wake up after the seizure.',
-            ),
+            _buildBullet(seizuresNote1),
+            _buildBullet(seizuresNote2),
           ],
         ),
       ),
@@ -129,9 +104,7 @@ class Seizures extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 12),
-          Expanded(
-            child: Text(description, style: const TextStyle(fontSize: 16)),
-          ),
+          Expanded(child: Text(description, style: const TextStyle(fontSize: 16))),
         ],
       ),
     );

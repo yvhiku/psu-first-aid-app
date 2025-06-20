@@ -1,4 +1,5 @@
 import 'package:first_aid_app/src/constants/image_strings.dart';
+import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,14 +11,14 @@ class SprainsStrains extends StatelessWidget {
   Widget build(BuildContext context) {
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': 'Sprains and Strains',
+      'title': sprainsStrainsTitle,
       'image': tSprainimg,
       'screen': const SprainsStrains(),
     };
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Sprains and Strains'),
+        title: const Text(sprainsStrainsTitle),
         actions: [
           Obx(
             () => IconButton(
@@ -35,8 +36,8 @@ class SprainsStrains extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? 'Added to saved topics'
-                          : 'Removed from saved topics',
+                          ? addedToSavedTopicsText
+                          : removedFromSavedTopicsText,
                     ),
                   ),
                 );
@@ -56,36 +57,36 @@ class SprainsStrains extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             const Text(
-              'Sprains and Strains',
+              sprainsStrainsTitle,
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
             const Text(
-              'Sprains are injuries to ligaments (tissue connecting bones), and strains are injuries to muscles or tendons.',
+              sprainsStrainsIntro,
               style: TextStyle(fontSize: 16),
             ),
             const SizedBox(height: 20),
             const Text(
-              'Signs:',
+              sprainsStrainsSignsHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            _buildBullet('Pain and swelling'),
-            _buildBullet('Bruising or discoloration'),
-            _buildBullet('Limited ability to move the affected joint or muscle'),
-            _buildBullet('Muscle spasms or weakness'),
+            _buildBullet(sprainsStrainsSign1),
+            _buildBullet(sprainsStrainsSign2),
+            _buildBullet(sprainsStrainsSign3),
+            _buildBullet(sprainsStrainsSign4),
             const SizedBox(height: 20),
             const Text(
-              'First Aid for Sprains and Strains:',
+              sprainsStrainsFirstAidHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            _buildStep('1', 'Rest the injured area and avoid putting weight on it.'),
-            _buildStep('2', 'Apply ice packs for 15-20 minutes every 2-3 hours to reduce swelling.'),
-            _buildStep('3', 'Compress the area with an elastic bandage, but not too tightly.'),
-            _buildStep('4', 'Elevate the injured limb above heart level to reduce swelling.'),
-            _buildStep('5', 'Take over-the-counter pain relief if needed.'),
-            _buildStep('6', 'Seek medical help if severe pain, swelling, or inability to move persists.'),
+            _buildStep('1', sprainsStrainsStep1),
+            _buildStep('2', sprainsStrainsStep2),
+            _buildStep('3', sprainsStrainsStep3),
+            _buildStep('4', sprainsStrainsStep4),
+            _buildStep('5', sprainsStrainsStep5),
+            _buildStep('6', sprainsStrainsStep6),
           ],
         ),
       ),

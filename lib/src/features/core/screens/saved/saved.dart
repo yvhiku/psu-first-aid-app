@@ -1,5 +1,6 @@
 import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
+import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:first_aid_app/src/features/core/controllers/widgets/navbar.dart';
 import 'package:flutter/material.dart';
@@ -31,16 +32,16 @@ class SavedScreen extends StatelessWidget {
                 final confirmed = await showDialog(
                   context: context,
                   builder: (context) => AlertDialog(
-                    title: const Text('Confirm'),
-                    content: const Text('Clear all saved topics?'),
+                    title: const Text(tCONFIRM),
+                    content: const Text(tClearAllTopics),
                     actions: [
                       TextButton(
                         onPressed: () => Navigator.pop(context, false),
-                        child: const Text('Cancel'),
+                        child: const Text(tCancel),
                       ),
                       TextButton(
                         onPressed: () => Navigator.pop(context, true),
-                        child: const Text('Clear', style: TextStyle(color: Colors.red)),
+                        child: const Text(tclear, style: TextStyle(color: Colors.red)),
                       ),
                     ],
                   ),
@@ -48,7 +49,7 @@ class SavedScreen extends StatelessWidget {
                 if (confirmed == true) {
                   await topicController.clearAllTopics();
                   ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('All saved topics cleared')),
+                    const SnackBar(content: Text(talltopicscleared)),
                   );
                 }
               }
@@ -56,7 +57,7 @@ class SavedScreen extends StatelessWidget {
             itemBuilder: (context) => [
               const PopupMenuItem(
                 value: 'clear_all',
-                child: Text('Clear All'),
+                child: Text(tclearall),
               ),
             ],
           ),
@@ -71,7 +72,7 @@ class SavedScreen extends StatelessWidget {
                 Image.asset(tNoSavedTopicsImg, height: 150),
                 const SizedBox(height: 20),
                 const Text(
-                  'No saved topics yet',
+                  tnosavedtopicyet,
                   style: TextStyle(fontSize: 18, color: Colors.grey),
                 ),
                 const SizedBox(height: 10),
@@ -80,7 +81,7 @@ class SavedScreen extends StatelessWidget {
                     navigationController.selectedIndex.value = 1; // Navigate to topics
                   },
                   child: const Text(
-                    'Browse Topics',
+                    tbrowstopics,
                     style: TextStyle(color: tPrimaryColor, fontSize: 16),
                   ),
                 ),
@@ -120,16 +121,16 @@ class SavedScreen extends StatelessWidget {
                       return await showDialog(
                         context: context,
                         builder: (context) => AlertDialog(
-                          title: const Text('Confirm'),
-                          content: const Text('Remove this topic from saved?'),
+                          title: const Text(tCONFIRM),
+                          content: const Text(tremovethistopic),
                           actions: [
                             TextButton(
                               onPressed: () => Navigator.pop(context, false),
-                              child: const Text('Cancel'),
+                              child: const Text(tCancel),
                             ),
                             TextButton(
                               onPressed: () => Navigator.pop(context, true),
-                              child: const Text('Remove', style: TextStyle(color: Colors.red)),
+                              child: const Text(tremove, style: TextStyle(color: Colors.red)),
                             ),
                           ],
                         ),

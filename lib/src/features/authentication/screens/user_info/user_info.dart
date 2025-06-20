@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
 import 'package:first_aid_app/src/constants/sizes.dart';
+import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/authentication/model/user_model.dart';
 import 'package:first_aid_app/src/features/authentication/provider/auth_provider.dart';
 import 'package:first_aid_app/src/features/authentication/screens/contacts/contact_support.dart';
@@ -45,7 +46,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
     ).isLoading;
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Complete Profile"),
+        title: const Text(tCompleteProfile),
         centerTitle: true,
         elevation: 0,
       ),
@@ -116,7 +117,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                                 color: tPrimaryColor,
                               ),
                               decoration: InputDecoration(
-                                labelText: "Full Name",
+                                labelText: tFullname,
                                 labelStyle: GoogleFonts.poppins(
                                   fontSize: 14,
                                   color: Colors.grey.shade600,
@@ -158,7 +159,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                                 color: tPrimaryColor,
                               ),
                               decoration: InputDecoration(
-                                labelText: "E-mail",
+                                labelText: tEmail,
                                 labelStyle: GoogleFonts.poppins(
                                   fontSize: 14,
                                   color: Colors.grey.shade600,
@@ -200,7 +201,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                                 color: Colors.black87,
                               ),
                               decoration: InputDecoration(
-                                labelText: "Tell others about yourself",
+                                labelText: ttellothersaboutyou,
                                 labelStyle: GoogleFonts.poppins(
                                   fontSize: 14,
                                   color: Colors.grey[600],
@@ -254,7 +255,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                                   ),
                                 ),
                                 onPressed: () => storeData(),
-                                child: const Text("CONTINUE"),
+                                child: const Text(tCONTINUE),
                               ),
                             ),
                             const SizedBox(height: tFormHeight - 15),
@@ -269,11 +270,11 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                                 ),
                                 child: Text.rich(
                                   TextSpan(
-                                    text: "Need help? ",
+                                    text: tNeedHelp,
                                     style: TextStyle(color: Colors.grey[600]),
                                     children: const [
                                       TextSpan(
-                                        text: "Contact Support",
+                                        text: tContactSupport,
                                         style: TextStyle(
                                           color: tPrimaryColor,
                                           fontWeight: FontWeight.bold,
@@ -326,7 +327,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
         },
       );
     } else {
-      showSnackBar(context, "Please upload your profile photo");
+      showSnackBar(context, tPleaseuploadphoto);
     }
   }
 }

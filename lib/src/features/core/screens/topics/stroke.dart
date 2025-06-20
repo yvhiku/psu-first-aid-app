@@ -1,4 +1,5 @@
 import 'package:first_aid_app/src/constants/image_strings.dart';
+import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,14 +11,14 @@ class StrokeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': 'Stroke',
+      'title': strokeTitle,
       'image': tStrotkeimg,
       'screen': const StrokeScreen(),
     };
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Stroke'),
+        title: const Text(strokeTitle),
         actions: [
           Obx(
             () => IconButton(
@@ -35,8 +36,8 @@ class StrokeScreen extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? 'Added to saved topics'
-                          : 'Removed from saved topics',
+                          ? addedToSavedTopicsText
+                          : removedFromSavedTopicsText,
                     ),
                   ),
                 );
@@ -53,52 +54,36 @@ class StrokeScreen extends StatelessWidget {
             Image.asset(tStrotkeimg, fit: BoxFit.cover),
             const SizedBox(height: 16),
             const Text(
-              'Stroke',
+              strokeTitle,
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
             const Text(
-              'A stroke occurs when blood flow to part of the brain is interrupted or reduced, depriving brain tissue of oxygen and nutrients.',
+              strokeIntro,
               style: TextStyle(fontSize: 16),
             ),
             const SizedBox(height: 20),
             const Text(
-              'Signs and Symptoms:',
+              strokeSignsHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            _buildBullet(
-              'Sudden numbness or weakness of face, arm, or leg, especially on one side of the body',
-            ),
-            _buildBullet('Confusion, trouble speaking or understanding speech'),
-            _buildBullet('Trouble seeing in one or both eyes'),
-            _buildBullet(
-              'Difficulty walking, dizziness, loss of balance or coordination',
-            ),
-            _buildBullet('Severe headache with no known cause'),
+            _buildBullet(strokeSign1),
+            _buildBullet(strokeSign2),
+            _buildBullet(strokeSign3),
+            _buildBullet(strokeSign4),
+            _buildBullet(strokeSign5),
             const SizedBox(height: 20),
             const Text(
-              'First Aid for Stroke:',
+              strokeFirstAidHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            _buildStep(
-              '1',
-              'Call emergency services immediately. Time is critical.',
-            ),
-            _buildStep(
-              '2',
-              'Keep the person safe and comfortable; help them sit or lie down.',
-            ),
-            _buildStep(
-              '3',
-              'If unconscious but breathing, place in the recovery position.',
-            ),
-            _buildStep('4', 'Do not give food, drink, or medication.'),
-            _buildStep(
-              '5',
-              'Monitor their breathing and responsiveness until help arrives.',
-            ),
+            _buildStep('1', strokeStep1),
+            _buildStep('2', strokeStep2),
+            _buildStep('3', strokeStep3),
+            _buildStep('4', strokeStep4),
+            _buildStep('5', strokeStep5),
           ],
         ),
       ),

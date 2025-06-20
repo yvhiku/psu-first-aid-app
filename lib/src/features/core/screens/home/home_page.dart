@@ -98,7 +98,7 @@ class HomeScreen extends StatelessWidget {
             MainAxisAlignment.center, // Center contents vertically
         children: [
           Text(
-            'EMERGENCY NUMBER',
+            tEmergencynum,
             style: TextStyle(
               fontSize: 20, // Larger font size
               fontWeight: FontWeight.bold,
@@ -153,7 +153,7 @@ class HomeScreen extends StatelessWidget {
         const SizedBox(width: 15.0),
         _buildButton(context, tWoundimg, tBleeding, const Bleeding()),
         const SizedBox(width: 15.0),
-        _buildButton(context, tBurnimg, 'Burns', const BurnScreen()),
+        _buildButton(context, tBurnimg, tBurns, const BurnScreen()),
       ],
     );
   }
@@ -182,7 +182,7 @@ class HomeScreen extends StatelessWidget {
       builder:
           (context) => AlertDialog(
             title: const Text(
-              'Emergency Call',
+              tEmergencycall,
               style: TextStyle(
                 color: Colors.black,
                 fontFamily: "Poppins",
@@ -191,7 +191,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
             content: const Text(
-              'Are you sure you want to call 112?',
+              tAreyousure,
               style: TextStyle(
                 color: Colors.black,
                 fontFamily: "Poppins",
@@ -203,7 +203,7 @@ class HomeScreen extends StatelessWidget {
               TextButton(
                 onPressed: () => Navigator.pop(context),
                 child: const Text(
-                  'Cancel',
+                  tCancel,
                   style: TextStyle(
                     color: tPrimaryColor,
                     fontFamily: "Poppins",
@@ -218,7 +218,7 @@ class HomeScreen extends StatelessWidget {
                   launch('tel:112');
                 },
                 child: const Text(
-                  'Call',
+                  tCall,
                   style: TextStyle(
                     color: tPrimaryColor,
                     fontFamily: "Poppins",

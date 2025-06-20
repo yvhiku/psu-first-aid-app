@@ -1,4 +1,5 @@
 import 'package:first_aid_app/src/constants/image_strings.dart';
+import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,8 +10,9 @@ class Bites extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final TopicController topicController = Get.find();
+
     final currentTopic = {
-      'title': 'Bites',
+      'title': tBites,
       'image': tBitinigimg,
       'screen': const Bites(),
       'type': 'Bites',
@@ -18,7 +20,7 @@ class Bites extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Bites'),
+        title: const Text(tBites),
         actions: [
           Obx(() => IconButton(
                 icon: Icon(
@@ -35,8 +37,8 @@ class Bites extends StatelessWidget {
                     SnackBar(
                       content: Text(
                         topicController.isTopicSaved(currentTopic)
-                            ? 'Added to saved topics'
-                            : 'Removed from saved topics',
+                            ? taddedtosaved
+                            : tremovedtopic,
                       ),
                     ),
                   );
@@ -52,41 +54,35 @@ class Bites extends StatelessWidget {
             Image.asset(tBitinigimg, fit: BoxFit.cover),
             const SizedBox(height: 20),
             const Text(
-              'Bite Wound First Aid',
+              tBitesTitle,
               style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.red),
             ),
             const SizedBox(height: 10),
             const Text(
-              'Animal or insect bites can transmit diseases and lead to infections if untreated.',
+              tBites1,
               style: TextStyle(fontSize: 16),
             ),
             const Divider(height: 30),
             const Text(
-              'Steps to Treat Bites:',
+              tBites2,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildStep('1', 'Move to Safety',
-                'Ensure the area is safe and the biting animal is no longer a threat.'),
-            _buildStep('2', 'Clean the Wound',
-                'Wash with soap and running water for several minutes.'),
-            _buildStep('3', 'Stop the Bleeding',
-                'Apply gentle pressure with a clean cloth or bandage.'),
-            _buildStep('4', 'Apply Antiseptic',
-                'Use an antiseptic solution to prevent infection.'),
-            _buildStep('5', 'Cover the Wound',
-                'Use a sterile bandage to protect the bite.'),
-            _buildStep('6', 'Seek Medical Help',
-                'Especially important for deep bites or suspected rabies exposure.'),
+            _buildStep('1', tBites3, tBites4),
+            _buildStep('2', tBites5, tBites6),
+            _buildStep('3', tBites7, tBites8),
+            _buildStep('4', tBites9, tBites10),
+            _buildStep('5', tBites11, tBites12),
+            _buildStep('6', tBites13, tBites14),
             const Divider(height: 30),
             const Text(
-              'Important Notes:',
+              tBites15,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildBulletPoint('Tetanus shot may be needed.'),
-            _buildBulletPoint('Watch for signs of infection (redness, swelling, pus).'),
-            _buildBulletPoint('If bitten by a wild animal, report to authorities.'),
+            _buildBulletPoint(tBites16),
+            _buildBulletPoint(tBites17),
+            _buildBulletPoint(tBites18),
           ],
         ),
       ),

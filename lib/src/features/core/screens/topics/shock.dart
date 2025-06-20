@@ -1,4 +1,5 @@
 import 'package:first_aid_app/src/constants/image_strings.dart';
+import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,14 +11,14 @@ class Shock extends StatelessWidget {
   Widget build(BuildContext context) {
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': 'Shock',
+      'title': shockTitle,
       'image': tEpilepsyimg,
       'screen': const Shock(),
     };
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Shock'),
+        title: const Text(shockTitle),
         actions: [
           Obx(
             () => IconButton(
@@ -25,9 +26,7 @@ class Shock extends StatelessWidget {
                 topicController.isTopicSaved(currentTopic)
                     ? Icons.bookmark
                     : Icons.bookmark_border,
-                color: topicController.isTopicSaved(currentTopic)
-                    ? Colors.red
-                    : null,
+                color: topicController.isTopicSaved(currentTopic) ? Colors.red : null,
               ),
               onPressed: () {
                 topicController.toggleTopicSave(currentTopic);
@@ -35,8 +34,8 @@ class Shock extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? 'Added to saved topics'
-                          : 'Removed from saved topics',
+                          ? addedToSavedTopicsText
+                          : removedFromSavedTopicsText,
                     ),
                   ),
                 );
@@ -53,43 +52,37 @@ class Shock extends StatelessWidget {
             Image.asset(tEpilepsyimg, fit: BoxFit.cover),
             const SizedBox(height: 16),
             const Text(
-              'Shock',
+              shockHeading,
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
             const Text(
-              'Shock is a life-threatening condition that occurs when the body is not getting enough blood flow, leading to organ failure.',
+              shockIntro,
               style: TextStyle(fontSize: 16),
             ),
             const SizedBox(height: 20),
             const Text(
-              'Signs of Shock:',
+              shockSignsHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            _buildBullet('Pale, cold, clammy skin'),
-            _buildBullet('Rapid, weak pulse'),
-            _buildBullet('Shallow breathing'),
-            _buildBullet('Confusion or loss of consciousness'),
-            _buildBullet('Nausea or vomiting'),
+            _buildBullet(shockSign1),
+            _buildBullet(shockSign2),
+            _buildBullet(shockSign3),
+            _buildBullet(shockSign4),
+            _buildBullet(shockSign5),
             const SizedBox(height: 20),
             const Text(
-              'First Aid for Shock:',
+              shockFirstAidHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            _buildStep('1', 'Call emergency services immediately.'),
-            _buildStep('2', 'Lay the person down on their back.'),
-            _buildStep(
-              '3',
-              'Elevate the legs about 12 inches unless there is an injury that prevents this.',
-            ),
-            _buildStep('4', 'Keep the person warm and comfortable.'),
-            _buildStep('5', 'Do not give the person anything to eat or drink.'),
-            _buildStep(
-              '6',
-              'Monitor breathing and be prepared to perform CPR if necessary.',
-            ),
+            _buildStep('1', shockStep1),
+            _buildStep('2', shockStep2),
+            _buildStep('3', shockStep3),
+            _buildStep('4', shockStep4),
+            _buildStep('5', shockStep5),
+            _buildStep('6', shockStep6),
           ],
         ),
       ),
@@ -114,9 +107,7 @@ class Shock extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 12),
-          Expanded(
-            child: Text(description, style: const TextStyle(fontSize: 16)),
-          ),
+          Expanded(child: Text(description, style: const TextStyle(fontSize: 16))),
         ],
       ),
     );

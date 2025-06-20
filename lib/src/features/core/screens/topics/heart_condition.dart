@@ -1,4 +1,5 @@
 import 'package:first_aid_app/src/constants/image_strings.dart';
+import 'package:first_aid_app/src/constants/text_strings.dart'; // Import your string constants here
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,14 +11,14 @@ class HeartCondition extends StatelessWidget {
   Widget build(BuildContext context) {
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': 'Heart Conditions',
+      'title': heartConditionTitle,
       'image': tHeartAttackimg,
       'screen': const HeartCondition(),
     };
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Heart Conditions'),
+        title: const Text(heartConditionTitle),
         actions: [
           Obx(() => IconButton(
                 icon: Icon(
@@ -32,8 +33,8 @@ class HeartCondition extends StatelessWidget {
                     SnackBar(
                       content: Text(
                         topicController.isTopicSaved(currentTopic)
-                            ? 'Added to saved topics'
-                            : 'Removed from saved topics',
+                            ? addedToSavedTopicsText
+                            : removedFromSavedTopicsText,
                       ),
                     ),
                   );
@@ -49,48 +50,33 @@ class HeartCondition extends StatelessWidget {
             Image.asset(tHeartAttackimg, fit: BoxFit.cover),
             const SizedBox(height: 20),
             const Text(
-              'Heart Conditions First Aid',
+              heartConditionHeading,
               style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.red),
             ),
             const SizedBox(height: 10),
             const Text(
-              'Immediate aid for heart attacks and other acute heart-related conditions.',
+              heartConditionIntro,
               style: TextStyle(fontSize: 16),
             ),
             const Divider(height: 30),
             const Text(
-              'First Aid Steps:',
+              heartConditionStepsHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildStep(
-              '1',
-              'Help the person to sit down and remain calm.',
-            ),
-            _buildStep(
-              '2',
-              'Loosen any tight clothing around the chest.',
-            ),
-            _buildStep(
-              '3',
-              'If prescribed, assist the person to take their heart medication (e.g., nitroglycerin).',
-            ),
-            _buildStep(
-              '4',
-              'Call emergency services immediately.',
-            ),
-            _buildStep(
-              '5',
-              'If the person becomes unconscious and stops breathing, start CPR immediately.',
-            ),
+            _buildStep('1', heartConditionStep1),
+            _buildStep('2', heartConditionStep2),
+            _buildStep('3', heartConditionStep3),
+            _buildStep('4', heartConditionStep4),
+            _buildStep('5', heartConditionStep5),
             const Divider(height: 30),
             const Text(
-              'Important Notes:',
+              heartConditionNotesHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildBullet('Do not give the person food or drinks except prescribed medicine.'),
-            _buildBullet('Never leave the person alone.'),
+            _buildBullet(heartConditionNote1),
+            _buildBullet(heartConditionNote2),
           ],
         ),
       ),

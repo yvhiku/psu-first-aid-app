@@ -1,5 +1,6 @@
 import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
+import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -12,7 +13,7 @@ class AssessingInjuredPerson extends StatelessWidget {
     final TopicController topicController = Get.find();
 
     final currentTopic = {
-      'title': 'Assessing Injured Person',
+      'title': tAssessing,
       'image': tHelpingPersonimg,
       'screen': const AssessingInjuredPerson(),
       'type': 'assessingInjuredPerson',
@@ -20,7 +21,7 @@ class AssessingInjuredPerson extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Assessing Injured Person'),
+        title: const Text(tAssessing),
         actions: [
           Obx(
             () => IconButton(
@@ -38,8 +39,8 @@ class AssessingInjuredPerson extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? 'Added to saved topics'
-                          : 'Removed from saved topics',
+                          ? taddedtosaved
+                          : tremovedtopic,
                     ),
                   ),
                 );
@@ -56,7 +57,7 @@ class AssessingInjuredPerson extends StatelessWidget {
             Image.asset(tHelpingPersonimg, fit: BoxFit.cover),
             const SizedBox(height: 20),
             const Text(
-              'Assessing an Injured Person',
+              tAssessinginjured,
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
@@ -65,69 +66,69 @@ class AssessingInjuredPerson extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             const Text(
-              'Before providing first aid, assess the situation and the injured person. This ensures your own safety and allows effective help.',
+              tAssessing1,
               style: TextStyle(fontSize: 16),
             ),
             const Divider(height: 30),
             const Text(
-              'Initial Assessment Steps:',
+              tAssessing2,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
             _buildStep(
               number: '1',
-              title: 'Ensure Scene Safety',
+              title: tAssessing3,
               description:
-                  'Check for immediate dangers like fire, traffic, or electrical hazards. Do not enter an unsafe scene.',
+                  tAssessing4,
             ),
             _buildStep(
               number: '2',
-              title: 'Check Responsiveness',
+              title: tAssessing5,
               description:
-                  'Gently shake the person and ask loudly, "Can you hear me?" If no response, proceed to call for help.',
+                  tAssessing6,
             ),
             _buildStep(
               number: '3',
-              title: 'Call Emergency Services',
+              title: tAssessing7,
               description:
-                  'Call 112 or ask a bystander to do so. Provide your location and details of the situation.',
+                  tAssessing8,
             ),
             _buildStep(
               number: '4',
-              title: 'Open the Airway',
+              title: tAssessing9,
               description:
-                  'Tilt the head back and lift the chin to open the airway if the person is unconscious.',
+                  tAssessing10,
             ),
             _buildStep(
               number: '5',
-              title: 'Check for Breathing',
+              title: tAssessing11,
               description:
-                  'Look, listen, and feel for breathing. If not breathing, begin CPR immediately.',
+                  tAssessing12,
             ),
             _buildStep(
               number: '6',
-              title: 'Check for Bleeding',
+              title: tAssessing13,
               description:
-                  'Quickly scan for major bleeding. Apply direct pressure to wounds using a cloth or bandage.',
+                  tAssessing14,
             ),
             _buildStep(
               number: '7',
-              title: 'Treat for Shock',
+              title: tAssessing15,
               description:
-                  'Keep the person warm and reassure them. Do not give food or drink.',
+                  tAssessing16,
             ),
             const Divider(height: 30),
             const Text(
-              'Important Notes:',
+              tAssessing17,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
             _buildBulletPoint(
-                'Never put yourself in danger to help someone.'),
+                tAssessing18),
             _buildBulletPoint(
-                'Only move the injured person if there is an immediate threat.'),
+                tAssessing19),
             _buildBulletPoint(
-                'Always check response, breathing, and bleeding in that order.'),
+                tAssessing20),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
@@ -143,7 +144,7 @@ class AssessingInjuredPerson extends StatelessWidget {
                 elevation: 4,
               ),
               child: const Text(
-                'Watch Assessment Demo',
+                tAssessing21,
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
             ),
