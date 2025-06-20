@@ -1,9 +1,15 @@
-
+Here's an improved, more professional version of your README with better formatting and organization:
 
 ```markdown
 # 🚑 First Aid Emergency Guide
 
+[![Flutter Version](https://img.shields.io/badge/Flutter-3.19.5-blue)](https://flutter.dev)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub Stars](https://img.shields.io/github/stars/yvhiku/pgu-first-aid-app?style=social)](https://github.com/yvhiku/pgu-first-aid-app/stargazers)
+
 A comprehensive first aid reference application providing immediate guidance for emergency medical situations.
+
+![App Preview](assets/screenshots/app_preview.gif)
 
 ## ✨ Key Features
 
@@ -41,6 +47,7 @@ A comprehensive first aid reference application providing immediate guidance for
 - Android Studio/Xcode (for emulators)
 
 ### Installation
+```bash
 # Clone repository
 git clone https://github.com/yvhiku/pgu-first-aid-app.git
 cd pgu-first-aid-app
@@ -146,3 +153,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Email**: [yvhiku@yandex.ru](mailto:yvhiku@yandex.ru)  
 **Project Link**: [https://github.com/yvhiku/pgu-first-aid-app](https://github.com/yvhiku/pgu-first-aid-app)
 
+---
+
+<div align="center">
+  <sub>Built with ❤️ and Flutter</sub>
+</div>
+```
