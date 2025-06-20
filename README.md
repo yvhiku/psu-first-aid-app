@@ -1,4 +1,3 @@
-Here's a comprehensive **README.md** template for your First Aid App repository. You can copy-paste this directly into your GitHub repo:
 
 ✨ Features
 
