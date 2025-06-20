@@ -6,7 +6,9 @@ import 'package:first_aid_app/src/features/authentication/model/user_model.dart'
 import 'package:first_aid_app/src/features/authentication/provider/auth_provider.dart';
 import 'package:first_aid_app/src/features/authentication/screens/contacts/contact_support.dart';
 import 'package:first_aid_app/src/features/authentication/screens/welcome/welcom_screen.dart';
-import 'package:first_aid_app/src/features/core/screens/profile/updated_profile.dart';
+import 'package:first_aid_app/src/features/core/screens/profile/about.dart';
+import 'package:first_aid_app/src/features/core/screens/profile/edit_profile.dart';
+import 'package:first_aid_app/src/features/core/screens/profile/privacy_policy.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -166,12 +168,22 @@ class ProfileScreen extends StatelessWidget {
                   MenuButtons(
                     icon: Icons.privacy_tip_outlined,
                     title: tPrivacyPol,
-                    onPressed: () {},
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const PrivacyPolicyScreen(),
+                      ),
+                    ),
                   ),
                   MenuButtons(
                     icon: Icons.info_outline,
                     title: tAboutUs,
-                    onPressed: () {},
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const AboutScreen(),
+                      ),
+                    ),
                   ),
                 ],
               ),
