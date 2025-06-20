@@ -61,6 +61,27 @@ class AuthProvider1 extends ChangeNotifier {
     }
   }
 
+  // saving topics to db
+  Future<void> saveTopic(String title, String imageUrl, String type) async {
+  final user = FirebaseAuth.instance.currentUser;
+  if (user == null) {
+    throw Exception('User not logged in.');
+  }
+
+  final docRef = FirebaseFirestore.instance
+      .collection('users')
+      .doc(user.uid)
+      .collection('savedTopics')
+      .doc(title); // or use a custom ID
+
+  await docRef.set({
+    'title': title,
+    'image': imageUrl,
+    'type': type,
+  });
+}
+
+
   // Firestore Operations
   Future<void> getDataFromFirestore() async {
     try {
