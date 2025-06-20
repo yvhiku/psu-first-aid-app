@@ -161,7 +161,7 @@ class AllTopicsScreen extends StatelessWidget {
   // New vertically scrollable grid of white buttons
   Widget _buildScrollableTopicsGrid(BuildContext context) {
     final List<Map<String, dynamic>> topics = [
-      {'image': tInjuryimg, 'title': tFractures, 'screen': const Fractures()},
+      {'image': tInjuryimg, 'title': tFractures, 'screen': const FracturesScreen()},
       {
         'image': tAllergicReactionimg,
         'title': tAllergicReaction,
@@ -171,14 +171,14 @@ class AllTopicsScreen extends StatelessWidget {
       {
         'image': tDiabeticsimg,
         'title': tDiabetics,
-        'screen': const Diabetics(),
+        'screen': const DiabeticsScreen(),
       },
       {
         'image': tDrugOverDoseimg,
         'title': tDrugOverdose,
-        'screen': const DrugOverdose(),
+        'screen': const DrugOverdoseScreen(),
       },
-      {'image': tSoreEyesimg, 'title': tEyeInjury, 'screen': const EyeInjury()},
+      {'image': tSoreEyesimg, 'title': tEyeInjury, 'screen': const EyeInjuryScreen()},
       {'image': tHeadimg, 'title': tHeadInjury, 'screen': const HeadInjury()},
       {
         'image': tHeartAttackimg,
@@ -197,7 +197,7 @@ class AllTopicsScreen extends StatelessWidget {
         'title': tSprainsStrains,
         'screen': const SprainsStrains(),
       },
-      {'image': tStrotkeimg, 'title': tStroke, 'screen': const Stroke()},
+      {'image': tStrotkeimg, 'title': tStroke, 'screen': const StrokeScreen()},
       {'image': tBandAidimg, 'title': tWoundCare, 'screen': const WoundCare()},
       {
         'image': tHelpingPersonimg,
