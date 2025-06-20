@@ -58,7 +58,7 @@ lib/
 
 | Home Screen | Topics List | CPR Guide |
 |-------------|-------------|-----------|
-| ![Home](assets/screenshots/home.png) | ![Topics](assets/screenshots/topics.png) | ![CPR](assets/screenshots/cpr.png) |
+| ![Home](assets/screenshots/homescreen.png) | ![Topics](assets/screenshots/topicsscreen.png) | ![CPR](assets/screenshots/cprscreen.png) |
 
 🤝 Contributing
 
