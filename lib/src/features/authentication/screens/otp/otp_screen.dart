@@ -1,7 +1,7 @@
 import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
 import 'package:first_aid_app/src/constants/sizes.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/features/authentication/provider/auth_provider.dart';
 import 'package:first_aid_app/src/features/authentication/screens/contacts/contact_support.dart';
 import 'package:first_aid_app/src/features/authentication/screens/user_info/user_info.dart';
@@ -32,7 +32,7 @@ class _OtpScreenState extends State<OtpScreen> {
     ).isLoading;
     return Scaffold(
       appBar: AppBar(
-        title: const Text(tOTPveri),
+        title: Text(S.of(context).totpVerification),
         centerTitle: true,
         elevation: 0,
         leading: IconButton(
@@ -55,8 +55,8 @@ class _OtpScreenState extends State<OtpScreen> {
                         height: MediaQuery.of(context).size.height * 0.2,
                       ),
                       const SizedBox(height: tFormHeight),
-                      const Text(
-                        tveri,
+                      Text(
+                        S.of(context).tverification,
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
@@ -64,8 +64,8 @@ class _OtpScreenState extends State<OtpScreen> {
                         ),
                       ),
                       const SizedBox(height: 10),
-                      const Text(
-                        tenterotp,
+                      Text(
+                        S.of(context).tenterOtpSentToPhone,
                         style: TextStyle(
                           fontSize: 14,
                           color: Colors.black38,
@@ -126,18 +126,18 @@ class _OtpScreenState extends State<OtpScreen> {
                             if (otpCode != null) {
                               verifyOtp(context, otpCode!);
                             } else {
-                              showSnackBar(context, tenter6digit);
+                              showSnackBar(context, S.of(context).tenter6DigitCode);
                             }
                           },
-                          child: const Text(tVerify),
+                          child: Text(S.of(context).tVerify),
                         ),
                       ),
                       const SizedBox(height: tFormHeight - 20),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Text(
-                            tdidntrecievecode,
+                          Text(
+                            S.of(context).tdidntReceiveCode,
                             style: TextStyle(
                               fontSize: 14,
                               color: Colors.black38,
@@ -148,8 +148,8 @@ class _OtpScreenState extends State<OtpScreen> {
                             onPressed: () {
                               // Add resend logic here
                             },
-                            child: const Text(
-                              tResend,
+                            child: Text(
+                              S.of(context).tresend,
                               style: TextStyle(
                                 fontSize: 14,
                                 color: tPrimaryColor,
@@ -168,11 +168,11 @@ class _OtpScreenState extends State<OtpScreen> {
                               Get.to(() => const ContactSupportScreen()),
                           child: Text.rich(
                             TextSpan(
-                              text: tNeedHelp,
+                              text: "${S.of(context).tNeedHelp} ",
                               style: TextStyle(color: Colors.grey[600]),
-                              children: const [
+                              children: [
                                 TextSpan(
-                                  text: tContactSupport,
+                                  text: S.of(context).tContactSupport,
                                   style: TextStyle(
                                     color: tPrimaryColor,
                                     fontWeight: FontWeight.bold,
@@ -198,10 +198,8 @@ class _OtpScreenState extends State<OtpScreen> {
       verificationId: widget.verificationId,
       userOtp: userOtp,
       onSuccess: () {
-        // checking if the user exist in the db
         ap.checkExistingUser().then((value) async {
           if (value == true) {
-            //user exists
             ap.getDataFromFirestore().then(
               (value) => ap.setSignIn().then(
                 (value) => Navigator.pushAndRemoveUntil(
@@ -212,7 +210,6 @@ class _OtpScreenState extends State<OtpScreen> {
               ),
             );
           } else {
-            //new user
             Navigator.pushAndRemoveUntil(
               context,
               MaterialPageRoute(

@@ -3,14 +3,14 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/services.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
 import 'package:first_aid_app/src/constants/sizes.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
+import 'package:first_aid_app/generated/l10n.dart';
 
 class ContactSupportScreen extends StatelessWidget {
   const ContactSupportScreen({super.key});
 
   Future<void> _launchPhone(BuildContext context) async {
     const phoneNumber = '+79960808085';
-    final Uri phoneUri = Uri(scheme: tTel, path: phoneNumber);
+    final Uri phoneUri = Uri(scheme: 'tel', path: phoneNumber);
 
     try {
       if (await canLaunchUrl(phoneUri)) {
@@ -20,18 +20,17 @@ class ContactSupportScreen extends StatelessWidget {
       }
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Failed to launch phone: ${e.toString()}')),
+        SnackBar(content: Text(S.of(context).tCannotsendemail)),
       );
     }
   }
 
   Future<void> _launchEmail(BuildContext context) async {
     const email = 'yvhiku@yandex.ru';
-    const subject = tsubject;
     final Uri emailUri = Uri(
-      scheme: tMailto,
+      scheme: 'mailto',
       path: email,
-      queryParameters: {tSubject1: subject},
+      queryParameters: {'subject': S.of(context).tsubject},
     );
 
     try {
@@ -42,7 +41,7 @@ class ContactSupportScreen extends StatelessWidget {
       }
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Failed to launch email: ${e.toString()}')),
+        SnackBar(content: Text(S.of(context).tCannotsendemail)),
       );
     }
   }
@@ -54,12 +53,12 @@ class ContactSupportScreen extends StatelessWidget {
     return showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text(tCannotmakecall),
+        title: Text(S.of(context).tCannotmakecall),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(tcallthisnum),
+            Text(S.of(context).tcallthisnum),
             const SizedBox(height: 10),
             SelectableText(
               phoneNumber,
@@ -74,17 +73,17 @@ class ContactSupportScreen extends StatelessWidget {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text(tOK),
+            child: Text(S.of(context).tOK),
           ),
           TextButton(
             onPressed: () {
               Clipboard.setData(ClipboardData(text: phoneNumber));
-              ScaffoldMessenger.of(
-                context,
-              ).showSnackBar(const SnackBar(content: Text(tcopyphone)));
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(content: Text(S.of(context).tcopyphone)),
+              );
               Navigator.pop(context);
             },
-            child: const Text(tCopy),
+            child: Text(S.of(context).tCopy),
           ),
         ],
       ),
@@ -95,12 +94,12 @@ class ContactSupportScreen extends StatelessWidget {
     return showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text(tCannotsendemail),
+        title: Text(S.of(context).tCannotsendemail),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(tPleasecontactusat),
+            Text(S.of(context).tpleaseContactUsAt),
             const SizedBox(height: 10),
             SelectableText(
               email,
@@ -115,17 +114,17 @@ class ContactSupportScreen extends StatelessWidget {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text(tOK),
+            child: Text(S.of(context).tOK),
           ),
           TextButton(
             onPressed: () {
               Clipboard.setData(ClipboardData(text: email));
-              ScaffoldMessenger.of(
-                context,
-              ).showSnackBar(const SnackBar(content: Text(tEmailcopied)));
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(content: Text(S.of(context).temailCopied)),
+              );
               Navigator.pop(context);
             },
-            child: const Text(tCopy),
+            child: Text(S.of(context).tCopy),
           ),
         ],
       ),
@@ -136,7 +135,7 @@ class ContactSupportScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(tContactSupport),
+        title: Text(S.of(context).tContactSupport),
         centerTitle: true,
         elevation: 0,
       ),
@@ -153,51 +152,51 @@ class ContactSupportScreen extends StatelessWidget {
             ),
             const SizedBox(height: tDefaultSize),
             Text(
-              theretohelp,
-              style: Theme.of(
-                context,
-              ).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.bold),
+              S.of(context).tweAreHereToHelp,
+              style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
             ),
             const SizedBox(height: 10),
             Text(
-              tcontactoursupport,
+              S.of(context).tcontactOurSupportTeam,
               style: Theme.of(context).textTheme.bodyLarge,
             ),
             const SizedBox(height: tDefaultSize),
             _buildContactCard(
               context,
               icon: Icons.email,
-              title: tEmailsupport,
-              subtitle: tGetHelpviaemail,
-              actionText: tSendemail,
+              title: S.of(context).temailSupport,
+              subtitle: S.of(context).tgetHelpViaEmail,
+              actionText: S.of(context).tsendEmail,
               onTap: () => _launchEmail(context),
             ),
             _buildContactCard(
               context,
               icon: Icons.phone,
-              title: tPhonesupport,
-              subtitle: tCalloursupport,
-              actionText: tCallNow,
+              title: S.of(context).tphoneSupport,
+              subtitle: S.of(context).tcallOurSupportTeam,
+              actionText: S.of(context).tcallNow,
               onTap: () => _launchPhone(context),
             ),
             _buildContactCard(
               context,
               icon: Icons.chat_bubble,
-              title: tLivechat,
-              subtitle: tchatwithagent,
-              actionText: tStartchat,
+              title: S.of(context).tliveChat,
+              subtitle: S.of(context).tchatWithAgent,
+              actionText: S.of(context).tstartChat,
               onTap: () {
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text(tchatagentcomingsoon)),
+                  SnackBar(content: Text(S.of(context).tliveChatComingSoon)),
                 );
               },
             ),
             const SizedBox(height: tDefaultSize),
             Text(
-              tFAQ,
-              style: Theme.of(
-                context,
-              ).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+              S.of(context).tfaq,
+              style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
             ),
             const SizedBox(height: 10),
             ..._buildFAQItems(context),
@@ -257,17 +256,23 @@ class ContactSupportScreen extends StatelessWidget {
 
   List<Widget> _buildFAQItems(BuildContext context) {
     final faqs = [
-      {tQuestion: tQuestion1, tAnswer: tAnswer1},
-      {tQuestion: tQuestion2, tAnswer: tAnswer2},
+      {
+        'question': S.of(context).tquestion1,
+        'answer': S.of(context).tanswer1
+      },
+      {
+        'question': S.of(context).tquestion2,
+        'answer': S.of(context).tanswer2
+      },
     ];
 
     return faqs.map((faq) {
       return ExpansionTile(
-        title: Text(faq[tQuestion]!),
+        title: Text(faq['question']!),
         children: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-            child: Text(faq[tAnswer]!),
+            child: Text(faq['answer']!),
           ),
         ],
       );

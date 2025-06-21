@@ -1,3 +1,4 @@
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/features/authentication/screens/welcome/welcom_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -70,7 +71,7 @@ class _LanguageSelectionScreenState extends State<LanguageSelectionScreen> {
                     : () async {
                         final prefs = await SharedPreferences.getInstance();
                         await prefs.setString(
-                          'selected_language',
+                          S.of(context).selectLanguage,
                           _selectedLanguage!,
                         );
 
@@ -85,7 +86,7 @@ class _LanguageSelectionScreenState extends State<LanguageSelectionScreen> {
                         );
                       },
 
-                child: const Text('Continue'),
+                child: Text(S.of(context).continueText),
               ),
             ],
           ),

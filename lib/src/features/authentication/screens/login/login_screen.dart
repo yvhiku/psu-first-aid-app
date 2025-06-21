@@ -1,7 +1,7 @@
 import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
 import 'package:first_aid_app/src/constants/sizes.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/features/authentication/provider/auth_provider.dart';
 import 'package:first_aid_app/src/features/authentication/screens/contacts/contact_support.dart';
 import 'package:first_aid_app/src/features/authentication/screens/user_info/user_info.dart';
@@ -43,7 +43,11 @@ class _LoginScreenState extends State<LoginScreen> {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: AppBar(title: Text(tLogin), centerTitle: true, elevation: 0),
+      appBar: AppBar(
+        title: Text(S.of(context).tLogin),
+        centerTitle: true,
+        elevation: 0,
+      ),
       body: SingleChildScrollView(
         child: Container(
           padding: EdgeInsets.all(tDefaultSize),
@@ -56,7 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: size.height * 0.2,
               ),
               Text(
-                tLoginTitle,
+                S.of(context).tLoginTitle,
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
@@ -64,7 +68,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               Text(
-                tLoginSubTitle,
+                S.of(context).tLoginSubTitle,
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.normal,
@@ -100,7 +104,6 @@ class _LoginScreenState extends State<LoginScreen> {
                         await ap.signInWithGoogle(
                           context,
                           () {
-                            // New user: show user info form
                             Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
@@ -109,7 +112,6 @@ class _LoginScreenState extends State<LoginScreen> {
                             );
                           },
                           () {
-                            // Existing user: go to home
                             Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(builder: (_) => const NavBar()),
@@ -117,24 +119,23 @@ class _LoginScreenState extends State<LoginScreen> {
                           },
                         );
                       },
-                      label: Text(tSignInWithGoogle),
+                      label: Text(S.of(context).tSignInWithGoogle),
                     ),
                   ),
                 ],
               ),
               const SizedBox(height: 30),
-              // Add contact support button at the bottom
               Padding(
                 padding: const EdgeInsets.only(top: 20.0),
                 child: TextButton(
                   onPressed: () => Get.to(() => const ContactSupportScreen()),
                   child: Text.rich(
                     TextSpan(
-                      text: "Need help? ",
+                      text: "${S.of(context).tNeedHelp} ",
                       style: TextStyle(color: Colors.grey[600]),
-                      children: const [
+                      children: [
                         TextSpan(
-                          text: "Contact Support",
+                          text: S.of(context).tContactSupport,
                           style: TextStyle(
                             color: tPrimaryColor,
                             fontWeight: FontWeight.bold,

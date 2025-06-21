@@ -2,7 +2,7 @@ import 'dart:io';
 import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
 import 'package:first_aid_app/src/constants/sizes.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/features/authentication/model/user_model.dart';
 import 'package:first_aid_app/src/features/authentication/provider/auth_provider.dart';
 import 'package:first_aid_app/src/features/authentication/screens/contacts/contact_support.dart';
@@ -46,7 +46,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
     ).isLoading;
     return Scaffold(
       appBar: AppBar(
-        title: const Text(tCompleteProfile),
+        title: Text(S.of(context).tcompleteProfile),
         centerTitle: true,
         elevation: 0,
       ),
@@ -60,7 +60,6 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                 child: Center(
                   child: Column(
                     children: [
-                      // Profile Picture
                       InkWell(
                         onTap: selectImage,
                         child: Stack(
@@ -103,12 +102,9 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                         ),
                       ),
                       const SizedBox(height: tFormHeight),
-
-                      // Form Fields
                       Form(
                         child: Column(
                           children: [
-                            // Name Field
                             TextFormField(
                               controller: nameController,
                               cursorColor: tPrimaryColor,
@@ -117,7 +113,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                                 color: tPrimaryColor,
                               ),
                               decoration: InputDecoration(
-                                labelText: tFullname,
+                                labelText: S.of(context).tFullname,
                                 labelStyle: GoogleFonts.poppins(
                                   fontSize: 14,
                                   color: Colors.grey.shade600,
@@ -147,10 +143,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                                 ),
                               ),
                             ),
-
                             const SizedBox(height: tFormHeight - 20),
-
-                            // Email Field
                             TextFormField(
                               controller: emailController,
                               cursorColor: tPrimaryColor,
@@ -159,7 +152,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                                 color: tPrimaryColor,
                               ),
                               decoration: InputDecoration(
-                                labelText: tEmail,
+                                labelText: S.of(context).tEmail,
                                 labelStyle: GoogleFonts.poppins(
                                   fontSize: 14,
                                   color: Colors.grey.shade600,
@@ -190,8 +183,6 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                               ),
                             ),
                             const SizedBox(height: tFormHeight - 20),
-
-                            // Bio Field
                             TextFormField(
                               controller: bioController,
                               cursorColor: tPrimaryColor,
@@ -201,7 +192,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                                 color: Colors.black87,
                               ),
                               decoration: InputDecoration(
-                                labelText: ttellothersaboutyou,
+                                labelText: S.of(context).ttellOthersAboutYou,
                                 labelStyle: GoogleFonts.poppins(
                                   fontSize: 14,
                                   color: Colors.grey[600],
@@ -231,10 +222,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                                 ),
                               ),
                             ),
-
                             const SizedBox(height: tFormHeight - 15),
-
-                            // Continue Button
                             SizedBox(
                               width: double.infinity,
                               child: ElevatedButton(
@@ -255,7 +243,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                                   ),
                                 ),
                                 onPressed: () => storeData(),
-                                child: const Text(tCONTINUE),
+                                child: Text(S.of(context).tcontinue),
                               ),
                             ),
                             const SizedBox(height: tFormHeight - 15),
@@ -270,11 +258,11 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                                 ),
                                 child: Text.rich(
                                   TextSpan(
-                                    text: tNeedHelp,
+                                    text: "${S.of(context).tNeedHelp} ",
                                     style: TextStyle(color: Colors.grey[600]),
-                                    children: const [
+                                    children: [
                                       TextSpan(
-                                        text: tContactSupport,
+                                        text: S.of(context).tContactSupport,
                                         style: TextStyle(
                                           color: tPrimaryColor,
                                           fontWeight: FontWeight.bold,
@@ -296,7 +284,6 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
     );
   }
 
-  //store userdata to db
   void storeData() async {
     final ap = Provider.of<AuthProvider1>(context, listen: false);
     UserModel userModel = UserModel(
@@ -314,7 +301,6 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
         userModel: userModel,
         profilePic: image!,
         onSuccess: () {
-          //once data is saved we need to store it locally also
           ap.saveUserDataToSP().then(
             (value) => ap.setSignIn().then(
               (value) => Navigator.pushAndRemoveUntil(
@@ -327,7 +313,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
         },
       );
     } else {
-      showSnackBar(context, tPleaseuploadphoto);
+      showSnackBar(context, S.of(context).tpleaseUploadPhoto);
     }
   }
 }
