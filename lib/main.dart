@@ -16,15 +16,23 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   await FirebaseAppCheck.instance.activate(
-    androidProvider: AndroidProvider.playIntegrity, 
-    webProvider: ReCaptchaV3Provider('6Lc7jmQrAAAAAGjhheIZB01-eIDIjWEO1Vu8ypsR'),
+    androidProvider: AndroidProvider.playIntegrity,
+    webProvider: ReCaptchaV3Provider(
+      '6Lc7jmQrAAAAAGjhheIZB01-eIDIjWEO1Vu8ypsR',
+    ),
   );
-  Get.put(TopicController()); // Initialize GetX controller
-  runApp(const MyApp());
+
+  final prefs = await SharedPreferences.getInstance();
+  final savedLangCode = prefs.getString('selected_language') ?? 'en';
+
+  Get.put(TopicController());
+
+  runApp(MyApp(locale: Locale(savedLangCode)));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final Locale locale;
+  const MyApp({super.key, required this.locale}); // ✅ add required
 
   Future<bool> _isLanguageSelected() async {
     final prefs = await SharedPreferences.getInstance();
@@ -36,6 +44,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [ChangeNotifierProvider(create: (_) => AuthProvider1())],
       child: GetMaterialApp(
+        locale: locale, // ✅ THIS is where you use it!
         localizationsDelegates: [
           S.delegate,
           GlobalMaterialLocalizations.delegate,
@@ -62,12 +71,12 @@ class MyApp extends StatelessWidget {
                 }
 
                 final languageSelected = snapshot.data ?? false;
-                
+
                 if (auth.isSignedIn) {
                   return const NavBar();
                 } else {
-                  return languageSelected 
-                      ? const WelcomeScreen() 
+                  return languageSelected
+                      ? const WelcomeScreen()
                       : const LanguageSelectionScreen();
                 }
               },
@@ -78,3 +87,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+

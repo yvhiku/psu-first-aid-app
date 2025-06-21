@@ -194,6 +194,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "chokingTitle": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية للاختناق",
     ),
+    "continueText": MessageLookupByLibrary.simpleMessage("متابعة"),
     "fracturesNote1": MessageLookupByLibrary.simpleMessage(
       "لا تحاول إعادة العظم إلى مكانه أو دفعه مرة أخرى.",
     ),
@@ -429,6 +430,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "بعد النوبة، قدم الراحة والطمأنينة للشخص وهو يستعيد وعيه.",
     ),
     "seizuresTitle": MessageLookupByLibrary.simpleMessage("النوبات"),
+    "selectLanguage": MessageLookupByLibrary.simpleMessage("اختر لغتك"),
     "shockFirstAidHeading": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية للصدمة:",
     ),

@@ -186,6 +186,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Choking occurs when an object blocks the airway, preventing normal breathing.",
     ),
     "chokingTitle": MessageLookupByLibrary.simpleMessage("Choking First Aid"),
+    "continueText": MessageLookupByLibrary.simpleMessage("Continue"),
     "fracturesNote1": MessageLookupByLibrary.simpleMessage(
       "Do NOT try to realign the bone or push it back in place.",
     ),
@@ -433,6 +434,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "After the seizure, comfort and reassure the person as they regain consciousness.",
     ),
     "seizuresTitle": MessageLookupByLibrary.simpleMessage("Seizures"),
+    "selectLanguage": MessageLookupByLibrary.simpleMessage(
+      "Select Your Language",
+    ),
     "shockFirstAidHeading": MessageLookupByLibrary.simpleMessage(
       "First Aid for Shock:",
     ),

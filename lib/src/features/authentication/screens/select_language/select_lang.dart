@@ -1,14 +1,15 @@
-
 import 'package:first_aid_app/src/features/authentication/screens/welcome/welcom_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 
 class LanguageSelectionScreen extends StatefulWidget {
   const LanguageSelectionScreen({super.key});
 
   @override
-  _LanguageSelectionScreenState createState() => _LanguageSelectionScreenState();
+  _LanguageSelectionScreenState createState() =>
+      _LanguageSelectionScreenState();
 }
 
 class _LanguageSelectionScreenState extends State<LanguageSelectionScreen> {
@@ -61,17 +62,21 @@ class _LanguageSelectionScreenState extends State<LanguageSelectionScreen> {
                     },
                   ),
                 );
-              }).toList(),
+              }),
               const SizedBox(height: 30),
               ElevatedButton(
                 onPressed: _selectedLanguage == null
                     ? null
                     : () async {
-                        // Save language preference
                         final prefs = await SharedPreferences.getInstance();
-                        await prefs.setString('selected_language', _selectedLanguage!);
-                        
-                        // Navigate to welcome screen
+                        await prefs.setString(
+                          'selected_language',
+                          _selectedLanguage!,
+                        );
+
+                        // Restart app with new locale
+                        Get.updateLocale(Locale(_selectedLanguage!));
+
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
@@ -79,6 +84,7 @@ class _LanguageSelectionScreenState extends State<LanguageSelectionScreen> {
                           ),
                         );
                       },
+
                 child: const Text('Continue'),
               ),
             ],

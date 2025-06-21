@@ -54,6 +54,21 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Select Your Language`
+  String get selectLanguage {
+    return Intl.message(
+      'Select Your Language',
+      name: 'selectLanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue`
+  String get continueText {
+    return Intl.message('Continue', name: 'continueText', desc: '', args: []);
+  }
+
   /// `Welcome to PGU First Aid`
   String get tWelcomeTitle {
     return Intl.message(

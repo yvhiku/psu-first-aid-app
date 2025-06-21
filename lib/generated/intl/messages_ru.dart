@@ -212,6 +212,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "chokingTitle": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при удушье",
     ),
+    "continueText": MessageLookupByLibrary.simpleMessage("Продолжить"),
     "fracturesNote1": MessageLookupByLibrary.simpleMessage(
       "НЕ пытайтесь вправить кость или вернуть ее на место.",
     ),
@@ -455,6 +456,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "После судорог успокойте и поддержите человека, когда он приходит в себя.",
     ),
     "seizuresTitle": MessageLookupByLibrary.simpleMessage("Судороги"),
+    "selectLanguage": MessageLookupByLibrary.simpleMessage("Выберите язык"),
     "shockFirstAidHeading": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при шоке:",
     ),

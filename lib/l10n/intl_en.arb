@@ -1,5 +1,7 @@
 {
     "@@locale": "en",
+    "selectLanguage": "Select Your Language",
+  "continueText": "Continue",
     "tWelcomeTitle" : "Welcome to PGU First Aid",
     "tWelcomeSubTitle" : "Your Quick Guide to First Aid & Emergency Care!",
     "tLogin" : "Login",

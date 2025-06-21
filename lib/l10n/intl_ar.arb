@@ -1,5 +1,7 @@
 {
     "@@locale": "ar",
+    "selectLanguage": "اختر لغتك",
+  "continueText": "متابعة",
     "tWelcomeTitle": "مرحبًا بكم في الإسعافات الأولية PGU",
     "tWelcomeSubTitle": "دليلك السريع للإسعافات الأولية والرعاية الطارئة!",
     "tLogin": "تسجيل الدخول",
