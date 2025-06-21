@@ -58,10 +58,7 @@ class RecoveryPos extends StatelessWidget {
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            const Text(
-              recoveryPositionIntro,
-              style: TextStyle(fontSize: 16),
-            ),
+            const Text(recoveryPositionIntro, style: TextStyle(fontSize: 16)),
             const SizedBox(height: 20),
             const Text(
               recoveryPositionStepsHeading,
@@ -100,10 +97,18 @@ class RecoveryPos extends StatelessWidget {
           CircleAvatar(
             radius: 14,
             backgroundColor: Colors.red,
-            child: Text(number, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+            child: Text(
+              number,
+              style: const TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
           const SizedBox(width: 12),
-          Expanded(child: Text(description, style: const TextStyle(fontSize: 16))),
+          Expanded(
+            child: Text(description, style: const TextStyle(fontSize: 16)),
+          ),
         ],
       ),
     );

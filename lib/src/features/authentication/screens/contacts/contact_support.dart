@@ -31,7 +31,7 @@ class ContactSupportScreen extends StatelessWidget {
     final Uri emailUri = Uri(
       scheme: tMailto,
       path: email,
-      queryParameters: {tSubject1 : subject},
+      queryParameters: {tSubject1: subject},
     );
 
     try {
@@ -79,9 +79,9 @@ class ContactSupportScreen extends StatelessWidget {
           TextButton(
             onPressed: () {
               Clipboard.setData(ClipboardData(text: phoneNumber));
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text(tcopyphone)),
-              );
+              ScaffoldMessenger.of(
+                context,
+              ).showSnackBar(const SnackBar(content: Text(tcopyphone)));
               Navigator.pop(context);
             },
             child: const Text(tCopy),
@@ -257,16 +257,8 @@ class ContactSupportScreen extends StatelessWidget {
 
   List<Widget> _buildFAQItems(BuildContext context) {
     final faqs = [
-      {
-        tQuestion: tQuestion1,
-        tAnswer:
-            tAnswer1,
-      },
-      {
-        tQuestion: tQuestion2,
-        tAnswer:
-            tAnswer2,
-      },
+      {tQuestion: tQuestion1, tAnswer: tAnswer1},
+      {tQuestion: tQuestion2, tAnswer: tAnswer2},
     ];
 
     return faqs.map((faq) {

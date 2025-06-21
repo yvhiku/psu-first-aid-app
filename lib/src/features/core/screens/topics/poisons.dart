@@ -20,26 +20,30 @@ class PoisonScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text(poisonTitle),
         actions: [
-          Obx(() => IconButton(
-                icon: Icon(
-                  topicController.isTopicSaved(currentTopic)
-                      ? Icons.bookmark
-                      : Icons.bookmark_border,
-                  color: topicController.isTopicSaved(currentTopic) ? Colors.red : null,
-                ),
-                onPressed: () {
-                  topicController.toggleTopicSave(currentTopic);
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text(
-                        topicController.isTopicSaved(currentTopic)
-                            ? addedToSavedTopicsText
-                            : removedFromSavedTopicsText,
-                      ),
+          Obx(
+            () => IconButton(
+              icon: Icon(
+                topicController.isTopicSaved(currentTopic)
+                    ? Icons.bookmark
+                    : Icons.bookmark_border,
+                color: topicController.isTopicSaved(currentTopic)
+                    ? Colors.red
+                    : null,
+              ),
+              onPressed: () {
+                topicController.toggleTopicSave(currentTopic);
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text(
+                      topicController.isTopicSaved(currentTopic)
+                          ? addedToSavedTopicsText
+                          : removedFromSavedTopicsText,
                     ),
-                  );
-                },
-              )),
+                  ),
+                );
+              },
+            ),
+          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -51,13 +55,14 @@ class PoisonScreen extends StatelessWidget {
             const SizedBox(height: 20),
             const Text(
               poisonHeading,
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.red),
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: Colors.red,
+              ),
             ),
             const SizedBox(height: 10),
-            const Text(
-              poisonIntro,
-              style: TextStyle(fontSize: 16),
-            ),
+            const Text(poisonIntro, style: TextStyle(fontSize: 16)),
             const Divider(height: 30),
             const Text(
               poisonStepsHeading,
@@ -92,11 +97,18 @@ class PoisonScreen extends StatelessWidget {
           Container(
             width: 28,
             height: 28,
-            decoration: const BoxDecoration(color: Colors.red, shape: BoxShape.circle),
+            decoration: const BoxDecoration(
+              color: Colors.red,
+              shape: BoxShape.circle,
+            ),
             child: Center(
               child: Text(
                 number,
-                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
               ),
             ),
           ),
@@ -105,7 +117,13 @@ class PoisonScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                Text(
+                  title,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
                 if (description != null) Text(description),
               ],
             ),

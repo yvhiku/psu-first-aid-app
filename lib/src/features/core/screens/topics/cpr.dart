@@ -64,10 +64,7 @@ class CprScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(
-              cprIntro,
-              style: TextStyle(fontSize: 16),
-            ),
+            const Text(cprIntro, style: TextStyle(fontSize: 16)),
             const Divider(height: 30),
             const Text(
               cprStepsHeading,
@@ -146,7 +143,9 @@ class CprScreen extends StatelessWidget {
                 Text(
                   title,
                   style: const TextStyle(
-                      fontWeight: FontWeight.bold, fontSize: 16),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
                 ),
                 Text(description),
               ],

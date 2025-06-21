@@ -26,7 +26,9 @@ class ChokingScreen extends StatelessWidget {
                 topicController.isTopicSaved(currentTopic)
                     ? Icons.bookmark
                     : Icons.bookmark_border,
-                color: topicController.isTopicSaved(currentTopic) ? Colors.red : null,
+                color: topicController.isTopicSaved(currentTopic)
+                    ? Colors.red
+                    : null,
               ),
               onPressed: () {
                 topicController.toggleTopicSave(currentTopic);
@@ -60,10 +62,7 @@ class ChokingScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(
-              tChoking1,
-              style: TextStyle(fontSize: 16),
-            ),
+            const Text(tChoking1, style: TextStyle(fontSize: 16)),
             const Divider(height: 30),
             const Text(
               tChoking2,
@@ -144,15 +143,15 @@ class ChokingScreen extends StatelessWidget {
   }
 
   Widget _buildBulletPoint(String text) {
-  return Padding(
-    padding: const EdgeInsets.symmetric(vertical: 4),
-    child: Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Text('• ', style: TextStyle(fontSize: 18)),
-        Expanded(child: Text(text)), // no const here!
-      ],
-    ),
-  );
-}
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 4),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text('• ', style: TextStyle(fontSize: 18)),
+          Expanded(child: Text(text)), // no const here!
+        ],
+      ),
+    );
+  }
 }

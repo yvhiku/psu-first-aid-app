@@ -65,10 +65,7 @@ class AssessingInjuredPerson extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(
-              tAssessing1,
-              style: TextStyle(fontSize: 16),
-            ),
+            const Text(tAssessing1, style: TextStyle(fontSize: 16)),
             const Divider(height: 30),
             const Text(
               tAssessing2,
@@ -78,44 +75,37 @@ class AssessingInjuredPerson extends StatelessWidget {
             _buildStep(
               number: '1',
               title: tAssessing3,
-              description:
-                  tAssessing4,
+              description: tAssessing4,
             ),
             _buildStep(
               number: '2',
               title: tAssessing5,
-              description:
-                  tAssessing6,
+              description: tAssessing6,
             ),
             _buildStep(
               number: '3',
               title: tAssessing7,
-              description:
-                  tAssessing8,
+              description: tAssessing8,
             ),
             _buildStep(
               number: '4',
               title: tAssessing9,
-              description:
-                  tAssessing10,
+              description: tAssessing10,
             ),
             _buildStep(
               number: '5',
               title: tAssessing11,
-              description:
-                  tAssessing12,
+              description: tAssessing12,
             ),
             _buildStep(
               number: '6',
               title: tAssessing13,
-              description:
-                  tAssessing14,
+              description: tAssessing14,
             ),
             _buildStep(
               number: '7',
               title: tAssessing15,
-              description:
-                  tAssessing16,
+              description: tAssessing16,
             ),
             const Divider(height: 30),
             const Text(
@@ -123,12 +113,9 @@ class AssessingInjuredPerson extends StatelessWidget {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildBulletPoint(
-                tAssessing18),
-            _buildBulletPoint(
-                tAssessing19),
-            _buildBulletPoint(
-                tAssessing20),
+            _buildBulletPoint(tAssessing18),
+            _buildBulletPoint(tAssessing19),
+            _buildBulletPoint(tAssessing20),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
@@ -188,8 +175,10 @@ class AssessingInjuredPerson extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style:
-                      const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
                 ),
                 Text(description),
               ],

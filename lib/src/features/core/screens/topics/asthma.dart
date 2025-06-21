@@ -65,41 +65,18 @@ class Asthma extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(
-              tAsthma1,
-              style: TextStyle(fontSize: 16),
-            ),
+            const Text(tAsthma1, style: TextStyle(fontSize: 16)),
             const Divider(height: 30),
             const Text(
               tAsthma2,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildStep(
-              number: '1',
-              title: tAsthma3,
-              description: tAsthma4,
-            ),
-            _buildStep(
-              number: '2',
-              title: tAsthma5,
-              description: tAsthma6,
-            ),
-            _buildStep(
-              number: '3',
-              title: tAsthma7,
-              description: tAsthma8,
-            ),
-            _buildStep(
-              number: '4',
-              title: tAsthma9,
-              description: tAsthma10,
-            ),
-            _buildStep(
-              number: '5',
-              title: tAsthma11,
-              description: tAsthma12,
-            ),
+            _buildStep(number: '1', title: tAsthma3, description: tAsthma4),
+            _buildStep(number: '2', title: tAsthma5, description: tAsthma6),
+            _buildStep(number: '3', title: tAsthma7, description: tAsthma8),
+            _buildStep(number: '4', title: tAsthma9, description: tAsthma10),
+            _buildStep(number: '5', title: tAsthma11, description: tAsthma12),
             const Divider(height: 30),
             const Text(
               tAsthma13,

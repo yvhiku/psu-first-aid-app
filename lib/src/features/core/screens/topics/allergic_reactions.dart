@@ -78,38 +78,32 @@ class AllergicReactions extends StatelessWidget {
             _buildStep(
               number: '1',
               title: tAllergicReactioncontent3,
-              description:
-                  tAllergicReactioncontent4,
+              description: tAllergicReactioncontent4,
             ),
             _buildStep(
               number: '2',
               title: tAllergicReactioncontent5,
-              description:
-                  tAllergicReactioncontent6,
+              description: tAllergicReactioncontent6,
             ),
             _buildStep(
               number: '3',
               title: tAllergicReactioncontent7,
-              description:
-                  tAllergicReactioncontent8,
+              description: tAllergicReactioncontent8,
             ),
             _buildStep(
               number: '4',
               title: tAllergicReactioncontent9,
-              description:
-                  tAllergicReactioncontent10,
+              description: tAllergicReactioncontent10,
             ),
             _buildStep(
               number: '5',
               title: tAllergicReactioncontent11,
-              description:
-                  tAllergicReactioncontent12,
+              description: tAllergicReactioncontent12,
             ),
             _buildStep(
               number: '6',
               title: tAllergicReactioncontent13,
-              description:
-                  tAllergicReactioncontent14,
+              description: tAllergicReactioncontent14,
             ),
             const Divider(height: 30),
             const Text(
@@ -120,8 +114,7 @@ class AllergicReactions extends StatelessWidget {
             _buildBulletPoint(tAllergicReactioncontent16),
             _buildBulletPoint(tAllergicReactioncontent17),
             _buildBulletPoint(tAllergicReactioncontent18),
-            _buildBulletPoint(
-                tAllergicReactioncontent19),
+            _buildBulletPoint(tAllergicReactioncontent19),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
@@ -181,7 +174,10 @@ class AllergicReactions extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
                 ),
                 Text(description),
               ],

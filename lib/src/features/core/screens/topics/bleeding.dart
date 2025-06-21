@@ -22,28 +22,30 @@ class Bleeding extends StatelessWidget {
       appBar: AppBar(
         title: const Text(tBleeding),
         actions: [
-          Obx(() => IconButton(
-                icon: Icon(
-                  topicController.isTopicSaved(currentTopic)
-                      ? Icons.bookmark
-                      : Icons.bookmark_border,
-                  color: topicController.isTopicSaved(currentTopic)
-                      ? Colors.red
-                      : null,
-                ),
-                onPressed: () {
-                  topicController.toggleTopicSave(currentTopic);
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text(
-                        topicController.isTopicSaved(currentTopic)
-                            ? taddedtosaved
-                            : tremovedtopic,
-                      ),
+          Obx(
+            () => IconButton(
+              icon: Icon(
+                topicController.isTopicSaved(currentTopic)
+                    ? Icons.bookmark
+                    : Icons.bookmark_border,
+                color: topicController.isTopicSaved(currentTopic)
+                    ? Colors.red
+                    : null,
+              ),
+              onPressed: () {
+                topicController.toggleTopicSave(currentTopic);
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text(
+                      topicController.isTopicSaved(currentTopic)
+                          ? taddedtosaved
+                          : tremovedtopic,
                     ),
-                  );
-                },
-              )),
+                  ),
+                );
+              },
+            ),
+          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -56,15 +58,13 @@ class Bleeding extends StatelessWidget {
             const Text(
               tBleedingTitle,
               style: TextStyle(
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.red),
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: Colors.red,
+              ),
             ),
             const SizedBox(height: 10),
-            const Text(
-              tBleeding1,
-              style: TextStyle(fontSize: 16),
-            ),
+            const Text(tBleeding1, style: TextStyle(fontSize: 16)),
             const Divider(height: 30),
             const Text(
               tBleeding2,
@@ -97,18 +97,26 @@ class Bleeding extends StatelessWidget {
         children: [
           CircleAvatar(
             backgroundColor: Colors.red,
-            child: Text(number,
-                style: const TextStyle(
-                    color: Colors.white, fontWeight: FontWeight.bold)),
+            child: Text(
+              number,
+              style: const TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
           const SizedBox(width: 10),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(title,
-                    style: const TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 16)),
+                Text(
+                  title,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
                 Text(description),
               ],
             ),

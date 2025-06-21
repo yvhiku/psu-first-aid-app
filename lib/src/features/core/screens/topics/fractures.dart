@@ -20,7 +20,8 @@ class FracturesScreen extends StatelessWidget {
 
   static const String stepsHeading = 'First Aid Steps:';
   static const String step1Title = 'Immobilize the Area';
-  static const String step1Desc = 'Keep the injured area still and avoid movement.';
+  static const String step1Desc =
+      'Keep the injured area still and avoid movement.';
   static const String step2Title = 'Apply a Splint';
   static const String step2Desc =
       'Use a padded splint to support the injury without forcing it into place.';
@@ -32,7 +33,8 @@ class FracturesScreen extends StatelessWidget {
       'Call emergency services or take the person to hospital promptly.';
 
   static const String notesHeading = 'Important Notes:';
-  static const String note1 = 'Do NOT try to realign the bone or push it back in place.';
+  static const String note1 =
+      'Do NOT try to realign the bone or push it back in place.';
   static const String note2 =
       'If bleeding, apply pressure around the wound (not directly on the bone).';
 
@@ -55,7 +57,9 @@ class FracturesScreen extends StatelessWidget {
                 topicController.isTopicSaved(currentTopic)
                     ? Icons.bookmark
                     : Icons.bookmark_border,
-                color: topicController.isTopicSaved(currentTopic) ? Colors.red : null,
+                color: topicController.isTopicSaved(currentTopic)
+                    ? Colors.red
+                    : null,
               ),
               onPressed: () {
                 topicController.toggleTopicSave(currentTopic);
@@ -75,54 +79,51 @@ class FracturesScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Image.asset(tInjuryimg, fit: BoxFit.cover),
-          const SizedBox(height: 20),
-          const Text(
-            heading,
-            style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.red),
-          ),
-          const SizedBox(height: 10),
-          const Text(intro, style: TextStyle(fontSize: 16)),
-          const Divider(height: 30),
-          const Text(signsHeading,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-          const SizedBox(height: 10),
-          const Text(sign1),
-          const Text(sign2),
-          const Text(sign3),
-          const Text(sign4),
-          const Divider(height: 30),
-          const Text(stepsHeading,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-          const SizedBox(height: 10),
-          _buildStep(
-            number: '1',
-            title: step1Title,
-            description: step1Desc,
-          ),
-          _buildStep(
-            number: '2',
-            title: step2Title,
-            description: step2Desc,
-          ),
-          _buildStep(
-            number: '3',
-            title: step3Title,
-            description: step3Desc,
-          ),
-          _buildStep(
-            number: '4',
-            title: step4Title,
-            description: step4Desc,
-          ),
-          const Divider(height: 30),
-          const Text(notesHeading,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-          const SizedBox(height: 10),
-          _buildBulletPoint(note1),
-          _buildBulletPoint(note2),
-        ]),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Image.asset(tInjuryimg, fit: BoxFit.cover),
+            const SizedBox(height: 20),
+            const Text(
+              heading,
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: Colors.red,
+              ),
+            ),
+            const SizedBox(height: 10),
+            const Text(intro, style: TextStyle(fontSize: 16)),
+            const Divider(height: 30),
+            const Text(
+              signsHeading,
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 10),
+            const Text(sign1),
+            const Text(sign2),
+            const Text(sign3),
+            const Text(sign4),
+            const Divider(height: 30),
+            const Text(
+              stepsHeading,
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 10),
+            _buildStep(number: '1', title: step1Title, description: step1Desc),
+            _buildStep(number: '2', title: step2Title, description: step2Desc),
+            _buildStep(number: '3', title: step3Title, description: step3Desc),
+            _buildStep(number: '4', title: step4Title, description: step4Desc),
+            const Divider(height: 30),
+            const Text(
+              notesHeading,
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 10),
+            _buildBulletPoint(note1),
+            _buildBulletPoint(note2),
+          ],
+        ),
       ),
     );
   }
@@ -134,33 +135,57 @@ class FracturesScreen extends StatelessWidget {
   }) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
-      child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Container(
-          width: 30,
-          height: 30,
-          decoration: BoxDecoration(color: Colors.red, shape: BoxShape.circle),
-          child: Center(
-            child: Text(number, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: 30,
+            height: 30,
+            decoration: BoxDecoration(
+              color: Colors.red,
+              shape: BoxShape.circle,
+            ),
+            child: Center(
+              child: Text(
+                number,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
           ),
-        ),
-        const SizedBox(width: 10),
-        Expanded(
-          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-            Text(description),
-          ]),
-        ),
-      ]),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
+                Text(description),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 
   Widget _buildBulletPoint(String text) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4.0),
-      child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        const Text('• ', style: TextStyle(fontSize: 16)),
-        Expanded(child: Text(text)),
-      ]),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text('• ', style: TextStyle(fontSize: 16)),
+          Expanded(child: Text(text)),
+        ],
+      ),
     );
   }
 }

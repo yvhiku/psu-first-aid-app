@@ -161,7 +161,11 @@ class AllTopicsScreen extends StatelessWidget {
   // New vertically scrollable grid of white buttons
   Widget _buildScrollableTopicsGrid(BuildContext context) {
     final List<Map<String, dynamic>> topics = [
-      {'image': tInjuryimg, 'title': tFractures, 'screen': const FracturesScreen()},
+      {
+        'image': tInjuryimg,
+        'title': tFractures,
+        'screen': const FracturesScreen(),
+      },
       {
         'image': tAllergicReactionimg,
         'title': tAllergicReaction,
@@ -178,7 +182,11 @@ class AllTopicsScreen extends StatelessWidget {
         'title': tDrugOverdose,
         'screen': const DrugOverdoseScreen(),
       },
-      {'image': tSoreEyesimg, 'title': tEyeInjury, 'screen': const EyeInjuryScreen()},
+      {
+        'image': tSoreEyesimg,
+        'title': tEyeInjury,
+        'screen': const EyeInjuryScreen(),
+      },
       {'image': tHeadimg, 'title': tHeadInjury, 'screen': const HeadInjury()},
       {
         'image': tHeartAttackimg,

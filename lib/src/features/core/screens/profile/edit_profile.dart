@@ -40,7 +40,10 @@ class _UpdatedProfileScreen extends State<UpdatedProfileScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final isLoading = Provider.of<AuthProvider1>(context, listen: true).isLoading;
+    final isLoading = Provider.of<AuthProvider1>(
+      context,
+      listen: true,
+    ).isLoading;
     return Scaffold(
       appBar: AppBar(
         title: const Text(tEditProfile),
@@ -49,7 +52,9 @@ class _UpdatedProfileScreen extends State<UpdatedProfileScreen> {
       ),
       body: SafeArea(
         child: isLoading == true
-            ? const Center(child: CircularProgressIndicator(color: tPrimaryColor))
+            ? const Center(
+                child: CircularProgressIndicator(color: tPrimaryColor),
+              )
             : SingleChildScrollView(
                 padding: const EdgeInsets.all(tDefaultSize),
                 child: Center(
@@ -71,7 +76,10 @@ class _UpdatedProfileScreen extends State<UpdatedProfileScreen> {
                                   ? Image.asset(tProfileImg)
                                   : ClipRRect(
                                       borderRadius: BorderRadius.circular(100),
-                                      child: Image.file(image!, fit: BoxFit.cover),
+                                      child: Image.file(
+                                        image!,
+                                        fit: BoxFit.cover,
+                                      ),
                                     ),
                             ),
                             Positioned(
@@ -122,13 +130,21 @@ class _UpdatedProfileScreen extends State<UpdatedProfileScreen> {
                                 ),
                                 enabledBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(16),
-                                  borderSide: BorderSide(color: Colors.grey.shade300),
+                                  borderSide: BorderSide(
+                                    color: Colors.grey.shade300,
+                                  ),
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(16),
-                                  borderSide: BorderSide(color: tPrimaryColor, width: 2),
+                                  borderSide: BorderSide(
+                                    color: tPrimaryColor,
+                                    width: 2,
+                                  ),
                                 ),
-                                prefixIcon: Icon(Icons.person_outline, color: tPrimaryColor),
+                                prefixIcon: Icon(
+                                  Icons.person_outline,
+                                  color: tPrimaryColor,
+                                ),
                               ),
                             ),
 
@@ -156,13 +172,21 @@ class _UpdatedProfileScreen extends State<UpdatedProfileScreen> {
                                 ),
                                 enabledBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(16),
-                                  borderSide: BorderSide(color: Colors.grey.shade300),
+                                  borderSide: BorderSide(
+                                    color: Colors.grey.shade300,
+                                  ),
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(16),
-                                  borderSide: BorderSide(color: tPrimaryColor, width: 2),
+                                  borderSide: BorderSide(
+                                    color: tPrimaryColor,
+                                    width: 2,
+                                  ),
                                 ),
-                                prefixIcon: Icon(Icons.email_outlined, color: tPrimaryColor),
+                                prefixIcon: Icon(
+                                  Icons.email_outlined,
+                                  color: tPrimaryColor,
+                                ),
                               ),
                             ),
 
@@ -183,7 +207,10 @@ class _UpdatedProfileScreen extends State<UpdatedProfileScreen> {
                                   fontSize: 14,
                                   color: Colors.grey[600],
                                 ),
-                                prefixIcon: Icon(Icons.edit_outlined, color: tPrimaryColor),
+                                prefixIcon: Icon(
+                                  Icons.edit_outlined,
+                                  color: tPrimaryColor,
+                                ),
                                 filled: true,
                                 fillColor: Colors.grey[100],
                                 contentPadding: const EdgeInsets.symmetric(
@@ -192,11 +219,16 @@ class _UpdatedProfileScreen extends State<UpdatedProfileScreen> {
                                 ),
                                 enabledBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(16),
-                                  borderSide: BorderSide(color: Colors.grey.shade300),
+                                  borderSide: BorderSide(
+                                    color: Colors.grey.shade300,
+                                  ),
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(16),
-                                  borderSide: BorderSide(color: tPrimaryColor, width: 2),
+                                  borderSide: BorderSide(
+                                    color: tPrimaryColor,
+                                    width: 2,
+                                  ),
                                 ),
                               ),
                             ),
@@ -215,7 +247,9 @@ class _UpdatedProfileScreen extends State<UpdatedProfileScreen> {
                                   foregroundColor: tWhiteColor,
                                   backgroundColor: tPrimaryColor,
                                   side: BorderSide(color: tSecondaryColor),
-                                  padding: EdgeInsets.symmetric(vertical: tButtonHeight),
+                                  padding: EdgeInsets.symmetric(
+                                    vertical: tButtonHeight,
+                                  ),
                                 ),
                                 onPressed: () => storeData(),
                                 child: const Text(tCONTINUE),

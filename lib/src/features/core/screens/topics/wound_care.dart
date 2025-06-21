@@ -58,10 +58,7 @@ class WoundCare extends StatelessWidget {
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            const Text(
-              woundCareIntro,
-              style: TextStyle(fontSize: 16),
-            ),
+            const Text(woundCareIntro, style: TextStyle(fontSize: 16)),
             const SizedBox(height: 20),
             const Text(
               woundCareStepsHeading,
@@ -102,11 +99,16 @@ class WoundCare extends StatelessWidget {
             backgroundColor: Colors.red,
             child: Text(
               number,
-              style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+              style: const TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
           const SizedBox(width: 12),
-          Expanded(child: Text(description, style: const TextStyle(fontSize: 16))),
+          Expanded(
+            child: Text(description, style: const TextStyle(fontSize: 16)),
+          ),
         ],
       ),
     );

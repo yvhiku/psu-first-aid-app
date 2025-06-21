@@ -31,7 +31,8 @@ class EyeInjuryScreen extends StatelessWidget {
 
   static const String notesHeading = 'Important Notes:';
   static const String note1 = 'Do not try to remove embedded objects.';
-  static const String note2 = 'Avoid using any medication or ointment unless prescribed.';
+  static const String note2 =
+      'Avoid using any medication or ointment unless prescribed.';
 
   @override
   Widget build(BuildContext context) {
@@ -52,8 +53,9 @@ class EyeInjuryScreen extends StatelessWidget {
                 topicController.isTopicSaved(currentTopic)
                     ? Icons.bookmark
                     : Icons.bookmark_border,
-                color:
-                    topicController.isTopicSaved(currentTopic) ? Colors.red : null,
+                color: topicController.isTopicSaved(currentTopic)
+                    ? Colors.red
+                    : null,
               ),
               onPressed: () {
                 topicController.toggleTopicSave(currentTopic);
@@ -89,23 +91,29 @@ class EyeInjuryScreen extends StatelessWidget {
             const SizedBox(height: 10),
             const Text(intro, style: TextStyle(fontSize: 16)),
             const Divider(height: 30),
-            const Text(typesHeading,
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            const Text(
+              typesHeading,
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
             const SizedBox(height: 10),
             const Text(type1),
             const Text(type2),
             const Text(type3),
             const Divider(height: 30),
-            const Text(stepsHeading,
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            const Text(
+              stepsHeading,
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
             const SizedBox(height: 10),
             _buildStep(number: '1', title: step1Title, description: step1Desc),
             _buildStep(number: '2', title: step2Title, description: step2Desc),
             _buildStep(number: '3', title: step3Title, description: step3Desc),
             _buildStep(number: '4', title: step4Title, description: step4Desc),
             const Divider(height: 30),
-            const Text(notesHeading,
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+            const Text(
+              notesHeading,
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
             const SizedBox(height: 10),
             _buildBulletPoint(note1),
             _buildBulletPoint(note2),
@@ -128,21 +136,35 @@ class EyeInjuryScreen extends StatelessWidget {
           Container(
             width: 30,
             height: 30,
-            decoration: const BoxDecoration(color: Colors.red, shape: BoxShape.circle),
+            decoration: const BoxDecoration(
+              color: Colors.red,
+              shape: BoxShape.circle,
+            ),
             child: Center(
-              child: Text(number,
-                  style: const TextStyle(
-                      color: Colors.white, fontWeight: FontWeight.bold)),
+              child: Text(
+                number,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
           ),
           const SizedBox(width: 10),
           Expanded(
-            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(title,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
                   style: const TextStyle(
-                      fontWeight: FontWeight.bold, fontSize: 16)),
-              Text(description),
-            ]),
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
+                Text(description),
+              ],
+            ),
           ),
         ],
       ),

@@ -26,7 +26,9 @@ class HeadInjury extends StatelessWidget {
                 topicController.isTopicSaved(currentTopic)
                     ? Icons.bookmark
                     : Icons.bookmark_border,
-                color: topicController.isTopicSaved(currentTopic) ? Colors.red : null,
+                color: topicController.isTopicSaved(currentTopic)
+                    ? Colors.red
+                    : null,
               ),
               onPressed: () {
                 topicController.toggleTopicSave(currentTopic);
@@ -53,41 +55,25 @@ class HeadInjury extends StatelessWidget {
             const SizedBox(height: 20),
             const Text(
               headInjuryHeading,
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.red),
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: Colors.red,
+              ),
             ),
             const SizedBox(height: 10),
-            const Text(
-              headInjuryIntro,
-              style: TextStyle(fontSize: 16),
-            ),
+            const Text(headInjuryIntro, style: TextStyle(fontSize: 16)),
             const Divider(height: 30),
             const Text(
               headInjuryStepsHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildStep(
-              '1',
-              headInjuryStep1Title,
-              headInjuryStep1Desc,
-            ),
-            _buildStep(
-              '2',
-              headInjuryStep2Title,
-              headInjuryStep2Desc,
-            ),
-            _buildStep(
-              '3',
-              headInjuryStep3Title,
-            ),
-            _buildStep(
-              '4',
-              headInjuryStep4Title,
-            ),
-            _buildStep(
-              '5',
-              headInjuryStep5Title,
-            ),
+            _buildStep('1', headInjuryStep1Title, headInjuryStep1Desc),
+            _buildStep('2', headInjuryStep2Title, headInjuryStep2Desc),
+            _buildStep('3', headInjuryStep3Title),
+            _buildStep('4', headInjuryStep4Title),
+            _buildStep('5', headInjuryStep5Title),
             const Divider(height: 30),
             const Text(
               headInjuryNotesHeading,
@@ -111,11 +97,18 @@ class HeadInjury extends StatelessWidget {
           Container(
             width: 28,
             height: 28,
-            decoration: const BoxDecoration(color: Colors.red, shape: BoxShape.circle),
+            decoration: const BoxDecoration(
+              color: Colors.red,
+              shape: BoxShape.circle,
+            ),
             child: Center(
               child: Text(
                 number,
-                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                ),
               ),
             ),
           ),
@@ -124,7 +117,13 @@ class HeadInjury extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                Text(
+                  title,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
                 if (description != null) Text(description),
               ],
             ),

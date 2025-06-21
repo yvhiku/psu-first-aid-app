@@ -26,7 +26,9 @@ class DiabeticsScreen extends StatelessWidget {
                 topicController.isTopicSaved(currentTopic)
                     ? Icons.bookmark
                     : Icons.bookmark_border,
-                color: topicController.isTopicSaved(currentTopic) ? Colors.red : null,
+                color: topicController.isTopicSaved(currentTopic)
+                    ? Colors.red
+                    : null,
               ),
               onPressed: () {
                 topicController.toggleTopicSave(currentTopic);
@@ -53,13 +55,14 @@ class DiabeticsScreen extends StatelessWidget {
             const SizedBox(height: 20),
             const Text(
               diabeticsHeader,
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.red),
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                color: Colors.red,
+              ),
             ),
             const SizedBox(height: 10),
-            const Text(
-              diabeticsIntro,
-              style: TextStyle(fontSize: 16),
-            ),
+            const Text(diabeticsIntro, style: TextStyle(fontSize: 16)),
             const Divider(height: 30),
             const Text(
               diabeticsSignsTitle,
@@ -120,21 +123,36 @@ class DiabeticsScreen extends StatelessWidget {
           Container(
             width: 30,
             height: 30,
-            decoration: const BoxDecoration(color: Colors.red, shape: BoxShape.circle),
+            decoration: const BoxDecoration(
+              color: Colors.red,
+              shape: BoxShape.circle,
+            ),
             child: Center(
-              child: Text(number,
-                  style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+              child: Text(
+                number,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
           ),
           const SizedBox(width: 10),
           Expanded(
-              child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                Text(title,
-                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
                 Text(description),
-              ])),
+              ],
+            ),
+          ),
         ],
       ),
     );

@@ -41,7 +41,10 @@ class SavedScreen extends StatelessWidget {
                       ),
                       TextButton(
                         onPressed: () => Navigator.pop(context, true),
-                        child: const Text(tclear, style: TextStyle(color: Colors.red)),
+                        child: const Text(
+                          tclear,
+                          style: TextStyle(color: Colors.red),
+                        ),
                       ),
                     ],
                   ),
@@ -55,10 +58,7 @@ class SavedScreen extends StatelessWidget {
               }
             },
             itemBuilder: (context) => [
-              const PopupMenuItem(
-                value: 'clear_all',
-                child: Text(tclearall),
-              ),
+              const PopupMenuItem(value: 'clear_all', child: Text(tclearall)),
             ],
           ),
         ],
@@ -78,7 +78,8 @@ class SavedScreen extends StatelessWidget {
                 const SizedBox(height: 10),
                 TextButton(
                   onPressed: () {
-                    navigationController.selectedIndex.value = 1; // Navigate to topics
+                    navigationController.selectedIndex.value =
+                        1; // Navigate to topics
                   },
                   child: const Text(
                     tbrowstopics,
@@ -130,7 +131,10 @@ class SavedScreen extends StatelessWidget {
                             ),
                             TextButton(
                               onPressed: () => Navigator.pop(context, true),
-                              child: const Text(tremove, style: TextStyle(color: Colors.red)),
+                              child: const Text(
+                                tremove,
+                                style: TextStyle(color: Colors.red),
+                              ),
                             ),
                           ],
                         ),
@@ -160,7 +164,9 @@ class SavedScreen extends StatelessWidget {
                         leading: CircleAvatar(
                           backgroundColor: Colors.grey[200],
                           child: Image(
-                            image: AssetImage(topic['image'] ?? tDefaultTopicImg),
+                            image: AssetImage(
+                              topic['image'] ?? tDefaultTopicImg,
+                            ),
                             width: 30,
                           ),
                         ),
@@ -189,7 +195,9 @@ class SavedScreen extends StatelessWidget {
                           },
                         ),
                         onTap: () {
-                          Get.to(() => topicController.getScreenForTopic(topic));
+                          Get.to(
+                            () => topicController.getScreenForTopic(topic),
+                          );
                         },
                       ),
                     ),

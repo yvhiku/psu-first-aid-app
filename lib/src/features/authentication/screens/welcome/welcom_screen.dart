@@ -1,7 +1,7 @@
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
 import 'package:first_aid_app/src/constants/sizes.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/authentication/provider/auth_provider.dart';
 import 'package:first_aid_app/src/features/authentication/screens/login/login_screen.dart';
 import 'package:first_aid_app/src/features/core/controllers/widgets/navbar.dart';
@@ -18,9 +18,10 @@ class WelcomeScreen extends StatefulWidget {
 class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
-    final ap = Provider.of<AuthProvider1>(context, listen: false);
-
-    var height = MediaQuery.of(context).size.height;
+    // Changed to listen: true to rebuild when language changes
+    final ap = Provider.of<AuthProvider1>(context, listen: true);
+    final height = MediaQuery.of(context).size.height;
+    final s = S.of(context); // Cache the localization instance
 
     return Scaffold(
       body: Container(
@@ -32,16 +33,16 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             Column(
               children: [
                 Text(
-                  tWelcomeTitle,
-                  style: TextStyle(
+                  s.tWelcomeTitle, // Using cached instance
+                  style: const TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                     fontFamily: "Poppins",
                   ),
                 ),
                 Text(
-                  tWelcomeSubTitle,
-                  style: TextStyle(
+                  s.tWelcomeSubTitle, // Using cached instance
+                  style: const TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.normal,
                     fontFamily: "Poppins",
@@ -54,8 +55,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               child: OutlinedButton(
                 style: OutlinedButton.styleFrom(
                   elevation: 0,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadiusGeometry.all(Radius.circular(20)),
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
                   ),
                   foregroundColor: tWhiteColor,
                   backgroundColor: tPrimaryColor,
@@ -63,24 +64,23 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   padding: EdgeInsets.symmetric(vertical: tButtonHeight),
                 ),
                 onPressed: () {
-                  if (ap.isSignedIn == true) {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const NavBar()),
-                    );
-                  } else {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const LoginScreen(),
-                      ),
-                    );
-                  }
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) =>
+                          ap.isSignedIn ? const NavBar() : const LoginScreen(),
+                    ),
+                  );
                 },
-                child: Text(tLogin.toUpperCase()),
+                child: Text(
+                  s.tLogin.toUpperCase(), // Using cached instance
+                  style: const TextStyle(
+                    letterSpacing: 1.2, // Better uppercase appearance
+                  ),
+                ),
               ),
             ),
-            SizedBox(width: 10.0),
+            const SizedBox(width: 10.0),
           ],
         ),
       ),

@@ -179,56 +179,55 @@ class HomeScreen extends StatelessWidget {
   void _makeEmergencyCall(BuildContext context) {
     showDialog(
       context: context,
-      builder:
-          (context) => AlertDialog(
-            title: const Text(
-              tEmergencycall,
+      builder: (context) => AlertDialog(
+        title: const Text(
+          tEmergencycall,
+          style: TextStyle(
+            color: Colors.black,
+            fontFamily: "Poppins",
+            fontSize: 20,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        content: const Text(
+          tAreyousure,
+          style: TextStyle(
+            color: Colors.black,
+            fontFamily: "Poppins",
+            fontSize: 14,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text(
+              tCancel,
               style: TextStyle(
-                color: Colors.black,
-                fontFamily: "Poppins",
-                fontSize: 20,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            content: const Text(
-              tAreyousure,
-              style: TextStyle(
-                color: Colors.black,
+                color: tPrimaryColor,
                 fontFamily: "Poppins",
                 fontSize: 14,
                 fontWeight: FontWeight.w600,
               ),
             ),
-            actions: [
-              TextButton(
-                onPressed: () => Navigator.pop(context),
-                child: const Text(
-                  tCancel,
-                  style: TextStyle(
-                    color: tPrimaryColor,
-                    fontFamily: "Poppins",
-                    fontSize: 14,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-              ),
-              TextButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                  launch('tel:112');
-                },
-                child: const Text(
-                  tCall,
-                  style: TextStyle(
-                    color: tPrimaryColor,
-                    fontFamily: "Poppins",
-                    fontSize: 14,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
-              ),
-            ],
           ),
+          TextButton(
+            onPressed: () {
+              Navigator.pop(context);
+              launch('tel:112');
+            },
+            child: const Text(
+              tCall,
+              style: TextStyle(
+                color: tPrimaryColor,
+                fontFamily: "Poppins",
+                fontSize: 14,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 

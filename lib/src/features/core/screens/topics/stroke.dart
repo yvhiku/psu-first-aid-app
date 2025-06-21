@@ -58,10 +58,7 @@ class StrokeScreen extends StatelessWidget {
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            const Text(
-              strokeIntro,
-              style: TextStyle(fontSize: 16),
-            ),
+            const Text(strokeIntro, style: TextStyle(fontSize: 16)),
             const SizedBox(height: 20),
             const Text(
               strokeSignsHeading,

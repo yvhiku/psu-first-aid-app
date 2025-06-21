@@ -26,7 +26,9 @@ class Shock extends StatelessWidget {
                 topicController.isTopicSaved(currentTopic)
                     ? Icons.bookmark
                     : Icons.bookmark_border,
-                color: topicController.isTopicSaved(currentTopic) ? Colors.red : null,
+                color: topicController.isTopicSaved(currentTopic)
+                    ? Colors.red
+                    : null,
               ),
               onPressed: () {
                 topicController.toggleTopicSave(currentTopic);
@@ -56,10 +58,7 @@ class Shock extends StatelessWidget {
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            const Text(
-              shockIntro,
-              style: TextStyle(fontSize: 16),
-            ),
+            const Text(shockIntro, style: TextStyle(fontSize: 16)),
             const SizedBox(height: 20),
             const Text(
               shockSignsHeading,
@@ -107,7 +106,9 @@ class Shock extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 12),
-          Expanded(child: Text(description, style: const TextStyle(fontSize: 16))),
+          Expanded(
+            child: Text(description, style: const TextStyle(fontSize: 16)),
+          ),
         ],
       ),
     );

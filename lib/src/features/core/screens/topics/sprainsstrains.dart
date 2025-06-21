@@ -51,20 +51,14 @@ class SprainsStrains extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.asset(
-              tSprainimg,
-              fit: BoxFit.cover,
-            ),
+            Image.asset(tSprainimg, fit: BoxFit.cover),
             const SizedBox(height: 16),
             const Text(
               sprainsStrainsTitle,
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            const Text(
-              sprainsStrainsIntro,
-              style: TextStyle(fontSize: 16),
-            ),
+            const Text(sprainsStrainsIntro, style: TextStyle(fontSize: 16)),
             const SizedBox(height: 20),
             const Text(
               sprainsStrainsSignsHeading,
@@ -102,10 +96,18 @@ class SprainsStrains extends StatelessWidget {
           CircleAvatar(
             radius: 14,
             backgroundColor: Colors.red,
-            child: Text(number, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+            child: Text(
+              number,
+              style: const TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
           const SizedBox(width: 12),
-          Expanded(child: Text(description, style: const TextStyle(fontSize: 16))),
+          Expanded(
+            child: Text(description, style: const TextStyle(fontSize: 16)),
+          ),
         ],
       ),
     );

@@ -7,14 +7,15 @@ class AboutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const baseStyle = TextStyle(fontFamily: 'Poppins', fontSize: 16);
-    const boldStyle = TextStyle(fontFamily: 'Poppins', fontSize: 16, fontWeight: FontWeight.bold);
+    const boldStyle = TextStyle(
+      fontFamily: 'Poppins',
+      fontSize: 16,
+      fontWeight: FontWeight.bold,
+    );
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          'About',
-          style: TextStyle(fontFamily: 'Poppins'),
-        ),
+        title: const Text('About', style: TextStyle(fontFamily: 'Poppins')),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -29,38 +30,23 @@ class AboutScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 16),
-            Text(
-              taboutHeader,
-              style: baseStyle,
-            ),
+            Text(taboutHeader, style: baseStyle),
             SizedBox(height: 24),
             Text(taboutHeader1, style: boldStyle),
             SizedBox(height: 8),
-            Text(
-              taboutparagraph,
-              style: baseStyle,
-            ),
+            Text(taboutparagraph, style: baseStyle),
             SizedBox(height: 24),
             Text(taboutHeader2, style: boldStyle),
             SizedBox(height: 8),
-            Text(
-              taboutparagraph2,
-              style: baseStyle,
-            ),
+            Text(taboutparagraph2, style: baseStyle),
             SizedBox(height: 24),
             Text(taboutHeader3, style: boldStyle),
             SizedBox(height: 8),
-            Text(
-              taboutparagraph3,
-              style: baseStyle,
-            ),
+            Text(taboutparagraph3, style: baseStyle),
             SizedBox(height: 24),
             Text(taboutHeader4, style: boldStyle),
             SizedBox(height: 8),
-            Text(
-              taboutparagraph4,
-              style: baseStyle,
-            ),
+            Text(taboutparagraph4, style: baseStyle),
           ],
         ),
       ),

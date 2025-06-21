@@ -65,5 +65,4 @@ class DefaultFirebaseOptions {
     storageBucket: 'firstaidapp1-811e3.firebasestorage.app',
     iosBundleId: 'com.example.firstAidApp',
   );
-
 }

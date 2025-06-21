@@ -26,8 +26,10 @@ class _OtpScreenState extends State<OtpScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final isLoading =
-        Provider.of<AuthProvider1>(context, listen: true).isLoading;
+    final isLoading = Provider.of<AuthProvider1>(
+      context,
+      listen: true,
+    ).isLoading;
     return Scaffold(
       appBar: AppBar(
         title: const Text(tOTPveri),
@@ -39,157 +41,152 @@ class _OtpScreenState extends State<OtpScreen> {
         ),
       ),
       body: SafeArea(
-        child:
-            isLoading == true
-                ? const Center(
-                  child: CircularProgressIndicator(color: tPrimaryColor),
-                )
-                : SingleChildScrollView(
-                  padding: const EdgeInsets.all(tDefaultSize),
-                  child: Center(
-                    child: Column(
-                      children: [
-                        Image(
-                          image: const AssetImage(tWelcomeScreenImage),
-                          height: MediaQuery.of(context).size.height * 0.2,
+        child: isLoading == true
+            ? const Center(
+                child: CircularProgressIndicator(color: tPrimaryColor),
+              )
+            : SingleChildScrollView(
+                padding: const EdgeInsets.all(tDefaultSize),
+                child: Center(
+                  child: Column(
+                    children: [
+                      Image(
+                        image: const AssetImage(tWelcomeScreenImage),
+                        height: MediaQuery.of(context).size.height * 0.2,
+                      ),
+                      const SizedBox(height: tFormHeight),
+                      const Text(
+                        tveri,
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: "Poppins",
                         ),
-                        const SizedBox(height: tFormHeight),
-                        const Text(
-                          tveri,
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
+                      ),
+                      const SizedBox(height: 10),
+                      const Text(
+                        tenterotp,
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.black38,
+                          fontFamily: "Poppins",
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      const SizedBox(height: tFormHeight),
+                      Pinput(
+                        length: 6,
+                        showCursor: true,
+                        defaultPinTheme: PinTheme(
+                          width: 56,
+                          height: 56,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(color: tSecondaryColor),
+                          ),
+                          textStyle: const TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
                             fontFamily: "Poppins",
                           ),
                         ),
-                        const SizedBox(height: 10),
-                        const Text(
-                          tenterotp,
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: Colors.black38,
-                            fontFamily: "Poppins",
+                        focusedPinTheme: PinTheme(
+                          width: 56,
+                          height: 56,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(width: 2, color: tPrimaryColor),
                           ),
-                          textAlign: TextAlign.center,
                         ),
-                        const SizedBox(height: tFormHeight),
-                        Pinput(
-                          length: 6,
-                          showCursor: true,
-                          defaultPinTheme: PinTheme(
-                            width: 56,
-                            height: 56,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              border: Border.all(color: tSecondaryColor),
+                        onCompleted: (value) {
+                          setState(() {
+                            otpCode = value;
+                          });
+                        },
+                      ),
+                      const SizedBox(height: tFormHeight),
+                      SizedBox(
+                        width: double.infinity,
+                        child: ElevatedButton(
+                          style: OutlinedButton.styleFrom(
+                            elevation: 0,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadiusGeometry.all(
+                                Radius.circular(20),
+                              ),
                             ),
-                            textStyle: const TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
+                            foregroundColor: tWhiteColor,
+                            backgroundColor: tPrimaryColor,
+                            side: const BorderSide(color: tSecondaryColor),
+                            padding: EdgeInsets.symmetric(
+                              vertical: tButtonHeight,
+                            ),
+                          ),
+                          onPressed: () {
+                            if (otpCode != null) {
+                              verifyOtp(context, otpCode!);
+                            } else {
+                              showSnackBar(context, tenter6digit);
+                            }
+                          },
+                          child: const Text(tVerify),
+                        ),
+                      ),
+                      const SizedBox(height: tFormHeight - 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text(
+                            tdidntrecievecode,
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.black38,
                               fontFamily: "Poppins",
                             ),
                           ),
-                          focusedPinTheme: PinTheme(
-                            width: 56,
-                            height: 56,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              border: Border.all(
-                                width: 2,
-                                color: tPrimaryColor,
-                              ),
-                            ),
-                          ),
-                          onCompleted: (value) {
-                            setState(() {
-                              otpCode = value;
-                            });
-                          },
-                        ),
-                        const SizedBox(height: tFormHeight),
-                        SizedBox(
-                          width: double.infinity,
-                          child: ElevatedButton(
-                            style: OutlinedButton.styleFrom(
-                              elevation: 0,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadiusGeometry.all(
-                                  Radius.circular(20),
-                                ),
-                              ),
-                              foregroundColor: tWhiteColor,
-                              backgroundColor: tPrimaryColor,
-                              side: const BorderSide(color: tSecondaryColor),
-                              padding: EdgeInsets.symmetric(
-                                vertical: tButtonHeight,
-                              ),
-                            ),
+                          TextButton(
                             onPressed: () {
-                              if (otpCode != null) {
-                                verifyOtp(context, otpCode!);
-                              } else {
-                                showSnackBar(context, tenter6digit);
-                              }
+                              // Add resend logic here
                             },
-                            child: const Text(tVerify),
-                          ),
-                        ),
-                        const SizedBox(height: tFormHeight - 20),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Text(
-                              tdidntrecievecode,
+                            child: const Text(
+                              tResend,
                               style: TextStyle(
                                 fontSize: 14,
-                                color: Colors.black38,
+                                color: tPrimaryColor,
                                 fontFamily: "Poppins",
-                              ),
-                            ),
-                            TextButton(
-                              onPressed: () {
-                                // Add resend logic here
-                              },
-                              child: const Text(
-                                tResend,
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  color: tPrimaryColor,
-                                  fontFamily: "Poppins",
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(height: tFormHeight - 15),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 20.0),
-                          child: TextButton(
-                            onPressed:
-                                () =>
-                                    Get.to(() => const ContactSupportScreen()),
-                            child: Text.rich(
-                              TextSpan(
-                                text: tNeedHelp,
-                                style: TextStyle(color: Colors.grey[600]),
-                                children: const [
-                                  TextSpan(
-                                    text: tContactSupport,
-                                    style: TextStyle(
-                                      color: tPrimaryColor,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ],
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
                           ),
+                        ],
+                      ),
+                      const SizedBox(height: tFormHeight - 15),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 20.0),
+                        child: TextButton(
+                          onPressed: () =>
+                              Get.to(() => const ContactSupportScreen()),
+                          child: Text.rich(
+                            TextSpan(
+                              text: tNeedHelp,
+                              style: TextStyle(color: Colors.grey[600]),
+                              children: const [
+                                TextSpan(
+                                  text: tContactSupport,
+                                  style: TextStyle(
+                                    color: tPrimaryColor,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
+              ),
       ),
     );
   }
