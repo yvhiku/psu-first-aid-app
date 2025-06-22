@@ -1,6 +1,6 @@
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,10 +10,11 @@ class Asthma extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = S.of(context);
     final TopicController topicController = Get.find();
 
     final currentTopic = {
-      'title': tAsthma,
+      'title': s.asthma,
       'image': tAsthmaimg,
       'screen': const Asthma(),
       'type': 'asthma',
@@ -21,7 +22,7 @@ class Asthma extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(tAsthma),
+        title: Text(s.asthma),
         actions: [
           Obx(
             () => IconButton(
@@ -39,8 +40,8 @@ class Asthma extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? taddedtosaved
-                          : tremovedtopic,
+                          ? s.addedToSavedTopicsText
+                          : s.tremovedTopic,
                     ),
                   ),
                 );
@@ -56,8 +57,8 @@ class Asthma extends StatelessWidget {
           children: [
             Image.asset(tAsthmaimg, fit: BoxFit.cover),
             const SizedBox(height: 20),
-            const Text(
-              tAsthmaTitle,
+            Text(
+              s.asthmaTitle,
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
@@ -65,27 +66,27 @@ class Asthma extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(tAsthma1, style: TextStyle(fontSize: 16)),
+            Text(s.asthma1, style: TextStyle(fontSize: 16)),
             const Divider(height: 30),
-            const Text(
-              tAsthma2,
+            Text(
+              s.asthma2,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildStep(number: '1', title: tAsthma3, description: tAsthma4),
-            _buildStep(number: '2', title: tAsthma5, description: tAsthma6),
-            _buildStep(number: '3', title: tAsthma7, description: tAsthma8),
-            _buildStep(number: '4', title: tAsthma9, description: tAsthma10),
-            _buildStep(number: '5', title: tAsthma11, description: tAsthma12),
+            _buildStep(number: '1', title: s.asthma3, description: s.asthma4),
+            _buildStep(number: '2', title: s.asthma5, description: s.asthma6),
+            _buildStep(number: '3', title: s.asthma7, description: s.asthma8),
+            _buildStep(number: '4', title: s.asthma9, description: s.asthma10),
+            _buildStep(number: '5', title: s.asthma11, description: s.asthma12),
             const Divider(height: 30),
-            const Text(
-              tAsthma13,
+            Text(
+              s.asthma13,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildBulletPoint(tAsthma14),
-            _buildBulletPoint(tAsthma15),
-            _buildBulletPoint(tAsthma16),
+            _buildBulletPoint(s.asthma14),
+            _buildBulletPoint(s.asthma15),
+            _buildBulletPoint(s.asthma16),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
@@ -100,8 +101,8 @@ class Asthma extends StatelessWidget {
                 ),
                 elevation: 4,
               ),
-              child: const Text(
-                tAsthma17,
+              child: Text(
+                s.asthma17,
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
             ),

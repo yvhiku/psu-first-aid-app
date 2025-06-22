@@ -1,5 +1,5 @@
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,16 +9,17 @@ class WoundCare extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = S.of(context);
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': woundCareTitle,
+      'title': s.woundCareTitle,
       'image': tBandAidimg,
       'screen': const WoundCare(),
     };
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(woundCareTitle),
+        title:  Text(s.woundCareTitle),
         actions: [
           Obx(
             () => IconButton(
@@ -36,8 +37,8 @@ class WoundCare extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? addedToSavedTopicsText
-                          : removedFromSavedTopicsText,
+                          ? s.addedToSavedTopicsText
+                          : s.tremovedTopic
                     ),
                   ),
                 );
@@ -53,35 +54,35 @@ class WoundCare extends StatelessWidget {
           children: [
             Image.asset(tBandAidimg, fit: BoxFit.cover),
             const SizedBox(height: 16),
-            const Text(
-              woundCareTitle,
+             Text(
+              s.woundCareTitle,
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            const Text(woundCareIntro, style: TextStyle(fontSize: 16)),
+             Text(s.woundCareIntro, style: TextStyle(fontSize: 16)),
             const SizedBox(height: 20),
-            const Text(
-              woundCareStepsHeading,
+             Text(
+              s.woundCareStepsHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            _buildStep('1', woundCareStep1),
-            _buildStep('2', woundCareStep2),
-            _buildStep('3', woundCareStep3),
-            _buildStep('4', woundCareStep4),
-            _buildStep('5', woundCareStep5),
-            _buildStep('6', woundCareStep6),
-            _buildStep('7', woundCareStep7),
+            _buildStep('1', s.woundCareStep1),
+            _buildStep('2', s.woundCareStep2),
+            _buildStep('3', s.woundCareStep3),
+            _buildStep('4', s.woundCareStep4),
+            _buildStep('5', s.woundCareStep5),
+            _buildStep('6', s.woundCareStep6),
+            _buildStep('7', s.woundCareStep7),
             const SizedBox(height: 20),
-            const Text(
-              woundCareMedicalHelpHeading,
+             Text(
+              s.woundCareMedicalHelpHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            _buildBullet(woundCareMedicalHelp1),
-            _buildBullet(woundCareMedicalHelp2),
-            _buildBullet(woundCareMedicalHelp3),
-            _buildBullet(woundCareMedicalHelp4),
+            _buildBullet(s.woundCareMedicalHelp1),
+            _buildBullet(s.woundCareMedicalHelp2),
+            _buildBullet(s.woundCareMedicalHelp3),
+            _buildBullet(s.woundCareMedicalHelp4),
           ],
         ),
       ),

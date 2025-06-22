@@ -1,5 +1,5 @@
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,16 +9,17 @@ class DrugOverdoseScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = S.of(context);
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': drugOverdoseTitle,
+      'title': s.drugOverdoseTitle,
       'image': tDrugOverDoseimg,
       'screen': const DrugOverdoseScreen(),
     };
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(drugOverdoseTitle),
+        title: Text(s.drugOverdoseTitle),
         actions: [
           Obx(
             () => IconButton(
@@ -36,8 +37,8 @@ class DrugOverdoseScreen extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? 'Added to saved topics'
-                          : 'Removed from saved topics',
+                          ? s.addedToSavedTopicsText
+                          : s.tremovedTopic,
                     ),
                   ),
                 );
@@ -53,8 +54,8 @@ class DrugOverdoseScreen extends StatelessWidget {
           children: [
             Image.asset(tDrugOverDoseimg, fit: BoxFit.cover),
             const SizedBox(height: 20),
-            const Text(
-              drugOverdoseMainHeading,
+             Text(
+              s.drugOverdoseMainHeading,
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
@@ -62,56 +63,56 @@ class DrugOverdoseScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(drugOverdoseIntro, style: TextStyle(fontSize: 16)),
+             Text(s.drugOverdoseIntro, style: TextStyle(fontSize: 16)),
             const Divider(height: 30),
-            const Text(
-              drugOverdoseSignsHeading,
+             Text(
+              s.drugOverdoseSignsHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            const Text(drugOverdoseSigns1),
-            const Text(drugOverdoseSigns2),
-            const Text(drugOverdoseSigns3),
-            const Text(drugOverdoseSigns4),
+             Text(s.drugOverdoseSigns1),
+             Text(s.drugOverdoseSigns2),
+             Text(s.drugOverdoseSigns3),
+             Text(s.drugOverdoseSigns4),
             const Divider(height: 30),
-            const Text(
-              drugOverdoseStepsHeading,
+             Text(
+              s.drugOverdoseStepsHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
             _buildStep(
               number: '1',
-              title: drugOverdoseStep1Title,
-              description: drugOverdoseStep1Desc,
+              title: s.drugOverdoseStep1Title,
+              description: s.drugOverdoseStep1Desc,
             ),
             _buildStep(
               number: '2',
-              title: drugOverdoseStep2Title,
-              description: drugOverdoseStep2Desc,
+              title: s.drugOverdoseStep2Title,
+              description: s.drugOverdoseStep2Desc,
             ),
             _buildStep(
               number: '3',
-              title: drugOverdoseStep3Title,
-              description: drugOverdoseStep3Desc,
+              title: s.drugOverdoseStep3Title,
+              description: s.drugOverdoseStep3Desc,
             ),
             _buildStep(
               number: '4',
-              title: drugOverdoseStep4Title,
-              description: drugOverdoseStep4Desc,
+              title: s.drugOverdoseStep4Title,
+              description: s.drugOverdoseStep4Desc,
             ),
             _buildStep(
               number: '5',
-              title: drugOverdoseStep5Title,
-              description: drugOverdoseStep5Desc,
+              title: s.drugOverdoseStep5Title,
+              description: s.drugOverdoseStep5Desc,
             ),
             const Divider(height: 30),
-            const Text(
-              drugOverdoseImportantNotes,
+             Text(
+              s.drugOverdoseImportantNotes,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildBulletPoint(drugOverdoseNote1),
-            _buildBulletPoint(drugOverdoseNote2),
+            _buildBulletPoint(s.drugOverdoseNote1),
+            _buildBulletPoint(s.drugOverdoseNote2),
           ],
         ),
       ),

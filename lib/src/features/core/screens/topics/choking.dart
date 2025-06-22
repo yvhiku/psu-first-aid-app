@@ -1,5 +1,5 @@
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,16 +9,17 @@ class ChokingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = S.of(context);
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': tChoking,
+      'title': s.tChoking,
       'image': tChokingimg,
       'screen': const ChokingScreen(),
     };
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(tChoking),
+        title: Text(s.tChoking),
         actions: [
           Obx(
             () => IconButton(
@@ -36,8 +37,8 @@ class ChokingScreen extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? taddedtosaved
-                          : tremovedtopic,
+                          ? s.addedToSavedTopicsText
+                          : s.tremovedTopic,
                     ),
                   ),
                 );
@@ -53,8 +54,8 @@ class ChokingScreen extends StatelessWidget {
           children: [
             Image.asset(tChokingimg, fit: BoxFit.cover),
             const SizedBox(height: 20),
-            const Text(
-              tChokingTitle,
+            Text(
+              s.ChokingTitle,
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
@@ -62,35 +63,35 @@ class ChokingScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(tChoking1, style: TextStyle(fontSize: 16)),
+            Text(s.Choking1, style: TextStyle(fontSize: 16)),
             const Divider(height: 30),
-            const Text(
-              tChoking2,
+            Text(
+              s.tChoking2,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            const Text(tChoking3),
-            const Text(tChoking4),
-            const Text(tChoking5),
+            Text(s.tChoking3),
+            Text(s.tChoking4),
+            Text(s.tChoking5),
             const Divider(height: 30),
-            const Text(
-              tChoking6,
+            Text(
+              s.tChoking6,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildStep('1', tChoking7, tChoking8),
-            _buildStep('2', tChoking9, tChoking10),
-            _buildStep('3', tChoking11, tChoking12),
-            _buildStep('4', tChoking13, tChoking14),
-            _buildStep('5', tChoking15, tChoking16),
+            _buildStep('1', s.tChoking7, s.tChoking8),
+            _buildStep('2', s.tChoking9, s.tChoking10),
+            _buildStep('3', s.tChoking11, s.tChoking12),
+            _buildStep('4', s.tChoking13, s.tChoking14),
+            _buildStep('5', s.tChoking15, s.tChoking16),
             const Divider(height: 30),
-            const Text(
-              tChoking17,
+            Text(
+              s.tChoking17,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildBulletPoint(tChoking18),
-            _buildBulletPoint(tChoking19),
+            _buildBulletPoint(s.tChoking18),
+            _buildBulletPoint(s.tChoking19),
           ],
         ),
       ),

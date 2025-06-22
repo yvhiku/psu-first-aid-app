@@ -1,6 +1,6 @@
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/screens/topics/allergic_reactions.dart';
 import 'package:first_aid_app/src/features/core/screens/topics/assessing_injured_person.dart';
 import 'package:first_aid_app/src/features/core/screens/topics/asthma.dart';
@@ -51,22 +51,6 @@ class AllTopicsScreen extends StatelessWidget {
               color: tCardBgColor,
             ),
           ),
-          // PopupMenuButton<String>(
-          //   icon: const Icon(
-          //     Icons.more_vert,
-          //     color: Color.fromARGB(255, 139, 47, 49),
-          //   ),
-          //   onSelected: (value) {},
-          //   itemBuilder:
-          //       (context) => [
-          //         const PopupMenuItem(
-          //           value: 'settings',
-          //           child: Text('Settings'),
-          //         ),
-          //         const PopupMenuItem(value: 'help', child: Text('Help')),
-          //         const PopupMenuItem(value: 'logout', child: Text('Logout')),
-          //       ],
-          // ),
         ],
       ),
       body: SingleChildScrollView(
@@ -87,16 +71,15 @@ class AllTopicsScreen extends StatelessWidget {
     );
   }
 
-  // Existing button row methods...
   Widget _buildFirstButtonRow(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        _buildButton(context, tCprimg, tCpr, CprScreen()),
+        _buildButton(context, tCprimg, S.of(context).tCpr, CprScreen()),
         const SizedBox(width: 15.0),
-        _buildButton(context, tWoundimg, tBleeding, const Bleeding()),
+        _buildButton(context, tWoundimg, S.of(context).bleeding, const Bleeding()),
         const SizedBox(width: 15.0),
-        _buildButton(context, tBurnimg, 'Burns', const BurnScreen()),
+        _buildButton(context, tBurnimg, S.of(context).burns, const BurnScreen()),
       ],
     );
   }
@@ -105,11 +88,11 @@ class AllTopicsScreen extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        _buildButton(context, tChokingimg, tChoking, const ChokingScreen()),
+        _buildButton(context, tChokingimg, S.of(context).tChoking, const ChokingScreen()),
         const SizedBox(width: 15.0),
-        _buildButton(context, tPoisonimg, tPoisons, const PoisonScreen()),
+        _buildButton(context, tPoisonimg, S.of(context).tPoisons, const PoisonScreen()),
         const SizedBox(width: 15.0),
-        _buildButton(context, tBitinigimg, tBites, const Bites()),
+        _buildButton(context, tBitinigimg, S.of(context).bites, const Bites()),
       ],
     );
   }
@@ -158,63 +141,62 @@ class AllTopicsScreen extends StatelessWidget {
     );
   }
 
-  // New vertically scrollable grid of white buttons
   Widget _buildScrollableTopicsGrid(BuildContext context) {
     final List<Map<String, dynamic>> topics = [
       {
         'image': tInjuryimg,
-        'title': tFractures,
+        'title': S.of(context).tFractures,
         'screen': const FracturesScreen(),
       },
       {
         'image': tAllergicReactionimg,
-        'title': tAllergicReaction,
+        'title': S.of(context).tAllergicReaction,
         'screen': const AllergicReactions(),
       },
-      {'image': tAsthmaimg, 'title': tAsthma, 'screen': const Asthma()},
+      {'image': tAsthmaimg, 'title': S.of(context).asthma, 'screen': const Asthma()},
       {
         'image': tDiabeticsimg,
-        'title': tDiabetics,
+        'title': S.of(context).tDiabetics,
         'screen': const DiabeticsScreen(),
       },
       {
         'image': tDrugOverDoseimg,
-        'title': tDrugOverdose,
+        'title': S.of(context).tDrugOverdose,
         'screen': const DrugOverdoseScreen(),
       },
       {
         'image': tSoreEyesimg,
-        'title': tEyeInjury,
+        'title': S.of(context).tEyeInjury,
         'screen': const EyeInjuryScreen(),
       },
-      {'image': tHeadimg, 'title': tHeadInjury, 'screen': const HeadInjury()},
+      {'image': tHeadimg, 'title': S.of(context).tHeadInjury, 'screen': const HeadInjury()},
       {
         'image': tHeartAttackimg,
-        'title': tHeartCondition,
+        'title': S.of(context).tHeartCondition,
         'screen': const HeartCondition(),
       },
-      {'image': tSeizureimg, 'title': tSeizure, 'screen': const Seizures()},
-      {'image': tEpilepsyimg, 'title': tShock, 'screen': const Shock()},
+      {'image': tSeizureimg, 'title': S.of(context).tSeizure, 'screen': const Seizures()},
+      {'image': tEpilepsyimg, 'title': S.of(context).tShock, 'screen': const Shock()},
       {
         'image': tSpinalInjuryimg,
-        'title': tSpinalInjury,
+        'title': S.of(context).tSpinalInjury,
         'screen': const SpinalInjury(),
       },
       {
         'image': tSprainimg,
-        'title': tSprainsStrains,
+        'title': S.of(context).tSprainsStrains,
         'screen': const SprainsStrains(),
       },
-      {'image': tStrotkeimg, 'title': tStroke, 'screen': const StrokeScreen()},
-      {'image': tBandAidimg, 'title': tWoundCare, 'screen': const WoundCare()},
+      {'image': tStrotkeimg, 'title': S.of(context).tStroke, 'screen': const StrokeScreen()},
+      {'image': tBandAidimg, 'title': S.of(context).tWoundCare, 'screen': const WoundCare()},
       {
         'image': tHelpingPersonimg,
-        'title': tAssessing,
+        'title': S.of(context).tAssessing,
         'screen': const AssessingInjuredPerson(),
       },
       {
         'image': tRecoveryPosimg,
-        'title': tRecoveryPos,
+        'title': S.of(context).tRecoveryPos,
         'screen': const RecoveryPos(),
       },
     ];
@@ -222,11 +204,11 @@ class AllTopicsScreen extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 8.0),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
           child: Text(
-            tMotetopics,
-            style: TextStyle(
+            S.of(context).tAllTopics,
+            style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
               color: Colors.black,
@@ -234,17 +216,15 @@ class AllTopicsScreen extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 10),
-        // Remove fixed height constraint and let it expand naturally
         GridView.builder(
-          shrinkWrap: true, // Important for scrolling inside Column
-          physics:
-              const NeverScrollableScrollPhysics(), // Let parent SingleChildScrollView handle scrolling
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
             crossAxisSpacing: 10,
             mainAxisSpacing: 10,
-            childAspectRatio: 3, // Wider and shorter buttons
-            mainAxisExtent: 80, // Fixed height for each item
+            childAspectRatio: 3,
+            mainAxisExtent: 80,
           ),
           itemCount: topics.length,
           itemBuilder: (context, index) {
@@ -268,7 +248,6 @@ class AllTopicsScreen extends StatelessWidget {
   ) {
     return OutlinedButton(
       onPressed: () {
-        // Required parameter
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => screen),
@@ -284,7 +263,6 @@ class AllTopicsScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
       ),
       child: Row(
-        // Required parameter
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Image(image: AssetImage(image), width: 30, height: 30),

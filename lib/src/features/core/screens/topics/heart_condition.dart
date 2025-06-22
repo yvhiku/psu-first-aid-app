@@ -1,5 +1,5 @@
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart'; // Import your string constants here
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,16 +9,17 @@ class HeartCondition extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = S.of(context);
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': heartConditionTitle,
+      'title': s.heartConditionTitle,
       'image': tHeartAttackimg,
       'screen': const HeartCondition(),
     };
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(heartConditionTitle),
+        title:  Text(s.heartConditionTitle),
         actions: [
           Obx(
             () => IconButton(
@@ -36,8 +37,8 @@ class HeartCondition extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? addedToSavedTopicsText
-                          : removedFromSavedTopicsText,
+                          ? s.addedToSavedTopicsText
+                          : s.tremovedTopic
                     ),
                   ),
                 );
@@ -53,8 +54,8 @@ class HeartCondition extends StatelessWidget {
           children: [
             Image.asset(tHeartAttackimg, fit: BoxFit.cover),
             const SizedBox(height: 20),
-            const Text(
-              heartConditionHeading,
+             Text(
+              s.heartConditionHeading,
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
@@ -62,26 +63,26 @@ class HeartCondition extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(heartConditionIntro, style: TextStyle(fontSize: 16)),
+             Text(s.heartConditionIntro, style: TextStyle(fontSize: 16)),
             const Divider(height: 30),
-            const Text(
-              heartConditionStepsHeading,
+             Text(
+              s.heartConditionStepsHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildStep('1', heartConditionStep1),
-            _buildStep('2', heartConditionStep2),
-            _buildStep('3', heartConditionStep3),
-            _buildStep('4', heartConditionStep4),
-            _buildStep('5', heartConditionStep5),
+            _buildStep('1', s.heartConditionStep1),
+            _buildStep('2', s.heartConditionStep2),
+            _buildStep('3', s.heartConditionStep3),
+            _buildStep('4', s.heartConditionStep4),
+            _buildStep('5', s.heartConditionStep5),
             const Divider(height: 30),
-            const Text(
-              heartConditionNotesHeading,
+             Text(
+              s.heartConditionNotesHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildBullet(heartConditionNote1),
-            _buildBullet(heartConditionNote2),
+            _buildBullet(s.heartConditionNote1),
+            _buildBullet(s.heartConditionNote2),
           ],
         ),
       ),

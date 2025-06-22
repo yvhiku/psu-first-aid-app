@@ -1,6 +1,6 @@
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -11,9 +11,9 @@ class AllergicReactions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final TopicController topicController = Get.find();
-
+    final s = S.of(context);
     final currentTopic = {
-      'title': tAllergicReaction,
+      'title': s.tAllergicReaction,
       'image': tDustimg,
       'screen': const AllergicReactions(),
       'type': 'AllergicReactions',
@@ -21,7 +21,7 @@ class AllergicReactions extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(tAllergicReaction),
+        title:  Text(s.tAllergicReaction),
         actions: [
           Obx(
             () => IconButton(
@@ -39,8 +39,8 @@ class AllergicReactions extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? taddedtosaved
-                          : tremovedtopic,
+                          ? s.addedToSavedTopicsText
+                          : s.tremovedTopic,
                     ),
                   ),
                 );
@@ -56,8 +56,8 @@ class AllergicReactions extends StatelessWidget {
           children: [
             Image.asset(tDustimg, fit: BoxFit.cover),
             const SizedBox(height: 20),
-            const Text(
-              tAllergicReactionFirstaid,
+             Text(
+              s.tallergicReactionFirstAid,
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
@@ -65,56 +65,56 @@ class AllergicReactions extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(
-              tAllergicReactioncontent1,
+             Text(
+              s.tallergicReactionContent1,
               style: TextStyle(fontSize: 16),
             ),
             const Divider(height: 30),
-            const Text(
-              tAllergicReactioncontent2,
+             Text(
+              s.tallergicReactionContent2,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
             _buildStep(
               number: '1',
-              title: tAllergicReactioncontent3,
-              description: tAllergicReactioncontent4,
+              title: s.tallergicReactionContent3,
+              description: s.tallergicReactionContent4,
             ),
             _buildStep(
               number: '2',
-              title: tAllergicReactioncontent5,
-              description: tAllergicReactioncontent6,
+              title: s.tallergicReactionContent5,
+              description: s.tallergicReactionContent6,
             ),
             _buildStep(
               number: '3',
-              title: tAllergicReactioncontent7,
-              description: tAllergicReactioncontent8,
+              title: s.tallergicReactionContent7,
+              description: s.tallergicReactionContent8,
             ),
             _buildStep(
               number: '4',
-              title: tAllergicReactioncontent9,
-              description: tAllergicReactioncontent10,
+              title: s.tallergicReactionContent9,
+              description: s.tallergicReactionContent10,
             ),
             _buildStep(
               number: '5',
-              title: tAllergicReactioncontent11,
-              description: tAllergicReactioncontent12,
+              title: s.tallergicReactionContent11,
+              description: s.tallergicReactionContent12,
             ),
             _buildStep(
               number: '6',
-              title: tAllergicReactioncontent13,
-              description: tAllergicReactioncontent14,
+              title: s.tallergicReactionContent13,
+              description: s.tallergicReactionContent14,
             ),
             const Divider(height: 30),
-            const Text(
-              tAllergicReactioncontent15,
+             Text(
+              s.tallergicReactionContent15,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildBulletPoint(tAllergicReactioncontent16),
-            _buildBulletPoint(tAllergicReactioncontent17),
-            _buildBulletPoint(tAllergicReactioncontent18),
-            _buildBulletPoint(tAllergicReactioncontent19),
+            _buildBulletPoint(s.tallergicReactionContent16),
+            _buildBulletPoint(s.tallergicReactionContent17),
+            _buildBulletPoint(s.tallergicReactionContent18),
+            _buildBulletPoint(s.tallergicReactionContent19),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
@@ -129,8 +129,8 @@ class AllergicReactions extends StatelessWidget {
                 ),
                 elevation: 4,
               ),
-              child: const Text(
-                tAllergicReactioncontent20,
+              child:  Text(
+                s.tallergicReactionContent20,
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
             ),

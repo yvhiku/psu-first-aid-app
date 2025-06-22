@@ -22,6 +22,15 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "Choking1": MessageLookupByLibrary.simpleMessage(
+      "يحدث الاختناق عندما يعيق جسم ما مجرى الهواء، مما يمنع التنفس الطبيعي.",
+    ),
+    "ChokingTitle": MessageLookupByLibrary.simpleMessage(
+      "الإسعافات الأولية للاختناق",
+    ),
+    "addedToSavedTopics": MessageLookupByLibrary.simpleMessage(
+      "تمت الإضافة إلى المواضيع المحفوظة",
+    ),
     "addedToSavedTopicsText": MessageLookupByLibrary.simpleMessage(
       "تمت الإضافة إلى المواضيع المحفوظة",
     ),
@@ -188,57 +197,223 @@ class MessageLookup extends MessageLookupByLibrary {
     "burnsTitle": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية للحروق",
     ),
-    "choking1": MessageLookupByLibrary.simpleMessage(
-      "يحدث الاختناق عندما يسد جسم ما مجرى الهواء، مما يمنع التنفس الطبيعي.",
+    "cprHeading": MessageLookupByLibrary.simpleMessage(
+      "الإنعاش القلبي الرئوي (CPR)",
     ),
-    "chokingTitle": MessageLookupByLibrary.simpleMessage(
-      "الإسعافات الأولية للاختناق",
+    "cprIntro": MessageLookupByLibrary.simpleMessage(
+      "يمكن لإنعاش القلب الرئوي أن ينقذ حياة شخص توقف تنفسه أو نبض قلبه.",
     ),
-    "continueText": MessageLookupByLibrary.simpleMessage("متابعة"),
-    "fracturesNote1": MessageLookupByLibrary.simpleMessage(
-      "لا تحاول إعادة العظم إلى مكانه أو دفعه مرة أخرى.",
+    "cprNote1": MessageLookupByLibrary.simpleMessage(
+      "استخدم جهاز صدمات القلب الكهربائي (AED) إذا كان متاحاً.",
     ),
-    "fracturesNote2": MessageLookupByLibrary.simpleMessage(
-      "إذا كان هناك نزيف، اضغط حول الجرح (وليس مباشرة على العظم).",
+    "cprNote2": MessageLookupByLibrary.simpleMessage(
+      "للرضع، استخدم إصبعين للضغطات.",
     ),
-    "fracturesNotesHeading": MessageLookupByLibrary.simpleMessage(
+    "cprNote3": MessageLookupByLibrary.simpleMessage(
+      "لا تتوقف إلا إذا بدأ الشخص بالتنفس أو وصلت المساعدة.",
+    ),
+    "cprNotesHeading": MessageLookupByLibrary.simpleMessage("ملاحظات مهمة:"),
+    "cprStep1Description": MessageLookupByLibrary.simpleMessage(
+      "اضرب على كتف الشخص وصرخ، \'هل أنت بخير؟\'",
+    ),
+    "cprStep1Title": MessageLookupByLibrary.simpleMessage("تحقق من الاستجابة"),
+    "cprStep2Description": MessageLookupByLibrary.simpleMessage(
+      "إذا لم يستجب، اتصل بالطوارئ (مثل 112) أو اطلب من أحد الاتصال.",
+    ),
+    "cprStep2Title": MessageLookupByLibrary.simpleMessage("اطلب المساعدة"),
+    "cprStep3Description": MessageLookupByLibrary.simpleMessage(
+      "أمِل الرأس للخلف قليلاً وارفع الذقن لفتح مجرى الهواء.",
+    ),
+    "cprStep3Title": MessageLookupByLibrary.simpleMessage("افتح مجرى الهواء"),
+    "cprStep4Description": MessageLookupByLibrary.simpleMessage(
+      "انظر، استمع، وتحسس للتنفس (لا تزيد عن 10 ثوانٍ).",
+    ),
+    "cprStep4Title": MessageLookupByLibrary.simpleMessage("تحقق من التنفس"),
+    "cprStep5Description": MessageLookupByLibrary.simpleMessage(
+      "ضع يديك في منتصف الصدر. اضغط بقوة وبسرعة (5 سم عمقاً بمعدل 100-120 ضغطة في الدقيقة).",
+    ),
+    "cprStep5Title": MessageLookupByLibrary.simpleMessage("ابدأ ضغطات الصدر"),
+    "cprStep6Description": MessageLookupByLibrary.simpleMessage(
+      "بعد 30 ضغطة، أعطِ نفسين (اغلق الأنف، غطِّ فم المصاب بفمك، وانفخ حتى يرتفع الصدر).",
+    ),
+    "cprStep6Title": MessageLookupByLibrary.simpleMessage(
+      "أعطِ أنفاساً إنقاذية",
+    ),
+    "cprStep7Description": MessageLookupByLibrary.simpleMessage(
+      "كرر دورات 30 ضغطة و2 نفس حتى تصل المساعدة أو يستعيد الشخص وعيه.",
+    ),
+    "cprStep7Title": MessageLookupByLibrary.simpleMessage(
+      "استمر في الإنعاش القلبي الرئوي",
+    ),
+    "cprStepsHeading": MessageLookupByLibrary.simpleMessage(
+      "خطوات تنفيذ الإنعاش القلبي الرئوي:",
+    ),
+    "cprTitle": MessageLookupByLibrary.simpleMessage(
+      "تعليمات الإنعاش القلبي الرئوي",
+    ),
+    "cprWatchDemoButton": MessageLookupByLibrary.simpleMessage(
+      "شاهد عرضاً للإنعاش القلبي الرئوي",
+    ),
+    "diabeticsAppBarTitle": MessageLookupByLibrary.simpleMessage("مرض السكري"),
+    "diabeticsHeader": MessageLookupByLibrary.simpleMessage(
+      "الإسعافات الأولية لحالات الطوارئ لمرضى السكري",
+    ),
+    "diabeticsIntro": MessageLookupByLibrary.simpleMessage(
+      "يعد التعرف على حالات الطوارئ المتعلقة بمرض السكري مثل نقص سكر الدم وإدارتها أمرًا بالغ الأهمية.",
+    ),
+    "diabeticsNote1": MessageLookupByLibrary.simpleMessage(
+      "لا تعطي أي طعام أو شراب إذا كان الشخص فاقدًا للوعي.",
+    ),
+    "diabeticsNote2": MessageLookupByLibrary.simpleMessage(
+      "إذا كان فاقدًا للوعي، ضعه في وضعية الاستفاقة واتصل بخدمات الطوارئ.",
+    ),
+    "diabeticsNotesTitle": MessageLookupByLibrary.simpleMessage(
       "ملاحظات مهمة:",
     ),
-    "fracturesSign1": MessageLookupByLibrary.simpleMessage("- ألم وحساسية"),
-    "fracturesSign2": MessageLookupByLibrary.simpleMessage("- تورم أو كدمات"),
-    "fracturesSign3": MessageLookupByLibrary.simpleMessage(
-      "- تشوه أو وضع غير طبيعي",
+    "diabeticsSignsList": MessageLookupByLibrary.simpleMessage(
+      "- ارتعاش، تعرق، تشوش، دوار، تهيج، صداع",
     ),
-    "fracturesSign4": MessageLookupByLibrary.simpleMessage(
-      "- صعوبة في تحريك الطرف",
+    "diabeticsSignsTitle": MessageLookupByLibrary.simpleMessage(
+      "علامات انخفاض سكر الدم (نقص سكر الدم):",
     ),
-    "fracturesSignsHeading": MessageLookupByLibrary.simpleMessage(
-      "علامات الكسر:",
+    "diabeticsStep1Desc": MessageLookupByLibrary.simpleMessage(
+      "إذا كان الشخص واعيًا، اسأله إذا كان مصابًا بمرض السكري.",
     ),
-    "fracturesStep1Desc": MessageLookupByLibrary.simpleMessage(
-      "حافظ على المنطقة المصابة ثابتة وتجنب الحركة.",
+    "diabeticsStep1Title": MessageLookupByLibrary.simpleMessage(
+      "تحقق من الاستجابة",
     ),
-    "fracturesStep1Title": MessageLookupByLibrary.simpleMessage(
-      "تثبيت المنطقة",
+    "diabeticsStep2Desc": MessageLookupByLibrary.simpleMessage(
+      "أعطِ 15-20 جرامًا من السكر سريع المفعول (عصير فواكه، أقراص جلوكوز، حلوى).",
     ),
-    "fracturesStep2Desc": MessageLookupByLibrary.simpleMessage(
-      "استخدم جبيرة مبطنة لدعم الإصابة دون إجبارها على العودة إلى مكانها.",
+    "diabeticsStep2Title": MessageLookupByLibrary.simpleMessage("أعطِ السكر"),
+    "diabeticsStep3Desc": MessageLookupByLibrary.simpleMessage(
+      "انتظر 15 دقيقة، ثم تحقق من الأعراض مرة أخرى. كرر تناول السكر إذا لزم الأمر.",
     ),
-    "fracturesStep2Title": MessageLookupByLibrary.simpleMessage("استخدم جبيرة"),
-    "fracturesStep3Desc": MessageLookupByLibrary.simpleMessage(
-      "قلل التورم باستخدام ثلج ملفوف بقطعة قماش (تجنب ملامسة الجلد مباشرة).",
+    "diabeticsStep3Title": MessageLookupByLibrary.simpleMessage("انتظر وراقب"),
+    "diabeticsStep4Desc": MessageLookupByLibrary.simpleMessage(
+      "إذا فقد الشخص وعيه، أو أصبح مشوشًا، أو ساءت الأعراض، اتصل بالمساعدة فورًا.",
     ),
-    "fracturesStep3Title": MessageLookupByLibrary.simpleMessage(
-      "ضع كمادة باردة",
+    "diabeticsStep4Title": MessageLookupByLibrary.simpleMessage(
+      "اتصل بخدمات الطوارئ",
     ),
-    "fracturesStep4Desc": MessageLookupByLibrary.simpleMessage(
-      "اتصل بخدمات الطوارئ أو اصطحب الشخص إلى المستشفى على الفور.",
-    ),
-    "fracturesStep4Title": MessageLookupByLibrary.simpleMessage(
-      "اطلب المساعدة الطبية",
-    ),
-    "fracturesStepsHeading": MessageLookupByLibrary.simpleMessage(
+    "diabeticsStepsTitle": MessageLookupByLibrary.simpleMessage(
       "خطوات الإسعافات الأولية:",
+    ),
+    "diabeticsTitle": MessageLookupByLibrary.simpleMessage("مرض السكري"),
+    "drugOverdoseImportantNotes": MessageLookupByLibrary.simpleMessage(
+      "ملاحظات مهمة:",
+    ),
+    "drugOverdoseIntro": MessageLookupByLibrary.simpleMessage(
+      "تعرف على علامات الجرعة الزائدة وقدم المساعدة الفورية.",
+    ),
+    "drugOverdoseMainHeading": MessageLookupByLibrary.simpleMessage(
+      "الإسعافات الأولية لجرعة الدواء الزائدة",
+    ),
+    "drugOverdoseNote1": MessageLookupByLibrary.simpleMessage(
+      "لا تحفز القيء إلا إذا طلب منك أحد المتخصصين الطبيين.",
+    ),
+    "drugOverdoseNote2": MessageLookupByLibrary.simpleMessage(
+      "حاول تحديد المادة المتورطة لإبلاغ المستجيبين للطوارئ.",
+    ),
+    "drugOverdoseSigns1": MessageLookupByLibrary.simpleMessage(
+      "- عدم الاستجابة أو فقدان الوعي",
+    ),
+    "drugOverdoseSigns2": MessageLookupByLibrary.simpleMessage(
+      "- صعوبة في التنفس أو تنفس بطيء",
+    ),
+    "drugOverdoseSigns3": MessageLookupByLibrary.simpleMessage(
+      "- نوبات أو تشنجات",
+    ),
+    "drugOverdoseSigns4": MessageLookupByLibrary.simpleMessage(
+      "- قيء، جلد شاحب أو لزج",
+    ),
+    "drugOverdoseSignsHeading": MessageLookupByLibrary.simpleMessage(
+      "علامات الجرعة الدوائية الزائدة:",
+    ),
+    "drugOverdoseStep1Desc": MessageLookupByLibrary.simpleMessage(
+      "اتصل فورًا بالمساعدة الطبية المتخصصة.",
+    ),
+    "drugOverdoseStep1Title": MessageLookupByLibrary.simpleMessage(
+      "اتصل بخدمات الطوارئ",
+    ),
+    "drugOverdoseStep2Desc": MessageLookupByLibrary.simpleMessage(
+      "تأكد من أن الشخص وأنت في مأمن من الأذى.",
+    ),
+    "drugOverdoseStep2Title": MessageLookupByLibrary.simpleMessage(
+      "تأمين السلامة",
+    ),
+    "drugOverdoseStep3Desc": MessageLookupByLibrary.simpleMessage(
+      "إذا كان غير مستجيب، تحقق مما إذا كان يتنفس.",
+    ),
+    "drugOverdoseStep3Title": MessageLookupByLibrary.simpleMessage(
+      "تحقق من الاستجابة والتنفس",
+    ),
+    "drugOverdoseStep4Desc": MessageLookupByLibrary.simpleMessage(
+      "إذا لم يكن هناك تنفس أو نبض، ابدأ الإنعاش القلبي الرئوي حتى وصول المساعدة.",
+    ),
+    "drugOverdoseStep4Title": MessageLookupByLibrary.simpleMessage(
+      "قم بإجراء الإنعاش القلبي الرئوي إذا لزم الأمر",
+    ),
+    "drugOverdoseStep5Desc": MessageLookupByLibrary.simpleMessage(
+      "إذا كان يتنفس ولكنه فاقد للوعي، ضعه على جانبه للحفاظ على مجرى الهواء مفتوحًا.",
+    ),
+    "drugOverdoseStep5Title": MessageLookupByLibrary.simpleMessage(
+      "ضعه في وضعية الاستفاقة",
+    ),
+    "drugOverdoseStepsHeading": MessageLookupByLibrary.simpleMessage(
+      "خطوات الإسعافات الأولية:",
+    ),
+    "drugOverdoseTitle": MessageLookupByLibrary.simpleMessage(
+      "جرعة دواء زائدة",
+    ),
+    "eyeInjuryHeading": MessageLookupByLibrary.simpleMessage(
+      "الإسعافات الأولية لإصابات العين",
+    ),
+    "eyeInjuryIntro": MessageLookupByLibrary.simpleMessage(
+      "يمكن للإسعافات الأولية الصحيحة لإصابات العين أن تمنع المزيد من الضرر.",
+    ),
+    "eyeInjuryNote1": MessageLookupByLibrary.simpleMessage(
+      "لا تحاول إزالة الأجسام المدمجة.",
+    ),
+    "eyeInjuryNote2": MessageLookupByLibrary.simpleMessage(
+      "تجنب استخدام أي دواء أو مرهم إلا إذا وصفه الطبيب.",
+    ),
+    "eyeInjuryNotesHeading": MessageLookupByLibrary.simpleMessage(
+      "ملاحظات مهمة:",
+    ),
+    "eyeInjuryStep1Desc": MessageLookupByLibrary.simpleMessage(
+      "الفرك يمكن أن يسبب المزيد من الضرر.",
+    ),
+    "eyeInjuryStep1Title": MessageLookupByLibrary.simpleMessage(
+      "لا تفرك العين",
+    ),
+    "eyeInjuryStep2Desc": MessageLookupByLibrary.simpleMessage(
+      "إذا كانت هناك مواد كيميائية أو جسيمات غريبة، اشطف العين بلطف بالماء لمدة 15 دقيقة على الأقل.",
+    ),
+    "eyeInjuryStep2Title": MessageLookupByLibrary.simpleMessage(
+      "اغسل بالماء النظيف",
+    ),
+    "eyeInjuryStep3Desc": MessageLookupByLibrary.simpleMessage(
+      "استخدم قطعة قماش نظيفة أو واقي عين لحماية العين المصابة دون تطبيق ضغط.",
+    ),
+    "eyeInjuryStep3Title": MessageLookupByLibrary.simpleMessage("غطِ العين"),
+    "eyeInjuryStep4Desc": MessageLookupByLibrary.simpleMessage(
+      "للإصابات الخطيرة أو إذا استمر الألم، اذهب إلى الطوارئ فورًا.",
+    ),
+    "eyeInjuryStep4Title": MessageLookupByLibrary.simpleMessage(
+      "اطلب العناية الطبية",
+    ),
+    "eyeInjuryStepsHeading": MessageLookupByLibrary.simpleMessage(
+      "خطوات الإسعافات الأولية:",
+    ),
+    "eyeInjuryTitle": MessageLookupByLibrary.simpleMessage("إصابة العين"),
+    "eyeInjuryType1": MessageLookupByLibrary.simpleMessage(
+      "- أجسام غريبة في العين",
+    ),
+    "eyeInjuryType2": MessageLookupByLibrary.simpleMessage("- رشاشات كيميائية"),
+    "eyeInjuryType3": MessageLookupByLibrary.simpleMessage("- جروح أو ثقوب"),
+    "eyeInjuryTypesHeading": MessageLookupByLibrary.simpleMessage(
+      "أنواع إصابات العين:",
     ),
     "headInjuryHeading": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية لإصابات الرأس",
@@ -280,6 +455,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "خطوات الإسعافات الأولية:",
     ),
     "headInjuryTitle": MessageLookupByLibrary.simpleMessage("إصابة الرأس"),
+    "heading": MessageLookupByLibrary.simpleMessage("الإسعافات الأولية للكسور"),
     "heartConditionHeading": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية لأمراض القلب",
     ),
@@ -314,6 +490,17 @@ class MessageLookup extends MessageLookupByLibrary {
       "خطوات الإسعافات الأولية:",
     ),
     "heartConditionTitle": MessageLookupByLibrary.simpleMessage("أمراض القلب"),
+    "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
+    "intro": MessageLookupByLibrary.simpleMessage(
+      "الكسر هو كسر في العظم. الإسعافات الأولية الصحيحة يمكن أن تمنع المضاعفات.",
+    ),
+    "note1": MessageLookupByLibrary.simpleMessage(
+      "لا تحاول إعادة العظم إلى وضعه الطبيعي أو دفعه إلى مكانه.",
+    ),
+    "note2": MessageLookupByLibrary.simpleMessage(
+      "إذا كان هناك نزيف، اضغط حول الجرح (ليس مباشرة على العظم).",
+    ),
+    "notesHeading": MessageLookupByLibrary.simpleMessage("ملاحظات مهمة:"),
     "poisonHeading": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية للتسمم",
     ),
@@ -346,6 +533,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "خطوات الإسعافات الأولية:",
     ),
     "poisonTitle": MessageLookupByLibrary.simpleMessage("التسمم"),
+    "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
     "recoveryPositionHeading": MessageLookupByLibrary.simpleMessage(
       "وضعية التعافي",
     ),
@@ -397,6 +585,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "removedFromSavedTopicsText": MessageLookupByLibrary.simpleMessage(
       "تمت الإزالة من المواضيع المحفوظة",
     ),
+    "saved": MessageLookupByLibrary.simpleMessage("المحفوظات"),
     "seizuresFirstAidHeading": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية للنوبات:",
     ),
@@ -430,7 +619,6 @@ class MessageLookup extends MessageLookupByLibrary {
       "بعد النوبة، قدم الراحة والطمأنينة للشخص وهو يستعيد وعيه.",
     ),
     "seizuresTitle": MessageLookupByLibrary.simpleMessage("النوبات"),
-    "selectLanguage": MessageLookupByLibrary.simpleMessage("اختر لغتك"),
     "shockFirstAidHeading": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية للصدمة:",
     ),
@@ -461,6 +649,13 @@ class MessageLookup extends MessageLookupByLibrary {
       "راقب التنفس وكن مستعدًا لإجراء الإنعاش القلبي الرئوي إذا لزم الأمر.",
     ),
     "shockTitle": MessageLookupByLibrary.simpleMessage("الصدمة"),
+    "sign1": MessageLookupByLibrary.simpleMessage("- ألم وإيلام عند اللمس"),
+    "sign2": MessageLookupByLibrary.simpleMessage("- تورم أو كدمات"),
+    "sign3": MessageLookupByLibrary.simpleMessage("- تشوه أو وضع غير طبيعي"),
+    "sign4": MessageLookupByLibrary.simpleMessage(
+      "- صعوبة في تحريك الطرف المصاب",
+    ),
+    "signsHeading": MessageLookupByLibrary.simpleMessage("علامات الكسر:"),
     "spinalFirstAidHeading": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية لإصابة العمود الفقري:",
     ),
@@ -542,6 +737,25 @@ class MessageLookup extends MessageLookupByLibrary {
     "sprainsStrainsTitle": MessageLookupByLibrary.simpleMessage(
       "الالتواءات والتمزقات",
     ),
+    "step1Desc": MessageLookupByLibrary.simpleMessage(
+      "حافظ على المنطقة المصابة ثابتة وتجنب الحركة.",
+    ),
+    "step1Title": MessageLookupByLibrary.simpleMessage("إبقاء المنطقة ثابتة"),
+    "step2Desc": MessageLookupByLibrary.simpleMessage(
+      "استخدم جبيرة مبطنة لدعم الإصابة دون محاولة إعادة العظم إلى مكانه.",
+    ),
+    "step2Title": MessageLookupByLibrary.simpleMessage("استخدام جبيرة"),
+    "step3Desc": MessageLookupByLibrary.simpleMessage(
+      "قلل التورم باستخدام ثلج ملفوف بقطعة قماش (تجنب ملامسة الجلد مباشرة).",
+    ),
+    "step3Title": MessageLookupByLibrary.simpleMessage("استخدام كمادة باردة"),
+    "step4Desc": MessageLookupByLibrary.simpleMessage(
+      "اتصل بخدمات الطوارئ أو اصطحب الشخص إلى المستشفى فورًا.",
+    ),
+    "step4Title": MessageLookupByLibrary.simpleMessage("طلب المساعدة الطبية"),
+    "stepsHeading": MessageLookupByLibrary.simpleMessage(
+      "خطوات الإسعافات الأولية:",
+    ),
     "strokeFirstAidHeading": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية للسكتة الدماغية:",
     ),
@@ -591,7 +805,6 @@ class MessageLookup extends MessageLookupByLibrary {
       "هل لديك حساب بالفعل؟",
     ),
     "tAssessing": MessageLookupByLibrary.simpleMessage("تقييم المصاب"),
-    "tAsthma": MessageLookupByLibrary.simpleMessage("الربو"),
     "tBites": MessageLookupByLibrary.simpleMessage("لدغات"),
     "tBleeding": MessageLookupByLibrary.simpleMessage("النزيف"),
     "tBurns": MessageLookupByLibrary.simpleMessage("الحروق"),
@@ -603,6 +816,48 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "tChangeLang": MessageLookupByLibrary.simpleMessage("تغيير اللغة"),
     "tChoking": MessageLookupByLibrary.simpleMessage("الاختناق"),
+    "tChoking10": MessageLookupByLibrary.simpleMessage(
+      "إذا كان السعال غير فعال، أمِل المصاب للأمام وقم بتوجيه 5 ضربات قوية بين الكتفين بكعب يدك.",
+    ),
+    "tChoking11": MessageLookupByLibrary.simpleMessage(
+      "قم بضغطات البطن (مناورة هايمليخ)",
+    ),
+    "tChoking12": MessageLookupByLibrary.simpleMessage(
+      "إذا لم تنجح ضربات الظهر، قم بـ 5 ضغطات بطنية: قف خلف المصاب، ضع قبضة يدك فوق السرة، أمسكها باليد الأخرى، واسحب بقوة إلى الداخل والأعلى.",
+    ),
+    "tChoking13": MessageLookupByLibrary.simpleMessage("كرر حسب الحاجة"),
+    "tChoking14": MessageLookupByLibrary.simpleMessage(
+      "قم بالتناوب بين 5 ضربات ظهر و5 ضغطات بطنية حتى يخرج الجسم الغريب أو يفقد المصاب الوعي.",
+    ),
+    "tChoking15": MessageLookupByLibrary.simpleMessage("اتصل بخدمات الطوارئ"),
+    "tChoking16": MessageLookupByLibrary.simpleMessage(
+      "إذا فقد المصاب الوعي أو استمر الاختناق، اتصل بالطوارئ فوراً وابدأ الإنعاش القلبي الرئوي إذا كنت مدرباً.",
+    ),
+    "tChoking17": MessageLookupByLibrary.simpleMessage("ملاحظات مهمة:"),
+    "tChoking18": MessageLookupByLibrary.simpleMessage(
+      "لا تقم بضغطات البطن للأطفال الرضع أقل من سنة—استخدم تقنيات الاختناق المناسبة للرضع.",
+    ),
+    "tChoking19": MessageLookupByLibrary.simpleMessage(
+      "إذا كنت لوحدك وتختنق، حاول القيام بضغطات البطن على نفسك أو اطلب المساعدة.",
+    ),
+    "tChoking2": MessageLookupByLibrary.simpleMessage("علامات الاختناق:"),
+    "tChoking3": MessageLookupByLibrary.simpleMessage(
+      "- صعوبة في التنفس أو تنفس صاخب",
+    ),
+    "tChoking4": MessageLookupByLibrary.simpleMessage(
+      "- عدم القدرة على الكلام أو السعال بشكل فعال",
+    ),
+    "tChoking5": MessageLookupByLibrary.simpleMessage(
+      "- الإمساك بالحنجرة (علامة الاختناق العالمية)",
+    ),
+    "tChoking6": MessageLookupByLibrary.simpleMessage(
+      "خطوات الإسعافات الأولية:",
+    ),
+    "tChoking7": MessageLookupByLibrary.simpleMessage("شجع المصاب على السعال"),
+    "tChoking8": MessageLookupByLibrary.simpleMessage(
+      "إذا كان المصاب يستطيع السعال، شجعه على الاستمرار لمحاولة إزالة الجسم الغريب.",
+    ),
+    "tChoking9": MessageLookupByLibrary.simpleMessage("قم بضربات الظهر"),
     "tChooseMethod": MessageLookupByLibrary.simpleMessage(
       "اختر طريقة لإعادة تعيين كلمة المرور",
     ),
@@ -610,7 +865,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "tContactSupport": MessageLookupByLibrary.simpleMessage("اتصل بالدعم"),
     "tContactUs": MessageLookupByLibrary.simpleMessage("اتصل بنا"),
     "tCopy": MessageLookupByLibrary.simpleMessage("نسخ"),
-    "tCpr": MessageLookupByLibrary.simpleMessage("إنعاش القلب والرئتين"),
+    "tCpr": MessageLookupByLibrary.simpleMessage("إنعاش القلب"),
     "tDiabetics": MessageLookupByLibrary.simpleMessage("السكري"),
     "tDontHaveAnAccount": MessageLookupByLibrary.simpleMessage(
       "ليس لديك حساب؟ ",
@@ -901,6 +1156,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "tgetHelpViaEmail": MessageLookupByLibrary.simpleMessage(
       "احصل على المساعدة عبر البريد الإلكتروني",
     ),
+    "title": MessageLookupByLibrary.simpleMessage("الكسور"),
     "tliveChat": MessageLookupByLibrary.simpleMessage("الدردشة المباشرة"),
     "tliveChatComingSoon": MessageLookupByLibrary.simpleMessage(
       "الدردشة المباشرة قريبًا!",
@@ -908,6 +1164,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "tnoSavedTopicYet": MessageLookupByLibrary.simpleMessage(
       "لا توجد مواضيع محفوظة بعد",
     ),
+    "topics": MessageLookupByLibrary.simpleMessage("المواضيع"),
     "totpVerification": MessageLookupByLibrary.simpleMessage("التحقق برمز OTP"),
     "tphoneSupport": MessageLookupByLibrary.simpleMessage("الدعم الهاتفي"),
     "tpleaseContactUsAt": MessageLookupByLibrary.simpleMessage(

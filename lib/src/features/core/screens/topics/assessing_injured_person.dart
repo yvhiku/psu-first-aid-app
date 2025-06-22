@@ -1,6 +1,6 @@
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,10 +10,11 @@ class AssessingInjuredPerson extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = S.of(context);
     final TopicController topicController = Get.find();
 
     final currentTopic = {
-      'title': tAssessing,
+      'title': s.tAssessing,
       'image': tHelpingPersonimg,
       'screen': const AssessingInjuredPerson(),
       'type': 'assessingInjuredPerson',
@@ -21,7 +22,7 @@ class AssessingInjuredPerson extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(tAssessing),
+        title:  Text(s.tAssessing),
         actions: [
           Obx(
             () => IconButton(
@@ -39,8 +40,8 @@ class AssessingInjuredPerson extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? taddedtosaved
-                          : tremovedtopic,
+                          ? s.addedToSavedTopicsText
+                          : s.tremovedTopic
                     ),
                   ),
                 );
@@ -56,8 +57,8 @@ class AssessingInjuredPerson extends StatelessWidget {
           children: [
             Image.asset(tHelpingPersonimg, fit: BoxFit.cover),
             const SizedBox(height: 20),
-            const Text(
-              tAssessinginjured,
+             Text(
+              s.tassessingInjured,
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
@@ -65,57 +66,57 @@ class AssessingInjuredPerson extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(tAssessing1, style: TextStyle(fontSize: 16)),
+             Text(s.tassessing1, style: TextStyle(fontSize: 16)),
             const Divider(height: 30),
-            const Text(
-              tAssessing2,
+             Text(
+              s.tassessing2,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
             _buildStep(
               number: '1',
-              title: tAssessing3,
-              description: tAssessing4,
+              title: s.tassessing3,
+              description: s.tassessing4,
             ),
             _buildStep(
               number: '2',
-              title: tAssessing5,
-              description: tAssessing6,
+              title: s.tassessing5,
+              description: s.tassessing6,
             ),
             _buildStep(
               number: '3',
-              title: tAssessing7,
-              description: tAssessing8,
+              title: s.tassessing7,
+              description: s.tassessing8,
             ),
             _buildStep(
               number: '4',
-              title: tAssessing9,
-              description: tAssessing10,
+              title: s.tassessing9,
+              description: s.tassessing10,
             ),
             _buildStep(
               number: '5',
-              title: tAssessing11,
-              description: tAssessing12,
+              title: s.tassessing11,
+              description: s.tassessing12,
             ),
             _buildStep(
               number: '6',
-              title: tAssessing13,
-              description: tAssessing14,
+              title: s.tassessing13,
+              description: s.tassessing14,
             ),
             _buildStep(
               number: '7',
-              title: tAssessing15,
-              description: tAssessing16,
+              title: s.tassessing15,
+              description: s.tassessing16,
             ),
             const Divider(height: 30),
-            const Text(
-              tAssessing17,
+             Text(
+              s.tassessing17,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildBulletPoint(tAssessing18),
-            _buildBulletPoint(tAssessing19),
-            _buildBulletPoint(tAssessing20),
+            _buildBulletPoint(s.tassessing18),
+            _buildBulletPoint(s.tassessing19),
+            _buildBulletPoint(s.tassessing20),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
@@ -130,8 +131,8 @@ class AssessingInjuredPerson extends StatelessWidget {
                 ),
                 elevation: 4,
               ),
-              child: const Text(
-                tAssessing21,
+              child:  Text(
+                s.tassessing21,
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
             ),

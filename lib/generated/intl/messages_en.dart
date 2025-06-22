@@ -22,6 +22,13 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "Choking1": MessageLookupByLibrary.simpleMessage(
+      "Choking occurs when an object blocks the airway, preventing normal breathing.",
+    ),
+    "ChokingTitle": MessageLookupByLibrary.simpleMessage("Choking First Aid"),
+    "addedToSavedTopics": MessageLookupByLibrary.simpleMessage(
+      "Added to saved topics",
+    ),
     "addedToSavedTopicsText": MessageLookupByLibrary.simpleMessage(
       "Added to saved topics",
     ),
@@ -182,61 +189,232 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "burns9": MessageLookupByLibrary.simpleMessage("Avoid Creams or Ice"),
     "burnsTitle": MessageLookupByLibrary.simpleMessage("First Aid for Burns"),
-    "choking1": MessageLookupByLibrary.simpleMessage(
-      "Choking occurs when an object blocks the airway, preventing normal breathing.",
-    ),
-    "chokingTitle": MessageLookupByLibrary.simpleMessage("Choking First Aid"),
     "continueText": MessageLookupByLibrary.simpleMessage("Continue"),
-    "fracturesNote1": MessageLookupByLibrary.simpleMessage(
-      "Do NOT try to realign the bone or push it back in place.",
+    "cprHeading": MessageLookupByLibrary.simpleMessage(
+      "Cardiopulmonary Resuscitation (CPR)",
     ),
-    "fracturesNote2": MessageLookupByLibrary.simpleMessage(
-      "If bleeding, apply pressure around the wound (not directly on the bone).",
+    "cprIntro": MessageLookupByLibrary.simpleMessage(
+      "Performing CPR can save a life when someone’s breathing or heartbeat has stopped.",
     ),
-    "fracturesNotesHeading": MessageLookupByLibrary.simpleMessage(
+    "cprNote1": MessageLookupByLibrary.simpleMessage(
+      "Use an AED if available.",
+    ),
+    "cprNote2": MessageLookupByLibrary.simpleMessage(
+      "For infants, use 2 fingers for compressions.",
+    ),
+    "cprNote3": MessageLookupByLibrary.simpleMessage(
+      "Do not stop unless the person starts breathing or help arrives.",
+    ),
+    "cprNotesHeading": MessageLookupByLibrary.simpleMessage("Important Notes:"),
+    "cprStep1Description": MessageLookupByLibrary.simpleMessage(
+      "Tap the person’s shoulder and shout, \'Are you okay?\'",
+    ),
+    "cprStep1Title": MessageLookupByLibrary.simpleMessage(
+      "Check Responsiveness",
+    ),
+    "cprStep2Description": MessageLookupByLibrary.simpleMessage(
+      "If unresponsive, call emergency services (e.g., 112) or ask someone to call.",
+    ),
+    "cprStep2Title": MessageLookupByLibrary.simpleMessage("Call for Help"),
+    "cprStep3Description": MessageLookupByLibrary.simpleMessage(
+      "Tilt the head back slightly and lift the chin to open the airway.",
+    ),
+    "cprStep3Title": MessageLookupByLibrary.simpleMessage("Open the Airway"),
+    "cprStep4Description": MessageLookupByLibrary.simpleMessage(
+      "Look, listen, and feel for breathing (no more than 10 seconds).",
+    ),
+    "cprStep4Title": MessageLookupByLibrary.simpleMessage(
+      "Check for Breathing",
+    ),
+    "cprStep5Description": MessageLookupByLibrary.simpleMessage(
+      "Place hands on the center of the chest. Push hard and fast (5cm deep at 100-120 compressions per minute).",
+    ),
+    "cprStep5Title": MessageLookupByLibrary.simpleMessage(
+      "Start Chest Compressions",
+    ),
+    "cprStep6Description": MessageLookupByLibrary.simpleMessage(
+      "After 30 compressions, give 2 breaths (pinch the nose, cover the mouth with yours, and blow until the chest rises).",
+    ),
+    "cprStep6Title": MessageLookupByLibrary.simpleMessage(
+      "Give Rescue Breaths",
+    ),
+    "cprStep7Description": MessageLookupByLibrary.simpleMessage(
+      "Repeat cycles of 30 compressions and 2 breaths until help arrives or the person revives.",
+    ),
+    "cprStep7Title": MessageLookupByLibrary.simpleMessage("Continue CPR"),
+    "cprStepsHeading": MessageLookupByLibrary.simpleMessage(
+      "Steps to Perform CPR:",
+    ),
+    "cprTitle": MessageLookupByLibrary.simpleMessage("CPR Instructions"),
+    "cprWatchDemoButton": MessageLookupByLibrary.simpleMessage(
+      "Watch CPR Demonstration",
+    ),
+    "diabeticsAppBarTitle": MessageLookupByLibrary.simpleMessage("Diabetics"),
+    "diabeticsHeader": MessageLookupByLibrary.simpleMessage(
+      "Diabetic Emergency First Aid",
+    ),
+    "diabeticsIntro": MessageLookupByLibrary.simpleMessage(
+      "Recognizing and managing diabetic emergencies such as hypoglycemia (low blood sugar) is critical.",
+    ),
+    "diabeticsNote1": MessageLookupByLibrary.simpleMessage(
+      "Do NOT give food or drink if the person is unconscious.",
+    ),
+    "diabeticsNote2": MessageLookupByLibrary.simpleMessage(
+      "If unconscious, place in recovery position and call emergency services.",
+    ),
+    "diabeticsNotesTitle": MessageLookupByLibrary.simpleMessage(
       "Important Notes:",
     ),
-    "fracturesSign1": MessageLookupByLibrary.simpleMessage(
-      "- Pain and tenderness",
+    "diabeticsSignsList": MessageLookupByLibrary.simpleMessage(
+      "- Shakiness, sweating, confusion, dizziness, irritability, headache",
     ),
-    "fracturesSign2": MessageLookupByLibrary.simpleMessage(
-      "- Swelling or bruising",
+    "diabeticsSignsTitle": MessageLookupByLibrary.simpleMessage(
+      "Signs of Low Blood Sugar (Hypoglycemia):",
     ),
-    "fracturesSign3": MessageLookupByLibrary.simpleMessage(
-      "- Deformity or unnatural positioning",
+    "diabeticsStep1Desc": MessageLookupByLibrary.simpleMessage(
+      "If the person is conscious, ask if they have diabetes.",
     ),
-    "fracturesSign4": MessageLookupByLibrary.simpleMessage(
-      "- Difficulty moving the limb",
+    "diabeticsStep1Title": MessageLookupByLibrary.simpleMessage(
+      "Check Responsiveness",
     ),
-    "fracturesSignsHeading": MessageLookupByLibrary.simpleMessage(
-      "Signs of a Fracture:",
+    "diabeticsStep2Desc": MessageLookupByLibrary.simpleMessage(
+      "Give 15-20 grams of fast-acting sugar (fruit juice, glucose tablets, candy).",
     ),
-    "fracturesStep1Desc": MessageLookupByLibrary.simpleMessage(
-      "Keep the injured area still and avoid movement.",
+    "diabeticsStep2Title": MessageLookupByLibrary.simpleMessage("Give Sugar"),
+    "diabeticsStep3Desc": MessageLookupByLibrary.simpleMessage(
+      "Wait 15 minutes, then recheck symptoms. Repeat sugar intake if needed.",
     ),
-    "fracturesStep1Title": MessageLookupByLibrary.simpleMessage(
-      "Immobilize the Area",
+    "diabeticsStep3Title": MessageLookupByLibrary.simpleMessage(
+      "Wait and Monitor",
     ),
-    "fracturesStep2Desc": MessageLookupByLibrary.simpleMessage(
-      "Use a padded splint to support the injury without forcing it into place.",
+    "diabeticsStep4Desc": MessageLookupByLibrary.simpleMessage(
+      "If the person loses consciousness, becomes confused, or symptoms worsen, call for help immediately.",
     ),
-    "fracturesStep2Title": MessageLookupByLibrary.simpleMessage(
-      "Apply a Splint",
+    "diabeticsStep4Title": MessageLookupByLibrary.simpleMessage(
+      "Call Emergency Services",
     ),
-    "fracturesStep3Desc": MessageLookupByLibrary.simpleMessage(
-      "Reduce swelling with ice wrapped in cloth (avoid direct contact with skin).",
-    ),
-    "fracturesStep3Title": MessageLookupByLibrary.simpleMessage(
-      "Apply Cold Compress",
-    ),
-    "fracturesStep4Desc": MessageLookupByLibrary.simpleMessage(
-      "Call emergency services or take the person to hospital promptly.",
-    ),
-    "fracturesStep4Title": MessageLookupByLibrary.simpleMessage(
-      "Seek Medical Help",
-    ),
-    "fracturesStepsHeading": MessageLookupByLibrary.simpleMessage(
+    "diabeticsStepsTitle": MessageLookupByLibrary.simpleMessage(
       "First Aid Steps:",
+    ),
+    "diabeticsTitle": MessageLookupByLibrary.simpleMessage("Diabetics"),
+    "drugOverdoseImportantNotes": MessageLookupByLibrary.simpleMessage(
+      "Important Notes:",
+    ),
+    "drugOverdoseIntro": MessageLookupByLibrary.simpleMessage(
+      "Recognize the signs of overdose and provide immediate help.",
+    ),
+    "drugOverdoseMainHeading": MessageLookupByLibrary.simpleMessage(
+      "Drug Overdose First Aid",
+    ),
+    "drugOverdoseNote1": MessageLookupByLibrary.simpleMessage(
+      "Do NOT induce vomiting unless instructed by a medical professional.",
+    ),
+    "drugOverdoseNote2": MessageLookupByLibrary.simpleMessage(
+      "Try to identify the substance involved to inform emergency responders.",
+    ),
+    "drugOverdoseSigns1": MessageLookupByLibrary.simpleMessage(
+      "- Unresponsiveness or unconsciousness",
+    ),
+    "drugOverdoseSigns2": MessageLookupByLibrary.simpleMessage(
+      "- Difficulty breathing or slow breathing",
+    ),
+    "drugOverdoseSigns3": MessageLookupByLibrary.simpleMessage(
+      "- Seizures or convulsions",
+    ),
+    "drugOverdoseSigns4": MessageLookupByLibrary.simpleMessage(
+      "- Vomiting, pale or clammy skin",
+    ),
+    "drugOverdoseSignsHeading": MessageLookupByLibrary.simpleMessage(
+      "Signs of Drug Overdose:",
+    ),
+    "drugOverdoseStep1Desc": MessageLookupByLibrary.simpleMessage(
+      "Immediately call for professional medical help.",
+    ),
+    "drugOverdoseStep1Title": MessageLookupByLibrary.simpleMessage(
+      "Call Emergency Services",
+    ),
+    "drugOverdoseStep2Desc": MessageLookupByLibrary.simpleMessage(
+      "Make sure the person and yourself are safe from harm.",
+    ),
+    "drugOverdoseStep2Title": MessageLookupByLibrary.simpleMessage(
+      "Ensure Safety",
+    ),
+    "drugOverdoseStep3Desc": MessageLookupByLibrary.simpleMessage(
+      "If unresponsive, check if they are breathing.",
+    ),
+    "drugOverdoseStep3Title": MessageLookupByLibrary.simpleMessage(
+      "Check Responsiveness and Breathing",
+    ),
+    "drugOverdoseStep4Desc": MessageLookupByLibrary.simpleMessage(
+      "If no breathing or pulse, start CPR until help arrives.",
+    ),
+    "drugOverdoseStep4Title": MessageLookupByLibrary.simpleMessage(
+      "Perform CPR if Needed",
+    ),
+    "drugOverdoseStep5Desc": MessageLookupByLibrary.simpleMessage(
+      "If breathing but unconscious, place on their side to keep airway clear.",
+    ),
+    "drugOverdoseStep5Title": MessageLookupByLibrary.simpleMessage(
+      "Place in Recovery Position",
+    ),
+    "drugOverdoseStepsHeading": MessageLookupByLibrary.simpleMessage(
+      "First Aid Steps:",
+    ),
+    "drugOverdoseTitle": MessageLookupByLibrary.simpleMessage("Drug Overdose"),
+    "eyeInjuryHeading": MessageLookupByLibrary.simpleMessage(
+      "Eye Injury First Aid",
+    ),
+    "eyeInjuryIntro": MessageLookupByLibrary.simpleMessage(
+      "Proper first aid for eye injuries can prevent further damage.",
+    ),
+    "eyeInjuryNote1": MessageLookupByLibrary.simpleMessage(
+      "Do not try to remove embedded objects.",
+    ),
+    "eyeInjuryNote2": MessageLookupByLibrary.simpleMessage(
+      "Avoid using any medication or ointment unless prescribed.",
+    ),
+    "eyeInjuryNotesHeading": MessageLookupByLibrary.simpleMessage(
+      "Important Notes:",
+    ),
+    "eyeInjuryStep1Desc": MessageLookupByLibrary.simpleMessage(
+      "Rubbing can cause further damage.",
+    ),
+    "eyeInjuryStep1Title": MessageLookupByLibrary.simpleMessage(
+      "Do NOT Rub the Eye",
+    ),
+    "eyeInjuryStep2Desc": MessageLookupByLibrary.simpleMessage(
+      "If chemicals or foreign particles are present, rinse eye gently with water for at least 15 minutes.",
+    ),
+    "eyeInjuryStep2Title": MessageLookupByLibrary.simpleMessage(
+      "Flush with Clean Water",
+    ),
+    "eyeInjuryStep3Desc": MessageLookupByLibrary.simpleMessage(
+      "Use a clean cloth or eye shield to protect the injured eye without applying pressure.",
+    ),
+    "eyeInjuryStep3Title": MessageLookupByLibrary.simpleMessage(
+      "Cover the Eye",
+    ),
+    "eyeInjuryStep4Desc": MessageLookupByLibrary.simpleMessage(
+      "For serious injuries or if pain persists, go to emergency care immediately.",
+    ),
+    "eyeInjuryStep4Title": MessageLookupByLibrary.simpleMessage(
+      "Seek Medical Attention",
+    ),
+    "eyeInjuryStepsHeading": MessageLookupByLibrary.simpleMessage(
+      "First Aid Steps:",
+    ),
+    "eyeInjuryTitle": MessageLookupByLibrary.simpleMessage("Eye Injury"),
+    "eyeInjuryType1": MessageLookupByLibrary.simpleMessage(
+      "- Foreign objects in the eye",
+    ),
+    "eyeInjuryType2": MessageLookupByLibrary.simpleMessage(
+      "- Chemical splashes",
+    ),
+    "eyeInjuryType3": MessageLookupByLibrary.simpleMessage(
+      "- Cuts or punctures",
+    ),
+    "eyeInjuryTypesHeading": MessageLookupByLibrary.simpleMessage(
+      "Types of Eye Injuries:",
     ),
     "headInjuryHeading": MessageLookupByLibrary.simpleMessage(
       "Head Injury First Aid",
@@ -278,6 +456,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "First Aid Steps:",
     ),
     "headInjuryTitle": MessageLookupByLibrary.simpleMessage("Head Injury"),
+    "heading": MessageLookupByLibrary.simpleMessage("Fractures First Aid"),
     "heartConditionHeading": MessageLookupByLibrary.simpleMessage(
       "Heart Conditions First Aid",
     ),
@@ -314,6 +493,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "heartConditionTitle": MessageLookupByLibrary.simpleMessage(
       "Heart Conditions",
     ),
+    "home": MessageLookupByLibrary.simpleMessage("Home"),
+    "intro": MessageLookupByLibrary.simpleMessage(
+      "A fracture is a broken bone. Proper first aid can prevent complications.",
+    ),
+    "note1": MessageLookupByLibrary.simpleMessage(
+      "Do NOT try to realign the bone or push it back in place.",
+    ),
+    "note2": MessageLookupByLibrary.simpleMessage(
+      "If bleeding, apply pressure around the wound (not directly on the bone).",
+    ),
+    "notesHeading": MessageLookupByLibrary.simpleMessage("Important Notes:"),
     "poisonHeading": MessageLookupByLibrary.simpleMessage(
       "Poisoning First Aid",
     ),
@@ -348,6 +538,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "First Aid Steps:",
     ),
     "poisonTitle": MessageLookupByLibrary.simpleMessage("Poisons"),
+    "profile": MessageLookupByLibrary.simpleMessage("Profile"),
     "recoveryPositionHeading": MessageLookupByLibrary.simpleMessage(
       "Recovery Position",
     ),
@@ -399,6 +590,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "removedFromSavedTopicsText": MessageLookupByLibrary.simpleMessage(
       "Removed from saved topics",
     ),
+    "saved": MessageLookupByLibrary.simpleMessage("Saved"),
     "seizuresFirstAidHeading": MessageLookupByLibrary.simpleMessage(
       "First Aid for Seizures:",
     ),
@@ -475,6 +667,17 @@ class MessageLookup extends MessageLookupByLibrary {
       "Monitor breathing and be prepared to perform CPR if necessary.",
     ),
     "shockTitle": MessageLookupByLibrary.simpleMessage("Shock"),
+    "sign1": MessageLookupByLibrary.simpleMessage("- Pain and tenderness"),
+    "sign2": MessageLookupByLibrary.simpleMessage("- Swelling or bruising"),
+    "sign3": MessageLookupByLibrary.simpleMessage(
+      "- Deformity or unnatural positioning",
+    ),
+    "sign4": MessageLookupByLibrary.simpleMessage(
+      "- Difficulty moving the limb",
+    ),
+    "signsHeading": MessageLookupByLibrary.simpleMessage(
+      "Signs of a Fracture:",
+    ),
     "spinalFirstAidHeading": MessageLookupByLibrary.simpleMessage(
       "First Aid for Spinal Injury:",
     ),
@@ -558,6 +761,23 @@ class MessageLookup extends MessageLookupByLibrary {
     "sprainsStrainsTitle": MessageLookupByLibrary.simpleMessage(
       "Sprains and Strains",
     ),
+    "step1Desc": MessageLookupByLibrary.simpleMessage(
+      "Keep the injured area still and avoid movement.",
+    ),
+    "step1Title": MessageLookupByLibrary.simpleMessage("Immobilize the Area"),
+    "step2Desc": MessageLookupByLibrary.simpleMessage(
+      "Use a padded splint to support the injury without forcing it into place.",
+    ),
+    "step2Title": MessageLookupByLibrary.simpleMessage("Apply a Splint"),
+    "step3Desc": MessageLookupByLibrary.simpleMessage(
+      "Reduce swelling with ice wrapped in cloth (avoid direct contact with skin).",
+    ),
+    "step3Title": MessageLookupByLibrary.simpleMessage("Apply Cold Compress"),
+    "step4Desc": MessageLookupByLibrary.simpleMessage(
+      "Call emergency services or take the person to hospital promptly.",
+    ),
+    "step4Title": MessageLookupByLibrary.simpleMessage("Seek Medical Help"),
+    "stepsHeading": MessageLookupByLibrary.simpleMessage("First Aid Steps:"),
     "strokeFirstAidHeading": MessageLookupByLibrary.simpleMessage(
       "First Aid for Stroke:",
     ),
@@ -609,7 +829,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "tAssessing": MessageLookupByLibrary.simpleMessage(
       "Assessing injured Person",
     ),
-    "tAsthma": MessageLookupByLibrary.simpleMessage("Asthma"),
     "tBites": MessageLookupByLibrary.simpleMessage("Bites"),
     "tBleeding": MessageLookupByLibrary.simpleMessage("Bleeding"),
     "tBurns": MessageLookupByLibrary.simpleMessage("Burns"),
@@ -619,6 +838,48 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "tChangeLang": MessageLookupByLibrary.simpleMessage("Change Language"),
     "tChoking": MessageLookupByLibrary.simpleMessage("Choking"),
+    "tChoking10": MessageLookupByLibrary.simpleMessage(
+      "If coughing is ineffective, lean the person forward and deliver 5 firm back blows between the shoulder blades with the heel of your hand.",
+    ),
+    "tChoking11": MessageLookupByLibrary.simpleMessage(
+      "Perform Abdominal Thrusts",
+    ),
+    "tChoking12": MessageLookupByLibrary.simpleMessage(
+      "If back blows do not clear the airway, perform 5 abdominal thrusts (Heimlich maneuver): stand behind, place a fist above the navel, grasp it with the other hand, and pull sharply inward and upward.",
+    ),
+    "tChoking13": MessageLookupByLibrary.simpleMessage("Repeat as Necessary"),
+    "tChoking14": MessageLookupByLibrary.simpleMessage(
+      "Alternate between 5 back blows and 5 abdominal thrusts until the object is expelled or the person becomes unconscious.",
+    ),
+    "tChoking15": MessageLookupByLibrary.simpleMessage(
+      "Call Emergency Services",
+    ),
+    "tChoking16": MessageLookupByLibrary.simpleMessage(
+      "If the person becomes unconscious or choking persists, call emergency services immediately and begin CPR if trained.",
+    ),
+    "tChoking17": MessageLookupByLibrary.simpleMessage("Important Notes:"),
+    "tChoking18": MessageLookupByLibrary.simpleMessage(
+      "Do not perform abdominal thrusts on infants under 1 year old—use appropriate infant choking techniques.",
+    ),
+    "tChoking19": MessageLookupByLibrary.simpleMessage(
+      "If you are alone and choking, try to perform abdominal thrusts on yourself or call for help.",
+    ),
+    "tChoking2": MessageLookupByLibrary.simpleMessage("Signs of Choking:"),
+    "tChoking3": MessageLookupByLibrary.simpleMessage(
+      "- Difficulty breathing or noisy breathing",
+    ),
+    "tChoking4": MessageLookupByLibrary.simpleMessage(
+      "- Inability to speak or cough effectively",
+    ),
+    "tChoking5": MessageLookupByLibrary.simpleMessage(
+      "- Clutching the throat (universal choking sign)",
+    ),
+    "tChoking6": MessageLookupByLibrary.simpleMessage("First Aid Steps:"),
+    "tChoking7": MessageLookupByLibrary.simpleMessage("Encourage Coughing"),
+    "tChoking8": MessageLookupByLibrary.simpleMessage(
+      "If the person can cough, encourage them to keep coughing to try to dislodge the object.",
+    ),
+    "tChoking9": MessageLookupByLibrary.simpleMessage("Perform Back Blows"),
     "tChooseMethod": MessageLookupByLibrary.simpleMessage(
       "Choose method to reset your password",
     ),
@@ -919,6 +1180,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "tgetHelpViaEmail": MessageLookupByLibrary.simpleMessage(
       "Get help via email",
     ),
+    "title": MessageLookupByLibrary.simpleMessage("Fractures"),
     "tliveChat": MessageLookupByLibrary.simpleMessage("Live Chat"),
     "tliveChatComingSoon": MessageLookupByLibrary.simpleMessage(
       "Live chat coming soon!",
@@ -926,6 +1188,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "tnoSavedTopicYet": MessageLookupByLibrary.simpleMessage(
       "No saved topics yet",
     ),
+    "topics": MessageLookupByLibrary.simpleMessage("Topics"),
     "totpVerification": MessageLookupByLibrary.simpleMessage(
       "OTP Verification",
     ),

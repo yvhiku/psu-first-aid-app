@@ -1,6 +1,6 @@
 import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/features/core/controllers/widgets/navbar.dart';
 import 'package:first_aid_app/src/features/core/screens/topics/all_topic.dart';
 import 'package:first_aid_app/src/features/core/screens/topics/bleeding.dart';
@@ -18,7 +18,6 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
-
     return Scaffold(appBar: _buildAppBar(height), body: _buildBody(context));
   }
 
@@ -39,19 +38,6 @@ class HomeScreen extends StatelessWidget {
             color: tCardBgColor,
           ),
         ),
-        // PopupMenuButton<String>(
-        //   icon: const Icon(
-        //     Icons.more_vert,
-        //     color: Color.fromARGB(255, 139, 47, 49),
-        //   ),
-        //   onSelected: (value) {},
-        //   itemBuilder:
-        //       (context) => [
-        //         const PopupMenuItem(value: 'settings', child: Text('Settings')),
-        //         const PopupMenuItem(value: 'help', child: Text('Help')),
-        //         const PopupMenuItem(value: 'logout', child: Text('Logout'),),
-        //       ],
-        // ),
       ],
     );
   }
@@ -75,16 +61,12 @@ class HomeScreen extends StatelessWidget {
   Widget _buildEmergencyCallContainer(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-      padding: const EdgeInsets.all(25), // Increased inner padding
-      width: double.infinity, // Make container take full width
-      constraints: BoxConstraints(
-        minHeight: 180, // Set minimum height
-      ),
+      padding: const EdgeInsets.all(25),
+      width: double.infinity,
+      constraints: BoxConstraints(minHeight: 180),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(
-          20,
-        ), // Slightly larger border radius
+        borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.1),
@@ -94,25 +76,24 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       child: Column(
-        mainAxisAlignment:
-            MainAxisAlignment.center, // Center contents vertically
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            tEmergencynum,
+            S.of(context).tEmergencyNum,
             style: TextStyle(
-              fontSize: 20, // Larger font size
+              fontSize: 20,
               fontWeight: FontWeight.bold,
               fontFamily: 'Poppins',
               color: tSecondaryColor,
             ),
           ),
-          const SizedBox(height: 20), // Increased spacing
+          const SizedBox(height: 20),
           Container(
-            width: 140, // Wider button
-            height: 70, // Taller button
+            width: 140,
+            height: 70,
             decoration: BoxDecoration(
               color: Colors.red[700],
-              borderRadius: BorderRadius.circular(15), // Larger border radius
+              borderRadius: BorderRadius.circular(15),
               boxShadow: [
                 BoxShadow(
                   color: Colors.black.withOpacity(0.1),
@@ -128,10 +109,10 @@ class HomeScreen extends StatelessWidget {
                 onTap: () => _makeEmergencyCall(context),
                 child: Center(
                   child: Text(
-                    'CALL 112',
+                    "112",
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 18, // Larger font size
+                      fontSize: 18,
                       fontWeight: FontWeight.bold,
                       fontFamily: 'Poppins',
                     ),
@@ -149,11 +130,11 @@ class HomeScreen extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        _buildButton(context, tCprimg, tCpr, CprScreen()),
+        _buildButton(context, tCprimg, S.of(context).tCpr, CprScreen()),
         const SizedBox(width: 15.0),
-        _buildButton(context, tWoundimg, tBleeding, const Bleeding()),
+        _buildButton(context, tWoundimg, S.of(context).tBleeding, const Bleeding()),
         const SizedBox(width: 15.0),
-        _buildButton(context, tBurnimg, tBurns, const BurnScreen()),
+        _buildButton(context, tBurnimg, S.of(context).tBurns, const BurnScreen()),
       ],
     );
   }
@@ -162,14 +143,14 @@ class HomeScreen extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        _buildButton(context, tChokingimg, tChoking, const ChokingScreen()),
+        _buildButton(context, tChokingimg, S.of(context).tChoking, const ChokingScreen()),
         const SizedBox(width: 15.0),
-        _buildButton(context, tPoisonimg, tPoisons, const PoisonScreen()),
+        _buildButton(context, tPoisonimg, S.of(context).tPoisons, const PoisonScreen()),
         const SizedBox(width: 15.0),
         _buildButton(
           context,
           tServiceToOhersimg,
-          tAllTopics,
+          S.of(context).tAllTopics,
           AllTopicsScreen(),
         ),
       ],
@@ -180,8 +161,8 @@ class HomeScreen extends StatelessWidget {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text(
-          tEmergencycall,
+        title: Text(
+          S.of(context).temergencyCall,
           style: TextStyle(
             color: Colors.black,
             fontFamily: "Poppins",
@@ -189,8 +170,8 @@ class HomeScreen extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         ),
-        content: const Text(
-          tAreyousure,
+        content: Text(
+          S.of(context).tareYouSureCall112,
           style: TextStyle(
             color: Colors.black,
             fontFamily: "Poppins",
@@ -201,8 +182,8 @@ class HomeScreen extends StatelessWidget {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
-            child: const Text(
-              tCancel,
+            child: Text(
+              S.of(context).tcancel,
               style: TextStyle(
                 color: tPrimaryColor,
                 fontFamily: "Poppins",
@@ -216,8 +197,8 @@ class HomeScreen extends StatelessWidget {
               Navigator.pop(context);
               launch('tel:112');
             },
-            child: const Text(
-              tCall,
+            child: Text(
+              S.of(context).tcall,
               style: TextStyle(
                 color: tPrimaryColor,
                 fontFamily: "Poppins",

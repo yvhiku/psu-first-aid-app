@@ -456,8 +456,37 @@ const String drugOverdoseNote1 =
     'Do NOT induce vomiting unless instructed by a medical professional.';
 const String drugOverdoseNote2 =
     'Try to identify the substance involved to inform emergency responders.';
-// Strings for FracturesScreen
 
+ const String title = 'Eye Injury';
+   const String heading = 'Eye Injury First Aid';
+   const String intro =
+      'Proper first aid for eye injuries can prevent further damage.';
+   const String typesHeading = 'Types of Eye Injuries:';
+   const String type1 = '- Foreign objects in the eye';
+   const String type2 = '- Chemical splashes';
+   const String type3 = '- Cuts or punctures';
+
+   const String stepsHeading = 'First Aid Steps:';
+   const String step1Title = 'Do NOT Rub the Eye';
+   const String step1Desc = 'Rubbing can cause further damage.';
+   const String step2Title = 'Flush with Clean Water';
+   const String step2Desc =
+      'If chemicals or foreign particles are present, rinse eye gently with water for at least 15 minutes.';
+   const String step3Title = 'Cover the Eye';
+   const String step3Desc =
+      'Use a clean cloth or eye shield to protect the injured eye without applying pressure.';
+   const String step4Title = 'Seek Medical Attention';
+   const String step4Desc =
+      'For serious injuries or if pain persists, go to emergency care immediately.';
+
+   const String notesHeading = 'Important Notes:';
+   const String note1 = 'Do not try to remove embedded objects.';
+   const String note2 =
+      'Avoid using any medication or ointment unless prescribed.';
+
+
+
+// Strings for FracturesScreen
 const String fracturesTitle = 'Fractures';
 const String fracturesHeading = 'Fractures First Aid';
 const String fracturesIntro =

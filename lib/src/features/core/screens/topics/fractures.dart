@@ -1,3 +1,4 @@
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
@@ -40,16 +41,17 @@ class FracturesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = S.of(context);
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': title,
+      'title': s.title,
       'image': tInjuryimg,
       'screen': const FracturesScreen(),
     };
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(title),
+        title: Text(s.title),
         actions: [
           Obx(
             () => IconButton(
@@ -67,8 +69,8 @@ class FracturesScreen extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? 'Added to saved topics'
-                          : 'Removed from saved topics',
+                          ? s.addedToSavedTopicsText
+                          : s.tremovedTopic,
                     ),
                   ),
                 );
@@ -84,8 +86,8 @@ class FracturesScreen extends StatelessWidget {
           children: [
             Image.asset(tInjuryimg, fit: BoxFit.cover),
             const SizedBox(height: 20),
-            const Text(
-              heading,
+            Text(
+              s.heading,
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
@@ -93,35 +95,51 @@ class FracturesScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(intro, style: TextStyle(fontSize: 16)),
+            Text(s.intro, style: TextStyle(fontSize: 16)),
             const Divider(height: 30),
-            const Text(
-              signsHeading,
+            Text(
+              s.signsHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            const Text(sign1),
-            const Text(sign2),
-            const Text(sign3),
-            const Text(sign4),
+            Text(s.sign1),
+            Text(s.sign2),
+            Text(s.sign3),
+            Text(s.sign4),
             const Divider(height: 30),
-            const Text(
-              stepsHeading,
+            Text(
+              s.stepsHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildStep(number: '1', title: step1Title, description: step1Desc),
-            _buildStep(number: '2', title: step2Title, description: step2Desc),
-            _buildStep(number: '3', title: step3Title, description: step3Desc),
-            _buildStep(number: '4', title: step4Title, description: step4Desc),
+            _buildStep(
+              number: '1',
+              title: s.step1Title,
+              description: s.step1Desc,
+            ),
+            _buildStep(
+              number: '2',
+              title: s.step2Title,
+              description: s.step2Desc,
+            ),
+            _buildStep(
+              number: '3',
+              title: s.step3Title,
+              description: s.step3Desc,
+            ),
+            _buildStep(
+              number: '4',
+              title: s.step4Title,
+              description: s.step4Desc,
+            ),
             const Divider(height: 30),
-            const Text(
-              notesHeading,
+            Text(
+              s.notesHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildBulletPoint(note1),
-            _buildBulletPoint(note2),
+            _buildBulletPoint(s.note1),
+            _buildBulletPoint(s.note2),
           ],
         ),
       ),

@@ -1,5 +1,5 @@
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,16 +9,17 @@ class RecoveryPos extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = S.of(context);
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': recoveryPositionTitle,
+      'title': s.recoveryPositionTitle,
       'image': tRecoveryPosimg,
       'screen': const RecoveryPos(),
     };
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(recoveryPositionTitle),
+        title:  Text(s.recoveryPositionTitle),
         actions: [
           Obx(
             () => IconButton(
@@ -36,8 +37,8 @@ class RecoveryPos extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? addedToSavedTopicsText
-                          : removedFromSavedTopicsText,
+                          ? s.addedToSavedTopicsText
+                          : s.tremovedTopic
                     ),
                   ),
                 );
@@ -53,35 +54,35 @@ class RecoveryPos extends StatelessWidget {
           children: [
             Image.asset(tRecoveryPosimg, fit: BoxFit.cover),
             const SizedBox(height: 16),
-            const Text(
-              recoveryPositionHeading,
+             Text(
+              s.recoveryPositionHeading,
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            const Text(recoveryPositionIntro, style: TextStyle(fontSize: 16)),
+             Text(s.recoveryPositionIntro, style: TextStyle(fontSize: 16)),
             const SizedBox(height: 20),
-            const Text(
-              recoveryPositionStepsHeading,
+             Text(
+              s.recoveryPositionStepsHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            _buildStep('1', recoveryPositionStep1),
-            _buildStep('2', recoveryPositionStep2),
-            _buildStep('3', recoveryPositionStep3),
-            _buildStep('4', recoveryPositionStep4),
-            _buildStep('5', recoveryPositionStep5),
-            _buildStep('6', recoveryPositionStep6),
-            _buildStep('7', recoveryPositionStep7),
-            _buildStep('8', recoveryPositionStep8),
+            _buildStep('1', s.recoveryPositionStep1),
+            _buildStep('2', s.recoveryPositionStep2),
+            _buildStep('3', s.recoveryPositionStep3),
+            _buildStep('4', s.recoveryPositionStep4),
+            _buildStep('5', s.recoveryPositionStep5),
+            _buildStep('6', s.recoveryPositionStep6),
+            _buildStep('7', s.recoveryPositionStep7),
+            _buildStep('8', s.recoveryPositionStep8),
             const SizedBox(height: 20),
-            const Text(
-              recoveryPositionImportantHeading,
+             Text(
+              s.recoveryPositionImportantHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
-            _buildBullet(recoveryPositionNote1),
-            _buildBullet(recoveryPositionNote2),
-            _buildBullet(recoveryPositionNote3),
+            _buildBullet(s.recoveryPositionNote1),
+            _buildBullet(s.recoveryPositionNote2),
+            _buildBullet(s.recoveryPositionNote3),
           ],
         ),
       ),

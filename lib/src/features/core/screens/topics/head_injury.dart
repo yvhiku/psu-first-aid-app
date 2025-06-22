@@ -1,5 +1,5 @@
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart'; // Your constants file for all strings
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,16 +9,17 @@ class HeadInjury extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = S.of(context);
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': headInjuryTitle,
+      'title': s.headInjuryTitle,
       'image': tHeadimg,
       'screen': const HeadInjury(),
     };
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(headInjuryTitle),
+        title:  Text(s.headInjuryTitle),
         actions: [
           Obx(
             () => IconButton(
@@ -36,8 +37,8 @@ class HeadInjury extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? taddedtosaved
-                          : tremovedtopic,
+                          ? s.addedToSavedTopicsText
+                          : s.tremovedTopic
                     ),
                   ),
                 );
@@ -53,8 +54,8 @@ class HeadInjury extends StatelessWidget {
           children: [
             Image.asset(tHeadimg, fit: BoxFit.cover),
             const SizedBox(height: 20),
-            const Text(
-              headInjuryHeading,
+             Text(
+              s.headInjuryHeading,
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
@@ -62,26 +63,26 @@ class HeadInjury extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(headInjuryIntro, style: TextStyle(fontSize: 16)),
+             Text(s.headInjuryIntro, style: TextStyle(fontSize: 16)),
             const Divider(height: 30),
-            const Text(
-              headInjuryStepsHeading,
+             Text(
+              s.headInjuryStepsHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildStep('1', headInjuryStep1Title, headInjuryStep1Desc),
-            _buildStep('2', headInjuryStep2Title, headInjuryStep2Desc),
-            _buildStep('3', headInjuryStep3Title),
-            _buildStep('4', headInjuryStep4Title),
-            _buildStep('5', headInjuryStep5Title),
+            _buildStep('1', s.headInjuryStep1Title, s.headInjuryStep1Desc),
+            _buildStep('2', s.headInjuryStep2Title, s.headInjuryStep2Desc),
+            _buildStep('3', s.headInjuryStep3Title),
+            _buildStep('4', s.headInjuryStep4Title),
+            _buildStep('5', s.headInjuryStep5Title),
             const Divider(height: 30),
-            const Text(
-              headInjuryNotesHeading,
+             Text(
+              s.headInjuryNotesHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildBullet(headInjuryNote1),
-            _buildBullet(headInjuryNote2),
+            _buildBullet(s.headInjuryNote1),
+            _buildBullet(s.headInjuryNote2),
           ],
         ),
       ),

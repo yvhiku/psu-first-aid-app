@@ -1,4 +1,4 @@
-import 'package:first_aid_app/src/constants/text_strings.dart';
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class AboutScreen extends StatelessWidget {
@@ -6,8 +6,8 @@ class AboutScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const baseStyle = TextStyle(fontFamily: 'Poppins', fontSize: 16);
-    const boldStyle = TextStyle(
+    final baseStyle = TextStyle(fontFamily: 'Poppins', fontSize: 16);
+    final boldStyle = TextStyle(
       fontFamily: 'Poppins',
       fontSize: 16,
       fontWeight: FontWeight.bold,
@@ -15,38 +15,38 @@ class AboutScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('About', style: TextStyle(fontFamily: 'Poppins')),
+        title: Text(S.of(context).tAboutUs, style: TextStyle(fontFamily: 'Poppins')),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView(
-          children: const [
+          children: [
             Text(
-              tAboutPGUFA,
+              S.of(context).taboutPGUFA,
               style: TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 16),
-            Text(taboutHeader, style: baseStyle),
-            SizedBox(height: 24),
-            Text(taboutHeader1, style: boldStyle),
-            SizedBox(height: 8),
-            Text(taboutparagraph, style: baseStyle),
-            SizedBox(height: 24),
-            Text(taboutHeader2, style: boldStyle),
-            SizedBox(height: 8),
-            Text(taboutparagraph2, style: baseStyle),
-            SizedBox(height: 24),
-            Text(taboutHeader3, style: boldStyle),
-            SizedBox(height: 8),
-            Text(taboutparagraph3, style: baseStyle),
-            SizedBox(height: 24),
-            Text(taboutHeader4, style: boldStyle),
-            SizedBox(height: 8),
-            Text(taboutparagraph4, style: baseStyle),
+            const SizedBox(height: 16),
+            Text(S.of(context).taboutHeader, style: baseStyle),
+            const SizedBox(height: 24),
+            Text(S.of(context).taboutHeader1, style: boldStyle),
+            const SizedBox(height: 8),
+            Text(S.of(context).taboutParagraph, style: baseStyle),
+            const SizedBox(height: 24),
+            Text(S.of(context).taboutHeader2, style: boldStyle),
+            const SizedBox(height: 8),
+            Text(S.of(context).taboutParagraph2, style: baseStyle),
+            const SizedBox(height: 24),
+            Text(S.of(context).taboutHeader3, style: boldStyle),
+            const SizedBox(height: 8),
+            Text(S.of(context).taboutParagraph3, style: baseStyle),
+            const SizedBox(height: 24),
+            Text(S.of(context).taboutHeader4, style: boldStyle),
+            const SizedBox(height: 8),
+            Text(S.of(context).taboutParagraph4, style: baseStyle),
           ],
         ),
       ),

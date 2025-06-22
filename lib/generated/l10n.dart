@@ -54,6 +54,26 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Home`
+  String get home {
+    return Intl.message('Home', name: 'home', desc: '', args: []);
+  }
+
+  /// `Topics`
+  String get topics {
+    return Intl.message('Topics', name: 'topics', desc: '', args: []);
+  }
+
+  /// `Saved`
+  String get saved {
+    return Intl.message('Saved', name: 'saved', desc: '', args: []);
+  }
+
+  /// `Profile`
+  String get profile {
+    return Intl.message('Profile', name: 'profile', desc: '', args: []);
+  }
+
   /// `Select Your Language`
   String get selectLanguage {
     return Intl.message(
@@ -432,11 +452,6 @@ class S {
       desc: '',
       args: [],
     );
-  }
-
-  /// `Asthma`
-  String get tAsthma {
-    return Intl.message('Asthma', name: 'tAsthma', desc: '', args: []);
   }
 
   /// `Diabetics`
@@ -2470,190 +2485,1225 @@ class S {
   }
 
   /// `Choking First Aid`
-  String get chokingTitle {
+  String get ChokingTitle {
     return Intl.message(
       'Choking First Aid',
-      name: 'chokingTitle',
+      name: 'ChokingTitle',
       desc: '',
       args: [],
     );
   }
 
   /// `Choking occurs when an object blocks the airway, preventing normal breathing.`
-  String get choking1 {
+  String get Choking1 {
     return Intl.message(
       'Choking occurs when an object blocks the airway, preventing normal breathing.',
-      name: 'choking1',
+      name: 'Choking1',
       desc: '',
       args: [],
     );
   }
 
-  /// `Signs of a Fracture:`
-  String get fracturesSignsHeading {
+  /// `Signs of Choking:`
+  String get tChoking2 {
     return Intl.message(
-      'Signs of a Fracture:',
-      name: 'fracturesSignsHeading',
+      'Signs of Choking:',
+      name: 'tChoking2',
       desc: '',
       args: [],
     );
   }
 
-  /// `- Pain and tenderness`
-  String get fracturesSign1 {
+  /// `- Difficulty breathing or noisy breathing`
+  String get tChoking3 {
     return Intl.message(
-      '- Pain and tenderness',
-      name: 'fracturesSign1',
+      '- Difficulty breathing or noisy breathing',
+      name: 'tChoking3',
       desc: '',
       args: [],
     );
   }
 
-  /// `- Swelling or bruising`
-  String get fracturesSign2 {
+  /// `- Inability to speak or cough effectively`
+  String get tChoking4 {
     return Intl.message(
-      '- Swelling or bruising',
-      name: 'fracturesSign2',
+      '- Inability to speak or cough effectively',
+      name: 'tChoking4',
       desc: '',
       args: [],
     );
   }
 
-  /// `- Deformity or unnatural positioning`
-  String get fracturesSign3 {
+  /// `- Clutching the throat (universal choking sign)`
+  String get tChoking5 {
     return Intl.message(
-      '- Deformity or unnatural positioning',
-      name: 'fracturesSign3',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `- Difficulty moving the limb`
-  String get fracturesSign4 {
-    return Intl.message(
-      '- Difficulty moving the limb',
-      name: 'fracturesSign4',
+      '- Clutching the throat (universal choking sign)',
+      name: 'tChoking5',
       desc: '',
       args: [],
     );
   }
 
   /// `First Aid Steps:`
-  String get fracturesStepsHeading {
+  String get tChoking6 {
     return Intl.message(
       'First Aid Steps:',
-      name: 'fracturesStepsHeading',
+      name: 'tChoking6',
       desc: '',
       args: [],
     );
   }
 
-  /// `Immobilize the Area`
-  String get fracturesStep1Title {
+  /// `Encourage Coughing`
+  String get tChoking7 {
     return Intl.message(
-      'Immobilize the Area',
-      name: 'fracturesStep1Title',
+      'Encourage Coughing',
+      name: 'tChoking7',
       desc: '',
       args: [],
     );
   }
 
-  /// `Keep the injured area still and avoid movement.`
-  String get fracturesStep1Desc {
+  /// `If the person can cough, encourage them to keep coughing to try to dislodge the object.`
+  String get tChoking8 {
     return Intl.message(
-      'Keep the injured area still and avoid movement.',
-      name: 'fracturesStep1Desc',
+      'If the person can cough, encourage them to keep coughing to try to dislodge the object.',
+      name: 'tChoking8',
       desc: '',
       args: [],
     );
   }
 
-  /// `Apply a Splint`
-  String get fracturesStep2Title {
+  /// `Perform Back Blows`
+  String get tChoking9 {
     return Intl.message(
-      'Apply a Splint',
-      name: 'fracturesStep2Title',
+      'Perform Back Blows',
+      name: 'tChoking9',
       desc: '',
       args: [],
     );
   }
 
-  /// `Use a padded splint to support the injury without forcing it into place.`
-  String get fracturesStep2Desc {
+  /// `If coughing is ineffective, lean the person forward and deliver 5 firm back blows between the shoulder blades with the heel of your hand.`
+  String get tChoking10 {
     return Intl.message(
-      'Use a padded splint to support the injury without forcing it into place.',
-      name: 'fracturesStep2Desc',
+      'If coughing is ineffective, lean the person forward and deliver 5 firm back blows between the shoulder blades with the heel of your hand.',
+      name: 'tChoking10',
       desc: '',
       args: [],
     );
   }
 
-  /// `Apply Cold Compress`
-  String get fracturesStep3Title {
+  /// `Perform Abdominal Thrusts`
+  String get tChoking11 {
     return Intl.message(
-      'Apply Cold Compress',
-      name: 'fracturesStep3Title',
+      'Perform Abdominal Thrusts',
+      name: 'tChoking11',
       desc: '',
       args: [],
     );
   }
 
-  /// `Reduce swelling with ice wrapped in cloth (avoid direct contact with skin).`
-  String get fracturesStep3Desc {
+  /// `If back blows do not clear the airway, perform 5 abdominal thrusts (Heimlich maneuver): stand behind, place a fist above the navel, grasp it with the other hand, and pull sharply inward and upward.`
+  String get tChoking12 {
     return Intl.message(
-      'Reduce swelling with ice wrapped in cloth (avoid direct contact with skin).',
-      name: 'fracturesStep3Desc',
+      'If back blows do not clear the airway, perform 5 abdominal thrusts (Heimlich maneuver): stand behind, place a fist above the navel, grasp it with the other hand, and pull sharply inward and upward.',
+      name: 'tChoking12',
       desc: '',
       args: [],
     );
   }
 
-  /// `Seek Medical Help`
-  String get fracturesStep4Title {
+  /// `Repeat as Necessary`
+  String get tChoking13 {
     return Intl.message(
-      'Seek Medical Help',
-      name: 'fracturesStep4Title',
+      'Repeat as Necessary',
+      name: 'tChoking13',
       desc: '',
       args: [],
     );
   }
 
-  /// `Call emergency services or take the person to hospital promptly.`
-  String get fracturesStep4Desc {
+  /// `Alternate between 5 back blows and 5 abdominal thrusts until the object is expelled or the person becomes unconscious.`
+  String get tChoking14 {
     return Intl.message(
-      'Call emergency services or take the person to hospital promptly.',
-      name: 'fracturesStep4Desc',
+      'Alternate between 5 back blows and 5 abdominal thrusts until the object is expelled or the person becomes unconscious.',
+      name: 'tChoking14',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call Emergency Services`
+  String get tChoking15 {
+    return Intl.message(
+      'Call Emergency Services',
+      name: 'tChoking15',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the person becomes unconscious or choking persists, call emergency services immediately and begin CPR if trained.`
+  String get tChoking16 {
+    return Intl.message(
+      'If the person becomes unconscious or choking persists, call emergency services immediately and begin CPR if trained.',
+      name: 'tChoking16',
       desc: '',
       args: [],
     );
   }
 
   /// `Important Notes:`
-  String get fracturesNotesHeading {
+  String get tChoking17 {
     return Intl.message(
       'Important Notes:',
-      name: 'fracturesNotesHeading',
+      name: 'tChoking17',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do not perform abdominal thrusts on infants under 1 year old—use appropriate infant choking techniques.`
+  String get tChoking18 {
+    return Intl.message(
+      'Do not perform abdominal thrusts on infants under 1 year old—use appropriate infant choking techniques.',
+      name: 'tChoking18',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If you are alone and choking, try to perform abdominal thrusts on yourself or call for help.`
+  String get tChoking19 {
+    return Intl.message(
+      'If you are alone and choking, try to perform abdominal thrusts on yourself or call for help.',
+      name: 'tChoking19',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `CPR Instructions`
+  String get cprTitle {
+    return Intl.message(
+      'CPR Instructions',
+      name: 'cprTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cardiopulmonary Resuscitation (CPR)`
+  String get cprHeading {
+    return Intl.message(
+      'Cardiopulmonary Resuscitation (CPR)',
+      name: 'cprHeading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Performing CPR can save a life when someone’s breathing or heartbeat has stopped.`
+  String get cprIntro {
+    return Intl.message(
+      'Performing CPR can save a life when someone’s breathing or heartbeat has stopped.',
+      name: 'cprIntro',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Steps to Perform CPR:`
+  String get cprStepsHeading {
+    return Intl.message(
+      'Steps to Perform CPR:',
+      name: 'cprStepsHeading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Check Responsiveness`
+  String get cprStep1Title {
+    return Intl.message(
+      'Check Responsiveness',
+      name: 'cprStep1Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tap the person’s shoulder and shout, 'Are you okay?'`
+  String get cprStep1Description {
+    return Intl.message(
+      'Tap the person’s shoulder and shout, \'Are you okay?\'',
+      name: 'cprStep1Description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call for Help`
+  String get cprStep2Title {
+    return Intl.message(
+      'Call for Help',
+      name: 'cprStep2Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If unresponsive, call emergency services (e.g., 112) or ask someone to call.`
+  String get cprStep2Description {
+    return Intl.message(
+      'If unresponsive, call emergency services (e.g., 112) or ask someone to call.',
+      name: 'cprStep2Description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Open the Airway`
+  String get cprStep3Title {
+    return Intl.message(
+      'Open the Airway',
+      name: 'cprStep3Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tilt the head back slightly and lift the chin to open the airway.`
+  String get cprStep3Description {
+    return Intl.message(
+      'Tilt the head back slightly and lift the chin to open the airway.',
+      name: 'cprStep3Description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Check for Breathing`
+  String get cprStep4Title {
+    return Intl.message(
+      'Check for Breathing',
+      name: 'cprStep4Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Look, listen, and feel for breathing (no more than 10 seconds).`
+  String get cprStep4Description {
+    return Intl.message(
+      'Look, listen, and feel for breathing (no more than 10 seconds).',
+      name: 'cprStep4Description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start Chest Compressions`
+  String get cprStep5Title {
+    return Intl.message(
+      'Start Chest Compressions',
+      name: 'cprStep5Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Place hands on the center of the chest. Push hard and fast (5cm deep at 100-120 compressions per minute).`
+  String get cprStep5Description {
+    return Intl.message(
+      'Place hands on the center of the chest. Push hard and fast (5cm deep at 100-120 compressions per minute).',
+      name: 'cprStep5Description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Give Rescue Breaths`
+  String get cprStep6Title {
+    return Intl.message(
+      'Give Rescue Breaths',
+      name: 'cprStep6Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `After 30 compressions, give 2 breaths (pinch the nose, cover the mouth with yours, and blow until the chest rises).`
+  String get cprStep6Description {
+    return Intl.message(
+      'After 30 compressions, give 2 breaths (pinch the nose, cover the mouth with yours, and blow until the chest rises).',
+      name: 'cprStep6Description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue CPR`
+  String get cprStep7Title {
+    return Intl.message(
+      'Continue CPR',
+      name: 'cprStep7Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Repeat cycles of 30 compressions and 2 breaths until help arrives or the person revives.`
+  String get cprStep7Description {
+    return Intl.message(
+      'Repeat cycles of 30 compressions and 2 breaths until help arrives or the person revives.',
+      name: 'cprStep7Description',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Important Notes:`
+  String get cprNotesHeading {
+    return Intl.message(
+      'Important Notes:',
+      name: 'cprNotesHeading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Use an AED if available.`
+  String get cprNote1 {
+    return Intl.message(
+      'Use an AED if available.',
+      name: 'cprNote1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `For infants, use 2 fingers for compressions.`
+  String get cprNote2 {
+    return Intl.message(
+      'For infants, use 2 fingers for compressions.',
+      name: 'cprNote2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do not stop unless the person starts breathing or help arrives.`
+  String get cprNote3 {
+    return Intl.message(
+      'Do not stop unless the person starts breathing or help arrives.',
+      name: 'cprNote3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Watch CPR Demonstration`
+  String get cprWatchDemoButton {
+    return Intl.message(
+      'Watch CPR Demonstration',
+      name: 'cprWatchDemoButton',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Added to saved topics`
+  String get addedToSavedTopics {
+    return Intl.message(
+      'Added to saved topics',
+      name: 'addedToSavedTopics',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diabetics`
+  String get diabeticsTitle {
+    return Intl.message(
+      'Diabetics',
+      name: 'diabeticsTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diabetics`
+  String get diabeticsAppBarTitle {
+    return Intl.message(
+      'Diabetics',
+      name: 'diabeticsAppBarTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diabetic Emergency First Aid`
+  String get diabeticsHeader {
+    return Intl.message(
+      'Diabetic Emergency First Aid',
+      name: 'diabeticsHeader',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Recognizing and managing diabetic emergencies such as hypoglycemia (low blood sugar) is critical.`
+  String get diabeticsIntro {
+    return Intl.message(
+      'Recognizing and managing diabetic emergencies such as hypoglycemia (low blood sugar) is critical.',
+      name: 'diabeticsIntro',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Signs of Low Blood Sugar (Hypoglycemia):`
+  String get diabeticsSignsTitle {
+    return Intl.message(
+      'Signs of Low Blood Sugar (Hypoglycemia):',
+      name: 'diabeticsSignsTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `- Shakiness, sweating, confusion, dizziness, irritability, headache`
+  String get diabeticsSignsList {
+    return Intl.message(
+      '- Shakiness, sweating, confusion, dizziness, irritability, headache',
+      name: 'diabeticsSignsList',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `First Aid Steps:`
+  String get diabeticsStepsTitle {
+    return Intl.message(
+      'First Aid Steps:',
+      name: 'diabeticsStepsTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Check Responsiveness`
+  String get diabeticsStep1Title {
+    return Intl.message(
+      'Check Responsiveness',
+      name: 'diabeticsStep1Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the person is conscious, ask if they have diabetes.`
+  String get diabeticsStep1Desc {
+    return Intl.message(
+      'If the person is conscious, ask if they have diabetes.',
+      name: 'diabeticsStep1Desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Give Sugar`
+  String get diabeticsStep2Title {
+    return Intl.message(
+      'Give Sugar',
+      name: 'diabeticsStep2Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Give 15-20 grams of fast-acting sugar (fruit juice, glucose tablets, candy).`
+  String get diabeticsStep2Desc {
+    return Intl.message(
+      'Give 15-20 grams of fast-acting sugar (fruit juice, glucose tablets, candy).',
+      name: 'diabeticsStep2Desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wait and Monitor`
+  String get diabeticsStep3Title {
+    return Intl.message(
+      'Wait and Monitor',
+      name: 'diabeticsStep3Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Wait 15 minutes, then recheck symptoms. Repeat sugar intake if needed.`
+  String get diabeticsStep3Desc {
+    return Intl.message(
+      'Wait 15 minutes, then recheck symptoms. Repeat sugar intake if needed.',
+      name: 'diabeticsStep3Desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call Emergency Services`
+  String get diabeticsStep4Title {
+    return Intl.message(
+      'Call Emergency Services',
+      name: 'diabeticsStep4Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the person loses consciousness, becomes confused, or symptoms worsen, call for help immediately.`
+  String get diabeticsStep4Desc {
+    return Intl.message(
+      'If the person loses consciousness, becomes confused, or symptoms worsen, call for help immediately.',
+      name: 'diabeticsStep4Desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Important Notes:`
+  String get diabeticsNotesTitle {
+    return Intl.message(
+      'Important Notes:',
+      name: 'diabeticsNotesTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do NOT give food or drink if the person is unconscious.`
+  String get diabeticsNote1 {
+    return Intl.message(
+      'Do NOT give food or drink if the person is unconscious.',
+      name: 'diabeticsNote1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If unconscious, place in recovery position and call emergency services.`
+  String get diabeticsNote2 {
+    return Intl.message(
+      'If unconscious, place in recovery position and call emergency services.',
+      name: 'diabeticsNote2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Drug Overdose`
+  String get drugOverdoseTitle {
+    return Intl.message(
+      'Drug Overdose',
+      name: 'drugOverdoseTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Drug Overdose First Aid`
+  String get drugOverdoseMainHeading {
+    return Intl.message(
+      'Drug Overdose First Aid',
+      name: 'drugOverdoseMainHeading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Recognize the signs of overdose and provide immediate help.`
+  String get drugOverdoseIntro {
+    return Intl.message(
+      'Recognize the signs of overdose and provide immediate help.',
+      name: 'drugOverdoseIntro',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Signs of Drug Overdose:`
+  String get drugOverdoseSignsHeading {
+    return Intl.message(
+      'Signs of Drug Overdose:',
+      name: 'drugOverdoseSignsHeading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `- Unresponsiveness or unconsciousness`
+  String get drugOverdoseSigns1 {
+    return Intl.message(
+      '- Unresponsiveness or unconsciousness',
+      name: 'drugOverdoseSigns1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `- Difficulty breathing or slow breathing`
+  String get drugOverdoseSigns2 {
+    return Intl.message(
+      '- Difficulty breathing or slow breathing',
+      name: 'drugOverdoseSigns2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `- Seizures or convulsions`
+  String get drugOverdoseSigns3 {
+    return Intl.message(
+      '- Seizures or convulsions',
+      name: 'drugOverdoseSigns3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `- Vomiting, pale or clammy skin`
+  String get drugOverdoseSigns4 {
+    return Intl.message(
+      '- Vomiting, pale or clammy skin',
+      name: 'drugOverdoseSigns4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `First Aid Steps:`
+  String get drugOverdoseStepsHeading {
+    return Intl.message(
+      'First Aid Steps:',
+      name: 'drugOverdoseStepsHeading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call Emergency Services`
+  String get drugOverdoseStep1Title {
+    return Intl.message(
+      'Call Emergency Services',
+      name: 'drugOverdoseStep1Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Immediately call for professional medical help.`
+  String get drugOverdoseStep1Desc {
+    return Intl.message(
+      'Immediately call for professional medical help.',
+      name: 'drugOverdoseStep1Desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ensure Safety`
+  String get drugOverdoseStep2Title {
+    return Intl.message(
+      'Ensure Safety',
+      name: 'drugOverdoseStep2Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Make sure the person and yourself are safe from harm.`
+  String get drugOverdoseStep2Desc {
+    return Intl.message(
+      'Make sure the person and yourself are safe from harm.',
+      name: 'drugOverdoseStep2Desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Check Responsiveness and Breathing`
+  String get drugOverdoseStep3Title {
+    return Intl.message(
+      'Check Responsiveness and Breathing',
+      name: 'drugOverdoseStep3Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If unresponsive, check if they are breathing.`
+  String get drugOverdoseStep3Desc {
+    return Intl.message(
+      'If unresponsive, check if they are breathing.',
+      name: 'drugOverdoseStep3Desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Perform CPR if Needed`
+  String get drugOverdoseStep4Title {
+    return Intl.message(
+      'Perform CPR if Needed',
+      name: 'drugOverdoseStep4Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If no breathing or pulse, start CPR until help arrives.`
+  String get drugOverdoseStep4Desc {
+    return Intl.message(
+      'If no breathing or pulse, start CPR until help arrives.',
+      name: 'drugOverdoseStep4Desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Place in Recovery Position`
+  String get drugOverdoseStep5Title {
+    return Intl.message(
+      'Place in Recovery Position',
+      name: 'drugOverdoseStep5Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If breathing but unconscious, place on their side to keep airway clear.`
+  String get drugOverdoseStep5Desc {
+    return Intl.message(
+      'If breathing but unconscious, place on their side to keep airway clear.',
+      name: 'drugOverdoseStep5Desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Important Notes:`
+  String get drugOverdoseImportantNotes {
+    return Intl.message(
+      'Important Notes:',
+      name: 'drugOverdoseImportantNotes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do NOT induce vomiting unless instructed by a medical professional.`
+  String get drugOverdoseNote1 {
+    return Intl.message(
+      'Do NOT induce vomiting unless instructed by a medical professional.',
+      name: 'drugOverdoseNote1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Try to identify the substance involved to inform emergency responders.`
+  String get drugOverdoseNote2 {
+    return Intl.message(
+      'Try to identify the substance involved to inform emergency responders.',
+      name: 'drugOverdoseNote2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Eye Injury`
+  String get eyeInjuryTitle {
+    return Intl.message(
+      'Eye Injury',
+      name: 'eyeInjuryTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Eye Injury First Aid`
+  String get eyeInjuryHeading {
+    return Intl.message(
+      'Eye Injury First Aid',
+      name: 'eyeInjuryHeading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Proper first aid for eye injuries can prevent further damage.`
+  String get eyeInjuryIntro {
+    return Intl.message(
+      'Proper first aid for eye injuries can prevent further damage.',
+      name: 'eyeInjuryIntro',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Types of Eye Injuries:`
+  String get eyeInjuryTypesHeading {
+    return Intl.message(
+      'Types of Eye Injuries:',
+      name: 'eyeInjuryTypesHeading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `- Foreign objects in the eye`
+  String get eyeInjuryType1 {
+    return Intl.message(
+      '- Foreign objects in the eye',
+      name: 'eyeInjuryType1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `- Chemical splashes`
+  String get eyeInjuryType2 {
+    return Intl.message(
+      '- Chemical splashes',
+      name: 'eyeInjuryType2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `- Cuts or punctures`
+  String get eyeInjuryType3 {
+    return Intl.message(
+      '- Cuts or punctures',
+      name: 'eyeInjuryType3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `First Aid Steps:`
+  String get eyeInjuryStepsHeading {
+    return Intl.message(
+      'First Aid Steps:',
+      name: 'eyeInjuryStepsHeading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do NOT Rub the Eye`
+  String get eyeInjuryStep1Title {
+    return Intl.message(
+      'Do NOT Rub the Eye',
+      name: 'eyeInjuryStep1Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rubbing can cause further damage.`
+  String get eyeInjuryStep1Desc {
+    return Intl.message(
+      'Rubbing can cause further damage.',
+      name: 'eyeInjuryStep1Desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Flush with Clean Water`
+  String get eyeInjuryStep2Title {
+    return Intl.message(
+      'Flush with Clean Water',
+      name: 'eyeInjuryStep2Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If chemicals or foreign particles are present, rinse eye gently with water for at least 15 minutes.`
+  String get eyeInjuryStep2Desc {
+    return Intl.message(
+      'If chemicals or foreign particles are present, rinse eye gently with water for at least 15 minutes.',
+      name: 'eyeInjuryStep2Desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cover the Eye`
+  String get eyeInjuryStep3Title {
+    return Intl.message(
+      'Cover the Eye',
+      name: 'eyeInjuryStep3Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Use a clean cloth or eye shield to protect the injured eye without applying pressure.`
+  String get eyeInjuryStep3Desc {
+    return Intl.message(
+      'Use a clean cloth or eye shield to protect the injured eye without applying pressure.',
+      name: 'eyeInjuryStep3Desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Seek Medical Attention`
+  String get eyeInjuryStep4Title {
+    return Intl.message(
+      'Seek Medical Attention',
+      name: 'eyeInjuryStep4Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `For serious injuries or if pain persists, go to emergency care immediately.`
+  String get eyeInjuryStep4Desc {
+    return Intl.message(
+      'For serious injuries or if pain persists, go to emergency care immediately.',
+      name: 'eyeInjuryStep4Desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Important Notes:`
+  String get eyeInjuryNotesHeading {
+    return Intl.message(
+      'Important Notes:',
+      name: 'eyeInjuryNotesHeading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do not try to remove embedded objects.`
+  String get eyeInjuryNote1 {
+    return Intl.message(
+      'Do not try to remove embedded objects.',
+      name: 'eyeInjuryNote1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Avoid using any medication or ointment unless prescribed.`
+  String get eyeInjuryNote2 {
+    return Intl.message(
+      'Avoid using any medication or ointment unless prescribed.',
+      name: 'eyeInjuryNote2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fractures`
+  String get title {
+    return Intl.message('Fractures', name: 'title', desc: '', args: []);
+  }
+
+  /// `Fractures First Aid`
+  String get heading {
+    return Intl.message(
+      'Fractures First Aid',
+      name: 'heading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A fracture is a broken bone. Proper first aid can prevent complications.`
+  String get intro {
+    return Intl.message(
+      'A fracture is a broken bone. Proper first aid can prevent complications.',
+      name: 'intro',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Signs of a Fracture:`
+  String get signsHeading {
+    return Intl.message(
+      'Signs of a Fracture:',
+      name: 'signsHeading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `- Pain and tenderness`
+  String get sign1 {
+    return Intl.message(
+      '- Pain and tenderness',
+      name: 'sign1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `- Swelling or bruising`
+  String get sign2 {
+    return Intl.message(
+      '- Swelling or bruising',
+      name: 'sign2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `- Deformity or unnatural positioning`
+  String get sign3 {
+    return Intl.message(
+      '- Deformity or unnatural positioning',
+      name: 'sign3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `- Difficulty moving the limb`
+  String get sign4 {
+    return Intl.message(
+      '- Difficulty moving the limb',
+      name: 'sign4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `First Aid Steps:`
+  String get stepsHeading {
+    return Intl.message(
+      'First Aid Steps:',
+      name: 'stepsHeading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Immobilize the Area`
+  String get step1Title {
+    return Intl.message(
+      'Immobilize the Area',
+      name: 'step1Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keep the injured area still and avoid movement.`
+  String get step1Desc {
+    return Intl.message(
+      'Keep the injured area still and avoid movement.',
+      name: 'step1Desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Apply a Splint`
+  String get step2Title {
+    return Intl.message(
+      'Apply a Splint',
+      name: 'step2Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Use a padded splint to support the injury without forcing it into place.`
+  String get step2Desc {
+    return Intl.message(
+      'Use a padded splint to support the injury without forcing it into place.',
+      name: 'step2Desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Apply Cold Compress`
+  String get step3Title {
+    return Intl.message(
+      'Apply Cold Compress',
+      name: 'step3Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Reduce swelling with ice wrapped in cloth (avoid direct contact with skin).`
+  String get step3Desc {
+    return Intl.message(
+      'Reduce swelling with ice wrapped in cloth (avoid direct contact with skin).',
+      name: 'step3Desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Seek Medical Help`
+  String get step4Title {
+    return Intl.message(
+      'Seek Medical Help',
+      name: 'step4Title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call emergency services or take the person to hospital promptly.`
+  String get step4Desc {
+    return Intl.message(
+      'Call emergency services or take the person to hospital promptly.',
+      name: 'step4Desc',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Important Notes:`
+  String get notesHeading {
+    return Intl.message(
+      'Important Notes:',
+      name: 'notesHeading',
       desc: '',
       args: [],
     );
   }
 
   /// `Do NOT try to realign the bone or push it back in place.`
-  String get fracturesNote1 {
+  String get note1 {
     return Intl.message(
       'Do NOT try to realign the bone or push it back in place.',
-      name: 'fracturesNote1',
+      name: 'note1',
       desc: '',
       args: [],
     );
   }
 
   /// `If bleeding, apply pressure around the wound (not directly on the bone).`
-  String get fracturesNote2 {
+  String get note2 {
     return Intl.message(
       'If bleeding, apply pressure around the wound (not directly on the bone).',
-      name: 'fracturesNote2',
+      name: 'note2',
       desc: '',
       args: [],
     );

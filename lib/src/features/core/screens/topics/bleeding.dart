@@ -1,5 +1,5 @@
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,10 +9,11 @@ class Bleeding extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = S.of(context);
     final TopicController topicController = Get.find();
 
     final currentTopic = {
-      'title': tBleeding,
+      'title': s.bleeding,
       'image': tWoundimg,
       'screen': const Bleeding(),
       'type': 'Bleeding',
@@ -20,7 +21,7 @@ class Bleeding extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(tBleeding),
+        title:  Text(s.bleeding),
         actions: [
           Obx(
             () => IconButton(
@@ -38,8 +39,8 @@ class Bleeding extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? taddedtosaved
-                          : tremovedtopic,
+                          ? s.addedToSavedTopicsText
+                          : s.tremovedTopic,
                     ),
                   ),
                 );
@@ -55,8 +56,8 @@ class Bleeding extends StatelessWidget {
           children: [
             Image.asset(tWoundimg, fit: BoxFit.cover),
             const SizedBox(height: 20),
-            const Text(
-              tBleedingTitle,
+             Text(
+              s.bleedingTitle,
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
@@ -64,25 +65,25 @@ class Bleeding extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(tBleeding1, style: TextStyle(fontSize: 16)),
+             Text(s.bleeding1, style: TextStyle(fontSize: 16)),
             const Divider(height: 30),
-            const Text(
-              tBleeding2,
+             Text(
+              s.bleeding2,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
-            _buildStep('1', tBleeding3, tBleeding4),
-            _buildStep('2', tBleeding5, tBleeding6),
-            _buildStep('3', tBleeding7, tBleeding8),
-            _buildStep('4', tBleeding9, tBleeding10),
-            _buildStep('5', tBleeding11, tBleeding12),
+            _buildStep('1', s.bleeding3, s.bleeding4),
+            _buildStep('2', s.bleeding5, s.bleeding6),
+            _buildStep('3', s.bleeding7, s.bleeding8),
+            _buildStep('4', s.bleeding9, s.bleeding10),
+            _buildStep('5', s.bleeding11, s.bleeding12),
             const Divider(height: 30),
-            const Text(
-              tBleeding13,
+             Text(
+              s.bleeding13,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
-            _buildBulletPoint(tBleeding14),
-            _buildBulletPoint(tBleeding15),
-            _buildBulletPoint(tBleeding16),
+            _buildBulletPoint(s.bleeding14),
+            _buildBulletPoint(s.bleeding15),
+            _buildBulletPoint(s.bleeding16),
           ],
         ),
       ),

@@ -1,5 +1,5 @@
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,16 +9,17 @@ class Seizures extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = S.of(context);
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': seizuresTitle,
+      'title': s.seizuresTitle,
       'image': tSeizureimg,
       'screen': const Seizures(),
     };
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(seizuresTitle),
+        title:  Text(s.seizuresTitle),
         actions: [
           Obx(
             () => IconButton(
@@ -36,8 +37,8 @@ class Seizures extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? addedToSavedTopicsText
-                          : removedFromSavedTopicsText,
+                          ? s.addedToSavedTopicsText
+                          : s.tremovedTopic
                     ),
                   ),
                 );
@@ -53,32 +54,32 @@ class Seizures extends StatelessWidget {
           children: [
             Image.asset(tSeizureimg, fit: BoxFit.cover),
             const SizedBox(height: 16),
-            const Text(
-              seizuresHeading,
+             Text(
+              s.seizuresHeading,
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            const Text(seizuresIntro, style: TextStyle(fontSize: 16)),
+             Text(s.seizuresIntro, style: TextStyle(fontSize: 16)),
             const SizedBox(height: 20),
-            const Text(
-              seizuresFirstAidHeading,
+             Text(
+              s.seizuresFirstAidHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            _buildStep('1', seizuresStep1),
-            _buildStep('2', seizuresStep2),
-            _buildStep('3', seizuresStep3),
-            _buildStep('4', seizuresStep4),
-            _buildStep('5', seizuresStep5),
-            _buildStep('6', seizuresStep6),
+            _buildStep('1', s.seizuresStep1),
+            _buildStep('2', s.seizuresStep2),
+            _buildStep('3', s.seizuresStep3),
+            _buildStep('4', s.seizuresStep4),
+            _buildStep('5', s.seizuresStep5),
+            _buildStep('6', s.seizuresStep6),
             const SizedBox(height: 20),
-            const Text(
-              seizuresImportantHeading,
+             Text(
+              s.seizuresImportantHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
-            _buildBullet(seizuresNote1),
-            _buildBullet(seizuresNote2),
+            _buildBullet(s.seizuresNote1),
+            _buildBullet(s.seizuresNote2),
           ],
         ),
       ),

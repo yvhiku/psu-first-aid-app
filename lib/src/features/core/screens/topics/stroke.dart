@@ -1,5 +1,5 @@
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,16 +9,17 @@ class StrokeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = S.of(context);
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': strokeTitle,
+      'title': s.strokeTitle,
       'image': tStrotkeimg,
       'screen': const StrokeScreen(),
     };
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(strokeTitle),
+        title:  Text(s.strokeTitle),
         actions: [
           Obx(
             () => IconButton(
@@ -36,8 +37,8 @@ class StrokeScreen extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? addedToSavedTopicsText
-                          : removedFromSavedTopicsText,
+                          ? s.addedToSavedTopicsText
+                          : s.tremovedTopic
                     ),
                   ),
                 );
@@ -53,34 +54,34 @@ class StrokeScreen extends StatelessWidget {
           children: [
             Image.asset(tStrotkeimg, fit: BoxFit.cover),
             const SizedBox(height: 16),
-            const Text(
-              strokeTitle,
+             Text(
+              s.strokeTitle,
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            const Text(strokeIntro, style: TextStyle(fontSize: 16)),
+             Text(s.strokeIntro, style: TextStyle(fontSize: 16)),
             const SizedBox(height: 20),
-            const Text(
-              strokeSignsHeading,
+             Text(
+              s.strokeSignsHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            _buildBullet(strokeSign1),
-            _buildBullet(strokeSign2),
-            _buildBullet(strokeSign3),
-            _buildBullet(strokeSign4),
-            _buildBullet(strokeSign5),
+            _buildBullet(s.strokeSign1),
+            _buildBullet(s.strokeSign2),
+            _buildBullet(s.strokeSign3),
+            _buildBullet(s.strokeSign4),
+            _buildBullet(s.strokeSign5),
             const SizedBox(height: 20),
-            const Text(
-              strokeFirstAidHeading,
+             Text(
+              s.strokeFirstAidHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            _buildStep('1', strokeStep1),
-            _buildStep('2', strokeStep2),
-            _buildStep('3', strokeStep3),
-            _buildStep('4', strokeStep4),
-            _buildStep('5', strokeStep5),
+            _buildStep('1', s.strokeStep1),
+            _buildStep('2', s.strokeStep2),
+            _buildStep('3', s.strokeStep3),
+            _buildStep('4', s.strokeStep4),
+            _buildStep('5', s.strokeStep5),
           ],
         ),
       ),

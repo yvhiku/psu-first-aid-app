@@ -1,6 +1,6 @@
 import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:first_aid_app/src/features/core/controllers/widgets/navbar.dart';
 import 'package:flutter/material.dart';
@@ -32,17 +32,17 @@ class SavedScreen extends StatelessWidget {
                 final confirmed = await showDialog(
                   context: context,
                   builder: (context) => AlertDialog(
-                    title: const Text(tCONFIRM),
-                    content: const Text(tClearAllTopics),
+                    title: Text(S.of(context).tconfirm),
+                    content: Text(S.of(context).tclearAllTopics),
                     actions: [
                       TextButton(
                         onPressed: () => Navigator.pop(context, false),
-                        child: const Text(tCancel),
+                        child: Text(S.of(context).tcancel),
                       ),
                       TextButton(
                         onPressed: () => Navigator.pop(context, true),
-                        child: const Text(
-                          tclear,
+                        child: Text(
+                          S.of(context).tclear,
                           style: TextStyle(color: Colors.red),
                         ),
                       ),
@@ -52,13 +52,13 @@ class SavedScreen extends StatelessWidget {
                 if (confirmed == true) {
                   await topicController.clearAllTopics();
                   ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text(talltopicscleared)),
+                    SnackBar(content: Text(S.of(context).tallTopicsCleared)),
                   );
                 }
               }
             },
             itemBuilder: (context) => [
-              const PopupMenuItem(value: 'clear_all', child: Text(tclearall)),
+              PopupMenuItem(value: 'clear_all', child: Text(S.of(context).tclearAll)),
             ],
           ),
         ],
@@ -71,18 +71,17 @@ class SavedScreen extends StatelessWidget {
               children: [
                 Image.asset(tNoSavedTopicsImg, height: 150),
                 const SizedBox(height: 20),
-                const Text(
-                  tnosavedtopicyet,
+                Text(
+                  S.of(context).tnoSavedTopicYet,
                   style: TextStyle(fontSize: 18, color: Colors.grey),
                 ),
                 const SizedBox(height: 10),
                 TextButton(
                   onPressed: () {
-                    navigationController.selectedIndex.value =
-                        1; // Navigate to topics
+                    navigationController.selectedIndex.value = 1;
                   },
-                  child: const Text(
-                    tbrowstopics,
+                  child: Text(
+                    S.of(context).tbrowseTopics,
                     style: TextStyle(color: tPrimaryColor, fontSize: 16),
                   ),
                 ),
@@ -96,8 +95,8 @@ class SavedScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16),
               child: Text(
-                '${topicController.savedTopics.length} Saved Topics',
-                style: const TextStyle(
+                '${topicController.savedTopics.length} ${S.of(context).tsavedTopics}',
+                style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
                   color: Colors.grey,
@@ -122,17 +121,17 @@ class SavedScreen extends StatelessWidget {
                       return await showDialog(
                         context: context,
                         builder: (context) => AlertDialog(
-                          title: const Text(tCONFIRM),
-                          content: const Text(tremovethistopic),
+                          title: Text(S.of(context).tconfirm),
+                          content: Text(S.of(context).tremoveThisTopic),
                           actions: [
                             TextButton(
                               onPressed: () => Navigator.pop(context, false),
-                              child: const Text(tCancel),
+                              child: Text(S.of(context).tcancel),
                             ),
                             TextButton(
                               onPressed: () => Navigator.pop(context, true),
-                              child: const Text(
-                                tremove,
+                              child: Text(
+                                S.of(context).tremove,
                                 style: TextStyle(color: Colors.red),
                               ),
                             ),
@@ -172,7 +171,7 @@ class SavedScreen extends StatelessWidget {
                         ),
                         title: Text(
                           topic['title'],
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 16,
                           ),

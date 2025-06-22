@@ -1,5 +1,5 @@
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,16 +9,17 @@ class DiabeticsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = S.of(context);
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': diabeticsTitle,
+      'title': s.diabeticsTitle,
       'image': tDiabeticsimg,
       'screen': const DiabeticsScreen(),
     };
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(diabeticsAppBarTitle),
+        title:  Text(s.diabeticsAppBarTitle),
         actions: [
           Obx(
             () => IconButton(
@@ -36,8 +37,8 @@ class DiabeticsScreen extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? 'Added to saved topics'
-                          : 'Removed from saved topics',
+                          ? s.addedToSavedTopicsText
+                          : s.tremovedTopic
                     ),
                   ),
                 );
@@ -53,8 +54,8 @@ class DiabeticsScreen extends StatelessWidget {
           children: [
             Image.asset(tDiabeticsimg, fit: BoxFit.cover),
             const SizedBox(height: 20),
-            const Text(
-              diabeticsHeader,
+             Text(
+              s.diabeticsHeader,
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
@@ -62,48 +63,48 @@ class DiabeticsScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(diabeticsIntro, style: TextStyle(fontSize: 16)),
+             Text(s.diabeticsIntro, style: TextStyle(fontSize: 16)),
             const Divider(height: 30),
-            const Text(
-              diabeticsSignsTitle,
+             Text(
+              s.diabeticsSignsTitle,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            const Text(diabeticsSignsList),
+             Text(s.diabeticsSignsList),
             const Divider(height: 30),
-            const Text(
-              diabeticsStepsTitle,
+             Text(
+              s.diabeticsStepsTitle,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
             _buildStep(
               number: '1',
-              title: diabeticsStep1Title,
-              description: diabeticsStep1Desc,
+              title: s.diabeticsStep1Title,
+              description: s.diabeticsStep1Desc,
             ),
             _buildStep(
               number: '2',
-              title: diabeticsStep2Title,
-              description: diabeticsStep2Desc,
+              title: s.diabeticsStep2Title,
+              description: s.diabeticsStep2Desc,
             ),
             _buildStep(
               number: '3',
-              title: diabeticsStep3Title,
-              description: diabeticsStep3Desc,
+              title: s.diabeticsStep3Title,
+              description: s.diabeticsStep3Desc,
             ),
             _buildStep(
               number: '4',
-              title: diabeticsStep4Title,
-              description: diabeticsStep4Desc,
+              title: s.diabeticsStep4Title,
+              description: s.diabeticsStep4Desc,
             ),
             const Divider(height: 30),
-            const Text(
-              diabeticsNotesTitle,
+             Text(
+              s.diabeticsNotesTitle,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildBulletPoint(diabeticsNote1),
-            _buildBulletPoint(diabeticsNote2),
+            _buildBulletPoint(s.diabeticsNote1),
+            _buildBulletPoint(s.diabeticsNote2),
           ],
         ),
       ),

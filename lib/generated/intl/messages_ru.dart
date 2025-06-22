@@ -22,6 +22,15 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "Choking1": MessageLookupByLibrary.simpleMessage(
+      "Удушье происходит, когда предмет блокирует дыхательные пути, препятствуя нормальному дыханию.",
+    ),
+    "ChokingTitle": MessageLookupByLibrary.simpleMessage(
+      "Первая помощь при удушье",
+    ),
+    "addedToSavedTopics": MessageLookupByLibrary.simpleMessage(
+      "Добавлено в сохраненные темы",
+    ),
     "addedToSavedTopicsText": MessageLookupByLibrary.simpleMessage(
       "Добавлено в сохраненные темы",
     ),
@@ -206,61 +215,227 @@ class MessageLookup extends MessageLookupByLibrary {
     "burnsTitle": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при ожогах",
     ),
-    "choking1": MessageLookupByLibrary.simpleMessage(
-      "Удушье происходит, когда предмет блокирует дыхательные пути, препятствуя нормальному дыханию.",
+    "cprHeading": MessageLookupByLibrary.simpleMessage(
+      "Сердечно-легочная реанимация (СЛР)",
     ),
-    "chokingTitle": MessageLookupByLibrary.simpleMessage(
-      "Первая помощь при удушье",
+    "cprIntro": MessageLookupByLibrary.simpleMessage(
+      "Проведение СЛР может спасти жизнь, если у человека остановилось дыхание или сердцебиение.",
     ),
-    "continueText": MessageLookupByLibrary.simpleMessage("Продолжить"),
-    "fracturesNote1": MessageLookupByLibrary.simpleMessage(
-      "НЕ пытайтесь вправить кость или вернуть ее на место.",
+    "cprNote1": MessageLookupByLibrary.simpleMessage(
+      "Используйте AED (дефибриллятор), если доступен.",
     ),
-    "fracturesNote2": MessageLookupByLibrary.simpleMessage(
-      "Если есть кровотечение, надавите вокруг раны (не прямо на кость).",
+    "cprNote2": MessageLookupByLibrary.simpleMessage(
+      "Для младенцев используйте 2 пальца для компрессий.",
     ),
-    "fracturesNotesHeading": MessageLookupByLibrary.simpleMessage(
+    "cprNote3": MessageLookupByLibrary.simpleMessage(
+      "Не останавливайтесь, если человек не начнет дышать или не прибудет помощь.",
+    ),
+    "cprNotesHeading": MessageLookupByLibrary.simpleMessage(
       "Важные примечания:",
     ),
-    "fracturesSign1": MessageLookupByLibrary.simpleMessage(
-      "- Боль и болезненность",
+    "cprStep1Description": MessageLookupByLibrary.simpleMessage(
+      "Похлопайте по плечу и громко спросите: \'Вы в порядке?\'",
     ),
-    "fracturesSign2": MessageLookupByLibrary.simpleMessage("- Отек или синяк"),
-    "fracturesSign3": MessageLookupByLibrary.simpleMessage(
-      "- Деформация или неестественное положение",
+    "cprStep1Title": MessageLookupByLibrary.simpleMessage("Проверьте реакцию"),
+    "cprStep2Description": MessageLookupByLibrary.simpleMessage(
+      "Если нет реакции, вызовите скорую (например, 112) или попросите кого-то позвонить.",
     ),
-    "fracturesSign4": MessageLookupByLibrary.simpleMessage(
-      "- Трудности с движением конечности",
+    "cprStep2Title": MessageLookupByLibrary.simpleMessage("Позовите на помощь"),
+    "cprStep3Description": MessageLookupByLibrary.simpleMessage(
+      "Запрокиньте голову немного назад и приподнимите подбородок.",
     ),
-    "fracturesSignsHeading": MessageLookupByLibrary.simpleMessage(
-      "Признаки перелома:",
+    "cprStep3Title": MessageLookupByLibrary.simpleMessage(
+      "Откройте дыхательные пути",
     ),
-    "fracturesStep1Desc": MessageLookupByLibrary.simpleMessage(
-      "Держите поврежденную область неподвижной и избегайте движений.",
+    "cprStep4Description": MessageLookupByLibrary.simpleMessage(
+      "Смотрите, слушайте и чувствуйте дыхание (не более 10 секунд).",
     ),
-    "fracturesStep1Title": MessageLookupByLibrary.simpleMessage(
-      "Обездвижьте область",
+    "cprStep4Title": MessageLookupByLibrary.simpleMessage("Проверьте дыхание"),
+    "cprStep5Description": MessageLookupByLibrary.simpleMessage(
+      "Положите руки на центр груди. Давите сильно и быстро (5 см глубиной, 100-120 компрессий в минуту).",
     ),
-    "fracturesStep2Desc": MessageLookupByLibrary.simpleMessage(
-      "Используйте мягкую шину для поддержки травмы, не пытаясь вправить кость.",
+    "cprStep5Title": MessageLookupByLibrary.simpleMessage(
+      "Начните компрессии грудной клетки",
     ),
-    "fracturesStep2Title": MessageLookupByLibrary.simpleMessage(
-      "Наложите шину",
+    "cprStep6Description": MessageLookupByLibrary.simpleMessage(
+      "После 30 компрессий сделайте 2 вдоха (зажмите нос, накройте рот своим и дуйте, пока грудь не поднимется).",
     ),
-    "fracturesStep3Desc": MessageLookupByLibrary.simpleMessage(
-      "Уменьшите отек с помощью льда, завернутого в ткань (избегайте прямого контакта с кожей).",
+    "cprStep6Title": MessageLookupByLibrary.simpleMessage(
+      "Сделайте искусственное дыхание",
     ),
-    "fracturesStep3Title": MessageLookupByLibrary.simpleMessage(
-      "Приложите холодный компресс",
+    "cprStep7Description": MessageLookupByLibrary.simpleMessage(
+      "Повторяйте циклы из 30 компрессий и 2 вдохов, пока не прибудет помощь или человек не очнется.",
     ),
-    "fracturesStep4Desc": MessageLookupByLibrary.simpleMessage(
-      "Вызовите скорую помощь или доставьте человека в больницу немедленно.",
+    "cprStep7Title": MessageLookupByLibrary.simpleMessage("Продолжайте СЛР"),
+    "cprStepsHeading": MessageLookupByLibrary.simpleMessage(
+      "Шаги проведения СЛР:",
     ),
-    "fracturesStep4Title": MessageLookupByLibrary.simpleMessage(
-      "Обратитесь за медицинской помощью",
+    "cprTitle": MessageLookupByLibrary.simpleMessage("Инструкция по СЛР"),
+    "cprWatchDemoButton": MessageLookupByLibrary.simpleMessage(
+      "Посмотреть демонстрацию СЛР",
     ),
-    "fracturesStepsHeading": MessageLookupByLibrary.simpleMessage(
-      "Шаги первой помощи:",
+    "diabeticsAppBarTitle": MessageLookupByLibrary.simpleMessage("Диабет"),
+    "diabeticsHeader": MessageLookupByLibrary.simpleMessage(
+      "Первая помощь при диабетических осложнениях",
+    ),
+    "diabeticsIntro": MessageLookupByLibrary.simpleMessage(
+      "Распознавание и лечение диабетических осложнений, таких как гипогликемия (низкий уровень сахара в крови), крайне важно.",
+    ),
+    "diabeticsNote1": MessageLookupByLibrary.simpleMessage(
+      "Не давайте еду или питье, если человек без сознания.",
+    ),
+    "diabeticsNote2": MessageLookupByLibrary.simpleMessage(
+      "Если без сознания, положите в восстановительное положение и вызовите скорую.",
+    ),
+    "diabeticsNotesTitle": MessageLookupByLibrary.simpleMessage("Важно:"),
+    "diabeticsSignsList": MessageLookupByLibrary.simpleMessage(
+      "- Дрожь, потливость, спутанность сознания, головокружение, раздражительность, головная боль",
+    ),
+    "diabeticsSignsTitle": MessageLookupByLibrary.simpleMessage(
+      "Признаки гипогликемии:",
+    ),
+    "diabeticsStep1Desc": MessageLookupByLibrary.simpleMessage(
+      "Если человек в сознании, спросите, есть ли у него диабет.",
+    ),
+    "diabeticsStep1Title": MessageLookupByLibrary.simpleMessage(
+      "Проверьте реакцию",
+    ),
+    "diabeticsStep2Desc": MessageLookupByLibrary.simpleMessage(
+      "Дайте 15-20 граммов быстрых углеводов (фруктовый сок, таблетки глюкозы, конфеты).",
+    ),
+    "diabeticsStep2Title": MessageLookupByLibrary.simpleMessage("Дайте сахар"),
+    "diabeticsStep3Desc": MessageLookupByLibrary.simpleMessage(
+      "Подождите 15 минут, затем проверьте симптомы. Повторите прием сахара, если необходимо.",
+    ),
+    "diabeticsStep3Title": MessageLookupByLibrary.simpleMessage(
+      "Подождите и наблюдайте",
+    ),
+    "diabeticsStep4Desc": MessageLookupByLibrary.simpleMessage(
+      "Если человек теряет сознание, становится дезориентированным или симптомы ухудшаются, немедленно вызовите помощь.",
+    ),
+    "diabeticsStep4Title": MessageLookupByLibrary.simpleMessage(
+      "Вызовите скорую",
+    ),
+    "diabeticsStepsTitle": MessageLookupByLibrary.simpleMessage(
+      "Первая помощь:",
+    ),
+    "diabeticsTitle": MessageLookupByLibrary.simpleMessage("Диабет"),
+    "drugOverdoseImportantNotes": MessageLookupByLibrary.simpleMessage(
+      "Важно:",
+    ),
+    "drugOverdoseIntro": MessageLookupByLibrary.simpleMessage(
+      "Распознавание признаков передозировки и оказание немедленной помощи.",
+    ),
+    "drugOverdoseMainHeading": MessageLookupByLibrary.simpleMessage(
+      "Первая помощь при передозировке",
+    ),
+    "drugOverdoseNote1": MessageLookupByLibrary.simpleMessage(
+      "Не вызывайте рвоту, если это не рекомендовано врачом.",
+    ),
+    "drugOverdoseNote2": MessageLookupByLibrary.simpleMessage(
+      "Постарайтесь определить вещество, чтобы сообщить врачам.",
+    ),
+    "drugOverdoseSigns1": MessageLookupByLibrary.simpleMessage(
+      "- Отсутствие реакции или потеря сознания",
+    ),
+    "drugOverdoseSigns2": MessageLookupByLibrary.simpleMessage(
+      "- Затрудненное или медленное дыхание",
+    ),
+    "drugOverdoseSigns3": MessageLookupByLibrary.simpleMessage(
+      "- Судороги или конвульсии",
+    ),
+    "drugOverdoseSigns4": MessageLookupByLibrary.simpleMessage(
+      "- Рвота, бледная или липкая кожа",
+    ),
+    "drugOverdoseSignsHeading": MessageLookupByLibrary.simpleMessage(
+      "Признаки передозировки:",
+    ),
+    "drugOverdoseStep1Desc": MessageLookupByLibrary.simpleMessage(
+      "Немедленно вызовите медицинскую помощь.",
+    ),
+    "drugOverdoseStep1Title": MessageLookupByLibrary.simpleMessage(
+      "Вызовите скорую",
+    ),
+    "drugOverdoseStep2Desc": MessageLookupByLibrary.simpleMessage(
+      "Убедитесь, что пострадавший и вы в безопасности.",
+    ),
+    "drugOverdoseStep2Title": MessageLookupByLibrary.simpleMessage(
+      "Обеспечьте безопасность",
+    ),
+    "drugOverdoseStep3Desc": MessageLookupByLibrary.simpleMessage(
+      "Если человек не реагирует, проверьте, дышит ли он.",
+    ),
+    "drugOverdoseStep3Title": MessageLookupByLibrary.simpleMessage(
+      "Проверьте дыхание",
+    ),
+    "drugOverdoseStep4Desc": MessageLookupByLibrary.simpleMessage(
+      "Если нет дыхания или пульса, начните сердечно-легочную реанимацию (СЛР).",
+    ),
+    "drugOverdoseStep4Title": MessageLookupByLibrary.simpleMessage(
+      "Начните СЛР при необходимости",
+    ),
+    "drugOverdoseStep5Desc": MessageLookupByLibrary.simpleMessage(
+      "Если человек дышит, но без сознания, положите его на бок.",
+    ),
+    "drugOverdoseStep5Title": MessageLookupByLibrary.simpleMessage(
+      "Положение на боку",
+    ),
+    "drugOverdoseStepsHeading": MessageLookupByLibrary.simpleMessage(
+      "Первая помощь:",
+    ),
+    "drugOverdoseTitle": MessageLookupByLibrary.simpleMessage("Передозировка"),
+    "eyeInjuryHeading": MessageLookupByLibrary.simpleMessage(
+      "Первая помощь при травме глаза",
+    ),
+    "eyeInjuryIntro": MessageLookupByLibrary.simpleMessage(
+      "Правильная первая помощь при травмах глаза может предотвратить осложнения.",
+    ),
+    "eyeInjuryNote1": MessageLookupByLibrary.simpleMessage(
+      "Не пытайтесь удалить внедренный предмет самостоятельно.",
+    ),
+    "eyeInjuryNote2": MessageLookupByLibrary.simpleMessage(
+      "Не используйте мази или лекарства без назначения врача.",
+    ),
+    "eyeInjuryNotesHeading": MessageLookupByLibrary.simpleMessage("Важно:"),
+    "eyeInjuryStep1Desc": MessageLookupByLibrary.simpleMessage(
+      "Это может усугубить повреждение.",
+    ),
+    "eyeInjuryStep1Title": MessageLookupByLibrary.simpleMessage(
+      "Не трите глаз",
+    ),
+    "eyeInjuryStep2Desc": MessageLookupByLibrary.simpleMessage(
+      "При химических ожогах или частицах промывайте глаз водой не менее 15 минут.",
+    ),
+    "eyeInjuryStep2Title": MessageLookupByLibrary.simpleMessage(
+      "Промойте водой",
+    ),
+    "eyeInjuryStep3Desc": MessageLookupByLibrary.simpleMessage(
+      "Используйте чистую повязку, не давя на глаз.",
+    ),
+    "eyeInjuryStep3Title": MessageLookupByLibrary.simpleMessage(
+      "Накройте глаз",
+    ),
+    "eyeInjuryStep4Desc": MessageLookupByLibrary.simpleMessage(
+      "При серьезных травмах или боли немедленно обратитесь к врачу.",
+    ),
+    "eyeInjuryStep4Title": MessageLookupByLibrary.simpleMessage(
+      "Обратитесь к врачу",
+    ),
+    "eyeInjuryStepsHeading": MessageLookupByLibrary.simpleMessage(
+      "Первая помощь:",
+    ),
+    "eyeInjuryTitle": MessageLookupByLibrary.simpleMessage("Травма глаза"),
+    "eyeInjuryType1": MessageLookupByLibrary.simpleMessage(
+      "- Инородное тело в глазу",
+    ),
+    "eyeInjuryType2": MessageLookupByLibrary.simpleMessage(
+      "- Химические ожоги",
+    ),
+    "eyeInjuryType3": MessageLookupByLibrary.simpleMessage(
+      "- Порезы или проколы",
+    ),
+    "eyeInjuryTypesHeading": MessageLookupByLibrary.simpleMessage(
+      "Виды травм:",
     ),
     "headInjuryHeading": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при травме головы",
@@ -302,6 +477,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Шаги первой помощи:",
     ),
     "headInjuryTitle": MessageLookupByLibrary.simpleMessage("Травма головы"),
+    "heading": MessageLookupByLibrary.simpleMessage(
+      "Первая помощь при переломах",
+    ),
     "heartConditionHeading": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при болезнях сердца",
     ),
@@ -338,6 +516,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "heartConditionTitle": MessageLookupByLibrary.simpleMessage(
       "Болезни сердца",
     ),
+    "home": MessageLookupByLibrary.simpleMessage("Главная"),
+    "intro": MessageLookupByLibrary.simpleMessage(
+      "Перелом - это сломанная кость. Правильная первая помощь может предотвратить осложнения.",
+    ),
+    "note1": MessageLookupByLibrary.simpleMessage(
+      "НЕ пытайтесь вправить кость или вернуть её на место.",
+    ),
+    "note2": MessageLookupByLibrary.simpleMessage(
+      "При кровотечении надавливайте вокруг раны (не непосредственно на кость).",
+    ),
+    "notesHeading": MessageLookupByLibrary.simpleMessage("Важно:"),
     "poisonHeading": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при отравлении",
     ),
@@ -372,6 +561,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Шаги первой помощи:",
     ),
     "poisonTitle": MessageLookupByLibrary.simpleMessage("Отравления"),
+    "profile": MessageLookupByLibrary.simpleMessage("Профиль"),
     "recoveryPositionHeading": MessageLookupByLibrary.simpleMessage(
       "Поза восстановления",
     ),
@@ -423,6 +613,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "removedFromSavedTopicsText": MessageLookupByLibrary.simpleMessage(
       "Удалено из сохраненных тем",
     ),
+    "saved": MessageLookupByLibrary.simpleMessage("Сохранённое"),
     "seizuresFirstAidHeading": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при судорогах:",
     ),
@@ -456,7 +647,6 @@ class MessageLookup extends MessageLookupByLibrary {
       "После судорог успокойте и поддержите человека, когда он приходит в себя.",
     ),
     "seizuresTitle": MessageLookupByLibrary.simpleMessage("Судороги"),
-    "selectLanguage": MessageLookupByLibrary.simpleMessage("Выберите язык"),
     "shockFirstAidHeading": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при шоке:",
     ),
@@ -493,6 +683,15 @@ class MessageLookup extends MessageLookupByLibrary {
       "Следите за дыханием и будьте готовы к СЛР, если необходимо.",
     ),
     "shockTitle": MessageLookupByLibrary.simpleMessage("Шок"),
+    "sign1": MessageLookupByLibrary.simpleMessage("- Боль и болезненность"),
+    "sign2": MessageLookupByLibrary.simpleMessage("- Отек или синяк"),
+    "sign3": MessageLookupByLibrary.simpleMessage(
+      "- Деформация или неестественное положение",
+    ),
+    "sign4": MessageLookupByLibrary.simpleMessage(
+      "- Трудности при движении конечностью",
+    ),
+    "signsHeading": MessageLookupByLibrary.simpleMessage("Признаки перелома:"),
     "spinalFirstAidHeading": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при травме позвоночника:",
     ),
@@ -574,6 +773,25 @@ class MessageLookup extends MessageLookupByLibrary {
     "sprainsStrainsTitle": MessageLookupByLibrary.simpleMessage(
       "Растяжения и вывихи",
     ),
+    "step1Desc": MessageLookupByLibrary.simpleMessage(
+      "Держите поврежденную область неподвижной и избегайте движений.",
+    ),
+    "step1Title": MessageLookupByLibrary.simpleMessage("Обездвижьте область"),
+    "step2Desc": MessageLookupByLibrary.simpleMessage(
+      "Используйте мягкую шину для поддержки травмы, не пытаясь вправить кость.",
+    ),
+    "step2Title": MessageLookupByLibrary.simpleMessage("Наложите шину"),
+    "step3Desc": MessageLookupByLibrary.simpleMessage(
+      "Уменьшите отек с помощью льда, завернутого в ткань (избегайте прямого контакта с кожей).",
+    ),
+    "step3Title": MessageLookupByLibrary.simpleMessage("Приложите холод"),
+    "step4Desc": MessageLookupByLibrary.simpleMessage(
+      "Вызовите скорую помощь или доставьте человека в больницу как можно скорее.",
+    ),
+    "step4Title": MessageLookupByLibrary.simpleMessage(
+      "Обратитесь за медицинской помощью",
+    ),
+    "stepsHeading": MessageLookupByLibrary.simpleMessage("Первая помощь:"),
     "strokeFirstAidHeading": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при инсульте:",
     ),
@@ -625,7 +843,6 @@ class MessageLookup extends MessageLookupByLibrary {
       "Уже есть аккаунт?",
     ),
     "tAssessing": MessageLookupByLibrary.simpleMessage("Оценка пострадавшего"),
-    "tAsthma": MessageLookupByLibrary.simpleMessage("Астма"),
     "tBites": MessageLookupByLibrary.simpleMessage("Укусы"),
     "tBleeding": MessageLookupByLibrary.simpleMessage("Кровотечение"),
     "tBurns": MessageLookupByLibrary.simpleMessage("Ожоги"),
@@ -637,6 +854,54 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "tChangeLang": MessageLookupByLibrary.simpleMessage("Изменить язык"),
     "tChoking": MessageLookupByLibrary.simpleMessage("Удушье"),
+    "tChoking10": MessageLookupByLibrary.simpleMessage(
+      "Если кашель неэффективен, наклоните человека вперед и нанесите 5 сильных ударов между лопатками основанием ладони.",
+    ),
+    "tChoking11": MessageLookupByLibrary.simpleMessage(
+      "Проведите прием Геймлиха",
+    ),
+    "tChoking12": MessageLookupByLibrary.simpleMessage(
+      "Если удары по спине не помогают, выполните 5 толчков в живот: встаньте сзади, поместите кулак выше пупка, обхватите его другой рукой и резко потяните внутрь и вверх.",
+    ),
+    "tChoking13": MessageLookupByLibrary.simpleMessage(
+      "Повторяйте при необходимости",
+    ),
+    "tChoking14": MessageLookupByLibrary.simpleMessage(
+      "Чередуйте 5 ударов по спине и 5 толчков в живот, пока предмет не выйдет или человек не потеряет сознание.",
+    ),
+    "tChoking15": MessageLookupByLibrary.simpleMessage(
+      "Вызовите экстренные службы",
+    ),
+    "tChoking16": MessageLookupByLibrary.simpleMessage(
+      "Если человек теряет сознание или удушье продолжается, немедленно вызовите скорую помощь и начните СЛР, если обучены.",
+    ),
+    "tChoking17": MessageLookupByLibrary.simpleMessage("Важные примечания:"),
+    "tChoking18": MessageLookupByLibrary.simpleMessage(
+      "Не выполняйте прием Геймлиха детям до 1 года—используйте специальные методы для младенцев.",
+    ),
+    "tChoking19": MessageLookupByLibrary.simpleMessage(
+      "Если вы один и задыхаетесь, попробуйте выполнить прием Геймлиха на себе или позовите на помощь.",
+    ),
+    "tChoking2": MessageLookupByLibrary.simpleMessage("Признаки удушья:"),
+    "tChoking3": MessageLookupByLibrary.simpleMessage(
+      "- Затрудненное или шумное дыхание",
+    ),
+    "tChoking4": MessageLookupByLibrary.simpleMessage(
+      "- Невозможность говорить или кашлять",
+    ),
+    "tChoking5": MessageLookupByLibrary.simpleMessage(
+      "- Схватывание за горло (универсальный жест удушья)",
+    ),
+    "tChoking6": MessageLookupByLibrary.simpleMessage(
+      "Действия первой помощи:",
+    ),
+    "tChoking7": MessageLookupByLibrary.simpleMessage("Поощряйте кашель"),
+    "tChoking8": MessageLookupByLibrary.simpleMessage(
+      "Если человек может кашлять, поощряйте его продолжать, чтобы попытаться вытолкнуть предмет.",
+    ),
+    "tChoking9": MessageLookupByLibrary.simpleMessage(
+      "Нанесите удары по спине",
+    ),
     "tChooseMethod": MessageLookupByLibrary.simpleMessage(
       "Выберите способ сброса пароля",
     ),
@@ -957,6 +1222,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "tgetHelpViaEmail": MessageLookupByLibrary.simpleMessage(
       "Получить помощь по электронной почте",
     ),
+    "title": MessageLookupByLibrary.simpleMessage("Переломы"),
     "tliveChat": MessageLookupByLibrary.simpleMessage("Онлайн-чат"),
     "tliveChatComingSoon": MessageLookupByLibrary.simpleMessage(
       "Онлайн-чат скоро будет доступен!",
@@ -964,6 +1230,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "tnoSavedTopicYet": MessageLookupByLibrary.simpleMessage(
       "Пока нет сохраненных тем",
     ),
+    "topics": MessageLookupByLibrary.simpleMessage("Темы"),
     "totpVerification": MessageLookupByLibrary.simpleMessage("Проверка OTP"),
     "tphoneSupport": MessageLookupByLibrary.simpleMessage(
       "Телефонная поддержка",

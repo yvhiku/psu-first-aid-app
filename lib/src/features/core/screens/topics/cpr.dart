@@ -1,6 +1,6 @@
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,17 +10,18 @@ class CprScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = S.of(context);
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': cprTitle,
+      'title': s.cprTitle,
       'image': tCprimg,
       'screen': const CprScreen(),
-      'type': 'cpr',
+      'type': 's.cpr',
     };
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(cprTitle),
+        title:  Text(s.cprTitle),
         actions: [
           Obx(
             () => IconButton(
@@ -38,8 +39,8 @@ class CprScreen extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? addedToSavedTopics
-                          : removedFromSavedTopics,
+                          ? s.addedToSavedTopicsText
+                          : s.tremovedTopic
                     ),
                   ),
                 );
@@ -55,8 +56,8 @@ class CprScreen extends StatelessWidget {
           children: [
             Image.asset(tCprimg, fit: BoxFit.cover),
             const SizedBox(height: 20),
-            const Text(
-              cprHeading,
+             Text(
+              s.cprHeading,
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
@@ -64,33 +65,33 @@ class CprScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(cprIntro, style: TextStyle(fontSize: 16)),
+             Text(s.cprIntro, style: TextStyle(fontSize: 16)),
             const Divider(height: 30),
-            const Text(
-              cprStepsHeading,
+             Text(
+              s.cprStepsHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildStep('1', cprStep1Title, cprStep1Description),
-            _buildStep('2', cprStep2Title, cprStep2Description),
-            _buildStep('3', cprStep3Title, cprStep3Description),
-            _buildStep('4', cprStep4Title, cprStep4Description),
-            _buildStep('5', cprStep5Title, cprStep5Description),
-            _buildStep('6', cprStep6Title, cprStep6Description),
-            _buildStep('7', cprStep7Title, cprStep7Description),
+            _buildStep('1', s.cprStep1Title, s.cprStep1Description),
+            _buildStep('2', s.cprStep2Title, s.cprStep2Description),
+            _buildStep('3', s.cprStep3Title, s.cprStep3Description),
+            _buildStep('4', s.cprStep4Title, s.cprStep4Description),
+            _buildStep('5', s.cprStep5Title, s.cprStep5Description),
+            _buildStep('6', s.cprStep6Title, s.cprStep6Description),
+            _buildStep('7', s.cprStep7Title, s.cprStep7Description),
             const Divider(height: 30),
-            const Text(
-              cprNotesHeading,
+             Text(
+              s.cprNotesHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildBulletPoint(cprNote1),
-            _buildBulletPoint(cprNote2),
-            _buildBulletPoint(cprNote3),
+            _buildBulletPoint(s.cprNote1),
+            _buildBulletPoint(s.cprNote2),
+            _buildBulletPoint(s.cprNote3),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Link to CPR video or action
+                // Link to s.cpr video or action
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: tPrimaryColor,
@@ -101,8 +102,8 @@ class CprScreen extends StatelessWidget {
                 ),
                 elevation: 4,
               ),
-              child: const Text(
-                cprWatchDemoButton,
+              child:  Text(
+                s.cprWatchDemoButton,
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
             ),

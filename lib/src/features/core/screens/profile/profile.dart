@@ -1,7 +1,7 @@
 import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
 import 'package:first_aid_app/src/constants/sizes.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/features/authentication/model/user_model.dart';
 import 'package:first_aid_app/src/features/authentication/provider/auth_provider.dart';
 import 'package:first_aid_app/src/features/authentication/screens/contacts/contact_support.dart';
@@ -9,6 +9,7 @@ import 'package:first_aid_app/src/features/authentication/screens/welcome/welcom
 import 'package:first_aid_app/src/features/core/screens/profile/about.dart';
 import 'package:first_aid_app/src/features/core/screens/profile/edit_profile.dart';
 import 'package:first_aid_app/src/features/core/screens/profile/privacy_policy.dart';
+import 'package:first_aid_app/src/features/core/screens/profile/select_lang.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -56,24 +57,24 @@ class ProfileScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(tUserNotFound, style: TextStyle(fontSize: 18)),
+            Text(S.of(context).tuserNotFound, style: TextStyle(fontSize: 18)),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () => ap.getDataFromFirestore(),
               style: ElevatedButton.styleFrom(
-                backgroundColor: tPrimaryColor, // Use your red color constant
-                foregroundColor: Colors.white, // White text
+                backgroundColor: tPrimaryColor,
+                foregroundColor: Colors.white,
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0), // Circular borders
+                  borderRadius: BorderRadius.circular(20.0),
                 ),
                 padding: EdgeInsets.symmetric(
                   horizontal: tDefaultSize,
                   vertical: tButtonHeight / 2,
                 ),
-                elevation: 0, // Remove shadow if desired
+                elevation: 0,
               ),
-              child: const Text(
-                tRetryLaoding,
+              child: Text(
+                S.of(context).tretryLoading,
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
@@ -112,14 +113,13 @@ class ProfileScreen extends StatelessWidget {
                   fontFamily: "Poppins",
                 ),
               ),
-
               const SizedBox(height: tDefaultSize),
               _buildProfileSection(
-                header: tProfileHeader1,
+                header: S.of(context).tProfileHeader1,
                 buttons: [
                   MenuButtons(
                     icon: Icons.person_2_outlined,
-                    title: tMyAccount,
+                    title: S.of(context).tMyAccount,
                     onPressed: () => Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -129,12 +129,17 @@ class ProfileScreen extends StatelessWidget {
                   ),
                   MenuButtons(
                     icon: Icons.public_sharp,
-                    title: tChangeLang,
-                    onPressed: () {},
+                    title: S.of(context).tChangeLang,
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => const LanguageSelectionScreen1(),
+                      ),
+                    ),
                   ),
                   MenuButtons(
                     icon: Icons.logout,
-                    title: tLogout,
+                    title: S.of(context).tLogout,
                     textColor: tPrimaryColor,
                     onPressed: () {
                       ap.userSignOut().then(
@@ -150,11 +155,11 @@ class ProfileScreen extends StatelessWidget {
                 ],
               ),
               _buildProfileSection(
-                header: tProfileHeader2,
+                header: S.of(context).tProfileHeader2,
                 buttons: [
                   MenuButtons(
                     icon: Icons.support_agent,
-                    title: tContactUs,
+                    title: S.of(context).tContactUs,
                     onPressed: () => Navigator.push(
                       context,
                       MaterialPageRoute(builder: (_) => ContactSupportScreen()),
@@ -163,11 +168,11 @@ class ProfileScreen extends StatelessWidget {
                 ],
               ),
               _buildProfileSection(
-                header: tProfileHeader3,
+                header: S.of(context).tProfileHeader3,
                 buttons: [
                   MenuButtons(
                     icon: Icons.privacy_tip_outlined,
-                    title: tPrivacyPol,
+                    title: S.of(context).tPrivacyPol,
                     onPressed: () => Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -177,7 +182,7 @@ class ProfileScreen extends StatelessWidget {
                   ),
                   MenuButtons(
                     icon: Icons.info_outline,
-                    title: tAboutUs,
+                    title: S.of(context).tAboutUs,
                     onPressed: () => Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -207,23 +212,6 @@ class ProfileScreen extends StatelessWidget {
                 : Image.asset(tProfileImg, fit: BoxFit.cover),
           ),
         ),
-        // Positioned(
-        //   bottom: 0,
-        //   right: 0,
-        //   child: Container(
-        //     width: 35,
-        //     height: 35,
-        //     decoration: BoxDecoration(
-        //       borderRadius: BorderRadius.circular(100),
-        //       color: Colors.red.withOpacity(0.25),
-        //     ),
-        //     child: const Icon(
-        //       LineAwesomeIcons.pen_solid,
-        //       color: Colors.black,
-        //       size: 20,
-        //     ),
-        //   ),
-        // ),
       ],
     );
   }

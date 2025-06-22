@@ -1,5 +1,5 @@
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,16 +9,17 @@ class SprainsStrains extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = S.of(context);
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': sprainsStrainsTitle,
+      'title': s.sprainsStrainsTitle,
       'image': tSprainimg,
       'screen': const SprainsStrains(),
     };
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(sprainsStrainsTitle),
+        title:  Text(s.sprainsStrainsTitle),
         actions: [
           Obx(
             () => IconButton(
@@ -36,8 +37,8 @@ class SprainsStrains extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? addedToSavedTopicsText
-                          : removedFromSavedTopicsText,
+                          ? s.addedToSavedTopicsText
+                          : s.tremovedTopic
                     ),
                   ),
                 );
@@ -53,34 +54,34 @@ class SprainsStrains extends StatelessWidget {
           children: [
             Image.asset(tSprainimg, fit: BoxFit.cover),
             const SizedBox(height: 16),
-            const Text(
-              sprainsStrainsTitle,
+             Text(
+              s.sprainsStrainsTitle,
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            const Text(sprainsStrainsIntro, style: TextStyle(fontSize: 16)),
+             Text(s.sprainsStrainsIntro, style: TextStyle(fontSize: 16)),
             const SizedBox(height: 20),
-            const Text(
-              sprainsStrainsSignsHeading,
+             Text(
+              s.sprainsStrainsSignsHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            _buildBullet(sprainsStrainsSign1),
-            _buildBullet(sprainsStrainsSign2),
-            _buildBullet(sprainsStrainsSign3),
-            _buildBullet(sprainsStrainsSign4),
+            _buildBullet(s.sprainsStrainsSign1),
+            _buildBullet(s.sprainsStrainsSign2),
+            _buildBullet(s.sprainsStrainsSign3),
+            _buildBullet(s.sprainsStrainsSign4),
             const SizedBox(height: 20),
-            const Text(
-              sprainsStrainsFirstAidHeading,
+             Text(
+              s.sprainsStrainsFirstAidHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            _buildStep('1', sprainsStrainsStep1),
-            _buildStep('2', sprainsStrainsStep2),
-            _buildStep('3', sprainsStrainsStep3),
-            _buildStep('4', sprainsStrainsStep4),
-            _buildStep('5', sprainsStrainsStep5),
-            _buildStep('6', sprainsStrainsStep6),
+            _buildStep('1', s.sprainsStrainsStep1),
+            _buildStep('2', s.sprainsStrainsStep2),
+            _buildStep('3', s.sprainsStrainsStep3),
+            _buildStep('4', s.sprainsStrainsStep4),
+            _buildStep('5', s.sprainsStrainsStep5),
+            _buildStep('6', s.sprainsStrainsStep6),
           ],
         ),
       ),

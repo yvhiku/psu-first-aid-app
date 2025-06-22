@@ -1,5 +1,5 @@
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,16 +9,17 @@ class SpinalInjury extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = S.of(context);
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': spinalTitle,
+      'title': s.spinalTitle,
       'image': tSpinalInjuryimg,
       'screen': const SpinalInjury(),
     };
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(spinalTitle),
+        title:  Text(s.spinalTitle),
         actions: [
           Obx(
             () => IconButton(
@@ -36,8 +37,8 @@ class SpinalInjury extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? addedToSavedTopicsText
-                          : removedFromSavedTopicsText,
+                          ? s.addedToSavedTopicsText
+                          : s.tremovedTopic
                     ),
                   ),
                 );
@@ -53,35 +54,35 @@ class SpinalInjury extends StatelessWidget {
           children: [
             Image.asset(tSpinalInjuryimg, fit: BoxFit.cover),
             const SizedBox(height: 16),
-            const Text(
-              spinalTitle,
+             Text(
+              s.spinalTitle,
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            const Text(spinalIntro, style: TextStyle(fontSize: 16)),
+             Text(s.spinalIntro, style: TextStyle(fontSize: 16)),
             const SizedBox(height: 20),
-            const Text(
-              spinalSignsHeading,
+             Text(
+              s.spinalSignsHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            _buildBullet(spinalSign1),
-            _buildBullet(spinalSign2),
-            _buildBullet(spinalSign3),
-            _buildBullet(spinalSign4),
-            _buildBullet(spinalSign5),
+            _buildBullet(s.spinalSign1),
+            _buildBullet(s.spinalSign2),
+            _buildBullet(s.spinalSign3),
+            _buildBullet(s.spinalSign4),
+            _buildBullet(s.spinalSign5),
             const SizedBox(height: 20),
-            const Text(
-              spinalFirstAidHeading,
+             Text(
+              s.spinalFirstAidHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            _buildStep('1', spinalStep1),
-            _buildStep('2', spinalStep2),
-            _buildStep('3', spinalStep3),
-            _buildStep('4', spinalStep4),
-            _buildStep('5', spinalStep5),
-            _buildStep('6', spinalStep6),
+            _buildStep('1', s.spinalStep1),
+            _buildStep('2', s.spinalStep2),
+            _buildStep('3', s.spinalStep3),
+            _buildStep('4', s.spinalStep4),
+            _buildStep('5', s.spinalStep5),
+            _buildStep('6', s.spinalStep6),
           ],
         ),
       ),

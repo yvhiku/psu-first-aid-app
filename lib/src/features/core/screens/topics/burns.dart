@@ -1,5 +1,5 @@
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,9 +9,10 @@ class BurnScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = S.of(context);
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': tBurns,
+      'title': s.burns,
       'image': tBurnimg,
       'screen': const BurnScreen(),
       'type': 'Burns',
@@ -19,7 +20,7 @@ class BurnScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(tBurns),
+        title:  Text(s.burns),
         actions: [
           Obx(
             () => IconButton(
@@ -37,10 +38,10 @@ class BurnScreen extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? taddedtosaved
-                          : tremovedtopic,
-                    ),
+                          ? s.addedToSavedTopicsText
+                          : s.tremovedTopic
                   ),
+                )
                 );
               },
             ),
@@ -54,8 +55,8 @@ class BurnScreen extends StatelessWidget {
           children: [
             Image.asset(tBurnimg, fit: BoxFit.cover),
             const SizedBox(height: 20),
-            const Text(
-              tBurnsTitle,
+             Text(
+              s.burnsTitle,
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
@@ -63,25 +64,25 @@ class BurnScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(tBurns1, style: TextStyle(fontSize: 16)),
+             Text(s.burns1, style: TextStyle(fontSize: 16)),
             const Divider(height: 30),
-            const Text(
-              tBurns2,
+             Text(
+              s.burns2,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
-            _buildStep('1', tBurns3, tBurns4),
-            _buildStep('2', tBurns5, tBurns6),
-            _buildStep('3', tBurns7, tBurns8),
-            _buildStep('4', tBurns9, tBurns10),
-            _buildStep('5', tBurns11, tBurns12),
+            _buildStep('1', s.burns3, s.burns4),
+            _buildStep('2', s.burns5, s.burns6),
+            _buildStep('3', s.burns7, s.burns8),
+            _buildStep('4', s.burns9, s.burns10),
+            _buildStep('5', s.burns11, s.burns12),
             const Divider(height: 30),
-            const Text(
-              tBurns13,
+             Text(
+              s.burns13,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
-            _buildBulletPoint(tBurns14),
-            _buildBulletPoint(tBurns15),
-            _buildBulletPoint(tBurns16),
+            _buildBulletPoint(s.burns14),
+            _buildBulletPoint(s.burns15),
+            _buildBulletPoint(s.burns16),
           ],
         ),
       ),

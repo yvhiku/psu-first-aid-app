@@ -1,3 +1,4 @@
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/features/core/screens/home/home_page.dart';
 import 'package:first_aid_app/src/features/core/screens/profile/profile.dart';
@@ -12,15 +13,16 @@ class NavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = S.of(context);
     final controller = Get.put(NavigationController());
     return Scaffold(
       bottomNavigationBar: Obx(
         () => NavigationBarTheme(
           data: NavigationBarThemeData(
-            labelTextStyle: MaterialStateProperty.resolveWith<TextStyle>((
-              Set<MaterialState> states,
+            labelTextStyle: WidgetStateProperty.resolveWith<TextStyle>((
+              Set<WidgetState> states,
             ) {
-              if (states.contains(MaterialState.selected)) {
+              if (states.contains(WidgetState.selected)) {
                 return const TextStyle(
                   color: Colors.red,
                   fontSize: 14,
@@ -34,24 +36,24 @@ class NavBar extends StatelessWidget {
             height: 80,
             elevation: 0,
             selectedIndex: controller.selectedIndex.value,
-            onDestinationSelected:
-                (index) => controller.selectedIndex.value = index,
-            destinations: const [
+            onDestinationSelected: (index) =>
+                controller.selectedIndex.value = index,
+            destinations: [
               NavigationDestination(
                 icon: Icon(Iconsax.home, color: tPrimaryColor),
-                label: 'Home',
+                label: s.home,
               ),
               NavigationDestination(
                 icon: Icon(Iconsax.task_copy, color: tPrimaryColor),
-                label: 'Topics',
+                label: s.topics,
               ),
               NavigationDestination(
                 icon: Icon(Iconsax.book_saved, color: tPrimaryColor),
-                label: 'Saved',
+                label: s.saved,
               ),
               NavigationDestination(
                 icon: Icon(Iconsax.profile_circle, color: tPrimaryColor),
-                label: 'Profile',
+                label: s.profile,
               ),
             ],
           ),

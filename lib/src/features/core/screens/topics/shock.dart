@@ -1,5 +1,5 @@
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,16 +9,17 @@ class Shock extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = S.of(context);
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': shockTitle,
+      'title': s.shockTitle,
       'image': tEpilepsyimg,
       'screen': const Shock(),
     };
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(shockTitle),
+        title:  Text(s.shockTitle),
         actions: [
           Obx(
             () => IconButton(
@@ -36,8 +37,8 @@ class Shock extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? addedToSavedTopicsText
-                          : removedFromSavedTopicsText,
+                          ? s.addedToSavedTopicsText
+                          : s.tremovedTopic
                     ),
                   ),
                 );
@@ -53,35 +54,35 @@ class Shock extends StatelessWidget {
           children: [
             Image.asset(tEpilepsyimg, fit: BoxFit.cover),
             const SizedBox(height: 16),
-            const Text(
-              shockHeading,
+             Text(
+              s.shockHeading,
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            const Text(shockIntro, style: TextStyle(fontSize: 16)),
+             Text(s.shockIntro, style: TextStyle(fontSize: 16)),
             const SizedBox(height: 20),
-            const Text(
-              shockSignsHeading,
+             Text(
+              s.shockSignsHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            _buildBullet(shockSign1),
-            _buildBullet(shockSign2),
-            _buildBullet(shockSign3),
-            _buildBullet(shockSign4),
-            _buildBullet(shockSign5),
+            _buildBullet(s.shockSign1),
+            _buildBullet(s.shockSign2),
+            _buildBullet(s.shockSign3),
+            _buildBullet(s.shockSign4),
+            _buildBullet(s.shockSign5),
             const SizedBox(height: 20),
-            const Text(
-              shockFirstAidHeading,
+             Text(
+              s.shockFirstAidHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-            _buildStep('1', shockStep1),
-            _buildStep('2', shockStep2),
-            _buildStep('3', shockStep3),
-            _buildStep('4', shockStep4),
-            _buildStep('5', shockStep5),
-            _buildStep('6', shockStep6),
+            _buildStep('1', s.shockStep1),
+            _buildStep('2', s.shockStep2),
+            _buildStep('3', s.shockStep3),
+            _buildStep('4', s.shockStep4),
+            _buildStep('5', s.shockStep5),
+            _buildStep('6', s.shockStep6),
           ],
         ),
       ),

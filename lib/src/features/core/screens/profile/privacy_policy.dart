@@ -1,4 +1,4 @@
-import 'package:first_aid_app/src/constants/text_strings.dart';
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class PrivacyPolicyScreen extends StatelessWidget {
@@ -6,8 +6,8 @@ class PrivacyPolicyScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const baseStyle = TextStyle(fontFamily: 'Poppins', fontSize: 16);
-    const boldStyle = TextStyle(
+    final baseStyle = TextStyle(fontFamily: 'Poppins', fontSize: 16);
+    final boldStyle = TextStyle(
       fontFamily: 'Poppins',
       fontSize: 16,
       fontWeight: FontWeight.bold,
@@ -15,47 +15,47 @@ class PrivacyPolicyScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          tPrivacyPolicy,
+        title: Text(
+          S.of(context).tprivacyPolicy,
           style: TextStyle(fontFamily: 'Poppins'),
         ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView(
-          children: const [
+          children: [
             Text(
-              tPrivacyPolicy,
+              S.of(context).tprivacyPolicy,
               style: TextStyle(
                 fontFamily: 'Poppins',
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 16),
-            Text(tPrivacyPolicyHeader, style: baseStyle),
-            SizedBox(height: 24),
-            Text(tPrivacyQ1, style: boldStyle),
-            SizedBox(height: 8),
-            Text(tPrivacyA1, style: baseStyle),
-            SizedBox(height: 24),
-            Text(tPrivacyQ2, style: boldStyle),
-            SizedBox(height: 8),
-            Text(tPrivacyA2, style: baseStyle),
-            SizedBox(height: 24),
-            Text(tPrivacyQ3, style: boldStyle),
-            SizedBox(height: 8),
-            Text(tPrivacyA3, style: baseStyle),
-            SizedBox(height: 24),
-            Text(tPrivacyQ4, style: boldStyle),
-            SizedBox(height: 8),
-            Text(tPrivacyA4, style: baseStyle),
-            SizedBox(height: 24),
-            Text(tPrivacyQ5, style: boldStyle),
-            SizedBox(height: 8),
-            Text(tPrivacyA5, style: baseStyle),
-            SizedBox(height: 24),
-            Text(tcontactUsIn, style: baseStyle),
+            const SizedBox(height: 16),
+            Text(S.of(context).tprivacyPolicyHeader, style: baseStyle),
+            const SizedBox(height: 24),
+            Text(S.of(context).tprivacyQ1, style: boldStyle),
+            const SizedBox(height: 8),
+            Text(S.of(context).tprivacyA1, style: baseStyle),
+            const SizedBox(height: 24),
+            Text(S.of(context).tprivacyQ2, style: boldStyle),
+            const SizedBox(height: 8),
+            Text(S.of(context).tprivacyA2, style: baseStyle),
+            const SizedBox(height: 24),
+            Text(S.of(context).tprivacyQ3, style: boldStyle),
+            const SizedBox(height: 8),
+            Text(S.of(context).tprivacyA3, style: baseStyle),
+            const SizedBox(height: 24),
+            Text(S.of(context).tprivacyQ4, style: boldStyle),
+            const SizedBox(height: 8),
+            Text(S.of(context).tprivacyA4, style: baseStyle),
+            const SizedBox(height: 24),
+            Text(S.of(context).tprivacyQ5, style: boldStyle),
+            const SizedBox(height: 8),
+            Text(S.of(context).tprivacyA5, style: baseStyle),
+            const SizedBox(height: 24),
+            Text(S.of(context).tcontactUsIn, style: baseStyle),
           ],
         ),
       ),

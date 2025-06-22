@@ -1,5 +1,5 @@
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart'; // Import your string constants here
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,16 +9,17 @@ class PoisonScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = S.of(context);
     final TopicController topicController = Get.find();
     final currentTopic = {
-      'title': poisonTitle,
+      'title': s.poisonTitle,
       'image': tPoisonimg,
       'screen': const PoisonScreen(),
     };
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(poisonTitle),
+        title:  Text(s.poisonTitle),
         actions: [
           Obx(
             () => IconButton(
@@ -36,8 +37,8 @@ class PoisonScreen extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? addedToSavedTopicsText
-                          : removedFromSavedTopicsText,
+                          ? s.addedToSavedTopicsText
+                          : s.tremovedTopic
                     ),
                   ),
                 );
@@ -53,8 +54,8 @@ class PoisonScreen extends StatelessWidget {
           children: [
             Image.asset(tPoisonimg, fit: BoxFit.cover),
             const SizedBox(height: 20),
-            const Text(
-              poisonHeading,
+             Text(
+              s.poisonHeading,
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
@@ -62,26 +63,26 @@ class PoisonScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(poisonIntro, style: TextStyle(fontSize: 16)),
+             Text(s.poisonIntro, style: TextStyle(fontSize: 16)),
             const Divider(height: 30),
-            const Text(
-              poisonStepsHeading,
+             Text(
+              s.poisonStepsHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildStep('1', poisonStep1),
-            _buildStep('2', poisonStep2),
-            _buildStep('3', poisonStep3),
-            _buildStep('4', poisonStep4),
-            _buildStep('5', poisonStep5),
+            _buildStep('1', s.poisonStep1),
+            _buildStep('2', s.poisonStep2),
+            _buildStep('3', s.poisonStep3),
+            _buildStep('4', s.poisonStep4),
+            _buildStep('5', s.poisonStep5),
             const Divider(height: 30),
-            const Text(
-              poisonNotesHeading,
+             Text(
+              s.poisonNotesHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildBullet(poisonNote1),
-            _buildBullet(poisonNote2),
+            _buildBullet(s.poisonNote1),
+            _buildBullet(s.poisonNote2),
           ],
         ),
       ),

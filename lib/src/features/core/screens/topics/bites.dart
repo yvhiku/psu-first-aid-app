@@ -1,5 +1,5 @@
+import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
-import 'package:first_aid_app/src/constants/text_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,10 +9,11 @@ class Bites extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = S.of(context);
     final TopicController topicController = Get.find();
 
     final currentTopic = {
-      'title': tBites,
+      'title': s.bites,
       'image': tBitinigimg,
       'screen': const Bites(),
       'type': 'Bites',
@@ -20,7 +21,7 @@ class Bites extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(tBites),
+        title:  Text(s.bites),
         actions: [
           Obx(
             () => IconButton(
@@ -38,8 +39,8 @@ class Bites extends StatelessWidget {
                   SnackBar(
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
-                          ? taddedtosaved
-                          : tremovedtopic,
+                          ? s.addedToSavedTopicsText
+                          : s.tremovedTopic
                     ),
                   ),
                 );
@@ -55,8 +56,8 @@ class Bites extends StatelessWidget {
           children: [
             Image.asset(tBitinigimg, fit: BoxFit.cover),
             const SizedBox(height: 20),
-            const Text(
-              tBitesTitle,
+             Text(
+              s.bitesTitle,
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
@@ -64,28 +65,28 @@ class Bites extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-            const Text(tBites1, style: TextStyle(fontSize: 16)),
+             Text(s.bites1, style: TextStyle(fontSize: 16)),
             const Divider(height: 30),
-            const Text(
-              tBites2,
+             Text(
+              s.bites2,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildStep('1', tBites3, tBites4),
-            _buildStep('2', tBites5, tBites6),
-            _buildStep('3', tBites7, tBites8),
-            _buildStep('4', tBites9, tBites10),
-            _buildStep('5', tBites11, tBites12),
-            _buildStep('6', tBites13, tBites14),
+            _buildStep('1', s.bites3, s.bites4),
+            _buildStep('2', s.bites5, s.bites6),
+            _buildStep('3', s.bites7, s.bites8),
+            _buildStep('4', s.bites9, s.bites10),
+            _buildStep('5', s.bites11, s.bites12),
+            _buildStep('6', s.bites13, s.bites14),
             const Divider(height: 30),
-            const Text(
-              tBites15,
+             Text(
+              s.bites15,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            _buildBulletPoint(tBites16),
-            _buildBulletPoint(tBites17),
-            _buildBulletPoint(tBites18),
+            _buildBulletPoint(s.bites16),
+            _buildBulletPoint(s.bites17),
+            _buildBulletPoint(s.bites18),
           ],
         ),
       ),
