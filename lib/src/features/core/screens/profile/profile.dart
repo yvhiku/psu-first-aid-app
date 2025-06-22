@@ -25,10 +25,10 @@ class ProfileScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(
-          Icons.menu,
-          color: Color.fromARGB(255, 139, 47, 49),
-        ),
+        // leading: const Icon(
+        //   Icons.menu,
+        //   color: Color.fromARGB(255, 139, 47, 49),
+        // ),
         title: IconButton(
           onPressed: () {},
           icon: Image(image: AssetImage(tLogo), height: height * 0.05),

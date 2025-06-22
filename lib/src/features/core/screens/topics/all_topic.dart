@@ -26,7 +26,6 @@ import 'package:first_aid_app/src/features/core/screens/topics/stroke.dart';
 import 'package:first_aid_app/src/features/core/screens/topics/wound_care.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 class AllTopicsScreen extends StatelessWidget {
   const AllTopicsScreen({super.key});
@@ -36,10 +35,10 @@ class AllTopicsScreen extends StatelessWidget {
     var height = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(
-          Icons.menu,
-          color: Color.fromARGB(255, 139, 47, 49),
-        ),
+        // leading: const Icon(
+        //   Icons.menu,
+        //   color: Color.fromARGB(255, 139, 47, 49),
+        // ),
         title: IconButton(
           onPressed: () {},
           icon: Image(image: AssetImage(tLogo), height: height * 0.05),

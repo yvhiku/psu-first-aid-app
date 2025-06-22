@@ -12,6 +12,7 @@ import 'package:first_aid_app/src/features/core/controllers/widgets/navbar.dart'
 import 'package:shared_preferences/shared_preferences.dart';
 
 // Add this function before main()
+// ignore: unused_element
 Future<Locale?> _getSavedLocale() async {
   final prefs = await SharedPreferences.getInstance();
   final languageCode = prefs.getString('language');
