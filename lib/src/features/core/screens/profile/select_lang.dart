@@ -1,3 +1,4 @@
+import 'package:first_aid_app/main.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -146,22 +147,43 @@ class _LanguageSelectionScreenState1 extends State<LanguageSelectionScreen1> {
     );
   }
 
-  Future<void> _changeLanguage(String? code) async {
-    if (code == null) return;
+Future<void> _changeLanguage(String? code) async {
+    if (code == null || code == _selectedLanguage) return;
 
     final newLocale = Locale(code);
-    await Get.updateLocale(newLocale);
-
+    
+    // Update the app's locale using the global key
+    appStateKey.currentState?.updateLocale(newLocale);
+    
+    // Update local state
     setState(() {
       _selectedLanguage = code;
     });
+    
+    // Save to SharedPreferences
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('language', code);
+    
+    // Update GetX locale
+    await Get.updateLocale(newLocale);
   }
 
   Future<void> _saveLanguageAndNavigate(BuildContext context) async {
+    if (_selectedLanguage == null) return;
+    
+    final newLocale = Locale(_selectedLanguage!);
+    
+    // Update the app's locale using the global key
+    appStateKey.currentState?.updateLocale(newLocale);
+    
+    // Save to SharedPreferences
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString('language', _selectedLanguage!);
-
-    // Locale already updated, now navigate to main screen
+    
+    // Update GetX locale
+    await Get.updateLocale(newLocale);
+    
+    // Navigate to home
     Navigator.pushAndRemoveUntil(
       context,
       MaterialPageRoute(builder: (context) => const NavBar()),

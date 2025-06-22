@@ -9,6 +9,19 @@ import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'package:first_aid_app/src/features/authentication/provider/auth_provider.dart';
 import 'package:first_aid_app/src/features/core/controllers/widgets/navbar.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+// Add this function before main()
+Future<Locale?> _getSavedLocale() async {
+  final prefs = await SharedPreferences.getInstance();
+  final languageCode = prefs.getString('language');
+  if (languageCode != null) {
+    return Locale(languageCode);
+  }
+  return null;
+}
+
+final GlobalKey<MyAppState> appStateKey = GlobalKey();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,12 +34,45 @@ void main() async {
   );
 
   Get.put(TopicController());
-
-  runApp(const MyApp());
+  
+  // Initialize SharedPreferences and get saved language
+  final prefs = await SharedPreferences.getInstance();
+  final savedLanguage = prefs.getString('language');
+  
+  runApp(MyApp(
+    key: appStateKey,
+    initialLocale: savedLanguage != null ? Locale(savedLanguage) : null,
+  ));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyApp extends StatefulWidget {
+  final Locale? initialLocale;
+  
+  const MyApp({super.key, this.initialLocale});
+
+  @override
+  MyAppState createState() => MyAppState();
+}
+
+// Changed from _MyAppState to MyAppState (public)
+class MyAppState extends State<MyApp> {
+  Locale? _currentLocale;
+
+  @override
+  void initState() {
+    super.initState();
+    _currentLocale = widget.initialLocale;
+  }
+
+  void updateLocale(Locale newLocale) async {
+    setState(() {
+      _currentLocale = newLocale;
+    });
+    
+    // Save to SharedPreferences
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('language', newLocale.languageCode);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,13 +87,18 @@ class MyApp extends StatelessWidget {
           GlobalCupertinoLocalizations.delegate,
         ],
         supportedLocales: S.delegate.supportedLocales,
+        locale: _currentLocale,
         localeResolutionCallback: (deviceLocale, supportedLocales) {
-          // Match the system language if supported
+          if (_currentLocale != null) {
+            return _currentLocale!;
+          }
+          
           for (var locale in supportedLocales) {
             if (locale.languageCode == deviceLocale?.languageCode) {
               return locale;
             }
           }
+          
           return supportedLocales.first;
         },
         home: Consumer<AuthProvider1>(
@@ -57,7 +108,6 @@ class MyApp extends StatelessWidget {
                 body: Center(child: CircularProgressIndicator()),
               );
             }
-
             return auth.isSignedIn ? const NavBar() : const WelcomeScreen();
           },
         ),
