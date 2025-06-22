@@ -197,6 +197,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "burnsTitle": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية للحروق",
     ),
+    "chooseYourLanguage": MessageLookupByLibrary.simpleMessage(
+      "اختر لغتك المفضلة",
+    ),
+    "continueText": MessageLookupByLibrary.simpleMessage("متابعة"),
     "cprHeading": MessageLookupByLibrary.simpleMessage(
       "الإنعاش القلبي الرئوي (CPR)",
     ),
@@ -494,6 +498,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "intro": MessageLookupByLibrary.simpleMessage(
       "الكسر هو كسر في العظم. الإسعافات الأولية الصحيحة يمكن أن تمنع المضاعفات.",
     ),
+    "languageSelectionDescription": MessageLookupByLibrary.simpleMessage(
+      "الرجاء اختيار اللغة المفضلة للتطبيق",
+    ),
     "note1": MessageLookupByLibrary.simpleMessage(
       "لا تحاول إعادة العظم إلى وضعه الطبيعي أو دفعه إلى مكانه.",
     ),
@@ -619,6 +626,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "بعد النوبة، قدم الراحة والطمأنينة للشخص وهو يستعيد وعيه.",
     ),
     "seizuresTitle": MessageLookupByLibrary.simpleMessage("النوبات"),
+    "selectLanguage": MessageLookupByLibrary.simpleMessage("اختر اللغة"),
     "shockFirstAidHeading": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية للصدمة:",
     ),

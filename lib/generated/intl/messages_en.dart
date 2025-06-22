@@ -189,6 +189,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "burns9": MessageLookupByLibrary.simpleMessage("Avoid Creams or Ice"),
     "burnsTitle": MessageLookupByLibrary.simpleMessage("First Aid for Burns"),
+    "chooseYourLanguage": MessageLookupByLibrary.simpleMessage(
+      "Choose Your Language",
+    ),
     "continueText": MessageLookupByLibrary.simpleMessage("Continue"),
     "cprHeading": MessageLookupByLibrary.simpleMessage(
       "Cardiopulmonary Resuscitation (CPR)",
@@ -497,6 +500,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "intro": MessageLookupByLibrary.simpleMessage(
       "A fracture is a broken bone. Proper first aid can prevent complications.",
     ),
+    "languageSelectionDescription": MessageLookupByLibrary.simpleMessage(
+      "Please select your preferred language for the app",
+    ),
     "note1": MessageLookupByLibrary.simpleMessage(
       "Do NOT try to realign the bone or push it back in place.",
     ),
@@ -626,9 +632,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "After the seizure, comfort and reassure the person as they regain consciousness.",
     ),
     "seizuresTitle": MessageLookupByLibrary.simpleMessage("Seizures"),
-    "selectLanguage": MessageLookupByLibrary.simpleMessage(
-      "Select Your Language",
-    ),
+    "selectLanguage": MessageLookupByLibrary.simpleMessage("Select Language"),
     "shockFirstAidHeading": MessageLookupByLibrary.simpleMessage(
       "First Aid for Shock:",
     ),

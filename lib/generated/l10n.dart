@@ -74,11 +74,31 @@ class S {
     return Intl.message('Profile', name: 'profile', desc: '', args: []);
   }
 
-  /// `Select Your Language`
+  /// `Select Language`
   String get selectLanguage {
     return Intl.message(
-      'Select Your Language',
+      'Select Language',
       name: 'selectLanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose Your Language`
+  String get chooseYourLanguage {
+    return Intl.message(
+      'Choose Your Language',
+      name: 'chooseYourLanguage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please select your preferred language for the app`
+  String get languageSelectionDescription {
+    return Intl.message(
+      'Please select your preferred language for the app',
+      name: 'languageSelectionDescription',
       desc: '',
       args: [],
     );

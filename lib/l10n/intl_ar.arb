@@ -1,5 +1,10 @@
 {
     "@@locale": "ar",
+     
+  "selectLanguage": "اختر اللغة",
+  "chooseYourLanguage": "اختر لغتك المفضلة",
+  "languageSelectionDescription": "الرجاء اختيار اللغة المفضلة للتطبيق",
+  "continueText": "متابعة",
     "home": "الرئيسية",
     "topics": "المواضيع",
     "saved": "المحفوظات",

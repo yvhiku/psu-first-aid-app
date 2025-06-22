@@ -1,5 +1,10 @@
 {
     "@@locale": "ru",
+
+  "selectLanguage": "Выберите язык",
+  "chooseYourLanguage": "Выберите ваш язык",
+  "languageSelectionDescription": "Пожалуйста, выберите предпочитаемый язык для приложения", 
+  "continueText": "Продолжить",
     "home": "Главная",
     "topics": "Темы",
     "saved": "Сохранённое",

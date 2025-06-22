@@ -215,6 +215,10 @@ class MessageLookup extends MessageLookupByLibrary {
     "burnsTitle": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при ожогах",
     ),
+    "chooseYourLanguage": MessageLookupByLibrary.simpleMessage(
+      "Выберите ваш язык",
+    ),
+    "continueText": MessageLookupByLibrary.simpleMessage("Продолжить"),
     "cprHeading": MessageLookupByLibrary.simpleMessage(
       "Сердечно-легочная реанимация (СЛР)",
     ),
@@ -520,6 +524,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "intro": MessageLookupByLibrary.simpleMessage(
       "Перелом - это сломанная кость. Правильная первая помощь может предотвратить осложнения.",
     ),
+    "languageSelectionDescription": MessageLookupByLibrary.simpleMessage(
+      "Пожалуйста, выберите предпочитаемый язык для приложения",
+    ),
     "note1": MessageLookupByLibrary.simpleMessage(
       "НЕ пытайтесь вправить кость или вернуть её на место.",
     ),
@@ -647,6 +654,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "После судорог успокойте и поддержите человека, когда он приходит в себя.",
     ),
     "seizuresTitle": MessageLookupByLibrary.simpleMessage("Судороги"),
+    "selectLanguage": MessageLookupByLibrary.simpleMessage("Выберите язык"),
     "shockFirstAidHeading": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при шоке:",
     ),
