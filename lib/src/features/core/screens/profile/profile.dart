@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
 import 'package:first_aid_app/src/constants/sizes.dart';
@@ -238,6 +240,7 @@ class ProfileScreen extends StatelessWidget {
   }
 }
 
+
 class MenuButtons extends StatelessWidget {
   final IconData icon;
   final String title;
@@ -256,50 +259,111 @@ class MenuButtons extends StatelessWidget {
     this.textColor,
     this.borderColor,
     this.iconSize = 25,
-    this.horizontalPadding = 16,
+    this.horizontalPadding = 24,
     this.onPressed,
   });
 
   @override
   Widget build(BuildContext context) {
+    final isRTL = Directionality.of(context) == TextDirection.rtl;
+    
     return Column(
       children: [
         SizedBox(
           width: double.infinity,
           child: OutlinedButton(
             style: OutlinedButton.styleFrom(
-              shape: RoundedRectangleBorder(
+              shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(20)),
               ),
-              foregroundColor: textColor ?? tSecondaryColor,
-              side: BorderSide(color: borderColor ?? tSecondaryColor),
-              padding: EdgeInsets.symmetric(vertical: tButtonHeight),
-              alignment: Alignment.centerLeft,
+              foregroundColor: textColor ?? Colors.black,
+              side: BorderSide(color: borderColor ?? Colors.grey),
+              padding: const EdgeInsets.symmetric(
+                vertical: 20,
+                horizontal: 12,
+              ),
+              alignment: isRTL ? Alignment.centerRight : Alignment.centerLeft,
             ),
             onPressed: onPressed,
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: horizontalPadding!),
-                  child: Icon(icon, size: iconSize, color: iconColor),
-                ),
-                const SizedBox(width: 8),
-                Text(
-                  title,
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.normal,
-                    fontFamily: "Poppins",
-                    color: textColor,
+            child: Padding(
+              padding: EdgeInsets.only(
+                left: isRTL ? 0 : horizontalPadding!,
+                right: isRTL ? horizontalPadding! : 0,
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: isRTL ? MainAxisAlignment.end : MainAxisAlignment.start,
+                children: [
+                  _DirectionAwareIcon( // Using the private implementation
+                    icon: icon,
+                    size: iconSize,
+                    color: iconColor,
                   ),
-                ),
-              ],
+                  const SizedBox(width: 12),
+                  Text(
+                    title,
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.normal,
+                      fontFamily: "Poppins",
+                      color: textColor,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
         const SizedBox(height: 15),
       ],
     );
+  }
+}
+
+
+class _DirectionAwareIcon extends StatelessWidget {
+  final IconData icon;
+  final double? size;
+  final Color? color;
+
+  const _DirectionAwareIcon({
+    required this.icon,
+    this.size,
+    this.color,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final isRTL = Directionality.of(context) == TextDirection.rtl;
+    final shouldMirror = isRTL && _shouldMirrorIcon(icon);
+
+    return Transform(
+      alignment: Alignment.center,
+      transform: Matrix4.rotationY(shouldMirror ? math.pi : 0),
+      child: Icon(
+        icon,
+        size: size,
+        color: color,
+      ),
+    );
+  }
+
+  bool _shouldMirrorIcon(IconData icon) {
+    // List of icons that should NOT be mirrored
+    const nonMirroredIcons = [
+      Icons.person,
+      Icons.person_outline,
+      Icons.account_circle,
+      Icons.public,
+      Icons.language,
+      Icons.logout,
+      Icons.exit_to_app,
+      Icons.info,
+      Icons.privacy_tip,
+      Icons.help,
+      Icons.email,
+    ];
+    
+    return !nonMirroredIcons.contains(icon);
   }
 }

@@ -1,4 +1,5 @@
 import 'package:first_aid_app/generated/l10n.dart';
+import 'package:first_aid_app/src/features/core/controllers/widgets/navbar.dart';
 import 'package:first_aid_app/src/features/core/screens/profile/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -80,7 +81,7 @@ class _LanguageSelectionScreenState1 extends State<LanguageSelectionScreen1> {
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const ProfileScreen(),
+                            builder: (context) => const NavBar(),
                           ),
                         );
                       },
