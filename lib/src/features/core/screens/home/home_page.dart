@@ -132,9 +132,19 @@ class HomeScreen extends StatelessWidget {
       children: [
         _buildButton(context, tCprimg, S.of(context).tCpr, CprScreen()),
         const SizedBox(width: 15.0),
-        _buildButton(context, tWoundimg, S.of(context).tBleeding, const Bleeding()),
+        _buildButton(
+          context,
+          tWoundimg,
+          S.of(context).tBleeding,
+          const Bleeding(),
+        ),
         const SizedBox(width: 15.0),
-        _buildButton(context, tBurnimg, S.of(context).tBurns, const BurnScreen()),
+        _buildButton(
+          context,
+          tBurnimg,
+          S.of(context).tBurns,
+          const BurnScreen(),
+        ),
       ],
     );
   }
@@ -143,9 +153,19 @@ class HomeScreen extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        _buildButton(context, tChokingimg, S.of(context).tChoking, const ChokingScreen()),
+        _buildButton(
+          context,
+          tChokingimg,
+          S.of(context).tChoking,
+          const ChokingScreen(),
+        ),
         const SizedBox(width: 15.0),
-        _buildButton(context, tPoisonimg, S.of(context).tPoisons, const PoisonScreen()),
+        _buildButton(
+          context,
+          tPoisonimg,
+          S.of(context).tPoisons,
+          const PoisonScreen(),
+        ),
         const SizedBox(width: 15.0),
         _buildButton(
           context,
@@ -218,9 +238,12 @@ class HomeScreen extends StatelessWidget {
     String text,
     Widget screen,
   ) {
-    return SizedBox(
-      width: 100,
-      height: 100,
+    return ConstrainedBox(
+      constraints: const BoxConstraints(
+        minWidth: 100,
+        maxWidth: 110,
+        minHeight: 100,
+      ),
       child: OutlinedButton(
         style: OutlinedButton.styleFrom(
           shape: RoundedRectangleBorder(
@@ -248,8 +271,10 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(height: 8.0),
             Text(
               text,
+              textAlign: TextAlign.center,
+              softWrap: true,
               style: const TextStyle(
-                fontSize: 15,
+                fontSize: 13, // Slightly smaller for better fit
                 fontWeight: FontWeight.w700,
                 fontFamily: "Poppins",
               ),

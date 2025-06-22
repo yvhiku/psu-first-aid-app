@@ -35,15 +35,6 @@ class ProfileScreen extends StatelessWidget {
         ),
         centerTitle: true,
         elevation: 0,
-        actions: [
-          Container(
-            margin: const EdgeInsets.only(right: 20, top: 7),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: tCardBgColor,
-            ),
-          ),
-        ],
       ),
       body: _buildBody(context, ap, height),
     );
@@ -59,7 +50,10 @@ class ProfileScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(S.of(context).tuserNotFound, style: TextStyle(fontSize: 18)),
+            Text(
+              S.of(context).tuserNotFound,
+              style: const TextStyle(fontSize: 18),
+            ),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () => ap.getDataFromFirestore(),
@@ -69,7 +63,7 @@ class ProfileScreen extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20.0),
                 ),
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   horizontal: tDefaultSize,
                   vertical: tButtonHeight / 2,
                 ),
@@ -77,7 +71,7 @@ class ProfileScreen extends StatelessWidget {
               ),
               child: Text(
                 S.of(context).tretryLoading,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w500,
                   fontFamily: "Poppins",
@@ -98,21 +92,35 @@ class ProfileScreen extends StatelessWidget {
             children: [
               _buildProfileImage(user, height),
               const SizedBox(height: 15),
-              Text(
-                user.name,
-                style: const TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.w600,
-                  fontFamily: "Poppins",
-                ),
-              ),
-              Text(
-                user.bio,
-                style: const TextStyle(
-                  color: Colors.grey,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w400,
-                  fontFamily: "Poppins",
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: Column(
+                  children: [
+                    Text(
+                      user.name,
+                      textAlign: TextAlign.center,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                      style: const TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w600,
+                        fontFamily: "Poppins",
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      user.bio,
+                      textAlign: TextAlign.center,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 2,
+                      style: const TextStyle(
+                        color: Colors.grey,
+                        fontSize: 18,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: "Poppins",
+                      ),
+                    ),
+                  ],
                 ),
               ),
               const SizedBox(height: tDefaultSize),
@@ -226,7 +234,7 @@ class ProfileScreen extends StatelessWidget {
       children: [
         Text(
           header,
-          style: TextStyle(
+          style: const TextStyle(
             color: tPrimaryColor,
             fontSize: 24,
             fontWeight: FontWeight.w600,
@@ -240,7 +248,7 @@ class ProfileScreen extends StatelessWidget {
   }
 }
 
-
+// MenuButtons Widget
 class MenuButtons extends StatelessWidget {
   final IconData icon;
   final String title;
@@ -266,7 +274,7 @@ class MenuButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isRTL = Directionality.of(context) == TextDirection.rtl;
-    
+
     return Column(
       children: [
         SizedBox(
@@ -278,39 +286,35 @@ class MenuButtons extends StatelessWidget {
               ),
               foregroundColor: textColor ?? Colors.black,
               side: BorderSide(color: borderColor ?? Colors.grey),
-              padding: const EdgeInsets.symmetric(
-                vertical: 20,
-                horizontal: 12,
-              ),
+              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 12),
               alignment: isRTL ? Alignment.centerRight : Alignment.centerLeft,
             ),
             onPressed: onPressed,
-            child: Padding(
-              padding: EdgeInsets.only(
-                left: isRTL ? 0 : horizontalPadding!,
-                right: isRTL ? horizontalPadding! : 0,
-              ),
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                mainAxisAlignment: isRTL ? MainAxisAlignment.end : MainAxisAlignment.start,
-                children: [
-                  _DirectionAwareIcon( // Using the private implementation
-                    icon: icon,
-                    size: iconSize,
-                    color: iconColor,
-                  ),
-                  const SizedBox(width: 12),
-                  Text(
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: isRTL
+                  ? MainAxisAlignment.end
+                  : MainAxisAlignment.start,
+              children: [
+                _DirectionAwareIcon(
+                  icon: icon,
+                  size: iconSize,
+                  color: iconColor,
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Text(
                     title,
+                    softWrap: true,
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.normal,
                       fontFamily: "Poppins",
-                      color: textColor,
+                      color: textColor ?? Colors.black,
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),
@@ -320,17 +324,12 @@ class MenuButtons extends StatelessWidget {
   }
 }
 
-
 class _DirectionAwareIcon extends StatelessWidget {
   final IconData icon;
   final double? size;
   final Color? color;
 
-  const _DirectionAwareIcon({
-    required this.icon,
-    this.size,
-    this.color,
-  });
+  const _DirectionAwareIcon({required this.icon, this.size, this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -340,16 +339,11 @@ class _DirectionAwareIcon extends StatelessWidget {
     return Transform(
       alignment: Alignment.center,
       transform: Matrix4.rotationY(shouldMirror ? math.pi : 0),
-      child: Icon(
-        icon,
-        size: size,
-        color: color,
-      ),
+      child: Icon(icon, size: size, color: color),
     );
   }
 
   bool _shouldMirrorIcon(IconData icon) {
-    // List of icons that should NOT be mirrored
     const nonMirroredIcons = [
       Icons.person,
       Icons.person_outline,
@@ -363,7 +357,6 @@ class _DirectionAwareIcon extends StatelessWidget {
       Icons.help,
       Icons.email,
     ];
-    
     return !nonMirroredIcons.contains(icon);
   }
 }

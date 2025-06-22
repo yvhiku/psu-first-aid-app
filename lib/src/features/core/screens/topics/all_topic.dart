@@ -1,6 +1,7 @@
 import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
+import 'package:first_aid_app/src/features/core/controllers/widgets/navbar.dart';
 import 'package:first_aid_app/src/features/core/screens/topics/allergic_reactions.dart';
 import 'package:first_aid_app/src/features/core/screens/topics/assessing_injured_person.dart';
 import 'package:first_aid_app/src/features/core/screens/topics/asthma.dart';
@@ -24,6 +25,8 @@ import 'package:first_aid_app/src/features/core/screens/topics/sprainsstrains.da
 import 'package:first_aid_app/src/features/core/screens/topics/stroke.dart';
 import 'package:first_aid_app/src/features/core/screens/topics/wound_care.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class AllTopicsScreen extends StatelessWidget {
   const AllTopicsScreen({super.key});
@@ -98,48 +101,58 @@ class AllTopicsScreen extends StatelessWidget {
   }
 
   Widget _buildButton(
-    BuildContext context,
-    String image,
-    String text,
-    Widget screen,
-  ) {
-    return SizedBox(
-      width: 100,
-      height: 100,
-      child: OutlinedButton(
-        style: OutlinedButton.styleFrom(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15.0),
-          ),
-          foregroundColor: tWhiteColor,
-          backgroundColor: tPrimaryColor,
-          side: BorderSide(color: tSecondaryColor),
-          padding: const EdgeInsets.all(8.0),
+  BuildContext context,
+  String image,
+  String text,
+  Widget screen,
+) {
+  return ConstrainedBox(
+    constraints: const BoxConstraints(
+      minWidth: 100,
+      maxWidth: 110,
+      minHeight: 100,
+    ),
+    child: OutlinedButton(
+      style: OutlinedButton.styleFrom(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15.0),
         ),
-        onPressed: () {
+        foregroundColor: tWhiteColor,
+        backgroundColor: tPrimaryColor,
+        side: BorderSide(color: tSecondaryColor),
+        padding: const EdgeInsets.all(8.0),
+      ),
+      onPressed: () {
+        if (screen is AllTopicsScreen) {
+          Get.find<NavigationController>().selectedIndex.value = 1;
+        } else {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => screen),
           );
-        },
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image(image: AssetImage(image), width: 40.0),
-            const SizedBox(height: 8.0),
-            Text(
-              text,
-              style: const TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.w700,
-                fontFamily: "Poppins",
-              ),
+        }
+      },
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image(image: AssetImage(image), width: 40.0),
+          const SizedBox(height: 8.0),
+          Text(
+            text,
+            textAlign: TextAlign.center,
+            softWrap: true,
+            style: const TextStyle(
+              fontSize: 13, // Slightly smaller for better fit
+              fontWeight: FontWeight.w700,
+              fontFamily: "Poppins",
             ),
-          ],
-        ),
+          ),
+        ],
       ),
-    );
-  }
+    ),
+  );
+}
+
 
   Widget _buildScrollableTopicsGrid(BuildContext context) {
     final List<Map<String, dynamic>> topics = [
