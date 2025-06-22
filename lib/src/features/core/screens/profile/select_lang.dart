@@ -53,6 +53,7 @@ class _LanguageSelectionScreenState1 extends State<LanguageSelectionScreen1> {
   }
 
   Widget _buildContent() {
+    // ignore: unused_local_variable
     final isRTL = _selectedLanguage == 'ar';
 
     return Padding(
