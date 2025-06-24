@@ -18,106 +18,79 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
+
     return Scaffold(appBar: _buildAppBar(height), body: _buildBody(context));
   }
 
   AppBar _buildAppBar(double height) {
     return AppBar(
-      // leading: const Icon(Icons.menu, color: Color.fromARGB(255, 139, 47, 49)),
       title: IconButton(
         onPressed: () {},
         icon: Image(image: AssetImage(tLogo), height: height * 0.05),
       ),
       centerTitle: true,
       elevation: 0,
-      actions: [
-        Container(
-          margin: const EdgeInsets.only(right: 20, top: 7),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            color: tCardBgColor,
-          ),
-        ),
-      ],
     );
   }
 
   Widget _buildBody(BuildContext context) {
     return SingleChildScrollView(
-      child: Center(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
         child: Column(
           children: [
-            _buildEmergencyCallContainer(context),
-            const SizedBox(height: 25.0),
-            _buildFirstButtonRow(context),
-            const SizedBox(height: 15.0),
-            _buildSecondButtonRow(context),
+            const SizedBox(height: 20),
+            _buildEmergencyCallSection(context),
+            const SizedBox(height: 25),
+            _buildDoctorGuide(context),
+            const SizedBox(height: 15),
+            _buildTopicGrid(context),
+            const SizedBox(height: 25),
+            _buildHospitalFinder(context), 
+            // _buildDailyTip(),
+            const SizedBox(height: 20),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildEmergencyCallContainer(BuildContext context) {
+  Widget _buildEmergencyCallSection(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-      padding: const EdgeInsets.all(25),
       width: double.infinity,
-      constraints: BoxConstraints(minHeight: 180),
+      padding: const EdgeInsets.symmetric(vertical: 20),
       decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(20),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.1),
-            blurRadius: 10,
-            offset: const Offset(0, 5),
-          ),
-        ],
+        color: Colors.red[700],
+        borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             S.of(context).tEmergencyNum,
-            style: TextStyle(
-              fontSize: 20,
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 18,
+              fontFamily: "Poppins",
               fontWeight: FontWeight.bold,
-              fontFamily: 'Poppins',
-              color: tSecondaryColor,
             ),
           ),
-          const SizedBox(height: 20),
-          Container(
-            width: 140,
-            height: 70,
-            decoration: BoxDecoration(
-              color: Colors.red[700],
-              borderRadius: BorderRadius.circular(15),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.1),
-                  blurRadius: 6,
-                  offset: const Offset(0, 3),
-                ),
-              ],
+          const SizedBox(height: 10),
+          ElevatedButton(
+            onPressed: () => _makeEmergencyCall(context),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
             ),
-            child: Material(
-              color: Colors.transparent,
-              child: InkWell(
-                borderRadius: BorderRadius.circular(15),
-                onTap: () => _makeEmergencyCall(context),
-                child: Center(
-                  child: Text(
-                    "112",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Poppins',
-                    ),
-                  ),
-                ),
+            child: const Text(
+              "112",
+              style: TextStyle(
+                color: Colors.red,
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+                fontFamily: "Poppins",
               ),
             ),
           ),
@@ -126,56 +99,103 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildFirstButtonRow(BuildContext context) {
+  Widget _buildDoctorGuide(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        _buildButton(context, tCprimg, S.of(context).tCpr, CprScreen()),
-        const SizedBox(width: 15.0),
-        _buildButton(
-          context,
-          tWoundimg,
-          S.of(context).tBleeding,
-          const Bleeding(),
+        Image.asset(
+          'assets/images/doctor_guide.png',
+          height: 100,
+          width: 80,
+          fit: BoxFit.contain,
         ),
-        const SizedBox(width: 15.0),
-        _buildButton(
-          context,
-          tBurnimg,
-          S.of(context).tBurns,
-          const BurnScreen(),
+        const SizedBox(width: 12),
+        Expanded(
+          child: Container(
+            padding: const EdgeInsets.all(12),
+            decoration: BoxDecoration(
+              color: tCardBgColor,
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Text(
+              S.of(context).doctor,
+              style: TextStyle(
+                fontFamily: "Poppins",
+                fontSize: 14,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ),
         ),
       ],
     );
   }
 
-  Widget _buildSecondButtonRow(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        _buildButton(
+  Widget _buildTopicGrid(BuildContext context) {
+    final topics = [
+      {'img': tCprimg, 'text': S.of(context).tCpr, 'screen': CprScreen()},
+      {'img': tWoundimg, 'text': S.of(context).tBleeding, 'screen': Bleeding()},
+      {'img': tBurnimg, 'text': S.of(context).tBurns, 'screen': BurnScreen()},
+      {
+        'img': tChokingimg,
+        'text': S.of(context).tChoking,
+        'screen': ChokingScreen(),
+      },
+      {
+        'img': tPoisonimg,
+        'text': S.of(context).tPoisons,
+        'screen': PoisonScreen(),
+      },
+      {
+        'img': tServiceToOhersimg,
+        'text': S.of(context).tAllTopics,
+        'screen': AllTopicsScreen(),
+      },
+    ];
+
+    return GridView.builder(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 3,
+        mainAxisSpacing: 16,
+        crossAxisSpacing: 16,
+        childAspectRatio: 1,
+      ),
+      itemCount: topics.length,
+      itemBuilder: (context, index) {
+        final item = topics[index];
+        return _buildButton(
           context,
-          tChokingimg,
-          S.of(context).tChoking,
-          const ChokingScreen(),
-        ),
-        const SizedBox(width: 15.0),
-        _buildButton(
-          context,
-          tPoisonimg,
-          S.of(context).tPoisons,
-          const PoisonScreen(),
-        ),
-        const SizedBox(width: 15.0),
-        _buildButton(
-          context,
-          tServiceToOhersimg,
-          S.of(context).tAllTopics,
-          AllTopicsScreen(),
-        ),
-      ],
+          item['img'] as String,
+          item['text'] as String,
+          item['screen'] as Widget,
+        );
+      },
     );
   }
+
+  // Widget _buildDailyTip() {
+  //   return Container(
+  //     padding: const EdgeInsets.all(16),
+  //     decoration: BoxDecoration(
+  //       color: Colors.orange.shade100,
+  //       borderRadius: BorderRadius.circular(12),
+  //     ),
+  //     child: Row(
+  //       children: const [
+  //         Icon(Icons.notifications_active, color: Colors.orange),
+  //         SizedBox(width: 12),
+  //         Expanded(
+  //           child: Text(
+  //             "Tip: Would you know what to do if someone fainted?",
+  //             style: TextStyle(fontFamily: "Poppins"),
+  //           ),
+  //         )
+  //       ],
+  //     ),
+  //   );
+  // }
 
   void _makeEmergencyCall(BuildContext context) {
     showDialog(
@@ -183,7 +203,7 @@ class HomeScreen extends StatelessWidget {
       builder: (context) => AlertDialog(
         title: Text(
           S.of(context).temergencyCall,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.black,
             fontFamily: "Poppins",
             fontSize: 20,
@@ -192,7 +212,7 @@ class HomeScreen extends StatelessWidget {
         ),
         content: Text(
           S.of(context).tareYouSureCall112,
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.black,
             fontFamily: "Poppins",
             fontSize: 14,
@@ -204,7 +224,7 @@ class HomeScreen extends StatelessWidget {
             onPressed: () => Navigator.pop(context),
             child: Text(
               S.of(context).tcancel,
-              style: TextStyle(
+              style: const TextStyle(
                 color: tPrimaryColor,
                 fontFamily: "Poppins",
                 fontSize: 14,
@@ -219,7 +239,7 @@ class HomeScreen extends StatelessWidget {
             },
             child: Text(
               S.of(context).tcall,
-              style: TextStyle(
+              style: const TextStyle(
                 color: tPrimaryColor,
                 fontFamily: "Poppins",
                 fontSize: 14,
@@ -274,7 +294,7 @@ class HomeScreen extends StatelessWidget {
               textAlign: TextAlign.center,
               softWrap: true,
               style: const TextStyle(
-                fontSize: 13, // Slightly smaller for better fit
+                fontSize: 13,
                 fontWeight: FontWeight.w700,
                 fontFamily: "Poppins",
               ),
@@ -285,3 +305,54 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+Widget _buildHospitalFinder(BuildContext context) {
+  return Container(
+    margin: const EdgeInsets.symmetric(vertical: 20),
+    width: double.infinity,
+    decoration: BoxDecoration(
+      color: Colors.green[50],
+      borderRadius: BorderRadius.circular(12),
+    ),
+    child: ListTile(
+      leading: const Icon(Icons.local_hospital, color: Colors.red),
+      title: Text(
+        S.of(context).findNearestHospital,
+        style: const TextStyle(
+          fontFamily: "Poppins",
+          fontWeight: FontWeight.w600,
+        ),
+      ),
+      trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+      onTap: () => _launchNearestHospital(context), // ✅ wrap in lambda
+    ),
+  );
+}
+
+
+Future<void> _launchNearestHospital(BuildContext context) async {
+  const yandexUrl = 'yandexmaps://search?text=больница';
+  const fallbackGoogleUrl = 'https://www.google.com/maps/search/?api=1&query=nearest+hospital';
+
+  final Uri yandexUri = Uri.parse(yandexUrl);
+  final Uri googleUri = Uri.parse(fallbackGoogleUrl);
+
+  bool launched = false;
+
+  if (await canLaunchUrl(yandexUri)) {
+    launched = await launchUrl(yandexUri);
+  } else if (await canLaunchUrl(googleUri)) {
+    launched = await launchUrl(googleUri);
+  }
+
+  // Access context only after ensuring we're still in the same frame
+  if (!launched) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(S.of(context).couldNotLaunchMaps)),
+      );
+    });
+  }
+}
+
+

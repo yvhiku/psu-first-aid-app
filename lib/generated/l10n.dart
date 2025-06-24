@@ -74,6 +74,36 @@ class S {
     return Intl.message('Profile', name: 'profile', desc: '', args: []);
   }
 
+  /// `Find Nearest Hospital`
+  String get findNearestHospital {
+    return Intl.message(
+      'Find Nearest Hospital',
+      name: 'findNearestHospital',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Could not launch Yandex or Google Maps.`
+  String get couldNotLaunchMaps {
+    return Intl.message(
+      'Could not launch Yandex or Google Maps.',
+      name: 'couldNotLaunchMaps',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tap any icon to learn how to respond in an emergency!`
+  String get doctor {
+    return Intl.message(
+      'Tap any icon to learn how to respond in an emergency!',
+      name: 'doctor',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Select Language`
   String get selectLanguage {
     return Intl.message(

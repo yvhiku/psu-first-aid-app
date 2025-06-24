@@ -201,6 +201,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "اختر لغتك المفضلة",
     ),
     "continueText": MessageLookupByLibrary.simpleMessage("متابعة"),
+    "couldNotLaunchMaps": MessageLookupByLibrary.simpleMessage(
+      "تعذر فتح خرائط ياندكس أو خرائط جوجل.",
+    ),
     "cprHeading": MessageLookupByLibrary.simpleMessage(
       "الإنعاش القلبي الرئوي (CPR)",
     ),
@@ -304,6 +307,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "خطوات الإسعافات الأولية:",
     ),
     "diabeticsTitle": MessageLookupByLibrary.simpleMessage("مرض السكري"),
+    "doctor": MessageLookupByLibrary.simpleMessage(
+      "اضغط على أيقونة لتتعلم كيفية التصرف في حالة الطوارئ!",
+    ),
     "drugOverdoseImportantNotes": MessageLookupByLibrary.simpleMessage(
       "ملاحظات مهمة:",
     ),
@@ -418,6 +424,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "eyeInjuryType3": MessageLookupByLibrary.simpleMessage("- جروح أو ثقوب"),
     "eyeInjuryTypesHeading": MessageLookupByLibrary.simpleMessage(
       "أنواع إصابات العين:",
+    ),
+    "findNearestHospital": MessageLookupByLibrary.simpleMessage(
+      "ابحث عن أقرب مستشفى",
     ),
     "headInjuryHeading": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية لإصابات الرأس",

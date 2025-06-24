@@ -219,6 +219,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Выберите ваш язык",
     ),
     "continueText": MessageLookupByLibrary.simpleMessage("Продолжить"),
+    "couldNotLaunchMaps": MessageLookupByLibrary.simpleMessage(
+      "Не удалось открыть Яндекс.Карты или Google Карты.",
+    ),
     "cprHeading": MessageLookupByLibrary.simpleMessage(
       "Сердечно-легочная реанимация (СЛР)",
     ),
@@ -324,6 +327,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Первая помощь:",
     ),
     "diabeticsTitle": MessageLookupByLibrary.simpleMessage("Диабет"),
+    "doctor": MessageLookupByLibrary.simpleMessage(
+      "Нажмите на любую иконку, чтобы узнать, как действовать в экстренной ситуации!",
+    ),
     "drugOverdoseImportantNotes": MessageLookupByLibrary.simpleMessage(
       "Важно:",
     ),
@@ -440,6 +446,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "eyeInjuryTypesHeading": MessageLookupByLibrary.simpleMessage(
       "Виды травм:",
+    ),
+    "findNearestHospital": MessageLookupByLibrary.simpleMessage(
+      "Найти ближайшую больницу",
     ),
     "headInjuryHeading": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при травме головы",

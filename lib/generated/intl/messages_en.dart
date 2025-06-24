@@ -193,6 +193,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Choose Your Language",
     ),
     "continueText": MessageLookupByLibrary.simpleMessage("Continue"),
+    "couldNotLaunchMaps": MessageLookupByLibrary.simpleMessage(
+      "Could not launch Yandex or Google Maps.",
+    ),
     "cprHeading": MessageLookupByLibrary.simpleMessage(
       "Cardiopulmonary Resuscitation (CPR)",
     ),
@@ -300,6 +303,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "First Aid Steps:",
     ),
     "diabeticsTitle": MessageLookupByLibrary.simpleMessage("Diabetics"),
+    "doctor": MessageLookupByLibrary.simpleMessage(
+      "Tap any icon to learn how to respond in an emergency!",
+    ),
     "drugOverdoseImportantNotes": MessageLookupByLibrary.simpleMessage(
       "Important Notes:",
     ),
@@ -418,6 +424,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "eyeInjuryTypesHeading": MessageLookupByLibrary.simpleMessage(
       "Types of Eye Injuries:",
+    ),
+    "findNearestHospital": MessageLookupByLibrary.simpleMessage(
+      "Find Nearest Hospital",
     ),
     "headInjuryHeading": MessageLookupByLibrary.simpleMessage(
       "Head Injury First Aid",
