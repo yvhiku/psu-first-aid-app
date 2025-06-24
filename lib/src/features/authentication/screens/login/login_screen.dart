@@ -20,6 +20,7 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController phoneController = TextEditingController();
+  bool _isLoading = false;
 
   Country selectedCountry = Country(
     phoneCode: "7",
@@ -48,108 +49,127 @@ class _LoginScreenState extends State<LoginScreen> {
         centerTitle: true,
         elevation: 0,
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.all(tDefaultSize),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              const SizedBox(height: 100),
-              Image(
-                image: const AssetImage(tWelcomeScreenImage),
-                height: size.height * 0.2,
-              ),
-              Text(
-                S.of(context).tLoginTitle,
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: "Poppins",
-                ),
-              ),
-              Text(
-                S.of(context).tLoginSubTitle,
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.normal,
-                  fontFamily: "Poppins",
-                ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  const SizedBox(height: 30),
-                  SizedBox(
-                    width: double.infinity,
-                    child: OutlinedButton.icon(
-                      icon: Image(
-                        image: AssetImage(tGoogleLogoImage),
-                        width: 20.0,
-                      ),
-                      style: OutlinedButton.styleFrom(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadiusGeometry.all(
-                            Radius.circular(20),
-                          ),
-                        ),
-                        foregroundColor: tSecondaryColor,
-                        side: BorderSide(color: tSecondaryColor),
-                        padding: EdgeInsets.symmetric(vertical: tButtonHeight),
-                      ),
-                      onPressed: () async {
-                        final ap = Provider.of<AuthProvider1>(
-                          context,
-                          listen: false,
-                        );
-                        await ap.signInWithGoogle(
-                          context,
-                          () {
-                            Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                builder: (_) => const UserInformationScreen(),
-                              ),
-                            );
-                          },
-                          () {
-                            Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(builder: (_) => const NavBar()),
-                            );
-                          },
-                        );
-                      },
-                      label: Text(S.of(context).tSignInWithGoogle),
+      body: _isLoading
+          ? const Center(child: CircularProgressIndicator())
+          : SingleChildScrollView(
+              child: Container(
+                padding: EdgeInsets.all(tDefaultSize),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    const SizedBox(height: 100),
+                    Image(
+                      image: const AssetImage(tWelcomeScreenImage),
+                      height: size.height * 0.2,
                     ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 30),
-              Padding(
-                padding: const EdgeInsets.only(top: 20.0),
-                child: TextButton(
-                  onPressed: () => Get.to(() => const ContactSupportScreen()),
-                  child: Text.rich(
-                    TextSpan(
-                      text: "${S.of(context).tNeedHelp} ",
-                      style: TextStyle(color: Colors.grey[600]),
+                    Text(
+                      S.of(context).tLoginTitle,
+                      style: TextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: "Poppins",
+                      ),
+                    ),
+                    Text(
+                      S.of(context).tLoginSubTitle,
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.normal,
+                        fontFamily: "Poppins",
+                      ),
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        TextSpan(
-                          text: S.of(context).tContactSupport,
-                          style: TextStyle(
-                            color: tPrimaryColor,
-                            fontWeight: FontWeight.bold,
+                        const SizedBox(height: 30),
+                        SizedBox(
+                          width: double.infinity,
+                          child: OutlinedButton.icon(
+                            icon: Image(
+                              image: AssetImage(tGoogleLogoImage),
+                              width: 20.0,
+                            ),
+                            style: OutlinedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadiusGeometry.all(
+                                  Radius.circular(20),
+                                ),
+                              ),
+                              foregroundColor: tSecondaryColor,
+                              side: BorderSide(color: tSecondaryColor),
+                              padding: EdgeInsets.symmetric(
+                                vertical: tButtonHeight,
+                              ),
+                            ),
+                            onPressed: () async {
+                              setState(() {
+                                _isLoading = true;
+                              });
+
+                              final ap = Provider.of<AuthProvider1>(
+                                context,
+                                listen: false,
+                              );
+                              await ap.signInWithGoogle(
+                                context,
+                                () {
+                                  setState(() {
+                                    _isLoading = false;
+                                  });
+                                  Navigator.pushReplacement(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (_) =>
+                                          const UserInformationScreen(),
+                                    ),
+                                  );
+                                },
+                                () {
+                                  setState(() {
+                                    _isLoading = false;
+                                  });
+                                  Navigator.pushReplacement(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (_) => const NavBar(),
+                                    ),
+                                  );
+                                },
+                              );
+                            },
+
+                            label: Text(S.of(context).tSignInWithGoogle),
                           ),
                         ),
                       ],
                     ),
-                  ),
+                    const SizedBox(height: 30),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20.0),
+                      child: TextButton(
+                        onPressed: () =>
+                            Get.to(() => const ContactSupportScreen()),
+                        child: Text.rich(
+                          TextSpan(
+                            text: "${S.of(context).tNeedHelp} ",
+                            style: TextStyle(color: Colors.grey[600]),
+                            children: [
+                              TextSpan(
+                                text: S.of(context).tContactSupport,
+                                style: TextStyle(
+                                  color: tPrimaryColor,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-            ],
-          ),
-        ),
-      ),
+            ),
     );
   }
 
