@@ -25,10 +25,6 @@ class ProfileScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        // leading: const Icon(
-        //   Icons.menu,
-        //   color: Color.fromARGB(255, 139, 47, 49),
-        // ),
         title: IconButton(
           onPressed: () {},
           icon: Image(image: AssetImage(tLogo), height: height * 0.05),
@@ -50,32 +46,20 @@ class ProfileScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              S.of(context).tuserNotFound,
-              style: const TextStyle(fontSize: 18),
-            ),
+            Text(S.of(context).tuserNotFound, style: const TextStyle(fontSize: 18)),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () => ap.getDataFromFirestore(),
               style: ElevatedButton.styleFrom(
                 backgroundColor: tPrimaryColor,
                 foregroundColor: Colors.white,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0),
-                ),
-                padding: const EdgeInsets.symmetric(
-                  horizontal: tDefaultSize,
-                  vertical: tButtonHeight / 2,
-                ),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+                padding: const EdgeInsets.symmetric(horizontal: tDefaultSize, vertical: tButtonHeight / 2),
                 elevation: 0,
               ),
               child: Text(
                 S.of(context).tretryLoading,
-                style: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500,
-                  fontFamily: "Poppins",
-                ),
+                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500, fontFamily: "Poppins"),
               ),
             ),
           ],
@@ -85,170 +69,63 @@ class ProfileScreen extends StatelessWidget {
 
     final user = ap.userModel!;
     return SingleChildScrollView(
-      child: Container(
+      child: Padding(
         padding: const EdgeInsets.all(tDefaultSize),
-        child: Center(
-          child: Column(
-            children: [
-              _buildProfileImage(user, height),
-              const SizedBox(height: 15),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                child: Column(
-                  children: [
-                    Text(
-                      user.name,
-                      textAlign: TextAlign.center,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 1,
-                      style: const TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.w600,
-                        fontFamily: "Poppins",
-                      ),
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      user.bio,
-                      textAlign: TextAlign.center,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 2,
-                      style: const TextStyle(
-                        color: Colors.grey,
-                        fontSize: 18,
-                        fontWeight: FontWeight.w400,
-                        fontFamily: "Poppins",
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: tDefaultSize),
-              _buildProfileSection(
-                header: S.of(context).tProfileHeader1,
-                buttons: [
-                  MenuButtons(
-                    icon: Icons.person_2_outlined,
-                    title: S.of(context).tMyAccount,
-                    onPressed: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (_) => const UpdatedProfileScreen(),
-                      ),
-                    ),
-                  ),
-                  MenuButtons(
-                    icon: Icons.public_sharp,
-                    title: S.of(context).tChangeLang,
-                    onPressed: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (_) => const LanguageSelectionScreen1(),
-                      ),
-                    ),
-                  ),
-                  MenuButtons(
-                    icon: Icons.logout,
-                    title: S.of(context).tLogout,
-                    textColor: tPrimaryColor,
-                    onPressed: () {
-                      ap.userSignOut().then(
-                        (value) => Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const WelcomeScreen(),
-                          ),
-                        ),
-                      );
-                    },
-                  ),
-                ],
-              ),
-              _buildProfileSection(
-                header: S.of(context).tProfileHeader2,
-                buttons: [
-                  MenuButtons(
-                    icon: Icons.support_agent,
-                    title: S.of(context).tContactUs,
-                    onPressed: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (_) => ContactSupportScreen()),
-                    ),
-                  ),
-                ],
-              ),
-              _buildProfileSection(
-                header: S.of(context).tProfileHeader3,
-                buttons: [
-                  MenuButtons(
-                    icon: Icons.privacy_tip_outlined,
-                    title: S.of(context).tPrivacyPol,
-                    onPressed: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const PrivacyPolicyScreen(),
-                      ),
-                    ),
-                  ),
-                  MenuButtons(
-                    icon: Icons.info_outline,
-                    title: S.of(context).tAboutUs,
-                    onPressed: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const AboutScreen(),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
+        child: Column(
+          children: [
+            _buildProfileImage(user, height),
+            const SizedBox(height: 15),
+            Text(
+              user.name,
+              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w600, fontFamily: "Poppins"),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              user.bio,
+              style: const TextStyle(fontSize: 16, color: Colors.grey, fontFamily: "Poppins"),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 25),
+            _buildProfileSection(header: S.of(context).tProfileHeader1, buttons: [
+              MenuButtons(icon: Icons.person_2_outlined, title: S.of(context).tMyAccount, onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const UpdatedProfileScreen()))),
+              MenuButtons(icon: Icons.public_sharp, title: S.of(context).tChangeLang, onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const LanguageSelectionScreen1()))),
+              MenuButtons(icon: Icons.logout, title: S.of(context).tLogout, textColor: tPrimaryColor, onPressed: () => ap.userSignOut().then((value) => Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => const WelcomeScreen())))),
+            ]),
+            _buildProfileSection(header: S.of(context).tProfileHeader2, buttons: [
+              MenuButtons(icon: Icons.support_agent, title: S.of(context).tContactUs, onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => ContactSupportScreen()))),
+            ]),
+            _buildProfileSection(header: S.of(context).tProfileHeader3, buttons: [
+              MenuButtons(icon: Icons.privacy_tip_outlined, title: S.of(context).tPrivacyPol, onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const PrivacyPolicyScreen()))),
+              MenuButtons(icon: Icons.info_outline, title: S.of(context).tAboutUs, onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const AboutScreen()))),
+            ]),
+          ],
         ),
       ),
     );
   }
 
   Widget _buildProfileImage(UserModel user, double height) {
-    return Stack(
-      children: [
-        SizedBox(
-          width: 170,
-          height: 170,
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(100),
-            child: user.profilePic.isNotEmpty
-                ? Image.network(user.profilePic, fit: BoxFit.cover)
-                : Image.asset(tProfileImg, fit: BoxFit.cover),
-          ),
-        ),
-      ],
+    return CircleAvatar(
+      radius: 60,
+      backgroundImage: user.profilePic.isNotEmpty ? NetworkImage(user.profilePic) : AssetImage(tProfileImg) as ImageProvider,
     );
   }
 
-  Widget _buildProfileSection({
-    required String header,
-    required List<MenuButtons> buttons,
-  }) {
-    return Column(
-      children: [
-        Text(
-          header,
-          style: const TextStyle(
-            color: tPrimaryColor,
-            fontSize: 24,
-            fontWeight: FontWeight.w600,
-            fontFamily: "Poppins",
-          ),
-        ),
-        const SizedBox(height: 10),
-        ...buttons,
-      ],
+  Widget _buildProfileSection({required String header, required List<MenuButtons> buttons}) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 12),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(header, style: const TextStyle(color: tPrimaryColor, fontSize: 20, fontWeight: FontWeight.w600, fontFamily: "Poppins")),
+          const SizedBox(height: 10),
+          ...buttons,
+        ],
+      ),
     );
   }
 }
 
-// MenuButtons Widget
 class MenuButtons extends StatelessWidget {
   final IconData icon;
   final String title;
@@ -259,67 +136,26 @@ class MenuButtons extends StatelessWidget {
   final double? horizontalPadding;
   final VoidCallback? onPressed;
 
-  const MenuButtons({
-    super.key,
-    required this.icon,
-    required this.title,
-    this.iconColor,
-    this.textColor,
-    this.borderColor,
-    this.iconSize = 25,
-    this.horizontalPadding = 24,
-    this.onPressed,
-  });
+  const MenuButtons({super.key, required this.icon, required this.title, this.iconColor, this.textColor, this.borderColor, this.iconSize = 22, this.horizontalPadding = 16, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     final isRTL = Directionality.of(context) == TextDirection.rtl;
 
-    return Column(
-      children: [
-        SizedBox(
-          width: double.infinity,
-          child: OutlinedButton(
-            style: OutlinedButton.styleFrom(
-              shape: const RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(20)),
-              ),
-              foregroundColor: textColor ?? Colors.black,
-              side: BorderSide(color: borderColor ?? Colors.grey),
-              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 12),
-              alignment: isRTL ? Alignment.centerRight : Alignment.centerLeft,
-            ),
-            onPressed: onPressed,
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: isRTL
-                  ? MainAxisAlignment.end
-                  : MainAxisAlignment.start,
-              children: [
-                _DirectionAwareIcon(
-                  icon: icon,
-                  size: iconSize,
-                  color: iconColor,
-                ),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: Text(
-                    title,
-                    softWrap: true,
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.normal,
-                      fontFamily: "Poppins",
-                      color: textColor ?? Colors.black,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-        const SizedBox(height: 15),
-      ],
+    return Container(
+      margin: const EdgeInsets.symmetric(vertical: 6),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(14),
+        boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 6, offset: Offset(0, 3))],
+      ),
+      child: ListTile(
+        contentPadding: EdgeInsets.symmetric(horizontal: horizontalPadding!, vertical: 8),
+        leading: _DirectionAwareIcon(icon: icon, size: iconSize, color: iconColor ?? tPrimaryColor),
+        title: Text(title, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: textColor ?? Colors.black, fontFamily: "Poppins")),
+        trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16, color: Colors.grey),
+        onTap: onPressed,
+      ),
     );
   }
 }

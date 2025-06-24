@@ -1,4 +1,5 @@
 import 'dart:io';
+
 import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
 import 'package:first_aid_app/src/constants/sizes.dart';
@@ -16,10 +17,10 @@ class UpdatedProfileScreen extends StatefulWidget {
   const UpdatedProfileScreen({super.key});
 
   @override
-  State<UpdatedProfileScreen> createState() => _UpdatedProfileScreen();
+  State<UpdatedProfileScreen> createState() => _UpdatedProfileScreenState();
 }
 
-class _UpdatedProfileScreen extends State<UpdatedProfileScreen> {
+class _UpdatedProfileScreenState extends State<UpdatedProfileScreen> {
   File? image;
   final nameController = TextEditingController();
   final emailController = TextEditingController();
@@ -27,10 +28,10 @@ class _UpdatedProfileScreen extends State<UpdatedProfileScreen> {
 
   @override
   void dispose() {
-    super.dispose();
     nameController.dispose();
     emailController.dispose();
     bioController.dispose();
+    super.dispose();
   }
 
   void selectImage() async {
@@ -40,10 +41,7 @@ class _UpdatedProfileScreen extends State<UpdatedProfileScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final isLoading = Provider.of<AuthProvider1>(
-      context,
-      listen: true,
-    ).isLoading;
+    final isLoading = Provider.of<AuthProvider1>(context).isLoading;
     return Scaffold(
       appBar: AppBar(
         title: Text(S.of(context).tEditProfile),
@@ -51,231 +49,131 @@ class _UpdatedProfileScreen extends State<UpdatedProfileScreen> {
         elevation: 0,
       ),
       body: SafeArea(
-        child: isLoading == true
-            ? const Center(
-                child: CircularProgressIndicator(color: tPrimaryColor),
-              )
+        child: isLoading
+            ? const Center(child: CircularProgressIndicator(color: tPrimaryColor))
             : SingleChildScrollView(
                 padding: const EdgeInsets.all(tDefaultSize),
-                child: Center(
-                  child: Column(
-                    children: [
-                      InkWell(
-                        onTap: selectImage,
-                        child: Stack(
-                          children: [
-                            Container(
-                              width: 120,
-                              height: 120,
-                              decoration: BoxDecoration(
-                                border: Border.all(color: tSecondaryColor),
-                                borderRadius: BorderRadius.circular(100),
-                              ),
-                              child: image == null
-                                  ? Image.asset(tProfileImg)
-                                  : ClipRRect(
-                                      borderRadius: BorderRadius.circular(100),
-                                      child: Image.file(
-                                        image!,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    GestureDetector(
+                      onTap: selectImage,
+                      child: Stack(
+                        children: [
+                          CircleAvatar(
+                            radius: 60,
+                            backgroundImage: image == null
+                                ? AssetImage(tProfileImg) as ImageProvider
+                                : FileImage(image!),
+                            backgroundColor: Colors.grey.shade200,
+                          ),
+                          Positioned(
+                            bottom: 0,
+                            right: 0,
+                            child: CircleAvatar(
+                              radius: 18,
+                              backgroundColor: tPrimaryColor,
+                              child: const Icon(Icons.camera_alt, size: 18, color: Colors.white),
                             ),
-                            Positioned(
-                              bottom: 0,
-                              right: 0,
-                              child: Container(
-                                width: 35,
-                                height: 35,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(100),
-                                  color: tPrimaryColor,
-                                ),
-                                child: const Icon(
-                                  Icons.camera_alt,
-                                  color: Colors.white,
-                                  size: 20,
-                                ),
+                          )
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: tFormHeight),
+                    _buildTextField(
+                      context: context,
+                      controller: nameController,
+                      icon: Icons.person_outline,
+                      label: S.of(context).tFullname,
+                    ),
+                    const SizedBox(height: tFormHeight - 20),
+                    _buildTextField(
+                      context: context,
+                      controller: emailController,
+                      icon: Icons.email_outlined,
+                      label: S.of(context).tEmail,
+                    ),
+                    const SizedBox(height: tFormHeight - 20),
+                    _buildTextField(
+                      context: context,
+                      controller: bioController,
+                      icon: Icons.edit_outlined,
+                      label: S.of(context).ttellOthersAboutYou,
+                      maxLines: 3,
+                    ),
+                    const SizedBox(height: tFormHeight - 10),
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          elevation: 0,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          foregroundColor: tWhiteColor,
+                          backgroundColor: tPrimaryColor,
+                          padding: const EdgeInsets.symmetric(vertical: tButtonHeight),
+                        ),
+                        onPressed: storeData,
+                        child: Text(S.of(context).tcontinue),
+                      ),
+                    ),
+                    const SizedBox(height: tFormHeight - 10),
+                    TextButton(
+                      onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (_) => const ContactSupportScreen()),
+                      ),
+                      child: Text.rich(
+                        TextSpan(
+                          text: "${S.of(context).tNeedHelp} ",
+                          style: TextStyle(color: Colors.grey[600]),
+                          children: [
+                            TextSpan(
+                              text: S.of(context).tContactSupport,
+                              style: const TextStyle(
+                                color: tPrimaryColor,
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
                           ],
                         ),
                       ),
-                      const SizedBox(height: tFormHeight),
-                      Form(
-                        child: Column(
-                          children: [
-                            TextFormField(
-                              controller: nameController,
-                              cursorColor: tPrimaryColor,
-                              style: GoogleFonts.poppins(
-                                fontSize: 16,
-                                color: tPrimaryColor,
-                              ),
-                              decoration: InputDecoration(
-                                labelText: S.of(context).tFullname,
-                                labelStyle: GoogleFonts.poppins(
-                                  fontSize: 14,
-                                  color: Colors.grey.shade600,
-                                ),
-                                filled: true,
-                                fillColor: Colors.grey.shade100,
-                                contentPadding: const EdgeInsets.symmetric(
-                                  horizontal: 20,
-                                  vertical: 18,
-                                ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(16),
-                                  borderSide: BorderSide(
-                                    color: Colors.grey.shade300,
-                                  ),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(16),
-                                  borderSide: BorderSide(
-                                    color: tPrimaryColor,
-                                    width: 2,
-                                  ),
-                                ),
-                                prefixIcon: Icon(
-                                  Icons.person_outline,
-                                  color: tPrimaryColor,
-                                ),
-                              ),
-                            ),
-                            const SizedBox(height: tFormHeight - 20),
-                            TextFormField(
-                              controller: emailController,
-                              cursorColor: tPrimaryColor,
-                              style: GoogleFonts.poppins(
-                                fontSize: 16,
-                                color: tPrimaryColor,
-                              ),
-                              decoration: InputDecoration(
-                                labelText: S.of(context).tEmail,
-                                labelStyle: GoogleFonts.poppins(
-                                  fontSize: 14,
-                                  color: Colors.grey.shade600,
-                                ),
-                                filled: true,
-                                fillColor: Colors.grey.shade100,
-                                contentPadding: const EdgeInsets.symmetric(
-                                  horizontal: 20,
-                                  vertical: 18,
-                                ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(16),
-                                  borderSide: BorderSide(
-                                    color: Colors.grey.shade300,
-                                  ),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(16),
-                                  borderSide: BorderSide(
-                                    color: tPrimaryColor,
-                                    width: 2,
-                                  ),
-                                ),
-                                prefixIcon: Icon(
-                                  Icons.email_outlined,
-                                  color: tPrimaryColor,
-                                ),
-                              ),
-                            ),
-                            const SizedBox(height: tFormHeight - 20),
-                            TextFormField(
-                              controller: bioController,
-                              cursorColor: tPrimaryColor,
-                              maxLines: 3,
-                              style: GoogleFonts.poppins(
-                                fontSize: 15,
-                                color: Colors.black87,
-                              ),
-                              decoration: InputDecoration(
-                                labelText: S.of(context).ttellOthersAboutYou,
-                                labelStyle: GoogleFonts.poppins(
-                                  fontSize: 14,
-                                  color: Colors.grey[600],
-                                ),
-                                prefixIcon: Icon(
-                                  Icons.edit_outlined,
-                                  color: tPrimaryColor,
-                                ),
-                                filled: true,
-                                fillColor: Colors.grey[100],
-                                contentPadding: const EdgeInsets.symmetric(
-                                  horizontal: 20,
-                                  vertical: 16,
-                                ),
-                                enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(16),
-                                  borderSide: BorderSide(
-                                    color: Colors.grey.shade300,
-                                  ),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(16),
-                                  borderSide: BorderSide(
-                                    color: tPrimaryColor,
-                                    width: 2,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            const SizedBox(height: tFormHeight - 15),
-                            SizedBox(
-                              width: double.infinity,
-                              child: ElevatedButton(
-                                style: OutlinedButton.styleFrom(
-                                  elevation: 0,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20),
-                                  ),
-                                  foregroundColor: tWhiteColor,
-                                  backgroundColor: tPrimaryColor,
-                                  side: BorderSide(color: tSecondaryColor),
-                                  padding: EdgeInsets.symmetric(
-                                    vertical: tButtonHeight,
-                                  ),
-                                ),
-                                onPressed: () => storeData(),
-                                child: Text(S.of(context).tcontinue),
-                              ),
-                            ),
-                            const SizedBox(height: tFormHeight - 15),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 20.0),
-                              child: TextButton(
-                                onPressed: () => Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (_) => ContactSupportScreen(),
-                                  ),
-                                ),
-                                child: Text.rich(
-                                  TextSpan(
-                                    text: "${S.of(context).tNeedHelp} ",
-                                    style: TextStyle(color: Colors.grey[600]),
-                                    children: [
-                                      TextSpan(
-                                        text: S.of(context).tContactSupport,
-                                        style: TextStyle(
-                                          color: tPrimaryColor,
-                                          fontWeight: FontWeight.bold,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
+                    )
+                  ],
                 ),
               ),
+      ),
+    );
+  }
+
+  Widget _buildTextField({
+    required BuildContext context,
+    required TextEditingController controller,
+    required IconData icon,
+    required String label,
+    int maxLines = 1,
+  }) {
+    return TextFormField(
+      controller: controller,
+      maxLines: maxLines,
+      cursorColor: tPrimaryColor,
+      style: GoogleFonts.poppins(fontSize: 16, color: tPrimaryColor),
+      decoration: InputDecoration(
+        labelText: label,
+        labelStyle: GoogleFonts.poppins(fontSize: 14, color: Colors.grey.shade600),
+        prefixIcon: Icon(icon, color: tPrimaryColor),
+        filled: true,
+        fillColor: Colors.grey.shade100,
+        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16),
+          borderSide: BorderSide(color: Colors.grey.shade300),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16),
+          borderSide: const BorderSide(color: tPrimaryColor, width: 2),
+        ),
       ),
     );
   }
@@ -291,6 +189,7 @@ class _UpdatedProfileScreen extends State<UpdatedProfileScreen> {
       phoneNumber: "",
       uid: "",
     );
+
     if (image != null) {
       ap.saveUserDataToFirebase(
         context: context,
@@ -298,8 +197,8 @@ class _UpdatedProfileScreen extends State<UpdatedProfileScreen> {
         profilePic: image!,
         onSuccess: () {
           ap.saveUserDataToSP().then(
-            (value) => ap.setSignIn().then(
-              (value) => Navigator.pushAndRemoveUntil(
+            (_) => ap.setSignIn().then(
+              (_) => Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(builder: (context) => const NavBar()),
                 (route) => false,
