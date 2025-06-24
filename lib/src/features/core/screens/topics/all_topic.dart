@@ -79,9 +79,19 @@ class AllTopicsScreen extends StatelessWidget {
       children: [
         _buildButton(context, tCprimg, S.of(context).tCpr, CprScreen()),
         const SizedBox(width: 15.0),
-        _buildButton(context, tWoundimg, S.of(context).bleeding, const Bleeding()),
+        _buildButton(
+          context,
+          tWoundimg,
+          S.of(context).bleeding,
+          const Bleeding(),
+        ),
         const SizedBox(width: 15.0),
-        _buildButton(context, tBurnimg, S.of(context).burns, const BurnScreen()),
+        _buildButton(
+          context,
+          tBurnimg,
+          S.of(context).burns,
+          const BurnScreen(),
+        ),
       ],
     );
   }
@@ -90,9 +100,19 @@ class AllTopicsScreen extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        _buildButton(context, tChokingimg, S.of(context).tChoking, const ChokingScreen()),
+        _buildButton(
+          context,
+          tChokingimg,
+          S.of(context).tChoking,
+          const ChokingScreen(),
+        ),
         const SizedBox(width: 15.0),
-        _buildButton(context, tPoisonimg, S.of(context).tPoisons, const PoisonScreen()),
+        _buildButton(
+          context,
+          tPoisonimg,
+          S.of(context).tPoisons,
+          const PoisonScreen(),
+        ),
         const SizedBox(width: 15.0),
         _buildButton(context, tBitinigimg, S.of(context).bites, const Bites()),
       ],
@@ -100,58 +120,57 @@ class AllTopicsScreen extends StatelessWidget {
   }
 
   Widget _buildButton(
-  BuildContext context,
-  String image,
-  String text,
-  Widget screen,
-) {
-  return ConstrainedBox(
-    constraints: const BoxConstraints(
-      minWidth: 100,
-      maxWidth: 110,
-      minHeight: 100,
-    ),
-    child: OutlinedButton(
-      style: OutlinedButton.styleFrom(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15.0),
-        ),
-        foregroundColor: tWhiteColor,
-        backgroundColor: tPrimaryColor,
-        side: BorderSide(color: tSecondaryColor),
-        padding: const EdgeInsets.all(8.0),
+    BuildContext context,
+    String image,
+    String text,
+    Widget screen,
+  ) {
+    return ConstrainedBox(
+      constraints: const BoxConstraints(
+        minWidth: 100,
+        maxWidth: 110,
+        minHeight: 100,
       ),
-      onPressed: () {
-        if (screen is AllTopicsScreen) {
-          Get.find<NavigationController>().selectedIndex.value = 1;
-        } else {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => screen),
-          );
-        }
-      },
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image(image: AssetImage(image), width: 40.0),
-          const SizedBox(height: 8.0),
-          Text(
-            text,
-            textAlign: TextAlign.center,
-            softWrap: true,
-            style: const TextStyle(
-              fontSize: 13, // Slightly smaller for better fit
-              fontWeight: FontWeight.w700,
-              fontFamily: "Poppins",
-            ),
+      child: OutlinedButton(
+        style: OutlinedButton.styleFrom(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15.0),
           ),
-        ],
+          foregroundColor: tWhiteColor,
+          backgroundColor: tPrimaryColor,
+          side: BorderSide(color: tSecondaryColor),
+          padding: const EdgeInsets.all(8.0),
+        ),
+        onPressed: () {
+          if (screen is AllTopicsScreen) {
+            Get.find<NavigationController>().selectedIndex.value = 1;
+          } else {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => screen),
+            );
+          }
+        },
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image(image: AssetImage(image), width: 40.0),
+            const SizedBox(height: 8.0),
+            Text(
+              text,
+              textAlign: TextAlign.center,
+              softWrap: true,
+              style: const TextStyle(
+                fontSize: 13, // Slightly smaller for better fit
+                fontWeight: FontWeight.w700,
+                fontFamily: "Poppins",
+              ),
+            ),
+          ],
+        ),
       ),
-    ),
-  );
-}
-
+    );
+  }
 
   Widget _buildScrollableTopicsGrid(BuildContext context) {
     final List<Map<String, dynamic>> topics = [
@@ -165,7 +184,11 @@ class AllTopicsScreen extends StatelessWidget {
         'title': S.of(context).tAllergicReaction,
         'screen': const AllergicReactions(),
       },
-      {'image': tAsthmaimg, 'title': S.of(context).asthma, 'screen': const Asthma()},
+      {
+        'image': tAsthmaimg,
+        'title': S.of(context).asthma,
+        'screen': const Asthma(),
+      },
       {
         'image': tDiabeticsimg,
         'title': S.of(context).tDiabetics,
@@ -181,14 +204,26 @@ class AllTopicsScreen extends StatelessWidget {
         'title': S.of(context).tEyeInjury,
         'screen': const EyeInjuryScreen(),
       },
-      {'image': tHeadimg, 'title': S.of(context).tHeadInjury, 'screen': const HeadInjury()},
+      {
+        'image': tHeadimg,
+        'title': S.of(context).tHeadInjury,
+        'screen': const HeadInjury(),
+      },
       {
         'image': tHeartAttackimg,
         'title': S.of(context).tHeartCondition,
         'screen': const HeartCondition(),
       },
-      {'image': tSeizureimg, 'title': S.of(context).tSeizure, 'screen': const Seizures()},
-      {'image': tEpilepsyimg, 'title': S.of(context).tShock, 'screen': const Shock()},
+      {
+        'image': tSeizureimg,
+        'title': S.of(context).tSeizure,
+        'screen': const Seizures(),
+      },
+      {
+        'image': tEpilepsyimg,
+        'title': S.of(context).tShock,
+        'screen': const Shock(),
+      },
       {
         'image': tSpinalInjuryimg,
         'title': S.of(context).tSpinalInjury,
@@ -199,8 +234,16 @@ class AllTopicsScreen extends StatelessWidget {
         'title': S.of(context).tSprainsStrains,
         'screen': const SprainsStrains(),
       },
-      {'image': tStrotkeimg, 'title': S.of(context).tStroke, 'screen': const StrokeScreen()},
-      {'image': tBandAidimg, 'title': S.of(context).tWoundCare, 'screen': const WoundCare()},
+      {
+        'image': tStrotkeimg,
+        'title': S.of(context).tStroke,
+        'screen': const StrokeScreen(),
+      },
+      {
+        'image': tBandAidimg,
+        'title': S.of(context).tWoundCare,
+        'screen': const WoundCare(),
+      },
       {
         'image': tHelpingPersonimg,
         'title': S.of(context).tAssessing,
@@ -266,26 +309,28 @@ class AllTopicsScreen extends StatelessWidget {
         );
       },
       style: OutlinedButton.styleFrom(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10.0),
-        ),
-        foregroundColor: Colors.black,
         backgroundColor: Colors.white,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12.0),
+        ),
         side: BorderSide(color: Colors.grey.shade300),
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        elevation: 2,
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Image(image: AssetImage(image), width: 30, height: 30),
+          Image(image: AssetImage(image), width: 28, height: 28),
           const SizedBox(width: 10),
           Expanded(
             child: Text(
               text,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
               style: const TextStyle(
-                fontSize: 12,
+                fontSize: 13,
                 fontWeight: FontWeight.w600,
                 fontFamily: "Poppins",
+                color: Colors.black87,
               ),
             ),
           ),

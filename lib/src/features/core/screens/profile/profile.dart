@@ -140,6 +140,7 @@ class MenuButtons extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     final isRTL = Directionality.of(context) == TextDirection.rtl;
 
     return Container(
