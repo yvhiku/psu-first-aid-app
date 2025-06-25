@@ -32,6 +32,158 @@ class MessageLookup extends MessageLookupByLibrary {
     "addedToSavedTopicsText": MessageLookupByLibrary.simpleMessage(
       "Added to saved topics",
     ),
+    "allergic_reactions_q1": MessageLookupByLibrary.simpleMessage(
+      "What is the first step when handling allergic reactions?",
+    ),
+    "allergic_reactions_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "Stay calm",
+    ),
+    "allergic_reactions_q1_opt2": MessageLookupByLibrary.simpleMessage(
+      "Call emergency",
+    ),
+    "allergic_reactions_q1_opt3": MessageLookupByLibrary.simpleMessage(
+      "Provide water",
+    ),
+    "allergic_reactions_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Ignore symptoms",
+    ),
+    "allergic_reactions_q2": MessageLookupByLibrary.simpleMessage(
+      "Which of the following is a symptom of allergic reactions?",
+    ),
+    "allergic_reactions_q2_opt1": MessageLookupByLibrary.simpleMessage(
+      "Dizziness",
+    ),
+    "allergic_reactions_q2_opt2": MessageLookupByLibrary.simpleMessage(
+      "Itching",
+    ),
+    "allergic_reactions_q2_opt3": MessageLookupByLibrary.simpleMessage(
+      "Blurred vision",
+    ),
+    "allergic_reactions_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "All of the above",
+    ),
+    "allergic_reactions_q3": MessageLookupByLibrary.simpleMessage(
+      "When should you call emergency services during a allergic reactions incident?",
+    ),
+    "allergic_reactions_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "If symptoms are mild",
+    ),
+    "allergic_reactions_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "If the person faints",
+    ),
+    "allergic_reactions_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "If they ask for help",
+    ),
+    "allergic_reactions_q3_opt4": MessageLookupByLibrary.simpleMessage(
+      "Always",
+    ),
+    "allergic_reactions_q4": MessageLookupByLibrary.simpleMessage(
+      "What should you avoid doing during allergic reactions care?",
+    ),
+    "allergic_reactions_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Using outdated methods",
+    ),
+    "allergic_reactions_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Keeping them comfortable",
+    ),
+    "allergic_reactions_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Monitoring breathing",
+    ),
+    "allergic_reactions_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Staying with them",
+    ),
+    "allergic_reactions_q5": MessageLookupByLibrary.simpleMessage(
+      "What is a key goal of first aid for allergic reactions?",
+    ),
+    "allergic_reactions_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Complete treatment",
+    ),
+    "allergic_reactions_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Prevent worsening",
+    ),
+    "allergic_reactions_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Diagnose accurately",
+    ),
+    "allergic_reactions_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Avoid hospital visit",
+    ),
+    "allergic_reactions_q6": MessageLookupByLibrary.simpleMessage(
+      "Which tool is commonly used for handling allergic reactions situations?",
+    ),
+    "allergic_reactions_q6_opt1": MessageLookupByLibrary.simpleMessage(
+      "Bandage",
+    ),
+    "allergic_reactions_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Epinephrine pen",
+    ),
+    "allergic_reactions_q6_opt3": MessageLookupByLibrary.simpleMessage(
+      "Gloves",
+    ),
+    "allergic_reactions_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "It depends on the situation",
+    ),
+    "assess_q1": MessageLookupByLibrary.simpleMessage(
+      "What is the first step when handling assessing injured person?",
+    ),
+    "assess_q1_opt1": MessageLookupByLibrary.simpleMessage("Stay calm"),
+    "assess_q1_opt2": MessageLookupByLibrary.simpleMessage("Call emergency"),
+    "assess_q1_opt3": MessageLookupByLibrary.simpleMessage("Provide water"),
+    "assess_q1_opt4": MessageLookupByLibrary.simpleMessage("Ignore symptoms"),
+    "assess_q2": MessageLookupByLibrary.simpleMessage(
+      "Which of the following is a symptom of assessing injured person?",
+    ),
+    "assess_q2_opt1": MessageLookupByLibrary.simpleMessage("Dizziness"),
+    "assess_q2_opt2": MessageLookupByLibrary.simpleMessage("Itching"),
+    "assess_q2_opt3": MessageLookupByLibrary.simpleMessage("Blurred vision"),
+    "assess_q2_opt4": MessageLookupByLibrary.simpleMessage("All of the above"),
+    "assess_q3": MessageLookupByLibrary.simpleMessage(
+      "When should you call emergency services during a assessing injured person incident?",
+    ),
+    "assess_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "If symptoms are mild",
+    ),
+    "assess_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "If the person faints",
+    ),
+    "assess_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "If they ask for help",
+    ),
+    "assess_q3_opt4": MessageLookupByLibrary.simpleMessage("Always"),
+    "assess_q4": MessageLookupByLibrary.simpleMessage(
+      "What should you avoid doing during assessing injured person care?",
+    ),
+    "assess_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Using outdated methods",
+    ),
+    "assess_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Keeping them comfortable",
+    ),
+    "assess_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Monitoring breathing",
+    ),
+    "assess_q4_opt4": MessageLookupByLibrary.simpleMessage("Staying with them"),
+    "assess_q5": MessageLookupByLibrary.simpleMessage(
+      "What is a key goal of first aid for assessing injured person?",
+    ),
+    "assess_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Complete treatment",
+    ),
+    "assess_q5_opt2": MessageLookupByLibrary.simpleMessage("Prevent worsening"),
+    "assess_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Diagnose accurately",
+    ),
+    "assess_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Avoid hospital visit",
+    ),
+    "assess_q6": MessageLookupByLibrary.simpleMessage(
+      "Which tool is commonly used for handling assessing injured person situations?",
+    ),
+    "assess_q6_opt1": MessageLookupByLibrary.simpleMessage("Bandage"),
+    "assess_q6_opt2": MessageLookupByLibrary.simpleMessage("Epinephrine pen"),
+    "assess_q6_opt3": MessageLookupByLibrary.simpleMessage("Gloves"),
+    "assess_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "It depends on the situation",
+    ),
     "asthma": MessageLookupByLibrary.simpleMessage("Asthma"),
     "asthma1": MessageLookupByLibrary.simpleMessage(
       "Asthma attacks can be life-threatening. Quick and correct action is crucial to help someone who is having difficulty breathing.",
@@ -73,6 +225,68 @@ class MessageLookup extends MessageLookupByLibrary {
     "asthmaTitle": MessageLookupByLibrary.simpleMessage(
       "Asthma Attack First Aid",
     ),
+    "asthma_q1": MessageLookupByLibrary.simpleMessage(
+      "What is the first step when handling asthma?",
+    ),
+    "asthma_q1_opt1": MessageLookupByLibrary.simpleMessage("Stay calm"),
+    "asthma_q1_opt2": MessageLookupByLibrary.simpleMessage("Call emergency"),
+    "asthma_q1_opt3": MessageLookupByLibrary.simpleMessage("Provide water"),
+    "asthma_q1_opt4": MessageLookupByLibrary.simpleMessage("Ignore symptoms"),
+    "asthma_q2": MessageLookupByLibrary.simpleMessage(
+      "Which of the following is a symptom of asthma?",
+    ),
+    "asthma_q2_opt1": MessageLookupByLibrary.simpleMessage("Dizziness"),
+    "asthma_q2_opt2": MessageLookupByLibrary.simpleMessage("Itching"),
+    "asthma_q2_opt3": MessageLookupByLibrary.simpleMessage("Blurred vision"),
+    "asthma_q2_opt4": MessageLookupByLibrary.simpleMessage("All of the above"),
+    "asthma_q3": MessageLookupByLibrary.simpleMessage(
+      "When should you call emergency services during a asthma incident?",
+    ),
+    "asthma_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "If symptoms are mild",
+    ),
+    "asthma_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "If the person faints",
+    ),
+    "asthma_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "If they ask for help",
+    ),
+    "asthma_q3_opt4": MessageLookupByLibrary.simpleMessage("Always"),
+    "asthma_q4": MessageLookupByLibrary.simpleMessage(
+      "What should you avoid doing during asthma care?",
+    ),
+    "asthma_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Using outdated methods",
+    ),
+    "asthma_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Keeping them comfortable",
+    ),
+    "asthma_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Monitoring breathing",
+    ),
+    "asthma_q4_opt4": MessageLookupByLibrary.simpleMessage("Staying with them"),
+    "asthma_q5": MessageLookupByLibrary.simpleMessage(
+      "What is a key goal of first aid for asthma?",
+    ),
+    "asthma_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Complete treatment",
+    ),
+    "asthma_q5_opt2": MessageLookupByLibrary.simpleMessage("Prevent worsening"),
+    "asthma_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Diagnose accurately",
+    ),
+    "asthma_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Avoid hospital visit",
+    ),
+    "asthma_q6": MessageLookupByLibrary.simpleMessage(
+      "Which tool is commonly used for handling asthma situations?",
+    ),
+    "asthma_q6_opt1": MessageLookupByLibrary.simpleMessage("Bandage"),
+    "asthma_q6_opt2": MessageLookupByLibrary.simpleMessage("Epinephrine pen"),
+    "asthma_q6_opt3": MessageLookupByLibrary.simpleMessage("Gloves"),
+    "asthma_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "It depends on the situation",
+    ),
     "bites": MessageLookupByLibrary.simpleMessage("Bites"),
     "bites1": MessageLookupByLibrary.simpleMessage(
       "Animal or insect bites can transmit diseases and lead to infections if untreated.",
@@ -113,6 +327,66 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "bites9": MessageLookupByLibrary.simpleMessage("Apply Antiseptic"),
     "bitesTitle": MessageLookupByLibrary.simpleMessage("Bite Wound First Aid"),
+    "bites_q1": MessageLookupByLibrary.simpleMessage(
+      "What is the first step when handling bites?",
+    ),
+    "bites_q1_opt1": MessageLookupByLibrary.simpleMessage("Stay calm"),
+    "bites_q1_opt2": MessageLookupByLibrary.simpleMessage("Call emergency"),
+    "bites_q1_opt3": MessageLookupByLibrary.simpleMessage("Provide water"),
+    "bites_q1_opt4": MessageLookupByLibrary.simpleMessage("Ignore symptoms"),
+    "bites_q2": MessageLookupByLibrary.simpleMessage(
+      "Which of the following is a symptom of bites?",
+    ),
+    "bites_q2_opt1": MessageLookupByLibrary.simpleMessage("Dizziness"),
+    "bites_q2_opt2": MessageLookupByLibrary.simpleMessage("Itching"),
+    "bites_q2_opt3": MessageLookupByLibrary.simpleMessage("Blurred vision"),
+    "bites_q2_opt4": MessageLookupByLibrary.simpleMessage("All of the above"),
+    "bites_q3": MessageLookupByLibrary.simpleMessage(
+      "When should you call emergency services during a bites incident?",
+    ),
+    "bites_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "If symptoms are mild",
+    ),
+    "bites_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "If the person faints",
+    ),
+    "bites_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "If they ask for help",
+    ),
+    "bites_q3_opt4": MessageLookupByLibrary.simpleMessage("Always"),
+    "bites_q4": MessageLookupByLibrary.simpleMessage(
+      "What should you avoid doing during bites care?",
+    ),
+    "bites_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Using outdated methods",
+    ),
+    "bites_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Keeping them comfortable",
+    ),
+    "bites_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Monitoring breathing",
+    ),
+    "bites_q4_opt4": MessageLookupByLibrary.simpleMessage("Staying with them"),
+    "bites_q5": MessageLookupByLibrary.simpleMessage(
+      "What is a key goal of first aid for bites?",
+    ),
+    "bites_q5_opt1": MessageLookupByLibrary.simpleMessage("Complete treatment"),
+    "bites_q5_opt2": MessageLookupByLibrary.simpleMessage("Prevent worsening"),
+    "bites_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Diagnose accurately",
+    ),
+    "bites_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Avoid hospital visit",
+    ),
+    "bites_q6": MessageLookupByLibrary.simpleMessage(
+      "Which tool is commonly used for handling bites situations?",
+    ),
+    "bites_q6_opt1": MessageLookupByLibrary.simpleMessage("Bandage"),
+    "bites_q6_opt2": MessageLookupByLibrary.simpleMessage("Epinephrine pen"),
+    "bites_q6_opt3": MessageLookupByLibrary.simpleMessage("Gloves"),
+    "bites_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "It depends on the situation",
+    ),
     "bleeding": MessageLookupByLibrary.simpleMessage("Bleeding"),
     "bleeding1": MessageLookupByLibrary.simpleMessage(
       "Quick action is critical in stopping bleeding to prevent shock or more serious injury.",
@@ -153,6 +427,74 @@ class MessageLookup extends MessageLookupByLibrary {
     "bleedingTitle": MessageLookupByLibrary.simpleMessage(
       "First Aid for Bleeding",
     ),
+    "bleeding_q1": MessageLookupByLibrary.simpleMessage(
+      "What is the first step when handling bleeding?",
+    ),
+    "bleeding_q1_opt1": MessageLookupByLibrary.simpleMessage("Stay calm"),
+    "bleeding_q1_opt2": MessageLookupByLibrary.simpleMessage("Call emergency"),
+    "bleeding_q1_opt3": MessageLookupByLibrary.simpleMessage("Provide water"),
+    "bleeding_q1_opt4": MessageLookupByLibrary.simpleMessage("Ignore symptoms"),
+    "bleeding_q2": MessageLookupByLibrary.simpleMessage(
+      "Which of the following is a symptom of bleeding?",
+    ),
+    "bleeding_q2_opt1": MessageLookupByLibrary.simpleMessage("Dizziness"),
+    "bleeding_q2_opt2": MessageLookupByLibrary.simpleMessage("Itching"),
+    "bleeding_q2_opt3": MessageLookupByLibrary.simpleMessage("Blurred vision"),
+    "bleeding_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "All of the above",
+    ),
+    "bleeding_q3": MessageLookupByLibrary.simpleMessage(
+      "When should you call emergency services during a bleeding incident?",
+    ),
+    "bleeding_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "If symptoms are mild",
+    ),
+    "bleeding_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "If the person faints",
+    ),
+    "bleeding_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "If they ask for help",
+    ),
+    "bleeding_q3_opt4": MessageLookupByLibrary.simpleMessage("Always"),
+    "bleeding_q4": MessageLookupByLibrary.simpleMessage(
+      "What should you avoid doing during bleeding care?",
+    ),
+    "bleeding_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Using outdated methods",
+    ),
+    "bleeding_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Keeping them comfortable",
+    ),
+    "bleeding_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Monitoring breathing",
+    ),
+    "bleeding_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Staying with them",
+    ),
+    "bleeding_q5": MessageLookupByLibrary.simpleMessage(
+      "What is a key goal of first aid for bleeding?",
+    ),
+    "bleeding_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Complete treatment",
+    ),
+    "bleeding_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Prevent worsening",
+    ),
+    "bleeding_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Diagnose accurately",
+    ),
+    "bleeding_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Avoid hospital visit",
+    ),
+    "bleeding_q6": MessageLookupByLibrary.simpleMessage(
+      "Which tool is commonly used for handling bleeding situations?",
+    ),
+    "bleeding_q6_opt1": MessageLookupByLibrary.simpleMessage("Bandage"),
+    "bleeding_q6_opt2": MessageLookupByLibrary.simpleMessage("Epinephrine pen"),
+    "bleeding_q6_opt3": MessageLookupByLibrary.simpleMessage("Gloves"),
+    "bleeding_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "It depends on the situation",
+    ),
     "burns": MessageLookupByLibrary.simpleMessage("Burns"),
     "burns1": MessageLookupByLibrary.simpleMessage(
       "Burns can range from mild to life-threatening. First aid helps reduce damage and pain.",
@@ -189,6 +531,132 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "burns9": MessageLookupByLibrary.simpleMessage("Avoid Creams or Ice"),
     "burnsTitle": MessageLookupByLibrary.simpleMessage("First Aid for Burns"),
+    "burns_q1": MessageLookupByLibrary.simpleMessage(
+      "What is the first step when handling burns?",
+    ),
+    "burns_q1_opt1": MessageLookupByLibrary.simpleMessage("Stay calm"),
+    "burns_q1_opt2": MessageLookupByLibrary.simpleMessage("Call emergency"),
+    "burns_q1_opt3": MessageLookupByLibrary.simpleMessage("Provide water"),
+    "burns_q1_opt4": MessageLookupByLibrary.simpleMessage("Ignore symptoms"),
+    "burns_q2": MessageLookupByLibrary.simpleMessage(
+      "Which of the following is a symptom of burns?",
+    ),
+    "burns_q2_opt1": MessageLookupByLibrary.simpleMessage("Dizziness"),
+    "burns_q2_opt2": MessageLookupByLibrary.simpleMessage("Itching"),
+    "burns_q2_opt3": MessageLookupByLibrary.simpleMessage("Blurred vision"),
+    "burns_q2_opt4": MessageLookupByLibrary.simpleMessage("All of the above"),
+    "burns_q3": MessageLookupByLibrary.simpleMessage(
+      "When should you call emergency services during a burns incident?",
+    ),
+    "burns_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "If symptoms are mild",
+    ),
+    "burns_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "If the person faints",
+    ),
+    "burns_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "If they ask for help",
+    ),
+    "burns_q3_opt4": MessageLookupByLibrary.simpleMessage("Always"),
+    "burns_q4": MessageLookupByLibrary.simpleMessage(
+      "What should you avoid doing during burns care?",
+    ),
+    "burns_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Using outdated methods",
+    ),
+    "burns_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Keeping them comfortable",
+    ),
+    "burns_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Monitoring breathing",
+    ),
+    "burns_q4_opt4": MessageLookupByLibrary.simpleMessage("Staying with them"),
+    "burns_q5": MessageLookupByLibrary.simpleMessage(
+      "What is a key goal of first aid for burns?",
+    ),
+    "burns_q5_opt1": MessageLookupByLibrary.simpleMessage("Complete treatment"),
+    "burns_q5_opt2": MessageLookupByLibrary.simpleMessage("Prevent worsening"),
+    "burns_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Diagnose accurately",
+    ),
+    "burns_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Avoid hospital visit",
+    ),
+    "burns_q6": MessageLookupByLibrary.simpleMessage(
+      "Which tool is commonly used for handling burns situations?",
+    ),
+    "burns_q6_opt1": MessageLookupByLibrary.simpleMessage("Bandage"),
+    "burns_q6_opt2": MessageLookupByLibrary.simpleMessage("Epinephrine pen"),
+    "burns_q6_opt3": MessageLookupByLibrary.simpleMessage("Gloves"),
+    "burns_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "It depends on the situation",
+    ),
+    "choking_q1": MessageLookupByLibrary.simpleMessage(
+      "What is the first step when handling choking?",
+    ),
+    "choking_q1_opt1": MessageLookupByLibrary.simpleMessage("Stay calm"),
+    "choking_q1_opt2": MessageLookupByLibrary.simpleMessage("Call emergency"),
+    "choking_q1_opt3": MessageLookupByLibrary.simpleMessage("Provide water"),
+    "choking_q1_opt4": MessageLookupByLibrary.simpleMessage("Ignore symptoms"),
+    "choking_q2": MessageLookupByLibrary.simpleMessage(
+      "Which of the following is a symptom of choking?",
+    ),
+    "choking_q2_opt1": MessageLookupByLibrary.simpleMessage("Dizziness"),
+    "choking_q2_opt2": MessageLookupByLibrary.simpleMessage("Itching"),
+    "choking_q2_opt3": MessageLookupByLibrary.simpleMessage("Blurred vision"),
+    "choking_q2_opt4": MessageLookupByLibrary.simpleMessage("All of the above"),
+    "choking_q3": MessageLookupByLibrary.simpleMessage(
+      "When should you call emergency services during a choking incident?",
+    ),
+    "choking_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "If symptoms are mild",
+    ),
+    "choking_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "If the person faints",
+    ),
+    "choking_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "If they ask for help",
+    ),
+    "choking_q3_opt4": MessageLookupByLibrary.simpleMessage("Always"),
+    "choking_q4": MessageLookupByLibrary.simpleMessage(
+      "What should you avoid doing during choking care?",
+    ),
+    "choking_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Using outdated methods",
+    ),
+    "choking_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Keeping them comfortable",
+    ),
+    "choking_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Monitoring breathing",
+    ),
+    "choking_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Staying with them",
+    ),
+    "choking_q5": MessageLookupByLibrary.simpleMessage(
+      "What is a key goal of first aid for choking?",
+    ),
+    "choking_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Complete treatment",
+    ),
+    "choking_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Prevent worsening",
+    ),
+    "choking_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Diagnose accurately",
+    ),
+    "choking_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Avoid hospital visit",
+    ),
+    "choking_q6": MessageLookupByLibrary.simpleMessage(
+      "Which tool is commonly used for handling choking situations?",
+    ),
+    "choking_q6_opt1": MessageLookupByLibrary.simpleMessage("Bandage"),
+    "choking_q6_opt2": MessageLookupByLibrary.simpleMessage("Epinephrine pen"),
+    "choking_q6_opt3": MessageLookupByLibrary.simpleMessage("Gloves"),
+    "choking_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "It depends on the situation",
+    ),
     "chooseYourLanguage": MessageLookupByLibrary.simpleMessage(
       "Choose Your Language",
     ),
@@ -255,6 +723,54 @@ class MessageLookup extends MessageLookupByLibrary {
     "cprWatchDemoButton": MessageLookupByLibrary.simpleMessage(
       "Watch CPR Demonstration",
     ),
+    "cpr_q1": MessageLookupByLibrary.simpleMessage(
+      "What is the first step when handling cpr?",
+    ),
+    "cpr_q1_opt1": MessageLookupByLibrary.simpleMessage("Stay calm"),
+    "cpr_q1_opt2": MessageLookupByLibrary.simpleMessage("Call emergency"),
+    "cpr_q1_opt3": MessageLookupByLibrary.simpleMessage("Provide water"),
+    "cpr_q1_opt4": MessageLookupByLibrary.simpleMessage("Ignore symptoms"),
+    "cpr_q2": MessageLookupByLibrary.simpleMessage(
+      "Which of the following is a symptom of cpr?",
+    ),
+    "cpr_q2_opt1": MessageLookupByLibrary.simpleMessage("Dizziness"),
+    "cpr_q2_opt2": MessageLookupByLibrary.simpleMessage("Itching"),
+    "cpr_q2_opt3": MessageLookupByLibrary.simpleMessage("Blurred vision"),
+    "cpr_q2_opt4": MessageLookupByLibrary.simpleMessage("All of the above"),
+    "cpr_q3": MessageLookupByLibrary.simpleMessage(
+      "When should you call emergency services during a cpr incident?",
+    ),
+    "cpr_q3_opt1": MessageLookupByLibrary.simpleMessage("If symptoms are mild"),
+    "cpr_q3_opt2": MessageLookupByLibrary.simpleMessage("If the person faints"),
+    "cpr_q3_opt3": MessageLookupByLibrary.simpleMessage("If they ask for help"),
+    "cpr_q3_opt4": MessageLookupByLibrary.simpleMessage("Always"),
+    "cpr_q4": MessageLookupByLibrary.simpleMessage(
+      "What should you avoid doing during cpr care?",
+    ),
+    "cpr_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Using outdated methods",
+    ),
+    "cpr_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Keeping them comfortable",
+    ),
+    "cpr_q4_opt3": MessageLookupByLibrary.simpleMessage("Monitoring breathing"),
+    "cpr_q4_opt4": MessageLookupByLibrary.simpleMessage("Staying with them"),
+    "cpr_q5": MessageLookupByLibrary.simpleMessage(
+      "What is a key goal of first aid for cpr?",
+    ),
+    "cpr_q5_opt1": MessageLookupByLibrary.simpleMessage("Complete treatment"),
+    "cpr_q5_opt2": MessageLookupByLibrary.simpleMessage("Prevent worsening"),
+    "cpr_q5_opt3": MessageLookupByLibrary.simpleMessage("Diagnose accurately"),
+    "cpr_q5_opt4": MessageLookupByLibrary.simpleMessage("Avoid hospital visit"),
+    "cpr_q6": MessageLookupByLibrary.simpleMessage(
+      "Which tool is commonly used for handling cpr situations?",
+    ),
+    "cpr_q6_opt1": MessageLookupByLibrary.simpleMessage("Bandage"),
+    "cpr_q6_opt2": MessageLookupByLibrary.simpleMessage("Epinephrine pen"),
+    "cpr_q6_opt3": MessageLookupByLibrary.simpleMessage("Gloves"),
+    "cpr_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "It depends on the situation",
+    ),
     "diabeticsAppBarTitle": MessageLookupByLibrary.simpleMessage("Diabetics"),
     "diabeticsHeader": MessageLookupByLibrary.simpleMessage(
       "Diabetic Emergency First Aid",
@@ -303,6 +819,78 @@ class MessageLookup extends MessageLookupByLibrary {
       "First Aid Steps:",
     ),
     "diabeticsTitle": MessageLookupByLibrary.simpleMessage("Diabetics"),
+    "diabetics_q1": MessageLookupByLibrary.simpleMessage(
+      "What is the first step when handling diabetics?",
+    ),
+    "diabetics_q1_opt1": MessageLookupByLibrary.simpleMessage("Stay calm"),
+    "diabetics_q1_opt2": MessageLookupByLibrary.simpleMessage("Call emergency"),
+    "diabetics_q1_opt3": MessageLookupByLibrary.simpleMessage("Provide water"),
+    "diabetics_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Ignore symptoms",
+    ),
+    "diabetics_q2": MessageLookupByLibrary.simpleMessage(
+      "Which of the following is a symptom of diabetics?",
+    ),
+    "diabetics_q2_opt1": MessageLookupByLibrary.simpleMessage("Dizziness"),
+    "diabetics_q2_opt2": MessageLookupByLibrary.simpleMessage("Itching"),
+    "diabetics_q2_opt3": MessageLookupByLibrary.simpleMessage("Blurred vision"),
+    "diabetics_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "All of the above",
+    ),
+    "diabetics_q3": MessageLookupByLibrary.simpleMessage(
+      "When should you call emergency services during a diabetics incident?",
+    ),
+    "diabetics_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "If symptoms are mild",
+    ),
+    "diabetics_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "If the person faints",
+    ),
+    "diabetics_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "If they ask for help",
+    ),
+    "diabetics_q3_opt4": MessageLookupByLibrary.simpleMessage("Always"),
+    "diabetics_q4": MessageLookupByLibrary.simpleMessage(
+      "What should you avoid doing during diabetics care?",
+    ),
+    "diabetics_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Using outdated methods",
+    ),
+    "diabetics_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Keeping them comfortable",
+    ),
+    "diabetics_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Monitoring breathing",
+    ),
+    "diabetics_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Staying with them",
+    ),
+    "diabetics_q5": MessageLookupByLibrary.simpleMessage(
+      "What is a key goal of first aid for diabetics?",
+    ),
+    "diabetics_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Complete treatment",
+    ),
+    "diabetics_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Prevent worsening",
+    ),
+    "diabetics_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Diagnose accurately",
+    ),
+    "diabetics_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Avoid hospital visit",
+    ),
+    "diabetics_q6": MessageLookupByLibrary.simpleMessage(
+      "Which tool is commonly used for handling diabetics situations?",
+    ),
+    "diabetics_q6_opt1": MessageLookupByLibrary.simpleMessage("Bandage"),
+    "diabetics_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Epinephrine pen",
+    ),
+    "diabetics_q6_opt3": MessageLookupByLibrary.simpleMessage("Gloves"),
+    "diabetics_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "It depends on the situation",
+    ),
     "doctor": MessageLookupByLibrary.simpleMessage(
       "Tap any icon to learn how to respond in an emergency!",
     ),
@@ -370,6 +958,84 @@ class MessageLookup extends MessageLookupByLibrary {
       "First Aid Steps:",
     ),
     "drugOverdoseTitle": MessageLookupByLibrary.simpleMessage("Drug Overdose"),
+    "drug_overdose_q1": MessageLookupByLibrary.simpleMessage(
+      "What is the first step when handling drug overdose?",
+    ),
+    "drug_overdose_q1_opt1": MessageLookupByLibrary.simpleMessage("Stay calm"),
+    "drug_overdose_q1_opt2": MessageLookupByLibrary.simpleMessage(
+      "Call emergency",
+    ),
+    "drug_overdose_q1_opt3": MessageLookupByLibrary.simpleMessage(
+      "Provide water",
+    ),
+    "drug_overdose_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Ignore symptoms",
+    ),
+    "drug_overdose_q2": MessageLookupByLibrary.simpleMessage(
+      "Which of the following is a symptom of drug overdose?",
+    ),
+    "drug_overdose_q2_opt1": MessageLookupByLibrary.simpleMessage("Dizziness"),
+    "drug_overdose_q2_opt2": MessageLookupByLibrary.simpleMessage("Itching"),
+    "drug_overdose_q2_opt3": MessageLookupByLibrary.simpleMessage(
+      "Blurred vision",
+    ),
+    "drug_overdose_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "All of the above",
+    ),
+    "drug_overdose_q3": MessageLookupByLibrary.simpleMessage(
+      "When should you call emergency services during a drug overdose incident?",
+    ),
+    "drug_overdose_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "If symptoms are mild",
+    ),
+    "drug_overdose_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "If the person faints",
+    ),
+    "drug_overdose_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "If they ask for help",
+    ),
+    "drug_overdose_q3_opt4": MessageLookupByLibrary.simpleMessage("Always"),
+    "drug_overdose_q4": MessageLookupByLibrary.simpleMessage(
+      "What should you avoid doing during drug overdose care?",
+    ),
+    "drug_overdose_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Using outdated methods",
+    ),
+    "drug_overdose_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Keeping them comfortable",
+    ),
+    "drug_overdose_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Monitoring breathing",
+    ),
+    "drug_overdose_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Staying with them",
+    ),
+    "drug_overdose_q5": MessageLookupByLibrary.simpleMessage(
+      "What is a key goal of first aid for drug overdose?",
+    ),
+    "drug_overdose_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Complete treatment",
+    ),
+    "drug_overdose_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Prevent worsening",
+    ),
+    "drug_overdose_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Diagnose accurately",
+    ),
+    "drug_overdose_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Avoid hospital visit",
+    ),
+    "drug_overdose_q6": MessageLookupByLibrary.simpleMessage(
+      "Which tool is commonly used for handling drug overdose situations?",
+    ),
+    "drug_overdose_q6_opt1": MessageLookupByLibrary.simpleMessage("Bandage"),
+    "drug_overdose_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Epinephrine pen",
+    ),
+    "drug_overdose_q6_opt3": MessageLookupByLibrary.simpleMessage("Gloves"),
+    "drug_overdose_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "It depends on the situation",
+    ),
     "eyeInjuryHeading": MessageLookupByLibrary.simpleMessage(
       "Eye Injury First Aid",
     ),
@@ -425,8 +1091,156 @@ class MessageLookup extends MessageLookupByLibrary {
     "eyeInjuryTypesHeading": MessageLookupByLibrary.simpleMessage(
       "Types of Eye Injuries:",
     ),
+    "eye_injury_q1": MessageLookupByLibrary.simpleMessage(
+      "What is the first step when handling eye injury?",
+    ),
+    "eye_injury_q1_opt1": MessageLookupByLibrary.simpleMessage("Stay calm"),
+    "eye_injury_q1_opt2": MessageLookupByLibrary.simpleMessage(
+      "Call emergency",
+    ),
+    "eye_injury_q1_opt3": MessageLookupByLibrary.simpleMessage("Provide water"),
+    "eye_injury_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Ignore symptoms",
+    ),
+    "eye_injury_q2": MessageLookupByLibrary.simpleMessage(
+      "Which of the following is a symptom of eye injury?",
+    ),
+    "eye_injury_q2_opt1": MessageLookupByLibrary.simpleMessage("Dizziness"),
+    "eye_injury_q2_opt2": MessageLookupByLibrary.simpleMessage("Itching"),
+    "eye_injury_q2_opt3": MessageLookupByLibrary.simpleMessage(
+      "Blurred vision",
+    ),
+    "eye_injury_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "All of the above",
+    ),
+    "eye_injury_q3": MessageLookupByLibrary.simpleMessage(
+      "When should you call emergency services during a eye injury incident?",
+    ),
+    "eye_injury_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "If symptoms are mild",
+    ),
+    "eye_injury_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "If the person faints",
+    ),
+    "eye_injury_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "If they ask for help",
+    ),
+    "eye_injury_q3_opt4": MessageLookupByLibrary.simpleMessage("Always"),
+    "eye_injury_q4": MessageLookupByLibrary.simpleMessage(
+      "What should you avoid doing during eye injury care?",
+    ),
+    "eye_injury_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Using outdated methods",
+    ),
+    "eye_injury_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Keeping them comfortable",
+    ),
+    "eye_injury_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Monitoring breathing",
+    ),
+    "eye_injury_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Staying with them",
+    ),
+    "eye_injury_q5": MessageLookupByLibrary.simpleMessage(
+      "What is a key goal of first aid for eye injury?",
+    ),
+    "eye_injury_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Complete treatment",
+    ),
+    "eye_injury_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Prevent worsening",
+    ),
+    "eye_injury_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Diagnose accurately",
+    ),
+    "eye_injury_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Avoid hospital visit",
+    ),
+    "eye_injury_q6": MessageLookupByLibrary.simpleMessage(
+      "Which tool is commonly used for handling eye injury situations?",
+    ),
+    "eye_injury_q6_opt1": MessageLookupByLibrary.simpleMessage("Bandage"),
+    "eye_injury_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Epinephrine pen",
+    ),
+    "eye_injury_q6_opt3": MessageLookupByLibrary.simpleMessage("Gloves"),
+    "eye_injury_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "It depends on the situation",
+    ),
     "findNearestHospital": MessageLookupByLibrary.simpleMessage(
       "Find Nearest Hospital",
+    ),
+    "fractures_q1": MessageLookupByLibrary.simpleMessage(
+      "What is the first step when handling fractures?",
+    ),
+    "fractures_q1_opt1": MessageLookupByLibrary.simpleMessage("Stay calm"),
+    "fractures_q1_opt2": MessageLookupByLibrary.simpleMessage("Call emergency"),
+    "fractures_q1_opt3": MessageLookupByLibrary.simpleMessage("Provide water"),
+    "fractures_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Ignore symptoms",
+    ),
+    "fractures_q2": MessageLookupByLibrary.simpleMessage(
+      "Which of the following is a symptom of fractures?",
+    ),
+    "fractures_q2_opt1": MessageLookupByLibrary.simpleMessage("Dizziness"),
+    "fractures_q2_opt2": MessageLookupByLibrary.simpleMessage("Itching"),
+    "fractures_q2_opt3": MessageLookupByLibrary.simpleMessage("Blurred vision"),
+    "fractures_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "All of the above",
+    ),
+    "fractures_q3": MessageLookupByLibrary.simpleMessage(
+      "When should you call emergency services during a fractures incident?",
+    ),
+    "fractures_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "If symptoms are mild",
+    ),
+    "fractures_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "If the person faints",
+    ),
+    "fractures_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "If they ask for help",
+    ),
+    "fractures_q3_opt4": MessageLookupByLibrary.simpleMessage("Always"),
+    "fractures_q4": MessageLookupByLibrary.simpleMessage(
+      "What should you avoid doing during fractures care?",
+    ),
+    "fractures_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Using outdated methods",
+    ),
+    "fractures_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Keeping them comfortable",
+    ),
+    "fractures_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Monitoring breathing",
+    ),
+    "fractures_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Staying with them",
+    ),
+    "fractures_q5": MessageLookupByLibrary.simpleMessage(
+      "What is a key goal of first aid for fractures?",
+    ),
+    "fractures_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Complete treatment",
+    ),
+    "fractures_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Prevent worsening",
+    ),
+    "fractures_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Diagnose accurately",
+    ),
+    "fractures_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Avoid hospital visit",
+    ),
+    "fractures_q6": MessageLookupByLibrary.simpleMessage(
+      "Which tool is commonly used for handling fractures situations?",
+    ),
+    "fractures_q6_opt1": MessageLookupByLibrary.simpleMessage("Bandage"),
+    "fractures_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Epinephrine pen",
+    ),
+    "fractures_q6_opt3": MessageLookupByLibrary.simpleMessage("Gloves"),
+    "fractures_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "It depends on the situation",
     ),
     "headInjuryHeading": MessageLookupByLibrary.simpleMessage(
       "Head Injury First Aid",
@@ -468,6 +1282,84 @@ class MessageLookup extends MessageLookupByLibrary {
       "First Aid Steps:",
     ),
     "headInjuryTitle": MessageLookupByLibrary.simpleMessage("Head Injury"),
+    "head_injury_q1": MessageLookupByLibrary.simpleMessage(
+      "What is the first step when handling head injury?",
+    ),
+    "head_injury_q1_opt1": MessageLookupByLibrary.simpleMessage("Stay calm"),
+    "head_injury_q1_opt2": MessageLookupByLibrary.simpleMessage(
+      "Call emergency",
+    ),
+    "head_injury_q1_opt3": MessageLookupByLibrary.simpleMessage(
+      "Provide water",
+    ),
+    "head_injury_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Ignore symptoms",
+    ),
+    "head_injury_q2": MessageLookupByLibrary.simpleMessage(
+      "Which of the following is a symptom of head injury?",
+    ),
+    "head_injury_q2_opt1": MessageLookupByLibrary.simpleMessage("Dizziness"),
+    "head_injury_q2_opt2": MessageLookupByLibrary.simpleMessage("Itching"),
+    "head_injury_q2_opt3": MessageLookupByLibrary.simpleMessage(
+      "Blurred vision",
+    ),
+    "head_injury_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "All of the above",
+    ),
+    "head_injury_q3": MessageLookupByLibrary.simpleMessage(
+      "When should you call emergency services during a head injury incident?",
+    ),
+    "head_injury_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "If symptoms are mild",
+    ),
+    "head_injury_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "If the person faints",
+    ),
+    "head_injury_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "If they ask for help",
+    ),
+    "head_injury_q3_opt4": MessageLookupByLibrary.simpleMessage("Always"),
+    "head_injury_q4": MessageLookupByLibrary.simpleMessage(
+      "What should you avoid doing during head injury care?",
+    ),
+    "head_injury_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Using outdated methods",
+    ),
+    "head_injury_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Keeping them comfortable",
+    ),
+    "head_injury_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Monitoring breathing",
+    ),
+    "head_injury_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Staying with them",
+    ),
+    "head_injury_q5": MessageLookupByLibrary.simpleMessage(
+      "What is a key goal of first aid for head injury?",
+    ),
+    "head_injury_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Complete treatment",
+    ),
+    "head_injury_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Prevent worsening",
+    ),
+    "head_injury_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Diagnose accurately",
+    ),
+    "head_injury_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Avoid hospital visit",
+    ),
+    "head_injury_q6": MessageLookupByLibrary.simpleMessage(
+      "Which tool is commonly used for handling head injury situations?",
+    ),
+    "head_injury_q6_opt1": MessageLookupByLibrary.simpleMessage("Bandage"),
+    "head_injury_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Epinephrine pen",
+    ),
+    "head_injury_q6_opt3": MessageLookupByLibrary.simpleMessage("Gloves"),
+    "head_injury_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "It depends on the situation",
+    ),
     "heading": MessageLookupByLibrary.simpleMessage("Fractures First Aid"),
     "heartConditionHeading": MessageLookupByLibrary.simpleMessage(
       "Heart Conditions First Aid",
@@ -504,6 +1396,88 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "heartConditionTitle": MessageLookupByLibrary.simpleMessage(
       "Heart Conditions",
+    ),
+    "heart_condition_q1": MessageLookupByLibrary.simpleMessage(
+      "What is the first step when handling heart condition?",
+    ),
+    "heart_condition_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "Stay calm",
+    ),
+    "heart_condition_q1_opt2": MessageLookupByLibrary.simpleMessage(
+      "Call emergency",
+    ),
+    "heart_condition_q1_opt3": MessageLookupByLibrary.simpleMessage(
+      "Provide water",
+    ),
+    "heart_condition_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Ignore symptoms",
+    ),
+    "heart_condition_q2": MessageLookupByLibrary.simpleMessage(
+      "Which of the following is a symptom of heart condition?",
+    ),
+    "heart_condition_q2_opt1": MessageLookupByLibrary.simpleMessage(
+      "Dizziness",
+    ),
+    "heart_condition_q2_opt2": MessageLookupByLibrary.simpleMessage("Itching"),
+    "heart_condition_q2_opt3": MessageLookupByLibrary.simpleMessage(
+      "Blurred vision",
+    ),
+    "heart_condition_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "All of the above",
+    ),
+    "heart_condition_q3": MessageLookupByLibrary.simpleMessage(
+      "When should you call emergency services during a heart condition incident?",
+    ),
+    "heart_condition_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "If symptoms are mild",
+    ),
+    "heart_condition_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "If the person faints",
+    ),
+    "heart_condition_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "If they ask for help",
+    ),
+    "heart_condition_q3_opt4": MessageLookupByLibrary.simpleMessage("Always"),
+    "heart_condition_q4": MessageLookupByLibrary.simpleMessage(
+      "What should you avoid doing during heart condition care?",
+    ),
+    "heart_condition_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Using outdated methods",
+    ),
+    "heart_condition_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Keeping them comfortable",
+    ),
+    "heart_condition_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Monitoring breathing",
+    ),
+    "heart_condition_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Staying with them",
+    ),
+    "heart_condition_q5": MessageLookupByLibrary.simpleMessage(
+      "What is a key goal of first aid for heart condition?",
+    ),
+    "heart_condition_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Complete treatment",
+    ),
+    "heart_condition_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Prevent worsening",
+    ),
+    "heart_condition_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Diagnose accurately",
+    ),
+    "heart_condition_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Avoid hospital visit",
+    ),
+    "heart_condition_q6": MessageLookupByLibrary.simpleMessage(
+      "Which tool is commonly used for handling heart condition situations?",
+    ),
+    "heart_condition_q6_opt1": MessageLookupByLibrary.simpleMessage("Bandage"),
+    "heart_condition_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Epinephrine pen",
+    ),
+    "heart_condition_q6_opt3": MessageLookupByLibrary.simpleMessage("Gloves"),
+    "heart_condition_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "It depends on the situation",
     ),
     "home": MessageLookupByLibrary.simpleMessage("Home"),
     "intro": MessageLookupByLibrary.simpleMessage(
@@ -553,6 +1527,72 @@ class MessageLookup extends MessageLookupByLibrary {
       "First Aid Steps:",
     ),
     "poisonTitle": MessageLookupByLibrary.simpleMessage("Poisons"),
+    "poisons_q1": MessageLookupByLibrary.simpleMessage(
+      "What is the first step when handling poisons?",
+    ),
+    "poisons_q1_opt1": MessageLookupByLibrary.simpleMessage("Stay calm"),
+    "poisons_q1_opt2": MessageLookupByLibrary.simpleMessage("Call emergency"),
+    "poisons_q1_opt3": MessageLookupByLibrary.simpleMessage("Provide water"),
+    "poisons_q1_opt4": MessageLookupByLibrary.simpleMessage("Ignore symptoms"),
+    "poisons_q2": MessageLookupByLibrary.simpleMessage(
+      "Which of the following is a symptom of poisons?",
+    ),
+    "poisons_q2_opt1": MessageLookupByLibrary.simpleMessage("Dizziness"),
+    "poisons_q2_opt2": MessageLookupByLibrary.simpleMessage("Itching"),
+    "poisons_q2_opt3": MessageLookupByLibrary.simpleMessage("Blurred vision"),
+    "poisons_q2_opt4": MessageLookupByLibrary.simpleMessage("All of the above"),
+    "poisons_q3": MessageLookupByLibrary.simpleMessage(
+      "When should you call emergency services during a poisons incident?",
+    ),
+    "poisons_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "If symptoms are mild",
+    ),
+    "poisons_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "If the person faints",
+    ),
+    "poisons_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "If they ask for help",
+    ),
+    "poisons_q3_opt4": MessageLookupByLibrary.simpleMessage("Always"),
+    "poisons_q4": MessageLookupByLibrary.simpleMessage(
+      "What should you avoid doing during poisons care?",
+    ),
+    "poisons_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Using outdated methods",
+    ),
+    "poisons_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Keeping them comfortable",
+    ),
+    "poisons_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Monitoring breathing",
+    ),
+    "poisons_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Staying with them",
+    ),
+    "poisons_q5": MessageLookupByLibrary.simpleMessage(
+      "What is a key goal of first aid for poisons?",
+    ),
+    "poisons_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Complete treatment",
+    ),
+    "poisons_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Prevent worsening",
+    ),
+    "poisons_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Diagnose accurately",
+    ),
+    "poisons_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Avoid hospital visit",
+    ),
+    "poisons_q6": MessageLookupByLibrary.simpleMessage(
+      "Which tool is commonly used for handling poisons situations?",
+    ),
+    "poisons_q6_opt1": MessageLookupByLibrary.simpleMessage("Bandage"),
+    "poisons_q6_opt2": MessageLookupByLibrary.simpleMessage("Epinephrine pen"),
+    "poisons_q6_opt3": MessageLookupByLibrary.simpleMessage("Gloves"),
+    "poisons_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "It depends on the situation",
+    ),
     "profile": MessageLookupByLibrary.simpleMessage("Profile"),
     "recoveryPositionHeading": MessageLookupByLibrary.simpleMessage(
       "Recovery Position",
@@ -602,6 +1642,84 @@ class MessageLookup extends MessageLookupByLibrary {
     "recoveryPositionTitle": MessageLookupByLibrary.simpleMessage(
       "Recovery Position",
     ),
+    "recovery_pos_q1": MessageLookupByLibrary.simpleMessage(
+      "What is the first step when handling recovery pos?",
+    ),
+    "recovery_pos_q1_opt1": MessageLookupByLibrary.simpleMessage("Stay calm"),
+    "recovery_pos_q1_opt2": MessageLookupByLibrary.simpleMessage(
+      "Call emergency",
+    ),
+    "recovery_pos_q1_opt3": MessageLookupByLibrary.simpleMessage(
+      "Provide water",
+    ),
+    "recovery_pos_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Ignore symptoms",
+    ),
+    "recovery_pos_q2": MessageLookupByLibrary.simpleMessage(
+      "Which of the following is a symptom of recovery pos?",
+    ),
+    "recovery_pos_q2_opt1": MessageLookupByLibrary.simpleMessage("Dizziness"),
+    "recovery_pos_q2_opt2": MessageLookupByLibrary.simpleMessage("Itching"),
+    "recovery_pos_q2_opt3": MessageLookupByLibrary.simpleMessage(
+      "Blurred vision",
+    ),
+    "recovery_pos_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "All of the above",
+    ),
+    "recovery_pos_q3": MessageLookupByLibrary.simpleMessage(
+      "When should you call emergency services during a recovery pos incident?",
+    ),
+    "recovery_pos_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "If symptoms are mild",
+    ),
+    "recovery_pos_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "If the person faints",
+    ),
+    "recovery_pos_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "If they ask for help",
+    ),
+    "recovery_pos_q3_opt4": MessageLookupByLibrary.simpleMessage("Always"),
+    "recovery_pos_q4": MessageLookupByLibrary.simpleMessage(
+      "What should you avoid doing during recovery pos care?",
+    ),
+    "recovery_pos_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Using outdated methods",
+    ),
+    "recovery_pos_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Keeping them comfortable",
+    ),
+    "recovery_pos_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Monitoring breathing",
+    ),
+    "recovery_pos_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Staying with them",
+    ),
+    "recovery_pos_q5": MessageLookupByLibrary.simpleMessage(
+      "What is a key goal of first aid for recovery pos?",
+    ),
+    "recovery_pos_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Complete treatment",
+    ),
+    "recovery_pos_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Prevent worsening",
+    ),
+    "recovery_pos_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Diagnose accurately",
+    ),
+    "recovery_pos_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Avoid hospital visit",
+    ),
+    "recovery_pos_q6": MessageLookupByLibrary.simpleMessage(
+      "Which tool is commonly used for handling recovery pos situations?",
+    ),
+    "recovery_pos_q6_opt1": MessageLookupByLibrary.simpleMessage("Bandage"),
+    "recovery_pos_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Epinephrine pen",
+    ),
+    "recovery_pos_q6_opt3": MessageLookupByLibrary.simpleMessage("Gloves"),
+    "recovery_pos_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "It depends on the situation",
+    ),
     "removedFromSavedTopicsText": MessageLookupByLibrary.simpleMessage(
       "Removed from saved topics",
     ),
@@ -641,6 +1759,74 @@ class MessageLookup extends MessageLookupByLibrary {
       "After the seizure, comfort and reassure the person as they regain consciousness.",
     ),
     "seizuresTitle": MessageLookupByLibrary.simpleMessage("Seizures"),
+    "seizures_q1": MessageLookupByLibrary.simpleMessage(
+      "What is the first step when handling seizures?",
+    ),
+    "seizures_q1_opt1": MessageLookupByLibrary.simpleMessage("Stay calm"),
+    "seizures_q1_opt2": MessageLookupByLibrary.simpleMessage("Call emergency"),
+    "seizures_q1_opt3": MessageLookupByLibrary.simpleMessage("Provide water"),
+    "seizures_q1_opt4": MessageLookupByLibrary.simpleMessage("Ignore symptoms"),
+    "seizures_q2": MessageLookupByLibrary.simpleMessage(
+      "Which of the following is a symptom of seizures?",
+    ),
+    "seizures_q2_opt1": MessageLookupByLibrary.simpleMessage("Dizziness"),
+    "seizures_q2_opt2": MessageLookupByLibrary.simpleMessage("Itching"),
+    "seizures_q2_opt3": MessageLookupByLibrary.simpleMessage("Blurred vision"),
+    "seizures_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "All of the above",
+    ),
+    "seizures_q3": MessageLookupByLibrary.simpleMessage(
+      "When should you call emergency services during a seizures incident?",
+    ),
+    "seizures_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "If symptoms are mild",
+    ),
+    "seizures_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "If the person faints",
+    ),
+    "seizures_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "If they ask for help",
+    ),
+    "seizures_q3_opt4": MessageLookupByLibrary.simpleMessage("Always"),
+    "seizures_q4": MessageLookupByLibrary.simpleMessage(
+      "What should you avoid doing during seizures care?",
+    ),
+    "seizures_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Using outdated methods",
+    ),
+    "seizures_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Keeping them comfortable",
+    ),
+    "seizures_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Monitoring breathing",
+    ),
+    "seizures_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Staying with them",
+    ),
+    "seizures_q5": MessageLookupByLibrary.simpleMessage(
+      "What is a key goal of first aid for seizures?",
+    ),
+    "seizures_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Complete treatment",
+    ),
+    "seizures_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Prevent worsening",
+    ),
+    "seizures_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Diagnose accurately",
+    ),
+    "seizures_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Avoid hospital visit",
+    ),
+    "seizures_q6": MessageLookupByLibrary.simpleMessage(
+      "Which tool is commonly used for handling seizures situations?",
+    ),
+    "seizures_q6_opt1": MessageLookupByLibrary.simpleMessage("Bandage"),
+    "seizures_q6_opt2": MessageLookupByLibrary.simpleMessage("Epinephrine pen"),
+    "seizures_q6_opt3": MessageLookupByLibrary.simpleMessage("Gloves"),
+    "seizures_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "It depends on the situation",
+    ),
     "selectLanguage": MessageLookupByLibrary.simpleMessage("Select Language"),
     "shockFirstAidHeading": MessageLookupByLibrary.simpleMessage(
       "First Aid for Shock:",
@@ -680,6 +1866,66 @@ class MessageLookup extends MessageLookupByLibrary {
       "Monitor breathing and be prepared to perform CPR if necessary.",
     ),
     "shockTitle": MessageLookupByLibrary.simpleMessage("Shock"),
+    "shock_q1": MessageLookupByLibrary.simpleMessage(
+      "What is the first step when handling shock?",
+    ),
+    "shock_q1_opt1": MessageLookupByLibrary.simpleMessage("Stay calm"),
+    "shock_q1_opt2": MessageLookupByLibrary.simpleMessage("Call emergency"),
+    "shock_q1_opt3": MessageLookupByLibrary.simpleMessage("Provide water"),
+    "shock_q1_opt4": MessageLookupByLibrary.simpleMessage("Ignore symptoms"),
+    "shock_q2": MessageLookupByLibrary.simpleMessage(
+      "Which of the following is a symptom of shock?",
+    ),
+    "shock_q2_opt1": MessageLookupByLibrary.simpleMessage("Dizziness"),
+    "shock_q2_opt2": MessageLookupByLibrary.simpleMessage("Itching"),
+    "shock_q2_opt3": MessageLookupByLibrary.simpleMessage("Blurred vision"),
+    "shock_q2_opt4": MessageLookupByLibrary.simpleMessage("All of the above"),
+    "shock_q3": MessageLookupByLibrary.simpleMessage(
+      "When should you call emergency services during a shock incident?",
+    ),
+    "shock_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "If symptoms are mild",
+    ),
+    "shock_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "If the person faints",
+    ),
+    "shock_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "If they ask for help",
+    ),
+    "shock_q3_opt4": MessageLookupByLibrary.simpleMessage("Always"),
+    "shock_q4": MessageLookupByLibrary.simpleMessage(
+      "What should you avoid doing during shock care?",
+    ),
+    "shock_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Using outdated methods",
+    ),
+    "shock_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Keeping them comfortable",
+    ),
+    "shock_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Monitoring breathing",
+    ),
+    "shock_q4_opt4": MessageLookupByLibrary.simpleMessage("Staying with them"),
+    "shock_q5": MessageLookupByLibrary.simpleMessage(
+      "What is a key goal of first aid for shock?",
+    ),
+    "shock_q5_opt1": MessageLookupByLibrary.simpleMessage("Complete treatment"),
+    "shock_q5_opt2": MessageLookupByLibrary.simpleMessage("Prevent worsening"),
+    "shock_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Diagnose accurately",
+    ),
+    "shock_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Avoid hospital visit",
+    ),
+    "shock_q6": MessageLookupByLibrary.simpleMessage(
+      "Which tool is commonly used for handling shock situations?",
+    ),
+    "shock_q6_opt1": MessageLookupByLibrary.simpleMessage("Bandage"),
+    "shock_q6_opt2": MessageLookupByLibrary.simpleMessage("Epinephrine pen"),
+    "shock_q6_opt3": MessageLookupByLibrary.simpleMessage("Gloves"),
+    "shock_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "It depends on the situation",
+    ),
     "sign1": MessageLookupByLibrary.simpleMessage("- Pain and tenderness"),
     "sign2": MessageLookupByLibrary.simpleMessage("- Swelling or bruising"),
     "sign3": MessageLookupByLibrary.simpleMessage(
@@ -732,6 +1978,84 @@ class MessageLookup extends MessageLookupByLibrary {
       "Reassure the injured person and keep them calm.",
     ),
     "spinalTitle": MessageLookupByLibrary.simpleMessage("Spinal Injury"),
+    "spinal_injury_q1": MessageLookupByLibrary.simpleMessage(
+      "What is the first step when handling spinal injury?",
+    ),
+    "spinal_injury_q1_opt1": MessageLookupByLibrary.simpleMessage("Stay calm"),
+    "spinal_injury_q1_opt2": MessageLookupByLibrary.simpleMessage(
+      "Call emergency",
+    ),
+    "spinal_injury_q1_opt3": MessageLookupByLibrary.simpleMessage(
+      "Provide water",
+    ),
+    "spinal_injury_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Ignore symptoms",
+    ),
+    "spinal_injury_q2": MessageLookupByLibrary.simpleMessage(
+      "Which of the following is a symptom of spinal injury?",
+    ),
+    "spinal_injury_q2_opt1": MessageLookupByLibrary.simpleMessage("Dizziness"),
+    "spinal_injury_q2_opt2": MessageLookupByLibrary.simpleMessage("Itching"),
+    "spinal_injury_q2_opt3": MessageLookupByLibrary.simpleMessage(
+      "Blurred vision",
+    ),
+    "spinal_injury_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "All of the above",
+    ),
+    "spinal_injury_q3": MessageLookupByLibrary.simpleMessage(
+      "When should you call emergency services during a spinal injury incident?",
+    ),
+    "spinal_injury_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "If symptoms are mild",
+    ),
+    "spinal_injury_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "If the person faints",
+    ),
+    "spinal_injury_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "If they ask for help",
+    ),
+    "spinal_injury_q3_opt4": MessageLookupByLibrary.simpleMessage("Always"),
+    "spinal_injury_q4": MessageLookupByLibrary.simpleMessage(
+      "What should you avoid doing during spinal injury care?",
+    ),
+    "spinal_injury_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Using outdated methods",
+    ),
+    "spinal_injury_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Keeping them comfortable",
+    ),
+    "spinal_injury_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Monitoring breathing",
+    ),
+    "spinal_injury_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Staying with them",
+    ),
+    "spinal_injury_q5": MessageLookupByLibrary.simpleMessage(
+      "What is a key goal of first aid for spinal injury?",
+    ),
+    "spinal_injury_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Complete treatment",
+    ),
+    "spinal_injury_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Prevent worsening",
+    ),
+    "spinal_injury_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Diagnose accurately",
+    ),
+    "spinal_injury_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Avoid hospital visit",
+    ),
+    "spinal_injury_q6": MessageLookupByLibrary.simpleMessage(
+      "Which tool is commonly used for handling spinal injury situations?",
+    ),
+    "spinal_injury_q6_opt1": MessageLookupByLibrary.simpleMessage("Bandage"),
+    "spinal_injury_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Epinephrine pen",
+    ),
+    "spinal_injury_q6_opt3": MessageLookupByLibrary.simpleMessage("Gloves"),
+    "spinal_injury_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "It depends on the situation",
+    ),
     "sprainsStrainsFirstAidHeading": MessageLookupByLibrary.simpleMessage(
       "First Aid for Sprains and Strains:",
     ),
@@ -773,6 +2097,84 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "sprainsStrainsTitle": MessageLookupByLibrary.simpleMessage(
       "Sprains and Strains",
+    ),
+    "sprainstrains_q1": MessageLookupByLibrary.simpleMessage(
+      "What is the first step when handling sprainstrains?",
+    ),
+    "sprainstrains_q1_opt1": MessageLookupByLibrary.simpleMessage("Stay calm"),
+    "sprainstrains_q1_opt2": MessageLookupByLibrary.simpleMessage(
+      "Call emergency",
+    ),
+    "sprainstrains_q1_opt3": MessageLookupByLibrary.simpleMessage(
+      "Provide water",
+    ),
+    "sprainstrains_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Ignore symptoms",
+    ),
+    "sprainstrains_q2": MessageLookupByLibrary.simpleMessage(
+      "Which of the following is a symptom of sprainstrains?",
+    ),
+    "sprainstrains_q2_opt1": MessageLookupByLibrary.simpleMessage("Dizziness"),
+    "sprainstrains_q2_opt2": MessageLookupByLibrary.simpleMessage("Itching"),
+    "sprainstrains_q2_opt3": MessageLookupByLibrary.simpleMessage(
+      "Blurred vision",
+    ),
+    "sprainstrains_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "All of the above",
+    ),
+    "sprainstrains_q3": MessageLookupByLibrary.simpleMessage(
+      "When should you call emergency services during a sprainstrains incident?",
+    ),
+    "sprainstrains_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "If symptoms are mild",
+    ),
+    "sprainstrains_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "If the person faints",
+    ),
+    "sprainstrains_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "If they ask for help",
+    ),
+    "sprainstrains_q3_opt4": MessageLookupByLibrary.simpleMessage("Always"),
+    "sprainstrains_q4": MessageLookupByLibrary.simpleMessage(
+      "What should you avoid doing during sprainstrains care?",
+    ),
+    "sprainstrains_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Using outdated methods",
+    ),
+    "sprainstrains_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Keeping them comfortable",
+    ),
+    "sprainstrains_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Monitoring breathing",
+    ),
+    "sprainstrains_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Staying with them",
+    ),
+    "sprainstrains_q5": MessageLookupByLibrary.simpleMessage(
+      "What is a key goal of first aid for sprainstrains?",
+    ),
+    "sprainstrains_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Complete treatment",
+    ),
+    "sprainstrains_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Prevent worsening",
+    ),
+    "sprainstrains_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Diagnose accurately",
+    ),
+    "sprainstrains_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Avoid hospital visit",
+    ),
+    "sprainstrains_q6": MessageLookupByLibrary.simpleMessage(
+      "Which tool is commonly used for handling sprainstrains situations?",
+    ),
+    "sprainstrains_q6_opt1": MessageLookupByLibrary.simpleMessage("Bandage"),
+    "sprainstrains_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Epinephrine pen",
+    ),
+    "sprainstrains_q6_opt3": MessageLookupByLibrary.simpleMessage("Gloves"),
+    "sprainstrains_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "It depends on the situation",
     ),
     "step1Desc": MessageLookupByLibrary.simpleMessage(
       "Keep the injured area still and avoid movement.",
@@ -831,6 +2233,68 @@ class MessageLookup extends MessageLookupByLibrary {
       "Monitor their breathing and responsiveness until help arrives.",
     ),
     "strokeTitle": MessageLookupByLibrary.simpleMessage("Stroke"),
+    "stroke_q1": MessageLookupByLibrary.simpleMessage(
+      "What is the first step when handling stroke?",
+    ),
+    "stroke_q1_opt1": MessageLookupByLibrary.simpleMessage("Stay calm"),
+    "stroke_q1_opt2": MessageLookupByLibrary.simpleMessage("Call emergency"),
+    "stroke_q1_opt3": MessageLookupByLibrary.simpleMessage("Provide water"),
+    "stroke_q1_opt4": MessageLookupByLibrary.simpleMessage("Ignore symptoms"),
+    "stroke_q2": MessageLookupByLibrary.simpleMessage(
+      "Which of the following is a symptom of stroke?",
+    ),
+    "stroke_q2_opt1": MessageLookupByLibrary.simpleMessage("Dizziness"),
+    "stroke_q2_opt2": MessageLookupByLibrary.simpleMessage("Itching"),
+    "stroke_q2_opt3": MessageLookupByLibrary.simpleMessage("Blurred vision"),
+    "stroke_q2_opt4": MessageLookupByLibrary.simpleMessage("All of the above"),
+    "stroke_q3": MessageLookupByLibrary.simpleMessage(
+      "When should you call emergency services during a stroke incident?",
+    ),
+    "stroke_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "If symptoms are mild",
+    ),
+    "stroke_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "If the person faints",
+    ),
+    "stroke_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "If they ask for help",
+    ),
+    "stroke_q3_opt4": MessageLookupByLibrary.simpleMessage("Always"),
+    "stroke_q4": MessageLookupByLibrary.simpleMessage(
+      "What should you avoid doing during stroke care?",
+    ),
+    "stroke_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Using outdated methods",
+    ),
+    "stroke_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Keeping them comfortable",
+    ),
+    "stroke_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Monitoring breathing",
+    ),
+    "stroke_q4_opt4": MessageLookupByLibrary.simpleMessage("Staying with them"),
+    "stroke_q5": MessageLookupByLibrary.simpleMessage(
+      "What is a key goal of first aid for stroke?",
+    ),
+    "stroke_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Complete treatment",
+    ),
+    "stroke_q5_opt2": MessageLookupByLibrary.simpleMessage("Prevent worsening"),
+    "stroke_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Diagnose accurately",
+    ),
+    "stroke_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Avoid hospital visit",
+    ),
+    "stroke_q6": MessageLookupByLibrary.simpleMessage(
+      "Which tool is commonly used for handling stroke situations?",
+    ),
+    "stroke_q6_opt1": MessageLookupByLibrary.simpleMessage("Bandage"),
+    "stroke_q6_opt2": MessageLookupByLibrary.simpleMessage("Epinephrine pen"),
+    "stroke_q6_opt3": MessageLookupByLibrary.simpleMessage("Gloves"),
+    "stroke_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "It depends on the situation",
+    ),
     "tAboutUs": MessageLookupByLibrary.simpleMessage("About PGU First Aid"),
     "tAllTopics": MessageLookupByLibrary.simpleMessage("All Topics"),
     "tAllergicReaction": MessageLookupByLibrary.simpleMessage(
@@ -1016,6 +2480,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "taddedToSaved": MessageLookupByLibrary.simpleMessage(
       "Added to saved topics",
     ),
+    "takeQuiz": MessageLookupByLibrary.simpleMessage("Take Quiz"),
     "tallTopicsCleared": MessageLookupByLibrary.simpleMessage(
       "All saved topics cleared",
     ),
@@ -1313,5 +2778,81 @@ class MessageLookup extends MessageLookupByLibrary {
       "Steps for Basic Wound Care:",
     ),
     "woundCareTitle": MessageLookupByLibrary.simpleMessage("Wound Care"),
+    "wound_care_q1": MessageLookupByLibrary.simpleMessage(
+      "What is the first step when handling wound care?",
+    ),
+    "wound_care_q1_opt1": MessageLookupByLibrary.simpleMessage("Stay calm"),
+    "wound_care_q1_opt2": MessageLookupByLibrary.simpleMessage(
+      "Call emergency",
+    ),
+    "wound_care_q1_opt3": MessageLookupByLibrary.simpleMessage("Provide water"),
+    "wound_care_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Ignore symptoms",
+    ),
+    "wound_care_q2": MessageLookupByLibrary.simpleMessage(
+      "Which of the following is a symptom of wound care?",
+    ),
+    "wound_care_q2_opt1": MessageLookupByLibrary.simpleMessage("Dizziness"),
+    "wound_care_q2_opt2": MessageLookupByLibrary.simpleMessage("Itching"),
+    "wound_care_q2_opt3": MessageLookupByLibrary.simpleMessage(
+      "Blurred vision",
+    ),
+    "wound_care_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "All of the above",
+    ),
+    "wound_care_q3": MessageLookupByLibrary.simpleMessage(
+      "When should you call emergency services during a wound care incident?",
+    ),
+    "wound_care_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "If symptoms are mild",
+    ),
+    "wound_care_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "If the person faints",
+    ),
+    "wound_care_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "If they ask for help",
+    ),
+    "wound_care_q3_opt4": MessageLookupByLibrary.simpleMessage("Always"),
+    "wound_care_q4": MessageLookupByLibrary.simpleMessage(
+      "What should you avoid doing during wound care care?",
+    ),
+    "wound_care_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Using outdated methods",
+    ),
+    "wound_care_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Keeping them comfortable",
+    ),
+    "wound_care_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Monitoring breathing",
+    ),
+    "wound_care_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Staying with them",
+    ),
+    "wound_care_q5": MessageLookupByLibrary.simpleMessage(
+      "What is a key goal of first aid for wound care?",
+    ),
+    "wound_care_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Complete treatment",
+    ),
+    "wound_care_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Prevent worsening",
+    ),
+    "wound_care_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Diagnose accurately",
+    ),
+    "wound_care_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Avoid hospital visit",
+    ),
+    "wound_care_q6": MessageLookupByLibrary.simpleMessage(
+      "Which tool is commonly used for handling wound care situations?",
+    ),
+    "wound_care_q6_opt1": MessageLookupByLibrary.simpleMessage("Bandage"),
+    "wound_care_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Epinephrine pen",
+    ),
+    "wound_care_q6_opt3": MessageLookupByLibrary.simpleMessage("Gloves"),
+    "wound_care_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "It depends on the situation",
+    ),
   };
 }

@@ -1,6 +1,8 @@
 import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
+import 'package:first_aid_app/src/features/core/models/auto_quiz_data.dart';
+import 'package:first_aid_app/src/features/core/screens/quizes/quiz.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -9,6 +11,7 @@ class Seizures extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final quizData = generateLocalizedQuizData(S.of(context));
     final s = S.of(context);
     final TopicController topicController = Get.find();
     final currentTopic = {
@@ -19,7 +22,7 @@ class Seizures extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title:  Text(s.seizuresTitle),
+        title: Text(s.seizuresTitle),
         actions: [
           Obx(
             () => IconButton(
@@ -38,7 +41,7 @@ class Seizures extends StatelessWidget {
                     content: Text(
                       topicController.isTopicSaved(currentTopic)
                           ? s.addedToSavedTopicsText
-                          : s.tremovedTopic
+                          : s.tremovedTopic,
                     ),
                   ),
                 );
@@ -54,14 +57,14 @@ class Seizures extends StatelessWidget {
           children: [
             Image.asset(tSeizureimg, fit: BoxFit.cover),
             const SizedBox(height: 16),
-             Text(
+            Text(
               s.seizuresHeading,
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 12),
-             Text(s.seizuresIntro, style: TextStyle(fontSize: 16)),
+            Text(s.seizuresIntro, style: TextStyle(fontSize: 16)),
             const SizedBox(height: 20),
-             Text(
+            Text(
               s.seizuresFirstAidHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
@@ -73,13 +76,42 @@ class Seizures extends StatelessWidget {
             _buildStep('5', s.seizuresStep5),
             _buildStep('6', s.seizuresStep6),
             const SizedBox(height: 20),
-             Text(
+            Text(
               s.seizuresImportantHeading,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
             _buildBullet(s.seizuresNote1),
             _buildBullet(s.seizuresNote2),
+            const SizedBox(height: 20),
+
+            if (quizData['Seizures'] != null &&
+                quizData['Seizures']!.isNotEmpty)
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => QuizScreen(
+                        topicTitle: s.tSeizure,
+                        questions: quizData['Seizures']!,
+                      ),
+                    ),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.deepPurple,
+                  foregroundColor: Colors.white,
+                  minimumSize: const Size(double.infinity, 50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                ),
+                child: Text(
+                  s.takeQuiz,
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+              ),
           ],
         ),
       ),

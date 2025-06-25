@@ -1,6 +1,8 @@
 import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
+import 'package:first_aid_app/src/features/core/models/auto_quiz_data.dart';
+import 'package:first_aid_app/src/features/core/screens/quizes/quiz.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -9,6 +11,7 @@ class WoundCare extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final quizData = generateLocalizedQuizData(S.of(context));
     final s = S.of(context);
     final TopicController topicController = Get.find();
     final currentTopic = {
@@ -83,6 +86,35 @@ class WoundCare extends StatelessWidget {
             _buildBullet(s.woundCareMedicalHelp2),
             _buildBullet(s.woundCareMedicalHelp3),
             _buildBullet(s.woundCareMedicalHelp4),
+            const SizedBox(height: 20),
+
+if (quizData['Wound Care'] != null &&
+    quizData['Wound Care']!.isNotEmpty)
+  ElevatedButton(
+    onPressed: () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (_) => QuizScreen(
+            topicTitle: s.tWoundCare,
+            questions: quizData['Wound Care']!,
+          ),
+        ),
+      );
+    },
+    style: ElevatedButton.styleFrom(
+      backgroundColor: Colors.deepPurple,
+      foregroundColor: Colors.white,
+      minimumSize: const Size(double.infinity, 50),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8.0),
+      ),
+    ),
+    child:  Text(
+      s.takeQuiz,
+      style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+    ),
+  ),
           ],
         ),
       ),

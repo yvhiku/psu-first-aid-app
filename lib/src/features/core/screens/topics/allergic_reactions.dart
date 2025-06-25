@@ -2,6 +2,8 @@ import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
+import 'package:first_aid_app/src/features/core/models/auto_quiz_data.dart';
+import 'package:first_aid_app/src/features/core/screens/quizes/quiz.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -10,6 +12,7 @@ class AllergicReactions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final quizData = generateLocalizedQuizData(S.of(context));
     final TopicController topicController = Get.find();
     final s = S.of(context);
     final currentTopic = {
@@ -21,7 +24,7 @@ class AllergicReactions extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title:  Text(s.tAllergicReaction),
+        title: Text(s.tAllergicReaction),
         actions: [
           Obx(
             () => IconButton(
@@ -56,7 +59,7 @@ class AllergicReactions extends StatelessWidget {
           children: [
             Image.asset(tDustimg, fit: BoxFit.cover),
             const SizedBox(height: 20),
-             Text(
+            Text(
               s.tallergicReactionFirstAid,
               style: TextStyle(
                 fontSize: 22,
@@ -65,12 +68,9 @@ class AllergicReactions extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10),
-             Text(
-              s.tallergicReactionContent1,
-              style: TextStyle(fontSize: 16),
-            ),
+            Text(s.tallergicReactionContent1, style: TextStyle(fontSize: 16)),
             const Divider(height: 30),
-             Text(
+            Text(
               s.tallergicReactionContent2,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
@@ -106,7 +106,7 @@ class AllergicReactions extends StatelessWidget {
               description: s.tallergicReactionContent14,
             ),
             const Divider(height: 30),
-             Text(
+            Text(
               s.tallergicReactionContent15,
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
@@ -115,6 +115,36 @@ class AllergicReactions extends StatelessWidget {
             _buildBulletPoint(s.tallergicReactionContent17),
             _buildBulletPoint(s.tallergicReactionContent18),
             _buildBulletPoint(s.tallergicReactionContent19),
+            const SizedBox(height: 20),
+
+            if (quizData['Allergic Reactions'] != null &&
+                quizData['Allergic Reactions']!.isNotEmpty)
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => QuizScreen(
+                        topicTitle: s.tAllergicReaction,
+                        questions: quizData['Allergic Reactions']!,
+                      ),
+                    ),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.deepPurple,
+                  foregroundColor: Colors.white,
+                  minimumSize: const Size(double.infinity, 50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                ),
+                child: Text(
+                  s.takeQuiz,
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+              ),
+
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
@@ -129,7 +159,7 @@ class AllergicReactions extends StatelessWidget {
                 ),
                 elevation: 4,
               ),
-              child:  Text(
+              child: Text(
                 s.tallergicReactionContent20,
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),

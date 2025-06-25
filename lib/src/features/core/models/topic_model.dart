@@ -1,4 +1,5 @@
-// lib/src/features/core/models/topic_model.dart
+
+import 'package:first_aid_app/src/features/core/models/question_model.dart';
 import 'package:flutter/material.dart';
 
 class Topic {
@@ -6,12 +7,14 @@ class Topic {
   final String title;
   final String image;
   final Widget screen;
+  final List<Question>? quiz;
 
   Topic({
     required this.id,
     required this.title,
     required this.image,
     required this.screen,
+    this.quiz,
   });
 
   @override
@@ -21,4 +24,5 @@ class Topic {
 
   @override
   int get hashCode => id.hashCode;
+  
 }

@@ -2,6 +2,8 @@ import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
+import 'package:first_aid_app/src/features/core/models/auto_quiz_data.dart';
+import 'package:first_aid_app/src/features/core/screens/quizes/quiz.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -10,6 +12,7 @@ class Asthma extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final quizData = generateLocalizedQuizData(S.of(context));
     final s = S.of(context);
     final TopicController topicController = Get.find();
 
@@ -87,6 +90,34 @@ class Asthma extends StatelessWidget {
             _buildBulletPoint(s.asthma14),
             _buildBulletPoint(s.asthma15),
             _buildBulletPoint(s.asthma16),
+            const SizedBox(height: 20),
+
+            if (quizData['Asthma'] != null && quizData['Asthma']!.isNotEmpty)
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => QuizScreen(
+                        topicTitle: s.asthma,
+                        questions: quizData['Asthma']!,
+                      ),
+                    ),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.deepPurple,
+                  foregroundColor: Colors.white,
+                  minimumSize: const Size(double.infinity, 50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                ),
+                child: Text(
+                  s.takeQuiz,
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
+              ),
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {

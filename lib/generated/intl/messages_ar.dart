@@ -34,6 +34,138 @@ class MessageLookup extends MessageLookupByLibrary {
     "addedToSavedTopicsText": MessageLookupByLibrary.simpleMessage(
       "تمت الإضافة إلى المواضيع المحفوظة",
     ),
+    "allergic_reactions_q1": MessageLookupByLibrary.simpleMessage(
+      "ما هي الخطوة الأولى عند التعامل مع ردود الفعل التحسسية؟",
+    ),
+    "allergic_reactions_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "ابقَ هادئًا",
+    ),
+    "allergic_reactions_q1_opt2": MessageLookupByLibrary.simpleMessage(
+      "اتصل بالطوارئ",
+    ),
+    "allergic_reactions_q1_opt3": MessageLookupByLibrary.simpleMessage(
+      "قدّم ماءً",
+    ),
+    "allergic_reactions_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجاهل الأعراض",
+    ),
+    "allergic_reactions_q2": MessageLookupByLibrary.simpleMessage(
+      "ما هي من الأعراض التالية لـردود الفعل التحسسية؟",
+    ),
+    "allergic_reactions_q2_opt1": MessageLookupByLibrary.simpleMessage("دوار"),
+    "allergic_reactions_q2_opt2": MessageLookupByLibrary.simpleMessage("حكة"),
+    "allergic_reactions_q2_opt3": MessageLookupByLibrary.simpleMessage(
+      "رؤية ضبابية",
+    ),
+    "allergic_reactions_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "جميع ما ذُكر",
+    ),
+    "allergic_reactions_q3": MessageLookupByLibrary.simpleMessage(
+      "متى يجب عليك استدعاء خدمات الطوارئ أثناء حادثة ردود الفعل التحسسية؟",
+    ),
+    "allergic_reactions_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "إذا كانت الأعراض خفيفة",
+    ),
+    "allergic_reactions_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "إذا أغمي على الشخص",
+    ),
+    "allergic_reactions_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "إذا طلب المساعدة",
+    ),
+    "allergic_reactions_q3_opt4": MessageLookupByLibrary.simpleMessage(
+      "دائمًا",
+    ),
+    "allergic_reactions_q4": MessageLookupByLibrary.simpleMessage(
+      "ماذا يجب أن تتجنب فعله أثناء العناية بـردود الفعل التحسسية؟",
+    ),
+    "allergic_reactions_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "استخدام طرق قديمة",
+    ),
+    "allergic_reactions_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "إبقاؤهم في راحة",
+    ),
+    "allergic_reactions_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "مراقبة التنفس",
+    ),
+    "allergic_reactions_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "البقاء معهم",
+    ),
+    "allergic_reactions_q5": MessageLookupByLibrary.simpleMessage(
+      "ما هو الهدف الرئيسي للإسعاف الأولي لـردود الفعل التحسسية؟",
+    ),
+    "allergic_reactions_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "إكمال العلاج",
+    ),
+    "allergic_reactions_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "منع التفاقم",
+    ),
+    "allergic_reactions_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "التشخيص بدقة",
+    ),
+    "allergic_reactions_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجنب زيارة المستشفى",
+    ),
+    "allergic_reactions_q6": MessageLookupByLibrary.simpleMessage(
+      "ما الأداة التي تستخدم عادة للتعامل مع حالات ردود الفعل التحسسية؟",
+    ),
+    "allergic_reactions_q6_opt1": MessageLookupByLibrary.simpleMessage("ضمادة"),
+    "allergic_reactions_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "حقن الإبينفرين",
+    ),
+    "allergic_reactions_q6_opt3": MessageLookupByLibrary.simpleMessage(
+      "قفازات",
+    ),
+    "allergic_reactions_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "يعتمد على الموقف",
+    ),
+    "assess_q1": MessageLookupByLibrary.simpleMessage(
+      "ما هي الخطوة الأولى عند التعامل مع تقييم الشخص المصاب؟",
+    ),
+    "assess_q1_opt1": MessageLookupByLibrary.simpleMessage("ابقَ هادئًا"),
+    "assess_q1_opt2": MessageLookupByLibrary.simpleMessage("اتصل بالطوارئ"),
+    "assess_q1_opt3": MessageLookupByLibrary.simpleMessage("قدّم ماءً"),
+    "assess_q1_opt4": MessageLookupByLibrary.simpleMessage("تجاهل الأعراض"),
+    "assess_q2": MessageLookupByLibrary.simpleMessage(
+      "ما هي من الأعراض التالية لـتقييم الشخص المصاب؟",
+    ),
+    "assess_q2_opt1": MessageLookupByLibrary.simpleMessage("دوار"),
+    "assess_q2_opt2": MessageLookupByLibrary.simpleMessage("حكة"),
+    "assess_q2_opt3": MessageLookupByLibrary.simpleMessage("رؤية ضبابية"),
+    "assess_q2_opt4": MessageLookupByLibrary.simpleMessage("جميع ما ذُكر"),
+    "assess_q3": MessageLookupByLibrary.simpleMessage(
+      "متى يجب عليك استدعاء خدمات الطوارئ أثناء حادثة تقييم الشخص المصاب؟",
+    ),
+    "assess_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "إذا كانت الأعراض خفيفة",
+    ),
+    "assess_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "إذا أغمي على الشخص",
+    ),
+    "assess_q3_opt3": MessageLookupByLibrary.simpleMessage("إذا طلب المساعدة"),
+    "assess_q3_opt4": MessageLookupByLibrary.simpleMessage("دائمًا"),
+    "assess_q4": MessageLookupByLibrary.simpleMessage(
+      "ماذا يجب أن تتجنب فعله أثناء العناية بـتقييم الشخص المصاب؟",
+    ),
+    "assess_q4_opt1": MessageLookupByLibrary.simpleMessage("استخدام طرق قديمة"),
+    "assess_q4_opt2": MessageLookupByLibrary.simpleMessage("إبقاؤهم في راحة"),
+    "assess_q4_opt3": MessageLookupByLibrary.simpleMessage("مراقبة التنفس"),
+    "assess_q4_opt4": MessageLookupByLibrary.simpleMessage("البقاء معهم"),
+    "assess_q5": MessageLookupByLibrary.simpleMessage(
+      "ما هو الهدف الرئيسي للإسعاف الأولي لـتقييم الشخص المصاب؟",
+    ),
+    "assess_q5_opt1": MessageLookupByLibrary.simpleMessage("إكمال العلاج"),
+    "assess_q5_opt2": MessageLookupByLibrary.simpleMessage("منع التفاقم"),
+    "assess_q5_opt3": MessageLookupByLibrary.simpleMessage("التشخيص بدقة"),
+    "assess_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجنب زيارة المستشفى",
+    ),
+    "assess_q6": MessageLookupByLibrary.simpleMessage(
+      "ما الأداة التي تستخدم عادة للتعامل مع حالات تقييم الشخص المصاب؟",
+    ),
+    "assess_q6_opt1": MessageLookupByLibrary.simpleMessage("ضمادة"),
+    "assess_q6_opt2": MessageLookupByLibrary.simpleMessage("حقن الإبينفرين"),
+    "assess_q6_opt3": MessageLookupByLibrary.simpleMessage("قفازات"),
+    "assess_q6_opt4": MessageLookupByLibrary.simpleMessage("يعتمد على الموقف"),
     "asthma": MessageLookupByLibrary.simpleMessage("الربو"),
     "asthma1": MessageLookupByLibrary.simpleMessage(
       "يمكن أن تكون نوبات الربو مهددة للحياة. الإجراء السريع والصحيح ضروري لمساعدة شخص يعاني من صعوبة في التنفس.",
@@ -79,6 +211,54 @@ class MessageLookup extends MessageLookupByLibrary {
     "asthmaTitle": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية لنوبة الربو",
     ),
+    "asthma_q1": MessageLookupByLibrary.simpleMessage(
+      "ما هي الخطوة الأولى عند التعامل مع الربو؟",
+    ),
+    "asthma_q1_opt1": MessageLookupByLibrary.simpleMessage("ابقَ هادئًا"),
+    "asthma_q1_opt2": MessageLookupByLibrary.simpleMessage("اتصل بالطوارئ"),
+    "asthma_q1_opt3": MessageLookupByLibrary.simpleMessage("قدّم ماءً"),
+    "asthma_q1_opt4": MessageLookupByLibrary.simpleMessage("تجاهل الأعراض"),
+    "asthma_q2": MessageLookupByLibrary.simpleMessage(
+      "ما هي من الأعراض التالية لـالربو؟",
+    ),
+    "asthma_q2_opt1": MessageLookupByLibrary.simpleMessage("دوار"),
+    "asthma_q2_opt2": MessageLookupByLibrary.simpleMessage("حكة"),
+    "asthma_q2_opt3": MessageLookupByLibrary.simpleMessage("رؤية ضبابية"),
+    "asthma_q2_opt4": MessageLookupByLibrary.simpleMessage("جميع ما ذُكر"),
+    "asthma_q3": MessageLookupByLibrary.simpleMessage(
+      "متى يجب عليك استدعاء خدمات الطوارئ أثناء حادثة الربو؟",
+    ),
+    "asthma_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "إذا كانت الأعراض خفيفة",
+    ),
+    "asthma_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "إذا أغمي على الشخص",
+    ),
+    "asthma_q3_opt3": MessageLookupByLibrary.simpleMessage("إذا طلب المساعدة"),
+    "asthma_q3_opt4": MessageLookupByLibrary.simpleMessage("دائمًا"),
+    "asthma_q4": MessageLookupByLibrary.simpleMessage(
+      "ماذا يجب أن تتجنب فعله أثناء العناية بـالربو؟",
+    ),
+    "asthma_q4_opt1": MessageLookupByLibrary.simpleMessage("استخدام طرق قديمة"),
+    "asthma_q4_opt2": MessageLookupByLibrary.simpleMessage("إبقاؤهم في راحة"),
+    "asthma_q4_opt3": MessageLookupByLibrary.simpleMessage("مراقبة التنفس"),
+    "asthma_q4_opt4": MessageLookupByLibrary.simpleMessage("البقاء معهم"),
+    "asthma_q5": MessageLookupByLibrary.simpleMessage(
+      "ما هو الهدف الرئيسي للإسعاف الأولي لـالربو؟",
+    ),
+    "asthma_q5_opt1": MessageLookupByLibrary.simpleMessage("إكمال العلاج"),
+    "asthma_q5_opt2": MessageLookupByLibrary.simpleMessage("منع التفاقم"),
+    "asthma_q5_opt3": MessageLookupByLibrary.simpleMessage("التشخيص بدقة"),
+    "asthma_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجنب زيارة المستشفى",
+    ),
+    "asthma_q6": MessageLookupByLibrary.simpleMessage(
+      "ما الأداة التي تستخدم عادة للتعامل مع حالات الربو؟",
+    ),
+    "asthma_q6_opt1": MessageLookupByLibrary.simpleMessage("ضمادة"),
+    "asthma_q6_opt2": MessageLookupByLibrary.simpleMessage("حقن الإبينفرين"),
+    "asthma_q6_opt3": MessageLookupByLibrary.simpleMessage("قفازات"),
+    "asthma_q6_opt4": MessageLookupByLibrary.simpleMessage("يعتمد على الموقف"),
     "bites": MessageLookupByLibrary.simpleMessage("لدغات"),
     "bites1": MessageLookupByLibrary.simpleMessage(
       "يمكن أن تنقل لدغات الحيوانات أو الحشرات الأمراض وتؤدي إلى التهابات إذا لم يتم علاجها.",
@@ -121,6 +301,52 @@ class MessageLookup extends MessageLookupByLibrary {
     "bitesTitle": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية للدغات",
     ),
+    "bites_q1": MessageLookupByLibrary.simpleMessage(
+      "ما هي الخطوة الأولى عند التعامل مع العضات؟",
+    ),
+    "bites_q1_opt1": MessageLookupByLibrary.simpleMessage("ابقَ هادئًا"),
+    "bites_q1_opt2": MessageLookupByLibrary.simpleMessage("اتصل بالطوارئ"),
+    "bites_q1_opt3": MessageLookupByLibrary.simpleMessage("قدّم ماءً"),
+    "bites_q1_opt4": MessageLookupByLibrary.simpleMessage("تجاهل الأعراض"),
+    "bites_q2": MessageLookupByLibrary.simpleMessage(
+      "ما هي من الأعراض التالية لـالعضات؟",
+    ),
+    "bites_q2_opt1": MessageLookupByLibrary.simpleMessage("دوار"),
+    "bites_q2_opt2": MessageLookupByLibrary.simpleMessage("حكة"),
+    "bites_q2_opt3": MessageLookupByLibrary.simpleMessage("رؤية ضبابية"),
+    "bites_q2_opt4": MessageLookupByLibrary.simpleMessage("جميع ما ذُكر"),
+    "bites_q3": MessageLookupByLibrary.simpleMessage(
+      "متى يجب عليك استدعاء خدمات الطوارئ أثناء حادثة العضات؟",
+    ),
+    "bites_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "إذا كانت الأعراض خفيفة",
+    ),
+    "bites_q3_opt2": MessageLookupByLibrary.simpleMessage("إذا أغمي على الشخص"),
+    "bites_q3_opt3": MessageLookupByLibrary.simpleMessage("إذا طلب المساعدة"),
+    "bites_q3_opt4": MessageLookupByLibrary.simpleMessage("دائمًا"),
+    "bites_q4": MessageLookupByLibrary.simpleMessage(
+      "ماذا يجب أن تتجنب فعله أثناء العناية بـالعضات؟",
+    ),
+    "bites_q4_opt1": MessageLookupByLibrary.simpleMessage("استخدام طرق قديمة"),
+    "bites_q4_opt2": MessageLookupByLibrary.simpleMessage("إبقاؤهم في راحة"),
+    "bites_q4_opt3": MessageLookupByLibrary.simpleMessage("مراقبة التنفس"),
+    "bites_q4_opt4": MessageLookupByLibrary.simpleMessage("البقاء معهم"),
+    "bites_q5": MessageLookupByLibrary.simpleMessage(
+      "ما هو الهدف الرئيسي للإسعاف الأولي لـالعضات؟",
+    ),
+    "bites_q5_opt1": MessageLookupByLibrary.simpleMessage("إكمال العلاج"),
+    "bites_q5_opt2": MessageLookupByLibrary.simpleMessage("منع التفاقم"),
+    "bites_q5_opt3": MessageLookupByLibrary.simpleMessage("التشخيص بدقة"),
+    "bites_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجنب زيارة المستشفى",
+    ),
+    "bites_q6": MessageLookupByLibrary.simpleMessage(
+      "ما الأداة التي تستخدم عادة للتعامل مع حالات العضات؟",
+    ),
+    "bites_q6_opt1": MessageLookupByLibrary.simpleMessage("ضمادة"),
+    "bites_q6_opt2": MessageLookupByLibrary.simpleMessage("حقن الإبينفرين"),
+    "bites_q6_opt3": MessageLookupByLibrary.simpleMessage("قفازات"),
+    "bites_q6_opt4": MessageLookupByLibrary.simpleMessage("يعتمد على الموقف"),
     "bleeding": MessageLookupByLibrary.simpleMessage("النزيف"),
     "bleeding1": MessageLookupByLibrary.simpleMessage(
       "الإجراء السريع ضروري لوقف النزيف لمنع الصدمة أو إصابة أكثر خطورة.",
@@ -158,6 +384,60 @@ class MessageLookup extends MessageLookupByLibrary {
     "bleeding9": MessageLookupByLibrary.simpleMessage("استخدم ضمادة"),
     "bleedingTitle": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية للنزيف",
+    ),
+    "bleeding_q1": MessageLookupByLibrary.simpleMessage(
+      "ما هي الخطوة الأولى عند التعامل مع النزيف؟",
+    ),
+    "bleeding_q1_opt1": MessageLookupByLibrary.simpleMessage("ابقَ هادئًا"),
+    "bleeding_q1_opt2": MessageLookupByLibrary.simpleMessage("اتصل بالطوارئ"),
+    "bleeding_q1_opt3": MessageLookupByLibrary.simpleMessage("قدّم ماءً"),
+    "bleeding_q1_opt4": MessageLookupByLibrary.simpleMessage("تجاهل الأعراض"),
+    "bleeding_q2": MessageLookupByLibrary.simpleMessage(
+      "ما هي من الأعراض التالية لـالنزيف؟",
+    ),
+    "bleeding_q2_opt1": MessageLookupByLibrary.simpleMessage("دوار"),
+    "bleeding_q2_opt2": MessageLookupByLibrary.simpleMessage("حكة"),
+    "bleeding_q2_opt3": MessageLookupByLibrary.simpleMessage("رؤية ضبابية"),
+    "bleeding_q2_opt4": MessageLookupByLibrary.simpleMessage("جميع ما ذُكر"),
+    "bleeding_q3": MessageLookupByLibrary.simpleMessage(
+      "متى يجب عليك استدعاء خدمات الطوارئ أثناء حادثة النزيف؟",
+    ),
+    "bleeding_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "إذا كانت الأعراض خفيفة",
+    ),
+    "bleeding_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "إذا أغمي على الشخص",
+    ),
+    "bleeding_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "إذا طلب المساعدة",
+    ),
+    "bleeding_q3_opt4": MessageLookupByLibrary.simpleMessage("دائمًا"),
+    "bleeding_q4": MessageLookupByLibrary.simpleMessage(
+      "ماذا يجب أن تتجنب فعله أثناء العناية بـالنزيف؟",
+    ),
+    "bleeding_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "استخدام طرق قديمة",
+    ),
+    "bleeding_q4_opt2": MessageLookupByLibrary.simpleMessage("إبقاؤهم في راحة"),
+    "bleeding_q4_opt3": MessageLookupByLibrary.simpleMessage("مراقبة التنفس"),
+    "bleeding_q4_opt4": MessageLookupByLibrary.simpleMessage("البقاء معهم"),
+    "bleeding_q5": MessageLookupByLibrary.simpleMessage(
+      "ما هو الهدف الرئيسي للإسعاف الأولي لـالنزيف؟",
+    ),
+    "bleeding_q5_opt1": MessageLookupByLibrary.simpleMessage("إكمال العلاج"),
+    "bleeding_q5_opt2": MessageLookupByLibrary.simpleMessage("منع التفاقم"),
+    "bleeding_q5_opt3": MessageLookupByLibrary.simpleMessage("التشخيص بدقة"),
+    "bleeding_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجنب زيارة المستشفى",
+    ),
+    "bleeding_q6": MessageLookupByLibrary.simpleMessage(
+      "ما الأداة التي تستخدم عادة للتعامل مع حالات النزيف؟",
+    ),
+    "bleeding_q6_opt1": MessageLookupByLibrary.simpleMessage("ضمادة"),
+    "bleeding_q6_opt2": MessageLookupByLibrary.simpleMessage("حقن الإبينفرين"),
+    "bleeding_q6_opt3": MessageLookupByLibrary.simpleMessage("قفازات"),
+    "bleeding_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "يعتمد على الموقف",
     ),
     "burns": MessageLookupByLibrary.simpleMessage("الحروق"),
     "burns1": MessageLookupByLibrary.simpleMessage(
@@ -197,6 +477,102 @@ class MessageLookup extends MessageLookupByLibrary {
     "burnsTitle": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية للحروق",
     ),
+    "burns_q1": MessageLookupByLibrary.simpleMessage(
+      "ما هي الخطوة الأولى عند التعامل مع الحروق؟",
+    ),
+    "burns_q1_opt1": MessageLookupByLibrary.simpleMessage("ابقَ هادئًا"),
+    "burns_q1_opt2": MessageLookupByLibrary.simpleMessage("اتصل بالطوارئ"),
+    "burns_q1_opt3": MessageLookupByLibrary.simpleMessage("قدّم ماءً"),
+    "burns_q1_opt4": MessageLookupByLibrary.simpleMessage("تجاهل الأعراض"),
+    "burns_q2": MessageLookupByLibrary.simpleMessage(
+      "ما هي من الأعراض التالية لـالحروق؟",
+    ),
+    "burns_q2_opt1": MessageLookupByLibrary.simpleMessage("دوار"),
+    "burns_q2_opt2": MessageLookupByLibrary.simpleMessage("حكة"),
+    "burns_q2_opt3": MessageLookupByLibrary.simpleMessage("رؤية ضبابية"),
+    "burns_q2_opt4": MessageLookupByLibrary.simpleMessage("جميع ما ذُكر"),
+    "burns_q3": MessageLookupByLibrary.simpleMessage(
+      "متى يجب عليك استدعاء خدمات الطوارئ أثناء حادثة الحروق؟",
+    ),
+    "burns_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "إذا كانت الأعراض خفيفة",
+    ),
+    "burns_q3_opt2": MessageLookupByLibrary.simpleMessage("إذا أغمي على الشخص"),
+    "burns_q3_opt3": MessageLookupByLibrary.simpleMessage("إذا طلب المساعدة"),
+    "burns_q3_opt4": MessageLookupByLibrary.simpleMessage("دائمًا"),
+    "burns_q4": MessageLookupByLibrary.simpleMessage(
+      "ماذا يجب أن تتجنب فعله أثناء العناية بـالحروق؟",
+    ),
+    "burns_q4_opt1": MessageLookupByLibrary.simpleMessage("استخدام طرق قديمة"),
+    "burns_q4_opt2": MessageLookupByLibrary.simpleMessage("إبقاؤهم في راحة"),
+    "burns_q4_opt3": MessageLookupByLibrary.simpleMessage("مراقبة التنفس"),
+    "burns_q4_opt4": MessageLookupByLibrary.simpleMessage("البقاء معهم"),
+    "burns_q5": MessageLookupByLibrary.simpleMessage(
+      "ما هو الهدف الرئيسي للإسعاف الأولي لـالحروق؟",
+    ),
+    "burns_q5_opt1": MessageLookupByLibrary.simpleMessage("إكمال العلاج"),
+    "burns_q5_opt2": MessageLookupByLibrary.simpleMessage("منع التفاقم"),
+    "burns_q5_opt3": MessageLookupByLibrary.simpleMessage("التشخيص بدقة"),
+    "burns_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجنب زيارة المستشفى",
+    ),
+    "burns_q6": MessageLookupByLibrary.simpleMessage(
+      "ما الأداة التي تستخدم عادة للتعامل مع حالات الحروق؟",
+    ),
+    "burns_q6_opt1": MessageLookupByLibrary.simpleMessage("ضمادة"),
+    "burns_q6_opt2": MessageLookupByLibrary.simpleMessage("حقن الإبينفرين"),
+    "burns_q6_opt3": MessageLookupByLibrary.simpleMessage("قفازات"),
+    "burns_q6_opt4": MessageLookupByLibrary.simpleMessage("يعتمد على الموقف"),
+    "choking_q1": MessageLookupByLibrary.simpleMessage(
+      "ما هي الخطوة الأولى عند التعامل مع الاختناق؟",
+    ),
+    "choking_q1_opt1": MessageLookupByLibrary.simpleMessage("ابقَ هادئًا"),
+    "choking_q1_opt2": MessageLookupByLibrary.simpleMessage("اتصل بالطوارئ"),
+    "choking_q1_opt3": MessageLookupByLibrary.simpleMessage("قدّم ماءً"),
+    "choking_q1_opt4": MessageLookupByLibrary.simpleMessage("تجاهل الأعراض"),
+    "choking_q2": MessageLookupByLibrary.simpleMessage(
+      "ما هي من الأعراض التالية لـالاختناق؟",
+    ),
+    "choking_q2_opt1": MessageLookupByLibrary.simpleMessage("دوار"),
+    "choking_q2_opt2": MessageLookupByLibrary.simpleMessage("حكة"),
+    "choking_q2_opt3": MessageLookupByLibrary.simpleMessage("رؤية ضبابية"),
+    "choking_q2_opt4": MessageLookupByLibrary.simpleMessage("جميع ما ذُكر"),
+    "choking_q3": MessageLookupByLibrary.simpleMessage(
+      "متى يجب عليك استدعاء خدمات الطوارئ أثناء حادثة الاختناق؟",
+    ),
+    "choking_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "إذا كانت الأعراض خفيفة",
+    ),
+    "choking_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "إذا أغمي على الشخص",
+    ),
+    "choking_q3_opt3": MessageLookupByLibrary.simpleMessage("إذا طلب المساعدة"),
+    "choking_q3_opt4": MessageLookupByLibrary.simpleMessage("دائمًا"),
+    "choking_q4": MessageLookupByLibrary.simpleMessage(
+      "ماذا يجب أن تتجنب فعله أثناء العناية بـالاختناق؟",
+    ),
+    "choking_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "استخدام طرق قديمة",
+    ),
+    "choking_q4_opt2": MessageLookupByLibrary.simpleMessage("إبقاؤهم في راحة"),
+    "choking_q4_opt3": MessageLookupByLibrary.simpleMessage("مراقبة التنفس"),
+    "choking_q4_opt4": MessageLookupByLibrary.simpleMessage("البقاء معهم"),
+    "choking_q5": MessageLookupByLibrary.simpleMessage(
+      "ما هو الهدف الرئيسي للإسعاف الأولي لـالاختناق؟",
+    ),
+    "choking_q5_opt1": MessageLookupByLibrary.simpleMessage("إكمال العلاج"),
+    "choking_q5_opt2": MessageLookupByLibrary.simpleMessage("منع التفاقم"),
+    "choking_q5_opt3": MessageLookupByLibrary.simpleMessage("التشخيص بدقة"),
+    "choking_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجنب زيارة المستشفى",
+    ),
+    "choking_q6": MessageLookupByLibrary.simpleMessage(
+      "ما الأداة التي تستخدم عادة للتعامل مع حالات الاختناق؟",
+    ),
+    "choking_q6_opt1": MessageLookupByLibrary.simpleMessage("ضمادة"),
+    "choking_q6_opt2": MessageLookupByLibrary.simpleMessage("حقن الإبينفرين"),
+    "choking_q6_opt3": MessageLookupByLibrary.simpleMessage("قفازات"),
+    "choking_q6_opt4": MessageLookupByLibrary.simpleMessage("يعتمد على الموقف"),
     "chooseYourLanguage": MessageLookupByLibrary.simpleMessage(
       "اختر لغتك المفضلة",
     ),
@@ -261,6 +637,50 @@ class MessageLookup extends MessageLookupByLibrary {
     "cprWatchDemoButton": MessageLookupByLibrary.simpleMessage(
       "شاهد عرضاً للإنعاش القلبي الرئوي",
     ),
+    "cpr_q1": MessageLookupByLibrary.simpleMessage(
+      "ما هي الخطوة الأولى عند التعامل مع الإنعاش القلبي الرئوي؟",
+    ),
+    "cpr_q1_opt1": MessageLookupByLibrary.simpleMessage("ابقَ هادئًا"),
+    "cpr_q1_opt2": MessageLookupByLibrary.simpleMessage("اتصل بالطوارئ"),
+    "cpr_q1_opt3": MessageLookupByLibrary.simpleMessage("قدّم ماءً"),
+    "cpr_q1_opt4": MessageLookupByLibrary.simpleMessage("تجاهل الأعراض"),
+    "cpr_q2": MessageLookupByLibrary.simpleMessage(
+      "ما هي من الأعراض التالية لـالإنعاش القلبي الرئوي؟",
+    ),
+    "cpr_q2_opt1": MessageLookupByLibrary.simpleMessage("دوار"),
+    "cpr_q2_opt2": MessageLookupByLibrary.simpleMessage("حكة"),
+    "cpr_q2_opt3": MessageLookupByLibrary.simpleMessage("رؤية ضبابية"),
+    "cpr_q2_opt4": MessageLookupByLibrary.simpleMessage("جميع ما ذُكر"),
+    "cpr_q3": MessageLookupByLibrary.simpleMessage(
+      "متى يجب عليك استدعاء خدمات الطوارئ أثناء حادثة الإنعاش القلبي الرئوي؟",
+    ),
+    "cpr_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "إذا كانت الأعراض خفيفة",
+    ),
+    "cpr_q3_opt2": MessageLookupByLibrary.simpleMessage("إذا أغمي على الشخص"),
+    "cpr_q3_opt3": MessageLookupByLibrary.simpleMessage("إذا طلب المساعدة"),
+    "cpr_q3_opt4": MessageLookupByLibrary.simpleMessage("دائمًا"),
+    "cpr_q4": MessageLookupByLibrary.simpleMessage(
+      "ماذا يجب أن تتجنب فعله أثناء العناية بـالإنعاش القلبي الرئوي؟",
+    ),
+    "cpr_q4_opt1": MessageLookupByLibrary.simpleMessage("استخدام طرق قديمة"),
+    "cpr_q4_opt2": MessageLookupByLibrary.simpleMessage("إبقاؤهم في راحة"),
+    "cpr_q4_opt3": MessageLookupByLibrary.simpleMessage("مراقبة التنفس"),
+    "cpr_q4_opt4": MessageLookupByLibrary.simpleMessage("البقاء معهم"),
+    "cpr_q5": MessageLookupByLibrary.simpleMessage(
+      "ما هو الهدف الرئيسي للإسعاف الأولي لـالإنعاش القلبي الرئوي؟",
+    ),
+    "cpr_q5_opt1": MessageLookupByLibrary.simpleMessage("إكمال العلاج"),
+    "cpr_q5_opt2": MessageLookupByLibrary.simpleMessage("منع التفاقم"),
+    "cpr_q5_opt3": MessageLookupByLibrary.simpleMessage("التشخيص بدقة"),
+    "cpr_q5_opt4": MessageLookupByLibrary.simpleMessage("تجنب زيارة المستشفى"),
+    "cpr_q6": MessageLookupByLibrary.simpleMessage(
+      "ما الأداة التي تستخدم عادة للتعامل مع حالات الإنعاش القلبي الرئوي؟",
+    ),
+    "cpr_q6_opt1": MessageLookupByLibrary.simpleMessage("ضمادة"),
+    "cpr_q6_opt2": MessageLookupByLibrary.simpleMessage("حقن الإبينفرين"),
+    "cpr_q6_opt3": MessageLookupByLibrary.simpleMessage("قفازات"),
+    "cpr_q6_opt4": MessageLookupByLibrary.simpleMessage("يعتمد على الموقف"),
     "diabeticsAppBarTitle": MessageLookupByLibrary.simpleMessage("مرض السكري"),
     "diabeticsHeader": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية لحالات الطوارئ لمرضى السكري",
@@ -307,6 +727,62 @@ class MessageLookup extends MessageLookupByLibrary {
       "خطوات الإسعافات الأولية:",
     ),
     "diabeticsTitle": MessageLookupByLibrary.simpleMessage("مرض السكري"),
+    "diabetics_q1": MessageLookupByLibrary.simpleMessage(
+      "ما هي الخطوة الأولى عند التعامل مع مرضى السكري؟",
+    ),
+    "diabetics_q1_opt1": MessageLookupByLibrary.simpleMessage("ابقَ هادئًا"),
+    "diabetics_q1_opt2": MessageLookupByLibrary.simpleMessage("اتصل بالطوارئ"),
+    "diabetics_q1_opt3": MessageLookupByLibrary.simpleMessage("قدّم ماءً"),
+    "diabetics_q1_opt4": MessageLookupByLibrary.simpleMessage("تجاهل الأعراض"),
+    "diabetics_q2": MessageLookupByLibrary.simpleMessage(
+      "ما هي من الأعراض التالية لـمرضى السكري؟",
+    ),
+    "diabetics_q2_opt1": MessageLookupByLibrary.simpleMessage("دوار"),
+    "diabetics_q2_opt2": MessageLookupByLibrary.simpleMessage("حكة"),
+    "diabetics_q2_opt3": MessageLookupByLibrary.simpleMessage("رؤية ضبابية"),
+    "diabetics_q2_opt4": MessageLookupByLibrary.simpleMessage("جميع ما ذُكر"),
+    "diabetics_q3": MessageLookupByLibrary.simpleMessage(
+      "متى يجب عليك استدعاء خدمات الطوارئ أثناء حادثة مرضى السكري؟",
+    ),
+    "diabetics_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "إذا كانت الأعراض خفيفة",
+    ),
+    "diabetics_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "إذا أغمي على الشخص",
+    ),
+    "diabetics_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "إذا طلب المساعدة",
+    ),
+    "diabetics_q3_opt4": MessageLookupByLibrary.simpleMessage("دائمًا"),
+    "diabetics_q4": MessageLookupByLibrary.simpleMessage(
+      "ماذا يجب أن تتجنب فعله أثناء العناية بـمرضى السكري؟",
+    ),
+    "diabetics_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "استخدام طرق قديمة",
+    ),
+    "diabetics_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "إبقاؤهم في راحة",
+    ),
+    "diabetics_q4_opt3": MessageLookupByLibrary.simpleMessage("مراقبة التنفس"),
+    "diabetics_q4_opt4": MessageLookupByLibrary.simpleMessage("البقاء معهم"),
+    "diabetics_q5": MessageLookupByLibrary.simpleMessage(
+      "ما هو الهدف الرئيسي للإسعاف الأولي لـمرضى السكري؟",
+    ),
+    "diabetics_q5_opt1": MessageLookupByLibrary.simpleMessage("إكمال العلاج"),
+    "diabetics_q5_opt2": MessageLookupByLibrary.simpleMessage("منع التفاقم"),
+    "diabetics_q5_opt3": MessageLookupByLibrary.simpleMessage("التشخيص بدقة"),
+    "diabetics_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجنب زيارة المستشفى",
+    ),
+    "diabetics_q6": MessageLookupByLibrary.simpleMessage(
+      "ما الأداة التي تستخدم عادة للتعامل مع حالات مرضى السكري؟",
+    ),
+    "diabetics_q6_opt1": MessageLookupByLibrary.simpleMessage("ضمادة"),
+    "diabetics_q6_opt2": MessageLookupByLibrary.simpleMessage("حقن الإبينفرين"),
+    "diabetics_q6_opt3": MessageLookupByLibrary.simpleMessage("قفازات"),
+    "diabetics_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "يعتمد على الموقف",
+    ),
     "doctor": MessageLookupByLibrary.simpleMessage(
       "اضغط على أيقونة لتتعلم كيفية التصرف في حالة الطوارئ!",
     ),
@@ -376,6 +852,84 @@ class MessageLookup extends MessageLookupByLibrary {
     "drugOverdoseTitle": MessageLookupByLibrary.simpleMessage(
       "جرعة دواء زائدة",
     ),
+    "drug_overdose_q1": MessageLookupByLibrary.simpleMessage(
+      "ما هي الخطوة الأولى عند التعامل مع الجرعة الزائدة من المخدرات؟",
+    ),
+    "drug_overdose_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "ابقَ هادئًا",
+    ),
+    "drug_overdose_q1_opt2": MessageLookupByLibrary.simpleMessage(
+      "اتصل بالطوارئ",
+    ),
+    "drug_overdose_q1_opt3": MessageLookupByLibrary.simpleMessage("قدّم ماءً"),
+    "drug_overdose_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجاهل الأعراض",
+    ),
+    "drug_overdose_q2": MessageLookupByLibrary.simpleMessage(
+      "ما هي من الأعراض التالية لـالجرعة الزائدة من المخدرات؟",
+    ),
+    "drug_overdose_q2_opt1": MessageLookupByLibrary.simpleMessage("دوار"),
+    "drug_overdose_q2_opt2": MessageLookupByLibrary.simpleMessage("حكة"),
+    "drug_overdose_q2_opt3": MessageLookupByLibrary.simpleMessage(
+      "رؤية ضبابية",
+    ),
+    "drug_overdose_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "جميع ما ذُكر",
+    ),
+    "drug_overdose_q3": MessageLookupByLibrary.simpleMessage(
+      "متى يجب عليك استدعاء خدمات الطوارئ أثناء حادثة الجرعة الزائدة من المخدرات؟",
+    ),
+    "drug_overdose_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "إذا كانت الأعراض خفيفة",
+    ),
+    "drug_overdose_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "إذا أغمي على الشخص",
+    ),
+    "drug_overdose_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "إذا طلب المساعدة",
+    ),
+    "drug_overdose_q3_opt4": MessageLookupByLibrary.simpleMessage("دائمًا"),
+    "drug_overdose_q4": MessageLookupByLibrary.simpleMessage(
+      "ماذا يجب أن تتجنب فعله أثناء العناية بـالجرعة الزائدة من المخدرات؟",
+    ),
+    "drug_overdose_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "استخدام طرق قديمة",
+    ),
+    "drug_overdose_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "إبقاؤهم في راحة",
+    ),
+    "drug_overdose_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "مراقبة التنفس",
+    ),
+    "drug_overdose_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "البقاء معهم",
+    ),
+    "drug_overdose_q5": MessageLookupByLibrary.simpleMessage(
+      "ما هو الهدف الرئيسي للإسعاف الأولي لـالجرعة الزائدة من المخدرات؟",
+    ),
+    "drug_overdose_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "إكمال العلاج",
+    ),
+    "drug_overdose_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "منع التفاقم",
+    ),
+    "drug_overdose_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "التشخيص بدقة",
+    ),
+    "drug_overdose_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجنب زيارة المستشفى",
+    ),
+    "drug_overdose_q6": MessageLookupByLibrary.simpleMessage(
+      "ما الأداة التي تستخدم عادة للتعامل مع حالات الجرعة الزائدة من المخدرات؟",
+    ),
+    "drug_overdose_q6_opt1": MessageLookupByLibrary.simpleMessage("ضمادة"),
+    "drug_overdose_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "حقن الإبينفرين",
+    ),
+    "drug_overdose_q6_opt3": MessageLookupByLibrary.simpleMessage("قفازات"),
+    "drug_overdose_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "يعتمد على الموقف",
+    ),
     "eyeInjuryHeading": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية لإصابات العين",
     ),
@@ -425,8 +979,122 @@ class MessageLookup extends MessageLookupByLibrary {
     "eyeInjuryTypesHeading": MessageLookupByLibrary.simpleMessage(
       "أنواع إصابات العين:",
     ),
+    "eye_injury_q1": MessageLookupByLibrary.simpleMessage(
+      "ما هي الخطوة الأولى عند التعامل مع إصابة العين؟",
+    ),
+    "eye_injury_q1_opt1": MessageLookupByLibrary.simpleMessage("ابقَ هادئًا"),
+    "eye_injury_q1_opt2": MessageLookupByLibrary.simpleMessage("اتصل بالطوارئ"),
+    "eye_injury_q1_opt3": MessageLookupByLibrary.simpleMessage("قدّم ماءً"),
+    "eye_injury_q1_opt4": MessageLookupByLibrary.simpleMessage("تجاهل الأعراض"),
+    "eye_injury_q2": MessageLookupByLibrary.simpleMessage(
+      "ما هي من الأعراض التالية لـإصابة العين؟",
+    ),
+    "eye_injury_q2_opt1": MessageLookupByLibrary.simpleMessage("دوار"),
+    "eye_injury_q2_opt2": MessageLookupByLibrary.simpleMessage("حكة"),
+    "eye_injury_q2_opt3": MessageLookupByLibrary.simpleMessage("رؤية ضبابية"),
+    "eye_injury_q2_opt4": MessageLookupByLibrary.simpleMessage("جميع ما ذُكر"),
+    "eye_injury_q3": MessageLookupByLibrary.simpleMessage(
+      "متى يجب عليك استدعاء خدمات الطوارئ أثناء حادثة إصابة العين؟",
+    ),
+    "eye_injury_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "إذا كانت الأعراض خفيفة",
+    ),
+    "eye_injury_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "إذا أغمي على الشخص",
+    ),
+    "eye_injury_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "إذا طلب المساعدة",
+    ),
+    "eye_injury_q3_opt4": MessageLookupByLibrary.simpleMessage("دائمًا"),
+    "eye_injury_q4": MessageLookupByLibrary.simpleMessage(
+      "ماذا يجب أن تتجنب فعله أثناء العناية بـإصابة العين؟",
+    ),
+    "eye_injury_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "استخدام طرق قديمة",
+    ),
+    "eye_injury_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "إبقاؤهم في راحة",
+    ),
+    "eye_injury_q4_opt3": MessageLookupByLibrary.simpleMessage("مراقبة التنفس"),
+    "eye_injury_q4_opt4": MessageLookupByLibrary.simpleMessage("البقاء معهم"),
+    "eye_injury_q5": MessageLookupByLibrary.simpleMessage(
+      "ما هو الهدف الرئيسي للإسعاف الأولي لـإصابة العين؟",
+    ),
+    "eye_injury_q5_opt1": MessageLookupByLibrary.simpleMessage("إكمال العلاج"),
+    "eye_injury_q5_opt2": MessageLookupByLibrary.simpleMessage("منع التفاقم"),
+    "eye_injury_q5_opt3": MessageLookupByLibrary.simpleMessage("التشخيص بدقة"),
+    "eye_injury_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجنب زيارة المستشفى",
+    ),
+    "eye_injury_q6": MessageLookupByLibrary.simpleMessage(
+      "ما الأداة التي تستخدم عادة للتعامل مع حالات إصابة العين؟",
+    ),
+    "eye_injury_q6_opt1": MessageLookupByLibrary.simpleMessage("ضمادة"),
+    "eye_injury_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "حقن الإبينفرين",
+    ),
+    "eye_injury_q6_opt3": MessageLookupByLibrary.simpleMessage("قفازات"),
+    "eye_injury_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "يعتمد على الموقف",
+    ),
     "findNearestHospital": MessageLookupByLibrary.simpleMessage(
       "ابحث عن أقرب مستشفى",
+    ),
+    "fractures_q1": MessageLookupByLibrary.simpleMessage(
+      "ما هي الخطوة الأولى عند التعامل مع الكسور؟",
+    ),
+    "fractures_q1_opt1": MessageLookupByLibrary.simpleMessage("ابقَ هادئًا"),
+    "fractures_q1_opt2": MessageLookupByLibrary.simpleMessage("اتصل بالطوارئ"),
+    "fractures_q1_opt3": MessageLookupByLibrary.simpleMessage("قدّم ماءً"),
+    "fractures_q1_opt4": MessageLookupByLibrary.simpleMessage("تجاهل الأعراض"),
+    "fractures_q2": MessageLookupByLibrary.simpleMessage(
+      "ما هي من الأعراض التالية لـالكسور؟",
+    ),
+    "fractures_q2_opt1": MessageLookupByLibrary.simpleMessage("دوار"),
+    "fractures_q2_opt2": MessageLookupByLibrary.simpleMessage("حكة"),
+    "fractures_q2_opt3": MessageLookupByLibrary.simpleMessage("رؤية ضبابية"),
+    "fractures_q2_opt4": MessageLookupByLibrary.simpleMessage("جميع ما ذُكر"),
+    "fractures_q3": MessageLookupByLibrary.simpleMessage(
+      "متى يجب عليك استدعاء خدمات الطوارئ أثناء حادثة الكسور؟",
+    ),
+    "fractures_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "إذا كانت الأعراض خفيفة",
+    ),
+    "fractures_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "إذا أغمي على الشخص",
+    ),
+    "fractures_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "إذا طلب المساعدة",
+    ),
+    "fractures_q3_opt4": MessageLookupByLibrary.simpleMessage("دائمًا"),
+    "fractures_q4": MessageLookupByLibrary.simpleMessage(
+      "ماذا يجب أن تتجنب فعله أثناء العناية بـالكسور؟",
+    ),
+    "fractures_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "استخدام طرق قديمة",
+    ),
+    "fractures_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "إبقاؤهم في راحة",
+    ),
+    "fractures_q4_opt3": MessageLookupByLibrary.simpleMessage("مراقبة التنفس"),
+    "fractures_q4_opt4": MessageLookupByLibrary.simpleMessage("البقاء معهم"),
+    "fractures_q5": MessageLookupByLibrary.simpleMessage(
+      "ما هو الهدف الرئيسي للإسعاف الأولي لـالكسور؟",
+    ),
+    "fractures_q5_opt1": MessageLookupByLibrary.simpleMessage("إكمال العلاج"),
+    "fractures_q5_opt2": MessageLookupByLibrary.simpleMessage("منع التفاقم"),
+    "fractures_q5_opt3": MessageLookupByLibrary.simpleMessage("التشخيص بدقة"),
+    "fractures_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجنب زيارة المستشفى",
+    ),
+    "fractures_q6": MessageLookupByLibrary.simpleMessage(
+      "ما الأداة التي تستخدم عادة للتعامل مع حالات الكسور؟",
+    ),
+    "fractures_q6_opt1": MessageLookupByLibrary.simpleMessage("ضمادة"),
+    "fractures_q6_opt2": MessageLookupByLibrary.simpleMessage("حقن الإبينفرين"),
+    "fractures_q6_opt3": MessageLookupByLibrary.simpleMessage("قفازات"),
+    "fractures_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "يعتمد على الموقف",
     ),
     "headInjuryHeading": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية لإصابات الرأس",
@@ -468,6 +1136,70 @@ class MessageLookup extends MessageLookupByLibrary {
       "خطوات الإسعافات الأولية:",
     ),
     "headInjuryTitle": MessageLookupByLibrary.simpleMessage("إصابة الرأس"),
+    "head_injury_q1": MessageLookupByLibrary.simpleMessage(
+      "ما هي الخطوة الأولى عند التعامل مع إصابة الرأس؟",
+    ),
+    "head_injury_q1_opt1": MessageLookupByLibrary.simpleMessage("ابقَ هادئًا"),
+    "head_injury_q1_opt2": MessageLookupByLibrary.simpleMessage(
+      "اتصل بالطوارئ",
+    ),
+    "head_injury_q1_opt3": MessageLookupByLibrary.simpleMessage("قدّم ماءً"),
+    "head_injury_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجاهل الأعراض",
+    ),
+    "head_injury_q2": MessageLookupByLibrary.simpleMessage(
+      "ما هي من الأعراض التالية لـإصابة الرأس؟",
+    ),
+    "head_injury_q2_opt1": MessageLookupByLibrary.simpleMessage("دوار"),
+    "head_injury_q2_opt2": MessageLookupByLibrary.simpleMessage("حكة"),
+    "head_injury_q2_opt3": MessageLookupByLibrary.simpleMessage("رؤية ضبابية"),
+    "head_injury_q2_opt4": MessageLookupByLibrary.simpleMessage("جميع ما ذُكر"),
+    "head_injury_q3": MessageLookupByLibrary.simpleMessage(
+      "متى يجب عليك استدعاء خدمات الطوارئ أثناء حادثة إصابة الرأس؟",
+    ),
+    "head_injury_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "إذا كانت الأعراض خفيفة",
+    ),
+    "head_injury_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "إذا أغمي على الشخص",
+    ),
+    "head_injury_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "إذا طلب المساعدة",
+    ),
+    "head_injury_q3_opt4": MessageLookupByLibrary.simpleMessage("دائمًا"),
+    "head_injury_q4": MessageLookupByLibrary.simpleMessage(
+      "ماذا يجب أن تتجنب فعله أثناء العناية بـإصابة الرأس؟",
+    ),
+    "head_injury_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "استخدام طرق قديمة",
+    ),
+    "head_injury_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "إبقاؤهم في راحة",
+    ),
+    "head_injury_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "مراقبة التنفس",
+    ),
+    "head_injury_q4_opt4": MessageLookupByLibrary.simpleMessage("البقاء معهم"),
+    "head_injury_q5": MessageLookupByLibrary.simpleMessage(
+      "ما هو الهدف الرئيسي للإسعاف الأولي لـإصابة الرأس؟",
+    ),
+    "head_injury_q5_opt1": MessageLookupByLibrary.simpleMessage("إكمال العلاج"),
+    "head_injury_q5_opt2": MessageLookupByLibrary.simpleMessage("منع التفاقم"),
+    "head_injury_q5_opt3": MessageLookupByLibrary.simpleMessage("التشخيص بدقة"),
+    "head_injury_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجنب زيارة المستشفى",
+    ),
+    "head_injury_q6": MessageLookupByLibrary.simpleMessage(
+      "ما الأداة التي تستخدم عادة للتعامل مع حالات إصابة الرأس؟",
+    ),
+    "head_injury_q6_opt1": MessageLookupByLibrary.simpleMessage("ضمادة"),
+    "head_injury_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "حقن الإبينفرين",
+    ),
+    "head_injury_q6_opt3": MessageLookupByLibrary.simpleMessage("قفازات"),
+    "head_injury_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "يعتمد على الموقف",
+    ),
     "heading": MessageLookupByLibrary.simpleMessage("الإسعافات الأولية للكسور"),
     "heartConditionHeading": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية لأمراض القلب",
@@ -503,6 +1235,86 @@ class MessageLookup extends MessageLookupByLibrary {
       "خطوات الإسعافات الأولية:",
     ),
     "heartConditionTitle": MessageLookupByLibrary.simpleMessage("أمراض القلب"),
+    "heart_condition_q1": MessageLookupByLibrary.simpleMessage(
+      "ما هي الخطوة الأولى عند التعامل مع حالة القلب؟",
+    ),
+    "heart_condition_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "ابقَ هادئًا",
+    ),
+    "heart_condition_q1_opt2": MessageLookupByLibrary.simpleMessage(
+      "اتصل بالطوارئ",
+    ),
+    "heart_condition_q1_opt3": MessageLookupByLibrary.simpleMessage(
+      "قدّم ماءً",
+    ),
+    "heart_condition_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجاهل الأعراض",
+    ),
+    "heart_condition_q2": MessageLookupByLibrary.simpleMessage(
+      "ما هي من الأعراض التالية لـحالة القلب؟",
+    ),
+    "heart_condition_q2_opt1": MessageLookupByLibrary.simpleMessage("دوار"),
+    "heart_condition_q2_opt2": MessageLookupByLibrary.simpleMessage("حكة"),
+    "heart_condition_q2_opt3": MessageLookupByLibrary.simpleMessage(
+      "رؤية ضبابية",
+    ),
+    "heart_condition_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "جميع ما ذُكر",
+    ),
+    "heart_condition_q3": MessageLookupByLibrary.simpleMessage(
+      "متى يجب عليك استدعاء خدمات الطوارئ أثناء حادثة حالة القلب؟",
+    ),
+    "heart_condition_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "إذا كانت الأعراض خفيفة",
+    ),
+    "heart_condition_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "إذا أغمي على الشخص",
+    ),
+    "heart_condition_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "إذا طلب المساعدة",
+    ),
+    "heart_condition_q3_opt4": MessageLookupByLibrary.simpleMessage("دائمًا"),
+    "heart_condition_q4": MessageLookupByLibrary.simpleMessage(
+      "ماذا يجب أن تتجنب فعله أثناء العناية بـحالة القلب؟",
+    ),
+    "heart_condition_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "استخدام طرق قديمة",
+    ),
+    "heart_condition_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "إبقاؤهم في راحة",
+    ),
+    "heart_condition_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "مراقبة التنفس",
+    ),
+    "heart_condition_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "البقاء معهم",
+    ),
+    "heart_condition_q5": MessageLookupByLibrary.simpleMessage(
+      "ما هو الهدف الرئيسي للإسعاف الأولي لـحالة القلب؟",
+    ),
+    "heart_condition_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "إكمال العلاج",
+    ),
+    "heart_condition_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "منع التفاقم",
+    ),
+    "heart_condition_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "التشخيص بدقة",
+    ),
+    "heart_condition_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجنب زيارة المستشفى",
+    ),
+    "heart_condition_q6": MessageLookupByLibrary.simpleMessage(
+      "ما الأداة التي تستخدم عادة للتعامل مع حالات حالة القلب؟",
+    ),
+    "heart_condition_q6_opt1": MessageLookupByLibrary.simpleMessage("ضمادة"),
+    "heart_condition_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "حقن الإبينفرين",
+    ),
+    "heart_condition_q6_opt3": MessageLookupByLibrary.simpleMessage("قفازات"),
+    "heart_condition_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "يعتمد على الموقف",
+    ),
     "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
     "intro": MessageLookupByLibrary.simpleMessage(
       "الكسر هو كسر في العظم. الإسعافات الأولية الصحيحة يمكن أن تمنع المضاعفات.",
@@ -549,6 +1361,56 @@ class MessageLookup extends MessageLookupByLibrary {
       "خطوات الإسعافات الأولية:",
     ),
     "poisonTitle": MessageLookupByLibrary.simpleMessage("التسمم"),
+    "poisons_q1": MessageLookupByLibrary.simpleMessage(
+      "ما هي الخطوة الأولى عند التعامل مع السموم؟",
+    ),
+    "poisons_q1_opt1": MessageLookupByLibrary.simpleMessage("ابقَ هادئًا"),
+    "poisons_q1_opt2": MessageLookupByLibrary.simpleMessage("اتصل بالطوارئ"),
+    "poisons_q1_opt3": MessageLookupByLibrary.simpleMessage("قدّم ماءً"),
+    "poisons_q1_opt4": MessageLookupByLibrary.simpleMessage("تجاهل الأعراض"),
+    "poisons_q2": MessageLookupByLibrary.simpleMessage(
+      "ما هي من الأعراض التالية لـالسموم؟",
+    ),
+    "poisons_q2_opt1": MessageLookupByLibrary.simpleMessage("دوار"),
+    "poisons_q2_opt2": MessageLookupByLibrary.simpleMessage("حكة"),
+    "poisons_q2_opt3": MessageLookupByLibrary.simpleMessage("رؤية ضبابية"),
+    "poisons_q2_opt4": MessageLookupByLibrary.simpleMessage("جميع ما ذُكر"),
+    "poisons_q3": MessageLookupByLibrary.simpleMessage(
+      "متى يجب عليك استدعاء خدمات الطوارئ أثناء حادثة السموم؟",
+    ),
+    "poisons_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "إذا كانت الأعراض خفيفة",
+    ),
+    "poisons_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "إذا أغمي على الشخص",
+    ),
+    "poisons_q3_opt3": MessageLookupByLibrary.simpleMessage("إذا طلب المساعدة"),
+    "poisons_q3_opt4": MessageLookupByLibrary.simpleMessage("دائمًا"),
+    "poisons_q4": MessageLookupByLibrary.simpleMessage(
+      "ماذا يجب أن تتجنب فعله أثناء العناية بـالسموم؟",
+    ),
+    "poisons_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "استخدام طرق قديمة",
+    ),
+    "poisons_q4_opt2": MessageLookupByLibrary.simpleMessage("إبقاؤهم في راحة"),
+    "poisons_q4_opt3": MessageLookupByLibrary.simpleMessage("مراقبة التنفس"),
+    "poisons_q4_opt4": MessageLookupByLibrary.simpleMessage("البقاء معهم"),
+    "poisons_q5": MessageLookupByLibrary.simpleMessage(
+      "ما هو الهدف الرئيسي للإسعاف الأولي لـالسموم؟",
+    ),
+    "poisons_q5_opt1": MessageLookupByLibrary.simpleMessage("إكمال العلاج"),
+    "poisons_q5_opt2": MessageLookupByLibrary.simpleMessage("منع التفاقم"),
+    "poisons_q5_opt3": MessageLookupByLibrary.simpleMessage("التشخيص بدقة"),
+    "poisons_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجنب زيارة المستشفى",
+    ),
+    "poisons_q6": MessageLookupByLibrary.simpleMessage(
+      "ما الأداة التي تستخدم عادة للتعامل مع حالات السموم؟",
+    ),
+    "poisons_q6_opt1": MessageLookupByLibrary.simpleMessage("ضمادة"),
+    "poisons_q6_opt2": MessageLookupByLibrary.simpleMessage("حقن الإبينفرين"),
+    "poisons_q6_opt3": MessageLookupByLibrary.simpleMessage("قفازات"),
+    "poisons_q6_opt4": MessageLookupByLibrary.simpleMessage("يعتمد على الموقف"),
     "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
     "recoveryPositionHeading": MessageLookupByLibrary.simpleMessage(
       "وضعية التعافي",
@@ -598,6 +1460,76 @@ class MessageLookup extends MessageLookupByLibrary {
     "recoveryPositionTitle": MessageLookupByLibrary.simpleMessage(
       "وضعية التعافي",
     ),
+    "recovery_pos_q1": MessageLookupByLibrary.simpleMessage(
+      "ما هي الخطوة الأولى عند التعامل مع وضعية الإفاقة؟",
+    ),
+    "recovery_pos_q1_opt1": MessageLookupByLibrary.simpleMessage("ابقَ هادئًا"),
+    "recovery_pos_q1_opt2": MessageLookupByLibrary.simpleMessage(
+      "اتصل بالطوارئ",
+    ),
+    "recovery_pos_q1_opt3": MessageLookupByLibrary.simpleMessage("قدّم ماءً"),
+    "recovery_pos_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجاهل الأعراض",
+    ),
+    "recovery_pos_q2": MessageLookupByLibrary.simpleMessage(
+      "ما هي من الأعراض التالية لـوضعية الإفاقة؟",
+    ),
+    "recovery_pos_q2_opt1": MessageLookupByLibrary.simpleMessage("دوار"),
+    "recovery_pos_q2_opt2": MessageLookupByLibrary.simpleMessage("حكة"),
+    "recovery_pos_q2_opt3": MessageLookupByLibrary.simpleMessage("رؤية ضبابية"),
+    "recovery_pos_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "جميع ما ذُكر",
+    ),
+    "recovery_pos_q3": MessageLookupByLibrary.simpleMessage(
+      "متى يجب عليك استدعاء خدمات الطوارئ أثناء حادثة وضعية الإفاقة؟",
+    ),
+    "recovery_pos_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "إذا كانت الأعراض خفيفة",
+    ),
+    "recovery_pos_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "إذا أغمي على الشخص",
+    ),
+    "recovery_pos_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "إذا طلب المساعدة",
+    ),
+    "recovery_pos_q3_opt4": MessageLookupByLibrary.simpleMessage("دائمًا"),
+    "recovery_pos_q4": MessageLookupByLibrary.simpleMessage(
+      "ماذا يجب أن تتجنب فعله أثناء العناية بـوضعية الإفاقة؟",
+    ),
+    "recovery_pos_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "استخدام طرق قديمة",
+    ),
+    "recovery_pos_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "إبقاؤهم في راحة",
+    ),
+    "recovery_pos_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "مراقبة التنفس",
+    ),
+    "recovery_pos_q4_opt4": MessageLookupByLibrary.simpleMessage("البقاء معهم"),
+    "recovery_pos_q5": MessageLookupByLibrary.simpleMessage(
+      "ما هو الهدف الرئيسي للإسعاف الأولي لـوضعية الإفاقة؟",
+    ),
+    "recovery_pos_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "إكمال العلاج",
+    ),
+    "recovery_pos_q5_opt2": MessageLookupByLibrary.simpleMessage("منع التفاقم"),
+    "recovery_pos_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "التشخيص بدقة",
+    ),
+    "recovery_pos_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجنب زيارة المستشفى",
+    ),
+    "recovery_pos_q6": MessageLookupByLibrary.simpleMessage(
+      "ما الأداة التي تستخدم عادة للتعامل مع حالات وضعية الإفاقة؟",
+    ),
+    "recovery_pos_q6_opt1": MessageLookupByLibrary.simpleMessage("ضمادة"),
+    "recovery_pos_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "حقن الإبينفرين",
+    ),
+    "recovery_pos_q6_opt3": MessageLookupByLibrary.simpleMessage("قفازات"),
+    "recovery_pos_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "يعتمد على الموقف",
+    ),
     "removedFromSavedTopicsText": MessageLookupByLibrary.simpleMessage(
       "تمت الإزالة من المواضيع المحفوظة",
     ),
@@ -635,6 +1567,60 @@ class MessageLookup extends MessageLookupByLibrary {
       "بعد النوبة، قدم الراحة والطمأنينة للشخص وهو يستعيد وعيه.",
     ),
     "seizuresTitle": MessageLookupByLibrary.simpleMessage("النوبات"),
+    "seizures_q1": MessageLookupByLibrary.simpleMessage(
+      "ما هي الخطوة الأولى عند التعامل مع النوبات؟",
+    ),
+    "seizures_q1_opt1": MessageLookupByLibrary.simpleMessage("ابقَ هادئًا"),
+    "seizures_q1_opt2": MessageLookupByLibrary.simpleMessage("اتصل بالطوارئ"),
+    "seizures_q1_opt3": MessageLookupByLibrary.simpleMessage("قدّم ماءً"),
+    "seizures_q1_opt4": MessageLookupByLibrary.simpleMessage("تجاهل الأعراض"),
+    "seizures_q2": MessageLookupByLibrary.simpleMessage(
+      "ما هي من الأعراض التالية لـالنوبات؟",
+    ),
+    "seizures_q2_opt1": MessageLookupByLibrary.simpleMessage("دوار"),
+    "seizures_q2_opt2": MessageLookupByLibrary.simpleMessage("حكة"),
+    "seizures_q2_opt3": MessageLookupByLibrary.simpleMessage("رؤية ضبابية"),
+    "seizures_q2_opt4": MessageLookupByLibrary.simpleMessage("جميع ما ذُكر"),
+    "seizures_q3": MessageLookupByLibrary.simpleMessage(
+      "متى يجب عليك استدعاء خدمات الطوارئ أثناء حادثة النوبات؟",
+    ),
+    "seizures_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "إذا كانت الأعراض خفيفة",
+    ),
+    "seizures_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "إذا أغمي على الشخص",
+    ),
+    "seizures_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "إذا طلب المساعدة",
+    ),
+    "seizures_q3_opt4": MessageLookupByLibrary.simpleMessage("دائمًا"),
+    "seizures_q4": MessageLookupByLibrary.simpleMessage(
+      "ماذا يجب أن تتجنب فعله أثناء العناية بـالنوبات؟",
+    ),
+    "seizures_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "استخدام طرق قديمة",
+    ),
+    "seizures_q4_opt2": MessageLookupByLibrary.simpleMessage("إبقاؤهم في راحة"),
+    "seizures_q4_opt3": MessageLookupByLibrary.simpleMessage("مراقبة التنفس"),
+    "seizures_q4_opt4": MessageLookupByLibrary.simpleMessage("البقاء معهم"),
+    "seizures_q5": MessageLookupByLibrary.simpleMessage(
+      "ما هو الهدف الرئيسي للإسعاف الأولي لـالنوبات؟",
+    ),
+    "seizures_q5_opt1": MessageLookupByLibrary.simpleMessage("إكمال العلاج"),
+    "seizures_q5_opt2": MessageLookupByLibrary.simpleMessage("منع التفاقم"),
+    "seizures_q5_opt3": MessageLookupByLibrary.simpleMessage("التشخيص بدقة"),
+    "seizures_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجنب زيارة المستشفى",
+    ),
+    "seizures_q6": MessageLookupByLibrary.simpleMessage(
+      "ما الأداة التي تستخدم عادة للتعامل مع حالات النوبات؟",
+    ),
+    "seizures_q6_opt1": MessageLookupByLibrary.simpleMessage("ضمادة"),
+    "seizures_q6_opt2": MessageLookupByLibrary.simpleMessage("حقن الإبينفرين"),
+    "seizures_q6_opt3": MessageLookupByLibrary.simpleMessage("قفازات"),
+    "seizures_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "يعتمد على الموقف",
+    ),
     "selectLanguage": MessageLookupByLibrary.simpleMessage("اختر اللغة"),
     "shockFirstAidHeading": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية للصدمة:",
@@ -666,6 +1652,52 @@ class MessageLookup extends MessageLookupByLibrary {
       "راقب التنفس وكن مستعدًا لإجراء الإنعاش القلبي الرئوي إذا لزم الأمر.",
     ),
     "shockTitle": MessageLookupByLibrary.simpleMessage("الصدمة"),
+    "shock_q1": MessageLookupByLibrary.simpleMessage(
+      "ما هي الخطوة الأولى عند التعامل مع الصدمة؟",
+    ),
+    "shock_q1_opt1": MessageLookupByLibrary.simpleMessage("ابقَ هادئًا"),
+    "shock_q1_opt2": MessageLookupByLibrary.simpleMessage("اتصل بالطوارئ"),
+    "shock_q1_opt3": MessageLookupByLibrary.simpleMessage("قدّم ماءً"),
+    "shock_q1_opt4": MessageLookupByLibrary.simpleMessage("تجاهل الأعراض"),
+    "shock_q2": MessageLookupByLibrary.simpleMessage(
+      "ما هي من الأعراض التالية لـالصدمة؟",
+    ),
+    "shock_q2_opt1": MessageLookupByLibrary.simpleMessage("دوار"),
+    "shock_q2_opt2": MessageLookupByLibrary.simpleMessage("حكة"),
+    "shock_q2_opt3": MessageLookupByLibrary.simpleMessage("رؤية ضبابية"),
+    "shock_q2_opt4": MessageLookupByLibrary.simpleMessage("جميع ما ذُكر"),
+    "shock_q3": MessageLookupByLibrary.simpleMessage(
+      "متى يجب عليك استدعاء خدمات الطوارئ أثناء حادثة الصدمة؟",
+    ),
+    "shock_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "إذا كانت الأعراض خفيفة",
+    ),
+    "shock_q3_opt2": MessageLookupByLibrary.simpleMessage("إذا أغمي على الشخص"),
+    "shock_q3_opt3": MessageLookupByLibrary.simpleMessage("إذا طلب المساعدة"),
+    "shock_q3_opt4": MessageLookupByLibrary.simpleMessage("دائمًا"),
+    "shock_q4": MessageLookupByLibrary.simpleMessage(
+      "ماذا يجب أن تتجنب فعله أثناء العناية بـالصدمة؟",
+    ),
+    "shock_q4_opt1": MessageLookupByLibrary.simpleMessage("استخدام طرق قديمة"),
+    "shock_q4_opt2": MessageLookupByLibrary.simpleMessage("إبقاؤهم في راحة"),
+    "shock_q4_opt3": MessageLookupByLibrary.simpleMessage("مراقبة التنفس"),
+    "shock_q4_opt4": MessageLookupByLibrary.simpleMessage("البقاء معهم"),
+    "shock_q5": MessageLookupByLibrary.simpleMessage(
+      "ما هو الهدف الرئيسي للإسعاف الأولي لـالصدمة؟",
+    ),
+    "shock_q5_opt1": MessageLookupByLibrary.simpleMessage("إكمال العلاج"),
+    "shock_q5_opt2": MessageLookupByLibrary.simpleMessage("منع التفاقم"),
+    "shock_q5_opt3": MessageLookupByLibrary.simpleMessage("التشخيص بدقة"),
+    "shock_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجنب زيارة المستشفى",
+    ),
+    "shock_q6": MessageLookupByLibrary.simpleMessage(
+      "ما الأداة التي تستخدم عادة للتعامل مع حالات الصدمة؟",
+    ),
+    "shock_q6_opt1": MessageLookupByLibrary.simpleMessage("ضمادة"),
+    "shock_q6_opt2": MessageLookupByLibrary.simpleMessage("حقن الإبينفرين"),
+    "shock_q6_opt3": MessageLookupByLibrary.simpleMessage("قفازات"),
+    "shock_q6_opt4": MessageLookupByLibrary.simpleMessage("يعتمد على الموقف"),
     "sign1": MessageLookupByLibrary.simpleMessage("- ألم وإيلام عند اللمس"),
     "sign2": MessageLookupByLibrary.simpleMessage("- تورم أو كدمات"),
     "sign3": MessageLookupByLibrary.simpleMessage("- تشوه أو وضع غير طبيعي"),
@@ -714,6 +1746,84 @@ class MessageLookup extends MessageLookupByLibrary {
       "طمئن الشخص المصاب وأبقِه هادئًا.",
     ),
     "spinalTitle": MessageLookupByLibrary.simpleMessage("إصابة العمود الفقري"),
+    "spinal_injury_q1": MessageLookupByLibrary.simpleMessage(
+      "ما هي الخطوة الأولى عند التعامل مع إصابة العمود الفقري؟",
+    ),
+    "spinal_injury_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "ابقَ هادئًا",
+    ),
+    "spinal_injury_q1_opt2": MessageLookupByLibrary.simpleMessage(
+      "اتصل بالطوارئ",
+    ),
+    "spinal_injury_q1_opt3": MessageLookupByLibrary.simpleMessage("قدّم ماءً"),
+    "spinal_injury_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجاهل الأعراض",
+    ),
+    "spinal_injury_q2": MessageLookupByLibrary.simpleMessage(
+      "ما هي من الأعراض التالية لـإصابة العمود الفقري؟",
+    ),
+    "spinal_injury_q2_opt1": MessageLookupByLibrary.simpleMessage("دوار"),
+    "spinal_injury_q2_opt2": MessageLookupByLibrary.simpleMessage("حكة"),
+    "spinal_injury_q2_opt3": MessageLookupByLibrary.simpleMessage(
+      "رؤية ضبابية",
+    ),
+    "spinal_injury_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "جميع ما ذُكر",
+    ),
+    "spinal_injury_q3": MessageLookupByLibrary.simpleMessage(
+      "متى يجب عليك استدعاء خدمات الطوارئ أثناء حادثة إصابة العمود الفقري؟",
+    ),
+    "spinal_injury_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "إذا كانت الأعراض خفيفة",
+    ),
+    "spinal_injury_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "إذا أغمي على الشخص",
+    ),
+    "spinal_injury_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "إذا طلب المساعدة",
+    ),
+    "spinal_injury_q3_opt4": MessageLookupByLibrary.simpleMessage("دائمًا"),
+    "spinal_injury_q4": MessageLookupByLibrary.simpleMessage(
+      "ماذا يجب أن تتجنب فعله أثناء العناية بـإصابة العمود الفقري؟",
+    ),
+    "spinal_injury_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "استخدام طرق قديمة",
+    ),
+    "spinal_injury_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "إبقاؤهم في راحة",
+    ),
+    "spinal_injury_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "مراقبة التنفس",
+    ),
+    "spinal_injury_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "البقاء معهم",
+    ),
+    "spinal_injury_q5": MessageLookupByLibrary.simpleMessage(
+      "ما هو الهدف الرئيسي للإسعاف الأولي لـإصابة العمود الفقري؟",
+    ),
+    "spinal_injury_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "إكمال العلاج",
+    ),
+    "spinal_injury_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "منع التفاقم",
+    ),
+    "spinal_injury_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "التشخيص بدقة",
+    ),
+    "spinal_injury_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجنب زيارة المستشفى",
+    ),
+    "spinal_injury_q6": MessageLookupByLibrary.simpleMessage(
+      "ما الأداة التي تستخدم عادة للتعامل مع حالات إصابة العمود الفقري؟",
+    ),
+    "spinal_injury_q6_opt1": MessageLookupByLibrary.simpleMessage("ضمادة"),
+    "spinal_injury_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "حقن الإبينفرين",
+    ),
+    "spinal_injury_q6_opt3": MessageLookupByLibrary.simpleMessage("قفازات"),
+    "spinal_injury_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "يعتمد على الموقف",
+    ),
     "sprainsStrainsFirstAidHeading": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية للالتواءات والتمزقات:",
     ),
@@ -753,6 +1863,84 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "sprainsStrainsTitle": MessageLookupByLibrary.simpleMessage(
       "الالتواءات والتمزقات",
+    ),
+    "sprainstrains_q1": MessageLookupByLibrary.simpleMessage(
+      "ما هي الخطوة الأولى عند التعامل مع الالتواءات والشد؟",
+    ),
+    "sprainstrains_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "ابقَ هادئًا",
+    ),
+    "sprainstrains_q1_opt2": MessageLookupByLibrary.simpleMessage(
+      "اتصل بالطوارئ",
+    ),
+    "sprainstrains_q1_opt3": MessageLookupByLibrary.simpleMessage("قدّم ماءً"),
+    "sprainstrains_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجاهل الأعراض",
+    ),
+    "sprainstrains_q2": MessageLookupByLibrary.simpleMessage(
+      "ما هي من الأعراض التالية لـالالتواءات والشد؟",
+    ),
+    "sprainstrains_q2_opt1": MessageLookupByLibrary.simpleMessage("دوار"),
+    "sprainstrains_q2_opt2": MessageLookupByLibrary.simpleMessage("حكة"),
+    "sprainstrains_q2_opt3": MessageLookupByLibrary.simpleMessage(
+      "رؤية ضبابية",
+    ),
+    "sprainstrains_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "جميع ما ذُكر",
+    ),
+    "sprainstrains_q3": MessageLookupByLibrary.simpleMessage(
+      "متى يجب عليك استدعاء خدمات الطوارئ أثناء حادثة الالتواءات والشد؟",
+    ),
+    "sprainstrains_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "إذا كانت الأعراض خفيفة",
+    ),
+    "sprainstrains_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "إذا أغمي على الشخص",
+    ),
+    "sprainstrains_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "إذا طلب المساعدة",
+    ),
+    "sprainstrains_q3_opt4": MessageLookupByLibrary.simpleMessage("دائمًا"),
+    "sprainstrains_q4": MessageLookupByLibrary.simpleMessage(
+      "ماذا يجب أن تتجنب فعله أثناء العناية بـالالتواءات والشد؟",
+    ),
+    "sprainstrains_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "استخدام طرق قديمة",
+    ),
+    "sprainstrains_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "إبقاؤهم في راحة",
+    ),
+    "sprainstrains_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "مراقبة التنفس",
+    ),
+    "sprainstrains_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "البقاء معهم",
+    ),
+    "sprainstrains_q5": MessageLookupByLibrary.simpleMessage(
+      "ما هو الهدف الرئيسي للإسعاف الأولي لـالالتواءات والشد؟",
+    ),
+    "sprainstrains_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "إكمال العلاج",
+    ),
+    "sprainstrains_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "منع التفاقم",
+    ),
+    "sprainstrains_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "التشخيص بدقة",
+    ),
+    "sprainstrains_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجنب زيارة المستشفى",
+    ),
+    "sprainstrains_q6": MessageLookupByLibrary.simpleMessage(
+      "ما الأداة التي تستخدم عادة للتعامل مع حالات الالتواءات والشد؟",
+    ),
+    "sprainstrains_q6_opt1": MessageLookupByLibrary.simpleMessage("ضمادة"),
+    "sprainstrains_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "حقن الإبينفرين",
+    ),
+    "sprainstrains_q6_opt3": MessageLookupByLibrary.simpleMessage("قفازات"),
+    "sprainstrains_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "يعتمد على الموقف",
     ),
     "step1Desc": MessageLookupByLibrary.simpleMessage(
       "حافظ على المنطقة المصابة ثابتة وتجنب الحركة.",
@@ -813,6 +2001,54 @@ class MessageLookup extends MessageLookupByLibrary {
       "راقب تنفسه واستجابته حتى وصول المساعدة.",
     ),
     "strokeTitle": MessageLookupByLibrary.simpleMessage("السكتة الدماغية"),
+    "stroke_q1": MessageLookupByLibrary.simpleMessage(
+      "ما هي الخطوة الأولى عند التعامل مع السكتة الدماغية؟",
+    ),
+    "stroke_q1_opt1": MessageLookupByLibrary.simpleMessage("ابقَ هادئًا"),
+    "stroke_q1_opt2": MessageLookupByLibrary.simpleMessage("اتصل بالطوارئ"),
+    "stroke_q1_opt3": MessageLookupByLibrary.simpleMessage("قدّم ماءً"),
+    "stroke_q1_opt4": MessageLookupByLibrary.simpleMessage("تجاهل الأعراض"),
+    "stroke_q2": MessageLookupByLibrary.simpleMessage(
+      "ما هي من الأعراض التالية لـالسكتة الدماغية؟",
+    ),
+    "stroke_q2_opt1": MessageLookupByLibrary.simpleMessage("دوار"),
+    "stroke_q2_opt2": MessageLookupByLibrary.simpleMessage("حكة"),
+    "stroke_q2_opt3": MessageLookupByLibrary.simpleMessage("رؤية ضبابية"),
+    "stroke_q2_opt4": MessageLookupByLibrary.simpleMessage("جميع ما ذُكر"),
+    "stroke_q3": MessageLookupByLibrary.simpleMessage(
+      "متى يجب عليك استدعاء خدمات الطوارئ أثناء حادثة السكتة الدماغية؟",
+    ),
+    "stroke_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "إذا كانت الأعراض خفيفة",
+    ),
+    "stroke_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "إذا أغمي على الشخص",
+    ),
+    "stroke_q3_opt3": MessageLookupByLibrary.simpleMessage("إذا طلب المساعدة"),
+    "stroke_q3_opt4": MessageLookupByLibrary.simpleMessage("دائمًا"),
+    "stroke_q4": MessageLookupByLibrary.simpleMessage(
+      "ماذا يجب أن تتجنب فعله أثناء العناية بـالسكتة الدماغية؟",
+    ),
+    "stroke_q4_opt1": MessageLookupByLibrary.simpleMessage("استخدام طرق قديمة"),
+    "stroke_q4_opt2": MessageLookupByLibrary.simpleMessage("إبقاؤهم في راحة"),
+    "stroke_q4_opt3": MessageLookupByLibrary.simpleMessage("مراقبة التنفس"),
+    "stroke_q4_opt4": MessageLookupByLibrary.simpleMessage("البقاء معهم"),
+    "stroke_q5": MessageLookupByLibrary.simpleMessage(
+      "ما هو الهدف الرئيسي للإسعاف الأولي لـالسكتة الدماغية؟",
+    ),
+    "stroke_q5_opt1": MessageLookupByLibrary.simpleMessage("إكمال العلاج"),
+    "stroke_q5_opt2": MessageLookupByLibrary.simpleMessage("منع التفاقم"),
+    "stroke_q5_opt3": MessageLookupByLibrary.simpleMessage("التشخيص بدقة"),
+    "stroke_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجنب زيارة المستشفى",
+    ),
+    "stroke_q6": MessageLookupByLibrary.simpleMessage(
+      "ما الأداة التي تستخدم عادة للتعامل مع حالات السكتة الدماغية؟",
+    ),
+    "stroke_q6_opt1": MessageLookupByLibrary.simpleMessage("ضمادة"),
+    "stroke_q6_opt2": MessageLookupByLibrary.simpleMessage("حقن الإبينفرين"),
+    "stroke_q6_opt3": MessageLookupByLibrary.simpleMessage("قفازات"),
+    "stroke_q6_opt4": MessageLookupByLibrary.simpleMessage("يعتمد على الموقف"),
     "tAboutUs": MessageLookupByLibrary.simpleMessage(
       "حول تطبيق PGU للإسعافات الأولية",
     ),
@@ -996,6 +2232,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "taddedToSaved": MessageLookupByLibrary.simpleMessage(
       "تمت الإضافة إلى المواضيع المحفوظة",
     ),
+    "takeQuiz": MessageLookupByLibrary.simpleMessage("ابدأ الاختبار"),
     "tallTopicsCleared": MessageLookupByLibrary.simpleMessage(
       "تم مسح جميع المواضيع المحفوظة",
     ),
@@ -1293,5 +2530,63 @@ class MessageLookup extends MessageLookupByLibrary {
       "خطوات العناية الأساسية بالجروح:",
     ),
     "woundCareTitle": MessageLookupByLibrary.simpleMessage("العناية بالجروح"),
+    "wound_care_q1": MessageLookupByLibrary.simpleMessage(
+      "ما هي الخطوة الأولى عند التعامل مع العناية بالجروح؟",
+    ),
+    "wound_care_q1_opt1": MessageLookupByLibrary.simpleMessage("ابقَ هادئًا"),
+    "wound_care_q1_opt2": MessageLookupByLibrary.simpleMessage("اتصل بالطوارئ"),
+    "wound_care_q1_opt3": MessageLookupByLibrary.simpleMessage("قدّم ماءً"),
+    "wound_care_q1_opt4": MessageLookupByLibrary.simpleMessage("تجاهل الأعراض"),
+    "wound_care_q2": MessageLookupByLibrary.simpleMessage(
+      "ما هي من الأعراض التالية لـالعناية بالجروح؟",
+    ),
+    "wound_care_q2_opt1": MessageLookupByLibrary.simpleMessage("دوار"),
+    "wound_care_q2_opt2": MessageLookupByLibrary.simpleMessage("حكة"),
+    "wound_care_q2_opt3": MessageLookupByLibrary.simpleMessage("رؤية ضبابية"),
+    "wound_care_q2_opt4": MessageLookupByLibrary.simpleMessage("جميع ما ذُكر"),
+    "wound_care_q3": MessageLookupByLibrary.simpleMessage(
+      "متى يجب عليك استدعاء خدمات الطوارئ أثناء حادثة العناية بالجروح؟",
+    ),
+    "wound_care_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "إذا كانت الأعراض خفيفة",
+    ),
+    "wound_care_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "إذا أغمي على الشخص",
+    ),
+    "wound_care_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "إذا طلب المساعدة",
+    ),
+    "wound_care_q3_opt4": MessageLookupByLibrary.simpleMessage("دائمًا"),
+    "wound_care_q4": MessageLookupByLibrary.simpleMessage(
+      "ماذا يجب أن تتجنب فعله أثناء العناية بـالعناية بالجروح؟",
+    ),
+    "wound_care_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "استخدام طرق قديمة",
+    ),
+    "wound_care_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "إبقاؤهم في راحة",
+    ),
+    "wound_care_q4_opt3": MessageLookupByLibrary.simpleMessage("مراقبة التنفس"),
+    "wound_care_q4_opt4": MessageLookupByLibrary.simpleMessage("البقاء معهم"),
+    "wound_care_q5": MessageLookupByLibrary.simpleMessage(
+      "ما هو الهدف الرئيسي للإسعاف الأولي لـالعناية بالجروح؟",
+    ),
+    "wound_care_q5_opt1": MessageLookupByLibrary.simpleMessage("إكمال العلاج"),
+    "wound_care_q5_opt2": MessageLookupByLibrary.simpleMessage("منع التفاقم"),
+    "wound_care_q5_opt3": MessageLookupByLibrary.simpleMessage("التشخيص بدقة"),
+    "wound_care_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "تجنب زيارة المستشفى",
+    ),
+    "wound_care_q6": MessageLookupByLibrary.simpleMessage(
+      "ما الأداة التي تستخدم عادة للتعامل مع حالات العناية بالجروح؟",
+    ),
+    "wound_care_q6_opt1": MessageLookupByLibrary.simpleMessage("ضمادة"),
+    "wound_care_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "حقن الإبينفرين",
+    ),
+    "wound_care_q6_opt3": MessageLookupByLibrary.simpleMessage("قفازات"),
+    "wound_care_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "يعتمد على الموقف",
+    ),
   };
 }

@@ -34,6 +34,160 @@ class MessageLookup extends MessageLookupByLibrary {
     "addedToSavedTopicsText": MessageLookupByLibrary.simpleMessage(
       "Добавлено в сохраненные темы",
     ),
+    "allergic_reactions_q1": MessageLookupByLibrary.simpleMessage(
+      "Какой первый шаг при оказании помощи при аллергические реакции?",
+    ),
+    "allergic_reactions_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "Сохранять спокойствие",
+    ),
+    "allergic_reactions_q1_opt2": MessageLookupByLibrary.simpleMessage(
+      "Вызвать скорую",
+    ),
+    "allergic_reactions_q1_opt3": MessageLookupByLibrary.simpleMessage(
+      "Предоставить воду",
+    ),
+    "allergic_reactions_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Игнорировать симптомы",
+    ),
+    "allergic_reactions_q2": MessageLookupByLibrary.simpleMessage(
+      "Какой из следующих симптомов характерен для аллергические реакции?",
+    ),
+    "allergic_reactions_q2_opt1": MessageLookupByLibrary.simpleMessage(
+      "Головокружение",
+    ),
+    "allergic_reactions_q2_opt2": MessageLookupByLibrary.simpleMessage("Зуд"),
+    "allergic_reactions_q2_opt3": MessageLookupByLibrary.simpleMessage(
+      "Нечеткое зрение",
+    ),
+    "allergic_reactions_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "Все вышеперечисленное",
+    ),
+    "allergic_reactions_q3": MessageLookupByLibrary.simpleMessage(
+      "Когда следует вызвать экстренные службы во время инцидента аллергические реакции?",
+    ),
+    "allergic_reactions_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "Если симптомы легкие",
+    ),
+    "allergic_reactions_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "Если человек теряет сознание",
+    ),
+    "allergic_reactions_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "Если он просит о помощи",
+    ),
+    "allergic_reactions_q3_opt4": MessageLookupByLibrary.simpleMessage(
+      "Всегда",
+    ),
+    "allergic_reactions_q4": MessageLookupByLibrary.simpleMessage(
+      "Что следует избегать при уходе за аллергические реакции?",
+    ),
+    "allergic_reactions_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Использовать устаревшие методы",
+    ),
+    "allergic_reactions_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Обеспечить комфорт",
+    ),
+    "allergic_reactions_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Контролировать дыхание",
+    ),
+    "allergic_reactions_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Оставаться рядом",
+    ),
+    "allergic_reactions_q5": MessageLookupByLibrary.simpleMessage(
+      "Какова основная цель первой помощи при аллергические реакции?",
+    ),
+    "allergic_reactions_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Полное лечение",
+    ),
+    "allergic_reactions_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Предотвратить ухудшение",
+    ),
+    "allergic_reactions_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Точный диагноз",
+    ),
+    "allergic_reactions_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Избежать посещения больницы",
+    ),
+    "allergic_reactions_q6": MessageLookupByLibrary.simpleMessage(
+      "Какой инструмент обычно используется для обработки ситуаций аллергические реакции?",
+    ),
+    "allergic_reactions_q6_opt1": MessageLookupByLibrary.simpleMessage("Бинт"),
+    "allergic_reactions_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Эпинефриновый автоинъектор",
+    ),
+    "allergic_reactions_q6_opt3": MessageLookupByLibrary.simpleMessage(
+      "Перчатки",
+    ),
+    "allergic_reactions_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "Зависит от ситуации",
+    ),
+    "assess_q1": MessageLookupByLibrary.simpleMessage(
+      "Какой первый шаг при оказании помощи при оценки пострадавшего?",
+    ),
+    "assess_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "Сохранять спокойствие",
+    ),
+    "assess_q1_opt2": MessageLookupByLibrary.simpleMessage("Вызвать скорую"),
+    "assess_q1_opt3": MessageLookupByLibrary.simpleMessage("Предоставить воду"),
+    "assess_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Игнорировать симптомы",
+    ),
+    "assess_q2": MessageLookupByLibrary.simpleMessage(
+      "Какой из следующих симптомов характерен для оценки пострадавшего?",
+    ),
+    "assess_q2_opt1": MessageLookupByLibrary.simpleMessage("Головокружение"),
+    "assess_q2_opt2": MessageLookupByLibrary.simpleMessage("Зуд"),
+    "assess_q2_opt3": MessageLookupByLibrary.simpleMessage("Нечеткое зрение"),
+    "assess_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "Все вышеперечисленное",
+    ),
+    "assess_q3": MessageLookupByLibrary.simpleMessage(
+      "Когда следует вызвать экстренные службы во время инцидента оценки пострадавшего?",
+    ),
+    "assess_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "Если симптомы легкие",
+    ),
+    "assess_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "Если человек теряет сознание",
+    ),
+    "assess_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "Если он просит о помощи",
+    ),
+    "assess_q3_opt4": MessageLookupByLibrary.simpleMessage("Всегда"),
+    "assess_q4": MessageLookupByLibrary.simpleMessage(
+      "Что следует избегать при уходе за оценки пострадавшего?",
+    ),
+    "assess_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Использовать устаревшие методы",
+    ),
+    "assess_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Обеспечить комфорт",
+    ),
+    "assess_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Контролировать дыхание",
+    ),
+    "assess_q4_opt4": MessageLookupByLibrary.simpleMessage("Оставаться рядом"),
+    "assess_q5": MessageLookupByLibrary.simpleMessage(
+      "Какова основная цель первой помощи при оценки пострадавшего?",
+    ),
+    "assess_q5_opt1": MessageLookupByLibrary.simpleMessage("Полное лечение"),
+    "assess_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Предотвратить ухудшение",
+    ),
+    "assess_q5_opt3": MessageLookupByLibrary.simpleMessage("Точный диагноз"),
+    "assess_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Избежать посещения больницы",
+    ),
+    "assess_q6": MessageLookupByLibrary.simpleMessage(
+      "Какой инструмент обычно используется для обработки ситуаций оценки пострадавшего?",
+    ),
+    "assess_q6_opt1": MessageLookupByLibrary.simpleMessage("Бинт"),
+    "assess_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Эпинефриновый автоинъектор",
+    ),
+    "assess_q6_opt3": MessageLookupByLibrary.simpleMessage("Перчатки"),
+    "assess_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "Зависит от ситуации",
+    ),
     "asthma": MessageLookupByLibrary.simpleMessage("Астма"),
     "asthma1": MessageLookupByLibrary.simpleMessage(
       "Приступы астмы могут быть опасными для жизни. Быстрые и правильные действия крайне важны, чтобы помочь человеку, испытывающему затруднения с дыханием.",
@@ -85,6 +239,74 @@ class MessageLookup extends MessageLookupByLibrary {
     "asthmaTitle": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при приступе астмы",
     ),
+    "asthma_q1": MessageLookupByLibrary.simpleMessage(
+      "Какой первый шаг при оказании помощи при астма?",
+    ),
+    "asthma_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "Сохранять спокойствие",
+    ),
+    "asthma_q1_opt2": MessageLookupByLibrary.simpleMessage("Вызвать скорую"),
+    "asthma_q1_opt3": MessageLookupByLibrary.simpleMessage("Предоставить воду"),
+    "asthma_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Игнорировать симптомы",
+    ),
+    "asthma_q2": MessageLookupByLibrary.simpleMessage(
+      "Какой из следующих симптомов характерен для астма?",
+    ),
+    "asthma_q2_opt1": MessageLookupByLibrary.simpleMessage("Головокружение"),
+    "asthma_q2_opt2": MessageLookupByLibrary.simpleMessage("Зуд"),
+    "asthma_q2_opt3": MessageLookupByLibrary.simpleMessage("Нечеткое зрение"),
+    "asthma_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "Все вышеперечисленное",
+    ),
+    "asthma_q3": MessageLookupByLibrary.simpleMessage(
+      "Когда следует вызвать экстренные службы во время инцидента астма?",
+    ),
+    "asthma_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "Если симптомы легкие",
+    ),
+    "asthma_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "Если человек теряет сознание",
+    ),
+    "asthma_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "Если он просит о помощи",
+    ),
+    "asthma_q3_opt4": MessageLookupByLibrary.simpleMessage("Всегда"),
+    "asthma_q4": MessageLookupByLibrary.simpleMessage(
+      "Что следует избегать при уходе за астма?",
+    ),
+    "asthma_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Использовать устаревшие методы",
+    ),
+    "asthma_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Обеспечить комфорт",
+    ),
+    "asthma_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Контролировать дыхание",
+    ),
+    "asthma_q4_opt4": MessageLookupByLibrary.simpleMessage("Оставаться рядом"),
+    "asthma_q5": MessageLookupByLibrary.simpleMessage(
+      "Какова основная цель первой помощи при астма?",
+    ),
+    "asthma_q5_opt1": MessageLookupByLibrary.simpleMessage("Полное лечение"),
+    "asthma_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Предотвратить ухудшение",
+    ),
+    "asthma_q5_opt3": MessageLookupByLibrary.simpleMessage("Точный диагноз"),
+    "asthma_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Избежать посещения больницы",
+    ),
+    "asthma_q6": MessageLookupByLibrary.simpleMessage(
+      "Какой инструмент обычно используется для обработки ситуаций астма?",
+    ),
+    "asthma_q6_opt1": MessageLookupByLibrary.simpleMessage("Бинт"),
+    "asthma_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Эпинефриновый автоинъектор",
+    ),
+    "asthma_q6_opt3": MessageLookupByLibrary.simpleMessage("Перчатки"),
+    "asthma_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "Зависит от ситуации",
+    ),
     "bites": MessageLookupByLibrary.simpleMessage("Укусы"),
     "bites1": MessageLookupByLibrary.simpleMessage(
       "Укусы животных или насекомых могут передавать заболевания и приводить к инфекциям, если их не лечить.",
@@ -131,6 +353,72 @@ class MessageLookup extends MessageLookupByLibrary {
     "bitesTitle": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при укусах",
     ),
+    "bites_q1": MessageLookupByLibrary.simpleMessage(
+      "Какой первый шаг при оказании помощи при укусы?",
+    ),
+    "bites_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "Сохранять спокойствие",
+    ),
+    "bites_q1_opt2": MessageLookupByLibrary.simpleMessage("Вызвать скорую"),
+    "bites_q1_opt3": MessageLookupByLibrary.simpleMessage("Предоставить воду"),
+    "bites_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Игнорировать симптомы",
+    ),
+    "bites_q2": MessageLookupByLibrary.simpleMessage(
+      "Какой из следующих симптомов характерен для укусы?",
+    ),
+    "bites_q2_opt1": MessageLookupByLibrary.simpleMessage("Головокружение"),
+    "bites_q2_opt2": MessageLookupByLibrary.simpleMessage("Зуд"),
+    "bites_q2_opt3": MessageLookupByLibrary.simpleMessage("Нечеткое зрение"),
+    "bites_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "Все вышеперечисленное",
+    ),
+    "bites_q3": MessageLookupByLibrary.simpleMessage(
+      "Когда следует вызвать экстренные службы во время инцидента укусы?",
+    ),
+    "bites_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "Если симптомы легкие",
+    ),
+    "bites_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "Если человек теряет сознание",
+    ),
+    "bites_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "Если он просит о помощи",
+    ),
+    "bites_q3_opt4": MessageLookupByLibrary.simpleMessage("Всегда"),
+    "bites_q4": MessageLookupByLibrary.simpleMessage(
+      "Что следует избегать при уходе за укусы?",
+    ),
+    "bites_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Использовать устаревшие методы",
+    ),
+    "bites_q4_opt2": MessageLookupByLibrary.simpleMessage("Обеспечить комфорт"),
+    "bites_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Контролировать дыхание",
+    ),
+    "bites_q4_opt4": MessageLookupByLibrary.simpleMessage("Оставаться рядом"),
+    "bites_q5": MessageLookupByLibrary.simpleMessage(
+      "Какова основная цель первой помощи при укусы?",
+    ),
+    "bites_q5_opt1": MessageLookupByLibrary.simpleMessage("Полное лечение"),
+    "bites_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Предотвратить ухудшение",
+    ),
+    "bites_q5_opt3": MessageLookupByLibrary.simpleMessage("Точный диагноз"),
+    "bites_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Избежать посещения больницы",
+    ),
+    "bites_q6": MessageLookupByLibrary.simpleMessage(
+      "Какой инструмент обычно используется для обработки ситуаций укусы?",
+    ),
+    "bites_q6_opt1": MessageLookupByLibrary.simpleMessage("Бинт"),
+    "bites_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Эпинефриновый автоинъектор",
+    ),
+    "bites_q6_opt3": MessageLookupByLibrary.simpleMessage("Перчатки"),
+    "bites_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "Зависит от ситуации",
+    ),
     "bleeding": MessageLookupByLibrary.simpleMessage("Кровотечение"),
     "bleeding1": MessageLookupByLibrary.simpleMessage(
       "Быстрые действия критически важны для остановки кровотечения, чтобы предотвратить шок или более серьезную травму.",
@@ -175,6 +463,78 @@ class MessageLookup extends MessageLookupByLibrary {
     "bleedingTitle": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при кровотечении",
     ),
+    "bleeding_q1": MessageLookupByLibrary.simpleMessage(
+      "Какой первый шаг при оказании помощи при кровотечение?",
+    ),
+    "bleeding_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "Сохранять спокойствие",
+    ),
+    "bleeding_q1_opt2": MessageLookupByLibrary.simpleMessage("Вызвать скорую"),
+    "bleeding_q1_opt3": MessageLookupByLibrary.simpleMessage(
+      "Предоставить воду",
+    ),
+    "bleeding_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Игнорировать симптомы",
+    ),
+    "bleeding_q2": MessageLookupByLibrary.simpleMessage(
+      "Какой из следующих симптомов характерен для кровотечение?",
+    ),
+    "bleeding_q2_opt1": MessageLookupByLibrary.simpleMessage("Головокружение"),
+    "bleeding_q2_opt2": MessageLookupByLibrary.simpleMessage("Зуд"),
+    "bleeding_q2_opt3": MessageLookupByLibrary.simpleMessage("Нечеткое зрение"),
+    "bleeding_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "Все вышеперечисленное",
+    ),
+    "bleeding_q3": MessageLookupByLibrary.simpleMessage(
+      "Когда следует вызвать экстренные службы во время инцидента кровотечение?",
+    ),
+    "bleeding_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "Если симптомы легкие",
+    ),
+    "bleeding_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "Если человек теряет сознание",
+    ),
+    "bleeding_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "Если он просит о помощи",
+    ),
+    "bleeding_q3_opt4": MessageLookupByLibrary.simpleMessage("Всегда"),
+    "bleeding_q4": MessageLookupByLibrary.simpleMessage(
+      "Что следует избегать при уходе за кровотечение?",
+    ),
+    "bleeding_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Использовать устаревшие методы",
+    ),
+    "bleeding_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Обеспечить комфорт",
+    ),
+    "bleeding_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Контролировать дыхание",
+    ),
+    "bleeding_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Оставаться рядом",
+    ),
+    "bleeding_q5": MessageLookupByLibrary.simpleMessage(
+      "Какова основная цель первой помощи при кровотечение?",
+    ),
+    "bleeding_q5_opt1": MessageLookupByLibrary.simpleMessage("Полное лечение"),
+    "bleeding_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Предотвратить ухудшение",
+    ),
+    "bleeding_q5_opt3": MessageLookupByLibrary.simpleMessage("Точный диагноз"),
+    "bleeding_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Избежать посещения больницы",
+    ),
+    "bleeding_q6": MessageLookupByLibrary.simpleMessage(
+      "Какой инструмент обычно используется для обработки ситуаций кровотечение?",
+    ),
+    "bleeding_q6_opt1": MessageLookupByLibrary.simpleMessage("Бинт"),
+    "bleeding_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Эпинефриновый автоинъектор",
+    ),
+    "bleeding_q6_opt3": MessageLookupByLibrary.simpleMessage("Перчатки"),
+    "bleeding_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "Зависит от ситуации",
+    ),
     "burns": MessageLookupByLibrary.simpleMessage("Ожоги"),
     "burns1": MessageLookupByLibrary.simpleMessage(
       "Ожоги могут варьироваться от легких до опасных для жизни. Первая помощь помогает уменьшить повреждение и боль.",
@@ -214,6 +574,142 @@ class MessageLookup extends MessageLookupByLibrary {
     "burns9": MessageLookupByLibrary.simpleMessage("Избегайте кремов или льда"),
     "burnsTitle": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при ожогах",
+    ),
+    "burns_q1": MessageLookupByLibrary.simpleMessage(
+      "Какой первый шаг при оказании помощи при ожоги?",
+    ),
+    "burns_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "Сохранять спокойствие",
+    ),
+    "burns_q1_opt2": MessageLookupByLibrary.simpleMessage("Вызвать скорую"),
+    "burns_q1_opt3": MessageLookupByLibrary.simpleMessage("Предоставить воду"),
+    "burns_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Игнорировать симптомы",
+    ),
+    "burns_q2": MessageLookupByLibrary.simpleMessage(
+      "Какой из следующих симптомов характерен для ожоги?",
+    ),
+    "burns_q2_opt1": MessageLookupByLibrary.simpleMessage("Головокружение"),
+    "burns_q2_opt2": MessageLookupByLibrary.simpleMessage("Зуд"),
+    "burns_q2_opt3": MessageLookupByLibrary.simpleMessage("Нечеткое зрение"),
+    "burns_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "Все вышеперечисленное",
+    ),
+    "burns_q3": MessageLookupByLibrary.simpleMessage(
+      "Когда следует вызвать экстренные службы во время инцидента ожоги?",
+    ),
+    "burns_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "Если симптомы легкие",
+    ),
+    "burns_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "Если человек теряет сознание",
+    ),
+    "burns_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "Если он просит о помощи",
+    ),
+    "burns_q3_opt4": MessageLookupByLibrary.simpleMessage("Всегда"),
+    "burns_q4": MessageLookupByLibrary.simpleMessage(
+      "Что следует избегать при уходе за ожоги?",
+    ),
+    "burns_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Использовать устаревшие методы",
+    ),
+    "burns_q4_opt2": MessageLookupByLibrary.simpleMessage("Обеспечить комфорт"),
+    "burns_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Контролировать дыхание",
+    ),
+    "burns_q4_opt4": MessageLookupByLibrary.simpleMessage("Оставаться рядом"),
+    "burns_q5": MessageLookupByLibrary.simpleMessage(
+      "Какова основная цель первой помощи при ожоги?",
+    ),
+    "burns_q5_opt1": MessageLookupByLibrary.simpleMessage("Полное лечение"),
+    "burns_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Предотвратить ухудшение",
+    ),
+    "burns_q5_opt3": MessageLookupByLibrary.simpleMessage("Точный диагноз"),
+    "burns_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Избежать посещения больницы",
+    ),
+    "burns_q6": MessageLookupByLibrary.simpleMessage(
+      "Какой инструмент обычно используется для обработки ситуаций ожоги?",
+    ),
+    "burns_q6_opt1": MessageLookupByLibrary.simpleMessage("Бинт"),
+    "burns_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Эпинефриновый автоинъектор",
+    ),
+    "burns_q6_opt3": MessageLookupByLibrary.simpleMessage("Перчатки"),
+    "burns_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "Зависит от ситуации",
+    ),
+    "choking_q1": MessageLookupByLibrary.simpleMessage(
+      "Какой первый шаг при оказании помощи при удушье?",
+    ),
+    "choking_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "Сохранять спокойствие",
+    ),
+    "choking_q1_opt2": MessageLookupByLibrary.simpleMessage("Вызвать скорую"),
+    "choking_q1_opt3": MessageLookupByLibrary.simpleMessage(
+      "Предоставить воду",
+    ),
+    "choking_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Игнорировать симптомы",
+    ),
+    "choking_q2": MessageLookupByLibrary.simpleMessage(
+      "Какой из следующих симптомов характерен для удушье?",
+    ),
+    "choking_q2_opt1": MessageLookupByLibrary.simpleMessage("Головокружение"),
+    "choking_q2_opt2": MessageLookupByLibrary.simpleMessage("Зуд"),
+    "choking_q2_opt3": MessageLookupByLibrary.simpleMessage("Нечеткое зрение"),
+    "choking_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "Все вышеперечисленное",
+    ),
+    "choking_q3": MessageLookupByLibrary.simpleMessage(
+      "Когда следует вызвать экстренные службы во время инцидента удушье?",
+    ),
+    "choking_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "Если симптомы легкие",
+    ),
+    "choking_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "Если человек теряет сознание",
+    ),
+    "choking_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "Если он просит о помощи",
+    ),
+    "choking_q3_opt4": MessageLookupByLibrary.simpleMessage("Всегда"),
+    "choking_q4": MessageLookupByLibrary.simpleMessage(
+      "Что следует избегать при уходе за удушье?",
+    ),
+    "choking_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Использовать устаревшие методы",
+    ),
+    "choking_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Обеспечить комфорт",
+    ),
+    "choking_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Контролировать дыхание",
+    ),
+    "choking_q4_opt4": MessageLookupByLibrary.simpleMessage("Оставаться рядом"),
+    "choking_q5": MessageLookupByLibrary.simpleMessage(
+      "Какова основная цель первой помощи при удушье?",
+    ),
+    "choking_q5_opt1": MessageLookupByLibrary.simpleMessage("Полное лечение"),
+    "choking_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Предотвратить ухудшение",
+    ),
+    "choking_q5_opt3": MessageLookupByLibrary.simpleMessage("Точный диагноз"),
+    "choking_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Избежать посещения больницы",
+    ),
+    "choking_q6": MessageLookupByLibrary.simpleMessage(
+      "Какой инструмент обычно используется для обработки ситуаций удушье?",
+    ),
+    "choking_q6_opt1": MessageLookupByLibrary.simpleMessage("Бинт"),
+    "choking_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Эпинефриновый автоинъектор",
+    ),
+    "choking_q6_opt3": MessageLookupByLibrary.simpleMessage("Перчатки"),
+    "choking_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "Зависит от ситуации",
     ),
     "chooseYourLanguage": MessageLookupByLibrary.simpleMessage(
       "Выберите ваш язык",
@@ -281,6 +777,68 @@ class MessageLookup extends MessageLookupByLibrary {
     "cprWatchDemoButton": MessageLookupByLibrary.simpleMessage(
       "Посмотреть демонстрацию СЛР",
     ),
+    "cpr_q1": MessageLookupByLibrary.simpleMessage(
+      "Какой первый шаг при оказании помощи при СЛР?",
+    ),
+    "cpr_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "Сохранять спокойствие",
+    ),
+    "cpr_q1_opt2": MessageLookupByLibrary.simpleMessage("Вызвать скорую"),
+    "cpr_q1_opt3": MessageLookupByLibrary.simpleMessage("Предоставить воду"),
+    "cpr_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Игнорировать симптомы",
+    ),
+    "cpr_q2": MessageLookupByLibrary.simpleMessage(
+      "Какой из следующих симптомов характерен для СЛР?",
+    ),
+    "cpr_q2_opt1": MessageLookupByLibrary.simpleMessage("Головокружение"),
+    "cpr_q2_opt2": MessageLookupByLibrary.simpleMessage("Зуд"),
+    "cpr_q2_opt3": MessageLookupByLibrary.simpleMessage("Нечеткое зрение"),
+    "cpr_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "Все вышеперечисленное",
+    ),
+    "cpr_q3": MessageLookupByLibrary.simpleMessage(
+      "Когда следует вызвать экстренные службы во время инцидента СЛР?",
+    ),
+    "cpr_q3_opt1": MessageLookupByLibrary.simpleMessage("Если симптомы легкие"),
+    "cpr_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "Если человек теряет сознание",
+    ),
+    "cpr_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "Если он просит о помощи",
+    ),
+    "cpr_q3_opt4": MessageLookupByLibrary.simpleMessage("Всегда"),
+    "cpr_q4": MessageLookupByLibrary.simpleMessage(
+      "Что следует избегать при уходе за СЛР?",
+    ),
+    "cpr_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Использовать устаревшие методы",
+    ),
+    "cpr_q4_opt2": MessageLookupByLibrary.simpleMessage("Обеспечить комфорт"),
+    "cpr_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Контролировать дыхание",
+    ),
+    "cpr_q4_opt4": MessageLookupByLibrary.simpleMessage("Оставаться рядом"),
+    "cpr_q5": MessageLookupByLibrary.simpleMessage(
+      "Какова основная цель первой помощи при СЛР?",
+    ),
+    "cpr_q5_opt1": MessageLookupByLibrary.simpleMessage("Полное лечение"),
+    "cpr_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Предотвратить ухудшение",
+    ),
+    "cpr_q5_opt3": MessageLookupByLibrary.simpleMessage("Точный диагноз"),
+    "cpr_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Избежать посещения больницы",
+    ),
+    "cpr_q6": MessageLookupByLibrary.simpleMessage(
+      "Какой инструмент обычно используется для обработки ситуаций СЛР?",
+    ),
+    "cpr_q6_opt1": MessageLookupByLibrary.simpleMessage("Бинт"),
+    "cpr_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Эпинефриновый автоинъектор",
+    ),
+    "cpr_q6_opt3": MessageLookupByLibrary.simpleMessage("Перчатки"),
+    "cpr_q6_opt4": MessageLookupByLibrary.simpleMessage("Зависит от ситуации"),
     "diabeticsAppBarTitle": MessageLookupByLibrary.simpleMessage("Диабет"),
     "diabeticsHeader": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при диабетических осложнениях",
@@ -327,6 +885,80 @@ class MessageLookup extends MessageLookupByLibrary {
       "Первая помощь:",
     ),
     "diabeticsTitle": MessageLookupByLibrary.simpleMessage("Диабет"),
+    "diabetics_q1": MessageLookupByLibrary.simpleMessage(
+      "Какой первый шаг при оказании помощи при диабетики?",
+    ),
+    "diabetics_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "Сохранять спокойствие",
+    ),
+    "diabetics_q1_opt2": MessageLookupByLibrary.simpleMessage("Вызвать скорую"),
+    "diabetics_q1_opt3": MessageLookupByLibrary.simpleMessage(
+      "Предоставить воду",
+    ),
+    "diabetics_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Игнорировать симптомы",
+    ),
+    "diabetics_q2": MessageLookupByLibrary.simpleMessage(
+      "Какой из следующих симптомов характерен для диабетики?",
+    ),
+    "diabetics_q2_opt1": MessageLookupByLibrary.simpleMessage("Головокружение"),
+    "diabetics_q2_opt2": MessageLookupByLibrary.simpleMessage("Зуд"),
+    "diabetics_q2_opt3": MessageLookupByLibrary.simpleMessage(
+      "Нечеткое зрение",
+    ),
+    "diabetics_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "Все вышеперечисленное",
+    ),
+    "diabetics_q3": MessageLookupByLibrary.simpleMessage(
+      "Когда следует вызвать экстренные службы во время инцидента диабетики?",
+    ),
+    "diabetics_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "Если симптомы легкие",
+    ),
+    "diabetics_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "Если человек теряет сознание",
+    ),
+    "diabetics_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "Если он просит о помощи",
+    ),
+    "diabetics_q3_opt4": MessageLookupByLibrary.simpleMessage("Всегда"),
+    "diabetics_q4": MessageLookupByLibrary.simpleMessage(
+      "Что следует избегать при уходе за диабетики?",
+    ),
+    "diabetics_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Использовать устаревшие методы",
+    ),
+    "diabetics_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Обеспечить комфорт",
+    ),
+    "diabetics_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Контролировать дыхание",
+    ),
+    "diabetics_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Оставаться рядом",
+    ),
+    "diabetics_q5": MessageLookupByLibrary.simpleMessage(
+      "Какова основная цель первой помощи при диабетики?",
+    ),
+    "diabetics_q5_opt1": MessageLookupByLibrary.simpleMessage("Полное лечение"),
+    "diabetics_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Предотвратить ухудшение",
+    ),
+    "diabetics_q5_opt3": MessageLookupByLibrary.simpleMessage("Точный диагноз"),
+    "diabetics_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Избежать посещения больницы",
+    ),
+    "diabetics_q6": MessageLookupByLibrary.simpleMessage(
+      "Какой инструмент обычно используется для обработки ситуаций диабетики?",
+    ),
+    "diabetics_q6_opt1": MessageLookupByLibrary.simpleMessage("Бинт"),
+    "diabetics_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Эпинефриновый автоинъектор",
+    ),
+    "diabetics_q6_opt3": MessageLookupByLibrary.simpleMessage("Перчатки"),
+    "diabetics_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "Зависит от ситуации",
+    ),
     "doctor": MessageLookupByLibrary.simpleMessage(
       "Нажмите на любую иконку, чтобы узнать, как действовать в экстренной ситуации!",
     ),
@@ -394,6 +1026,88 @@ class MessageLookup extends MessageLookupByLibrary {
       "Первая помощь:",
     ),
     "drugOverdoseTitle": MessageLookupByLibrary.simpleMessage("Передозировка"),
+    "drug_overdose_q1": MessageLookupByLibrary.simpleMessage(
+      "Какой первый шаг при оказании помощи при передозировка?",
+    ),
+    "drug_overdose_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "Сохранять спокойствие",
+    ),
+    "drug_overdose_q1_opt2": MessageLookupByLibrary.simpleMessage(
+      "Вызвать скорую",
+    ),
+    "drug_overdose_q1_opt3": MessageLookupByLibrary.simpleMessage(
+      "Предоставить воду",
+    ),
+    "drug_overdose_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Игнорировать симптомы",
+    ),
+    "drug_overdose_q2": MessageLookupByLibrary.simpleMessage(
+      "Какой из следующих симптомов характерен для передозировка?",
+    ),
+    "drug_overdose_q2_opt1": MessageLookupByLibrary.simpleMessage(
+      "Головокружение",
+    ),
+    "drug_overdose_q2_opt2": MessageLookupByLibrary.simpleMessage("Зуд"),
+    "drug_overdose_q2_opt3": MessageLookupByLibrary.simpleMessage(
+      "Нечеткое зрение",
+    ),
+    "drug_overdose_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "Все вышеперечисленное",
+    ),
+    "drug_overdose_q3": MessageLookupByLibrary.simpleMessage(
+      "Когда следует вызвать экстренные службы во время инцидента передозировка?",
+    ),
+    "drug_overdose_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "Если симптомы легкие",
+    ),
+    "drug_overdose_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "Если человек теряет сознание",
+    ),
+    "drug_overdose_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "Если он просит о помощи",
+    ),
+    "drug_overdose_q3_opt4": MessageLookupByLibrary.simpleMessage("Всегда"),
+    "drug_overdose_q4": MessageLookupByLibrary.simpleMessage(
+      "Что следует избегать при уходе за передозировка?",
+    ),
+    "drug_overdose_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Использовать устаревшие методы",
+    ),
+    "drug_overdose_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Обеспечить комфорт",
+    ),
+    "drug_overdose_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Контролировать дыхание",
+    ),
+    "drug_overdose_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Оставаться рядом",
+    ),
+    "drug_overdose_q5": MessageLookupByLibrary.simpleMessage(
+      "Какова основная цель первой помощи при передозировка?",
+    ),
+    "drug_overdose_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Полное лечение",
+    ),
+    "drug_overdose_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Предотвратить ухудшение",
+    ),
+    "drug_overdose_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Точный диагноз",
+    ),
+    "drug_overdose_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Избежать посещения больницы",
+    ),
+    "drug_overdose_q6": MessageLookupByLibrary.simpleMessage(
+      "Какой инструмент обычно используется для обработки ситуаций передозировка?",
+    ),
+    "drug_overdose_q6_opt1": MessageLookupByLibrary.simpleMessage("Бинт"),
+    "drug_overdose_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Эпинефриновый автоинъектор",
+    ),
+    "drug_overdose_q6_opt3": MessageLookupByLibrary.simpleMessage("Перчатки"),
+    "drug_overdose_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "Зависит от ситуации",
+    ),
     "eyeInjuryHeading": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при травме глаза",
     ),
@@ -447,8 +1161,164 @@ class MessageLookup extends MessageLookupByLibrary {
     "eyeInjuryTypesHeading": MessageLookupByLibrary.simpleMessage(
       "Виды травм:",
     ),
+    "eye_injury_q1": MessageLookupByLibrary.simpleMessage(
+      "Какой первый шаг при оказании помощи при травма глаза?",
+    ),
+    "eye_injury_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "Сохранять спокойствие",
+    ),
+    "eye_injury_q1_opt2": MessageLookupByLibrary.simpleMessage(
+      "Вызвать скорую",
+    ),
+    "eye_injury_q1_opt3": MessageLookupByLibrary.simpleMessage(
+      "Предоставить воду",
+    ),
+    "eye_injury_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Игнорировать симптомы",
+    ),
+    "eye_injury_q2": MessageLookupByLibrary.simpleMessage(
+      "Какой из следующих симптомов характерен для травма глаза?",
+    ),
+    "eye_injury_q2_opt1": MessageLookupByLibrary.simpleMessage(
+      "Головокружение",
+    ),
+    "eye_injury_q2_opt2": MessageLookupByLibrary.simpleMessage("Зуд"),
+    "eye_injury_q2_opt3": MessageLookupByLibrary.simpleMessage(
+      "Нечеткое зрение",
+    ),
+    "eye_injury_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "Все вышеперечисленное",
+    ),
+    "eye_injury_q3": MessageLookupByLibrary.simpleMessage(
+      "Когда следует вызвать экстренные службы во время инцидента травма глаза?",
+    ),
+    "eye_injury_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "Если симптомы легкие",
+    ),
+    "eye_injury_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "Если человек теряет сознание",
+    ),
+    "eye_injury_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "Если он просит о помощи",
+    ),
+    "eye_injury_q3_opt4": MessageLookupByLibrary.simpleMessage("Всегда"),
+    "eye_injury_q4": MessageLookupByLibrary.simpleMessage(
+      "Что следует избегать при уходе за травма глаза?",
+    ),
+    "eye_injury_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Использовать устаревшие методы",
+    ),
+    "eye_injury_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Обеспечить комфорт",
+    ),
+    "eye_injury_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Контролировать дыхание",
+    ),
+    "eye_injury_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Оставаться рядом",
+    ),
+    "eye_injury_q5": MessageLookupByLibrary.simpleMessage(
+      "Какова основная цель первой помощи при травма глаза?",
+    ),
+    "eye_injury_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Полное лечение",
+    ),
+    "eye_injury_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Предотвратить ухудшение",
+    ),
+    "eye_injury_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Точный диагноз",
+    ),
+    "eye_injury_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Избежать посещения больницы",
+    ),
+    "eye_injury_q6": MessageLookupByLibrary.simpleMessage(
+      "Какой инструмент обычно используется для обработки ситуаций травма глаза?",
+    ),
+    "eye_injury_q6_opt1": MessageLookupByLibrary.simpleMessage("Бинт"),
+    "eye_injury_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Эпинефриновый автоинъектор",
+    ),
+    "eye_injury_q6_opt3": MessageLookupByLibrary.simpleMessage("Перчатки"),
+    "eye_injury_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "Зависит от ситуации",
+    ),
     "findNearestHospital": MessageLookupByLibrary.simpleMessage(
       "Найти ближайшую больницу",
+    ),
+    "fractures_q1": MessageLookupByLibrary.simpleMessage(
+      "Какой первый шаг при оказании помощи при переломы?",
+    ),
+    "fractures_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "Сохранять спокойствие",
+    ),
+    "fractures_q1_opt2": MessageLookupByLibrary.simpleMessage("Вызвать скорую"),
+    "fractures_q1_opt3": MessageLookupByLibrary.simpleMessage(
+      "Предоставить воду",
+    ),
+    "fractures_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Игнорировать симптомы",
+    ),
+    "fractures_q2": MessageLookupByLibrary.simpleMessage(
+      "Какой из следующих симптомов характерен для переломы?",
+    ),
+    "fractures_q2_opt1": MessageLookupByLibrary.simpleMessage("Головокружение"),
+    "fractures_q2_opt2": MessageLookupByLibrary.simpleMessage("Зуд"),
+    "fractures_q2_opt3": MessageLookupByLibrary.simpleMessage(
+      "Нечеткое зрение",
+    ),
+    "fractures_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "Все вышеперечисленное",
+    ),
+    "fractures_q3": MessageLookupByLibrary.simpleMessage(
+      "Когда следует вызвать экстренные службы во время инцидента переломы?",
+    ),
+    "fractures_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "Если симптомы легкие",
+    ),
+    "fractures_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "Если человек теряет сознание",
+    ),
+    "fractures_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "Если он просит о помощи",
+    ),
+    "fractures_q3_opt4": MessageLookupByLibrary.simpleMessage("Всегда"),
+    "fractures_q4": MessageLookupByLibrary.simpleMessage(
+      "Что следует избегать при уходе за переломы?",
+    ),
+    "fractures_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Использовать устаревшие методы",
+    ),
+    "fractures_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Обеспечить комфорт",
+    ),
+    "fractures_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Контролировать дыхание",
+    ),
+    "fractures_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Оставаться рядом",
+    ),
+    "fractures_q5": MessageLookupByLibrary.simpleMessage(
+      "Какова основная цель первой помощи при переломы?",
+    ),
+    "fractures_q5_opt1": MessageLookupByLibrary.simpleMessage("Полное лечение"),
+    "fractures_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Предотвратить ухудшение",
+    ),
+    "fractures_q5_opt3": MessageLookupByLibrary.simpleMessage("Точный диагноз"),
+    "fractures_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Избежать посещения больницы",
+    ),
+    "fractures_q6": MessageLookupByLibrary.simpleMessage(
+      "Какой инструмент обычно используется для обработки ситуаций переломы?",
+    ),
+    "fractures_q6_opt1": MessageLookupByLibrary.simpleMessage("Бинт"),
+    "fractures_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Эпинефриновый автоинъектор",
+    ),
+    "fractures_q6_opt3": MessageLookupByLibrary.simpleMessage("Перчатки"),
+    "fractures_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "Зависит от ситуации",
     ),
     "headInjuryHeading": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при травме головы",
@@ -490,6 +1360,88 @@ class MessageLookup extends MessageLookupByLibrary {
       "Шаги первой помощи:",
     ),
     "headInjuryTitle": MessageLookupByLibrary.simpleMessage("Травма головы"),
+    "head_injury_q1": MessageLookupByLibrary.simpleMessage(
+      "Какой первый шаг при оказании помощи при травма головы?",
+    ),
+    "head_injury_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "Сохранять спокойствие",
+    ),
+    "head_injury_q1_opt2": MessageLookupByLibrary.simpleMessage(
+      "Вызвать скорую",
+    ),
+    "head_injury_q1_opt3": MessageLookupByLibrary.simpleMessage(
+      "Предоставить воду",
+    ),
+    "head_injury_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Игнорировать симптомы",
+    ),
+    "head_injury_q2": MessageLookupByLibrary.simpleMessage(
+      "Какой из следующих симптомов характерен для травма головы?",
+    ),
+    "head_injury_q2_opt1": MessageLookupByLibrary.simpleMessage(
+      "Головокружение",
+    ),
+    "head_injury_q2_opt2": MessageLookupByLibrary.simpleMessage("Зуд"),
+    "head_injury_q2_opt3": MessageLookupByLibrary.simpleMessage(
+      "Нечеткое зрение",
+    ),
+    "head_injury_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "Все вышеперечисленное",
+    ),
+    "head_injury_q3": MessageLookupByLibrary.simpleMessage(
+      "Когда следует вызвать экстренные службы во время инцидента травма головы?",
+    ),
+    "head_injury_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "Если симптомы легкие",
+    ),
+    "head_injury_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "Если человек теряет сознание",
+    ),
+    "head_injury_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "Если он просит о помощи",
+    ),
+    "head_injury_q3_opt4": MessageLookupByLibrary.simpleMessage("Всегда"),
+    "head_injury_q4": MessageLookupByLibrary.simpleMessage(
+      "Что следует избегать при уходе за травма головы?",
+    ),
+    "head_injury_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Использовать устаревшие методы",
+    ),
+    "head_injury_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Обеспечить комфорт",
+    ),
+    "head_injury_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Контролировать дыхание",
+    ),
+    "head_injury_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Оставаться рядом",
+    ),
+    "head_injury_q5": MessageLookupByLibrary.simpleMessage(
+      "Какова основная цель первой помощи при травма головы?",
+    ),
+    "head_injury_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Полное лечение",
+    ),
+    "head_injury_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Предотвратить ухудшение",
+    ),
+    "head_injury_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Точный диагноз",
+    ),
+    "head_injury_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Избежать посещения больницы",
+    ),
+    "head_injury_q6": MessageLookupByLibrary.simpleMessage(
+      "Какой инструмент обычно используется для обработки ситуаций травма головы?",
+    ),
+    "head_injury_q6_opt1": MessageLookupByLibrary.simpleMessage("Бинт"),
+    "head_injury_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Эпинефриновый автоинъектор",
+    ),
+    "head_injury_q6_opt3": MessageLookupByLibrary.simpleMessage("Перчатки"),
+    "head_injury_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "Зависит от ситуации",
+    ),
     "heading": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при переломах",
     ),
@@ -528,6 +1480,88 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "heartConditionTitle": MessageLookupByLibrary.simpleMessage(
       "Болезни сердца",
+    ),
+    "heart_condition_q1": MessageLookupByLibrary.simpleMessage(
+      "Какой первый шаг при оказании помощи при заболевание сердца?",
+    ),
+    "heart_condition_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "Сохранять спокойствие",
+    ),
+    "heart_condition_q1_opt2": MessageLookupByLibrary.simpleMessage(
+      "Вызвать скорую",
+    ),
+    "heart_condition_q1_opt3": MessageLookupByLibrary.simpleMessage(
+      "Предоставить воду",
+    ),
+    "heart_condition_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Игнорировать симптомы",
+    ),
+    "heart_condition_q2": MessageLookupByLibrary.simpleMessage(
+      "Какой из следующих симптомов характерен для заболевание сердца?",
+    ),
+    "heart_condition_q2_opt1": MessageLookupByLibrary.simpleMessage(
+      "Головокружение",
+    ),
+    "heart_condition_q2_opt2": MessageLookupByLibrary.simpleMessage("Зуд"),
+    "heart_condition_q2_opt3": MessageLookupByLibrary.simpleMessage(
+      "Нечеткое зрение",
+    ),
+    "heart_condition_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "Все вышеперечисленное",
+    ),
+    "heart_condition_q3": MessageLookupByLibrary.simpleMessage(
+      "Когда следует вызвать экстренные службы во время инцидента заболевание сердца?",
+    ),
+    "heart_condition_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "Если симптомы легкие",
+    ),
+    "heart_condition_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "Если человек теряет сознание",
+    ),
+    "heart_condition_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "Если он просит о помощи",
+    ),
+    "heart_condition_q3_opt4": MessageLookupByLibrary.simpleMessage("Всегда"),
+    "heart_condition_q4": MessageLookupByLibrary.simpleMessage(
+      "Что следует избегать при уходе за заболевание сердца?",
+    ),
+    "heart_condition_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Использовать устаревшие методы",
+    ),
+    "heart_condition_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Обеспечить комфорт",
+    ),
+    "heart_condition_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Контролировать дыхание",
+    ),
+    "heart_condition_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Оставаться рядом",
+    ),
+    "heart_condition_q5": MessageLookupByLibrary.simpleMessage(
+      "Какова основная цель первой помощи при заболевание сердца?",
+    ),
+    "heart_condition_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Полное лечение",
+    ),
+    "heart_condition_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Предотвратить ухудшение",
+    ),
+    "heart_condition_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Точный диагноз",
+    ),
+    "heart_condition_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Избежать посещения больницы",
+    ),
+    "heart_condition_q6": MessageLookupByLibrary.simpleMessage(
+      "Какой инструмент обычно используется для обработки ситуаций заболевание сердца?",
+    ),
+    "heart_condition_q6_opt1": MessageLookupByLibrary.simpleMessage("Бинт"),
+    "heart_condition_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Эпинефриновый автоинъектор",
+    ),
+    "heart_condition_q6_opt3": MessageLookupByLibrary.simpleMessage("Перчатки"),
+    "heart_condition_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "Зависит от ситуации",
     ),
     "home": MessageLookupByLibrary.simpleMessage("Главная"),
     "intro": MessageLookupByLibrary.simpleMessage(
@@ -577,6 +1611,76 @@ class MessageLookup extends MessageLookupByLibrary {
       "Шаги первой помощи:",
     ),
     "poisonTitle": MessageLookupByLibrary.simpleMessage("Отравления"),
+    "poisons_q1": MessageLookupByLibrary.simpleMessage(
+      "Какой первый шаг при оказании помощи при отравления?",
+    ),
+    "poisons_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "Сохранять спокойствие",
+    ),
+    "poisons_q1_opt2": MessageLookupByLibrary.simpleMessage("Вызвать скорую"),
+    "poisons_q1_opt3": MessageLookupByLibrary.simpleMessage(
+      "Предоставить воду",
+    ),
+    "poisons_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Игнорировать симптомы",
+    ),
+    "poisons_q2": MessageLookupByLibrary.simpleMessage(
+      "Какой из следующих симптомов характерен для отравления?",
+    ),
+    "poisons_q2_opt1": MessageLookupByLibrary.simpleMessage("Головокружение"),
+    "poisons_q2_opt2": MessageLookupByLibrary.simpleMessage("Зуд"),
+    "poisons_q2_opt3": MessageLookupByLibrary.simpleMessage("Нечеткое зрение"),
+    "poisons_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "Все вышеперечисленное",
+    ),
+    "poisons_q3": MessageLookupByLibrary.simpleMessage(
+      "Когда следует вызвать экстренные службы во время инцидента отравления?",
+    ),
+    "poisons_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "Если симптомы легкие",
+    ),
+    "poisons_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "Если человек теряет сознание",
+    ),
+    "poisons_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "Если он просит о помощи",
+    ),
+    "poisons_q3_opt4": MessageLookupByLibrary.simpleMessage("Всегда"),
+    "poisons_q4": MessageLookupByLibrary.simpleMessage(
+      "Что следует избегать при уходе за отравления?",
+    ),
+    "poisons_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Использовать устаревшие методы",
+    ),
+    "poisons_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Обеспечить комфорт",
+    ),
+    "poisons_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Контролировать дыхание",
+    ),
+    "poisons_q4_opt4": MessageLookupByLibrary.simpleMessage("Оставаться рядом"),
+    "poisons_q5": MessageLookupByLibrary.simpleMessage(
+      "Какова основная цель первой помощи при отравления?",
+    ),
+    "poisons_q5_opt1": MessageLookupByLibrary.simpleMessage("Полное лечение"),
+    "poisons_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Предотвратить ухудшение",
+    ),
+    "poisons_q5_opt3": MessageLookupByLibrary.simpleMessage("Точный диагноз"),
+    "poisons_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Избежать посещения больницы",
+    ),
+    "poisons_q6": MessageLookupByLibrary.simpleMessage(
+      "Какой инструмент обычно используется для обработки ситуаций отравления?",
+    ),
+    "poisons_q6_opt1": MessageLookupByLibrary.simpleMessage("Бинт"),
+    "poisons_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Эпинефриновый автоинъектор",
+    ),
+    "poisons_q6_opt3": MessageLookupByLibrary.simpleMessage("Перчатки"),
+    "poisons_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "Зависит от ситуации",
+    ),
     "profile": MessageLookupByLibrary.simpleMessage("Профиль"),
     "recoveryPositionHeading": MessageLookupByLibrary.simpleMessage(
       "Поза восстановления",
@@ -626,6 +1730,88 @@ class MessageLookup extends MessageLookupByLibrary {
     "recoveryPositionTitle": MessageLookupByLibrary.simpleMessage(
       "Поза восстановления",
     ),
+    "recovery_pos_q1": MessageLookupByLibrary.simpleMessage(
+      "Какой первый шаг при оказании помощи при положение восстановления?",
+    ),
+    "recovery_pos_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "Сохранять спокойствие",
+    ),
+    "recovery_pos_q1_opt2": MessageLookupByLibrary.simpleMessage(
+      "Вызвать скорую",
+    ),
+    "recovery_pos_q1_opt3": MessageLookupByLibrary.simpleMessage(
+      "Предоставить воду",
+    ),
+    "recovery_pos_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Игнорировать симптомы",
+    ),
+    "recovery_pos_q2": MessageLookupByLibrary.simpleMessage(
+      "Какой из следующих симптомов характерен для положение восстановления?",
+    ),
+    "recovery_pos_q2_opt1": MessageLookupByLibrary.simpleMessage(
+      "Головокружение",
+    ),
+    "recovery_pos_q2_opt2": MessageLookupByLibrary.simpleMessage("Зуд"),
+    "recovery_pos_q2_opt3": MessageLookupByLibrary.simpleMessage(
+      "Нечеткое зрение",
+    ),
+    "recovery_pos_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "Все вышеперечисленное",
+    ),
+    "recovery_pos_q3": MessageLookupByLibrary.simpleMessage(
+      "Когда следует вызвать экстренные службы во время инцидента положение восстановления?",
+    ),
+    "recovery_pos_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "Если симптомы легкие",
+    ),
+    "recovery_pos_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "Если человек теряет сознание",
+    ),
+    "recovery_pos_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "Если он просит о помощи",
+    ),
+    "recovery_pos_q3_opt4": MessageLookupByLibrary.simpleMessage("Всегда"),
+    "recovery_pos_q4": MessageLookupByLibrary.simpleMessage(
+      "Что следует избегать при уходе за положение восстановления?",
+    ),
+    "recovery_pos_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Использовать устаревшие методы",
+    ),
+    "recovery_pos_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Обеспечить комфорт",
+    ),
+    "recovery_pos_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Контролировать дыхание",
+    ),
+    "recovery_pos_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Оставаться рядом",
+    ),
+    "recovery_pos_q5": MessageLookupByLibrary.simpleMessage(
+      "Какова основная цель первой помощи при положение восстановления?",
+    ),
+    "recovery_pos_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Полное лечение",
+    ),
+    "recovery_pos_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Предотвратить ухудшение",
+    ),
+    "recovery_pos_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Точный диагноз",
+    ),
+    "recovery_pos_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Избежать посещения больницы",
+    ),
+    "recovery_pos_q6": MessageLookupByLibrary.simpleMessage(
+      "Какой инструмент обычно используется для обработки ситуаций положение восстановления?",
+    ),
+    "recovery_pos_q6_opt1": MessageLookupByLibrary.simpleMessage("Бинт"),
+    "recovery_pos_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Эпинефриновый автоинъектор",
+    ),
+    "recovery_pos_q6_opt3": MessageLookupByLibrary.simpleMessage("Перчатки"),
+    "recovery_pos_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "Зависит от ситуации",
+    ),
     "removedFromSavedTopicsText": MessageLookupByLibrary.simpleMessage(
       "Удалено из сохраненных тем",
     ),
@@ -663,6 +1849,78 @@ class MessageLookup extends MessageLookupByLibrary {
       "После судорог успокойте и поддержите человека, когда он приходит в себя.",
     ),
     "seizuresTitle": MessageLookupByLibrary.simpleMessage("Судороги"),
+    "seizures_q1": MessageLookupByLibrary.simpleMessage(
+      "Какой первый шаг при оказании помощи при припадки?",
+    ),
+    "seizures_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "Сохранять спокойствие",
+    ),
+    "seizures_q1_opt2": MessageLookupByLibrary.simpleMessage("Вызвать скорую"),
+    "seizures_q1_opt3": MessageLookupByLibrary.simpleMessage(
+      "Предоставить воду",
+    ),
+    "seizures_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Игнорировать симптомы",
+    ),
+    "seizures_q2": MessageLookupByLibrary.simpleMessage(
+      "Какой из следующих симптомов характерен для припадки?",
+    ),
+    "seizures_q2_opt1": MessageLookupByLibrary.simpleMessage("Головокружение"),
+    "seizures_q2_opt2": MessageLookupByLibrary.simpleMessage("Зуд"),
+    "seizures_q2_opt3": MessageLookupByLibrary.simpleMessage("Нечеткое зрение"),
+    "seizures_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "Все вышеперечисленное",
+    ),
+    "seizures_q3": MessageLookupByLibrary.simpleMessage(
+      "Когда следует вызвать экстренные службы во время инцидента припадки?",
+    ),
+    "seizures_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "Если симптомы легкие",
+    ),
+    "seizures_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "Если человек теряет сознание",
+    ),
+    "seizures_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "Если он просит о помощи",
+    ),
+    "seizures_q3_opt4": MessageLookupByLibrary.simpleMessage("Всегда"),
+    "seizures_q4": MessageLookupByLibrary.simpleMessage(
+      "Что следует избегать при уходе за припадки?",
+    ),
+    "seizures_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Использовать устаревшие методы",
+    ),
+    "seizures_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Обеспечить комфорт",
+    ),
+    "seizures_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Контролировать дыхание",
+    ),
+    "seizures_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Оставаться рядом",
+    ),
+    "seizures_q5": MessageLookupByLibrary.simpleMessage(
+      "Какова основная цель первой помощи при припадки?",
+    ),
+    "seizures_q5_opt1": MessageLookupByLibrary.simpleMessage("Полное лечение"),
+    "seizures_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Предотвратить ухудшение",
+    ),
+    "seizures_q5_opt3": MessageLookupByLibrary.simpleMessage("Точный диагноз"),
+    "seizures_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Избежать посещения больницы",
+    ),
+    "seizures_q6": MessageLookupByLibrary.simpleMessage(
+      "Какой инструмент обычно используется для обработки ситуаций припадки?",
+    ),
+    "seizures_q6_opt1": MessageLookupByLibrary.simpleMessage("Бинт"),
+    "seizures_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Эпинефриновый автоинъектор",
+    ),
+    "seizures_q6_opt3": MessageLookupByLibrary.simpleMessage("Перчатки"),
+    "seizures_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "Зависит от ситуации",
+    ),
     "selectLanguage": MessageLookupByLibrary.simpleMessage("Выберите язык"),
     "shockFirstAidHeading": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при шоке:",
@@ -700,6 +1958,72 @@ class MessageLookup extends MessageLookupByLibrary {
       "Следите за дыханием и будьте готовы к СЛР, если необходимо.",
     ),
     "shockTitle": MessageLookupByLibrary.simpleMessage("Шок"),
+    "shock_q1": MessageLookupByLibrary.simpleMessage(
+      "Какой первый шаг при оказании помощи при шок?",
+    ),
+    "shock_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "Сохранять спокойствие",
+    ),
+    "shock_q1_opt2": MessageLookupByLibrary.simpleMessage("Вызвать скорую"),
+    "shock_q1_opt3": MessageLookupByLibrary.simpleMessage("Предоставить воду"),
+    "shock_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Игнорировать симптомы",
+    ),
+    "shock_q2": MessageLookupByLibrary.simpleMessage(
+      "Какой из следующих симптомов характерен для шок?",
+    ),
+    "shock_q2_opt1": MessageLookupByLibrary.simpleMessage("Головокружение"),
+    "shock_q2_opt2": MessageLookupByLibrary.simpleMessage("Зуд"),
+    "shock_q2_opt3": MessageLookupByLibrary.simpleMessage("Нечеткое зрение"),
+    "shock_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "Все вышеперечисленное",
+    ),
+    "shock_q3": MessageLookupByLibrary.simpleMessage(
+      "Когда следует вызвать экстренные службы во время инцидента шок?",
+    ),
+    "shock_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "Если симптомы легкие",
+    ),
+    "shock_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "Если человек теряет сознание",
+    ),
+    "shock_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "Если он просит о помощи",
+    ),
+    "shock_q3_opt4": MessageLookupByLibrary.simpleMessage("Всегда"),
+    "shock_q4": MessageLookupByLibrary.simpleMessage(
+      "Что следует избегать при уходе за шок?",
+    ),
+    "shock_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Использовать устаревшие методы",
+    ),
+    "shock_q4_opt2": MessageLookupByLibrary.simpleMessage("Обеспечить комфорт"),
+    "shock_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Контролировать дыхание",
+    ),
+    "shock_q4_opt4": MessageLookupByLibrary.simpleMessage("Оставаться рядом"),
+    "shock_q5": MessageLookupByLibrary.simpleMessage(
+      "Какова основная цель первой помощи при шок?",
+    ),
+    "shock_q5_opt1": MessageLookupByLibrary.simpleMessage("Полное лечение"),
+    "shock_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Предотвратить ухудшение",
+    ),
+    "shock_q5_opt3": MessageLookupByLibrary.simpleMessage("Точный диагноз"),
+    "shock_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Избежать посещения больницы",
+    ),
+    "shock_q6": MessageLookupByLibrary.simpleMessage(
+      "Какой инструмент обычно используется для обработки ситуаций шок?",
+    ),
+    "shock_q6_opt1": MessageLookupByLibrary.simpleMessage("Бинт"),
+    "shock_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Эпинефриновый автоинъектор",
+    ),
+    "shock_q6_opt3": MessageLookupByLibrary.simpleMessage("Перчатки"),
+    "shock_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "Зависит от ситуации",
+    ),
     "sign1": MessageLookupByLibrary.simpleMessage("- Боль и болезненность"),
     "sign2": MessageLookupByLibrary.simpleMessage("- Отек или синяк"),
     "sign3": MessageLookupByLibrary.simpleMessage(
@@ -750,6 +2074,88 @@ class MessageLookup extends MessageLookupByLibrary {
       "Успокойте пострадавшего и поддерживайте его.",
     ),
     "spinalTitle": MessageLookupByLibrary.simpleMessage("Травма позвоночника"),
+    "spinal_injury_q1": MessageLookupByLibrary.simpleMessage(
+      "Какой первый шаг при оказании помощи при травма позвоночника?",
+    ),
+    "spinal_injury_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "Сохранять спокойствие",
+    ),
+    "spinal_injury_q1_opt2": MessageLookupByLibrary.simpleMessage(
+      "Вызвать скорую",
+    ),
+    "spinal_injury_q1_opt3": MessageLookupByLibrary.simpleMessage(
+      "Предоставить воду",
+    ),
+    "spinal_injury_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Игнорировать симптомы",
+    ),
+    "spinal_injury_q2": MessageLookupByLibrary.simpleMessage(
+      "Какой из следующих симптомов характерен для травма позвоночника?",
+    ),
+    "spinal_injury_q2_opt1": MessageLookupByLibrary.simpleMessage(
+      "Головокружение",
+    ),
+    "spinal_injury_q2_opt2": MessageLookupByLibrary.simpleMessage("Зуд"),
+    "spinal_injury_q2_opt3": MessageLookupByLibrary.simpleMessage(
+      "Нечеткое зрение",
+    ),
+    "spinal_injury_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "Все вышеперечисленное",
+    ),
+    "spinal_injury_q3": MessageLookupByLibrary.simpleMessage(
+      "Когда следует вызвать экстренные службы во время инцидента травма позвоночника?",
+    ),
+    "spinal_injury_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "Если симптомы легкие",
+    ),
+    "spinal_injury_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "Если человек теряет сознание",
+    ),
+    "spinal_injury_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "Если он просит о помощи",
+    ),
+    "spinal_injury_q3_opt4": MessageLookupByLibrary.simpleMessage("Всегда"),
+    "spinal_injury_q4": MessageLookupByLibrary.simpleMessage(
+      "Что следует избегать при уходе за травма позвоночника?",
+    ),
+    "spinal_injury_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Использовать устаревшие методы",
+    ),
+    "spinal_injury_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Обеспечить комфорт",
+    ),
+    "spinal_injury_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Контролировать дыхание",
+    ),
+    "spinal_injury_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Оставаться рядом",
+    ),
+    "spinal_injury_q5": MessageLookupByLibrary.simpleMessage(
+      "Какова основная цель первой помощи при травма позвоночника?",
+    ),
+    "spinal_injury_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Полное лечение",
+    ),
+    "spinal_injury_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Предотвратить ухудшение",
+    ),
+    "spinal_injury_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Точный диагноз",
+    ),
+    "spinal_injury_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Избежать посещения больницы",
+    ),
+    "spinal_injury_q6": MessageLookupByLibrary.simpleMessage(
+      "Какой инструмент обычно используется для обработки ситуаций травма позвоночника?",
+    ),
+    "spinal_injury_q6_opt1": MessageLookupByLibrary.simpleMessage("Бинт"),
+    "spinal_injury_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Эпинефриновый автоинъектор",
+    ),
+    "spinal_injury_q6_opt3": MessageLookupByLibrary.simpleMessage("Перчатки"),
+    "spinal_injury_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "Зависит от ситуации",
+    ),
     "sprainsStrainsFirstAidHeading": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при растяжениях и вывихах:",
     ),
@@ -789,6 +2195,88 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "sprainsStrainsTitle": MessageLookupByLibrary.simpleMessage(
       "Растяжения и вывихи",
+    ),
+    "sprainstrains_q1": MessageLookupByLibrary.simpleMessage(
+      "Какой первый шаг при оказании помощи при растяжения и вывихи?",
+    ),
+    "sprainstrains_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "Сохранять спокойствие",
+    ),
+    "sprainstrains_q1_opt2": MessageLookupByLibrary.simpleMessage(
+      "Вызвать скорую",
+    ),
+    "sprainstrains_q1_opt3": MessageLookupByLibrary.simpleMessage(
+      "Предоставить воду",
+    ),
+    "sprainstrains_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Игнорировать симптомы",
+    ),
+    "sprainstrains_q2": MessageLookupByLibrary.simpleMessage(
+      "Какой из следующих симптомов характерен для растяжения и вывихи?",
+    ),
+    "sprainstrains_q2_opt1": MessageLookupByLibrary.simpleMessage(
+      "Головокружение",
+    ),
+    "sprainstrains_q2_opt2": MessageLookupByLibrary.simpleMessage("Зуд"),
+    "sprainstrains_q2_opt3": MessageLookupByLibrary.simpleMessage(
+      "Нечеткое зрение",
+    ),
+    "sprainstrains_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "Все вышеперечисленное",
+    ),
+    "sprainstrains_q3": MessageLookupByLibrary.simpleMessage(
+      "Когда следует вызвать экстренные службы во время инцидента растяжения и вывихи?",
+    ),
+    "sprainstrains_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "Если симптомы легкие",
+    ),
+    "sprainstrains_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "Если человек теряет сознание",
+    ),
+    "sprainstrains_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "Если он просит о помощи",
+    ),
+    "sprainstrains_q3_opt4": MessageLookupByLibrary.simpleMessage("Всегда"),
+    "sprainstrains_q4": MessageLookupByLibrary.simpleMessage(
+      "Что следует избегать при уходе за растяжения и вывихи?",
+    ),
+    "sprainstrains_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Использовать устаревшие методы",
+    ),
+    "sprainstrains_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Обеспечить комфорт",
+    ),
+    "sprainstrains_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Контролировать дыхание",
+    ),
+    "sprainstrains_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Оставаться рядом",
+    ),
+    "sprainstrains_q5": MessageLookupByLibrary.simpleMessage(
+      "Какова основная цель первой помощи при растяжения и вывихи?",
+    ),
+    "sprainstrains_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Полное лечение",
+    ),
+    "sprainstrains_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Предотвратить ухудшение",
+    ),
+    "sprainstrains_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Точный диагноз",
+    ),
+    "sprainstrains_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Избежать посещения больницы",
+    ),
+    "sprainstrains_q6": MessageLookupByLibrary.simpleMessage(
+      "Какой инструмент обычно используется для обработки ситуаций растяжения и вывихи?",
+    ),
+    "sprainstrains_q6_opt1": MessageLookupByLibrary.simpleMessage("Бинт"),
+    "sprainstrains_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Эпинефриновый автоинъектор",
+    ),
+    "sprainstrains_q6_opt3": MessageLookupByLibrary.simpleMessage("Перчатки"),
+    "sprainstrains_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "Зависит от ситуации",
     ),
     "step1Desc": MessageLookupByLibrary.simpleMessage(
       "Держите поврежденную область неподвижной и избегайте движений.",
@@ -849,6 +2337,74 @@ class MessageLookup extends MessageLookupByLibrary {
       "Следите за дыханием и реакцией до прибытия помощи.",
     ),
     "strokeTitle": MessageLookupByLibrary.simpleMessage("Инсульт"),
+    "stroke_q1": MessageLookupByLibrary.simpleMessage(
+      "Какой первый шаг при оказании помощи при инсульт?",
+    ),
+    "stroke_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "Сохранять спокойствие",
+    ),
+    "stroke_q1_opt2": MessageLookupByLibrary.simpleMessage("Вызвать скорую"),
+    "stroke_q1_opt3": MessageLookupByLibrary.simpleMessage("Предоставить воду"),
+    "stroke_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Игнорировать симптомы",
+    ),
+    "stroke_q2": MessageLookupByLibrary.simpleMessage(
+      "Какой из следующих симптомов характерен для инсульт?",
+    ),
+    "stroke_q2_opt1": MessageLookupByLibrary.simpleMessage("Головокружение"),
+    "stroke_q2_opt2": MessageLookupByLibrary.simpleMessage("Зуд"),
+    "stroke_q2_opt3": MessageLookupByLibrary.simpleMessage("Нечеткое зрение"),
+    "stroke_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "Все вышеперечисленное",
+    ),
+    "stroke_q3": MessageLookupByLibrary.simpleMessage(
+      "Когда следует вызвать экстренные службы во время инцидента инсульт?",
+    ),
+    "stroke_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "Если симптомы легкие",
+    ),
+    "stroke_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "Если человек теряет сознание",
+    ),
+    "stroke_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "Если он просит о помощи",
+    ),
+    "stroke_q3_opt4": MessageLookupByLibrary.simpleMessage("Всегда"),
+    "stroke_q4": MessageLookupByLibrary.simpleMessage(
+      "Что следует избегать при уходе за инсульт?",
+    ),
+    "stroke_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Использовать устаревшие методы",
+    ),
+    "stroke_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Обеспечить комфорт",
+    ),
+    "stroke_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Контролировать дыхание",
+    ),
+    "stroke_q4_opt4": MessageLookupByLibrary.simpleMessage("Оставаться рядом"),
+    "stroke_q5": MessageLookupByLibrary.simpleMessage(
+      "Какова основная цель первой помощи при инсульт?",
+    ),
+    "stroke_q5_opt1": MessageLookupByLibrary.simpleMessage("Полное лечение"),
+    "stroke_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Предотвратить ухудшение",
+    ),
+    "stroke_q5_opt3": MessageLookupByLibrary.simpleMessage("Точный диагноз"),
+    "stroke_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Избежать посещения больницы",
+    ),
+    "stroke_q6": MessageLookupByLibrary.simpleMessage(
+      "Какой инструмент обычно используется для обработки ситуаций инсульт?",
+    ),
+    "stroke_q6_opt1": MessageLookupByLibrary.simpleMessage("Бинт"),
+    "stroke_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Эпинефриновый автоинъектор",
+    ),
+    "stroke_q6_opt3": MessageLookupByLibrary.simpleMessage("Перчатки"),
+    "stroke_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "Зависит от ситуации",
+    ),
     "tAboutUs": MessageLookupByLibrary.simpleMessage(
       "О приложении PGU First Aid",
     ),
@@ -1052,6 +2608,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "taddedToSaved": MessageLookupByLibrary.simpleMessage(
       "Добавлено в сохраненные темы",
     ),
+    "takeQuiz": MessageLookupByLibrary.simpleMessage("Начать викторину"),
     "tallTopicsCleared": MessageLookupByLibrary.simpleMessage(
       "Все сохраненные темы очищены",
     ),
@@ -1365,5 +2922,87 @@ class MessageLookup extends MessageLookupByLibrary {
       "Шаги базового ухода за ранами:",
     ),
     "woundCareTitle": MessageLookupByLibrary.simpleMessage("Уход за ранами"),
+    "wound_care_q1": MessageLookupByLibrary.simpleMessage(
+      "Какой первый шаг при оказании помощи при уход за ранами?",
+    ),
+    "wound_care_q1_opt1": MessageLookupByLibrary.simpleMessage(
+      "Сохранять спокойствие",
+    ),
+    "wound_care_q1_opt2": MessageLookupByLibrary.simpleMessage(
+      "Вызвать скорую",
+    ),
+    "wound_care_q1_opt3": MessageLookupByLibrary.simpleMessage(
+      "Предоставить воду",
+    ),
+    "wound_care_q1_opt4": MessageLookupByLibrary.simpleMessage(
+      "Игнорировать симптомы",
+    ),
+    "wound_care_q2": MessageLookupByLibrary.simpleMessage(
+      "Какой из следующих симптомов характерен для уход за ранами?",
+    ),
+    "wound_care_q2_opt1": MessageLookupByLibrary.simpleMessage(
+      "Головокружение",
+    ),
+    "wound_care_q2_opt2": MessageLookupByLibrary.simpleMessage("Зуд"),
+    "wound_care_q2_opt3": MessageLookupByLibrary.simpleMessage(
+      "Нечеткое зрение",
+    ),
+    "wound_care_q2_opt4": MessageLookupByLibrary.simpleMessage(
+      "Все вышеперечисленное",
+    ),
+    "wound_care_q3": MessageLookupByLibrary.simpleMessage(
+      "Когда следует вызвать экстренные службы во время инцидента уход за ранами?",
+    ),
+    "wound_care_q3_opt1": MessageLookupByLibrary.simpleMessage(
+      "Если симптомы легкие",
+    ),
+    "wound_care_q3_opt2": MessageLookupByLibrary.simpleMessage(
+      "Если человек теряет сознание",
+    ),
+    "wound_care_q3_opt3": MessageLookupByLibrary.simpleMessage(
+      "Если он просит о помощи",
+    ),
+    "wound_care_q3_opt4": MessageLookupByLibrary.simpleMessage("Всегда"),
+    "wound_care_q4": MessageLookupByLibrary.simpleMessage(
+      "Что следует избегать при уходе за уход за ранами?",
+    ),
+    "wound_care_q4_opt1": MessageLookupByLibrary.simpleMessage(
+      "Использовать устаревшие методы",
+    ),
+    "wound_care_q4_opt2": MessageLookupByLibrary.simpleMessage(
+      "Обеспечить комфорт",
+    ),
+    "wound_care_q4_opt3": MessageLookupByLibrary.simpleMessage(
+      "Контролировать дыхание",
+    ),
+    "wound_care_q4_opt4": MessageLookupByLibrary.simpleMessage(
+      "Оставаться рядом",
+    ),
+    "wound_care_q5": MessageLookupByLibrary.simpleMessage(
+      "Какова основная цель первой помощи при уход за ранами?",
+    ),
+    "wound_care_q5_opt1": MessageLookupByLibrary.simpleMessage(
+      "Полное лечение",
+    ),
+    "wound_care_q5_opt2": MessageLookupByLibrary.simpleMessage(
+      "Предотвратить ухудшение",
+    ),
+    "wound_care_q5_opt3": MessageLookupByLibrary.simpleMessage(
+      "Точный диагноз",
+    ),
+    "wound_care_q5_opt4": MessageLookupByLibrary.simpleMessage(
+      "Избежать посещения больницы",
+    ),
+    "wound_care_q6": MessageLookupByLibrary.simpleMessage(
+      "Какой инструмент обычно используется для обработки ситуаций уход за ранами?",
+    ),
+    "wound_care_q6_opt1": MessageLookupByLibrary.simpleMessage("Бинт"),
+    "wound_care_q6_opt2": MessageLookupByLibrary.simpleMessage(
+      "Эпинефриновый автоинъектор",
+    ),
+    "wound_care_q6_opt3": MessageLookupByLibrary.simpleMessage("Перчатки"),
+    "wound_care_q6_opt4": MessageLookupByLibrary.simpleMessage(
+      "Зависит от ситуации",
+    ),
   };
 }

@@ -54,6 +54,6371 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Take Quiz`
+  String get takeQuiz {
+    return Intl.message('Take Quiz', name: 'takeQuiz', desc: '', args: []);
+  }
+
+  /// `What is the first step when handling allergic reactions?`
+  String get allergic_reactions_q1 {
+    return Intl.message(
+      'What is the first step when handling allergic reactions?',
+      name: 'allergic_reactions_q1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stay calm`
+  String get allergic_reactions_q1_opt1 {
+    return Intl.message(
+      'Stay calm',
+      name: 'allergic_reactions_q1_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call emergency`
+  String get allergic_reactions_q1_opt2 {
+    return Intl.message(
+      'Call emergency',
+      name: 'allergic_reactions_q1_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provide water`
+  String get allergic_reactions_q1_opt3 {
+    return Intl.message(
+      'Provide water',
+      name: 'allergic_reactions_q1_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ignore symptoms`
+  String get allergic_reactions_q1_opt4 {
+    return Intl.message(
+      'Ignore symptoms',
+      name: 'allergic_reactions_q1_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which of the following is a symptom of allergic reactions?`
+  String get allergic_reactions_q2 {
+    return Intl.message(
+      'Which of the following is a symptom of allergic reactions?',
+      name: 'allergic_reactions_q2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dizziness`
+  String get allergic_reactions_q2_opt1 {
+    return Intl.message(
+      'Dizziness',
+      name: 'allergic_reactions_q2_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Itching`
+  String get allergic_reactions_q2_opt2 {
+    return Intl.message(
+      'Itching',
+      name: 'allergic_reactions_q2_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Blurred vision`
+  String get allergic_reactions_q2_opt3 {
+    return Intl.message(
+      'Blurred vision',
+      name: 'allergic_reactions_q2_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All of the above`
+  String get allergic_reactions_q2_opt4 {
+    return Intl.message(
+      'All of the above',
+      name: 'allergic_reactions_q2_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When should you call emergency services during a allergic reactions incident?`
+  String get allergic_reactions_q3 {
+    return Intl.message(
+      'When should you call emergency services during a allergic reactions incident?',
+      name: 'allergic_reactions_q3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If symptoms are mild`
+  String get allergic_reactions_q3_opt1 {
+    return Intl.message(
+      'If symptoms are mild',
+      name: 'allergic_reactions_q3_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the person faints`
+  String get allergic_reactions_q3_opt2 {
+    return Intl.message(
+      'If the person faints',
+      name: 'allergic_reactions_q3_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If they ask for help`
+  String get allergic_reactions_q3_opt3 {
+    return Intl.message(
+      'If they ask for help',
+      name: 'allergic_reactions_q3_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Always`
+  String get allergic_reactions_q3_opt4 {
+    return Intl.message(
+      'Always',
+      name: 'allergic_reactions_q3_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What should you avoid doing during allergic reactions care?`
+  String get allergic_reactions_q4 {
+    return Intl.message(
+      'What should you avoid doing during allergic reactions care?',
+      name: 'allergic_reactions_q4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using outdated methods`
+  String get allergic_reactions_q4_opt1 {
+    return Intl.message(
+      'Using outdated methods',
+      name: 'allergic_reactions_q4_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keeping them comfortable`
+  String get allergic_reactions_q4_opt2 {
+    return Intl.message(
+      'Keeping them comfortable',
+      name: 'allergic_reactions_q4_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monitoring breathing`
+  String get allergic_reactions_q4_opt3 {
+    return Intl.message(
+      'Monitoring breathing',
+      name: 'allergic_reactions_q4_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Staying with them`
+  String get allergic_reactions_q4_opt4 {
+    return Intl.message(
+      'Staying with them',
+      name: 'allergic_reactions_q4_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is a key goal of first aid for allergic reactions?`
+  String get allergic_reactions_q5 {
+    return Intl.message(
+      'What is a key goal of first aid for allergic reactions?',
+      name: 'allergic_reactions_q5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Complete treatment`
+  String get allergic_reactions_q5_opt1 {
+    return Intl.message(
+      'Complete treatment',
+      name: 'allergic_reactions_q5_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Prevent worsening`
+  String get allergic_reactions_q5_opt2 {
+    return Intl.message(
+      'Prevent worsening',
+      name: 'allergic_reactions_q5_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnose accurately`
+  String get allergic_reactions_q5_opt3 {
+    return Intl.message(
+      'Diagnose accurately',
+      name: 'allergic_reactions_q5_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Avoid hospital visit`
+  String get allergic_reactions_q5_opt4 {
+    return Intl.message(
+      'Avoid hospital visit',
+      name: 'allergic_reactions_q5_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which tool is commonly used for handling allergic reactions situations?`
+  String get allergic_reactions_q6 {
+    return Intl.message(
+      'Which tool is commonly used for handling allergic reactions situations?',
+      name: 'allergic_reactions_q6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bandage`
+  String get allergic_reactions_q6_opt1 {
+    return Intl.message(
+      'Bandage',
+      name: 'allergic_reactions_q6_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Epinephrine pen`
+  String get allergic_reactions_q6_opt2 {
+    return Intl.message(
+      'Epinephrine pen',
+      name: 'allergic_reactions_q6_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gloves`
+  String get allergic_reactions_q6_opt3 {
+    return Intl.message(
+      'Gloves',
+      name: 'allergic_reactions_q6_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `It depends on the situation`
+  String get allergic_reactions_q6_opt4 {
+    return Intl.message(
+      'It depends on the situation',
+      name: 'allergic_reactions_q6_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is the first step when handling assessing injured person?`
+  String get assess_q1 {
+    return Intl.message(
+      'What is the first step when handling assessing injured person?',
+      name: 'assess_q1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stay calm`
+  String get assess_q1_opt1 {
+    return Intl.message(
+      'Stay calm',
+      name: 'assess_q1_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call emergency`
+  String get assess_q1_opt2 {
+    return Intl.message(
+      'Call emergency',
+      name: 'assess_q1_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provide water`
+  String get assess_q1_opt3 {
+    return Intl.message(
+      'Provide water',
+      name: 'assess_q1_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ignore symptoms`
+  String get assess_q1_opt4 {
+    return Intl.message(
+      'Ignore symptoms',
+      name: 'assess_q1_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which of the following is a symptom of assessing injured person?`
+  String get assess_q2 {
+    return Intl.message(
+      'Which of the following is a symptom of assessing injured person?',
+      name: 'assess_q2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dizziness`
+  String get assess_q2_opt1 {
+    return Intl.message(
+      'Dizziness',
+      name: 'assess_q2_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Itching`
+  String get assess_q2_opt2 {
+    return Intl.message('Itching', name: 'assess_q2_opt2', desc: '', args: []);
+  }
+
+  /// `Blurred vision`
+  String get assess_q2_opt3 {
+    return Intl.message(
+      'Blurred vision',
+      name: 'assess_q2_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All of the above`
+  String get assess_q2_opt4 {
+    return Intl.message(
+      'All of the above',
+      name: 'assess_q2_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When should you call emergency services during a assessing injured person incident?`
+  String get assess_q3 {
+    return Intl.message(
+      'When should you call emergency services during a assessing injured person incident?',
+      name: 'assess_q3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If symptoms are mild`
+  String get assess_q3_opt1 {
+    return Intl.message(
+      'If symptoms are mild',
+      name: 'assess_q3_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the person faints`
+  String get assess_q3_opt2 {
+    return Intl.message(
+      'If the person faints',
+      name: 'assess_q3_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If they ask for help`
+  String get assess_q3_opt3 {
+    return Intl.message(
+      'If they ask for help',
+      name: 'assess_q3_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Always`
+  String get assess_q3_opt4 {
+    return Intl.message('Always', name: 'assess_q3_opt4', desc: '', args: []);
+  }
+
+  /// `What should you avoid doing during assessing injured person care?`
+  String get assess_q4 {
+    return Intl.message(
+      'What should you avoid doing during assessing injured person care?',
+      name: 'assess_q4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using outdated methods`
+  String get assess_q4_opt1 {
+    return Intl.message(
+      'Using outdated methods',
+      name: 'assess_q4_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keeping them comfortable`
+  String get assess_q4_opt2 {
+    return Intl.message(
+      'Keeping them comfortable',
+      name: 'assess_q4_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monitoring breathing`
+  String get assess_q4_opt3 {
+    return Intl.message(
+      'Monitoring breathing',
+      name: 'assess_q4_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Staying with them`
+  String get assess_q4_opt4 {
+    return Intl.message(
+      'Staying with them',
+      name: 'assess_q4_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is a key goal of first aid for assessing injured person?`
+  String get assess_q5 {
+    return Intl.message(
+      'What is a key goal of first aid for assessing injured person?',
+      name: 'assess_q5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Complete treatment`
+  String get assess_q5_opt1 {
+    return Intl.message(
+      'Complete treatment',
+      name: 'assess_q5_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Prevent worsening`
+  String get assess_q5_opt2 {
+    return Intl.message(
+      'Prevent worsening',
+      name: 'assess_q5_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnose accurately`
+  String get assess_q5_opt3 {
+    return Intl.message(
+      'Diagnose accurately',
+      name: 'assess_q5_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Avoid hospital visit`
+  String get assess_q5_opt4 {
+    return Intl.message(
+      'Avoid hospital visit',
+      name: 'assess_q5_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which tool is commonly used for handling assessing injured person situations?`
+  String get assess_q6 {
+    return Intl.message(
+      'Which tool is commonly used for handling assessing injured person situations?',
+      name: 'assess_q6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bandage`
+  String get assess_q6_opt1 {
+    return Intl.message('Bandage', name: 'assess_q6_opt1', desc: '', args: []);
+  }
+
+  /// `Epinephrine pen`
+  String get assess_q6_opt2 {
+    return Intl.message(
+      'Epinephrine pen',
+      name: 'assess_q6_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gloves`
+  String get assess_q6_opt3 {
+    return Intl.message('Gloves', name: 'assess_q6_opt3', desc: '', args: []);
+  }
+
+  /// `It depends on the situation`
+  String get assess_q6_opt4 {
+    return Intl.message(
+      'It depends on the situation',
+      name: 'assess_q6_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is the first step when handling asthma?`
+  String get asthma_q1 {
+    return Intl.message(
+      'What is the first step when handling asthma?',
+      name: 'asthma_q1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stay calm`
+  String get asthma_q1_opt1 {
+    return Intl.message(
+      'Stay calm',
+      name: 'asthma_q1_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call emergency`
+  String get asthma_q1_opt2 {
+    return Intl.message(
+      'Call emergency',
+      name: 'asthma_q1_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provide water`
+  String get asthma_q1_opt3 {
+    return Intl.message(
+      'Provide water',
+      name: 'asthma_q1_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ignore symptoms`
+  String get asthma_q1_opt4 {
+    return Intl.message(
+      'Ignore symptoms',
+      name: 'asthma_q1_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which of the following is a symptom of asthma?`
+  String get asthma_q2 {
+    return Intl.message(
+      'Which of the following is a symptom of asthma?',
+      name: 'asthma_q2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dizziness`
+  String get asthma_q2_opt1 {
+    return Intl.message(
+      'Dizziness',
+      name: 'asthma_q2_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Itching`
+  String get asthma_q2_opt2 {
+    return Intl.message('Itching', name: 'asthma_q2_opt2', desc: '', args: []);
+  }
+
+  /// `Blurred vision`
+  String get asthma_q2_opt3 {
+    return Intl.message(
+      'Blurred vision',
+      name: 'asthma_q2_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All of the above`
+  String get asthma_q2_opt4 {
+    return Intl.message(
+      'All of the above',
+      name: 'asthma_q2_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When should you call emergency services during a asthma incident?`
+  String get asthma_q3 {
+    return Intl.message(
+      'When should you call emergency services during a asthma incident?',
+      name: 'asthma_q3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If symptoms are mild`
+  String get asthma_q3_opt1 {
+    return Intl.message(
+      'If symptoms are mild',
+      name: 'asthma_q3_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the person faints`
+  String get asthma_q3_opt2 {
+    return Intl.message(
+      'If the person faints',
+      name: 'asthma_q3_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If they ask for help`
+  String get asthma_q3_opt3 {
+    return Intl.message(
+      'If they ask for help',
+      name: 'asthma_q3_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Always`
+  String get asthma_q3_opt4 {
+    return Intl.message('Always', name: 'asthma_q3_opt4', desc: '', args: []);
+  }
+
+  /// `What should you avoid doing during asthma care?`
+  String get asthma_q4 {
+    return Intl.message(
+      'What should you avoid doing during asthma care?',
+      name: 'asthma_q4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using outdated methods`
+  String get asthma_q4_opt1 {
+    return Intl.message(
+      'Using outdated methods',
+      name: 'asthma_q4_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keeping them comfortable`
+  String get asthma_q4_opt2 {
+    return Intl.message(
+      'Keeping them comfortable',
+      name: 'asthma_q4_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monitoring breathing`
+  String get asthma_q4_opt3 {
+    return Intl.message(
+      'Monitoring breathing',
+      name: 'asthma_q4_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Staying with them`
+  String get asthma_q4_opt4 {
+    return Intl.message(
+      'Staying with them',
+      name: 'asthma_q4_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is a key goal of first aid for asthma?`
+  String get asthma_q5 {
+    return Intl.message(
+      'What is a key goal of first aid for asthma?',
+      name: 'asthma_q5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Complete treatment`
+  String get asthma_q5_opt1 {
+    return Intl.message(
+      'Complete treatment',
+      name: 'asthma_q5_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Prevent worsening`
+  String get asthma_q5_opt2 {
+    return Intl.message(
+      'Prevent worsening',
+      name: 'asthma_q5_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnose accurately`
+  String get asthma_q5_opt3 {
+    return Intl.message(
+      'Diagnose accurately',
+      name: 'asthma_q5_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Avoid hospital visit`
+  String get asthma_q5_opt4 {
+    return Intl.message(
+      'Avoid hospital visit',
+      name: 'asthma_q5_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which tool is commonly used for handling asthma situations?`
+  String get asthma_q6 {
+    return Intl.message(
+      'Which tool is commonly used for handling asthma situations?',
+      name: 'asthma_q6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bandage`
+  String get asthma_q6_opt1 {
+    return Intl.message('Bandage', name: 'asthma_q6_opt1', desc: '', args: []);
+  }
+
+  /// `Epinephrine pen`
+  String get asthma_q6_opt2 {
+    return Intl.message(
+      'Epinephrine pen',
+      name: 'asthma_q6_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gloves`
+  String get asthma_q6_opt3 {
+    return Intl.message('Gloves', name: 'asthma_q6_opt3', desc: '', args: []);
+  }
+
+  /// `It depends on the situation`
+  String get asthma_q6_opt4 {
+    return Intl.message(
+      'It depends on the situation',
+      name: 'asthma_q6_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is the first step when handling bites?`
+  String get bites_q1 {
+    return Intl.message(
+      'What is the first step when handling bites?',
+      name: 'bites_q1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stay calm`
+  String get bites_q1_opt1 {
+    return Intl.message('Stay calm', name: 'bites_q1_opt1', desc: '', args: []);
+  }
+
+  /// `Call emergency`
+  String get bites_q1_opt2 {
+    return Intl.message(
+      'Call emergency',
+      name: 'bites_q1_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provide water`
+  String get bites_q1_opt3 {
+    return Intl.message(
+      'Provide water',
+      name: 'bites_q1_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ignore symptoms`
+  String get bites_q1_opt4 {
+    return Intl.message(
+      'Ignore symptoms',
+      name: 'bites_q1_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which of the following is a symptom of bites?`
+  String get bites_q2 {
+    return Intl.message(
+      'Which of the following is a symptom of bites?',
+      name: 'bites_q2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dizziness`
+  String get bites_q2_opt1 {
+    return Intl.message('Dizziness', name: 'bites_q2_opt1', desc: '', args: []);
+  }
+
+  /// `Itching`
+  String get bites_q2_opt2 {
+    return Intl.message('Itching', name: 'bites_q2_opt2', desc: '', args: []);
+  }
+
+  /// `Blurred vision`
+  String get bites_q2_opt3 {
+    return Intl.message(
+      'Blurred vision',
+      name: 'bites_q2_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All of the above`
+  String get bites_q2_opt4 {
+    return Intl.message(
+      'All of the above',
+      name: 'bites_q2_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When should you call emergency services during a bites incident?`
+  String get bites_q3 {
+    return Intl.message(
+      'When should you call emergency services during a bites incident?',
+      name: 'bites_q3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If symptoms are mild`
+  String get bites_q3_opt1 {
+    return Intl.message(
+      'If symptoms are mild',
+      name: 'bites_q3_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the person faints`
+  String get bites_q3_opt2 {
+    return Intl.message(
+      'If the person faints',
+      name: 'bites_q3_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If they ask for help`
+  String get bites_q3_opt3 {
+    return Intl.message(
+      'If they ask for help',
+      name: 'bites_q3_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Always`
+  String get bites_q3_opt4 {
+    return Intl.message('Always', name: 'bites_q3_opt4', desc: '', args: []);
+  }
+
+  /// `What should you avoid doing during bites care?`
+  String get bites_q4 {
+    return Intl.message(
+      'What should you avoid doing during bites care?',
+      name: 'bites_q4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using outdated methods`
+  String get bites_q4_opt1 {
+    return Intl.message(
+      'Using outdated methods',
+      name: 'bites_q4_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keeping them comfortable`
+  String get bites_q4_opt2 {
+    return Intl.message(
+      'Keeping them comfortable',
+      name: 'bites_q4_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monitoring breathing`
+  String get bites_q4_opt3 {
+    return Intl.message(
+      'Monitoring breathing',
+      name: 'bites_q4_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Staying with them`
+  String get bites_q4_opt4 {
+    return Intl.message(
+      'Staying with them',
+      name: 'bites_q4_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is a key goal of first aid for bites?`
+  String get bites_q5 {
+    return Intl.message(
+      'What is a key goal of first aid for bites?',
+      name: 'bites_q5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Complete treatment`
+  String get bites_q5_opt1 {
+    return Intl.message(
+      'Complete treatment',
+      name: 'bites_q5_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Prevent worsening`
+  String get bites_q5_opt2 {
+    return Intl.message(
+      'Prevent worsening',
+      name: 'bites_q5_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnose accurately`
+  String get bites_q5_opt3 {
+    return Intl.message(
+      'Diagnose accurately',
+      name: 'bites_q5_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Avoid hospital visit`
+  String get bites_q5_opt4 {
+    return Intl.message(
+      'Avoid hospital visit',
+      name: 'bites_q5_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which tool is commonly used for handling bites situations?`
+  String get bites_q6 {
+    return Intl.message(
+      'Which tool is commonly used for handling bites situations?',
+      name: 'bites_q6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bandage`
+  String get bites_q6_opt1 {
+    return Intl.message('Bandage', name: 'bites_q6_opt1', desc: '', args: []);
+  }
+
+  /// `Epinephrine pen`
+  String get bites_q6_opt2 {
+    return Intl.message(
+      'Epinephrine pen',
+      name: 'bites_q6_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gloves`
+  String get bites_q6_opt3 {
+    return Intl.message('Gloves', name: 'bites_q6_opt3', desc: '', args: []);
+  }
+
+  /// `It depends on the situation`
+  String get bites_q6_opt4 {
+    return Intl.message(
+      'It depends on the situation',
+      name: 'bites_q6_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is the first step when handling bleeding?`
+  String get bleeding_q1 {
+    return Intl.message(
+      'What is the first step when handling bleeding?',
+      name: 'bleeding_q1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stay calm`
+  String get bleeding_q1_opt1 {
+    return Intl.message(
+      'Stay calm',
+      name: 'bleeding_q1_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call emergency`
+  String get bleeding_q1_opt2 {
+    return Intl.message(
+      'Call emergency',
+      name: 'bleeding_q1_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provide water`
+  String get bleeding_q1_opt3 {
+    return Intl.message(
+      'Provide water',
+      name: 'bleeding_q1_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ignore symptoms`
+  String get bleeding_q1_opt4 {
+    return Intl.message(
+      'Ignore symptoms',
+      name: 'bleeding_q1_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which of the following is a symptom of bleeding?`
+  String get bleeding_q2 {
+    return Intl.message(
+      'Which of the following is a symptom of bleeding?',
+      name: 'bleeding_q2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dizziness`
+  String get bleeding_q2_opt1 {
+    return Intl.message(
+      'Dizziness',
+      name: 'bleeding_q2_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Itching`
+  String get bleeding_q2_opt2 {
+    return Intl.message(
+      'Itching',
+      name: 'bleeding_q2_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Blurred vision`
+  String get bleeding_q2_opt3 {
+    return Intl.message(
+      'Blurred vision',
+      name: 'bleeding_q2_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All of the above`
+  String get bleeding_q2_opt4 {
+    return Intl.message(
+      'All of the above',
+      name: 'bleeding_q2_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When should you call emergency services during a bleeding incident?`
+  String get bleeding_q3 {
+    return Intl.message(
+      'When should you call emergency services during a bleeding incident?',
+      name: 'bleeding_q3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If symptoms are mild`
+  String get bleeding_q3_opt1 {
+    return Intl.message(
+      'If symptoms are mild',
+      name: 'bleeding_q3_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the person faints`
+  String get bleeding_q3_opt2 {
+    return Intl.message(
+      'If the person faints',
+      name: 'bleeding_q3_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If they ask for help`
+  String get bleeding_q3_opt3 {
+    return Intl.message(
+      'If they ask for help',
+      name: 'bleeding_q3_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Always`
+  String get bleeding_q3_opt4 {
+    return Intl.message('Always', name: 'bleeding_q3_opt4', desc: '', args: []);
+  }
+
+  /// `What should you avoid doing during bleeding care?`
+  String get bleeding_q4 {
+    return Intl.message(
+      'What should you avoid doing during bleeding care?',
+      name: 'bleeding_q4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using outdated methods`
+  String get bleeding_q4_opt1 {
+    return Intl.message(
+      'Using outdated methods',
+      name: 'bleeding_q4_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keeping them comfortable`
+  String get bleeding_q4_opt2 {
+    return Intl.message(
+      'Keeping them comfortable',
+      name: 'bleeding_q4_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monitoring breathing`
+  String get bleeding_q4_opt3 {
+    return Intl.message(
+      'Monitoring breathing',
+      name: 'bleeding_q4_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Staying with them`
+  String get bleeding_q4_opt4 {
+    return Intl.message(
+      'Staying with them',
+      name: 'bleeding_q4_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is a key goal of first aid for bleeding?`
+  String get bleeding_q5 {
+    return Intl.message(
+      'What is a key goal of first aid for bleeding?',
+      name: 'bleeding_q5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Complete treatment`
+  String get bleeding_q5_opt1 {
+    return Intl.message(
+      'Complete treatment',
+      name: 'bleeding_q5_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Prevent worsening`
+  String get bleeding_q5_opt2 {
+    return Intl.message(
+      'Prevent worsening',
+      name: 'bleeding_q5_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnose accurately`
+  String get bleeding_q5_opt3 {
+    return Intl.message(
+      'Diagnose accurately',
+      name: 'bleeding_q5_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Avoid hospital visit`
+  String get bleeding_q5_opt4 {
+    return Intl.message(
+      'Avoid hospital visit',
+      name: 'bleeding_q5_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which tool is commonly used for handling bleeding situations?`
+  String get bleeding_q6 {
+    return Intl.message(
+      'Which tool is commonly used for handling bleeding situations?',
+      name: 'bleeding_q6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bandage`
+  String get bleeding_q6_opt1 {
+    return Intl.message(
+      'Bandage',
+      name: 'bleeding_q6_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Epinephrine pen`
+  String get bleeding_q6_opt2 {
+    return Intl.message(
+      'Epinephrine pen',
+      name: 'bleeding_q6_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gloves`
+  String get bleeding_q6_opt3 {
+    return Intl.message('Gloves', name: 'bleeding_q6_opt3', desc: '', args: []);
+  }
+
+  /// `It depends on the situation`
+  String get bleeding_q6_opt4 {
+    return Intl.message(
+      'It depends on the situation',
+      name: 'bleeding_q6_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is the first step when handling burns?`
+  String get burns_q1 {
+    return Intl.message(
+      'What is the first step when handling burns?',
+      name: 'burns_q1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stay calm`
+  String get burns_q1_opt1 {
+    return Intl.message('Stay calm', name: 'burns_q1_opt1', desc: '', args: []);
+  }
+
+  /// `Call emergency`
+  String get burns_q1_opt2 {
+    return Intl.message(
+      'Call emergency',
+      name: 'burns_q1_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provide water`
+  String get burns_q1_opt3 {
+    return Intl.message(
+      'Provide water',
+      name: 'burns_q1_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ignore symptoms`
+  String get burns_q1_opt4 {
+    return Intl.message(
+      'Ignore symptoms',
+      name: 'burns_q1_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which of the following is a symptom of burns?`
+  String get burns_q2 {
+    return Intl.message(
+      'Which of the following is a symptom of burns?',
+      name: 'burns_q2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dizziness`
+  String get burns_q2_opt1 {
+    return Intl.message('Dizziness', name: 'burns_q2_opt1', desc: '', args: []);
+  }
+
+  /// `Itching`
+  String get burns_q2_opt2 {
+    return Intl.message('Itching', name: 'burns_q2_opt2', desc: '', args: []);
+  }
+
+  /// `Blurred vision`
+  String get burns_q2_opt3 {
+    return Intl.message(
+      'Blurred vision',
+      name: 'burns_q2_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All of the above`
+  String get burns_q2_opt4 {
+    return Intl.message(
+      'All of the above',
+      name: 'burns_q2_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When should you call emergency services during a burns incident?`
+  String get burns_q3 {
+    return Intl.message(
+      'When should you call emergency services during a burns incident?',
+      name: 'burns_q3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If symptoms are mild`
+  String get burns_q3_opt1 {
+    return Intl.message(
+      'If symptoms are mild',
+      name: 'burns_q3_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the person faints`
+  String get burns_q3_opt2 {
+    return Intl.message(
+      'If the person faints',
+      name: 'burns_q3_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If they ask for help`
+  String get burns_q3_opt3 {
+    return Intl.message(
+      'If they ask for help',
+      name: 'burns_q3_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Always`
+  String get burns_q3_opt4 {
+    return Intl.message('Always', name: 'burns_q3_opt4', desc: '', args: []);
+  }
+
+  /// `What should you avoid doing during burns care?`
+  String get burns_q4 {
+    return Intl.message(
+      'What should you avoid doing during burns care?',
+      name: 'burns_q4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using outdated methods`
+  String get burns_q4_opt1 {
+    return Intl.message(
+      'Using outdated methods',
+      name: 'burns_q4_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keeping them comfortable`
+  String get burns_q4_opt2 {
+    return Intl.message(
+      'Keeping them comfortable',
+      name: 'burns_q4_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monitoring breathing`
+  String get burns_q4_opt3 {
+    return Intl.message(
+      'Monitoring breathing',
+      name: 'burns_q4_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Staying with them`
+  String get burns_q4_opt4 {
+    return Intl.message(
+      'Staying with them',
+      name: 'burns_q4_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is a key goal of first aid for burns?`
+  String get burns_q5 {
+    return Intl.message(
+      'What is a key goal of first aid for burns?',
+      name: 'burns_q5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Complete treatment`
+  String get burns_q5_opt1 {
+    return Intl.message(
+      'Complete treatment',
+      name: 'burns_q5_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Prevent worsening`
+  String get burns_q5_opt2 {
+    return Intl.message(
+      'Prevent worsening',
+      name: 'burns_q5_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnose accurately`
+  String get burns_q5_opt3 {
+    return Intl.message(
+      'Diagnose accurately',
+      name: 'burns_q5_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Avoid hospital visit`
+  String get burns_q5_opt4 {
+    return Intl.message(
+      'Avoid hospital visit',
+      name: 'burns_q5_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which tool is commonly used for handling burns situations?`
+  String get burns_q6 {
+    return Intl.message(
+      'Which tool is commonly used for handling burns situations?',
+      name: 'burns_q6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bandage`
+  String get burns_q6_opt1 {
+    return Intl.message('Bandage', name: 'burns_q6_opt1', desc: '', args: []);
+  }
+
+  /// `Epinephrine pen`
+  String get burns_q6_opt2 {
+    return Intl.message(
+      'Epinephrine pen',
+      name: 'burns_q6_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gloves`
+  String get burns_q6_opt3 {
+    return Intl.message('Gloves', name: 'burns_q6_opt3', desc: '', args: []);
+  }
+
+  /// `It depends on the situation`
+  String get burns_q6_opt4 {
+    return Intl.message(
+      'It depends on the situation',
+      name: 'burns_q6_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is the first step when handling choking?`
+  String get choking_q1 {
+    return Intl.message(
+      'What is the first step when handling choking?',
+      name: 'choking_q1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stay calm`
+  String get choking_q1_opt1 {
+    return Intl.message(
+      'Stay calm',
+      name: 'choking_q1_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call emergency`
+  String get choking_q1_opt2 {
+    return Intl.message(
+      'Call emergency',
+      name: 'choking_q1_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provide water`
+  String get choking_q1_opt3 {
+    return Intl.message(
+      'Provide water',
+      name: 'choking_q1_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ignore symptoms`
+  String get choking_q1_opt4 {
+    return Intl.message(
+      'Ignore symptoms',
+      name: 'choking_q1_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which of the following is a symptom of choking?`
+  String get choking_q2 {
+    return Intl.message(
+      'Which of the following is a symptom of choking?',
+      name: 'choking_q2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dizziness`
+  String get choking_q2_opt1 {
+    return Intl.message(
+      'Dizziness',
+      name: 'choking_q2_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Itching`
+  String get choking_q2_opt2 {
+    return Intl.message('Itching', name: 'choking_q2_opt2', desc: '', args: []);
+  }
+
+  /// `Blurred vision`
+  String get choking_q2_opt3 {
+    return Intl.message(
+      'Blurred vision',
+      name: 'choking_q2_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All of the above`
+  String get choking_q2_opt4 {
+    return Intl.message(
+      'All of the above',
+      name: 'choking_q2_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When should you call emergency services during a choking incident?`
+  String get choking_q3 {
+    return Intl.message(
+      'When should you call emergency services during a choking incident?',
+      name: 'choking_q3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If symptoms are mild`
+  String get choking_q3_opt1 {
+    return Intl.message(
+      'If symptoms are mild',
+      name: 'choking_q3_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the person faints`
+  String get choking_q3_opt2 {
+    return Intl.message(
+      'If the person faints',
+      name: 'choking_q3_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If they ask for help`
+  String get choking_q3_opt3 {
+    return Intl.message(
+      'If they ask for help',
+      name: 'choking_q3_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Always`
+  String get choking_q3_opt4 {
+    return Intl.message('Always', name: 'choking_q3_opt4', desc: '', args: []);
+  }
+
+  /// `What should you avoid doing during choking care?`
+  String get choking_q4 {
+    return Intl.message(
+      'What should you avoid doing during choking care?',
+      name: 'choking_q4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using outdated methods`
+  String get choking_q4_opt1 {
+    return Intl.message(
+      'Using outdated methods',
+      name: 'choking_q4_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keeping them comfortable`
+  String get choking_q4_opt2 {
+    return Intl.message(
+      'Keeping them comfortable',
+      name: 'choking_q4_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monitoring breathing`
+  String get choking_q4_opt3 {
+    return Intl.message(
+      'Monitoring breathing',
+      name: 'choking_q4_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Staying with them`
+  String get choking_q4_opt4 {
+    return Intl.message(
+      'Staying with them',
+      name: 'choking_q4_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is a key goal of first aid for choking?`
+  String get choking_q5 {
+    return Intl.message(
+      'What is a key goal of first aid for choking?',
+      name: 'choking_q5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Complete treatment`
+  String get choking_q5_opt1 {
+    return Intl.message(
+      'Complete treatment',
+      name: 'choking_q5_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Prevent worsening`
+  String get choking_q5_opt2 {
+    return Intl.message(
+      'Prevent worsening',
+      name: 'choking_q5_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnose accurately`
+  String get choking_q5_opt3 {
+    return Intl.message(
+      'Diagnose accurately',
+      name: 'choking_q5_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Avoid hospital visit`
+  String get choking_q5_opt4 {
+    return Intl.message(
+      'Avoid hospital visit',
+      name: 'choking_q5_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which tool is commonly used for handling choking situations?`
+  String get choking_q6 {
+    return Intl.message(
+      'Which tool is commonly used for handling choking situations?',
+      name: 'choking_q6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bandage`
+  String get choking_q6_opt1 {
+    return Intl.message('Bandage', name: 'choking_q6_opt1', desc: '', args: []);
+  }
+
+  /// `Epinephrine pen`
+  String get choking_q6_opt2 {
+    return Intl.message(
+      'Epinephrine pen',
+      name: 'choking_q6_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gloves`
+  String get choking_q6_opt3 {
+    return Intl.message('Gloves', name: 'choking_q6_opt3', desc: '', args: []);
+  }
+
+  /// `It depends on the situation`
+  String get choking_q6_opt4 {
+    return Intl.message(
+      'It depends on the situation',
+      name: 'choking_q6_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is the first step when handling cpr?`
+  String get cpr_q1 {
+    return Intl.message(
+      'What is the first step when handling cpr?',
+      name: 'cpr_q1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stay calm`
+  String get cpr_q1_opt1 {
+    return Intl.message('Stay calm', name: 'cpr_q1_opt1', desc: '', args: []);
+  }
+
+  /// `Call emergency`
+  String get cpr_q1_opt2 {
+    return Intl.message(
+      'Call emergency',
+      name: 'cpr_q1_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provide water`
+  String get cpr_q1_opt3 {
+    return Intl.message(
+      'Provide water',
+      name: 'cpr_q1_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ignore symptoms`
+  String get cpr_q1_opt4 {
+    return Intl.message(
+      'Ignore symptoms',
+      name: 'cpr_q1_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which of the following is a symptom of cpr?`
+  String get cpr_q2 {
+    return Intl.message(
+      'Which of the following is a symptom of cpr?',
+      name: 'cpr_q2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dizziness`
+  String get cpr_q2_opt1 {
+    return Intl.message('Dizziness', name: 'cpr_q2_opt1', desc: '', args: []);
+  }
+
+  /// `Itching`
+  String get cpr_q2_opt2 {
+    return Intl.message('Itching', name: 'cpr_q2_opt2', desc: '', args: []);
+  }
+
+  /// `Blurred vision`
+  String get cpr_q2_opt3 {
+    return Intl.message(
+      'Blurred vision',
+      name: 'cpr_q2_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All of the above`
+  String get cpr_q2_opt4 {
+    return Intl.message(
+      'All of the above',
+      name: 'cpr_q2_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When should you call emergency services during a cpr incident?`
+  String get cpr_q3 {
+    return Intl.message(
+      'When should you call emergency services during a cpr incident?',
+      name: 'cpr_q3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If symptoms are mild`
+  String get cpr_q3_opt1 {
+    return Intl.message(
+      'If symptoms are mild',
+      name: 'cpr_q3_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the person faints`
+  String get cpr_q3_opt2 {
+    return Intl.message(
+      'If the person faints',
+      name: 'cpr_q3_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If they ask for help`
+  String get cpr_q3_opt3 {
+    return Intl.message(
+      'If they ask for help',
+      name: 'cpr_q3_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Always`
+  String get cpr_q3_opt4 {
+    return Intl.message('Always', name: 'cpr_q3_opt4', desc: '', args: []);
+  }
+
+  /// `What should you avoid doing during cpr care?`
+  String get cpr_q4 {
+    return Intl.message(
+      'What should you avoid doing during cpr care?',
+      name: 'cpr_q4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using outdated methods`
+  String get cpr_q4_opt1 {
+    return Intl.message(
+      'Using outdated methods',
+      name: 'cpr_q4_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keeping them comfortable`
+  String get cpr_q4_opt2 {
+    return Intl.message(
+      'Keeping them comfortable',
+      name: 'cpr_q4_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monitoring breathing`
+  String get cpr_q4_opt3 {
+    return Intl.message(
+      'Monitoring breathing',
+      name: 'cpr_q4_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Staying with them`
+  String get cpr_q4_opt4 {
+    return Intl.message(
+      'Staying with them',
+      name: 'cpr_q4_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is a key goal of first aid for cpr?`
+  String get cpr_q5 {
+    return Intl.message(
+      'What is a key goal of first aid for cpr?',
+      name: 'cpr_q5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Complete treatment`
+  String get cpr_q5_opt1 {
+    return Intl.message(
+      'Complete treatment',
+      name: 'cpr_q5_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Prevent worsening`
+  String get cpr_q5_opt2 {
+    return Intl.message(
+      'Prevent worsening',
+      name: 'cpr_q5_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnose accurately`
+  String get cpr_q5_opt3 {
+    return Intl.message(
+      'Diagnose accurately',
+      name: 'cpr_q5_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Avoid hospital visit`
+  String get cpr_q5_opt4 {
+    return Intl.message(
+      'Avoid hospital visit',
+      name: 'cpr_q5_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which tool is commonly used for handling cpr situations?`
+  String get cpr_q6 {
+    return Intl.message(
+      'Which tool is commonly used for handling cpr situations?',
+      name: 'cpr_q6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bandage`
+  String get cpr_q6_opt1 {
+    return Intl.message('Bandage', name: 'cpr_q6_opt1', desc: '', args: []);
+  }
+
+  /// `Epinephrine pen`
+  String get cpr_q6_opt2 {
+    return Intl.message(
+      'Epinephrine pen',
+      name: 'cpr_q6_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gloves`
+  String get cpr_q6_opt3 {
+    return Intl.message('Gloves', name: 'cpr_q6_opt3', desc: '', args: []);
+  }
+
+  /// `It depends on the situation`
+  String get cpr_q6_opt4 {
+    return Intl.message(
+      'It depends on the situation',
+      name: 'cpr_q6_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is the first step when handling diabetics?`
+  String get diabetics_q1 {
+    return Intl.message(
+      'What is the first step when handling diabetics?',
+      name: 'diabetics_q1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stay calm`
+  String get diabetics_q1_opt1 {
+    return Intl.message(
+      'Stay calm',
+      name: 'diabetics_q1_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call emergency`
+  String get diabetics_q1_opt2 {
+    return Intl.message(
+      'Call emergency',
+      name: 'diabetics_q1_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provide water`
+  String get diabetics_q1_opt3 {
+    return Intl.message(
+      'Provide water',
+      name: 'diabetics_q1_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ignore symptoms`
+  String get diabetics_q1_opt4 {
+    return Intl.message(
+      'Ignore symptoms',
+      name: 'diabetics_q1_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which of the following is a symptom of diabetics?`
+  String get diabetics_q2 {
+    return Intl.message(
+      'Which of the following is a symptom of diabetics?',
+      name: 'diabetics_q2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dizziness`
+  String get diabetics_q2_opt1 {
+    return Intl.message(
+      'Dizziness',
+      name: 'diabetics_q2_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Itching`
+  String get diabetics_q2_opt2 {
+    return Intl.message(
+      'Itching',
+      name: 'diabetics_q2_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Blurred vision`
+  String get diabetics_q2_opt3 {
+    return Intl.message(
+      'Blurred vision',
+      name: 'diabetics_q2_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All of the above`
+  String get diabetics_q2_opt4 {
+    return Intl.message(
+      'All of the above',
+      name: 'diabetics_q2_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When should you call emergency services during a diabetics incident?`
+  String get diabetics_q3 {
+    return Intl.message(
+      'When should you call emergency services during a diabetics incident?',
+      name: 'diabetics_q3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If symptoms are mild`
+  String get diabetics_q3_opt1 {
+    return Intl.message(
+      'If symptoms are mild',
+      name: 'diabetics_q3_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the person faints`
+  String get diabetics_q3_opt2 {
+    return Intl.message(
+      'If the person faints',
+      name: 'diabetics_q3_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If they ask for help`
+  String get diabetics_q3_opt3 {
+    return Intl.message(
+      'If they ask for help',
+      name: 'diabetics_q3_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Always`
+  String get diabetics_q3_opt4 {
+    return Intl.message(
+      'Always',
+      name: 'diabetics_q3_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What should you avoid doing during diabetics care?`
+  String get diabetics_q4 {
+    return Intl.message(
+      'What should you avoid doing during diabetics care?',
+      name: 'diabetics_q4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using outdated methods`
+  String get diabetics_q4_opt1 {
+    return Intl.message(
+      'Using outdated methods',
+      name: 'diabetics_q4_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keeping them comfortable`
+  String get diabetics_q4_opt2 {
+    return Intl.message(
+      'Keeping them comfortable',
+      name: 'diabetics_q4_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monitoring breathing`
+  String get diabetics_q4_opt3 {
+    return Intl.message(
+      'Monitoring breathing',
+      name: 'diabetics_q4_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Staying with them`
+  String get diabetics_q4_opt4 {
+    return Intl.message(
+      'Staying with them',
+      name: 'diabetics_q4_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is a key goal of first aid for diabetics?`
+  String get diabetics_q5 {
+    return Intl.message(
+      'What is a key goal of first aid for diabetics?',
+      name: 'diabetics_q5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Complete treatment`
+  String get diabetics_q5_opt1 {
+    return Intl.message(
+      'Complete treatment',
+      name: 'diabetics_q5_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Prevent worsening`
+  String get diabetics_q5_opt2 {
+    return Intl.message(
+      'Prevent worsening',
+      name: 'diabetics_q5_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnose accurately`
+  String get diabetics_q5_opt3 {
+    return Intl.message(
+      'Diagnose accurately',
+      name: 'diabetics_q5_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Avoid hospital visit`
+  String get diabetics_q5_opt4 {
+    return Intl.message(
+      'Avoid hospital visit',
+      name: 'diabetics_q5_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which tool is commonly used for handling diabetics situations?`
+  String get diabetics_q6 {
+    return Intl.message(
+      'Which tool is commonly used for handling diabetics situations?',
+      name: 'diabetics_q6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bandage`
+  String get diabetics_q6_opt1 {
+    return Intl.message(
+      'Bandage',
+      name: 'diabetics_q6_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Epinephrine pen`
+  String get diabetics_q6_opt2 {
+    return Intl.message(
+      'Epinephrine pen',
+      name: 'diabetics_q6_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gloves`
+  String get diabetics_q6_opt3 {
+    return Intl.message(
+      'Gloves',
+      name: 'diabetics_q6_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `It depends on the situation`
+  String get diabetics_q6_opt4 {
+    return Intl.message(
+      'It depends on the situation',
+      name: 'diabetics_q6_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is the first step when handling drug overdose?`
+  String get drug_overdose_q1 {
+    return Intl.message(
+      'What is the first step when handling drug overdose?',
+      name: 'drug_overdose_q1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stay calm`
+  String get drug_overdose_q1_opt1 {
+    return Intl.message(
+      'Stay calm',
+      name: 'drug_overdose_q1_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call emergency`
+  String get drug_overdose_q1_opt2 {
+    return Intl.message(
+      'Call emergency',
+      name: 'drug_overdose_q1_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provide water`
+  String get drug_overdose_q1_opt3 {
+    return Intl.message(
+      'Provide water',
+      name: 'drug_overdose_q1_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ignore symptoms`
+  String get drug_overdose_q1_opt4 {
+    return Intl.message(
+      'Ignore symptoms',
+      name: 'drug_overdose_q1_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which of the following is a symptom of drug overdose?`
+  String get drug_overdose_q2 {
+    return Intl.message(
+      'Which of the following is a symptom of drug overdose?',
+      name: 'drug_overdose_q2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dizziness`
+  String get drug_overdose_q2_opt1 {
+    return Intl.message(
+      'Dizziness',
+      name: 'drug_overdose_q2_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Itching`
+  String get drug_overdose_q2_opt2 {
+    return Intl.message(
+      'Itching',
+      name: 'drug_overdose_q2_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Blurred vision`
+  String get drug_overdose_q2_opt3 {
+    return Intl.message(
+      'Blurred vision',
+      name: 'drug_overdose_q2_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All of the above`
+  String get drug_overdose_q2_opt4 {
+    return Intl.message(
+      'All of the above',
+      name: 'drug_overdose_q2_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When should you call emergency services during a drug overdose incident?`
+  String get drug_overdose_q3 {
+    return Intl.message(
+      'When should you call emergency services during a drug overdose incident?',
+      name: 'drug_overdose_q3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If symptoms are mild`
+  String get drug_overdose_q3_opt1 {
+    return Intl.message(
+      'If symptoms are mild',
+      name: 'drug_overdose_q3_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the person faints`
+  String get drug_overdose_q3_opt2 {
+    return Intl.message(
+      'If the person faints',
+      name: 'drug_overdose_q3_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If they ask for help`
+  String get drug_overdose_q3_opt3 {
+    return Intl.message(
+      'If they ask for help',
+      name: 'drug_overdose_q3_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Always`
+  String get drug_overdose_q3_opt4 {
+    return Intl.message(
+      'Always',
+      name: 'drug_overdose_q3_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What should you avoid doing during drug overdose care?`
+  String get drug_overdose_q4 {
+    return Intl.message(
+      'What should you avoid doing during drug overdose care?',
+      name: 'drug_overdose_q4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using outdated methods`
+  String get drug_overdose_q4_opt1 {
+    return Intl.message(
+      'Using outdated methods',
+      name: 'drug_overdose_q4_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keeping them comfortable`
+  String get drug_overdose_q4_opt2 {
+    return Intl.message(
+      'Keeping them comfortable',
+      name: 'drug_overdose_q4_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monitoring breathing`
+  String get drug_overdose_q4_opt3 {
+    return Intl.message(
+      'Monitoring breathing',
+      name: 'drug_overdose_q4_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Staying with them`
+  String get drug_overdose_q4_opt4 {
+    return Intl.message(
+      'Staying with them',
+      name: 'drug_overdose_q4_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is a key goal of first aid for drug overdose?`
+  String get drug_overdose_q5 {
+    return Intl.message(
+      'What is a key goal of first aid for drug overdose?',
+      name: 'drug_overdose_q5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Complete treatment`
+  String get drug_overdose_q5_opt1 {
+    return Intl.message(
+      'Complete treatment',
+      name: 'drug_overdose_q5_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Prevent worsening`
+  String get drug_overdose_q5_opt2 {
+    return Intl.message(
+      'Prevent worsening',
+      name: 'drug_overdose_q5_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnose accurately`
+  String get drug_overdose_q5_opt3 {
+    return Intl.message(
+      'Diagnose accurately',
+      name: 'drug_overdose_q5_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Avoid hospital visit`
+  String get drug_overdose_q5_opt4 {
+    return Intl.message(
+      'Avoid hospital visit',
+      name: 'drug_overdose_q5_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which tool is commonly used for handling drug overdose situations?`
+  String get drug_overdose_q6 {
+    return Intl.message(
+      'Which tool is commonly used for handling drug overdose situations?',
+      name: 'drug_overdose_q6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bandage`
+  String get drug_overdose_q6_opt1 {
+    return Intl.message(
+      'Bandage',
+      name: 'drug_overdose_q6_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Epinephrine pen`
+  String get drug_overdose_q6_opt2 {
+    return Intl.message(
+      'Epinephrine pen',
+      name: 'drug_overdose_q6_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gloves`
+  String get drug_overdose_q6_opt3 {
+    return Intl.message(
+      'Gloves',
+      name: 'drug_overdose_q6_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `It depends on the situation`
+  String get drug_overdose_q6_opt4 {
+    return Intl.message(
+      'It depends on the situation',
+      name: 'drug_overdose_q6_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is the first step when handling eye injury?`
+  String get eye_injury_q1 {
+    return Intl.message(
+      'What is the first step when handling eye injury?',
+      name: 'eye_injury_q1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stay calm`
+  String get eye_injury_q1_opt1 {
+    return Intl.message(
+      'Stay calm',
+      name: 'eye_injury_q1_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call emergency`
+  String get eye_injury_q1_opt2 {
+    return Intl.message(
+      'Call emergency',
+      name: 'eye_injury_q1_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provide water`
+  String get eye_injury_q1_opt3 {
+    return Intl.message(
+      'Provide water',
+      name: 'eye_injury_q1_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ignore symptoms`
+  String get eye_injury_q1_opt4 {
+    return Intl.message(
+      'Ignore symptoms',
+      name: 'eye_injury_q1_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which of the following is a symptom of eye injury?`
+  String get eye_injury_q2 {
+    return Intl.message(
+      'Which of the following is a symptom of eye injury?',
+      name: 'eye_injury_q2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dizziness`
+  String get eye_injury_q2_opt1 {
+    return Intl.message(
+      'Dizziness',
+      name: 'eye_injury_q2_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Itching`
+  String get eye_injury_q2_opt2 {
+    return Intl.message(
+      'Itching',
+      name: 'eye_injury_q2_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Blurred vision`
+  String get eye_injury_q2_opt3 {
+    return Intl.message(
+      'Blurred vision',
+      name: 'eye_injury_q2_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All of the above`
+  String get eye_injury_q2_opt4 {
+    return Intl.message(
+      'All of the above',
+      name: 'eye_injury_q2_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When should you call emergency services during a eye injury incident?`
+  String get eye_injury_q3 {
+    return Intl.message(
+      'When should you call emergency services during a eye injury incident?',
+      name: 'eye_injury_q3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If symptoms are mild`
+  String get eye_injury_q3_opt1 {
+    return Intl.message(
+      'If symptoms are mild',
+      name: 'eye_injury_q3_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the person faints`
+  String get eye_injury_q3_opt2 {
+    return Intl.message(
+      'If the person faints',
+      name: 'eye_injury_q3_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If they ask for help`
+  String get eye_injury_q3_opt3 {
+    return Intl.message(
+      'If they ask for help',
+      name: 'eye_injury_q3_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Always`
+  String get eye_injury_q3_opt4 {
+    return Intl.message(
+      'Always',
+      name: 'eye_injury_q3_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What should you avoid doing during eye injury care?`
+  String get eye_injury_q4 {
+    return Intl.message(
+      'What should you avoid doing during eye injury care?',
+      name: 'eye_injury_q4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using outdated methods`
+  String get eye_injury_q4_opt1 {
+    return Intl.message(
+      'Using outdated methods',
+      name: 'eye_injury_q4_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keeping them comfortable`
+  String get eye_injury_q4_opt2 {
+    return Intl.message(
+      'Keeping them comfortable',
+      name: 'eye_injury_q4_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monitoring breathing`
+  String get eye_injury_q4_opt3 {
+    return Intl.message(
+      'Monitoring breathing',
+      name: 'eye_injury_q4_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Staying with them`
+  String get eye_injury_q4_opt4 {
+    return Intl.message(
+      'Staying with them',
+      name: 'eye_injury_q4_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is a key goal of first aid for eye injury?`
+  String get eye_injury_q5 {
+    return Intl.message(
+      'What is a key goal of first aid for eye injury?',
+      name: 'eye_injury_q5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Complete treatment`
+  String get eye_injury_q5_opt1 {
+    return Intl.message(
+      'Complete treatment',
+      name: 'eye_injury_q5_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Prevent worsening`
+  String get eye_injury_q5_opt2 {
+    return Intl.message(
+      'Prevent worsening',
+      name: 'eye_injury_q5_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnose accurately`
+  String get eye_injury_q5_opt3 {
+    return Intl.message(
+      'Diagnose accurately',
+      name: 'eye_injury_q5_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Avoid hospital visit`
+  String get eye_injury_q5_opt4 {
+    return Intl.message(
+      'Avoid hospital visit',
+      name: 'eye_injury_q5_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which tool is commonly used for handling eye injury situations?`
+  String get eye_injury_q6 {
+    return Intl.message(
+      'Which tool is commonly used for handling eye injury situations?',
+      name: 'eye_injury_q6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bandage`
+  String get eye_injury_q6_opt1 {
+    return Intl.message(
+      'Bandage',
+      name: 'eye_injury_q6_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Epinephrine pen`
+  String get eye_injury_q6_opt2 {
+    return Intl.message(
+      'Epinephrine pen',
+      name: 'eye_injury_q6_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gloves`
+  String get eye_injury_q6_opt3 {
+    return Intl.message(
+      'Gloves',
+      name: 'eye_injury_q6_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `It depends on the situation`
+  String get eye_injury_q6_opt4 {
+    return Intl.message(
+      'It depends on the situation',
+      name: 'eye_injury_q6_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is the first step when handling fractures?`
+  String get fractures_q1 {
+    return Intl.message(
+      'What is the first step when handling fractures?',
+      name: 'fractures_q1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stay calm`
+  String get fractures_q1_opt1 {
+    return Intl.message(
+      'Stay calm',
+      name: 'fractures_q1_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call emergency`
+  String get fractures_q1_opt2 {
+    return Intl.message(
+      'Call emergency',
+      name: 'fractures_q1_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provide water`
+  String get fractures_q1_opt3 {
+    return Intl.message(
+      'Provide water',
+      name: 'fractures_q1_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ignore symptoms`
+  String get fractures_q1_opt4 {
+    return Intl.message(
+      'Ignore symptoms',
+      name: 'fractures_q1_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which of the following is a symptom of fractures?`
+  String get fractures_q2 {
+    return Intl.message(
+      'Which of the following is a symptom of fractures?',
+      name: 'fractures_q2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dizziness`
+  String get fractures_q2_opt1 {
+    return Intl.message(
+      'Dizziness',
+      name: 'fractures_q2_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Itching`
+  String get fractures_q2_opt2 {
+    return Intl.message(
+      'Itching',
+      name: 'fractures_q2_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Blurred vision`
+  String get fractures_q2_opt3 {
+    return Intl.message(
+      'Blurred vision',
+      name: 'fractures_q2_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All of the above`
+  String get fractures_q2_opt4 {
+    return Intl.message(
+      'All of the above',
+      name: 'fractures_q2_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When should you call emergency services during a fractures incident?`
+  String get fractures_q3 {
+    return Intl.message(
+      'When should you call emergency services during a fractures incident?',
+      name: 'fractures_q3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If symptoms are mild`
+  String get fractures_q3_opt1 {
+    return Intl.message(
+      'If symptoms are mild',
+      name: 'fractures_q3_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the person faints`
+  String get fractures_q3_opt2 {
+    return Intl.message(
+      'If the person faints',
+      name: 'fractures_q3_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If they ask for help`
+  String get fractures_q3_opt3 {
+    return Intl.message(
+      'If they ask for help',
+      name: 'fractures_q3_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Always`
+  String get fractures_q3_opt4 {
+    return Intl.message(
+      'Always',
+      name: 'fractures_q3_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What should you avoid doing during fractures care?`
+  String get fractures_q4 {
+    return Intl.message(
+      'What should you avoid doing during fractures care?',
+      name: 'fractures_q4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using outdated methods`
+  String get fractures_q4_opt1 {
+    return Intl.message(
+      'Using outdated methods',
+      name: 'fractures_q4_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keeping them comfortable`
+  String get fractures_q4_opt2 {
+    return Intl.message(
+      'Keeping them comfortable',
+      name: 'fractures_q4_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monitoring breathing`
+  String get fractures_q4_opt3 {
+    return Intl.message(
+      'Monitoring breathing',
+      name: 'fractures_q4_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Staying with them`
+  String get fractures_q4_opt4 {
+    return Intl.message(
+      'Staying with them',
+      name: 'fractures_q4_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is a key goal of first aid for fractures?`
+  String get fractures_q5 {
+    return Intl.message(
+      'What is a key goal of first aid for fractures?',
+      name: 'fractures_q5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Complete treatment`
+  String get fractures_q5_opt1 {
+    return Intl.message(
+      'Complete treatment',
+      name: 'fractures_q5_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Prevent worsening`
+  String get fractures_q5_opt2 {
+    return Intl.message(
+      'Prevent worsening',
+      name: 'fractures_q5_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnose accurately`
+  String get fractures_q5_opt3 {
+    return Intl.message(
+      'Diagnose accurately',
+      name: 'fractures_q5_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Avoid hospital visit`
+  String get fractures_q5_opt4 {
+    return Intl.message(
+      'Avoid hospital visit',
+      name: 'fractures_q5_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which tool is commonly used for handling fractures situations?`
+  String get fractures_q6 {
+    return Intl.message(
+      'Which tool is commonly used for handling fractures situations?',
+      name: 'fractures_q6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bandage`
+  String get fractures_q6_opt1 {
+    return Intl.message(
+      'Bandage',
+      name: 'fractures_q6_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Epinephrine pen`
+  String get fractures_q6_opt2 {
+    return Intl.message(
+      'Epinephrine pen',
+      name: 'fractures_q6_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gloves`
+  String get fractures_q6_opt3 {
+    return Intl.message(
+      'Gloves',
+      name: 'fractures_q6_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `It depends on the situation`
+  String get fractures_q6_opt4 {
+    return Intl.message(
+      'It depends on the situation',
+      name: 'fractures_q6_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is the first step when handling head injury?`
+  String get head_injury_q1 {
+    return Intl.message(
+      'What is the first step when handling head injury?',
+      name: 'head_injury_q1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stay calm`
+  String get head_injury_q1_opt1 {
+    return Intl.message(
+      'Stay calm',
+      name: 'head_injury_q1_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call emergency`
+  String get head_injury_q1_opt2 {
+    return Intl.message(
+      'Call emergency',
+      name: 'head_injury_q1_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provide water`
+  String get head_injury_q1_opt3 {
+    return Intl.message(
+      'Provide water',
+      name: 'head_injury_q1_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ignore symptoms`
+  String get head_injury_q1_opt4 {
+    return Intl.message(
+      'Ignore symptoms',
+      name: 'head_injury_q1_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which of the following is a symptom of head injury?`
+  String get head_injury_q2 {
+    return Intl.message(
+      'Which of the following is a symptom of head injury?',
+      name: 'head_injury_q2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dizziness`
+  String get head_injury_q2_opt1 {
+    return Intl.message(
+      'Dizziness',
+      name: 'head_injury_q2_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Itching`
+  String get head_injury_q2_opt2 {
+    return Intl.message(
+      'Itching',
+      name: 'head_injury_q2_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Blurred vision`
+  String get head_injury_q2_opt3 {
+    return Intl.message(
+      'Blurred vision',
+      name: 'head_injury_q2_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All of the above`
+  String get head_injury_q2_opt4 {
+    return Intl.message(
+      'All of the above',
+      name: 'head_injury_q2_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When should you call emergency services during a head injury incident?`
+  String get head_injury_q3 {
+    return Intl.message(
+      'When should you call emergency services during a head injury incident?',
+      name: 'head_injury_q3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If symptoms are mild`
+  String get head_injury_q3_opt1 {
+    return Intl.message(
+      'If symptoms are mild',
+      name: 'head_injury_q3_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the person faints`
+  String get head_injury_q3_opt2 {
+    return Intl.message(
+      'If the person faints',
+      name: 'head_injury_q3_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If they ask for help`
+  String get head_injury_q3_opt3 {
+    return Intl.message(
+      'If they ask for help',
+      name: 'head_injury_q3_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Always`
+  String get head_injury_q3_opt4 {
+    return Intl.message(
+      'Always',
+      name: 'head_injury_q3_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What should you avoid doing during head injury care?`
+  String get head_injury_q4 {
+    return Intl.message(
+      'What should you avoid doing during head injury care?',
+      name: 'head_injury_q4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using outdated methods`
+  String get head_injury_q4_opt1 {
+    return Intl.message(
+      'Using outdated methods',
+      name: 'head_injury_q4_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keeping them comfortable`
+  String get head_injury_q4_opt2 {
+    return Intl.message(
+      'Keeping them comfortable',
+      name: 'head_injury_q4_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monitoring breathing`
+  String get head_injury_q4_opt3 {
+    return Intl.message(
+      'Monitoring breathing',
+      name: 'head_injury_q4_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Staying with them`
+  String get head_injury_q4_opt4 {
+    return Intl.message(
+      'Staying with them',
+      name: 'head_injury_q4_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is a key goal of first aid for head injury?`
+  String get head_injury_q5 {
+    return Intl.message(
+      'What is a key goal of first aid for head injury?',
+      name: 'head_injury_q5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Complete treatment`
+  String get head_injury_q5_opt1 {
+    return Intl.message(
+      'Complete treatment',
+      name: 'head_injury_q5_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Prevent worsening`
+  String get head_injury_q5_opt2 {
+    return Intl.message(
+      'Prevent worsening',
+      name: 'head_injury_q5_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnose accurately`
+  String get head_injury_q5_opt3 {
+    return Intl.message(
+      'Diagnose accurately',
+      name: 'head_injury_q5_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Avoid hospital visit`
+  String get head_injury_q5_opt4 {
+    return Intl.message(
+      'Avoid hospital visit',
+      name: 'head_injury_q5_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which tool is commonly used for handling head injury situations?`
+  String get head_injury_q6 {
+    return Intl.message(
+      'Which tool is commonly used for handling head injury situations?',
+      name: 'head_injury_q6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bandage`
+  String get head_injury_q6_opt1 {
+    return Intl.message(
+      'Bandage',
+      name: 'head_injury_q6_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Epinephrine pen`
+  String get head_injury_q6_opt2 {
+    return Intl.message(
+      'Epinephrine pen',
+      name: 'head_injury_q6_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gloves`
+  String get head_injury_q6_opt3 {
+    return Intl.message(
+      'Gloves',
+      name: 'head_injury_q6_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `It depends on the situation`
+  String get head_injury_q6_opt4 {
+    return Intl.message(
+      'It depends on the situation',
+      name: 'head_injury_q6_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is the first step when handling heart condition?`
+  String get heart_condition_q1 {
+    return Intl.message(
+      'What is the first step when handling heart condition?',
+      name: 'heart_condition_q1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stay calm`
+  String get heart_condition_q1_opt1 {
+    return Intl.message(
+      'Stay calm',
+      name: 'heart_condition_q1_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call emergency`
+  String get heart_condition_q1_opt2 {
+    return Intl.message(
+      'Call emergency',
+      name: 'heart_condition_q1_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provide water`
+  String get heart_condition_q1_opt3 {
+    return Intl.message(
+      'Provide water',
+      name: 'heart_condition_q1_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ignore symptoms`
+  String get heart_condition_q1_opt4 {
+    return Intl.message(
+      'Ignore symptoms',
+      name: 'heart_condition_q1_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which of the following is a symptom of heart condition?`
+  String get heart_condition_q2 {
+    return Intl.message(
+      'Which of the following is a symptom of heart condition?',
+      name: 'heart_condition_q2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dizziness`
+  String get heart_condition_q2_opt1 {
+    return Intl.message(
+      'Dizziness',
+      name: 'heart_condition_q2_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Itching`
+  String get heart_condition_q2_opt2 {
+    return Intl.message(
+      'Itching',
+      name: 'heart_condition_q2_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Blurred vision`
+  String get heart_condition_q2_opt3 {
+    return Intl.message(
+      'Blurred vision',
+      name: 'heart_condition_q2_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All of the above`
+  String get heart_condition_q2_opt4 {
+    return Intl.message(
+      'All of the above',
+      name: 'heart_condition_q2_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When should you call emergency services during a heart condition incident?`
+  String get heart_condition_q3 {
+    return Intl.message(
+      'When should you call emergency services during a heart condition incident?',
+      name: 'heart_condition_q3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If symptoms are mild`
+  String get heart_condition_q3_opt1 {
+    return Intl.message(
+      'If symptoms are mild',
+      name: 'heart_condition_q3_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the person faints`
+  String get heart_condition_q3_opt2 {
+    return Intl.message(
+      'If the person faints',
+      name: 'heart_condition_q3_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If they ask for help`
+  String get heart_condition_q3_opt3 {
+    return Intl.message(
+      'If they ask for help',
+      name: 'heart_condition_q3_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Always`
+  String get heart_condition_q3_opt4 {
+    return Intl.message(
+      'Always',
+      name: 'heart_condition_q3_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What should you avoid doing during heart condition care?`
+  String get heart_condition_q4 {
+    return Intl.message(
+      'What should you avoid doing during heart condition care?',
+      name: 'heart_condition_q4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using outdated methods`
+  String get heart_condition_q4_opt1 {
+    return Intl.message(
+      'Using outdated methods',
+      name: 'heart_condition_q4_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keeping them comfortable`
+  String get heart_condition_q4_opt2 {
+    return Intl.message(
+      'Keeping them comfortable',
+      name: 'heart_condition_q4_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monitoring breathing`
+  String get heart_condition_q4_opt3 {
+    return Intl.message(
+      'Monitoring breathing',
+      name: 'heart_condition_q4_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Staying with them`
+  String get heart_condition_q4_opt4 {
+    return Intl.message(
+      'Staying with them',
+      name: 'heart_condition_q4_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is a key goal of first aid for heart condition?`
+  String get heart_condition_q5 {
+    return Intl.message(
+      'What is a key goal of first aid for heart condition?',
+      name: 'heart_condition_q5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Complete treatment`
+  String get heart_condition_q5_opt1 {
+    return Intl.message(
+      'Complete treatment',
+      name: 'heart_condition_q5_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Prevent worsening`
+  String get heart_condition_q5_opt2 {
+    return Intl.message(
+      'Prevent worsening',
+      name: 'heart_condition_q5_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnose accurately`
+  String get heart_condition_q5_opt3 {
+    return Intl.message(
+      'Diagnose accurately',
+      name: 'heart_condition_q5_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Avoid hospital visit`
+  String get heart_condition_q5_opt4 {
+    return Intl.message(
+      'Avoid hospital visit',
+      name: 'heart_condition_q5_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which tool is commonly used for handling heart condition situations?`
+  String get heart_condition_q6 {
+    return Intl.message(
+      'Which tool is commonly used for handling heart condition situations?',
+      name: 'heart_condition_q6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bandage`
+  String get heart_condition_q6_opt1 {
+    return Intl.message(
+      'Bandage',
+      name: 'heart_condition_q6_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Epinephrine pen`
+  String get heart_condition_q6_opt2 {
+    return Intl.message(
+      'Epinephrine pen',
+      name: 'heart_condition_q6_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gloves`
+  String get heart_condition_q6_opt3 {
+    return Intl.message(
+      'Gloves',
+      name: 'heart_condition_q6_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `It depends on the situation`
+  String get heart_condition_q6_opt4 {
+    return Intl.message(
+      'It depends on the situation',
+      name: 'heart_condition_q6_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is the first step when handling poisons?`
+  String get poisons_q1 {
+    return Intl.message(
+      'What is the first step when handling poisons?',
+      name: 'poisons_q1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stay calm`
+  String get poisons_q1_opt1 {
+    return Intl.message(
+      'Stay calm',
+      name: 'poisons_q1_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call emergency`
+  String get poisons_q1_opt2 {
+    return Intl.message(
+      'Call emergency',
+      name: 'poisons_q1_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provide water`
+  String get poisons_q1_opt3 {
+    return Intl.message(
+      'Provide water',
+      name: 'poisons_q1_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ignore symptoms`
+  String get poisons_q1_opt4 {
+    return Intl.message(
+      'Ignore symptoms',
+      name: 'poisons_q1_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which of the following is a symptom of poisons?`
+  String get poisons_q2 {
+    return Intl.message(
+      'Which of the following is a symptom of poisons?',
+      name: 'poisons_q2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dizziness`
+  String get poisons_q2_opt1 {
+    return Intl.message(
+      'Dizziness',
+      name: 'poisons_q2_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Itching`
+  String get poisons_q2_opt2 {
+    return Intl.message('Itching', name: 'poisons_q2_opt2', desc: '', args: []);
+  }
+
+  /// `Blurred vision`
+  String get poisons_q2_opt3 {
+    return Intl.message(
+      'Blurred vision',
+      name: 'poisons_q2_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All of the above`
+  String get poisons_q2_opt4 {
+    return Intl.message(
+      'All of the above',
+      name: 'poisons_q2_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When should you call emergency services during a poisons incident?`
+  String get poisons_q3 {
+    return Intl.message(
+      'When should you call emergency services during a poisons incident?',
+      name: 'poisons_q3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If symptoms are mild`
+  String get poisons_q3_opt1 {
+    return Intl.message(
+      'If symptoms are mild',
+      name: 'poisons_q3_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the person faints`
+  String get poisons_q3_opt2 {
+    return Intl.message(
+      'If the person faints',
+      name: 'poisons_q3_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If they ask for help`
+  String get poisons_q3_opt3 {
+    return Intl.message(
+      'If they ask for help',
+      name: 'poisons_q3_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Always`
+  String get poisons_q3_opt4 {
+    return Intl.message('Always', name: 'poisons_q3_opt4', desc: '', args: []);
+  }
+
+  /// `What should you avoid doing during poisons care?`
+  String get poisons_q4 {
+    return Intl.message(
+      'What should you avoid doing during poisons care?',
+      name: 'poisons_q4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using outdated methods`
+  String get poisons_q4_opt1 {
+    return Intl.message(
+      'Using outdated methods',
+      name: 'poisons_q4_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keeping them comfortable`
+  String get poisons_q4_opt2 {
+    return Intl.message(
+      'Keeping them comfortable',
+      name: 'poisons_q4_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monitoring breathing`
+  String get poisons_q4_opt3 {
+    return Intl.message(
+      'Monitoring breathing',
+      name: 'poisons_q4_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Staying with them`
+  String get poisons_q4_opt4 {
+    return Intl.message(
+      'Staying with them',
+      name: 'poisons_q4_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is a key goal of first aid for poisons?`
+  String get poisons_q5 {
+    return Intl.message(
+      'What is a key goal of first aid for poisons?',
+      name: 'poisons_q5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Complete treatment`
+  String get poisons_q5_opt1 {
+    return Intl.message(
+      'Complete treatment',
+      name: 'poisons_q5_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Prevent worsening`
+  String get poisons_q5_opt2 {
+    return Intl.message(
+      'Prevent worsening',
+      name: 'poisons_q5_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnose accurately`
+  String get poisons_q5_opt3 {
+    return Intl.message(
+      'Diagnose accurately',
+      name: 'poisons_q5_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Avoid hospital visit`
+  String get poisons_q5_opt4 {
+    return Intl.message(
+      'Avoid hospital visit',
+      name: 'poisons_q5_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which tool is commonly used for handling poisons situations?`
+  String get poisons_q6 {
+    return Intl.message(
+      'Which tool is commonly used for handling poisons situations?',
+      name: 'poisons_q6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bandage`
+  String get poisons_q6_opt1 {
+    return Intl.message('Bandage', name: 'poisons_q6_opt1', desc: '', args: []);
+  }
+
+  /// `Epinephrine pen`
+  String get poisons_q6_opt2 {
+    return Intl.message(
+      'Epinephrine pen',
+      name: 'poisons_q6_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gloves`
+  String get poisons_q6_opt3 {
+    return Intl.message('Gloves', name: 'poisons_q6_opt3', desc: '', args: []);
+  }
+
+  /// `It depends on the situation`
+  String get poisons_q6_opt4 {
+    return Intl.message(
+      'It depends on the situation',
+      name: 'poisons_q6_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is the first step when handling recovery pos?`
+  String get recovery_pos_q1 {
+    return Intl.message(
+      'What is the first step when handling recovery pos?',
+      name: 'recovery_pos_q1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stay calm`
+  String get recovery_pos_q1_opt1 {
+    return Intl.message(
+      'Stay calm',
+      name: 'recovery_pos_q1_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call emergency`
+  String get recovery_pos_q1_opt2 {
+    return Intl.message(
+      'Call emergency',
+      name: 'recovery_pos_q1_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provide water`
+  String get recovery_pos_q1_opt3 {
+    return Intl.message(
+      'Provide water',
+      name: 'recovery_pos_q1_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ignore symptoms`
+  String get recovery_pos_q1_opt4 {
+    return Intl.message(
+      'Ignore symptoms',
+      name: 'recovery_pos_q1_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which of the following is a symptom of recovery pos?`
+  String get recovery_pos_q2 {
+    return Intl.message(
+      'Which of the following is a symptom of recovery pos?',
+      name: 'recovery_pos_q2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dizziness`
+  String get recovery_pos_q2_opt1 {
+    return Intl.message(
+      'Dizziness',
+      name: 'recovery_pos_q2_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Itching`
+  String get recovery_pos_q2_opt2 {
+    return Intl.message(
+      'Itching',
+      name: 'recovery_pos_q2_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Blurred vision`
+  String get recovery_pos_q2_opt3 {
+    return Intl.message(
+      'Blurred vision',
+      name: 'recovery_pos_q2_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All of the above`
+  String get recovery_pos_q2_opt4 {
+    return Intl.message(
+      'All of the above',
+      name: 'recovery_pos_q2_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When should you call emergency services during a recovery pos incident?`
+  String get recovery_pos_q3 {
+    return Intl.message(
+      'When should you call emergency services during a recovery pos incident?',
+      name: 'recovery_pos_q3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If symptoms are mild`
+  String get recovery_pos_q3_opt1 {
+    return Intl.message(
+      'If symptoms are mild',
+      name: 'recovery_pos_q3_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the person faints`
+  String get recovery_pos_q3_opt2 {
+    return Intl.message(
+      'If the person faints',
+      name: 'recovery_pos_q3_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If they ask for help`
+  String get recovery_pos_q3_opt3 {
+    return Intl.message(
+      'If they ask for help',
+      name: 'recovery_pos_q3_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Always`
+  String get recovery_pos_q3_opt4 {
+    return Intl.message(
+      'Always',
+      name: 'recovery_pos_q3_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What should you avoid doing during recovery pos care?`
+  String get recovery_pos_q4 {
+    return Intl.message(
+      'What should you avoid doing during recovery pos care?',
+      name: 'recovery_pos_q4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using outdated methods`
+  String get recovery_pos_q4_opt1 {
+    return Intl.message(
+      'Using outdated methods',
+      name: 'recovery_pos_q4_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keeping them comfortable`
+  String get recovery_pos_q4_opt2 {
+    return Intl.message(
+      'Keeping them comfortable',
+      name: 'recovery_pos_q4_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monitoring breathing`
+  String get recovery_pos_q4_opt3 {
+    return Intl.message(
+      'Monitoring breathing',
+      name: 'recovery_pos_q4_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Staying with them`
+  String get recovery_pos_q4_opt4 {
+    return Intl.message(
+      'Staying with them',
+      name: 'recovery_pos_q4_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is a key goal of first aid for recovery pos?`
+  String get recovery_pos_q5 {
+    return Intl.message(
+      'What is a key goal of first aid for recovery pos?',
+      name: 'recovery_pos_q5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Complete treatment`
+  String get recovery_pos_q5_opt1 {
+    return Intl.message(
+      'Complete treatment',
+      name: 'recovery_pos_q5_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Prevent worsening`
+  String get recovery_pos_q5_opt2 {
+    return Intl.message(
+      'Prevent worsening',
+      name: 'recovery_pos_q5_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnose accurately`
+  String get recovery_pos_q5_opt3 {
+    return Intl.message(
+      'Diagnose accurately',
+      name: 'recovery_pos_q5_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Avoid hospital visit`
+  String get recovery_pos_q5_opt4 {
+    return Intl.message(
+      'Avoid hospital visit',
+      name: 'recovery_pos_q5_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which tool is commonly used for handling recovery pos situations?`
+  String get recovery_pos_q6 {
+    return Intl.message(
+      'Which tool is commonly used for handling recovery pos situations?',
+      name: 'recovery_pos_q6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bandage`
+  String get recovery_pos_q6_opt1 {
+    return Intl.message(
+      'Bandage',
+      name: 'recovery_pos_q6_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Epinephrine pen`
+  String get recovery_pos_q6_opt2 {
+    return Intl.message(
+      'Epinephrine pen',
+      name: 'recovery_pos_q6_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gloves`
+  String get recovery_pos_q6_opt3 {
+    return Intl.message(
+      'Gloves',
+      name: 'recovery_pos_q6_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `It depends on the situation`
+  String get recovery_pos_q6_opt4 {
+    return Intl.message(
+      'It depends on the situation',
+      name: 'recovery_pos_q6_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is the first step when handling seizures?`
+  String get seizures_q1 {
+    return Intl.message(
+      'What is the first step when handling seizures?',
+      name: 'seizures_q1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stay calm`
+  String get seizures_q1_opt1 {
+    return Intl.message(
+      'Stay calm',
+      name: 'seizures_q1_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call emergency`
+  String get seizures_q1_opt2 {
+    return Intl.message(
+      'Call emergency',
+      name: 'seizures_q1_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provide water`
+  String get seizures_q1_opt3 {
+    return Intl.message(
+      'Provide water',
+      name: 'seizures_q1_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ignore symptoms`
+  String get seizures_q1_opt4 {
+    return Intl.message(
+      'Ignore symptoms',
+      name: 'seizures_q1_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which of the following is a symptom of seizures?`
+  String get seizures_q2 {
+    return Intl.message(
+      'Which of the following is a symptom of seizures?',
+      name: 'seizures_q2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dizziness`
+  String get seizures_q2_opt1 {
+    return Intl.message(
+      'Dizziness',
+      name: 'seizures_q2_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Itching`
+  String get seizures_q2_opt2 {
+    return Intl.message(
+      'Itching',
+      name: 'seizures_q2_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Blurred vision`
+  String get seizures_q2_opt3 {
+    return Intl.message(
+      'Blurred vision',
+      name: 'seizures_q2_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All of the above`
+  String get seizures_q2_opt4 {
+    return Intl.message(
+      'All of the above',
+      name: 'seizures_q2_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When should you call emergency services during a seizures incident?`
+  String get seizures_q3 {
+    return Intl.message(
+      'When should you call emergency services during a seizures incident?',
+      name: 'seizures_q3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If symptoms are mild`
+  String get seizures_q3_opt1 {
+    return Intl.message(
+      'If symptoms are mild',
+      name: 'seizures_q3_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the person faints`
+  String get seizures_q3_opt2 {
+    return Intl.message(
+      'If the person faints',
+      name: 'seizures_q3_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If they ask for help`
+  String get seizures_q3_opt3 {
+    return Intl.message(
+      'If they ask for help',
+      name: 'seizures_q3_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Always`
+  String get seizures_q3_opt4 {
+    return Intl.message('Always', name: 'seizures_q3_opt4', desc: '', args: []);
+  }
+
+  /// `What should you avoid doing during seizures care?`
+  String get seizures_q4 {
+    return Intl.message(
+      'What should you avoid doing during seizures care?',
+      name: 'seizures_q4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using outdated methods`
+  String get seizures_q4_opt1 {
+    return Intl.message(
+      'Using outdated methods',
+      name: 'seizures_q4_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keeping them comfortable`
+  String get seizures_q4_opt2 {
+    return Intl.message(
+      'Keeping them comfortable',
+      name: 'seizures_q4_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monitoring breathing`
+  String get seizures_q4_opt3 {
+    return Intl.message(
+      'Monitoring breathing',
+      name: 'seizures_q4_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Staying with them`
+  String get seizures_q4_opt4 {
+    return Intl.message(
+      'Staying with them',
+      name: 'seizures_q4_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is a key goal of first aid for seizures?`
+  String get seizures_q5 {
+    return Intl.message(
+      'What is a key goal of first aid for seizures?',
+      name: 'seizures_q5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Complete treatment`
+  String get seizures_q5_opt1 {
+    return Intl.message(
+      'Complete treatment',
+      name: 'seizures_q5_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Prevent worsening`
+  String get seizures_q5_opt2 {
+    return Intl.message(
+      'Prevent worsening',
+      name: 'seizures_q5_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnose accurately`
+  String get seizures_q5_opt3 {
+    return Intl.message(
+      'Diagnose accurately',
+      name: 'seizures_q5_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Avoid hospital visit`
+  String get seizures_q5_opt4 {
+    return Intl.message(
+      'Avoid hospital visit',
+      name: 'seizures_q5_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which tool is commonly used for handling seizures situations?`
+  String get seizures_q6 {
+    return Intl.message(
+      'Which tool is commonly used for handling seizures situations?',
+      name: 'seizures_q6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bandage`
+  String get seizures_q6_opt1 {
+    return Intl.message(
+      'Bandage',
+      name: 'seizures_q6_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Epinephrine pen`
+  String get seizures_q6_opt2 {
+    return Intl.message(
+      'Epinephrine pen',
+      name: 'seizures_q6_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gloves`
+  String get seizures_q6_opt3 {
+    return Intl.message('Gloves', name: 'seizures_q6_opt3', desc: '', args: []);
+  }
+
+  /// `It depends on the situation`
+  String get seizures_q6_opt4 {
+    return Intl.message(
+      'It depends on the situation',
+      name: 'seizures_q6_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is the first step when handling shock?`
+  String get shock_q1 {
+    return Intl.message(
+      'What is the first step when handling shock?',
+      name: 'shock_q1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stay calm`
+  String get shock_q1_opt1 {
+    return Intl.message('Stay calm', name: 'shock_q1_opt1', desc: '', args: []);
+  }
+
+  /// `Call emergency`
+  String get shock_q1_opt2 {
+    return Intl.message(
+      'Call emergency',
+      name: 'shock_q1_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provide water`
+  String get shock_q1_opt3 {
+    return Intl.message(
+      'Provide water',
+      name: 'shock_q1_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ignore symptoms`
+  String get shock_q1_opt4 {
+    return Intl.message(
+      'Ignore symptoms',
+      name: 'shock_q1_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which of the following is a symptom of shock?`
+  String get shock_q2 {
+    return Intl.message(
+      'Which of the following is a symptom of shock?',
+      name: 'shock_q2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dizziness`
+  String get shock_q2_opt1 {
+    return Intl.message('Dizziness', name: 'shock_q2_opt1', desc: '', args: []);
+  }
+
+  /// `Itching`
+  String get shock_q2_opt2 {
+    return Intl.message('Itching', name: 'shock_q2_opt2', desc: '', args: []);
+  }
+
+  /// `Blurred vision`
+  String get shock_q2_opt3 {
+    return Intl.message(
+      'Blurred vision',
+      name: 'shock_q2_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All of the above`
+  String get shock_q2_opt4 {
+    return Intl.message(
+      'All of the above',
+      name: 'shock_q2_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When should you call emergency services during a shock incident?`
+  String get shock_q3 {
+    return Intl.message(
+      'When should you call emergency services during a shock incident?',
+      name: 'shock_q3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If symptoms are mild`
+  String get shock_q3_opt1 {
+    return Intl.message(
+      'If symptoms are mild',
+      name: 'shock_q3_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the person faints`
+  String get shock_q3_opt2 {
+    return Intl.message(
+      'If the person faints',
+      name: 'shock_q3_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If they ask for help`
+  String get shock_q3_opt3 {
+    return Intl.message(
+      'If they ask for help',
+      name: 'shock_q3_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Always`
+  String get shock_q3_opt4 {
+    return Intl.message('Always', name: 'shock_q3_opt4', desc: '', args: []);
+  }
+
+  /// `What should you avoid doing during shock care?`
+  String get shock_q4 {
+    return Intl.message(
+      'What should you avoid doing during shock care?',
+      name: 'shock_q4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using outdated methods`
+  String get shock_q4_opt1 {
+    return Intl.message(
+      'Using outdated methods',
+      name: 'shock_q4_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keeping them comfortable`
+  String get shock_q4_opt2 {
+    return Intl.message(
+      'Keeping them comfortable',
+      name: 'shock_q4_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monitoring breathing`
+  String get shock_q4_opt3 {
+    return Intl.message(
+      'Monitoring breathing',
+      name: 'shock_q4_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Staying with them`
+  String get shock_q4_opt4 {
+    return Intl.message(
+      'Staying with them',
+      name: 'shock_q4_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is a key goal of first aid for shock?`
+  String get shock_q5 {
+    return Intl.message(
+      'What is a key goal of first aid for shock?',
+      name: 'shock_q5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Complete treatment`
+  String get shock_q5_opt1 {
+    return Intl.message(
+      'Complete treatment',
+      name: 'shock_q5_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Prevent worsening`
+  String get shock_q5_opt2 {
+    return Intl.message(
+      'Prevent worsening',
+      name: 'shock_q5_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnose accurately`
+  String get shock_q5_opt3 {
+    return Intl.message(
+      'Diagnose accurately',
+      name: 'shock_q5_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Avoid hospital visit`
+  String get shock_q5_opt4 {
+    return Intl.message(
+      'Avoid hospital visit',
+      name: 'shock_q5_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which tool is commonly used for handling shock situations?`
+  String get shock_q6 {
+    return Intl.message(
+      'Which tool is commonly used for handling shock situations?',
+      name: 'shock_q6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bandage`
+  String get shock_q6_opt1 {
+    return Intl.message('Bandage', name: 'shock_q6_opt1', desc: '', args: []);
+  }
+
+  /// `Epinephrine pen`
+  String get shock_q6_opt2 {
+    return Intl.message(
+      'Epinephrine pen',
+      name: 'shock_q6_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gloves`
+  String get shock_q6_opt3 {
+    return Intl.message('Gloves', name: 'shock_q6_opt3', desc: '', args: []);
+  }
+
+  /// `It depends on the situation`
+  String get shock_q6_opt4 {
+    return Intl.message(
+      'It depends on the situation',
+      name: 'shock_q6_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is the first step when handling spinal injury?`
+  String get spinal_injury_q1 {
+    return Intl.message(
+      'What is the first step when handling spinal injury?',
+      name: 'spinal_injury_q1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stay calm`
+  String get spinal_injury_q1_opt1 {
+    return Intl.message(
+      'Stay calm',
+      name: 'spinal_injury_q1_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call emergency`
+  String get spinal_injury_q1_opt2 {
+    return Intl.message(
+      'Call emergency',
+      name: 'spinal_injury_q1_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provide water`
+  String get spinal_injury_q1_opt3 {
+    return Intl.message(
+      'Provide water',
+      name: 'spinal_injury_q1_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ignore symptoms`
+  String get spinal_injury_q1_opt4 {
+    return Intl.message(
+      'Ignore symptoms',
+      name: 'spinal_injury_q1_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which of the following is a symptom of spinal injury?`
+  String get spinal_injury_q2 {
+    return Intl.message(
+      'Which of the following is a symptom of spinal injury?',
+      name: 'spinal_injury_q2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dizziness`
+  String get spinal_injury_q2_opt1 {
+    return Intl.message(
+      'Dizziness',
+      name: 'spinal_injury_q2_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Itching`
+  String get spinal_injury_q2_opt2 {
+    return Intl.message(
+      'Itching',
+      name: 'spinal_injury_q2_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Blurred vision`
+  String get spinal_injury_q2_opt3 {
+    return Intl.message(
+      'Blurred vision',
+      name: 'spinal_injury_q2_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All of the above`
+  String get spinal_injury_q2_opt4 {
+    return Intl.message(
+      'All of the above',
+      name: 'spinal_injury_q2_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When should you call emergency services during a spinal injury incident?`
+  String get spinal_injury_q3 {
+    return Intl.message(
+      'When should you call emergency services during a spinal injury incident?',
+      name: 'spinal_injury_q3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If symptoms are mild`
+  String get spinal_injury_q3_opt1 {
+    return Intl.message(
+      'If symptoms are mild',
+      name: 'spinal_injury_q3_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the person faints`
+  String get spinal_injury_q3_opt2 {
+    return Intl.message(
+      'If the person faints',
+      name: 'spinal_injury_q3_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If they ask for help`
+  String get spinal_injury_q3_opt3 {
+    return Intl.message(
+      'If they ask for help',
+      name: 'spinal_injury_q3_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Always`
+  String get spinal_injury_q3_opt4 {
+    return Intl.message(
+      'Always',
+      name: 'spinal_injury_q3_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What should you avoid doing during spinal injury care?`
+  String get spinal_injury_q4 {
+    return Intl.message(
+      'What should you avoid doing during spinal injury care?',
+      name: 'spinal_injury_q4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using outdated methods`
+  String get spinal_injury_q4_opt1 {
+    return Intl.message(
+      'Using outdated methods',
+      name: 'spinal_injury_q4_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keeping them comfortable`
+  String get spinal_injury_q4_opt2 {
+    return Intl.message(
+      'Keeping them comfortable',
+      name: 'spinal_injury_q4_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monitoring breathing`
+  String get spinal_injury_q4_opt3 {
+    return Intl.message(
+      'Monitoring breathing',
+      name: 'spinal_injury_q4_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Staying with them`
+  String get spinal_injury_q4_opt4 {
+    return Intl.message(
+      'Staying with them',
+      name: 'spinal_injury_q4_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is a key goal of first aid for spinal injury?`
+  String get spinal_injury_q5 {
+    return Intl.message(
+      'What is a key goal of first aid for spinal injury?',
+      name: 'spinal_injury_q5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Complete treatment`
+  String get spinal_injury_q5_opt1 {
+    return Intl.message(
+      'Complete treatment',
+      name: 'spinal_injury_q5_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Prevent worsening`
+  String get spinal_injury_q5_opt2 {
+    return Intl.message(
+      'Prevent worsening',
+      name: 'spinal_injury_q5_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnose accurately`
+  String get spinal_injury_q5_opt3 {
+    return Intl.message(
+      'Diagnose accurately',
+      name: 'spinal_injury_q5_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Avoid hospital visit`
+  String get spinal_injury_q5_opt4 {
+    return Intl.message(
+      'Avoid hospital visit',
+      name: 'spinal_injury_q5_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which tool is commonly used for handling spinal injury situations?`
+  String get spinal_injury_q6 {
+    return Intl.message(
+      'Which tool is commonly used for handling spinal injury situations?',
+      name: 'spinal_injury_q6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bandage`
+  String get spinal_injury_q6_opt1 {
+    return Intl.message(
+      'Bandage',
+      name: 'spinal_injury_q6_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Epinephrine pen`
+  String get spinal_injury_q6_opt2 {
+    return Intl.message(
+      'Epinephrine pen',
+      name: 'spinal_injury_q6_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gloves`
+  String get spinal_injury_q6_opt3 {
+    return Intl.message(
+      'Gloves',
+      name: 'spinal_injury_q6_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `It depends on the situation`
+  String get spinal_injury_q6_opt4 {
+    return Intl.message(
+      'It depends on the situation',
+      name: 'spinal_injury_q6_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is the first step when handling sprainstrains?`
+  String get sprainstrains_q1 {
+    return Intl.message(
+      'What is the first step when handling sprainstrains?',
+      name: 'sprainstrains_q1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stay calm`
+  String get sprainstrains_q1_opt1 {
+    return Intl.message(
+      'Stay calm',
+      name: 'sprainstrains_q1_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call emergency`
+  String get sprainstrains_q1_opt2 {
+    return Intl.message(
+      'Call emergency',
+      name: 'sprainstrains_q1_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provide water`
+  String get sprainstrains_q1_opt3 {
+    return Intl.message(
+      'Provide water',
+      name: 'sprainstrains_q1_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ignore symptoms`
+  String get sprainstrains_q1_opt4 {
+    return Intl.message(
+      'Ignore symptoms',
+      name: 'sprainstrains_q1_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which of the following is a symptom of sprainstrains?`
+  String get sprainstrains_q2 {
+    return Intl.message(
+      'Which of the following is a symptom of sprainstrains?',
+      name: 'sprainstrains_q2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dizziness`
+  String get sprainstrains_q2_opt1 {
+    return Intl.message(
+      'Dizziness',
+      name: 'sprainstrains_q2_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Itching`
+  String get sprainstrains_q2_opt2 {
+    return Intl.message(
+      'Itching',
+      name: 'sprainstrains_q2_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Blurred vision`
+  String get sprainstrains_q2_opt3 {
+    return Intl.message(
+      'Blurred vision',
+      name: 'sprainstrains_q2_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All of the above`
+  String get sprainstrains_q2_opt4 {
+    return Intl.message(
+      'All of the above',
+      name: 'sprainstrains_q2_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When should you call emergency services during a sprainstrains incident?`
+  String get sprainstrains_q3 {
+    return Intl.message(
+      'When should you call emergency services during a sprainstrains incident?',
+      name: 'sprainstrains_q3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If symptoms are mild`
+  String get sprainstrains_q3_opt1 {
+    return Intl.message(
+      'If symptoms are mild',
+      name: 'sprainstrains_q3_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the person faints`
+  String get sprainstrains_q3_opt2 {
+    return Intl.message(
+      'If the person faints',
+      name: 'sprainstrains_q3_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If they ask for help`
+  String get sprainstrains_q3_opt3 {
+    return Intl.message(
+      'If they ask for help',
+      name: 'sprainstrains_q3_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Always`
+  String get sprainstrains_q3_opt4 {
+    return Intl.message(
+      'Always',
+      name: 'sprainstrains_q3_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What should you avoid doing during sprainstrains care?`
+  String get sprainstrains_q4 {
+    return Intl.message(
+      'What should you avoid doing during sprainstrains care?',
+      name: 'sprainstrains_q4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using outdated methods`
+  String get sprainstrains_q4_opt1 {
+    return Intl.message(
+      'Using outdated methods',
+      name: 'sprainstrains_q4_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keeping them comfortable`
+  String get sprainstrains_q4_opt2 {
+    return Intl.message(
+      'Keeping them comfortable',
+      name: 'sprainstrains_q4_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monitoring breathing`
+  String get sprainstrains_q4_opt3 {
+    return Intl.message(
+      'Monitoring breathing',
+      name: 'sprainstrains_q4_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Staying with them`
+  String get sprainstrains_q4_opt4 {
+    return Intl.message(
+      'Staying with them',
+      name: 'sprainstrains_q4_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is a key goal of first aid for sprainstrains?`
+  String get sprainstrains_q5 {
+    return Intl.message(
+      'What is a key goal of first aid for sprainstrains?',
+      name: 'sprainstrains_q5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Complete treatment`
+  String get sprainstrains_q5_opt1 {
+    return Intl.message(
+      'Complete treatment',
+      name: 'sprainstrains_q5_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Prevent worsening`
+  String get sprainstrains_q5_opt2 {
+    return Intl.message(
+      'Prevent worsening',
+      name: 'sprainstrains_q5_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnose accurately`
+  String get sprainstrains_q5_opt3 {
+    return Intl.message(
+      'Diagnose accurately',
+      name: 'sprainstrains_q5_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Avoid hospital visit`
+  String get sprainstrains_q5_opt4 {
+    return Intl.message(
+      'Avoid hospital visit',
+      name: 'sprainstrains_q5_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which tool is commonly used for handling sprainstrains situations?`
+  String get sprainstrains_q6 {
+    return Intl.message(
+      'Which tool is commonly used for handling sprainstrains situations?',
+      name: 'sprainstrains_q6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bandage`
+  String get sprainstrains_q6_opt1 {
+    return Intl.message(
+      'Bandage',
+      name: 'sprainstrains_q6_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Epinephrine pen`
+  String get sprainstrains_q6_opt2 {
+    return Intl.message(
+      'Epinephrine pen',
+      name: 'sprainstrains_q6_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gloves`
+  String get sprainstrains_q6_opt3 {
+    return Intl.message(
+      'Gloves',
+      name: 'sprainstrains_q6_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `It depends on the situation`
+  String get sprainstrains_q6_opt4 {
+    return Intl.message(
+      'It depends on the situation',
+      name: 'sprainstrains_q6_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is the first step when handling stroke?`
+  String get stroke_q1 {
+    return Intl.message(
+      'What is the first step when handling stroke?',
+      name: 'stroke_q1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stay calm`
+  String get stroke_q1_opt1 {
+    return Intl.message(
+      'Stay calm',
+      name: 'stroke_q1_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call emergency`
+  String get stroke_q1_opt2 {
+    return Intl.message(
+      'Call emergency',
+      name: 'stroke_q1_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provide water`
+  String get stroke_q1_opt3 {
+    return Intl.message(
+      'Provide water',
+      name: 'stroke_q1_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ignore symptoms`
+  String get stroke_q1_opt4 {
+    return Intl.message(
+      'Ignore symptoms',
+      name: 'stroke_q1_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which of the following is a symptom of stroke?`
+  String get stroke_q2 {
+    return Intl.message(
+      'Which of the following is a symptom of stroke?',
+      name: 'stroke_q2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dizziness`
+  String get stroke_q2_opt1 {
+    return Intl.message(
+      'Dizziness',
+      name: 'stroke_q2_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Itching`
+  String get stroke_q2_opt2 {
+    return Intl.message('Itching', name: 'stroke_q2_opt2', desc: '', args: []);
+  }
+
+  /// `Blurred vision`
+  String get stroke_q2_opt3 {
+    return Intl.message(
+      'Blurred vision',
+      name: 'stroke_q2_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All of the above`
+  String get stroke_q2_opt4 {
+    return Intl.message(
+      'All of the above',
+      name: 'stroke_q2_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When should you call emergency services during a stroke incident?`
+  String get stroke_q3 {
+    return Intl.message(
+      'When should you call emergency services during a stroke incident?',
+      name: 'stroke_q3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If symptoms are mild`
+  String get stroke_q3_opt1 {
+    return Intl.message(
+      'If symptoms are mild',
+      name: 'stroke_q3_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the person faints`
+  String get stroke_q3_opt2 {
+    return Intl.message(
+      'If the person faints',
+      name: 'stroke_q3_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If they ask for help`
+  String get stroke_q3_opt3 {
+    return Intl.message(
+      'If they ask for help',
+      name: 'stroke_q3_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Always`
+  String get stroke_q3_opt4 {
+    return Intl.message('Always', name: 'stroke_q3_opt4', desc: '', args: []);
+  }
+
+  /// `What should you avoid doing during stroke care?`
+  String get stroke_q4 {
+    return Intl.message(
+      'What should you avoid doing during stroke care?',
+      name: 'stroke_q4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using outdated methods`
+  String get stroke_q4_opt1 {
+    return Intl.message(
+      'Using outdated methods',
+      name: 'stroke_q4_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keeping them comfortable`
+  String get stroke_q4_opt2 {
+    return Intl.message(
+      'Keeping them comfortable',
+      name: 'stroke_q4_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monitoring breathing`
+  String get stroke_q4_opt3 {
+    return Intl.message(
+      'Monitoring breathing',
+      name: 'stroke_q4_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Staying with them`
+  String get stroke_q4_opt4 {
+    return Intl.message(
+      'Staying with them',
+      name: 'stroke_q4_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is a key goal of first aid for stroke?`
+  String get stroke_q5 {
+    return Intl.message(
+      'What is a key goal of first aid for stroke?',
+      name: 'stroke_q5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Complete treatment`
+  String get stroke_q5_opt1 {
+    return Intl.message(
+      'Complete treatment',
+      name: 'stroke_q5_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Prevent worsening`
+  String get stroke_q5_opt2 {
+    return Intl.message(
+      'Prevent worsening',
+      name: 'stroke_q5_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnose accurately`
+  String get stroke_q5_opt3 {
+    return Intl.message(
+      'Diagnose accurately',
+      name: 'stroke_q5_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Avoid hospital visit`
+  String get stroke_q5_opt4 {
+    return Intl.message(
+      'Avoid hospital visit',
+      name: 'stroke_q5_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which tool is commonly used for handling stroke situations?`
+  String get stroke_q6 {
+    return Intl.message(
+      'Which tool is commonly used for handling stroke situations?',
+      name: 'stroke_q6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bandage`
+  String get stroke_q6_opt1 {
+    return Intl.message('Bandage', name: 'stroke_q6_opt1', desc: '', args: []);
+  }
+
+  /// `Epinephrine pen`
+  String get stroke_q6_opt2 {
+    return Intl.message(
+      'Epinephrine pen',
+      name: 'stroke_q6_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gloves`
+  String get stroke_q6_opt3 {
+    return Intl.message('Gloves', name: 'stroke_q6_opt3', desc: '', args: []);
+  }
+
+  /// `It depends on the situation`
+  String get stroke_q6_opt4 {
+    return Intl.message(
+      'It depends on the situation',
+      name: 'stroke_q6_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is the first step when handling wound care?`
+  String get wound_care_q1 {
+    return Intl.message(
+      'What is the first step when handling wound care?',
+      name: 'wound_care_q1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stay calm`
+  String get wound_care_q1_opt1 {
+    return Intl.message(
+      'Stay calm',
+      name: 'wound_care_q1_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call emergency`
+  String get wound_care_q1_opt2 {
+    return Intl.message(
+      'Call emergency',
+      name: 'wound_care_q1_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provide water`
+  String get wound_care_q1_opt3 {
+    return Intl.message(
+      'Provide water',
+      name: 'wound_care_q1_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Ignore symptoms`
+  String get wound_care_q1_opt4 {
+    return Intl.message(
+      'Ignore symptoms',
+      name: 'wound_care_q1_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which of the following is a symptom of wound care?`
+  String get wound_care_q2 {
+    return Intl.message(
+      'Which of the following is a symptom of wound care?',
+      name: 'wound_care_q2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dizziness`
+  String get wound_care_q2_opt1 {
+    return Intl.message(
+      'Dizziness',
+      name: 'wound_care_q2_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Itching`
+  String get wound_care_q2_opt2 {
+    return Intl.message(
+      'Itching',
+      name: 'wound_care_q2_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Blurred vision`
+  String get wound_care_q2_opt3 {
+    return Intl.message(
+      'Blurred vision',
+      name: 'wound_care_q2_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All of the above`
+  String get wound_care_q2_opt4 {
+    return Intl.message(
+      'All of the above',
+      name: 'wound_care_q2_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `When should you call emergency services during a wound care incident?`
+  String get wound_care_q3 {
+    return Intl.message(
+      'When should you call emergency services during a wound care incident?',
+      name: 'wound_care_q3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If symptoms are mild`
+  String get wound_care_q3_opt1 {
+    return Intl.message(
+      'If symptoms are mild',
+      name: 'wound_care_q3_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the person faints`
+  String get wound_care_q3_opt2 {
+    return Intl.message(
+      'If the person faints',
+      name: 'wound_care_q3_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If they ask for help`
+  String get wound_care_q3_opt3 {
+    return Intl.message(
+      'If they ask for help',
+      name: 'wound_care_q3_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Always`
+  String get wound_care_q3_opt4 {
+    return Intl.message(
+      'Always',
+      name: 'wound_care_q3_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What should you avoid doing during wound care care?`
+  String get wound_care_q4 {
+    return Intl.message(
+      'What should you avoid doing during wound care care?',
+      name: 'wound_care_q4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Using outdated methods`
+  String get wound_care_q4_opt1 {
+    return Intl.message(
+      'Using outdated methods',
+      name: 'wound_care_q4_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keeping them comfortable`
+  String get wound_care_q4_opt2 {
+    return Intl.message(
+      'Keeping them comfortable',
+      name: 'wound_care_q4_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Monitoring breathing`
+  String get wound_care_q4_opt3 {
+    return Intl.message(
+      'Monitoring breathing',
+      name: 'wound_care_q4_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Staying with them`
+  String get wound_care_q4_opt4 {
+    return Intl.message(
+      'Staying with them',
+      name: 'wound_care_q4_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What is a key goal of first aid for wound care?`
+  String get wound_care_q5 {
+    return Intl.message(
+      'What is a key goal of first aid for wound care?',
+      name: 'wound_care_q5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Complete treatment`
+  String get wound_care_q5_opt1 {
+    return Intl.message(
+      'Complete treatment',
+      name: 'wound_care_q5_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Prevent worsening`
+  String get wound_care_q5_opt2 {
+    return Intl.message(
+      'Prevent worsening',
+      name: 'wound_care_q5_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnose accurately`
+  String get wound_care_q5_opt3 {
+    return Intl.message(
+      'Diagnose accurately',
+      name: 'wound_care_q5_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Avoid hospital visit`
+  String get wound_care_q5_opt4 {
+    return Intl.message(
+      'Avoid hospital visit',
+      name: 'wound_care_q5_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Which tool is commonly used for handling wound care situations?`
+  String get wound_care_q6 {
+    return Intl.message(
+      'Which tool is commonly used for handling wound care situations?',
+      name: 'wound_care_q6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Bandage`
+  String get wound_care_q6_opt1 {
+    return Intl.message(
+      'Bandage',
+      name: 'wound_care_q6_opt1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Epinephrine pen`
+  String get wound_care_q6_opt2 {
+    return Intl.message(
+      'Epinephrine pen',
+      name: 'wound_care_q6_opt2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gloves`
+  String get wound_care_q6_opt3 {
+    return Intl.message(
+      'Gloves',
+      name: 'wound_care_q6_opt3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `It depends on the situation`
+  String get wound_care_q6_opt4 {
+    return Intl.message(
+      'It depends on the situation',
+      name: 'wound_care_q6_opt4',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Home`
   String get home {
     return Intl.message('Home', name: 'home', desc: '', args: []);

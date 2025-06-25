@@ -46,8 +46,11 @@ class _LanguageSelectionScreenState1 extends State<LanguageSelectionScreen1> {
             title: Text(S.of(context).selectLanguage),
             centerTitle: true,
             elevation: 0,
+            backgroundColor: Colors.white,
+            foregroundColor: Colors.black,
           ),
           body: _buildContent(),
+          backgroundColor: Colors.white,
         );
       },
     );
@@ -58,31 +61,33 @@ class _LanguageSelectionScreenState1 extends State<LanguageSelectionScreen1> {
     final isRTL = _selectedLanguage == 'ar';
 
     return Padding(
-      padding: const EdgeInsets.all(24.0),
+      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          const SizedBox(height: 40),
+          const SizedBox(height: 24),
           Text(
             S.of(context).chooseYourLanguage,
             style: const TextStyle(
-              fontSize: 24,
+              fontSize: 22,
               fontWeight: FontWeight.bold,
-              color: Colors.black87,
+              color: Colors.black,
             ),
             textAlign: _getTextAlignment(),
           ),
           const SizedBox(height: 8),
           Text(
             S.of(context).languageSelectionDescription,
-            style: const TextStyle(fontSize: 16, color: Colors.grey),
+            style: const TextStyle(
+              fontSize: 16,
+              color: Colors.grey,
+            ),
             textAlign: _getTextAlignment(),
           ),
-          const SizedBox(height: 40),
+          const SizedBox(height: 32),
           Expanded(
-            child: ListView.separated(
+            child: ListView.builder(
               itemCount: languages.length,
-              separatorBuilder: (context, index) => const Divider(height: 1),
               itemBuilder: (context, index) {
                 final language = languages[index];
                 return _buildLanguageTile(language);
@@ -96,16 +101,19 @@ class _LanguageSelectionScreenState1 extends State<LanguageSelectionScreen1> {
                 : () => _saveLanguageAndNavigate(context),
             style: ElevatedButton.styleFrom(
               backgroundColor: const Color(0xFFD32F2F),
-              foregroundColor: Colors.white,
               padding: const EdgeInsets.symmetric(vertical: 16),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
-              elevation: 0,
+              elevation: 2,
             ),
             child: Text(
               S.of(context).continueText,
-              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+              style: const TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w600,
+                color: Colors.white,
+              ),
             ),
           ),
         ],
@@ -118,15 +126,26 @@ class _LanguageSelectionScreenState1 extends State<LanguageSelectionScreen1> {
   }
 
   Widget _buildLanguageTile(Map<String, dynamic> language) {
+    final isSelected = _selectedLanguage == language['code'];
     final isRTL = _selectedLanguage == 'ar';
 
-    return Card(
-      margin: EdgeInsets.zero,
-      elevation: 0,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+    return Container(
+      margin: const EdgeInsets.only(bottom: 12),
+      decoration: BoxDecoration(
+        color: isSelected ? const Color(0xFFFEEEEE) : Colors.white,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(
+          color: isSelected ? const Color(0xFFD32F2F) : Colors.grey.shade300,
+          width: isSelected ? 2 : 1,
+        ),
+      ),
       child: ListTile(
-        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-        leading: Text(language['flag'], style: const TextStyle(fontSize: 28)),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        leading: Text(
+          language['flag'],
+          style: const TextStyle(fontSize: 26),
+        ),
         title: Text(
           language['nativeName'],
           style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
@@ -147,43 +166,33 @@ class _LanguageSelectionScreenState1 extends State<LanguageSelectionScreen1> {
     );
   }
 
-Future<void> _changeLanguage(String? code) async {
+  Future<void> _changeLanguage(String? code) async {
     if (code == null || code == _selectedLanguage) return;
 
     final newLocale = Locale(code);
-    
-    // Update the app's locale using the global key
+
     appStateKey.currentState?.updateLocale(newLocale);
-    
-    // Update local state
     setState(() {
       _selectedLanguage = code;
     });
-    
-    // Save to SharedPreferences
+
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString('language', code);
-    
-    // Update GetX locale
+
     await Get.updateLocale(newLocale);
   }
 
   Future<void> _saveLanguageAndNavigate(BuildContext context) async {
     if (_selectedLanguage == null) return;
-    
+
     final newLocale = Locale(_selectedLanguage!);
-    
-    // Update the app's locale using the global key
     appStateKey.currentState?.updateLocale(newLocale);
-    
-    // Save to SharedPreferences
+
     final prefs = await SharedPreferences.getInstance();
     await prefs.setString('language', _selectedLanguage!);
-    
-    // Update GetX locale
+
     await Get.updateLocale(newLocale);
-    
-    // Navigate to home
+
     Navigator.pushAndRemoveUntil(
       context,
       MaterialPageRoute(builder: (context) => const NavBar()),
