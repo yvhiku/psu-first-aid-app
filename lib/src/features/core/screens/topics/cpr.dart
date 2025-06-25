@@ -120,25 +120,25 @@ if (quizData['CPR'] != null &&
       style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
     ),
   ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                // Link to s.cpr video or action
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: tPrimaryColor,
-                foregroundColor: Colors.white,
-                minimumSize: const Size(double.infinity, 50),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8.0),
-                ),
-                elevation: 4,
-              ),
-              child:  Text(
-                s.cprWatchDemoButton,
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              ),
-            ),
+            // const SizedBox(height: 20),
+            // ElevatedButton(
+            //   onPressed: () {
+            //     // Link to s.cpr video or action
+            //   },
+            //   style: ElevatedButton.styleFrom(
+            //     backgroundColor: tPrimaryColor,
+            //     foregroundColor: Colors.white,
+            //     minimumSize: const Size(double.infinity, 50),
+            //     shape: RoundedRectangleBorder(
+            //       borderRadius: BorderRadius.circular(8.0),
+            //     ),
+            //     elevation: 4,
+            //   ),
+            //   child:  Text(
+            //     s.cprWatchDemoButton,
+            //     style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            //   ),
+            // ),
           ],
         ),
       ),

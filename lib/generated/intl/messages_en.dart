@@ -1594,6 +1594,8 @@ class MessageLookup extends MessageLookupByLibrary {
       "It depends on the situation",
     ),
     "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+    "questionCount": MessageLookupByLibrary.simpleMessage("Question"),
+    "quizcompleted": MessageLookupByLibrary.simpleMessage("Quiz Completed!"),
     "recoveryPositionHeading": MessageLookupByLibrary.simpleMessage(
       "Recovery Position",
     ),
@@ -2854,5 +2856,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "wound_care_q6_opt4": MessageLookupByLibrary.simpleMessage(
       "It depends on the situation",
     ),
+    "yourscore": MessageLookupByLibrary.simpleMessage("Your score:"),
   };
 }

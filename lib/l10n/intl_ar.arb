@@ -1,5 +1,7 @@
   {
   "@@locale": "ar",
+  "quizcompleted" : "تم الانتهاء من الاختبار!",
+   "yourscore" : "نقاطك:",
   "takeQuiz": "ابدأ الاختبار",
   "allergic_reactions_q1": "ما هي الخطوة الأولى عند التعامل مع ردود الفعل التحسسية؟",
   "allergic_reactions_q1_opt1": "ابقَ هادئًا",

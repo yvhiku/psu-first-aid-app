@@ -1412,6 +1412,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "poisons_q6_opt3": MessageLookupByLibrary.simpleMessage("قفازات"),
     "poisons_q6_opt4": MessageLookupByLibrary.simpleMessage("يعتمد على الموقف"),
     "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
+    "quizcompleted": MessageLookupByLibrary.simpleMessage(
+      "تم الانتهاء من الاختبار!",
+    ),
     "recoveryPositionHeading": MessageLookupByLibrary.simpleMessage(
       "وضعية التعافي",
     ),
@@ -2588,5 +2591,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "wound_care_q6_opt4": MessageLookupByLibrary.simpleMessage(
       "يعتمد على الموقف",
     ),
+    "yourscore": MessageLookupByLibrary.simpleMessage("نقاطك:"),
   };
 }

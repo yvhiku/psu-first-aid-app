@@ -145,25 +145,25 @@ class AllergicReactions extends StatelessWidget {
                 ),
               ),
 
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                // Link to a demonstration video or informational page
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: tPrimaryColor,
-                foregroundColor: Colors.white,
-                minimumSize: const Size(double.infinity, 50),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8.0),
-                ),
-                elevation: 4,
-              ),
-              child: Text(
-                s.tallergicReactionContent20,
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              ),
-            ),
+            // const SizedBox(height: 20),
+            // ElevatedButton(
+            //   onPressed: () {
+            //     // Link to a demonstration video or informational page
+            //   },
+            //   style: ElevatedButton.styleFrom(
+            //     backgroundColor: tPrimaryColor,
+            //     foregroundColor: Colors.white,
+            //     minimumSize: const Size(double.infinity, 50),
+            //     shape: RoundedRectangleBorder(
+            //       borderRadius: BorderRadius.circular(8.0),
+            //     ),
+            //     elevation: 4,
+            //   ),
+            //   child: Text(
+            //     s.tallergicReactionContent20,
+            //     style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+            //   ),
+            // ),
           ],
         ),
       ),

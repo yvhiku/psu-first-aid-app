@@ -1,6 +1,9 @@
 
 {
+   "quizcompleted" : "Quiz Completed!",
+   "yourscore" : "Your score:",
   "takeQuiz": "Take Quiz",
+  "questionCount" : "Question",
   "allergic_reactions_q1": "What is the first step when handling allergic reactions?",
   "allergic_reactions_q1_opt1": "Stay calm",
   "allergic_reactions_q1_opt2": "Call emergency",

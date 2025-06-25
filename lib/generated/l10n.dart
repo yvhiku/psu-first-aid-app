@@ -54,9 +54,29 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Quiz Completed!`
+  String get quizcompleted {
+    return Intl.message(
+      'Quiz Completed!',
+      name: 'quizcompleted',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your score:`
+  String get yourscore {
+    return Intl.message('Your score:', name: 'yourscore', desc: '', args: []);
+  }
+
   /// `Take Quiz`
   String get takeQuiz {
     return Intl.message('Take Quiz', name: 'takeQuiz', desc: '', args: []);
+  }
+
+  /// `Question`
+  String get questionCount {
+    return Intl.message('Question', name: 'questionCount', desc: '', args: []);
   }
 
   /// `What is the first step when handling allergic reactions?`

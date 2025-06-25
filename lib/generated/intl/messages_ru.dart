@@ -1682,6 +1682,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Зависит от ситуации",
     ),
     "profile": MessageLookupByLibrary.simpleMessage("Профиль"),
+    "quizcompleted": MessageLookupByLibrary.simpleMessage(
+      "Викторина завершена!",
+    ),
     "recoveryPositionHeading": MessageLookupByLibrary.simpleMessage(
       "Поза восстановления",
     ),
@@ -3004,5 +3007,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "wound_care_q6_opt4": MessageLookupByLibrary.simpleMessage(
       "Зависит от ситуации",
     ),
+    "yourscore": MessageLookupByLibrary.simpleMessage("Ваша оценка:"),
   };
 }
