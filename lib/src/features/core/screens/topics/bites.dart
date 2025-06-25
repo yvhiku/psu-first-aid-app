@@ -19,7 +19,7 @@ class Bites extends StatelessWidget {
       'title': s.bites,
       'image': tBitinigimg,
       'screen': const Bites(),
-      'type': 'Bites',
+      'type': 'bites',
     };
 
     return Scaffold(

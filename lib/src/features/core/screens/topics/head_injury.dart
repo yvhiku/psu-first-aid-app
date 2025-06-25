@@ -18,6 +18,7 @@ class HeadInjury extends StatelessWidget {
       'title': s.headInjuryTitle,
       'image': tHeadimg,
       'screen': const HeadInjury(),
+      'type': 'headinjury',
     };
 
     return Scaffold(

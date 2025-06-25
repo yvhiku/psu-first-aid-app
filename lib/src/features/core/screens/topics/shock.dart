@@ -18,6 +18,7 @@ class Shock extends StatelessWidget {
       'title': s.shockTitle,
       'image': tEpilepsyimg,
       'screen': const Shock(),
+      'type': 'shock',
     };
 
     return Scaffold(

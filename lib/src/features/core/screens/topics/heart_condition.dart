@@ -18,6 +18,7 @@ class HeartCondition extends StatelessWidget {
       'title': s.heartConditionTitle,
       'image': tHeartAttackimg,
       'screen': const HeartCondition(),
+      'type': 'heartcondition',
     };
 
     return Scaffold(

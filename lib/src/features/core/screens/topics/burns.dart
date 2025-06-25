@@ -18,7 +18,7 @@ class BurnScreen extends StatelessWidget {
       'title': s.burns,
       'image': tBurnimg,
       'screen': const BurnScreen(),
-      'type': 'Burns',
+      'type': 'burns',
     };
 
     return Scaffold(

@@ -1,5 +1,4 @@
 import 'package:first_aid_app/generated/l10n.dart';
-import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:first_aid_app/src/features/core/models/auto_quiz_data.dart';

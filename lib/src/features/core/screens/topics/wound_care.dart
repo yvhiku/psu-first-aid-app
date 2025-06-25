@@ -18,6 +18,7 @@ class WoundCare extends StatelessWidget {
       'title': s.woundCareTitle,
       'image': tBandAidimg,
       'screen': const WoundCare(),
+      'type': 'woundcare',
     };
 
     return Scaffold(

@@ -18,6 +18,7 @@ class ChokingScreen extends StatelessWidget {
       'title': s.tChoking,
       'image': tChokingimg,
       'screen': const ChokingScreen(),
+      'type': 'choking',
     };
 
     return Scaffold(

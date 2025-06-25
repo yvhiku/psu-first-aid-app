@@ -18,6 +18,7 @@ class DrugOverdoseScreen extends StatelessWidget {
       'title': s.drugOverdoseTitle,
       'image': tDrugOverDoseimg,
       'screen': const DrugOverdoseScreen(),
+      'type': 'drugoverdose',
     };
 
     return Scaffold(

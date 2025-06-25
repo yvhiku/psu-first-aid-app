@@ -18,6 +18,7 @@ class SpinalInjury extends StatelessWidget {
       'title': s.spinalTitle,
       'image': tSpinalInjuryimg,
       'screen': const SpinalInjury(),
+      'type': 'spinalinjury',
     };
 
     return Scaffold(

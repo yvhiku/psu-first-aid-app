@@ -1,9 +1,25 @@
-import 'package:first_aid_app/src/features/core/screens/topics/all_topic.dart';
+import 'package:first_aid_app/src/features/core/screens/topics/allergic_reactions.dart';
+import 'package:first_aid_app/src/features/core/screens/topics/assessing_injured_person.dart';
+import 'package:first_aid_app/src/features/core/screens/topics/asthma.dart';
+import 'package:first_aid_app/src/features/core/screens/topics/bites.dart';
 import 'package:first_aid_app/src/features/core/screens/topics/bleeding.dart';
 import 'package:first_aid_app/src/features/core/screens/topics/burns.dart';
 import 'package:first_aid_app/src/features/core/screens/topics/choking.dart';
 import 'package:first_aid_app/src/features/core/screens/topics/cpr.dart';
+import 'package:first_aid_app/src/features/core/screens/topics/diabetics.dart';
+import 'package:first_aid_app/src/features/core/screens/topics/drug_overdose.dart';
+import 'package:first_aid_app/src/features/core/screens/topics/eye_injury.dart';
+import 'package:first_aid_app/src/features/core/screens/topics/fractures.dart';
+import 'package:first_aid_app/src/features/core/screens/topics/head_injury.dart';
+import 'package:first_aid_app/src/features/core/screens/topics/heart_condition.dart';
 import 'package:first_aid_app/src/features/core/screens/topics/poisons.dart';
+import 'package:first_aid_app/src/features/core/screens/topics/recovery_pos.dart';
+import 'package:first_aid_app/src/features/core/screens/topics/seizures.dart';
+import 'package:first_aid_app/src/features/core/screens/topics/shock.dart';
+import 'package:first_aid_app/src/features/core/screens/topics/spinal_injury.dart';
+import 'package:first_aid_app/src/features/core/screens/topics/sprainsstrains.dart';
+import 'package:first_aid_app/src/features/core/screens/topics/stroke.dart';
+import 'package:first_aid_app/src/features/core/screens/topics/wound_care.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -181,21 +197,109 @@ class TopicController extends GetxController {
     }
   }
 
-  // Return screen widget for given topic type
-  Widget getScreenForTopic(Map<String, dynamic> topic) {
-    switch (topic['type']) {
-      case 'cpr':
-        return CprScreen();
-      case 'bleeding':
-        return Bleeding();
-      case 'burns':
-        return BurnScreen();
-      case 'choking':
-        return ChokingScreen();
-      case 'poisons':
-        return PoisonScreen();
-      default:
-        return AllTopicsScreen();
-    }
+ Widget getScreenForTopic(Map<String, dynamic> topic) {
+  // Debug: Print the topic data to check its structure
+  print("Topic Data: $topic");
+
+  // Use topic['title'] if 'type' is missing (fallback)
+  final topicType = (topic['type'] ?? topic['title'])
+      .toString()
+      .toLowerCase();
+
+  switch (topicType) {
+    case 'cpr':
+      return CprScreen();
+
+    case 'bleeding':
+    case 'bleed':
+      return Bleeding();
+
+    case 'burns':
+    case 'burn':
+      return BurnScreen();
+
+    case 'choking':
+      return ChokingScreen();
+
+    case 'poisons':
+    case 'poison':
+      return PoisonScreen();
+
+    case 'fractures':
+      return FracturesScreen();
+
+    case 'allergic_reactions':
+    case 'allergic reaction':
+    case 'allergicreactions':
+      return AllergicReactions();
+
+    case 'assessing_injured_person':
+    case 'assessing':
+      return AssessingInjuredPerson();
+
+    case 'asthma':
+      return Asthma();
+
+    case 'bites':
+    case 'bite':
+      return Bites();
+
+    case 'diabetics':
+    case 'diabetic':
+      return DiabeticsScreen();
+
+    case 'drug_overdose':
+    case 'drug overdose':
+    case 'drugoverdose':
+      return DrugOverdoseScreen();
+
+    case 'eye_injury':
+    case 'eye injury':
+    case 'eyeinjury':
+      return EyeInjuryScreen();
+
+    case 'head_injury':
+    case 'headinjury':
+      return HeadInjury();
+
+    case 'heart_condition':
+    case 'heartcondition':
+      return HeartCondition();
+
+    case 'seizures':
+    case 'seizure':
+      return Seizures();
+
+    case 'shock':
+      return Shock();
+
+    case 'spinal_injury':
+    case 'spinalinjury':
+      return SpinalInjury();
+
+    case 'sprainsstrains':
+    case 'sprains strains':
+    case 'sprain':
+    case 'strain':
+      return SprainsStrains();
+
+    case 'stroke':
+      return StrokeScreen();
+
+    case 'wound_care':
+    case 'woundcare':
+      return WoundCare();
+
+    case 'recovery_pos':
+    case 'recoverypos':
+      return RecoveryPos();
+
+    default:
+      return Scaffold(
+        appBar: AppBar(title: Text("Error")),
+        body: Center(child: Text("Topic not found: $topicType")),
+      );
   }
+}
+
 }

@@ -18,6 +18,7 @@ class DiabeticsScreen extends StatelessWidget {
       'title': s.diabeticsTitle,
       'image': tDiabeticsimg,
       'screen': const DiabeticsScreen(),
+      'type': 'diabetics',
     };
 
     return Scaffold(

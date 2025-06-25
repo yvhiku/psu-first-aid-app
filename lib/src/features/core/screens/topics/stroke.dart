@@ -18,6 +18,7 @@ class StrokeScreen extends StatelessWidget {
       'title': s.strokeTitle,
       'image': tStrotkeimg,
       'screen': const StrokeScreen(),
+      'type': 'stroke',
     };
 
     return Scaffold(

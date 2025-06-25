@@ -18,6 +18,7 @@ class Seizures extends StatelessWidget {
       'title': s.seizuresTitle,
       'image': tSeizureimg,
       'screen': const Seizures(),
+      'type': 'seizures',
     };
 
     return Scaffold(

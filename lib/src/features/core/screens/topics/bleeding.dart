@@ -19,7 +19,7 @@ class Bleeding extends StatelessWidget {
       'title': s.bleeding,
       'image': tWoundimg,
       'screen': const Bleeding(),
-      'type': 'Bleeding',
+      'type': 'bleeding',
     };
 
     return Scaffold(

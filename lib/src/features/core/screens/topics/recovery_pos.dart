@@ -18,6 +18,7 @@ class RecoveryPos extends StatelessWidget {
       'title': s.recoveryPositionTitle,
       'image': tRecoveryPosimg,
       'screen': const RecoveryPos(),
+      'type': 'recoverypos',
     };
 
     return Scaffold(

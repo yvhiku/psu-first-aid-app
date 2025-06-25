@@ -18,6 +18,7 @@ class SprainsStrains extends StatelessWidget {
       'title': s.sprainsStrainsTitle,
       'image': tSprainimg,
       'screen': const SprainsStrains(),
+      'type': 'sprainsstrains',
     };
 
     return Scaffold(

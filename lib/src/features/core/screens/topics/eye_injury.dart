@@ -19,6 +19,7 @@ class EyeInjuryScreen extends StatelessWidget {
       'title': s.eyeInjuryTitle,
       'image': tSoreEyesimg,
       'screen': const EyeInjuryScreen(),
+      'type': 'eyeinjury',
     };
 
     return Scaffold(

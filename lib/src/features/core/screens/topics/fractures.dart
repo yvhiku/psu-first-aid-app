@@ -50,6 +50,7 @@ class FracturesScreen extends StatelessWidget {
       'title': s.title,
       'image': tInjuryimg,
       'screen': const FracturesScreen(),
+      'type': 'fractures',
     };
 
     return Scaffold(

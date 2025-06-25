@@ -18,6 +18,7 @@ class PoisonScreen extends StatelessWidget {
       'title': s.poisonTitle,
       'image': tPoisonimg,
       'screen': const PoisonScreen(),
+      'type': 'poisons',
     };
 
     return Scaffold(
