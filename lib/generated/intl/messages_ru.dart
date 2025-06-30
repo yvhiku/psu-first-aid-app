@@ -1320,6 +1320,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "fractures_q6_opt4": MessageLookupByLibrary.simpleMessage(
       "Зависит от ситуации",
     ),
+    "guestProfileMessage": MessageLookupByLibrary.simpleMessage(
+      "Вы просматриваете как гость.\n Войдите, чтобы получить доступ к вашему профилю и настройкам.",
+    ),
     "headInjuryHeading": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при травме головы",
     ),
@@ -2034,6 +2037,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "sign4": MessageLookupByLibrary.simpleMessage(
       "- Трудности при движении конечностью",
+    ),
+    "signInRequiredMessage": MessageLookupByLibrary.simpleMessage(
+      "Вы должны войти, чтобы сохранять темы. Хотите войти сейчас?",
+    ),
+    "signInRequiredTitle": MessageLookupByLibrary.simpleMessage(
+      "Требуется вход",
     ),
     "signsHeading": MessageLookupByLibrary.simpleMessage("Признаки перелома:"),
     "spinalFirstAidHeading": MessageLookupByLibrary.simpleMessage(
@@ -3007,6 +3016,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "wound_care_q6_opt4": MessageLookupByLibrary.simpleMessage(
       "Зависит от ситуации",
     ),
+    "yes": MessageLookupByLibrary.simpleMessage("Да"),
     "yourscore": MessageLookupByLibrary.simpleMessage("Ваша оценка:"),
   };
 }

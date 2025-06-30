@@ -11,6 +11,16 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthProvider1 extends ChangeNotifier {
+  User? get _currentUser => FirebaseAuth.instance.currentUser;
+
+  /// True if the user is signed in _and_ not anonymous.
+  bool get isFullySignedIn =>
+      _currentUser != null && !_currentUser!.isAnonymous;
+
+  // Optionally, if you want a convenience for “guest”:
+  bool get isGuest =>
+      _currentUser != null && _currentUser!.isAnonymous;
+
   bool _isSignedIn = false;
   bool get isSignedIn => _isSignedIn;
   bool _isLoading = false;
@@ -21,6 +31,10 @@ class AuthProvider1 extends ChangeNotifier {
   String get uid => _uid ?? '';
   UserModel? _userModel;
   UserModel? get userModel => _userModel;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  // ignore: unused_field
+  User? _user;
+
 
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   final GoogleSignIn _googleSignIn = GoogleSignIn();
@@ -29,7 +43,19 @@ class AuthProvider1 extends ChangeNotifier {
 
   AuthProvider1() {
     _initialize();
+     _auth.authStateChanges().listen((user) {
+      _user = user;
+      _isLoading = false;
+      notifyListeners();
+
+      // If they’re a real user, fetch their profile from Firestore
+      if (user != null && !user.isAnonymous) {
+        _loadUserModel();
+      }
+    });
   }
+
+  
 
   Future<void> _initialize() async {
     try {
@@ -60,6 +86,8 @@ class AuthProvider1 extends ChangeNotifier {
       await getDataFromFirestore();
     }
   }
+
+  
 
   // saving topics to db
   Future<void> saveTopic(String title, String imageUrl, String type) async {
@@ -193,6 +221,27 @@ class AuthProvider1 extends ChangeNotifier {
       notifyListeners();
     }
   }
+
+// guest login
+  Future<void> signInAnonymously() async {
+  _isLoading = true;
+  notifyListeners();
+  try {
+    await _auth.signInAnonymously();
+    // mark that we have a session
+    await setSignIn();
+  } finally {
+    _isLoading = false;
+    notifyListeners();
+  }
+}
+
+
+  Future<void> _loadUserModel() async {
+    // load your UserModel from Firestore into _userModel, then:
+    notifyListeners();
+  }
+
 
   //signin with google
   Future<void> signInWithGoogle(

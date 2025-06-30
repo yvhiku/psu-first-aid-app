@@ -1096,6 +1096,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "fractures_q6_opt4": MessageLookupByLibrary.simpleMessage(
       "يعتمد على الموقف",
     ),
+    "guestProfileMessage": MessageLookupByLibrary.simpleMessage(
+      "أنت تتصفح كضيف.\nقم بتسجيل الدخول للوصول إلى ملفك الشخصي والإعدادات.",
+    ),
     "headInjuryHeading": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية لإصابات الرأس",
     ),
@@ -1706,6 +1709,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "sign3": MessageLookupByLibrary.simpleMessage("- تشوه أو وضع غير طبيعي"),
     "sign4": MessageLookupByLibrary.simpleMessage(
       "- صعوبة في تحريك الطرف المصاب",
+    ),
+    "signInRequiredMessage": MessageLookupByLibrary.simpleMessage(
+      "يجب تسجيل الدخول لحفظ المواضيع. هل ترغب في تسجيل الدخول الآن؟",
+    ),
+    "signInRequiredTitle": MessageLookupByLibrary.simpleMessage(
+      "تسجيل الدخول مطلوب",
     ),
     "signsHeading": MessageLookupByLibrary.simpleMessage("علامات الكسر:"),
     "spinalFirstAidHeading": MessageLookupByLibrary.simpleMessage(
@@ -2591,6 +2600,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "wound_care_q6_opt4": MessageLookupByLibrary.simpleMessage(
       "يعتمد على الموقف",
     ),
+    "yes": MessageLookupByLibrary.simpleMessage("نعم"),
     "yourscore": MessageLookupByLibrary.simpleMessage("نقاطك:"),
   };
 }

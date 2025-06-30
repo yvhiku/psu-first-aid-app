@@ -1242,6 +1242,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "fractures_q6_opt4": MessageLookupByLibrary.simpleMessage(
       "It depends on the situation",
     ),
+    "guestProfileMessage": MessageLookupByLibrary.simpleMessage(
+      "You’re browsing as a guest.\nSign in to access your profile and settings.",
+    ),
     "headInjuryHeading": MessageLookupByLibrary.simpleMessage(
       "Head Injury First Aid",
     ),
@@ -1935,6 +1938,12 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "sign4": MessageLookupByLibrary.simpleMessage(
       "- Difficulty moving the limb",
+    ),
+    "signInRequiredMessage": MessageLookupByLibrary.simpleMessage(
+      "You must be signed in to save topics. Would you like to sign in now?",
+    ),
+    "signInRequiredTitle": MessageLookupByLibrary.simpleMessage(
+      "Sign in required",
     ),
     "signsHeading": MessageLookupByLibrary.simpleMessage(
       "Signs of a Fracture:",
@@ -2856,6 +2865,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "wound_care_q6_opt4": MessageLookupByLibrary.simpleMessage(
       "It depends on the situation",
     ),
+    "yes": MessageLookupByLibrary.simpleMessage("Yes"),
     "yourscore": MessageLookupByLibrary.simpleMessage("Your score:"),
   };
 }

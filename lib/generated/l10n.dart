@@ -6999,6 +6999,41 @@ class S {
     return Intl.message('Logout', name: 'tLogout', desc: '', args: []);
   }
 
+  /// `Sign in required`
+  String get signInRequiredTitle {
+    return Intl.message(
+      'Sign in required',
+      name: 'signInRequiredTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You must be signed in to save topics. Would you like to sign in now?`
+  String get signInRequiredMessage {
+    return Intl.message(
+      'You must be signed in to save topics. Would you like to sign in now?',
+      name: 'signInRequiredMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You’re browsing as a guest.\nSign in to access your profile and settings.`
+  String get guestProfileMessage {
+    return Intl.message(
+      'You’re browsing as a guest.\nSign in to access your profile and settings.',
+      name: 'guestProfileMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Yes`
+  String get yes {
+    return Intl.message('Yes', name: 'yes', desc: '', args: []);
+  }
+
   /// `Edit Profile`
   String get tEditProfile {
     return Intl.message(

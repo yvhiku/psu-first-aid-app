@@ -1,13 +1,62 @@
+// lib/src/features/core/screens/topics/allergic_reactions.dart
+
 import 'package:first_aid_app/generated/l10n.dart';
+import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
+import 'package:first_aid_app/src/constants/sizes.dart';
+import 'package:first_aid_app/src/features/authentication/provider/auth_provider.dart';
+import 'package:first_aid_app/src/features/authentication/screens/login/login_screen.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:first_aid_app/src/features/core/models/auto_quiz_data.dart';
 import 'package:first_aid_app/src/features/core/screens/quizes/quiz.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:provider/provider.dart';
 
 class AllergicReactions extends StatelessWidget {
   const AllergicReactions({super.key});
+
+  void _promptSignIn(BuildContext context, S s) {
+    showDialog(
+      context: context,
+      builder: (_) => AlertDialog(
+        title: Text(s.signInRequiredTitle),
+        content: Text(s.signInRequiredMessage),
+        actions: [
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              foregroundColor: tWhiteColor,
+              backgroundColor: tPrimaryColor,
+              // Optional: match your rounded shape & padding
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+              ),
+              padding: EdgeInsets.symmetric(vertical: tButtonHeight),
+            ),
+            onPressed: () => Navigator.of(context).pop(),
+
+            child: Text(s.tcancel),
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              foregroundColor: tWhiteColor,
+              backgroundColor: tPrimaryColor,
+              // Optional: match your rounded shape & padding
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+              ),
+              padding: EdgeInsets.symmetric(vertical: tButtonHeight),
+            ),
+            onPressed: () {
+              Get.offAll(() => const LoginScreen());
+            },
+
+            child: Text(s.tLogin),
+          ),
+        ],
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,30 +74,36 @@ class AllergicReactions extends StatelessWidget {
       appBar: AppBar(
         title: Text(s.tAllergicReaction),
         actions: [
-          Obx(
-            () => IconButton(
+          /// This Obx will rebuild whenever topicController.isTopicSaved(...) changes
+          Obx(() {
+            final topicController = Get.find<TopicController>();
+            final saved = topicController.isTopicSaved(currentTopic);
+
+            // Grab the auth state; listen: false so Consumer won't rebuild here
+            final isSignedIn = Provider.of<AuthProvider1>(
+              context,
+              listen: false,
+            ).isFullySignedIn;
+
+            return IconButton(
               icon: Icon(
-                topicController.isTopicSaved(currentTopic)
-                    ? Icons.bookmark
-                    : Icons.bookmark_border,
-                color: topicController.isTopicSaved(currentTopic)
-                    ? Colors.red
-                    : null,
+                saved ? Icons.bookmark : Icons.bookmark_border,
+                color: saved ? Colors.red : null,
               ),
-              onPressed: () {
-                topicController.toggleTopicSave(currentTopic);
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text(
-                      topicController.isTopicSaved(currentTopic)
-                          ? s.addedToSavedTopicsText
-                          : s.tremovedTopic,
-                    ),
-                  ),
-                );
-              },
-            ),
-          ),
+              onPressed: isSignedIn
+                  ? () {
+                      topicController.toggleTopicSave(currentTopic);
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text(
+                            saved ? s.tremovedTopic : s.addedToSavedTopicsText,
+                          ),
+                        ),
+                      );
+                    }
+                  : () => _promptSignIn(context, s),
+            );
+          }),
         ],
       ),
       body: SingleChildScrollView(
@@ -60,18 +115,21 @@ class AllergicReactions extends StatelessWidget {
             const SizedBox(height: 20),
             Text(
               s.tallergicReactionFirstAid,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
                 color: Colors.red,
               ),
             ),
             const SizedBox(height: 10),
-            Text(s.tallergicReactionContent1, style: TextStyle(fontSize: 16)),
+            Text(
+              s.tallergicReactionContent1,
+              style: const TextStyle(fontSize: 16),
+            ),
             const Divider(height: 30),
             Text(
               s.tallergicReactionContent2,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
             _buildStep(
@@ -107,7 +165,7 @@ class AllergicReactions extends StatelessWidget {
             const Divider(height: 30),
             Text(
               s.tallergicReactionContent15,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
             _buildBulletPoint(s.tallergicReactionContent16),
@@ -140,29 +198,12 @@ class AllergicReactions extends StatelessWidget {
                 ),
                 child: Text(
                   s.takeQuiz,
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
-
-            // const SizedBox(height: 20),
-            // ElevatedButton(
-            //   onPressed: () {
-            //     // Link to a demonstration video or informational page
-            //   },
-            //   style: ElevatedButton.styleFrom(
-            //     backgroundColor: tPrimaryColor,
-            //     foregroundColor: Colors.white,
-            //     minimumSize: const Size(double.infinity, 50),
-            //     shape: RoundedRectangleBorder(
-            //       borderRadius: BorderRadius.circular(8.0),
-            //     ),
-            //     elevation: 4,
-            //   ),
-            //   child: Text(
-            //     s.tallergicReactionContent20,
-            //     style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-            //   ),
-            // ),
           ],
         ),
       ),

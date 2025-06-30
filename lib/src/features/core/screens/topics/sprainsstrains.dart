@@ -1,13 +1,58 @@
 import 'package:first_aid_app/generated/l10n.dart';
+import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
+import 'package:first_aid_app/src/constants/sizes.dart';
+import 'package:first_aid_app/src/features/authentication/provider/auth_provider.dart';
+import 'package:first_aid_app/src/features/authentication/screens/login/login_screen.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
 import 'package:first_aid_app/src/features/core/models/auto_quiz_data.dart';
 import 'package:first_aid_app/src/features/core/screens/quizes/quiz.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:provider/provider.dart';
 
 class SprainsStrains extends StatelessWidget {
   const SprainsStrains({super.key});
+  void _promptSignIn(BuildContext context, S s) {
+    showDialog(
+      context: context,
+      builder: (_) => AlertDialog(
+        title: Text(s.signInRequiredTitle),
+        content: Text(s.signInRequiredMessage),
+        actions: [
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+    foregroundColor: tWhiteColor,
+    backgroundColor: tPrimaryColor,
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(Radius.circular(20)),
+    ),
+    padding: EdgeInsets.symmetric(vertical: tButtonHeight),
+  ),
+            onPressed: () => Navigator.of(context).pop(),
+
+            child: Text(s.tcancel),
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+    foregroundColor: tWhiteColor,
+    backgroundColor: tPrimaryColor,
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(Radius.circular(20)),
+    ),
+    padding: EdgeInsets.symmetric(vertical: tButtonHeight),
+  ),
+            onPressed: () {
+              Get.offAll(() => const LoginScreen());
+            },
+
+            child: Text(s.tLogin),
+          ),
+        ],
+      ),
+    );
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -25,32 +70,39 @@ class SprainsStrains extends StatelessWidget {
       appBar: AppBar(
         title:  Text(s.sprainsStrainsTitle),
         actions: [
-          Obx(
-            () => IconButton(
-              icon: Icon(
-                topicController.isTopicSaved(currentTopic)
-                    ? Icons.bookmark
-                    : Icons.bookmark_border,
-                color: topicController.isTopicSaved(currentTopic)
-                    ? Colors.red
-                    : null,
-              ),
-              onPressed: () {
-                topicController.toggleTopicSave(currentTopic);
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text(
-                      topicController.isTopicSaved(currentTopic)
-                          ? s.addedToSavedTopicsText
-                          : s.tremovedTopic
-                    ),
+    /// This Obx will rebuild whenever topicController.isTopicSaved(...) changes
+    Obx(() {
+      final topicController = Get.find<TopicController>();
+      final saved = topicController.isTopicSaved(currentTopic);
+
+      // Grab the auth state; listen: false so Consumer won't rebuild here
+      final isSignedIn = Provider.of<AuthProvider1>(context, listen: false)
+          .isFullySignedIn;
+
+      return IconButton(
+        icon: Icon(
+          saved ? Icons.bookmark : Icons.bookmark_border,
+          color: saved ? Colors.red : null,
+        ),
+        onPressed: isSignedIn
+          ? () {
+              topicController.toggleTopicSave(currentTopic);
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(
+                    saved
+                      ? s.tremovedTopic
+                      : s.addedToSavedTopicsText,
                   ),
-                );
-              },
-            ),
-          ),
-        ],
-      ),
+                ),
+              );
+            }
+          : () => _promptSignIn(context, s),
+      );
+    }),
+  ],
+),
+
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(

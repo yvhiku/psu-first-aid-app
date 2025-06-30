@@ -1,5 +1,9 @@
   {
   "@@locale": "ar",
+  "signInRequiredTitle": "تسجيل الدخول مطلوب",
+  "signInRequiredMessage": "يجب تسجيل الدخول لحفظ المواضيع. هل ترغب في تسجيل الدخول الآن؟",
+  "yes": "نعم",
+  "guestProfileMessage": "أنت تتصفح كضيف.\nقم بتسجيل الدخول للوصول إلى ملفك الشخصي والإعدادات.",
   "quizcompleted" : "تم الانتهاء من الاختبار!",
    "yourscore" : "نقاطك:",
   "takeQuiz": "ابدأ الاختبار",

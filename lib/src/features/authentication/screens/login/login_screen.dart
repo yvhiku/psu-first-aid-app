@@ -143,6 +143,43 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ],
                     ),
+
+                    SizedBox(height: 20),
+                    SizedBox(
+                      width: double.infinity,
+                      child: OutlinedButton(
+                        style: OutlinedButton.styleFrom(
+                          elevation: 0,
+                          shape: const RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(20)),
+                          ),
+                          foregroundColor: tWhiteColor,
+                          backgroundColor: tPrimaryColor,
+                          side: BorderSide(color: tSecondaryColor),
+                          padding: EdgeInsets.symmetric(
+                            vertical: tButtonHeight,
+                          ),
+                        ),
+                        onPressed: () async {
+                          setState(() => _isLoading = true);
+
+                          final ap = Provider.of<AuthProvider1>(
+                            context,
+                            listen: false,
+                          );
+                          await ap.signInAnonymously();
+
+                          setState(() => _isLoading = false);
+
+                          Get.offAll(() => const NavBar());
+                        },
+                        child: Text(
+                          'CONTINUE AS GUEST',
+                          style: const TextStyle(letterSpacing: 1.2),
+                        ),
+                      ),
+                    ),
+
                     const SizedBox(height: 30),
                     Padding(
                       padding: const EdgeInsets.only(top: 20.0),
