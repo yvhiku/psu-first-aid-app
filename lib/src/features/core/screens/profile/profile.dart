@@ -205,11 +205,11 @@ class ProfileScreen extends StatelessWidget {
                         title: Text(
                           s.tLogout,
                         ), // or a separate “Confirm Logout” string
-                        content: Text('Are you sure you want to log out?'),
+                        content: Text(s.areyousureyouwanttologout),
                         actions: [
                           TextButton(
                             onPressed: () => Navigator.of(context).pop(),
-                            child: Text(s.tcancel), // e.g. “Cancel”
+                            child: Text(s.tcancel, style: TextStyle(color: Colors.red),), // e.g. “Cancel”
                           ),
                           TextButton(
                             onPressed: () {
@@ -219,7 +219,7 @@ class ProfileScreen extends StatelessWidget {
                               );
                             },
                             child: Text(
-                              s.yes,
+                              s.yes, style: TextStyle(color: Colors.red),
                             ), // or s.yes if you have it localized
                           ),
                         ],

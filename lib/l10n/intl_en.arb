@@ -749,7 +749,7 @@
     "tAllTopics" : "All Topics",
     "tLogout" : "Logout",
 
-
+   "areyousureyouwanttologout" : "Are you sure you want to log out?",
    "signInRequiredTitle" : "Sign in required",
    "signInRequiredMessage" : "You must be signed in to save topics. Would you like to sign in now?",
    "guestProfileMessage" : "You’re browsing as a guest.\nSign in to access your profile and settings.",

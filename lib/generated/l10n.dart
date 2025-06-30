@@ -6999,6 +6999,16 @@ class S {
     return Intl.message('Logout', name: 'tLogout', desc: '', args: []);
   }
 
+  /// `Are you sure you want to log out?`
+  String get areyousureyouwanttologout {
+    return Intl.message(
+      'Are you sure you want to log out?',
+      name: 'areyousureyouwanttologout',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Sign in required`
   String get signInRequiredTitle {
     return Intl.message(

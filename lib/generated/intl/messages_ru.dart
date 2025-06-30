@@ -120,6 +120,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "allergic_reactions_q6_opt4": MessageLookupByLibrary.simpleMessage(
       "Зависит от ситуации",
     ),
+    "areyousureyouwanttologout": MessageLookupByLibrary.simpleMessage(
+      "Вы уверены, что хотите выйти?",
+    ),
     "assess_q1": MessageLookupByLibrary.simpleMessage(
       "Какой первый шаг при оказании помощи при оценки пострадавшего?",
     ),
