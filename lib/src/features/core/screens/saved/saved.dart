@@ -6,25 +6,27 @@ import 'package:first_aid_app/src/features/core/controllers/widgets/navbar.dart'
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+// Screen to display the user's saved topics (local + Firestore sync)
 class SavedScreen extends StatelessWidget {
   const SavedScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final TopicController topicController = Get.find();
-    final NavigationController navigationController = Get.find();
+    final TopicController topicController = Get.find();          // for managing saved topics
+    final NavigationController navigationController = Get.find(); // for switching bottom navbar
     final height = MediaQuery.of(context).size.height;
 
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: tPrimaryColor),
-          onPressed: () => navigationController.selectedIndex.value = 0,
+          onPressed: () => navigationController.selectedIndex.value = 0, // return to home
         ),
         title: Image.asset(tLogo, height: height * 0.05),
         centerTitle: true,
         elevation: 0,
         actions: [
+          // Menu to clear all topics
           PopupMenuButton<String>(
             icon: const Icon(Icons.more_vert, color: tPrimaryColor),
             onSelected: (value) async {
@@ -64,6 +66,7 @@ class SavedScreen extends StatelessWidget {
         ],
       ),
       body: Obx(() {
+        // If no saved topics, show empty state
         if (topicController.savedTopics.isEmpty) {
           return Center(
             child: Column(
@@ -78,7 +81,7 @@ class SavedScreen extends StatelessWidget {
                 const SizedBox(height: 10),
                 TextButton(
                   onPressed: () {
-                    navigationController.selectedIndex.value = 1;
+                    navigationController.selectedIndex.value = 1; // go to topics tab
                   },
                   child: Text(
                     S.of(context).tbrowseTopics,
@@ -90,6 +93,7 @@ class SavedScreen extends StatelessWidget {
           );
         }
 
+        // Otherwise show list of saved topics
         return Column(
           children: [
             Padding(
@@ -109,6 +113,7 @@ class SavedScreen extends StatelessWidget {
                 itemCount: topicController.savedTopics.length,
                 itemBuilder: (context, index) {
                   final topic = topicController.savedTopics[index];
+
                   return Dismissible(
                     key: Key(topic['title']),
                     background: Container(
@@ -153,6 +158,7 @@ class SavedScreen extends StatelessWidget {
                         ),
                       );
                     },
+
                     child: Card(
                       elevation: 2,
                       margin: const EdgeInsets.only(bottom: 16),
@@ -194,9 +200,8 @@ class SavedScreen extends StatelessWidget {
                           },
                         ),
                         onTap: () {
-                          Get.to(
-                            () => topicController.getScreenForTopic(topic),
-                          );
+                          // Open the appropriate topic screen from controller mapping
+                          Get.to(() => topicController.getScreenForTopic(topic));
                         },
                       ),
                     ),

@@ -1,5 +1,3 @@
-// lib/src/features/core/screens/topics/allergic_reactions.dart
-
 import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/constants/colors.dart';
 import 'package:first_aid_app/src/constants/image_strings.dart';
@@ -16,6 +14,7 @@ import 'package:provider/provider.dart';
 class AllergicReactions extends StatelessWidget {
   const AllergicReactions({super.key});
 
+  /// Show dialog prompting user to sign in
   void _promptSignIn(BuildContext context, S s) {
     showDialog(
       context: context,
@@ -27,21 +26,18 @@ class AllergicReactions extends StatelessWidget {
             style: ElevatedButton.styleFrom(
               foregroundColor: tWhiteColor,
               backgroundColor: tPrimaryColor,
-              // Optional: match your rounded shape & padding
               shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(20)),
               ),
               padding: EdgeInsets.symmetric(vertical: tButtonHeight),
             ),
             onPressed: () => Navigator.of(context).pop(),
-
             child: Text(s.tcancel),
           ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               foregroundColor: tWhiteColor,
               backgroundColor: tPrimaryColor,
-              // Optional: match your rounded shape & padding
               shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(Radius.circular(20)),
               ),
@@ -50,7 +46,6 @@ class AllergicReactions extends StatelessWidget {
             onPressed: () {
               Get.offAll(() => const LoginScreen());
             },
-
             child: Text(s.tLogin),
           ),
         ],
@@ -63,6 +58,8 @@ class AllergicReactions extends StatelessWidget {
     final quizData = generateLocalizedQuizData(S.of(context));
     final TopicController topicController = Get.find();
     final s = S.of(context);
+
+    // Current topic object to use for saved toggle
     final currentTopic = {
       'title': s.tAllergicReaction,
       'image': tDustimg,
@@ -74,12 +71,11 @@ class AllergicReactions extends StatelessWidget {
       appBar: AppBar(
         title: Text(s.tAllergicReaction),
         actions: [
-          /// This Obx will rebuild whenever topicController.isTopicSaved(...) changes
+          /// The bookmark toggle (uses Obx to update automatically)
           Obx(() {
-            final topicController = Get.find<TopicController>();
             final saved = topicController.isTopicSaved(currentTopic);
 
-            // Grab the auth state; listen: false so Consumer won't rebuild here
+            // Check sign-in state from Provider
             final isSignedIn = Provider.of<AuthProvider1>(
               context,
               listen: false,
@@ -127,11 +123,14 @@ class AllergicReactions extends StatelessWidget {
               style: const TextStyle(fontSize: 16),
             ),
             const Divider(height: 30),
+
             Text(
               s.tallergicReactionContent2,
               style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
+
+            // numbered steps
             _buildStep(
               number: '1',
               title: s.tallergicReactionContent3,
@@ -163,17 +162,21 @@ class AllergicReactions extends StatelessWidget {
               description: s.tallergicReactionContent14,
             ),
             const Divider(height: 30),
+
             Text(
               s.tallergicReactionContent15,
               style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
+
+            // bullet points
             _buildBulletPoint(s.tallergicReactionContent16),
             _buildBulletPoint(s.tallergicReactionContent17),
             _buildBulletPoint(s.tallergicReactionContent18),
             _buildBulletPoint(s.tallergicReactionContent19),
             const SizedBox(height: 20),
 
+            // optional quiz button
             if (quizData['Allergic Reactions'] != null &&
                 quizData['Allergic Reactions']!.isNotEmpty)
               ElevatedButton(
@@ -210,6 +213,7 @@ class AllergicReactions extends StatelessWidget {
     );
   }
 
+  /// numbered step builder
   Widget _buildStep({
     required String number,
     required String title,
@@ -258,6 +262,7 @@ class AllergicReactions extends StatelessWidget {
     );
   }
 
+  /// bullet point builder
   Widget _buildBulletPoint(String text) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4.0),

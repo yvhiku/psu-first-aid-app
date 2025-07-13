@@ -1,8 +1,8 @@
-// question_model.dart
+// Simple data model to represent a quiz question
 class Question {
-  final String question;
-  final List<String> options;
-  final int correctIndex;
+  final String question;       // The question text
+  final List<String> options;  // List of possible answer options
+  final int correctIndex;      // The index in 'options' that is correct
 
   Question({
     required this.question,
@@ -10,4 +10,3 @@ class Question {
     required this.correctIndex,
   });
 }
-

@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+// Screen to allow user to pick their preferred language on first launch
 class LanguageSelectionScreen extends StatefulWidget {
   const LanguageSelectionScreen({super.key});
 
@@ -14,8 +15,9 @@ class LanguageSelectionScreen extends StatefulWidget {
 }
 
 class _LanguageSelectionScreenState extends State<LanguageSelectionScreen> {
-  String? _selectedLanguage;
+  String? _selectedLanguage; // Holds selected language code (e.g. 'en', 'ar', 'ru')
 
+  // List of supported languages, each with its code, name, and flag emoji
   final List<Map<String, String>> languages = [
     {'code': 'en', 'name': 'English', 'flag': '🇬🇧'},
     {'code': 'ar', 'name': 'العربية', 'flag': '🇸🇦'},
@@ -31,20 +33,23 @@ class _LanguageSelectionScreenState extends State<LanguageSelectionScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              // Screen title
               const Text(
                 'Select Your Language',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 30),
+
+              // Map each language option to a ListTile with radio button
               ...languages.map((language) {
                 return Padding(
                   padding: const EdgeInsets.symmetric(vertical: 8.0),
                   child: ListTile(
                     title: Row(
                       children: [
-                        Text(language['flag']!),
+                        Text(language['flag']!), // Show flag
                         const SizedBox(width: 10),
-                        Text(language['name']!),
+                        Text(language['name']!), // Show language name
                       ],
                     ),
                     leading: Radio<String>(
@@ -65,19 +70,23 @@ class _LanguageSelectionScreenState extends State<LanguageSelectionScreen> {
                 );
               }),
               const SizedBox(height: 30),
+
+              // Continue button
               ElevatedButton(
                 onPressed: _selectedLanguage == null
-                    ? null
+                    ? null // Disable if no language is selected
                     : () async {
+                        // Save selected language in SharedPreferences
                         final prefs = await SharedPreferences.getInstance();
                         await prefs.setString(
-                          S.of(context).selectLanguage,
+                          S.of(context).selectLanguage, // usually would be 'language'
                           _selectedLanguage!,
                         );
 
-                        // Restart app with new locale
+                        // Tell GetX to update the locale immediately
                         Get.updateLocale(Locale(_selectedLanguage!));
 
+                        // Navigate to welcome screen replacing this screen
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(

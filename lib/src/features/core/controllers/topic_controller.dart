@@ -29,8 +29,10 @@ import 'dart:convert';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+// Controller using GetX to manage saved first aid topics,
+// sync them locally and with Firestore, and provide routing.
 class TopicController extends GetxController {
-  final savedTopics = <Map<String, dynamic>>[].obs;
+  final savedTopics = <Map<String, dynamic>>[].obs; // Observable list
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
@@ -39,21 +41,18 @@ class TopicController extends GetxController {
   void onInit() {
     super.onInit();
 
-    // Load saved topics locally first
+    // First load topics locally from shared preferences
     loadSavedTopics();
 
-    // Listen for auth changes to sync with Firestore
+    // Then listen for user auth changes to load from Firestore if logged in
     _auth.authStateChanges().listen((user) {
       if (user != null) {
-        // Load topics from Firestore, then overwrite local savedTopics
         loadSavedTopicsFromFirestore();
-      } else {
-        // If user logs out, just keep local saved topics (or clear if you want)
       }
     });
   }
 
-  // Local: Load saved topics from SharedPreferences
+  // Load saved topics from SharedPreferences (local storage)
   Future<void> loadSavedTopics() async {
     try {
       final prefs = await SharedPreferences.getInstance();
@@ -69,7 +68,7 @@ class TopicController extends GetxController {
     }
   }
 
-  // Local: Save savedTopics to SharedPreferences
+  // Save the observable list to SharedPreferences
   Future<void> _saveTopicsToStorage() async {
     try {
       final prefs = await SharedPreferences.getInstance();
@@ -79,7 +78,7 @@ class TopicController extends GetxController {
     }
   }
 
-  // Firestore: Load saved topics from Firestore for the current user
+  // Load topics saved in Firestore for the current user
   Future<void> loadSavedTopicsFromFirestore() async {
     try {
       final user = _auth.currentUser;
@@ -96,7 +95,6 @@ class TopicController extends GetxController {
           .cast<Map<String, dynamic>>()
           .toList();
 
-      // Update the observable list and save locally too
       savedTopics.assignAll(topicsFromFirestore);
       await _saveTopicsToStorage();
     } catch (e) {
@@ -104,7 +102,7 @@ class TopicController extends GetxController {
     }
   }
 
-  // Add a topic to saved list both locally and Firestore
+  // Add a topic to the saved list locally + Firestore
   Future<void> addTopic(Map<String, dynamic> topic) async {
     if (!isTopicSaved(topic)) {
       final savedTopic = {
@@ -114,11 +112,8 @@ class TopicController extends GetxController {
       };
 
       savedTopics.add(savedTopic);
-
-      // Save locally
       await _saveTopicsToStorage();
 
-      // Save remotely if logged in
       final user = _auth.currentUser;
       if (user != null) {
         try {
@@ -126,7 +121,7 @@ class TopicController extends GetxController {
               .collection('users')
               .doc(user.uid)
               .collection('savedTopics')
-              .doc(savedTopic['title']) // Use title as doc id
+              .doc(savedTopic['title'])
               .set(savedTopic);
         } catch (e) {
           print('Error saving topic to Firestore: $e');
@@ -135,14 +130,11 @@ class TopicController extends GetxController {
     }
   }
 
-  // Remove a topic both locally and remotely
+  // Remove topic from local and Firestore
   Future<void> removeTopic(Map<String, dynamic> topic) async {
     savedTopics.removeWhere((t) => t['title'] == topic['title']);
-
-    // Save locally
     await _saveTopicsToStorage();
 
-    // Remove from Firestore if logged in
     final user = _auth.currentUser;
     if (user != null) {
       try {
@@ -158,10 +150,12 @@ class TopicController extends GetxController {
     }
   }
 
+  // Check if a topic is already saved
   bool isTopicSaved(Map<String, dynamic> topic) {
     return savedTopics.any((t) => t['title'] == topic['title']);
   }
 
+  // Toggle save/remove for a topic
   Future<void> toggleTopicSave(Map<String, dynamic> topic) async {
     if (isTopicSaved(topic)) {
       await removeTopic(topic);
@@ -170,7 +164,7 @@ class TopicController extends GetxController {
     }
   }
 
-  // Clear all saved topics locally and remotely
+  // Clear all saved topics locally + remotely
   Future<void> clearAllTopics() async {
     savedTopics.clear();
     final prefs = await SharedPreferences.getInstance();
@@ -197,109 +191,83 @@ class TopicController extends GetxController {
     }
   }
 
- Widget getScreenForTopic(Map<String, dynamic> topic) {
-  // Debug: Print the topic data to check its structure
-  print("Topic Data: $topic");
+  // Given a saved topic map, return the matching screen widget
+  Widget getScreenForTopic(Map<String, dynamic> topic) {
+    print("Topic Data: $topic"); // Debug print
 
-  // Use topic['title'] if 'type' is missing (fallback)
-  final topicType = (topic['type'] ?? topic['title'])
-      .toString()
-      .toLowerCase();
+    final topicType = (topic['type'] ?? topic['title']).toString().toLowerCase();
 
-  switch (topicType) {
-    case 'cpr':
-      return CprScreen();
-
-    case 'bleeding':
-    case 'bleed':
-      return Bleeding();
-
-    case 'burns':
-    case 'burn':
-      return BurnScreen();
-
-    case 'choking':
-      return ChokingScreen();
-
-    case 'poisons':
-    case 'poison':
-      return PoisonScreen();
-
-    case 'fractures':
-      return FracturesScreen();
-
-    case 'allergic_reactions':
-    case 'allergic reaction':
-    case 'allergicreactions':
-      return AllergicReactions();
-
-    case 'assessing_injured_person':
-    case 'assessing':
-      return AssessingInjuredPerson();
-
-    case 'asthma':
-      return Asthma();
-
-    case 'bites':
-    case 'bite':
-      return Bites();
-
-    case 'diabetics':
-    case 'diabetic':
-      return DiabeticsScreen();
-
-    case 'drug_overdose':
-    case 'drug overdose':
-    case 'drugoverdose':
-      return DrugOverdoseScreen();
-
-    case 'eye_injury':
-    case 'eye injury':
-    case 'eyeinjury':
-      return EyeInjuryScreen();
-
-    case 'head_injury':
-    case 'headinjury':
-      return HeadInjury();
-
-    case 'heart_condition':
-    case 'heartcondition':
-      return HeartCondition();
-
-    case 'seizures':
-    case 'seizure':
-      return Seizures();
-
-    case 'shock':
-      return Shock();
-
-    case 'spinal_injury':
-    case 'spinalinjury':
-      return SpinalInjury();
-
-    case 'sprainsstrains':
-    case 'sprains strains':
-    case 'sprain':
-    case 'strain':
-      return SprainsStrains();
-
-    case 'stroke':
-      return StrokeScreen();
-
-    case 'wound_care':
-    case 'woundcare':
-      return WoundCare();
-
-    case 'recovery_pos':
-    case 'recoverypos':
-      return RecoveryPos();
-
-    default:
-      return Scaffold(
-        appBar: AppBar(title: Text("Error")),
-        body: Center(child: Text("Topic not found: $topicType")),
-      );
+    switch (topicType) {
+      case 'cpr':
+        return CprScreen();
+      case 'bleeding':
+      case 'bleed':
+        return Bleeding();
+      case 'burns':
+      case 'burn':
+        return BurnScreen();
+      case 'choking':
+        return ChokingScreen();
+      case 'poisons':
+      case 'poison':
+        return PoisonScreen();
+      case 'fractures':
+        return FracturesScreen();
+      case 'allergic_reactions':
+      case 'allergic reaction':
+      case 'allergicreactions':
+        return AllergicReactions();
+      case 'assessing_injured_person':
+      case 'assessing':
+        return AssessingInjuredPerson();
+      case 'asthma':
+        return Asthma();
+      case 'bites':
+      case 'bite':
+        return Bites();
+      case 'diabetics':
+      case 'diabetic':
+        return DiabeticsScreen();
+      case 'drug_overdose':
+      case 'drug overdose':
+      case 'drugoverdose':
+        return DrugOverdoseScreen();
+      case 'eye_injury':
+      case 'eye injury':
+      case 'eyeinjury':
+        return EyeInjuryScreen();
+      case 'head_injury':
+      case 'headinjury':
+        return HeadInjury();
+      case 'heart_condition':
+      case 'heartcondition':
+        return HeartCondition();
+      case 'seizures':
+      case 'seizure':
+        return Seizures();
+      case 'shock':
+        return Shock();
+      case 'spinal_injury':
+      case 'spinalinjury':
+        return SpinalInjury();
+      case 'sprainsstrains':
+      case 'sprains strains':
+      case 'sprain':
+      case 'strain':
+        return SprainsStrains();
+      case 'stroke':
+        return StrokeScreen();
+      case 'wound_care':
+      case 'woundcare':
+        return WoundCare();
+      case 'recovery_pos':
+      case 'recoverypos':
+        return RecoveryPos();
+      default:
+        return Scaffold(
+          appBar: AppBar(title: Text("Error")),
+          body: Center(child: Text("Topic not found: $topicType")),
+        );
+    }
   }
-}
-
 }

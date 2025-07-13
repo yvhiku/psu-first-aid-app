@@ -33,27 +33,15 @@ class AllTopicsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
+
     return Scaffold(
       appBar: AppBar(
-        // leading: const Icon(
-        //   Icons.menu,
-        //   color: Color.fromARGB(255, 139, 47, 49),
-        // ),
         title: IconButton(
           onPressed: () {},
           icon: Image(image: AssetImage(tLogo), height: height * 0.05),
         ),
         centerTitle: true,
         elevation: 0,
-        actions: [
-          Container(
-            margin: const EdgeInsets.only(right: 20, top: 7),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: tCardBgColor,
-            ),
-          ),
-        ],
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -73,69 +61,47 @@ class AllTopicsScreen extends StatelessWidget {
     );
   }
 
+  // -----------------------
+  // FIRST ROW OF BIG BUTTONS
+  // -----------------------
   Widget _buildFirstButtonRow(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         _buildButton(context, tCprimg, S.of(context).tCpr, CprScreen()),
         const SizedBox(width: 15.0),
-        _buildButton(
-          context,
-          tWoundimg,
-          S.of(context).bleeding,
-          const Bleeding(),
-        ),
+        _buildButton(context, tWoundimg, S.of(context).bleeding, const Bleeding()),
         const SizedBox(width: 15.0),
-        _buildButton(
-          context,
-          tBurnimg,
-          S.of(context).burns,
-          const BurnScreen(),
-        ),
+        _buildButton(context, tBurnimg, S.of(context).burns, const BurnScreen()),
       ],
     );
   }
 
+  // ------------------------
+  // SECOND ROW OF BIG BUTTONS
+  // ------------------------
   Widget _buildSecondButtonRow(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        _buildButton(
-          context,
-          tChokingimg,
-          S.of(context).tChoking,
-          const ChokingScreen(),
-        ),
+        _buildButton(context, tChokingimg, S.of(context).tChoking, const ChokingScreen()),
         const SizedBox(width: 15.0),
-        _buildButton(
-          context,
-          tPoisonimg,
-          S.of(context).tPoisons,
-          const PoisonScreen(),
-        ),
+        _buildButton(context, tPoisonimg, S.of(context).tPoisons, const PoisonScreen()),
         const SizedBox(width: 15.0),
         _buildButton(context, tBitinigimg, S.of(context).bites, const Bites()),
       ],
     );
   }
 
-  Widget _buildButton(
-    BuildContext context,
-    String image,
-    String text,
-    Widget screen,
-  ) {
+  // ---------------------------
+  // INDIVIDUAL LARGE BUTTON TILE
+  // ---------------------------
+  Widget _buildButton(BuildContext context, String image, String text, Widget screen) {
     return ConstrainedBox(
-      constraints: const BoxConstraints(
-        minWidth: 100,
-        maxWidth: 110,
-        minHeight: 100,
-      ),
+      constraints: const BoxConstraints(minWidth: 100, maxWidth: 110, minHeight: 100),
       child: OutlinedButton(
         style: OutlinedButton.styleFrom(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15.0),
-          ),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
           foregroundColor: tWhiteColor,
           backgroundColor: tPrimaryColor,
           side: BorderSide(color: tSecondaryColor),
@@ -145,10 +111,7 @@ class AllTopicsScreen extends StatelessWidget {
           if (screen is AllTopicsScreen) {
             Get.find<NavigationController>().selectedIndex.value = 1;
           } else {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => screen),
-            );
+            Navigator.push(context, MaterialPageRoute(builder: (context) => screen));
           }
         },
         child: Column(
@@ -161,7 +124,7 @@ class AllTopicsScreen extends StatelessWidget {
               textAlign: TextAlign.center,
               softWrap: true,
               style: const TextStyle(
-                fontSize: 13, // Slightly smaller for better fit
+                fontSize: 13,
                 fontWeight: FontWeight.w700,
                 fontFamily: "Poppins",
               ),
@@ -172,88 +135,27 @@ class AllTopicsScreen extends StatelessWidget {
     );
   }
 
+  // -----------------------------------
+  // SCROLLABLE GRID FOR REMAINING TOPICS
+  // -----------------------------------
   Widget _buildScrollableTopicsGrid(BuildContext context) {
     final List<Map<String, dynamic>> topics = [
-      {
-        'image': tInjuryimg,
-        'title': S.of(context).tFractures,
-        'screen': const FracturesScreen(),
-      },
-      {
-        'image': tAllergicReactionimg,
-        'title': S.of(context).tAllergicReaction,
-        'screen': const AllergicReactions(),
-      },
-      {
-        'image': tAsthmaimg,
-        'title': S.of(context).asthma,
-        'screen': const Asthma(),
-      },
-      {
-        'image': tDiabeticsimg,
-        'title': S.of(context).tDiabetics,
-        'screen': const DiabeticsScreen(),
-      },
-      {
-        'image': tDrugOverDoseimg,
-        'title': S.of(context).tDrugOverdose,
-        'screen': const DrugOverdoseScreen(),
-      },
-      {
-        'image': tSoreEyesimg,
-        'title': S.of(context).tEyeInjury,
-        'screen': const EyeInjuryScreen(),
-      },
-      {
-        'image': tHeadimg,
-        'title': S.of(context).tHeadInjury,
-        'screen': const HeadInjury(),
-      },
-      {
-        'image': tHeartAttackimg,
-        'title': S.of(context).tHeartCondition,
-        'screen': const HeartCondition(),
-      },
-      {
-        'image': tSeizureimg,
-        'title': S.of(context).tSeizure,
-        'screen': const Seizures(),
-      },
-      {
-        'image': tEpilepsyimg,
-        'title': S.of(context).tShock,
-        'screen': const Shock(),
-      },
-      {
-        'image': tSpinalInjuryimg,
-        'title': S.of(context).tSpinalInjury,
-        'screen': const SpinalInjury(),
-      },
-      {
-        'image': tSprainimg,
-        'title': S.of(context).tSprainsStrains,
-        'screen': const SprainsStrains(),
-      },
-      {
-        'image': tStrotkeimg,
-        'title': S.of(context).tStroke,
-        'screen': const StrokeScreen(),
-      },
-      {
-        'image': tBandAidimg,
-        'title': S.of(context).tWoundCare,
-        'screen': const WoundCare(),
-      },
-      {
-        'image': tHelpingPersonimg,
-        'title': S.of(context).tAssessing,
-        'screen': const AssessingInjuredPerson(),
-      },
-      {
-        'image': tRecoveryPosimg,
-        'title': S.of(context).tRecoveryPos,
-        'screen': const RecoveryPos(),
-      },
+      {'image': tInjuryimg, 'title': S.of(context).tFractures, 'screen': const FracturesScreen()},
+      {'image': tAllergicReactionimg, 'title': S.of(context).tAllergicReaction, 'screen': const AllergicReactions()},
+      {'image': tAsthmaimg, 'title': S.of(context).asthma, 'screen': const Asthma()},
+      {'image': tDiabeticsimg, 'title': S.of(context).tDiabetics, 'screen': const DiabeticsScreen()},
+      {'image': tDrugOverDoseimg, 'title': S.of(context).tDrugOverdose, 'screen': const DrugOverdoseScreen()},
+      {'image': tSoreEyesimg, 'title': S.of(context).tEyeInjury, 'screen': const EyeInjuryScreen()},
+      {'image': tHeadimg, 'title': S.of(context).tHeadInjury, 'screen': const HeadInjury()},
+      {'image': tHeartAttackimg, 'title': S.of(context).tHeartCondition, 'screen': const HeartCondition()},
+      {'image': tSeizureimg, 'title': S.of(context).tSeizure, 'screen': const Seizures()},
+      {'image': tEpilepsyimg, 'title': S.of(context).tShock, 'screen': const Shock()},
+      {'image': tSpinalInjuryimg, 'title': S.of(context).tSpinalInjury, 'screen': const SpinalInjury()},
+      {'image': tSprainimg, 'title': S.of(context).tSprainsStrains, 'screen': const SprainsStrains()},
+      {'image': tStrotkeimg, 'title': S.of(context).tStroke, 'screen': const StrokeScreen()},
+      {'image': tBandAidimg, 'title': S.of(context).tWoundCare, 'screen': const WoundCare()},
+      {'image': tHelpingPersonimg, 'title': S.of(context).tAssessing, 'screen': const AssessingInjuredPerson()},
+      {'image': tRecoveryPosimg, 'title': S.of(context).tRecoveryPos, 'screen': const RecoveryPos()},
     ];
 
     return Column(
@@ -263,11 +165,7 @@ class AllTopicsScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 8.0),
           child: Text(
             S.of(context).tAllTopics,
-            style: const TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              color: Colors.black,
-            ),
+            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black),
           ),
         ),
         const SizedBox(height: 10),
@@ -295,24 +193,17 @@ class AllTopicsScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildCompactButton(
-    BuildContext context,
-    String image,
-    String text,
-    Widget screen,
-  ) {
+  // -------------------------------
+  // SMALLER HORIZONTAL GRID BUTTONS
+  // -------------------------------
+  Widget _buildCompactButton(BuildContext context, String image, String text, Widget screen) {
     return OutlinedButton(
       onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => screen),
-        );
+        Navigator.push(context, MaterialPageRoute(builder: (context) => screen));
       },
       style: OutlinedButton.styleFrom(
         backgroundColor: Colors.white,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12.0),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
         side: BorderSide(color: Colors.grey.shade300),
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         elevation: 2,

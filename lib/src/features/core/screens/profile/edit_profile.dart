@@ -13,6 +13,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
+// Screen that allows the user to update their profile (edit name, email, bio, photo)
 class UpdatedProfileScreen extends StatefulWidget {
   const UpdatedProfileScreen({super.key});
 
@@ -21,19 +22,21 @@ class UpdatedProfileScreen extends StatefulWidget {
 }
 
 class _UpdatedProfileScreenState extends State<UpdatedProfileScreen> {
-  File? image;
+  File? image; // Holds selected image file
   final nameController = TextEditingController();
   final emailController = TextEditingController();
   final bioController = TextEditingController();
 
   @override
   void dispose() {
+    // Dispose controllers to avoid memory leaks
     nameController.dispose();
     emailController.dispose();
     bioController.dispose();
     super.dispose();
   }
 
+  // Opens file picker and sets selected image
   void selectImage() async {
     image = await pickImage(context);
     setState(() {});
@@ -41,7 +44,9 @@ class _UpdatedProfileScreenState extends State<UpdatedProfileScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // Listen to auth provider loading state
     final isLoading = Provider.of<AuthProvider1>(context).isLoading;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(S.of(context).tEditProfile),
@@ -56,6 +61,7 @@ class _UpdatedProfileScreenState extends State<UpdatedProfileScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    // Profile image picker
                     GestureDetector(
                       onTap: selectImage,
                       child: Stack(
@@ -80,6 +86,8 @@ class _UpdatedProfileScreenState extends State<UpdatedProfileScreen> {
                       ),
                     ),
                     const SizedBox(height: tFormHeight),
+
+                    // Form fields
                     _buildTextField(
                       context: context,
                       controller: nameController,
@@ -102,6 +110,8 @@ class _UpdatedProfileScreenState extends State<UpdatedProfileScreen> {
                       maxLines: 3,
                     ),
                     const SizedBox(height: tFormHeight - 10),
+
+                    // Save button
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
@@ -119,6 +129,8 @@ class _UpdatedProfileScreenState extends State<UpdatedProfileScreen> {
                       ),
                     ),
                     const SizedBox(height: tFormHeight - 10),
+
+                    // Contact support link
                     TextButton(
                       onPressed: () => Navigator.push(
                         context,
@@ -147,6 +159,7 @@ class _UpdatedProfileScreenState extends State<UpdatedProfileScreen> {
     );
   }
 
+  // Builds a styled text field with icon, used for name/email/bio
   Widget _buildTextField({
     required BuildContext context,
     required TextEditingController controller,
@@ -178,8 +191,10 @@ class _UpdatedProfileScreenState extends State<UpdatedProfileScreen> {
     );
   }
 
+  // Saves user data to Firebase + local storage + navigates to home
   void storeData() async {
     final ap = Provider.of<AuthProvider1>(context, listen: false);
+
     UserModel userModel = UserModel(
       name: nameController.text.trim(),
       email: emailController.text.trim(),

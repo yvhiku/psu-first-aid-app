@@ -6,8 +6,11 @@ import 'package:first_aid_app/src/features/core/controllers/topic_controller.dar
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+/// A reusable widget that shows a bookmark icon button.
+/// It requires the user to be signed in before saving.
+/// It toggles saved status in Firestore and local store via TopicController.
 class GuardedSaveButton extends StatelessWidget {
-  /// The topic object you pass around in your controllers.
+  /// The topic data (usually with keys: title, image, type) passed to controller.
   final Map<String, dynamic> topic;
 
   const GuardedSaveButton({
@@ -15,6 +18,7 @@ class GuardedSaveButton extends StatelessWidget {
     required this.topic,
   }) : super(key: key);
 
+  /// Shows a dialog prompting the user to sign in.
   void _promptSignIn(BuildContext context, S s) {
     showDialog(
       context: context,
@@ -29,7 +33,7 @@ class GuardedSaveButton extends StatelessWidget {
           ElevatedButton(
             onPressed: () {
               Navigator.of(context).pop();
-              Get.toNamed('/login');
+              Get.toNamed('/login'); // redirects to login route
             },
             child: Text(s.tSignInWithGoogle),
           ),
@@ -40,11 +44,11 @@ class GuardedSaveButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TopicController topicController = Get.find();
-    final s = S.of(context);
+    final TopicController topicController = Get.find(); // retrieve TopicController instance
+    final s = S.of(context); // localizations shortcut
 
     return Obx(() {
-      final saved = topicController.isTopicSaved(topic);
+      final saved = topicController.isTopicSaved(topic); // reactive check if topic is saved
       return IconButton(
         icon: Icon(
           saved ? Icons.bookmark : Icons.bookmark_border,
@@ -52,10 +56,15 @@ class GuardedSaveButton extends StatelessWidget {
         ),
         onPressed: () {
           final user = FirebaseAuth.instance.currentUser;
+
+          // If user is not signed in or anonymous, prompt login
           if (user == null || user.isAnonymous) {
             _promptSignIn(context, s);
           } else {
+            // Otherwise toggle save/unsave
             topicController.toggleTopicSave(topic);
+
+            // Show feedback snackbar
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
                 content: Text(

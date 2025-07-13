@@ -5,9 +5,11 @@ import 'package:first_aid_app/src/constants/image_strings.dart';
 import 'package:first_aid_app/src/constants/sizes.dart';
 import 'package:first_aid_app/generated/l10n.dart';
 
+// Stateless widget for the Contact Support page
 class ContactSupportScreen extends StatelessWidget {
   const ContactSupportScreen({super.key});
 
+  // Function to launch phone dialer
   Future<void> _launchPhone(BuildContext context) async {
     const phoneNumber = '+79960808085';
     final Uri phoneUri = Uri(scheme: 'tel', path: phoneNumber);
@@ -25,6 +27,7 @@ class ContactSupportScreen extends StatelessWidget {
     }
   }
 
+  // Function to launch email app
   Future<void> _launchEmail(BuildContext context) async {
     const email = 'yvhiku@yandex.ru';
     final Uri emailUri = Uri(
@@ -46,6 +49,7 @@ class ContactSupportScreen extends StatelessWidget {
     }
   }
 
+  // Show dialog if no phone app is available
   Future<void> _showNoPhoneAppDialog(
     BuildContext context,
     String phoneNumber,
@@ -90,6 +94,7 @@ class ContactSupportScreen extends StatelessWidget {
     );
   }
 
+  // Show dialog if no email app is available
   Future<void> _showNoEmailAppDialog(BuildContext context, String email) async {
     return showDialog(
       context: context,
@@ -131,6 +136,7 @@ class ContactSupportScreen extends StatelessWidget {
     );
   }
 
+  // Main build method for UI
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -144,6 +150,7 @@ class ContactSupportScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // Support illustration
             Center(
               child: Image.asset(
                 tSupportImage,
@@ -151,6 +158,7 @@ class ContactSupportScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: tDefaultSize),
+            // Title
             Text(
               S.of(context).tweAreHereToHelp,
               style: Theme.of(context).textTheme.headlineSmall?.copyWith(
@@ -158,11 +166,13 @@ class ContactSupportScreen extends StatelessWidget {
                   ),
             ),
             const SizedBox(height: 10),
+            // Subtitle
             Text(
               S.of(context).tcontactOurSupportTeam,
               style: Theme.of(context).textTheme.bodyLarge,
             ),
             const SizedBox(height: tDefaultSize),
+            // Email card
             _buildContactCard(
               context,
               icon: Icons.email,
@@ -171,6 +181,7 @@ class ContactSupportScreen extends StatelessWidget {
               actionText: S.of(context).tsendEmail,
               onTap: () => _launchEmail(context),
             ),
+            // Phone card
             _buildContactCard(
               context,
               icon: Icons.phone,
@@ -179,6 +190,7 @@ class ContactSupportScreen extends StatelessWidget {
               actionText: S.of(context).tcallNow,
               onTap: () => _launchPhone(context),
             ),
+            // Live chat placeholder
             _buildContactCard(
               context,
               icon: Icons.chat_bubble,
@@ -192,6 +204,7 @@ class ContactSupportScreen extends StatelessWidget {
               },
             ),
             const SizedBox(height: tDefaultSize),
+            // FAQ Section
             Text(
               S.of(context).tfaq,
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
@@ -206,6 +219,7 @@ class ContactSupportScreen extends StatelessWidget {
     );
   }
 
+  // Builds reusable contact cards
   Widget _buildContactCard(
     BuildContext context, {
     required IconData icon,
@@ -254,6 +268,7 @@ class ContactSupportScreen extends StatelessWidget {
     );
   }
 
+  // Builds FAQ expansion tiles
   List<Widget> _buildFAQItems(BuildContext context) {
     final faqs = [
       {

@@ -1,5 +1,3 @@
-// lib/src/features/core/screens/profile/profile_screen.dart
-
 import 'dart:math' as math;
 
 import 'package:first_aid_app/src/constants/colors.dart';
@@ -19,6 +17,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
+// Main user profile screen with multiple states: guest, loading, error, or user info
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
 
@@ -40,13 +39,14 @@ class ProfileScreen extends StatelessWidget {
       body: isLoading
           ? const Center(child: CircularProgressIndicator())
           : isGuest
-          ? _buildGuestView(context, s)
-          : userModel == null
-          ? _buildRetryView(context, authProvider, s)
-          : _buildUserView(context, userModel, authProvider, s),
+              ? _buildGuestView(context, s)
+              : userModel == null
+                  ? _buildRetryView(context, authProvider, s)
+                  : _buildUserView(context, userModel, authProvider, s),
     );
   }
 
+  // Shows guest profile view prompting login
   Widget _buildGuestView(BuildContext context, S s) {
     return Center(
       child: Padding(
@@ -105,6 +105,7 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
+  // Shows retry button if user data failed to load
   Widget _buildRetryView(BuildContext context, AuthProvider1 ap, S s) {
     return Center(
       child: Column(
@@ -140,13 +141,13 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
+  // Main user profile info with menu sections
   Widget _buildUserView(
     BuildContext context,
     UserModel user,
     AuthProvider1 ap,
     S s,
   ) {
-    // ignore: unused_local_variable
     final height = MediaQuery.of(context).size.height;
     return SingleChildScrollView(
       child: Padding(
@@ -179,6 +180,8 @@ class ProfileScreen extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 25),
+
+            // Account section
             _profileSection(
               context,
               header: s.tProfileHeader1,
@@ -202,14 +205,12 @@ class ProfileScreen extends StatelessWidget {
                     showDialog(
                       context: context,
                       builder: (_) => AlertDialog(
-                        title: Text(
-                          s.tLogout,
-                        ), // or a separate “Confirm Logout” string
+                        title: Text(s.tLogout),
                         content: Text(s.areyousureyouwanttologout),
                         actions: [
                           TextButton(
                             onPressed: () => Navigator.of(context).pop(),
-                            child: Text(s.tcancel, style: TextStyle(color: Colors.red),), // e.g. “Cancel”
+                            child: Text(s.tcancel, style: TextStyle(color: Colors.red)),
                           ),
                           TextButton(
                             onPressed: () {
@@ -218,9 +219,7 @@ class ProfileScreen extends StatelessWidget {
                                 (_) => Get.offAll(() => const WelcomeScreen()),
                               );
                             },
-                            child: Text(
-                              s.yes, style: TextStyle(color: Colors.red),
-                            ), // or s.yes if you have it localized
+                            child: Text(s.yes, style: TextStyle(color: Colors.red)),
                           ),
                         ],
                       ),
@@ -230,6 +229,8 @@ class ProfileScreen extends StatelessWidget {
               ],
               s: s,
             ),
+
+            // Support section
             _profileSection(
               context,
               header: s.tProfileHeader2,
@@ -242,6 +243,8 @@ class ProfileScreen extends StatelessWidget {
               ],
               s: s,
             ),
+
+            // Other info section
             _profileSection(
               context,
               header: s.tProfileHeader3,
@@ -265,6 +268,7 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 
+  // Reusable profile section header with list of menu buttons
   Widget _profileSection(
     BuildContext context, {
     required String header,
@@ -293,6 +297,7 @@ class ProfileScreen extends StatelessWidget {
   }
 }
 
+// Reusable styled list tile for profile menu items
 class MenuButtons extends StatelessWidget {
   final IconData icon;
   final String title;

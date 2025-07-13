@@ -12,6 +12,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
+// Screen that allows the user to complete their profile by
+// entering name, email, bio and uploading a profile picture
 class UserInformationScreen extends StatefulWidget {
   const UserInformationScreen({super.key});
 
@@ -20,11 +22,12 @@ class UserInformationScreen extends StatefulWidget {
 }
 
 class _UserInformationScreenState extends State<UserInformationScreen> {
-  File? image;
+  File? image; // Holds the selected profile image
   final nameController = TextEditingController();
   final emailController = TextEditingController();
   final bioController = TextEditingController();
 
+  // Clean up controllers when screen is destroyed
   @override
   void dispose() {
     super.dispose();
@@ -33,6 +36,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
     bioController.dispose();
   }
 
+  // Opens image picker dialog
   void selectImage() async {
     image = await pickImage(context);
     setState(() {});
@@ -40,10 +44,12 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // Listen to loading state from AuthProvider
     final isLoading = Provider.of<AuthProvider1>(
       context,
       listen: true,
     ).isLoading;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(S.of(context).tcompleteProfile),
@@ -60,6 +66,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                 child: Center(
                   child: Column(
                     children: [
+                      // Image upload section with camera icon overlay
                       InkWell(
                         onTap: selectImage,
                         child: Stack(
@@ -102,9 +109,11 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                         ),
                       ),
                       const SizedBox(height: tFormHeight),
+                      // Form fields for name, email, and bio
                       Form(
                         child: Column(
                           children: [
+                            // Name field
                             TextFormField(
                               controller: nameController,
                               cursorColor: tPrimaryColor,
@@ -144,6 +153,8 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                               ),
                             ),
                             const SizedBox(height: tFormHeight - 20),
+
+                            // Email field
                             TextFormField(
                               controller: emailController,
                               cursorColor: tPrimaryColor,
@@ -183,6 +194,8 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                               ),
                             ),
                             const SizedBox(height: tFormHeight - 20),
+
+                            // Bio / about field
                             TextFormField(
                               controller: bioController,
                               cursorColor: tPrimaryColor,
@@ -223,6 +236,8 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                               ),
                             ),
                             const SizedBox(height: tFormHeight - 15),
+
+                            // Continue button to submit the profile info
                             SizedBox(
                               width: double.infinity,
                               child: ElevatedButton(
@@ -247,6 +262,8 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                               ),
                             ),
                             const SizedBox(height: tFormHeight - 15),
+
+                            // Contact support link
                             Padding(
                               padding: const EdgeInsets.only(top: 20.0),
                               child: TextButton(
@@ -284,6 +301,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
     );
   }
 
+  // Saves user data to Firebase + local storage + navigates to NavBar
   void storeData() async {
     final ap = Provider.of<AuthProvider1>(context, listen: false);
     UserModel userModel = UserModel(

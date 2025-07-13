@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/features/core/controllers/widgets/navbar.dart';
 
+// Language selection screen that updates app locale and saves choice
 class LanguageSelectionScreen1 extends StatefulWidget {
   const LanguageSelectionScreen1({super.key});
 
@@ -17,6 +18,7 @@ class _LanguageSelectionScreenState1 extends State<LanguageSelectionScreen1> {
   String? _selectedLanguage;
   late Future<void> _initLanguage;
 
+  // Supported languages list
   final List<Map<String, dynamic>> languages = [
     {'code': 'en', 'name': 'English', 'flag': '🇬🇧', 'nativeName': 'English'},
     {'code': 'ar', 'name': 'Arabic', 'flag': '🇸🇦', 'nativeName': 'العربية'},
@@ -29,6 +31,7 @@ class _LanguageSelectionScreenState1 extends State<LanguageSelectionScreen1> {
     _initLanguage = _loadSelectedLanguage();
   }
 
+  // Load saved language from SharedPreferences
   Future<void> _loadSelectedLanguage() async {
     final prefs = await SharedPreferences.getInstance();
     setState(() {
@@ -38,6 +41,7 @@ class _LanguageSelectionScreenState1 extends State<LanguageSelectionScreen1> {
 
   @override
   Widget build(BuildContext context) {
+    // Wait for future builder to complete init
     return FutureBuilder(
       future: _initLanguage,
       builder: (context, snapshot) {
@@ -56,8 +60,8 @@ class _LanguageSelectionScreenState1 extends State<LanguageSelectionScreen1> {
     );
   }
 
+  // Build main content: language list + continue button
   Widget _buildContent() {
-    // ignore: unused_local_variable
     final isRTL = _selectedLanguage == 'ar';
 
     return Padding(
@@ -85,6 +89,8 @@ class _LanguageSelectionScreenState1 extends State<LanguageSelectionScreen1> {
             textAlign: _getTextAlignment(),
           ),
           const SizedBox(height: 32),
+
+          // Language list
           Expanded(
             child: ListView.builder(
               itemCount: languages.length,
@@ -94,7 +100,9 @@ class _LanguageSelectionScreenState1 extends State<LanguageSelectionScreen1> {
               },
             ),
           ),
+
           const SizedBox(height: 24),
+          // Continue button
           ElevatedButton(
             onPressed: _selectedLanguage == null
                 ? null
@@ -121,10 +129,12 @@ class _LanguageSelectionScreenState1 extends State<LanguageSelectionScreen1> {
     );
   }
 
+  // Returns text alignment based on selected language
   TextAlign _getTextAlignment() {
     return _selectedLanguage == 'ar' ? TextAlign.right : TextAlign.left;
   }
 
+  // Builds each language tile with flag, name, radio
   Widget _buildLanguageTile(Map<String, dynamic> language) {
     final isSelected = _selectedLanguage == language['code'];
     final isRTL = _selectedLanguage == 'ar';
@@ -166,6 +176,7 @@ class _LanguageSelectionScreenState1 extends State<LanguageSelectionScreen1> {
     );
   }
 
+  // Updates app locale, saves to SharedPreferences
   Future<void> _changeLanguage(String? code) async {
     if (code == null || code == _selectedLanguage) return;
 
@@ -182,6 +193,7 @@ class _LanguageSelectionScreenState1 extends State<LanguageSelectionScreen1> {
     await Get.updateLocale(newLocale);
   }
 
+  // Saves selection and navigates to main app (NavBar)
   Future<void> _saveLanguageAndNavigate(BuildContext context) async {
     if (_selectedLanguage == null) return;
 

@@ -13,8 +13,10 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:pinput/pinput.dart';
 import 'package:provider/provider.dart';
 
+// Screen for OTP verification after phone sign-in
 class OtpScreen extends StatefulWidget {
-  final String verificationId;
+  final String verificationId; // ID received from Firebase phone auth
+
   const OtpScreen({super.key, required this.verificationId});
 
   @override
@@ -22,14 +24,16 @@ class OtpScreen extends StatefulWidget {
 }
 
 class _OtpScreenState extends State<OtpScreen> {
-  String? otpCode;
+  String? otpCode; // Stores the entered OTP code
 
   @override
   Widget build(BuildContext context) {
+    // Listen to loading state from AuthProvider
     final isLoading = Provider.of<AuthProvider1>(
       context,
       listen: true,
     ).isLoading;
+
     return Scaffold(
       appBar: AppBar(
         title: Text(S.of(context).totpVerification),
@@ -41,7 +45,7 @@ class _OtpScreenState extends State<OtpScreen> {
         ),
       ),
       body: SafeArea(
-        child: isLoading == true
+        child: isLoading
             ? const Center(
                 child: CircularProgressIndicator(color: tPrimaryColor),
               )
@@ -50,11 +54,13 @@ class _OtpScreenState extends State<OtpScreen> {
                 child: Center(
                   child: Column(
                     children: [
+                      // Logo image
                       Image(
                         image: const AssetImage(tWelcomeScreenImage),
                         height: MediaQuery.of(context).size.height * 0.2,
                       ),
                       const SizedBox(height: tFormHeight),
+                      // "Verification" title
                       Text(
                         S.of(context).tverification,
                         style: TextStyle(
@@ -64,6 +70,7 @@ class _OtpScreenState extends State<OtpScreen> {
                         ),
                       ),
                       const SizedBox(height: 10),
+                      // Subtitle message
                       Text(
                         S.of(context).tenterOtpSentToPhone,
                         style: TextStyle(
@@ -74,6 +81,7 @@ class _OtpScreenState extends State<OtpScreen> {
                         textAlign: TextAlign.center,
                       ),
                       const SizedBox(height: tFormHeight),
+                      // OTP input field using pinput
                       Pinput(
                         length: 6,
                         showCursor: true,
@@ -105,6 +113,7 @@ class _OtpScreenState extends State<OtpScreen> {
                         },
                       ),
                       const SizedBox(height: tFormHeight),
+                      // Verify button
                       SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
@@ -133,6 +142,7 @@ class _OtpScreenState extends State<OtpScreen> {
                         ),
                       ),
                       const SizedBox(height: tFormHeight - 20),
+                      // Resend row
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -146,7 +156,7 @@ class _OtpScreenState extends State<OtpScreen> {
                           ),
                           TextButton(
                             onPressed: () {
-                              // Add resend logic here
+                              // Placeholder for resend logic
                             },
                             child: Text(
                               S.of(context).tresend,
@@ -161,6 +171,7 @@ class _OtpScreenState extends State<OtpScreen> {
                         ],
                       ),
                       const SizedBox(height: tFormHeight - 15),
+                      // Contact support link
                       Padding(
                         padding: const EdgeInsets.only(top: 20.0),
                         child: TextButton(
@@ -191,6 +202,7 @@ class _OtpScreenState extends State<OtpScreen> {
     );
   }
 
+  // Function to verify the entered OTP
   void verifyOtp(BuildContext context, String userOtp) {
     final ap = Provider.of<AuthProvider1>(context, listen: false);
     ap.verifyOtp(
@@ -198,8 +210,10 @@ class _OtpScreenState extends State<OtpScreen> {
       verificationId: widget.verificationId,
       userOtp: userOtp,
       onSuccess: () {
+        // After successful verification, check if user exists in Firestore
         ap.checkExistingUser().then((value) async {
           if (value == true) {
+            // Existing user: load their data then go to home
             ap.getDataFromFirestore().then(
               (value) => ap.setSignIn().then(
                 (value) => Navigator.pushAndRemoveUntil(
@@ -210,6 +224,7 @@ class _OtpScreenState extends State<OtpScreen> {
               ),
             );
           } else {
+            // New user: take them to fill profile info
             Navigator.pushAndRemoveUntil(
               context,
               MaterialPageRoute(

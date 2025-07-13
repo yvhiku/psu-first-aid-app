@@ -12,6 +12,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+// Main HomeScreen showing emergency button, quick topics, and nearest hospital
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -19,9 +20,13 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
 
-    return Scaffold(appBar: _buildAppBar(height), body: _buildBody(context));
+    return Scaffold(
+      appBar: _buildAppBar(height),
+      body: _buildBody(context),
+    );
   }
 
+  // App bar with app logo
   AppBar _buildAppBar(double height) {
     return AppBar(
       title: IconButton(
@@ -33,6 +38,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
+  // Main body content as a scrollable column
   Widget _buildBody(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
@@ -46,8 +52,7 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(height: 15),
             _buildTopicGrid(context),
             const SizedBox(height: 25),
-            _buildHospitalFinder(context), 
-            // _buildDailyTip(),
+            _buildHospitalFinder(context),
             const SizedBox(height: 20),
           ],
         ),
@@ -55,6 +60,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
+  // Red container for emergency call button
   Widget _buildEmergencyCallSection(BuildContext context) {
     return Container(
       width: double.infinity,
@@ -99,6 +105,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
+  // Small doctor guide card
   Widget _buildDoctorGuide(BuildContext context) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -131,26 +138,15 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
+  // Grid of quick access topics like CPR, Bleeding, etc.
   Widget _buildTopicGrid(BuildContext context) {
     final topics = [
       {'img': tCprimg, 'text': S.of(context).tCpr, 'screen': CprScreen()},
       {'img': tWoundimg, 'text': S.of(context).tBleeding, 'screen': Bleeding()},
       {'img': tBurnimg, 'text': S.of(context).tBurns, 'screen': BurnScreen()},
-      {
-        'img': tChokingimg,
-        'text': S.of(context).tChoking,
-        'screen': ChokingScreen(),
-      },
-      {
-        'img': tPoisonimg,
-        'text': S.of(context).tPoisons,
-        'screen': PoisonScreen(),
-      },
-      {
-        'img': tServiceToOhersimg,
-        'text': S.of(context).tAllTopics,
-        'screen': AllTopicsScreen(),
-      },
+      {'img': tChokingimg, 'text': S.of(context).tChoking, 'screen': ChokingScreen()},
+      {'img': tPoisonimg, 'text': S.of(context).tPoisons, 'screen': PoisonScreen()},
+      {'img': tServiceToOhersimg, 'text': S.of(context).tAllTopics, 'screen': AllTopicsScreen()},
     ];
 
     return GridView.builder(
@@ -175,28 +171,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  // Widget _buildDailyTip() {
-  //   return Container(
-  //     padding: const EdgeInsets.all(16),
-  //     decoration: BoxDecoration(
-  //       color: Colors.orange.shade100,
-  //       borderRadius: BorderRadius.circular(12),
-  //     ),
-  //     child: Row(
-  //       children: const [
-  //         Icon(Icons.notifications_active, color: Colors.orange),
-  //         SizedBox(width: 12),
-  //         Expanded(
-  //           child: Text(
-  //             "Tip: Would you know what to do if someone fainted?",
-  //             style: TextStyle(fontFamily: "Poppins"),
-  //           ),
-  //         )
-  //       ],
-  //     ),
-  //   );
-  // }
-
+  // Confirmation dialog for emergency call
   void _makeEmergencyCall(BuildContext context) {
     showDialog(
       context: context,
@@ -252,6 +227,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
+  // Builds each grid button for topics
   Widget _buildButton(
     BuildContext context,
     String image,
@@ -306,6 +282,7 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
+// Builds the hospital finder tile below the topics grid
 Widget _buildHospitalFinder(BuildContext context) {
   return Container(
     margin: const EdgeInsets.symmetric(vertical: 20),
@@ -324,12 +301,12 @@ Widget _buildHospitalFinder(BuildContext context) {
         ),
       ),
       trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-      onTap: () => _launchNearestHospital(context), // ✅ wrap in lambda
+      onTap: () => _launchNearestHospital(context),
     ),
   );
 }
 
-
+// Tries to open Yandex or Google Maps to find nearest hospital
 Future<void> _launchNearestHospital(BuildContext context) async {
   const yandexUrl = 'yandexmaps://search?text=больница';
   const fallbackGoogleUrl = 'https://www.google.com/maps/search/?api=1&query=nearest+hospital';
@@ -345,7 +322,6 @@ Future<void> _launchNearestHospital(BuildContext context) async {
     launched = await launchUrl(googleUri);
   }
 
-  // Access context only after ensuring we're still in the same frame
   if (!launched) {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -354,5 +330,3 @@ Future<void> _launchNearestHospital(BuildContext context) async {
     });
   }
 }
-
-

@@ -1,4 +1,8 @@
+// This class represents the data model for a user in your app.
+// It encapsulates all the typical user profile fields.
+
 class UserModel {
+  // Fields holding user data
   final String name;
   final String email;
   final String bio;
@@ -7,6 +11,8 @@ class UserModel {
   final String phoneNumber;
   final String uid;
 
+  // Constructor with required named parameters to ensure
+  // all fields must be provided when creating a UserModel instance.
   UserModel({
     required this.name,
     required this.email,
@@ -17,7 +23,9 @@ class UserModel {
     required this.uid,
   });
 
-  // Add copyWith method
+  // The copyWith method allows you to create a new UserModel instance
+  // based on the current one, but with some fields changed.
+  // This is very useful for immutable data patterns.
   UserModel copyWith({
     String? name,
     String? email,
@@ -38,7 +46,9 @@ class UserModel {
     );
   }
 
-  // Improved fromMap with better type safety
+  // Factory constructor to create a UserModel from a map,
+  // typically when reading from Firestore or other JSON-like sources.
+  // Uses null-aware operators and toString to ensure type safety and avoid null errors.
   factory UserModel.fromMap(Map<String, dynamic> map) {
     return UserModel(
       name: map['name']?.toString() ?? '',
@@ -51,7 +61,8 @@ class UserModel {
     );
   }
 
-  // toMap remains the same but with more explicit typing
+  // Converts the UserModel back into a map.
+  // Useful for writing to Firestore or local storage.
   Map<String, dynamic> toMap() {
     return {
       'name': name,
@@ -64,7 +75,8 @@ class UserModel {
     };
   }
 
-  // Optional: Add equality comparison and toString for debugging
+  // Overriding == allows comparison of two UserModel instances
+  // based on their data rather than memory reference.
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -78,6 +90,8 @@ class UserModel {
           phoneNumber == other.phoneNumber &&
           uid == other.uid;
 
+  // Overriding hashCode ensures this model works correctly
+  // in sets, maps, and other hashed collections.
   @override
   int get hashCode =>
       name.hashCode ^
@@ -88,6 +102,8 @@ class UserModel {
       phoneNumber.hashCode ^
       uid.hashCode;
 
+  // A readable string version of this model,
+  // very handy for debugging print statements.
   @override
   String toString() {
     return 'UserModel(name: $name, email: $email, bio: $bio, profilePic: $profilePic, '

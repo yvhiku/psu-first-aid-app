@@ -11,6 +11,7 @@ import 'package:country_picker/country_picker.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 
+// Login screen allows Google Sign-In, guest sign-in, or fallback to phone.
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -19,9 +20,11 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  // Controller for phone input field
   final TextEditingController phoneController = TextEditingController();
   bool _isLoading = false;
 
+  // Default selected country (Russia) for phone auth
   Country selectedCountry = Country(
     phoneCode: "7",
     countryCode: "RU",
@@ -37,6 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // Ensures cursor is always at end of input
     phoneController.selection = TextSelection.fromPosition(
       TextPosition(offset: phoneController.text.length),
     );
@@ -58,10 +62,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     const SizedBox(height: 100),
+                    // Illustration image
                     Image(
                       image: const AssetImage(tWelcomeScreenImage),
                       height: size.height * 0.2,
                     ),
+                    // Title text
                     Text(
                       S.of(context).tLoginTitle,
                       style: TextStyle(
@@ -70,6 +76,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         fontFamily: "Poppins",
                       ),
                     ),
+                    // Subtitle text
                     Text(
                       S.of(context).tLoginSubTitle,
                       style: TextStyle(
@@ -82,6 +89,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         const SizedBox(height: 30),
+                        // Google sign-in button
                         SizedBox(
                           width: double.infinity,
                           child: OutlinedButton.icon(
@@ -113,6 +121,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               await ap.signInWithGoogle(
                                 context,
                                 () {
+                                  // For new user (navigate to user info)
                                   setState(() {
                                     _isLoading = false;
                                   });
@@ -125,6 +134,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   );
                                 },
                                 () {
+                                  // For existing user (go straight to NavBar)
                                   setState(() {
                                     _isLoading = false;
                                   });
@@ -137,7 +147,6 @@ class _LoginScreenState extends State<LoginScreen> {
                                 },
                               );
                             },
-
                             label: Text(S.of(context).tSignInWithGoogle),
                           ),
                         ),
@@ -145,6 +154,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
 
                     SizedBox(height: 20),
+                    // Continue as guest button
                     SizedBox(
                       width: double.infinity,
                       child: OutlinedButton(
@@ -181,6 +191,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
 
                     const SizedBox(height: 30),
+                    // Contact support link
                     Padding(
                       padding: const EdgeInsets.only(top: 20.0),
                       child: TextButton(
@@ -210,6 +221,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
+  // Function to initiate phone sign-in
   void sendPhoneNumber() {
     final ap = Provider.of<AuthProvider1>(context, listen: false);
     String phoneNumber = phoneController.text.trim();

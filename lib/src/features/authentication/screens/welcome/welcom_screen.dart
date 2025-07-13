@@ -8,6 +8,8 @@ import 'package:first_aid_app/src/features/core/controllers/widgets/navbar.dart'
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+// Simple welcome screen shown on app start
+// Lets user continue to login or directly to NavBar if already signed in
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
 
@@ -18,10 +20,14 @@ class WelcomeScreen extends StatefulWidget {
 class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
-    // Changed to listen: true to rebuild when language changes
+    // AuthProvider to check if user is signed in
     final ap = Provider.of<AuthProvider1>(context, listen: true);
+
+    // Get device height for responsive design
     final height = MediaQuery.of(context).size.height;
-    final s = S.of(context); // Cache the localization instance
+
+    // Cache localization instance to avoid repeated calls
+    final s = S.of(context);
 
     return Scaffold(
       body: Container(
@@ -29,11 +35,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
+            // Top welcome illustration image
             Image(image: AssetImage(tWelcomeScreenImage), height: height * 0.6),
+
+            // Titles
             Column(
               children: [
                 Text(
-                  s.tWelcomeTitle, // Using cached instance
+                  s.tWelcomeTitle,
                   style: const TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
@@ -41,7 +50,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   ),
                 ),
                 Text(
-                  s.tWelcomeSubTitle, // Using cached instance
+                  s.tWelcomeSubTitle,
                   style: const TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.normal,
@@ -50,6 +59,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 ),
               ],
             ),
+
+            // Continue button (either to NavBar if signed in, or LoginScreen)
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
@@ -73,13 +84,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   );
                 },
                 child: Text(
-                  s.tLogin.toUpperCase(), // Using cached instance
+                  s.tLogin.toUpperCase(),
                   style: const TextStyle(
-                    letterSpacing: 1.2, // Better uppercase appearance
+                    letterSpacing: 1.2, // Helps uppercase look better
                   ),
                 ),
               ),
             ),
+
             const SizedBox(width: 10.0),
           ],
         ),

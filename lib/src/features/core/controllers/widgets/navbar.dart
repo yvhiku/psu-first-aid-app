@@ -8,20 +8,21 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
+// Bottom navigation bar that switches between Home, Topics, Saved, Profile
 class NavBar extends StatelessWidget {
   const NavBar({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final s = S.of(context);
-    final controller = Get.put(NavigationController());
+    final s = S.of(context); // Localization instance
+    final controller = Get.put(NavigationController()); // GetX controller to manage index
+
     return Scaffold(
+      // Bottom Navigation Bar
       bottomNavigationBar: Obx(
         () => NavigationBarTheme(
           data: NavigationBarThemeData(
-            labelTextStyle: WidgetStateProperty.resolveWith<TextStyle>((
-              Set<WidgetState> states,
-            ) {
+            labelTextStyle: WidgetStateProperty.resolveWith<TextStyle>((states) {
               if (states.contains(WidgetState.selected)) {
                 return const TextStyle(
                   color: Colors.red,
@@ -59,17 +60,20 @@ class NavBar extends StatelessWidget {
           ),
         ),
       ),
+
+      // Switches body based on selected index
       body: Obx(() => controller.screens[controller.selectedIndex.value]),
     );
   }
 }
 
+// Controller for managing the navigation bar state using GetX
 class NavigationController extends GetxController {
-  final Rx<int> selectedIndex = 0.obs;
+  final Rx<int> selectedIndex = 0.obs; // Observable selected index
   final screens = [
-    const HomeScreen(),
-    AllTopicsScreen(),
-    const SavedScreen(),
-    const ProfileScreen(),
+    const HomeScreen(), // 0
+    AllTopicsScreen(),  // 1
+    const SavedScreen(), // 2
+    const ProfileScreen(), // 3
   ];
 }
