@@ -1,4 +1,5 @@
 import 'package:firebase_app_check/firebase_app_check.dart';
+import 'package:first_aid_app/firebase_options.dart';
 import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/features/authentication/screens/welcome/welcom_screen.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
@@ -30,28 +31,45 @@ final GlobalKey<MyAppState> appStateKey = GlobalKey();
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Initialize Firebase
-  await Firebase.initializeApp();
+  try {
+    // Initialize Firebase with platform-specific options
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
 
-  // Enable Firebase App Check for improved security
-  await FirebaseAppCheck.instance.activate(
-    androidProvider: AndroidProvider.playIntegrity,
-    webProvider: ReCaptchaV3Provider(
-      '6Lc7jmQrAAAAAGjhheIZB01-eIDIjWEO1Vu8ypsR', // your public site key
-    ),
-  );
+    // Enable Firebase App Check with error handling
+    try {
+      await FirebaseAppCheck.instance.activate(
+        androidProvider: AndroidProvider.playIntegrity,
+        appleProvider: AppleProvider.appAttest,
+        webProvider: ReCaptchaV3Provider(
+          '6Lc7jmQrAAAAAGjhheIZB01-eIDIjWEO1Vu8ypsR',
+        ),
+      );
+    } catch (appCheckError) {
+      debugPrint('Firebase App Check activation failed: $appCheckError');
+      // Continue running the app even if App Check fails
+    }
 
-  // Register TopicController globally using GetX
-  Get.put(TopicController());
-  
-  // Load saved language from SharedPreferences
-  final prefs = await SharedPreferences.getInstance();
-  final savedLanguage = prefs.getString('language');
+    // Initialize GetX controllers
+    Get.put(TopicController());
+    
+    // Load saved language from SharedPreferences
+    final prefs = await SharedPreferences.getInstance();
+    final savedLanguage = prefs.getString('language');
 
-  runApp(MyApp(
-    key: appStateKey,
-    initialLocale: savedLanguage != null ? Locale(savedLanguage) : null,
-  ));
+    runApp(MyApp(
+      key: appStateKey,
+      initialLocale: savedLanguage != null ? Locale(savedLanguage) : null,
+    ));
+  } catch (firebaseError) {
+    debugPrint('Firebase initialization failed: $firebaseError');
+    // Fallback app initialization without Firebase
+    runApp(MyApp(
+      key: appStateKey,
+      initialLocale: null,
+    ));
+  }
 }
 
 // Root StatefulWidget that controls locale
