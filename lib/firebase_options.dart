@@ -51,18 +51,22 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyBMded3-zC6r4J91ACn0gkUMlB6grCz_MQ',
-    appId: '1:301732570592:android:d39b627f1cc6a67cbcf785',
+    appId: '1:301732570592:android:fa101e491a42ad23bcf785',
     messagingSenderId: '301732570592',
     projectId: 'firstaidapp1-811e3',
+    databaseURL: 'https://firstaidapp1-811e3-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'firstaidapp1-811e3.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyAKDYGXs4rXr7dyGmOLZeRTS6os09CnX3Q',
-    appId: '1:301732570592:ios:b2d72a9be47bc7a0bcf785',
+    appId: '1:301732570592:ios:9b1e3b43c12095edbcf785',
     messagingSenderId: '301732570592',
     projectId: 'firstaidapp1-811e3',
+    databaseURL: 'https://firstaidapp1-811e3-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'firstaidapp1-811e3.firebasestorage.app',
+    androidClientId: '301732570592-39pqt1lufiuj8crpm6opm7afoiqui5vi.apps.googleusercontent.com',
+    iosClientId: '301732570592-074uuee6sdig4ukrb4fs03hnd26ufaoc.apps.googleusercontent.com',
     iosBundleId: 'com.example.firstAidApp',
   );
 }
