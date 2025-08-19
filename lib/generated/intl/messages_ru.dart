@@ -2894,6 +2894,49 @@ class MessageLookup extends MessageLookupByLibrary {
     "tweAreHereToHelp": MessageLookupByLibrary.simpleMessage(
       "Мы здесь, чтобы помочь!",
     ),
+    "ufaa_law": MessageLookupByLibrary.simpleMessage(
+      "(Закон № 220, 1 сентября 2024 года)",
+    ),
+    "ufaa_step1": MessageLookupByLibrary.simpleMessage(
+      "Устраните опасные факторы и обеспечьте безопасные условия для оказания первой помощи.",
+    ),
+    "ufaa_step2": MessageLookupByLibrary.simpleMessage(
+      "Проведите общий осмотр, чтобы выявить продолжающееся наружное кровотечение, и при наличии временно остановите его.",
+    ),
+    "ufaa_step3": MessageLookupByLibrary.simpleMessage(
+      "Проверьте признаки жизни (сознание и дыхание).",
+    ),
+    "ufaa_step4_1": MessageLookupByLibrary.simpleMessage(
+      "Без сознания и не дышит: — Позвоните 112 — Начните СЛР — При наличии используйте АВД.",
+    ),
+    "ufaa_step4_2": MessageLookupByLibrary.simpleMessage(
+      "Без сознания, но дышит: — Обеспечьте проходимость дыхательных путей.",
+    ),
+    "ufaa_step4_3": MessageLookupByLibrary.simpleMessage(
+      "В сознании и дышит: — Перейдите к шагу пять.",
+    ),
+    "ufaa_step4_title": MessageLookupByLibrary.simpleMessage(
+      "Если пострадавший:",
+    ),
+    "ufaa_step5": MessageLookupByLibrary.simpleMessage(
+      "Проведите детальный осмотр и опросите пострадавшего, чтобы выявить состояния, угрожающие жизни или здоровью.",
+    ),
+    "ufaa_step6": MessageLookupByLibrary.simpleMessage(
+      "Окажите первую помощь в соответствии с выявленными состояниями.",
+    ),
+    "ufaa_step7": MessageLookupByLibrary.simpleMessage(
+      "Если у пострадавшего есть назначенные препараты, помогите их принять. Соблюдайте действующее законодательство.",
+    ),
+    "ufaa_step8": MessageLookupByLibrary.simpleMessage(
+      "Разместите пострадавшего в оптимальном положении для его состояния.",
+    ),
+    "ufaa_step9": MessageLookupByLibrary.simpleMessage(
+      "Если этого ещё не сделали, позвоните 112, контролируйте состояние, оказывайте психологическую поддержку и подготовьтесь к перемещению и транспортировке либо передайте пострадавшего бригаде скорой помощи.",
+    ),
+    "ufaa_takeQuiz": MessageLookupByLibrary.simpleMessage("Пройти тест"),
+    "ufaa_title": MessageLookupByLibrary.simpleMessage(
+      "Универсальный алгоритм первой помощи",
+    ),
     "woundCareIntro": MessageLookupByLibrary.simpleMessage(
       "Правильный уход за ранами помогает предотвратить инфекцию и ускоряет заживление.",
     ),

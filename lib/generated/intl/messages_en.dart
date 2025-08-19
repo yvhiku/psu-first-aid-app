@@ -2749,6 +2749,49 @@ class MessageLookup extends MessageLookupByLibrary {
     "tweAreHereToHelp": MessageLookupByLibrary.simpleMessage(
       "We\'re here to help!",
     ),
+    "ufaa_law": MessageLookupByLibrary.simpleMessage(
+      "(Law No. 220, September 1, 2024)",
+    ),
+    "ufaa_step1": MessageLookupByLibrary.simpleMessage(
+      "Eliminate dangerous factors and create safe conditions for first aid.",
+    ),
+    "ufaa_step2": MessageLookupByLibrary.simpleMessage(
+      "Conduct a general examination to identify any ongoing external bleeding and, if present, temporarily stop it.",
+    ),
+    "ufaa_step3": MessageLookupByLibrary.simpleMessage(
+      "Check for signs of life (consciousness and breathing).",
+    ),
+    "ufaa_step4_1": MessageLookupByLibrary.simpleMessage(
+      "Unconscious and not breathing: — Call 112 — Provide CPR — Use an AED if available.",
+    ),
+    "ufaa_step4_2": MessageLookupByLibrary.simpleMessage(
+      "Unconscious and breathing: — Maintain airway patency.",
+    ),
+    "ufaa_step4_3": MessageLookupByLibrary.simpleMessage(
+      "Conscious and breathing: — Proceed to step five.",
+    ),
+    "ufaa_step4_title": MessageLookupByLibrary.simpleMessage(
+      "If the victim is:",
+    ),
+    "ufaa_step5": MessageLookupByLibrary.simpleMessage(
+      "Conduct a detailed examination and interview the victim to identify any life-threatening or health-threatening conditions.",
+    ),
+    "ufaa_step6": MessageLookupByLibrary.simpleMessage(
+      "Provide first aid based on the nature of the identified conditions.",
+    ),
+    "ufaa_step7": MessageLookupByLibrary.simpleMessage(
+      "If the victim has prescribed medication, assist them in taking it. Be aware of the actual laws about it.",
+    ),
+    "ufaa_step8": MessageLookupByLibrary.simpleMessage(
+      "Position the victim optimally for their condition.",
+    ),
+    "ufaa_step9": MessageLookupByLibrary.simpleMessage(
+      "If not already done, call 112, monitor the victim\'s condition, provide psychological support, and prepare for movement and transport or transfer to the ambulance team.",
+    ),
+    "ufaa_takeQuiz": MessageLookupByLibrary.simpleMessage("Take Quiz"),
+    "ufaa_title": MessageLookupByLibrary.simpleMessage(
+      "Universal First Aid Algorithm",
+    ),
     "woundCareIntro": MessageLookupByLibrary.simpleMessage(
       "Proper wound care helps prevent infection and promotes faster healing.",
     ),

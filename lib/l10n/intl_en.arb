@@ -1291,5 +1291,20 @@
    "woundCareMedicalHelp1": "The wound is deep, large, or won’t stop bleeding.",
    "woundCareMedicalHelp2": "You see signs of infection.",
    "woundCareMedicalHelp3": "The wound was caused by a dirty or rusty object, or an animal bite.",
-   "woundCareMedicalHelp4": "You have not had a tetanus shot in the last 5 years."
+   "woundCareMedicalHelp4": "You have not had a tetanus shot in the last 5 years.",
+   "ufaa_title": "Universal First Aid Algorithm",
+  "ufaa_law": "(Law No. 220, September 1, 2024)",
+  "ufaa_step1": "Eliminate dangerous factors and create safe conditions for first aid.",
+  "ufaa_step2": "Conduct a general examination to identify any ongoing external bleeding and, if present, temporarily stop it.",
+  "ufaa_step3": "Check for signs of life (consciousness and breathing).",
+  "ufaa_step4_title": "If the victim is:",
+  "ufaa_step4_1": "Unconscious and not breathing: — Call 112 — Provide CPR — Use an AED if available.",
+  "ufaa_step4_2": "Unconscious and breathing: — Maintain airway patency.",
+  "ufaa_step4_3": "Conscious and breathing: — Proceed to step five.",
+  "ufaa_step5": "Conduct a detailed examination and interview the victim to identify any life-threatening or health-threatening conditions.",
+  "ufaa_step6": "Provide first aid based on the nature of the identified conditions.",
+  "ufaa_step7": "If the victim has prescribed medication, assist them in taking it. Be aware of the actual laws about it.",
+  "ufaa_step8": "Position the victim optimally for their condition.",
+  "ufaa_step9": "If not already done, call 112, monitor the victim's condition, provide psychological support, and prepare for movement and transport or transfer to the ambulance team.",
+  "ufaa_takeQuiz": "Take Quiz"
 }

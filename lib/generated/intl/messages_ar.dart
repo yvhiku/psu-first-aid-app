@@ -2502,6 +2502,47 @@ class MessageLookup extends MessageLookupByLibrary {
     "tweAreHereToHelp": MessageLookupByLibrary.simpleMessage(
       "نحن هنا لمساعدتك!",
     ),
+    "ufaa_law": MessageLookupByLibrary.simpleMessage(
+      "(القانون رقم 220، 1 سبتمبر 2024)",
+    ),
+    "ufaa_step1": MessageLookupByLibrary.simpleMessage(
+      "إزالة مصادر الخطر وتهيئة ظروف آمنة لتقديم الإسعافات الأولية.",
+    ),
+    "ufaa_step2": MessageLookupByLibrary.simpleMessage(
+      "إجراء فحص عام لتحديد وجود نزيف خارجي مستمر، وإذا وُجد، إيقافه مؤقتًا.",
+    ),
+    "ufaa_step3": MessageLookupByLibrary.simpleMessage(
+      "التحقق من علامات الحياة (الوعي والتنفس).",
+    ),
+    "ufaa_step4_1": MessageLookupByLibrary.simpleMessage(
+      "فاقد الوعي ولا يتنفس: — اتصل بالرقم 112 — ابدأ الإنعاش القلبي الرئوي — استخدم جهاز مزيل الرجفان الآلي إن توفر.",
+    ),
+    "ufaa_step4_2": MessageLookupByLibrary.simpleMessage(
+      "فاقد الوعي ويتنفس: — حافظ على بقاء المجرى الهوائي مفتوحًا.",
+    ),
+    "ufaa_step4_3": MessageLookupByLibrary.simpleMessage(
+      "واعيًا ويتنفس: — انتقل إلى الخطوة الخامسة.",
+    ),
+    "ufaa_step4_title": MessageLookupByLibrary.simpleMessage("إذا كان المصاب:"),
+    "ufaa_step5": MessageLookupByLibrary.simpleMessage(
+      "إجراء فحص مفصل ومقابلة المصاب لتحديد أي حالات مهددة للحياة أو للصحة.",
+    ),
+    "ufaa_step6": MessageLookupByLibrary.simpleMessage(
+      "تقديم الإسعافات الأولية وفقًا لطبيعة الحالات المحددة.",
+    ),
+    "ufaa_step7": MessageLookupByLibrary.simpleMessage(
+      "إذا كان لدى المصاب دواء موصوف، ساعده في تناوله. كن على دراية بالقوانين السارية بشأن ذلك.",
+    ),
+    "ufaa_step8": MessageLookupByLibrary.simpleMessage(
+      "ضع المصاب في الوضعية المثلى لحالته.",
+    ),
+    "ufaa_step9": MessageLookupByLibrary.simpleMessage(
+      "إذا لم يتم ذلك مسبقًا، اتصل بالرقم 112، وراقب حالة المصاب، وقدّم الدعم النفسي، واستعد لتحريك ونقل المصاب أو تسليمه لطاقم الإسعاف.",
+    ),
+    "ufaa_takeQuiz": MessageLookupByLibrary.simpleMessage("ابدأ الاختبار"),
+    "ufaa_title": MessageLookupByLibrary.simpleMessage(
+      "الخوارزمية العالمية للإسعافات الأولية",
+    ),
     "woundCareIntro": MessageLookupByLibrary.simpleMessage(
       "العناية المناسبة بالجروح تساعد في منع العدوى وتعزز الشفاء بشكل أسرع.",
     ),

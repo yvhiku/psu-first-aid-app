@@ -11593,6 +11593,151 @@ class S {
       args: [],
     );
   }
+
+  /// `Universal First Aid Algorithm`
+  String get ufaa_title {
+    return Intl.message(
+      'Universal First Aid Algorithm',
+      name: 'ufaa_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `(Law No. 220, September 1, 2024)`
+  String get ufaa_law {
+    return Intl.message(
+      '(Law No. 220, September 1, 2024)',
+      name: 'ufaa_law',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Eliminate dangerous factors and create safe conditions for first aid.`
+  String get ufaa_step1 {
+    return Intl.message(
+      'Eliminate dangerous factors and create safe conditions for first aid.',
+      name: 'ufaa_step1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Conduct a general examination to identify any ongoing external bleeding and, if present, temporarily stop it.`
+  String get ufaa_step2 {
+    return Intl.message(
+      'Conduct a general examination to identify any ongoing external bleeding and, if present, temporarily stop it.',
+      name: 'ufaa_step2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Check for signs of life (consciousness and breathing).`
+  String get ufaa_step3 {
+    return Intl.message(
+      'Check for signs of life (consciousness and breathing).',
+      name: 'ufaa_step3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the victim is:`
+  String get ufaa_step4_title {
+    return Intl.message(
+      'If the victim is:',
+      name: 'ufaa_step4_title',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unconscious and not breathing: — Call 112 — Provide CPR — Use an AED if available.`
+  String get ufaa_step4_1 {
+    return Intl.message(
+      'Unconscious and not breathing: — Call 112 — Provide CPR — Use an AED if available.',
+      name: 'ufaa_step4_1',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unconscious and breathing: — Maintain airway patency.`
+  String get ufaa_step4_2 {
+    return Intl.message(
+      'Unconscious and breathing: — Maintain airway patency.',
+      name: 'ufaa_step4_2',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Conscious and breathing: — Proceed to step five.`
+  String get ufaa_step4_3 {
+    return Intl.message(
+      'Conscious and breathing: — Proceed to step five.',
+      name: 'ufaa_step4_3',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Conduct a detailed examination and interview the victim to identify any life-threatening or health-threatening conditions.`
+  String get ufaa_step5 {
+    return Intl.message(
+      'Conduct a detailed examination and interview the victim to identify any life-threatening or health-threatening conditions.',
+      name: 'ufaa_step5',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provide first aid based on the nature of the identified conditions.`
+  String get ufaa_step6 {
+    return Intl.message(
+      'Provide first aid based on the nature of the identified conditions.',
+      name: 'ufaa_step6',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If the victim has prescribed medication, assist them in taking it. Be aware of the actual laws about it.`
+  String get ufaa_step7 {
+    return Intl.message(
+      'If the victim has prescribed medication, assist them in taking it. Be aware of the actual laws about it.',
+      name: 'ufaa_step7',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Position the victim optimally for their condition.`
+  String get ufaa_step8 {
+    return Intl.message(
+      'Position the victim optimally for their condition.',
+      name: 'ufaa_step8',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If not already done, call 112, monitor the victim's condition, provide psychological support, and prepare for movement and transport or transfer to the ambulance team.`
+  String get ufaa_step9 {
+    return Intl.message(
+      'If not already done, call 112, monitor the victim\'s condition, provide psychological support, and prepare for movement and transport or transfer to the ambulance team.',
+      name: 'ufaa_step9',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Take Quiz`
+  String get ufaa_takeQuiz {
+    return Intl.message('Take Quiz', name: 'ufaa_takeQuiz', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
