@@ -7,7 +7,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthProvider1 extends ChangeNotifier {
@@ -18,8 +17,7 @@ class AuthProvider1 extends ChangeNotifier {
       _currentUser != null && !_currentUser!.isAnonymous;
 
   // Optionally, if you want a convenience for “guest”:
-  bool get isGuest =>
-      _currentUser != null && _currentUser!.isAnonymous;
+  bool get isGuest => _currentUser != null && _currentUser!.isAnonymous;
 
   bool _isSignedIn = false;
   bool get isSignedIn => _isSignedIn;
@@ -35,15 +33,13 @@ class AuthProvider1 extends ChangeNotifier {
   // ignore: unused_field
   User? _user;
 
-
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
-  final GoogleSignIn _googleSignIn = GoogleSignIn();
   final FirebaseFirestore _firebaseFirestore = FirebaseFirestore.instance;
   final FirebaseStorage _firebaseStorage = FirebaseStorage.instance;
 
   AuthProvider1() {
     _initialize();
-     _auth.authStateChanges().listen((user) {
+    _auth.authStateChanges().listen((user) {
       _user = user;
       _isLoading = false;
       notifyListeners();
@@ -54,8 +50,6 @@ class AuthProvider1 extends ChangeNotifier {
       }
     });
   }
-
-  
 
   Future<void> _initialize() async {
     try {
@@ -87,28 +81,21 @@ class AuthProvider1 extends ChangeNotifier {
     }
   }
 
-  
-
   // saving topics to db
   Future<void> saveTopic(String title, String imageUrl, String type) async {
-  final user = FirebaseAuth.instance.currentUser;
-  if (user == null) {
-    throw Exception('User not logged in.');
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) {
+      throw Exception('User not logged in.');
+    }
+
+    final docRef = FirebaseFirestore.instance
+        .collection('users')
+        .doc(user.uid)
+        .collection('savedTopics')
+        .doc(title); // or use a custom ID
+
+    await docRef.set({'title': title, 'image': imageUrl, 'type': type});
   }
-
-  final docRef = FirebaseFirestore.instance
-      .collection('users')
-      .doc(user.uid)
-      .collection('savedTopics')
-      .doc(title); // or use a custom ID
-
-  await docRef.set({
-    'title': title,
-    'image': imageUrl,
-    'type': type,
-  });
-}
-
 
   // Firestore Operations
   Future<void> getDataFromFirestore() async {
@@ -206,7 +193,6 @@ class AuthProvider1 extends ChangeNotifier {
       notifyListeners();
 
       await _firebaseAuth.signOut();
-      await _googleSignIn.signOut();
       final s = await SharedPreferences.getInstance();
       await s.clear();
 
@@ -222,26 +208,24 @@ class AuthProvider1 extends ChangeNotifier {
     }
   }
 
-// guest login
+  // guest login
   Future<void> signInAnonymously() async {
-  _isLoading = true;
-  notifyListeners();
-  try {
-    await _auth.signInAnonymously();
-    // mark that we have a session
-    await setSignIn();
-  } finally {
-    _isLoading = false;
+    _isLoading = true;
     notifyListeners();
+    try {
+      await _auth.signInAnonymously();
+      // mark that we have a session
+      await setSignIn();
+    } finally {
+      _isLoading = false;
+      notifyListeners();
+    }
   }
-}
-
 
   Future<void> _loadUserModel() async {
     // load your UserModel from Firestore into _userModel, then:
     notifyListeners();
   }
-
 
   //signin with google
   Future<void> signInWithGoogle(
@@ -253,24 +237,8 @@ class AuthProvider1 extends ChangeNotifier {
     notifyListeners();
 
     try {
-      await _googleSignIn.signOut();
-      final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
-      if (googleUser == null) {
-        _isLoading = false;
-        notifyListeners();
-        return;
-      }
-
-      final GoogleSignInAuthentication googleAuth =
-          await googleUser.authentication;
-
-      final credential = GoogleAuthProvider.credential(
-        accessToken: googleAuth.accessToken,
-        idToken: googleAuth.idToken,
-      );
-
-      final userCredential = await _firebaseAuth.signInWithCredential(
-        credential,
+      final userCredential = await _firebaseAuth.signInWithProvider(
+        GoogleAuthProvider(),
       );
 
       if (userCredential.user != null) {
@@ -372,49 +340,49 @@ class AuthProvider1 extends ChangeNotifier {
   }
 
   Future<void> saveUserDataToFirebase({
-  required BuildContext context,
-  required UserModel userModel,
-  required File profilePic,
-  required VoidCallback onSuccess,
-}) async {
-  try {
-    _isLoading = true;
-    notifyListeners();
+    required BuildContext context,
+    required UserModel userModel,
+    required File profilePic,
+    required VoidCallback onSuccess,
+  }) async {
+    try {
+      _isLoading = true;
+      notifyListeners();
 
-    final user = _firebaseAuth.currentUser;
-    if (user == null) throw Exception('User not logged in');
+      final user = _firebaseAuth.currentUser;
+      if (user == null) throw Exception('User not logged in');
 
-    // Upload image if provided
-    String imageUrl = userModel.profilePic;
-    if (profilePic.path.isNotEmpty) {
-      imageUrl = await uploadFile('profile_pics/${user.uid}', profilePic);
+      // Upload image if provided
+      String imageUrl = userModel.profilePic;
+      if (profilePic.path.isNotEmpty) {
+        imageUrl = await uploadFile('profile_pics/${user.uid}', profilePic);
+      }
+
+      // Update user model
+      final updatedUser = userModel.copyWith(
+        profilePic: imageUrl,
+        uid: user.uid,
+        createdAt: DateTime.now().millisecondsSinceEpoch.toString(),
+      );
+
+      // Save to Firestore
+      await _firebaseFirestore
+          .collection("users")
+          .doc(user.uid)
+          .set(updatedUser.toMap());
+
+      _userModel = updatedUser;
+      await saveUserDataToSP();
+      onSuccess();
+    } catch (e) {
+      _errorMessage = 'Failed to save user data: ${e.toString()}';
+      showSnackBar(context, _errorMessage!);
+      rethrow;
+    } finally {
+      _isLoading = false;
+      notifyListeners();
     }
-
-    // Update user model
-    final updatedUser = userModel.copyWith(
-      profilePic: imageUrl,
-      uid: user.uid,
-      createdAt: DateTime.now().millisecondsSinceEpoch.toString(),
-    );
-
-    // Save to Firestore
-    await _firebaseFirestore
-        .collection("users")
-        .doc(user.uid)
-        .set(updatedUser.toMap());
-
-    _userModel = updatedUser;
-    await saveUserDataToSP();
-    onSuccess();
-  } catch (e) {
-    _errorMessage = 'Failed to save user data: ${e.toString()}';
-    showSnackBar(context, _errorMessage!);
-    rethrow;
-  } finally {
-    _isLoading = false;
-    notifyListeners();
   }
-}
 
   Future<String> storeFileToStorage(String ref, File file) async {
     UploadTask uploadTask = _firebaseStorage.ref().child(ref).putFile(file);

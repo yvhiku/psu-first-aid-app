@@ -7,14 +7,12 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
+import 'package:flutter/foundation.dart';
 import 'package:provider/provider.dart';
 import 'package:first_aid_app/src/features/authentication/provider/auth_provider.dart';
 import 'package:first_aid_app/src/features/core/controllers/widgets/navbar.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-// Fetches the saved language locale from SharedPreferences.
-// This is unused because you handle it inside main(), 
-// but left here if you want to reuse it.
 // ignore: unused_element
 Future<Locale?> _getSavedLocale() async {
   final prefs = await SharedPreferences.getInstance();
@@ -40,7 +38,9 @@ void main() async {
     // Enable Firebase App Check with error handling
     try {
       await FirebaseAppCheck.instance.activate(
-        androidProvider: AndroidProvider.playIntegrity,
+        androidProvider: kReleaseMode
+            ? AndroidProvider.playIntegrity
+            : AndroidProvider.debug,
         appleProvider: AppleProvider.appAttest,
         webProvider: ReCaptchaV3Provider(
           '6Lc7jmQrAAAAAGjhheIZB01-eIDIjWEO1Vu8ypsR',
@@ -53,22 +53,21 @@ void main() async {
 
     // Initialize GetX controllers
     Get.put(TopicController());
-    
+
     // Load saved language from SharedPreferences
     final prefs = await SharedPreferences.getInstance();
     final savedLanguage = prefs.getString('language');
 
-    runApp(MyApp(
-      key: appStateKey,
-      initialLocale: savedLanguage != null ? Locale(savedLanguage) : null,
-    ));
+    runApp(
+      MyApp(
+        key: appStateKey,
+        initialLocale: savedLanguage != null ? Locale(savedLanguage) : null,
+      ),
+    );
   } catch (firebaseError) {
     debugPrint('Firebase initialization failed: $firebaseError');
     // Fallback app initialization without Firebase
-    runApp(MyApp(
-      key: appStateKey,
-      initialLocale: null,
-    ));
+    runApp(MyApp(key: appStateKey, initialLocale: null));
   }
 }
 
@@ -104,9 +103,7 @@ class MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => AuthProvider1()),
-      ],
+      providers: [ChangeNotifierProvider(create: (_) => AuthProvider1())],
       child: GetMaterialApp(
         debugShowCheckedModeBanner: false,
 

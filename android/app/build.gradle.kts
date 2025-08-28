@@ -1,61 +1,78 @@
 plugins {
     id("com.android.application")
-    // START: FlutterFire Configuration
-    id("com.google.gms.google-services")
-    // END: FlutterFire Configuration
-    id("kotlin-android")
-    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id("com.google.gms.google-services") // keep only if you use Firebase/Play services
+    id("org.jetbrains.kotlin.android")
     id("dev.flutter.flutter-gradle-plugin")
 }
 
-dependencies {
-  // Import the Firebase BoM
-  implementation(platform("com.google.firebase:firebase-bom:33.15.0"))
-
-
-  // TODO: Add the dependencies for Firebase products you want to use
-  // When using the BoM, don't specify versions in Firebase dependencies
-  implementation("com.google.firebase:firebase-analytics")
-  implementation ("com.google.firebase:firebase-appcheck-playintegrity")
-  implementation ("com.google.firebase:firebase-appcheck-debug")
-
-  // Add the dependencies for any other desired Firebase products
-  // https://firebase.google.com/docs/android/setup#available-libraries
-}
-
 android {
+    // TODO: set this to your real package
     namespace = "com.example.first_aid_app"
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = "27.0.12077973"
-   
 
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
-    }
+    // Versions from Flutter’s Gradle plugin
+    compileSdk = flutter.compileSdkVersion.toInt()
+    ndkVersion = flutter.ndkVersion
 
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        // TODO: set to your real app id
         applicationId = "com.example.first_aid_app"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = 23
-        targetSdk = 33
-        versionCode = flutter.versionCode
+
+        // ✅ Kotlin DSL assignments (no minSdkVersion/targetSdkVersion functions)
+        minSdk = flutter.minSdkVersion.toInt()
+        targetSdk = flutter.targetSdkVersion.toInt()
+
+        versionCode = flutter.versionCode.toInt()
         versionName = flutter.versionName
+
+        // If minSdk < 21 you likely need multidex
+        multiDexEnabled = true
     }
 
     buildTypes {
+        debug {
+            // Don’t shrink in debug to avoid earlier error
+            isMinifyEnabled = false
+            isShrinkResources = false
+        }
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
+            // Enable these together only if you want shrinking
+            // isMinifyEnabled = true
+            // isShrinkResources = true
             signingConfig = signingConfigs.getByName("debug")
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
         }
     }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    packaging {
+        resources {
+            // adjust if needed
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
+    }
+}
+
+dependencies {
+    implementation("org.jetbrains.kotlin:kotlin-stdlib")
+    implementation("androidx.multidex:multidex:2.0.1")
+
+    // Firebase (optional): use BoM, then add the libs you need below
+    implementation(platform("com.google.firebase:firebase-bom:33.15.0"))
+    // e.g.
+    // implementation("com.google.firebase:firebase-analytics-ktx")
+    // implementation("com.google.firebase:firebase-auth-ktx")
+    // implementation("com.google.firebase:firebase-firestore-ktx")
+    // implementation("com.google.firebase:firebase-messaging-ktx")
 }
 
 flutter {
