@@ -1,332 +1,647 @@
-import 'package:first_aid_app/src/constants/colors.dart';
-import 'package:first_aid_app/src/constants/image_strings.dart';
 import 'package:first_aid_app/generated/l10n.dart';
-import 'package:first_aid_app/src/features/core/controllers/widgets/navbar.dart';
-import 'package:first_aid_app/src/features/core/screens/topics/all_topic.dart';
-import 'package:first_aid_app/src/features/core/screens/topics/bleeding.dart';
-import 'package:first_aid_app/src/features/core/screens/topics/burns.dart';
-import 'package:first_aid_app/src/features/core/screens/topics/choking.dart';
-import 'package:first_aid_app/src/features/core/screens/topics/cpr.dart';
-import 'package:first_aid_app/src/features/core/screens/topics/poisons.dart';
+import 'package:first_aid_app/src/constants/image_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-// Main HomeScreen showing emergency button, quick topics, and nearest hospital
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+import '../../controllers/widgets/navbar.dart';
+import '../../models/auto_quiz_data.dart';
+import '../../services/hospital_service.dart';
+import '../profile/profile.dart';
+import '../quizes/quiz.dart';
+import '../quizes/quiz_widgets.dart';
+import '../topics/all_topic.dart';
+import '../topics/topic_catalog.dart';
+import 'home_theme.dart';
+import 'hospital_actions.dart';
+import 'hospital_finder_screen.dart';
+import 'hospital_map.dart';
+import 'hospital_widgets.dart';
+
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({this.hospitalSearch, super.key});
+  final HospitalSearchController? hospitalSearch;
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  late final HospitalSearchController _hospitals =
+      widget.hospitalSearch ?? HospitalSearchController();
+  int _completed = 0;
+  String? _lastTopic;
+  String? _locale;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final locale = Localizations.localeOf(context).toLanguageTag();
+    if (_locale != locale) {
+      _locale = locale;
+      _loadProgress();
+    }
+  }
+
+  Future<void> _loadProgress() async {
+    final catalog = buildTopicCatalog(S.of(context));
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.reload();
+      if (!mounted) return;
+      final completed = catalog.where((topic) {
+        final score = prefs.get(topic.scoreKey);
+        return score is int && score >= 0 && score <= topic.questionCount;
+      }).length;
+      final last = prefs.get('topics_last_viewed_id');
+      setState(() {
+        _completed = completed;
+        _lastTopic = last is String ? last : null;
+      });
+    } catch (_) {
+      /* Learning and emergency actions remain available. */
+    }
+  }
+
+  @override
+  void dispose() {
+    if (widget.hospitalSearch == null) _hospitals.dispose();
+    super.dispose();
+  }
+
+  void _topics() {
+    if (Get.isRegistered<NavigationController>()) {
+      Get.find<NavigationController>().selectedIndex.value = 1;
+    } else {
+      Navigator.of(
+        context,
+      ).push(MaterialPageRoute<void>(builder: (_) => const AllTopicsScreen()));
+    }
+  }
+
+  void _profile() {
+    if (Get.isRegistered<NavigationController>()) {
+      Get.find<NavigationController>().selectedIndex.value = 3;
+    } else {
+      Navigator.of(
+        context,
+      ).push(MaterialPageRoute<void>(builder: (_) => const ProfileScreen()));
+    }
+  }
+
+  Future<void> _openGuide(TopicEntry topic) async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString('topics_last_viewed_id', topic.id);
+    } catch (_) {
+      /* Saving a recent topic is optional. */
+    }
+    if (!mounted) return;
+    await Navigator.of(
+      context,
+    ).push(MaterialPageRoute<void>(builder: topic.builder));
+    if (mounted) await _loadProgress();
+  }
+
+  void _openMap() => Navigator.of(context).push(
+    MaterialPageRoute<void>(
+      builder: (_) => HospitalFinderScreen(search: _hospitals),
+    ),
+  );
 
   @override
   Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
-
-    return Scaffold(
-      appBar: _buildAppBar(height),
-      body: _buildBody(context),
+    final s = S.of(context);
+    final catalog = buildTopicCatalog(s);
+    final quick = [
+      'cpr',
+      'bleeding',
+      'choking',
+      'burns',
+      'poisons',
+    ].map((id) => catalog.firstWhere((topic) => topic.id == id)).toList();
+    final practice = catalog.firstWhere(
+      (topic) => topic.id == _lastTopic,
+      orElse: () => catalog.first,
     );
-  }
-
-  // App bar with app logo
-  AppBar _buildAppBar(double height) {
-    return AppBar(
-      title: IconButton(
-        onPressed: () {},
-        icon: Image(image: AssetImage(tLogo), height: height * 0.05),
-      ),
-      centerTitle: true,
-      elevation: 0,
-    );
-  }
-
-  // Main body content as a scrollable column
-  Widget _buildBody(BuildContext context) {
-    return SingleChildScrollView(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-        child: Column(
-          children: [
-            const SizedBox(height: 20),
-            _buildEmergencyCallSection(context),
-            const SizedBox(height: 25),
-            _buildDoctorGuide(context),
-            const SizedBox(height: 15),
-            _buildTopicGrid(context),
-            const SizedBox(height: 25),
-            _buildHospitalFinder(context),
-            const SizedBox(height: 20),
-          ],
+    return Theme(
+      data: homeTheme(context),
+      child: Builder(
+        builder: (context) => Scaffold(
+          body: SafeArea(
+            bottom: false,
+            child: CustomScrollView(
+              slivers: [
+                SliverToBoxAdapter(
+                  child: Center(
+                    child: ConstrainedBox(
+                      constraints: const BoxConstraints(maxWidth: 1020),
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(20, 18, 12, 16),
+                        child: Row(
+                          children: [
+                            Container(
+                              width: 44,
+                              height: 44,
+                              padding: const EdgeInsets.all(6),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(13),
+                              ),
+                              child: Image.asset(
+                                tHelpingPersonimg,
+                                excludeFromSemantics: true,
+                              ),
+                            ),
+                            const SizedBox(width: 12),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    s.home,
+                                    style: const TextStyle(
+                                      fontSize: 25,
+                                      fontWeight: FontWeight.w800,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 3),
+                                  Text(
+                                    s.homeTagline,
+                                    style: const TextStyle(
+                                      fontSize: 11,
+                                      color: QuizColors.muted,
+                                      height: 1.5,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            IconButton(
+                              onPressed: _profile,
+                              tooltip: s.profile,
+                              icon: const Icon(
+                                Icons.account_circle_outlined,
+                                color: QuizColors.muted,
+                                size: 27,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                SliverPadding(
+                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 24),
+                  sliver: SliverList.list(
+                    children: [
+                      Center(
+                        child: ConstrainedBox(
+                          constraints: const BoxConstraints(maxWidth: 980),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              _emergency(context, s),
+                              const SizedBox(height: 18),
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const Icon(
+                                    Icons.offline_pin_outlined,
+                                    color: QuizColors.green,
+                                    size: 19,
+                                  ),
+                                  const SizedBox(width: 8),
+                                  Expanded(
+                                    child: Text(
+                                      s.homeOfflineBody,
+                                      style: const TextStyle(
+                                        fontSize: 11,
+                                        color: QuizColors.muted,
+                                        height: 1.5,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              const SizedBox(height: 24),
+                              Text(
+                                s.homeQuickTitle,
+                                style: const TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w800,
+                                ),
+                              ),
+                              const SizedBox(height: 5),
+                              Text(
+                                s.homeQuickBody,
+                                style: const TextStyle(
+                                  fontSize: 12,
+                                  color: QuizColors.muted,
+                                ),
+                              ),
+                              const SizedBox(height: 15),
+                              _quickGrid(s, quick, catalog.length),
+                              const SizedBox(height: 24),
+                              AnimatedBuilder(
+                                animation: _hospitals,
+                                builder: (context, _) =>
+                                    _hospitalPreview(context, s),
+                              ),
+                              const SizedBox(height: 24),
+                              _practice(context, s, practice, catalog.length),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
         ),
       ),
     );
   }
 
-  // Red container for emergency call button
-  Widget _buildEmergencyCallSection(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.symmetric(vertical: 20),
-      decoration: BoxDecoration(
-        color: Colors.red[700],
-        borderRadius: BorderRadius.circular(16),
+  Widget _emergency(BuildContext context, S s) => Container(
+    padding: const EdgeInsets.all(20),
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(20),
+      gradient: const LinearGradient(
+        begin: Alignment.topLeft,
+        end: Alignment.bottomRight,
+        colors: [QuizColors.primary, Color(0xFF8F0C14)],
       ),
-      child: Column(
-        children: [
-          Text(
-            S.of(context).tEmergencyNum,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 18,
-              fontFamily: "Poppins",
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          const SizedBox(height: 10),
-          ElevatedButton(
-            onPressed: () => _makeEmergencyCall(context),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.white,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12),
-              ),
-              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 12),
-            ),
-            child: const Text(
-              "112",
-              style: TextStyle(
-                color: Colors.red,
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-                fontFamily: "Poppins",
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  // Small doctor guide card
-  Widget _buildDoctorGuide(BuildContext context) {
-    return Row(
+    ),
+    child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Image.asset(
-          'assets/images/doctor_guide.png',
-          height: 100,
-          width: 80,
-          fit: BoxFit.contain,
-        ),
-        const SizedBox(width: 12),
-        Expanded(
-          child: Container(
-            padding: const EdgeInsets.all(12),
-            decoration: BoxDecoration(
-              color: tCardBgColor,
-              borderRadius: BorderRadius.circular(12),
-            ),
-            child: Text(
-              S.of(context).doctor,
-              style: TextStyle(
-                fontFamily: "Poppins",
-                fontSize: 14,
-                fontWeight: FontWeight.w500,
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Expanded(
+              child: Text(
+                s.homeEmergencyTitle,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 21,
+                  fontWeight: FontWeight.w800,
+                  height: 1.4,
+                ),
               ),
+            ),
+            const SizedBox(width: 12),
+            const Icon(
+              Icons.emergency_outlined,
+              color: Colors.white70,
+              size: 27,
+            ),
+          ],
+        ),
+        const SizedBox(height: 7),
+        Text(
+          s.homeEmergencyBody,
+          style: const TextStyle(
+            color: Colors.white70,
+            fontSize: 12,
+            height: 1.6,
+          ),
+        ),
+        const SizedBox(height: 18),
+        SizedBox(
+          width: double.infinity,
+          child: FilledButton.icon(
+            key: const ValueKey('home-emergency-call'),
+            style: FilledButton.styleFrom(
+              backgroundColor: Colors.white,
+              foregroundColor: QuizColors.primary,
+              padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 16),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(13),
+              ),
+            ),
+            onPressed: () =>
+                openHospitalAction(context, Uri(scheme: 'tel', path: '112')),
+            icon: const Icon(Icons.phone_in_talk_outlined, size: 24),
+            label: Text(
+              s.homeDial112,
+              style: const TextStyle(fontSize: 23, fontWeight: FontWeight.w800),
+            ),
+          ),
+        ),
+        const SizedBox(height: 9),
+        Center(
+          child: Text(
+            s.homeDialHint,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              fontSize: 10,
+              color: Colors.white70,
+              height: 1.5,
             ),
           ),
         ),
       ],
-    );
-  }
+    ),
+  );
 
-  // Grid of quick access topics like CPR, Bleeding, etc.
-  Widget _buildTopicGrid(BuildContext context) {
-    final topics = [
-      {'img': tCprimg, 'text': S.of(context).tCpr, 'screen': CprScreen()},
-      {'img': tWoundimg, 'text': S.of(context).tBleeding, 'screen': Bleeding()},
-      {'img': tBurnimg, 'text': S.of(context).tBurns, 'screen': BurnScreen()},
-      {'img': tChokingimg, 'text': S.of(context).tChoking, 'screen': ChokingScreen()},
-      {'img': tPoisonimg, 'text': S.of(context).tPoisons, 'screen': PoisonScreen()},
-      {'img': tServiceToOhersimg, 'text': S.of(context).tAllTopics, 'screen': AllTopicsScreen()},
-    ];
-
-    return GridView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 3,
-        mainAxisSpacing: 16,
-        crossAxisSpacing: 16,
-        childAspectRatio: 1,
-      ),
-      itemCount: topics.length,
-      itemBuilder: (context, index) {
-        final item = topics[index];
-        return _buildButton(
-          context,
-          item['img'] as String,
-          item['text'] as String,
-          item['screen'] as Widget,
-        );
-      },
-    );
-  }
-
-  // Confirmation dialog for emergency call
-  void _makeEmergencyCall(BuildContext context) {
-    showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-        title: Text(
-          S.of(context).temergencyCall,
-          style: const TextStyle(
-            color: Colors.black,
-            fontFamily: "Poppins",
-            fontSize: 20,
-            fontWeight: FontWeight.w600,
+  Widget _quickGrid(S s, List<TopicEntry> topics, int count) => LayoutBuilder(
+    builder: (context, constraints) {
+      final columns = constraints.maxWidth >= 680 ? 3 : 2;
+      final cards = <Widget>[
+        for (final topic in topics)
+          _quickCard(
+            topic.title,
+            topic.image,
+            () => _openGuide(topic),
+            'home-topic-${topic.id}',
           ),
+        _quickCard(
+          s.homeAllGuides,
+          tServiceToOhersimg,
+          _topics,
+          'home-all-topics',
+          subtitle: s.homeTopicCount(count),
+          accent: true,
         ),
-        content: Text(
-          S.of(context).tareYouSureCall112,
-          style: const TextStyle(
-            color: Colors.black,
-            fontFamily: "Poppins",
-            fontSize: 14,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(context),
-            child: Text(
-              S.of(context).tcancel,
-              style: const TextStyle(
-                color: tPrimaryColor,
-                fontFamily: "Poppins",
-                fontSize: 14,
-                fontWeight: FontWeight.w600,
+      ];
+      return Column(
+        children: [
+          for (var start = 0; start < cards.length; start += columns)
+            Padding(
+              padding: EdgeInsets.only(
+                bottom: start + columns < cards.length ? 12 : 0,
+              ),
+              child: IntrinsicHeight(
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    for (var col = 0; col < columns; col++) ...[
+                      if (col > 0) const SizedBox(width: 12),
+                      Expanded(
+                        child: start + col < cards.length
+                            ? cards[start + col]
+                            : const SizedBox(),
+                      ),
+                    ],
+                  ],
+                ),
               ),
             ),
-          ),
-          TextButton(
-            onPressed: () {
-              Navigator.pop(context);
-              launch('tel:112');
-            },
-            child: Text(
-              S.of(context).tcall,
-              style: const TextStyle(
-                color: tPrimaryColor,
-                fontFamily: "Poppins",
-                fontSize: 14,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ),
         ],
-      ),
-    );
-  }
+      );
+    },
+  );
 
-  // Builds each grid button for topics
-  Widget _buildButton(
-    BuildContext context,
+  Widget _quickCard(
+    String title,
     String image,
-    String text,
-    Widget screen,
-  ) {
-    return ConstrainedBox(
-      constraints: const BoxConstraints(
-        minWidth: 100,
-        maxWidth: 110,
-        minHeight: 100,
-      ),
-      child: OutlinedButton(
-        style: OutlinedButton.styleFrom(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15.0),
-          ),
-          foregroundColor: tWhiteColor,
-          backgroundColor: tPrimaryColor,
-          side: BorderSide(color: tSecondaryColor),
-          padding: const EdgeInsets.all(8.0),
-        ),
-        onPressed: () {
-          if (screen is AllTopicsScreen) {
-            Get.find<NavigationController>().selectedIndex.value = 1;
-          } else {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => screen),
-            );
-          }
-        },
+    VoidCallback onTap,
+    String key, {
+    String? subtitle,
+    bool accent = false,
+  }) => QuizCard(
+    padding: EdgeInsets.zero,
+    child: InkWell(
+      key: ValueKey(key),
+      onTap: onTap,
+      child: Container(
+        padding: const EdgeInsets.all(15),
+        color: accent ? QuizColors.primaryLight.withValues(alpha: .35) : null,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image(image: AssetImage(image), width: 40.0),
-            const SizedBox(height: 8.0),
+            Image.asset(
+              image,
+              width: 40,
+              height: 40,
+              excludeFromSemantics: true,
+            ),
+            const SizedBox(height: 12),
             Text(
-              text,
-              textAlign: TextAlign.center,
-              softWrap: true,
+              title,
               style: const TextStyle(
-                fontSize: 13,
-                fontWeight: FontWeight.w700,
-                fontFamily: "Poppins",
+                fontSize: 14,
+                fontWeight: FontWeight.w800,
+                height: 1.45,
+              ),
+            ),
+            if (subtitle != null) ...[
+              const SizedBox(height: 4),
+              Text(
+                subtitle,
+                style: const TextStyle(
+                  fontSize: 11,
+                  color: QuizColors.muted,
+                  height: 1.5,
+                ),
+              ),
+            ],
+          ],
+        ),
+      ),
+    ),
+  );
+
+  Widget _hospitalPreview(BuildContext context, S s) => QuizCard(
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Row(
+          children: [
+            Image.asset(
+              'assets/icons/hospital_pin.png',
+              width: 36,
+              height: 36,
+              excludeFromSemantics: true,
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Text(
+                s.homeNearbyTitle,
+                style: const TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w800,
+                ),
               ),
             ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-// Builds the hospital finder tile below the topics grid
-Widget _buildHospitalFinder(BuildContext context) {
-  return Container(
-    margin: const EdgeInsets.symmetric(vertical: 20),
-    width: double.infinity,
-    decoration: BoxDecoration(
-      color: Colors.green[50],
-      borderRadius: BorderRadius.circular(12),
-    ),
-    child: ListTile(
-      leading: const Icon(Icons.local_hospital, color: Colors.red),
-      title: Text(
-        S.of(context).findNearestHospital,
-        style: const TextStyle(
-          fontFamily: "Poppins",
-          fontWeight: FontWeight.w600,
+        const SizedBox(height: 7),
+        Text(
+          s.homeNearbyBody,
+          style: const TextStyle(
+            fontSize: 12,
+            color: QuizColors.muted,
+            height: 1.5,
+          ),
         ),
-      ),
-      trailing: const Icon(Icons.arrow_forward_ios, size: 16),
-      onTap: () => _launchNearestHospital(context),
+        const SizedBox(height: 14),
+        if (_hospitals.center != null) ...[
+          ClipRRect(
+            borderRadius: BorderRadius.circular(13),
+            child: SizedBox(
+              height: 190,
+              child: HospitalMap(
+                search: _hospitals,
+                interactive: false,
+                onHospitalTap: (hospital) =>
+                    showHospitalDetails(context, _hospitals, hospital),
+              ),
+            ),
+          ),
+          const SizedBox(height: 12),
+          if (_hospitals.status == HospitalStatus.ready)
+            Text(
+              s.hospitalCount(_hospitals.hospitals.length),
+              style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w700),
+            ),
+        ] else
+          Container(
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: QuizColors.surface,
+              borderRadius: BorderRadius.circular(13),
+            ),
+            child: Column(
+              children: [
+                const Icon(
+                  Icons.map_outlined,
+                  color: QuizColors.muted,
+                  size: 34,
+                ),
+                const SizedBox(height: 10),
+                Text(
+                s.homeHospitalPrompt,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                    fontSize: 12,
+                    height: 1.6,
+                    color: QuizColors.muted,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        HospitalStatusPanel(search: _hospitals),
+        const SizedBox(height: 12),
+        Wrap(
+          spacing: 8,
+          runSpacing: 8,
+          children: [
+            FilledButton.icon(
+              key: const ValueKey('home-use-location'),
+              onPressed: _hospitals.busy ? null : _hospitals.useMyLocation,
+              icon: const Icon(Icons.my_location_rounded, size: 18),
+              label: Text(s.homeUseLocation),
+            ),
+            OutlinedButton.icon(
+              key: const ValueKey('home-open-map'),
+              onPressed: _openMap,
+              icon: const Icon(Icons.open_in_full_rounded, size: 17),
+              label: Text(s.homeOpenMap),
+            ),
+          ],
+        ),
+        const SizedBox(height: 12),
+        Text(
+          s.homeLocationPrivacy,
+          style: const TextStyle(
+            fontSize: 10,
+            height: 1.6,
+            color: QuizColors.muted,
+          ),
+        ),
+      ],
     ),
   );
-}
 
-// Tries to open Yandex or Google Maps to find nearest hospital
-Future<void> _launchNearestHospital(BuildContext context) async {
-  const yandexUrl = 'yandexmaps://search?text=больница';
-  const fallbackGoogleUrl = 'https://www.google.com/maps/search/?api=1&query=nearest+hospital';
-
-  final Uri yandexUri = Uri.parse(yandexUrl);
-  final Uri googleUri = Uri.parse(fallbackGoogleUrl);
-
-  bool launched = false;
-
-  if (await canLaunchUrl(yandexUri)) {
-    launched = await launchUrl(yandexUri);
-  } else if (await canLaunchUrl(googleUri)) {
-    launched = await launchUrl(googleUri);
-  }
-
-  if (!launched) {
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(S.of(context).couldNotLaunchMaps)),
-      );
-    });
-  }
+  Widget _practice(
+    BuildContext context,
+    S s,
+    TopicEntry topic,
+    int total,
+  ) => QuizCard(
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Image.asset(
+              tInfoimg,
+              width: 30,
+              height: 30,
+              excludeFromSemantics: true,
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Text(
+                s.homePracticeTitle,
+                style: const TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 9),
+        Text(
+          s.homePracticeBody,
+          style: const TextStyle(
+            fontSize: 12,
+            height: 1.6,
+            color: QuizColors.muted,
+          ),
+        ),
+        const SizedBox(height: 16),
+        LinearProgressIndicator(
+          value: _completed / total,
+          minHeight: 5,
+          borderRadius: BorderRadius.circular(5),
+          color: QuizColors.primary,
+          backgroundColor: QuizColors.border,
+        ),
+        const SizedBox(height: 8),
+        Text(
+          s.homeQuizProgress(_completed, total),
+          style: const TextStyle(
+            fontSize: 11,
+            color: QuizColors.muted,
+            height: 1.5,
+          ),
+        ),
+        const SizedBox(height: 16),
+        Text(
+          topic.title,
+          style: const TextStyle(
+            fontWeight: FontWeight.w700,
+            fontSize: 14,
+            height: 1.5,
+          ),
+        ),
+        const SizedBox(height: 8),
+        FilledButton.icon(
+          key: const ValueKey('home-start-quiz'),
+          onPressed: () async {
+            final questions = generateLocalizedQuizData(s).values.firstWhere(
+              (questions) => questions.first.topicId == topic.id,
+            );
+            await Navigator.of(context).push(
+              MaterialPageRoute<void>(
+                builder: (_) =>
+                    QuizScreen(topicTitle: topic.title, questions: questions),
+              ),
+            );
+            if (mounted) await _loadProgress();
+          },
+          icon: const Icon(Icons.play_arrow_rounded, size: 20),
+          label: Text(s.homePracticeStart),
+        ),
+      ],
+    ),
+  );
 }

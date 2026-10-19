@@ -36,17 +36,22 @@ dependencies:
   flutter_localizations:
         sdk: flutter
   intl: ^0.20.2
+  flutter_map: ^8.3.2
+  latlong2: ^0.10.1
+  http: ^1.6.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
+  intl_utils: ^2.8.17
 
 flutter:
   uses-material-design: true
 
 
   assets:
+    - assets/illustrations/
     - assets/images/doctor_guide.png
     - assets/icons/user_pin.png
     - assets/icons/hospital_pin.png
@@ -95,6 +100,9 @@ flutter:
 
 
   fonts:
+    - family: PlusJakartaSans
+      fonts:
+        - asset: fonts/PlusJakartaSans-Variable.ttf
     - family: poppins
       fonts:
         - asset: fonts/Poppins-Bold.ttf

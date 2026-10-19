@@ -33,6 +33,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 // sync them locally and with Firestore, and provide routing.
 class TopicController extends GetxController {
   final savedTopics = <Map<String, dynamic>>[].obs; // Observable list
+  final isLoadingSavedTopics = false.obs;
 
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
@@ -54,6 +55,7 @@ class TopicController extends GetxController {
 
   // Load saved topics from SharedPreferences (local storage)
   Future<void> loadSavedTopics() async {
+    isLoadingSavedTopics.value = true;
     try {
       final prefs = await SharedPreferences.getInstance();
       final savedData = prefs.getString('savedTopics');
@@ -65,6 +67,8 @@ class TopicController extends GetxController {
       }
     } catch (e) {
       print('Error loading saved topics locally: $e');
+    } finally {
+      isLoadingSavedTopics.value = false;
     }
   }
 

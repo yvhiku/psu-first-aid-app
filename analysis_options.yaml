@@ -3,6 +3,8 @@ analyzer:
   errors:
     unused_local_variable: ignore
   exclude:
+    # Flutter Intl emits untyped message helper parameters.
+    - lib/generated/**
     - build/**
     - android/**
     - ios/**

@@ -5,6 +5,8 @@ import 'package:first_aid_app/src/constants/sizes.dart';
 import 'package:first_aid_app/src/features/authentication/provider/auth_provider.dart';
 import 'package:first_aid_app/src/features/authentication/screens/login/login_screen.dart';
 import 'package:first_aid_app/src/features/core/controllers/topic_controller.dart';
+import 'package:first_aid_app/src/features/core/models/auto_quiz_data.dart';
+import 'package:first_aid_app/src/features/core/screens/quizes/quiz.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
@@ -138,6 +140,23 @@ class UniversalFirstAidAlgorithmScreen extends StatelessWidget {
             _buildStep(number: '7', text: s.ufaa_step7),
             _buildStep(number: '8', text: s.ufaa_step8),
             _buildStep(number: '9', text: s.ufaa_step9),
+            const SizedBox(height: 20),
+            SizedBox(
+              width: double.infinity,
+              child: FilledButton(
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute<void>(
+                    builder: (_) => QuizScreen(
+                      topicTitle: s.ufaa_title,
+                      questions: generateLocalizedQuizData(
+                        s,
+                      )['Universal First Aid Algorithm']!,
+                    ),
+                  ),
+                ),
+                child: Text(s.takeQuiz),
+              ),
+            ),
           ],
         ),
       ),
@@ -185,7 +204,7 @@ class UniversalFirstAidAlgorithmScreen extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
             decoration: BoxDecoration(
-              color: tPrimaryColor.withOpacity(0.1),
+              color: tPrimaryColor.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(8),
               border: Border.all(color: tSecondaryColor),
             ),
