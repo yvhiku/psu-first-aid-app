@@ -2166,5 +2166,19 @@
   "savedPracticeBody": "Выберите тему и проверьте знания с помощью вопросов и объяснений.",
   "savedChooseQuiz": "Выбрать тест",
   "savedGuideLabel": "Руководство по первой помощи",
-  "savedLoading": "Загружаем сохранённые темы…"
+  "savedLoading": "Загружаем сохранённые темы…",
+  "guideStepByStep": "ПОШАГОВОЕ РУКОВОДСТВО",
+  "guideStepCount": "Шагов: {count}",
+  "guideOffline": "Доступно без интернета",
+  "guideEmergency": "Нужна срочная помощь?",
+  "guideCall112": "Позвонить 112",
+  "guideSave": "Сохранить руководство",
+  "guideRemoveSaved": "Удалить из сохранённого",
+  "@guideStepCount": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  }
 }

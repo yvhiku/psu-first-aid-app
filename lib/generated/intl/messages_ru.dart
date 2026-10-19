@@ -20,28 +20,30 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ru';
 
-  static String m0(completed, total) =>
+  static String m0(count) => "Шагов: ${count}";
+
+  static String m1(completed, total) =>
       "Пройдено тестов: ${completed} из ${total}";
 
-  static String m1(count) => "Тем: ${count}";
+  static String m2(count) => "Тем: ${count}";
 
-  static String m2(count) => "Найдено больниц: ${count}";
+  static String m3(count) => "Найдено больниц: ${count}";
 
-  static String m3(distance) => "${distance} км · по прямой";
+  static String m4(distance) => "${distance} км · по прямой";
 
-  static String m4(count) => "${count} км";
+  static String m5(count) => "${count} км";
 
-  static String m5(time) => "Данные получены в ${time}";
+  static String m6(time) => "Данные получены в ${time}";
 
-  static String m6(current, total) => "Вопрос ${current} из ${total}";
+  static String m7(current, total) => "Вопрос ${current} из ${total}";
 
-  static String m7(count) => "Все сохранённые (${count})";
+  static String m8(count) => "Все сохранённые (${count})";
 
-  static String m8(count) => "Сохранено: ${count}";
+  static String m9(count) => "Сохранено: ${count}";
 
-  static String m9(topic) => "Убрать «${topic}» из сохранённого";
+  static String m10(topic) => "Убрать «${topic}» из сохранённого";
 
-  static String m10(topic) => "«${topic}» удалено из сохранённого";
+  static String m11(topic) => "«${topic}» удалено из сохранённого";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -2449,6 +2451,21 @@ class MessageLookup extends MessageLookupByLibrary {
     "guestProfileMessage": MessageLookupByLibrary.simpleMessage(
       "Вы просматриваете как гость.\n Войдите, чтобы получить доступ к вашему профилю и настройкам.",
     ),
+    "guideCall112": MessageLookupByLibrary.simpleMessage("Позвонить 112"),
+    "guideEmergency": MessageLookupByLibrary.simpleMessage(
+      "Нужна срочная помощь?",
+    ),
+    "guideOffline": MessageLookupByLibrary.simpleMessage(
+      "Доступно без интернета",
+    ),
+    "guideRemoveSaved": MessageLookupByLibrary.simpleMessage(
+      "Удалить из сохранённого",
+    ),
+    "guideSave": MessageLookupByLibrary.simpleMessage("Сохранить руководство"),
+    "guideStepByStep": MessageLookupByLibrary.simpleMessage(
+      "ПОШАГОВОЕ РУКОВОДСТВО",
+    ),
+    "guideStepCount": m0,
     "headInjuryHeading": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при травме головы",
     ),
@@ -2929,11 +2946,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "homeQuickTitle": MessageLookupByLibrary.simpleMessage(
       "Быстрый доступ к помощи",
     ),
-    "homeQuizProgress": m0,
+    "homeQuizProgress": m1,
     "homeTagline": MessageLookupByLibrary.simpleMessage(
       "Знания, которые помогают.",
     ),
-    "homeTopicCount": m1,
+    "homeTopicCount": m2,
     "homeUseLocation": MessageLookupByLibrary.simpleMessage(
       "Моё местоположение",
     ),
@@ -2943,7 +2960,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "hospitalChooseArea": MessageLookupByLibrary.simpleMessage(
       "Переместите и увеличьте карту, затем запустите поиск.",
     ),
-    "hospitalCount": m2,
+    "hospitalCount": m3,
     "hospitalDenied": MessageLookupByLibrary.simpleMessage(
       "Доступ к геопозиции отклонён. Можно выбрать область на карте.",
     ),
@@ -2951,7 +2968,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Доступ к геопозиции заблокирован. Разрешите его в настройках или выберите область на карте.",
     ),
     "hospitalDirections": MessageLookupByLibrary.simpleMessage("Маршрут"),
-    "hospitalDistance": m3,
+    "hospitalDistance": m4,
     "hospitalDistanceNote": MessageLookupByLibrary.simpleMessage(
       "Расстояния указаны по прямой от центра поиска. Данные могут быть неполными или устаревшими; доступность экстренной помощи не проверена.",
     ),
@@ -2993,7 +3010,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Часть карты не загрузилась. Список больниц по-прежнему доступен.",
     ),
     "hospitalRadius": MessageLookupByLibrary.simpleMessage("Радиус поиска"),
-    "hospitalRadiusKm": m4,
+    "hospitalRadiusKm": m5,
     "hospitalRateLimited": MessageLookupByLibrary.simpleMessage(
       "Сервис поиска больниц занят. Повторите попытку через минуту.",
     ),
@@ -3008,7 +3025,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Открыть настройки",
     ),
     "hospitalUnnamed": MessageLookupByLibrary.simpleMessage("Больница"),
-    "hospitalUpdated": m5,
+    "hospitalUpdated": m6,
     "hospitalYou": MessageLookupByLibrary.simpleMessage("Ваше местоположение"),
     "intro": MessageLookupByLibrary.simpleMessage(
       "Перелом - это сломанная кость. Правильная первая помощь может предотвратить осложнения.",
@@ -3232,7 +3249,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "quizUiConfirm": MessageLookupByLibrary.simpleMessage("Подтвердить ответ"),
     "quizUiCorrect": MessageLookupByLibrary.simpleMessage("Верный ответ"),
     "quizUiCorrectMetric": MessageLookupByLibrary.simpleMessage("ВЕРНО"),
-    "quizUiCount": m6,
+    "quizUiCount": m7,
     "quizUiEducationalNotice": MessageLookupByLibrary.simpleMessage(
       "Только учебный материал. Следуйте местным экстренным рекомендациям и актуальному сертифицированному обучению первой помощи.",
     ),
@@ -3541,7 +3558,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "savedActionError": MessageLookupByLibrary.simpleMessage(
       "Не удалось обновить сохранённое. Повторите попытку.",
     ),
-    "savedAllFilter": m7,
+    "savedAllFilter": m8,
     "savedChooseQuiz": MessageLookupByLibrary.simpleMessage("Выбрать тест"),
     "savedClearBody": MessageLookupByLibrary.simpleMessage(
       "Будут удалены закладки. Руководства останутся доступны в разделе «Темы».",
@@ -3550,7 +3567,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "savedClearTitle": MessageLookupByLibrary.simpleMessage(
       "Очистить сохранённые темы?",
     ),
-    "savedCount": m8,
+    "savedCount": m9,
     "savedEmptyBody": MessageLookupByLibrary.simpleMessage(
       "Сохраняйте темы для быстрого доступа. Откройте руководство и нажмите значок закладки — оно появится здесь.",
     ),
@@ -3590,8 +3607,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "savedPracticeTitle": MessageLookupByLibrary.simpleMessage(
       "Практика по сохранённым темам",
     ),
-    "savedRemoveTooltip": m9,
-    "savedRemovedMessage": m10,
+    "savedRemoveTooltip": m10,
+    "savedRemovedMessage": m11,
     "savedResetFilters": MessageLookupByLibrary.simpleMessage(
       "Показать все сохранённые",
     ),

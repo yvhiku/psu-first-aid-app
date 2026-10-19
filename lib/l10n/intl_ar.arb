@@ -2166,5 +2166,19 @@
   "savedPracticeBody": "اختر موضوعًا واختبر معرفتك بالأسئلة والشرح.",
   "savedChooseQuiz": "اختر اختبارًا",
   "savedGuideLabel": "دليل إسعافات أولية",
-  "savedLoading": "جارٍ تحميل المواضيع المحفوظة…"
+  "savedLoading": "جارٍ تحميل المواضيع المحفوظة…",
+  "guideStepByStep": "دليل خطوة بخطوة",
+  "guideStepCount": "عدد الخطوات: {count}",
+  "guideOffline": "متاح دون إنترنت",
+  "guideEmergency": "هل تحتاج إلى مساعدة عاجلة؟",
+  "guideCall112": "اتصل بالرقم 112",
+  "guideSave": "حفظ الدليل",
+  "guideRemoveSaved": "إزالة الدليل المحفوظ",
+  "@guideStepCount": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  }
 }

@@ -2166,5 +2166,19 @@
   "savedPracticeBody": "Choose a topic and test your knowledge with questions and explanations.",
   "savedChooseQuiz": "Choose a quiz",
   "savedGuideLabel": "First aid guide",
-  "savedLoading": "Loading saved topics…"
+  "savedLoading": "Loading saved topics…",
+  "guideStepByStep": "STEP-BY-STEP GUIDE",
+  "guideStepCount": "{count} steps",
+  "guideOffline": "Available offline",
+  "guideEmergency": "Need urgent help?",
+  "guideCall112": "Call 112",
+  "guideSave": "Save guide",
+  "guideRemoveSaved": "Remove saved guide",
+  "@guideStepCount": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  }
 }

@@ -20,28 +20,30 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
-  static String m0(completed, total) =>
+  static String m0(count) => "${count} steps";
+
+  static String m1(completed, total) =>
       "${completed} of ${total} topic quizzes completed";
 
-  static String m1(count) => "${count} topics";
+  static String m2(count) => "${count} topics";
 
-  static String m2(count) => "${count} hospitals found";
+  static String m3(count) => "${count} hospitals found";
 
-  static String m3(distance) => "${distance} km away · straight line";
+  static String m4(distance) => "${distance} km away · straight line";
 
-  static String m4(count) => "${count} km";
+  static String m5(count) => "${count} km";
 
-  static String m5(time) => "Fetched at ${time}";
+  static String m6(time) => "Fetched at ${time}";
 
-  static String m6(current, total) => "Question ${current} of ${total}";
+  static String m7(current, total) => "Question ${current} of ${total}";
 
-  static String m7(count) => "All saved (${count})";
+  static String m8(count) => "All saved (${count})";
 
-  static String m8(count) => "Saved: ${count}";
+  static String m9(count) => "Saved: ${count}";
 
-  static String m9(topic) => "Remove ${topic} from saved";
+  static String m10(topic) => "Remove ${topic} from saved";
 
-  static String m10(topic) => "${topic} removed from saved";
+  static String m11(topic) => "${topic} removed from saved";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -2447,6 +2449,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "guestProfileMessage": MessageLookupByLibrary.simpleMessage(
       "You’re browsing as a guest.\nSign in to access your profile and settings.",
     ),
+    "guideCall112": MessageLookupByLibrary.simpleMessage("Call 112"),
+    "guideEmergency": MessageLookupByLibrary.simpleMessage("Need urgent help?"),
+    "guideOffline": MessageLookupByLibrary.simpleMessage("Available offline"),
+    "guideRemoveSaved": MessageLookupByLibrary.simpleMessage(
+      "Remove saved guide",
+    ),
+    "guideSave": MessageLookupByLibrary.simpleMessage("Save guide"),
+    "guideStepByStep": MessageLookupByLibrary.simpleMessage(
+      "STEP-BY-STEP GUIDE",
+    ),
+    "guideStepCount": m0,
     "headInjuryHeading": MessageLookupByLibrary.simpleMessage(
       "Head Injury First Aid",
     ),
@@ -2919,17 +2932,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "homeQuickTitle": MessageLookupByLibrary.simpleMessage(
       "Quick first aid guides",
     ),
-    "homeQuizProgress": m0,
+    "homeQuizProgress": m1,
     "homeTagline": MessageLookupByLibrary.simpleMessage(
       "A little knowledge. A helping hand.",
     ),
-    "homeTopicCount": m1,
+    "homeTopicCount": m2,
     "homeUseLocation": MessageLookupByLibrary.simpleMessage("Use my location"),
     "hospitalCall": MessageLookupByLibrary.simpleMessage("Call hospital"),
     "hospitalChooseArea": MessageLookupByLibrary.simpleMessage(
       "Move and zoom the map, then search this area.",
     ),
-    "hospitalCount": m2,
+    "hospitalCount": m3,
     "hospitalDenied": MessageLookupByLibrary.simpleMessage(
       "Location access was declined. You can choose an area on the map instead.",
     ),
@@ -2937,7 +2950,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Location permission is blocked. Enable it in app settings or choose an area on the map.",
     ),
     "hospitalDirections": MessageLookupByLibrary.simpleMessage("Directions"),
-    "hospitalDistance": m3,
+    "hospitalDistance": m4,
     "hospitalDistanceNote": MessageLookupByLibrary.simpleMessage(
       "Distances are straight-line estimates from the search center. Map listings may be incomplete or outdated; emergency availability is not verified.",
     ),
@@ -2979,7 +2992,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Some map tiles could not load. The hospital list is still available.",
     ),
     "hospitalRadius": MessageLookupByLibrary.simpleMessage("Search radius"),
-    "hospitalRadiusKm": m4,
+    "hospitalRadiusKm": m5,
     "hospitalRateLimited": MessageLookupByLibrary.simpleMessage(
       "The hospital search service is busy. Please try again in a minute.",
     ),
@@ -2992,7 +3005,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "hospitalSettings": MessageLookupByLibrary.simpleMessage("Open settings"),
     "hospitalUnnamed": MessageLookupByLibrary.simpleMessage("Hospital"),
-    "hospitalUpdated": m5,
+    "hospitalUpdated": m6,
     "hospitalYou": MessageLookupByLibrary.simpleMessage("Your location"),
     "intro": MessageLookupByLibrary.simpleMessage(
       "A fracture is a broken bone. Proper first aid can prevent complications.",
@@ -3229,7 +3242,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "quizUiConfirm": MessageLookupByLibrary.simpleMessage("Confirm answer"),
     "quizUiCorrect": MessageLookupByLibrary.simpleMessage("Correct answer"),
     "quizUiCorrectMetric": MessageLookupByLibrary.simpleMessage("CORRECT"),
-    "quizUiCount": m6,
+    "quizUiCount": m7,
     "quizUiEducationalNotice": MessageLookupByLibrary.simpleMessage(
       "Educational content only. Follow local emergency guidance and current certified first-aid training.",
     ),
@@ -3536,7 +3549,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "savedActionError": MessageLookupByLibrary.simpleMessage(
       "Could not update saved topics. Please try again.",
     ),
-    "savedAllFilter": m7,
+    "savedAllFilter": m8,
     "savedChooseQuiz": MessageLookupByLibrary.simpleMessage("Choose a quiz"),
     "savedClearBody": MessageLookupByLibrary.simpleMessage(
       "This removes your saved bookmarks. The guides remain available in Topics.",
@@ -3545,7 +3558,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "savedClearTitle": MessageLookupByLibrary.simpleMessage(
       "Clear saved topics?",
     ),
-    "savedCount": m8,
+    "savedCount": m9,
     "savedEmptyBody": MessageLookupByLibrary.simpleMessage(
       "Save topics you want to find quickly. Open a guide and tap its bookmark to keep it here.",
     ),
@@ -3581,8 +3594,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "savedPracticeTitle": MessageLookupByLibrary.simpleMessage(
       "Practice from your saved topics",
     ),
-    "savedRemoveTooltip": m9,
-    "savedRemovedMessage": m10,
+    "savedRemoveTooltip": m10,
+    "savedRemovedMessage": m11,
     "savedResetFilters": MessageLookupByLibrary.simpleMessage(
       "Show all saved topics",
     ),

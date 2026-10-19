@@ -20,28 +20,30 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
-  static String m0(completed, total) =>
+  static String m0(count) => "عدد الخطوات: ${count}";
+
+  static String m1(completed, total) =>
       "أكملت ${completed} من ${total} اختبارًا";
 
-  static String m1(count) => "${count} موضوعًا";
+  static String m2(count) => "${count} موضوعًا";
 
-  static String m2(count) => "تم العثور على ${count} مستشفى";
+  static String m3(count) => "تم العثور على ${count} مستشفى";
 
-  static String m3(distance) => "يبعد ${distance} كم · بخط مستقيم";
+  static String m4(distance) => "يبعد ${distance} كم · بخط مستقيم";
 
-  static String m4(count) => "${count} كم";
+  static String m5(count) => "${count} كم";
 
-  static String m5(time) => "جُلبت البيانات في ${time}";
+  static String m6(time) => "جُلبت البيانات في ${time}";
 
-  static String m6(current, total) => "السؤال ${current} من ${total}";
+  static String m7(current, total) => "السؤال ${current} من ${total}";
 
-  static String m7(count) => "كل المحفوظات (${count})";
+  static String m8(count) => "كل المحفوظات (${count})";
 
-  static String m8(count) => "المحفوظة: ${count}";
+  static String m9(count) => "المحفوظة: ${count}";
 
-  static String m9(topic) => "إزالة ${topic} من المحفوظات";
+  static String m10(topic) => "إزالة ${topic} من المحفوظات";
 
-  static String m10(topic) => "أُزيل ${topic} من المحفوظات";
+  static String m11(topic) => "أُزيل ${topic} من المحفوظات";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -2301,6 +2303,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "guestProfileMessage": MessageLookupByLibrary.simpleMessage(
       "أنت تتصفح كضيف.\nقم بتسجيل الدخول للوصول إلى ملفك الشخصي والإعدادات.",
     ),
+    "guideCall112": MessageLookupByLibrary.simpleMessage("اتصل بالرقم 112"),
+    "guideEmergency": MessageLookupByLibrary.simpleMessage(
+      "هل تحتاج إلى مساعدة عاجلة؟",
+    ),
+    "guideOffline": MessageLookupByLibrary.simpleMessage("متاح دون إنترنت"),
+    "guideRemoveSaved": MessageLookupByLibrary.simpleMessage(
+      "إزالة الدليل المحفوظ",
+    ),
+    "guideSave": MessageLookupByLibrary.simpleMessage("حفظ الدليل"),
+    "guideStepByStep": MessageLookupByLibrary.simpleMessage("دليل خطوة بخطوة"),
+    "guideStepCount": m0,
     "headInjuryHeading": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية لإصابات الرأس",
     ),
@@ -2755,17 +2768,17 @@ class MessageLookup extends MessageLookupByLibrary {
       "اعثر على الدليل الذي تحتاجه.",
     ),
     "homeQuickTitle": MessageLookupByLibrary.simpleMessage("أدلة إسعاف سريعة"),
-    "homeQuizProgress": m0,
+    "homeQuizProgress": m1,
     "homeTagline": MessageLookupByLibrary.simpleMessage(
       "معرفة بسيطة، ومساعدة تصنع فرقًا.",
     ),
-    "homeTopicCount": m1,
+    "homeTopicCount": m2,
     "homeUseLocation": MessageLookupByLibrary.simpleMessage("استخدم موقعي"),
     "hospitalCall": MessageLookupByLibrary.simpleMessage("الاتصال بالمستشفى"),
     "hospitalChooseArea": MessageLookupByLibrary.simpleMessage(
       "حرّك الخريطة وكبّرها ثم ابحث في المنطقة.",
     ),
-    "hospitalCount": m2,
+    "hospitalCount": m3,
     "hospitalDenied": MessageLookupByLibrary.simpleMessage(
       "لم يُسمح بالوصول للموقع. يمكنك اختيار منطقة على الخريطة بدلًا من ذلك.",
     ),
@@ -2773,7 +2786,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "إذن الموقع محظور. فعّله من إعدادات التطبيق أو اختر منطقة على الخريطة.",
     ),
     "hospitalDirections": MessageLookupByLibrary.simpleMessage("الاتجاهات"),
-    "hospitalDistance": m3,
+    "hospitalDistance": m4,
     "hospitalDistanceNote": MessageLookupByLibrary.simpleMessage(
       "المسافات تقديرية بخط مستقيم من مركز البحث. قد تكون البيانات ناقصة أو قديمة؛ توفر خدمة الطوارئ غير مُتحقّق منه.",
     ),
@@ -2817,7 +2830,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "تعذر تحميل بعض أجزاء الخريطة. لا تزال قائمة المستشفيات متاحة.",
     ),
     "hospitalRadius": MessageLookupByLibrary.simpleMessage("نطاق البحث"),
-    "hospitalRadiusKm": m4,
+    "hospitalRadiusKm": m5,
     "hospitalRateLimited": MessageLookupByLibrary.simpleMessage(
       "خدمة البحث عن المستشفيات مشغولة. حاول مجددًا بعد دقيقة.",
     ),
@@ -2828,7 +2841,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "hospitalSearchCenter": MessageLookupByLibrary.simpleMessage("مركز البحث"),
     "hospitalSettings": MessageLookupByLibrary.simpleMessage("فتح الإعدادات"),
     "hospitalUnnamed": MessageLookupByLibrary.simpleMessage("مستشفى"),
-    "hospitalUpdated": m5,
+    "hospitalUpdated": m6,
     "hospitalYou": MessageLookupByLibrary.simpleMessage("موقعك"),
     "intro": MessageLookupByLibrary.simpleMessage(
       "الكسر هو كسر في العظم. الإسعافات الأولية الصحيحة يمكن أن تمنع المضاعفات.",
@@ -3038,7 +3051,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "quizUiConfirm": MessageLookupByLibrary.simpleMessage("تأكيد الإجابة"),
     "quizUiCorrect": MessageLookupByLibrary.simpleMessage("إجابة صحيحة"),
     "quizUiCorrectMetric": MessageLookupByLibrary.simpleMessage("الصحيح"),
-    "quizUiCount": m6,
+    "quizUiCount": m7,
     "quizUiEducationalNotice": MessageLookupByLibrary.simpleMessage(
       "محتوى تعليمي فقط. اتبع إرشادات الطوارئ المحلية والتدريب المعتمد الحديث في الإسعافات الأولية.",
     ),
@@ -3331,7 +3344,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "savedActionError": MessageLookupByLibrary.simpleMessage(
       "تعذر تحديث المواضيع المحفوظة. حاول مجددًا.",
     ),
-    "savedAllFilter": m7,
+    "savedAllFilter": m8,
     "savedChooseQuiz": MessageLookupByLibrary.simpleMessage("اختر اختبارًا"),
     "savedClearBody": MessageLookupByLibrary.simpleMessage(
       "سيزيل هذا علامات الحفظ. ستظل الأدلة متاحة في صفحة المواضيع.",
@@ -3340,7 +3353,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "savedClearTitle": MessageLookupByLibrary.simpleMessage(
       "مسح المواضيع المحفوظة؟",
     ),
-    "savedCount": m8,
+    "savedCount": m9,
     "savedEmptyBody": MessageLookupByLibrary.simpleMessage(
       "احفظ المواضيع التي تريد الوصول إليها بسرعة. افتح الدليل واضغط على علامة الحفظ ليظهر هنا.",
     ),
@@ -3378,8 +3391,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "savedPracticeTitle": MessageLookupByLibrary.simpleMessage(
       "تدرّب على مواضيعك المحفوظة",
     ),
-    "savedRemoveTooltip": m9,
-    "savedRemovedMessage": m10,
+    "savedRemoveTooltip": m10,
+    "savedRemovedMessage": m11,
     "savedResetFilters": MessageLookupByLibrary.simpleMessage(
       "عرض كل المواضيع المحفوظة",
     ),

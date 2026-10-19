@@ -20389,6 +20389,66 @@ class S {
       args: [],
     );
   }
+
+  /// `STEP-BY-STEP GUIDE`
+  String get guideStepByStep {
+    return Intl.message(
+      'STEP-BY-STEP GUIDE',
+      name: 'guideStepByStep',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{count} steps`
+  String guideStepCount(String count) {
+    return Intl.message(
+      '$count steps',
+      name: 'guideStepCount',
+      desc: '',
+      args: [count],
+    );
+  }
+
+  /// `Available offline`
+  String get guideOffline {
+    return Intl.message(
+      'Available offline',
+      name: 'guideOffline',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Need urgent help?`
+  String get guideEmergency {
+    return Intl.message(
+      'Need urgent help?',
+      name: 'guideEmergency',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Call 112`
+  String get guideCall112 {
+    return Intl.message('Call 112', name: 'guideCall112', desc: '', args: []);
+  }
+
+  /// `Save guide`
+  String get guideSave {
+    return Intl.message('Save guide', name: 'guideSave', desc: '', args: []);
+  }
+
+  /// `Remove saved guide`
+  String get guideRemoveSaved {
+    return Intl.message(
+      'Remove saved guide',
+      name: 'guideRemoveSaved',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
