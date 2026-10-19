@@ -1416,6 +1416,56 @@ class MessageLookup extends MessageLookupByLibrary {
     "chooseYourLanguage": MessageLookupByLibrary.simpleMessage(
       "Choose Your Language",
     ),
+    "contactCopy": MessageLookupByLibrary.simpleMessage("Copy"),
+    "contactCopyFailed": MessageLookupByLibrary.simpleMessage(
+      "Could not copy. Please select the contact details manually.",
+    ),
+    "contactCopyFallback": MessageLookupByLibrary.simpleMessage(
+      "You can copy the contact details and use another app.",
+    ),
+    "contactEmailBody": MessageLookupByLibrary.simpleMessage(
+      "For app questions, feedback and account-data requests.",
+    ),
+    "contactEmailUnavailable": MessageLookupByLibrary.simpleMessage(
+      "Could not open an email app",
+    ),
+    "contactEmergencyNote": MessageLookupByLibrary.simpleMessage(
+      "These contacts are for app support. For a medical emergency, call your local emergency services.",
+    ),
+    "contactFaqDataA": MessageLookupByLibrary.simpleMessage(
+      "Email us using the address above and describe your request. This version has no in-app account deletion control. Signing out or uninstalling the app does not delete your cloud account or profile.",
+    ),
+    "contactFaqDataQ": MessageLookupByLibrary.simpleMessage(
+      "How do I request access to or deletion of my data?",
+    ),
+    "contactFaqIntro": MessageLookupByLibrary.simpleMessage(
+      "Quick answers about using the app.",
+    ),
+    "contactFaqMapA": MessageLookupByLibrary.simpleMessage(
+      "Check your internet connection. To search around you, enable location services and allow location access when prompted. You can also move the map and choose “Search this area”. Hospital data services may be temporarily unavailable, and listings may be incomplete.",
+    ),
+    "contactFaqMapQ": MessageLookupByLibrary.simpleMessage(
+      "Why can’t I see nearby hospitals?",
+    ),
+    "contactFaqReportA": MessageLookupByLibrary.simpleMessage(
+      "Tell us what happened, the steps that caused the problem, your device model and the app language. A screenshot can help; remove personal details before sharing it. Never send sign-in verification codes.",
+    ),
+    "contactFaqReportQ": MessageLookupByLibrary.simpleMessage(
+      "What should I include in a bug report?",
+    ),
+    "contactFaqSavedA": MessageLookupByLibrary.simpleMessage(
+      "Sign in, open a guide and tap its bookmark icon. Find your saved guides in the Saved tab. Use the same account when signing in on another device.",
+    ),
+    "contactFaqSavedQ": MessageLookupByLibrary.simpleMessage(
+      "How do I save a topic?",
+    ),
+    "contactOpenDialer": MessageLookupByLibrary.simpleMessage("Open dialer"),
+    "contactPhoneBody": MessageLookupByLibrary.simpleMessage(
+      "Open your phone’s dialer using the number below.",
+    ),
+    "contactPhoneUnavailable": MessageLookupByLibrary.simpleMessage(
+      "Could not open the dialer",
+    ),
     "continueText": MessageLookupByLibrary.simpleMessage("Continue"),
     "couldNotLaunchMaps": MessageLookupByLibrary.simpleMessage(
       "Could not launch Yandex or Google Maps.",
@@ -4991,10 +5041,10 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "tanswer": MessageLookupByLibrary.simpleMessage("answer"),
     "tanswer1": MessageLookupByLibrary.simpleMessage(
-      "You don\'t need to reset password cause you automatically login to your account using Google Account.",
+      "Choose Google sign-in on the login screen. Use the same Google account to access your profile and saved topics on another device.",
     ),
     "tanswer2": MessageLookupByLibrary.simpleMessage(
-      "Use any of the contact methods above or visit our website for more options.",
+      "First-aid guides and quizzes are included in the app. Sign-in, account synchronization and hospital maps need an internet connection.",
     ),
     "tareYouSureCall112": MessageLookupByLibrary.simpleMessage(
       "Are you sure you want to call 112?",
@@ -5061,9 +5111,6 @@ class MessageLookup extends MessageLookupByLibrary {
       "Please call this number directly: ",
     ),
     "tcancel": MessageLookupByLibrary.simpleMessage("Cancel"),
-    "tchatWithAgent": MessageLookupByLibrary.simpleMessage(
-      "Chat with an agent",
-    ),
     "tclear": MessageLookupByLibrary.simpleMessage("Clear"),
     "tclearAll": MessageLookupByLibrary.simpleMessage("Clear All"),
     "tclearAllTopics": MessageLookupByLibrary.simpleMessage(
@@ -5074,7 +5121,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "tconfirm": MessageLookupByLibrary.simpleMessage("Confirm"),
     "tcontactOurSupportTeam": MessageLookupByLibrary.simpleMessage(
-      "Contact our support team through any of the following methods:",
+      "Questions about PSU First Aid? Contact us by email or phone, or check the answers below.",
     ),
     "tcontactUsIn": MessageLookupByLibrary.simpleMessage(
       "Contact Us:\nyvhiku@yandex.ru",
@@ -5085,7 +5132,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Didn\'t receive any code?",
     ),
     "temailCopied": MessageLookupByLibrary.simpleMessage("Email copied"),
-    "temailSupport": MessageLookupByLibrary.simpleMessage("Email Support"),
+    "temailSupport": MessageLookupByLibrary.simpleMessage("Email us"),
     "temergencyCall": MessageLookupByLibrary.simpleMessage("EMERGENCY call"),
     "temergencyNumber": MessageLookupByLibrary.simpleMessage(
       "EMERGENCY NUMBER",
@@ -5101,10 +5148,6 @@ class MessageLookup extends MessageLookupByLibrary {
       "Get help via email",
     ),
     "title": MessageLookupByLibrary.simpleMessage("Fractures"),
-    "tliveChat": MessageLookupByLibrary.simpleMessage("Live Chat"),
-    "tliveChatComingSoon": MessageLookupByLibrary.simpleMessage(
-      "Live chat coming soon!",
-    ),
     "tnoSavedTopicYet": MessageLookupByLibrary.simpleMessage(
       "No saved topics yet",
     ),
@@ -5112,7 +5155,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "totpVerification": MessageLookupByLibrary.simpleMessage(
       "OTP Verification",
     ),
-    "tphoneSupport": MessageLookupByLibrary.simpleMessage("Phone Support"),
+    "tphoneSupport": MessageLookupByLibrary.simpleMessage("Phone"),
     "tpleaseContactUsAt": MessageLookupByLibrary.simpleMessage(
       "Please contact us at:",
     ),
@@ -5152,11 +5195,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Your choices and data requests",
     ),
     "tquestion": MessageLookupByLibrary.simpleMessage("question"),
-    "tquestion1": MessageLookupByLibrary.simpleMessage(
-      "How do I reset my password?",
-    ),
+    "tquestion1": MessageLookupByLibrary.simpleMessage("How do I sign in?"),
     "tquestion2": MessageLookupByLibrary.simpleMessage(
-      "How do I contact customer service?",
+      "Can I use the app offline?",
     ),
     "tremove": MessageLookupByLibrary.simpleMessage("Remove"),
     "tremoveThisTopic": MessageLookupByLibrary.simpleMessage(
@@ -5168,16 +5209,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "tresend": MessageLookupByLibrary.simpleMessage("Resend"),
     "tretryLoading": MessageLookupByLibrary.simpleMessage("Retry Loading"),
     "tsavedTopics": MessageLookupByLibrary.simpleMessage("Saved Topics"),
-    "tsendEmail": MessageLookupByLibrary.simpleMessage("Send Email"),
-    "tstartChat": MessageLookupByLibrary.simpleMessage("Start Chat"),
-    "tsubject": MessageLookupByLibrary.simpleMessage("App Support Request"),
+    "tsendEmail": MessageLookupByLibrary.simpleMessage("Send email"),
+    "tsubject": MessageLookupByLibrary.simpleMessage("PSU First Aid support"),
     "ttellOthersAboutYou": MessageLookupByLibrary.simpleMessage(
       "Tell others about yourself",
     ),
     "tuserNotFound": MessageLookupByLibrary.simpleMessage("No user data found"),
     "tverification": MessageLookupByLibrary.simpleMessage("Verification"),
     "tweAreHereToHelp": MessageLookupByLibrary.simpleMessage(
-      "We\'re here to help!",
+      "How can we help?",
     ),
     "ufaa_law": MessageLookupByLibrary.simpleMessage(
       "(Law No. 220, September 1, 2024)",

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:first_aid_app/generated/l10n.dart';
 import 'package:first_aid_app/src/features/authentication/screens/contacts/contact_support.dart';
+import 'package:first_aid_app/src/features/authentication/screens/contacts/support_details.dart';
 import '../home/home_theme.dart';
 import '../quizes/quiz_widgets.dart';
 
@@ -267,7 +268,7 @@ class InformationContactCard extends StatelessWidget {
           ],
           const SizedBox(height: 10),
           const SelectableText(
-            'yvhiku@yandex.ru',
+            supportEmail,
             textDirection: TextDirection.ltr,
             style: TextStyle(fontSize: 14, color: QuizColors.muted),
           ),

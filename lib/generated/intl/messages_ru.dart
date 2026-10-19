@@ -1430,6 +1430,58 @@ class MessageLookup extends MessageLookupByLibrary {
     "chooseYourLanguage": MessageLookupByLibrary.simpleMessage(
       "Выберите ваш язык",
     ),
+    "contactCopy": MessageLookupByLibrary.simpleMessage("Копировать"),
+    "contactCopyFailed": MessageLookupByLibrary.simpleMessage(
+      "Не удалось скопировать. Выделите контактные данные вручную.",
+    ),
+    "contactCopyFallback": MessageLookupByLibrary.simpleMessage(
+      "Скопируйте контактные данные и используйте другое приложение.",
+    ),
+    "contactEmailBody": MessageLookupByLibrary.simpleMessage(
+      "Вопросы о приложении, отзывы и запросы о данных аккаунта.",
+    ),
+    "contactEmailUnavailable": MessageLookupByLibrary.simpleMessage(
+      "Не удалось открыть почту",
+    ),
+    "contactEmergencyNote": MessageLookupByLibrary.simpleMessage(
+      "Эти контакты предназначены для поддержки приложения. При экстренной медицинской ситуации звоните в местные экстренные службы.",
+    ),
+    "contactFaqDataA": MessageLookupByLibrary.simpleMessage(
+      "Напишите на указанную выше почту и опишите запрос. В этой версии нет функции удаления аккаунта внутри приложения. Выход или удаление приложения не удаляют облачный аккаунт или профиль.",
+    ),
+    "contactFaqDataQ": MessageLookupByLibrary.simpleMessage(
+      "Как запросить доступ к данным или их удаление?",
+    ),
+    "contactFaqIntro": MessageLookupByLibrary.simpleMessage(
+      "Короткие ответы об использовании приложения.",
+    ),
+    "contactFaqMapA": MessageLookupByLibrary.simpleMessage(
+      "Проверьте подключение к интернету. Для поиска рядом включите геолокацию и разрешите доступ при запросе. Также можно переместить карту и выбрать «Искать в этой области». Сервис данных больниц может быть временно недоступен, а список — неполным.",
+    ),
+    "contactFaqMapQ": MessageLookupByLibrary.simpleMessage(
+      "Почему я не вижу больницы рядом?",
+    ),
+    "contactFaqReportA": MessageLookupByLibrary.simpleMessage(
+      "Опишите, что произошло, какие действия вызвали проблему, модель устройства и язык приложения. Скриншот может помочь; уберите личные данные перед отправкой. Не отправляйте коды подтверждения входа.",
+    ),
+    "contactFaqReportQ": MessageLookupByLibrary.simpleMessage(
+      "Что указать в сообщении об ошибке?",
+    ),
+    "contactFaqSavedA": MessageLookupByLibrary.simpleMessage(
+      "Войдите в аккаунт, откройте руководство и нажмите значок закладки. Сохранённые руководства находятся на вкладке «Сохранённое». На другом устройстве используйте тот же аккаунт.",
+    ),
+    "contactFaqSavedQ": MessageLookupByLibrary.simpleMessage(
+      "Как сохранить тему?",
+    ),
+    "contactOpenDialer": MessageLookupByLibrary.simpleMessage(
+      "Открыть телефон",
+    ),
+    "contactPhoneBody": MessageLookupByLibrary.simpleMessage(
+      "Откройте приложение телефона с указанным ниже номером.",
+    ),
+    "contactPhoneUnavailable": MessageLookupByLibrary.simpleMessage(
+      "Не удалось открыть телефон",
+    ),
     "continueText": MessageLookupByLibrary.simpleMessage("Продолжить"),
     "couldNotLaunchMaps": MessageLookupByLibrary.simpleMessage(
       "Не удалось открыть Яндекс.Карты или Google Карты.",
@@ -5018,10 +5070,10 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "tanswer": MessageLookupByLibrary.simpleMessage("ответ"),
     "tanswer1": MessageLookupByLibrary.simpleMessage(
-      "Вам не нужно сбрасывать пароль, так как вы автоматически входите в аккаунт с помощью Google.",
+      "Выберите вход через Google на экране входа. Используйте тот же аккаунт Google для доступа к профилю и сохранённым темам на другом устройстве.",
     ),
     "tanswer2": MessageLookupByLibrary.simpleMessage(
-      "Используйте любой из способов связи выше или посетите наш сайт для дополнительных вариантов.",
+      "Руководства по первой помощи и тесты включены в приложение. Для входа, синхронизации аккаунта и карт больниц нужен интернет.",
     ),
     "tareYouSureCall112": MessageLookupByLibrary.simpleMessage(
       "Вы уверены, что хотите позвонить по номеру 112?",
@@ -5094,7 +5146,6 @@ class MessageLookup extends MessageLookupByLibrary {
       "Пожалуйста, позвоните по этому номеру напрямую: ",
     ),
     "tcancel": MessageLookupByLibrary.simpleMessage("Отмена"),
-    "tchatWithAgent": MessageLookupByLibrary.simpleMessage("Чат с агентом"),
     "tclear": MessageLookupByLibrary.simpleMessage("Очистить"),
     "tclearAll": MessageLookupByLibrary.simpleMessage("Очистить все"),
     "tclearAllTopics": MessageLookupByLibrary.simpleMessage(
@@ -5105,7 +5156,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "tconfirm": MessageLookupByLibrary.simpleMessage("Подтвердить"),
     "tcontactOurSupportTeam": MessageLookupByLibrary.simpleMessage(
-      "Свяжитесь с нашей службой поддержки любым из следующих способов:",
+      "Есть вопросы о PSU First Aid? Напишите нам, воспользуйтесь телефоном или посмотрите ответы ниже.",
     ),
     "tcontactUsIn": MessageLookupByLibrary.simpleMessage(
       "Свяжитесь с нами:\nyvhiku@yandex.ru",
@@ -5120,9 +5171,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "temailCopied": MessageLookupByLibrary.simpleMessage(
       "Электронная почта скопирована",
     ),
-    "temailSupport": MessageLookupByLibrary.simpleMessage(
-      "Поддержка по электронной почте",
-    ),
+    "temailSupport": MessageLookupByLibrary.simpleMessage("Напишите нам"),
     "temergencyCall": MessageLookupByLibrary.simpleMessage("ЭКСТРЕННЫЙ вызов"),
     "temergencyNumber": MessageLookupByLibrary.simpleMessage(
       "ЭКСТРЕННЫЙ НОМЕР",
@@ -5138,18 +5187,12 @@ class MessageLookup extends MessageLookupByLibrary {
       "Получить помощь по электронной почте",
     ),
     "title": MessageLookupByLibrary.simpleMessage("Переломы"),
-    "tliveChat": MessageLookupByLibrary.simpleMessage("Онлайн-чат"),
-    "tliveChatComingSoon": MessageLookupByLibrary.simpleMessage(
-      "Онлайн-чат скоро будет доступен!",
-    ),
     "tnoSavedTopicYet": MessageLookupByLibrary.simpleMessage(
       "Пока нет сохраненных тем",
     ),
     "topics": MessageLookupByLibrary.simpleMessage("Темы"),
     "totpVerification": MessageLookupByLibrary.simpleMessage("Проверка OTP"),
-    "tphoneSupport": MessageLookupByLibrary.simpleMessage(
-      "Телефонная поддержка",
-    ),
+    "tphoneSupport": MessageLookupByLibrary.simpleMessage("Телефон"),
     "tpleaseContactUsAt": MessageLookupByLibrary.simpleMessage(
       "Пожалуйста, свяжитесь с нами по адресу:",
     ),
@@ -5191,9 +5234,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "Ваши настройки и запросы о данных",
     ),
     "tquestion": MessageLookupByLibrary.simpleMessage("вопрос"),
-    "tquestion1": MessageLookupByLibrary.simpleMessage("Как сбросить пароль?"),
+    "tquestion1": MessageLookupByLibrary.simpleMessage("Как войти в аккаунт?"),
     "tquestion2": MessageLookupByLibrary.simpleMessage(
-      "Как связаться со службой поддержки?",
+      "Можно ли пользоваться без интернета?",
     ),
     "tremove": MessageLookupByLibrary.simpleMessage("Удалить"),
     "tremoveThisTopic": MessageLookupByLibrary.simpleMessage(
@@ -5205,11 +5248,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "tresend": MessageLookupByLibrary.simpleMessage("Отправить снова"),
     "tretryLoading": MessageLookupByLibrary.simpleMessage("Повторить загрузку"),
     "tsavedTopics": MessageLookupByLibrary.simpleMessage("Сохраненные темы"),
-    "tsendEmail": MessageLookupByLibrary.simpleMessage("Отправить письмо"),
-    "tstartChat": MessageLookupByLibrary.simpleMessage("Начать чат"),
-    "tsubject": MessageLookupByLibrary.simpleMessage(
-      "Запрос на поддержку приложения",
-    ),
+    "tsendEmail": MessageLookupByLibrary.simpleMessage("Написать письмо"),
+    "tsubject": MessageLookupByLibrary.simpleMessage("Поддержка PSU First Aid"),
     "ttellOthersAboutYou": MessageLookupByLibrary.simpleMessage(
       "Расскажите о себе другим",
     ),
@@ -5218,7 +5258,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "tverification": MessageLookupByLibrary.simpleMessage("Проверка"),
     "tweAreHereToHelp": MessageLookupByLibrary.simpleMessage(
-      "Мы здесь, чтобы помочь!",
+      "Чем мы можем помочь?",
     ),
     "ufaa_law": MessageLookupByLibrary.simpleMessage(
       "(Закон № 220, 1 сентября 2024 года)",

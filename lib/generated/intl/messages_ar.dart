@@ -1330,6 +1330,58 @@ class MessageLookup extends MessageLookupByLibrary {
     "chooseYourLanguage": MessageLookupByLibrary.simpleMessage(
       "اختر لغتك المفضلة",
     ),
+    "contactCopy": MessageLookupByLibrary.simpleMessage("نسخ"),
+    "contactCopyFailed": MessageLookupByLibrary.simpleMessage(
+      "تعذر النسخ. حدد بيانات التواصل يدويًا.",
+    ),
+    "contactCopyFallback": MessageLookupByLibrary.simpleMessage(
+      "يمكنك نسخ بيانات التواصل واستخدام تطبيق آخر.",
+    ),
+    "contactEmailBody": MessageLookupByLibrary.simpleMessage(
+      "لأسئلة التطبيق والملاحظات وطلبات بيانات الحساب.",
+    ),
+    "contactEmailUnavailable": MessageLookupByLibrary.simpleMessage(
+      "تعذر فتح تطبيق البريد",
+    ),
+    "contactEmergencyNote": MessageLookupByLibrary.simpleMessage(
+      "هذه وسائل تواصل لدعم التطبيق. في الحالات الطبية الطارئة، اتصل بخدمات الطوارئ المحلية.",
+    ),
+    "contactFaqDataA": MessageLookupByLibrary.simpleMessage(
+      "راسلنا على البريد أعلاه واشرح طلبك. لا يتوفر في هذا الإصدار خيار لحذف الحساب داخل التطبيق. لا يؤدي تسجيل الخروج أو إلغاء تثبيت التطبيق إلى حذف حسابك أو ملفك السحابي.",
+    ),
+    "contactFaqDataQ": MessageLookupByLibrary.simpleMessage(
+      "كيف أطلب الوصول إلى بياناتي أو حذفها؟",
+    ),
+    "contactFaqIntro": MessageLookupByLibrary.simpleMessage(
+      "إجابات سريعة حول استخدام التطبيق.",
+    ),
+    "contactFaqMapA": MessageLookupByLibrary.simpleMessage(
+      "تحقق من اتصالك بالإنترنت. للبحث حولك، فعّل خدمات الموقع واسمح بالوصول إليه عند الطلب. يمكنك أيضًا تحريك الخريطة واختيار «ابحث في هذه المنطقة». قد تتعذر خدمات بيانات المستشفيات مؤقتًا، وقد تكون القوائم غير مكتملة.",
+    ),
+    "contactFaqMapQ": MessageLookupByLibrary.simpleMessage(
+      "لماذا لا تظهر المستشفيات القريبة؟",
+    ),
+    "contactFaqReportA": MessageLookupByLibrary.simpleMessage(
+      "اشرح ما حدث والخطوات التي أدت إلى المشكلة وطراز جهازك ولغة التطبيق. قد تفيد لقطة شاشة؛ أزل بياناتك الشخصية قبل مشاركتها. لا ترسل رموز التحقق الخاصة بتسجيل الدخول.",
+    ),
+    "contactFaqReportQ": MessageLookupByLibrary.simpleMessage(
+      "ما المعلومات المفيدة عند الإبلاغ عن مشكلة؟",
+    ),
+    "contactFaqSavedA": MessageLookupByLibrary.simpleMessage(
+      "سجّل الدخول، ثم افتح دليلًا واضغط على رمز الإشارة المرجعية. ستجد الأدلة في تبويب المحفوظات. استخدم الحساب نفسه عند الدخول على جهاز آخر.",
+    ),
+    "contactFaqSavedQ": MessageLookupByLibrary.simpleMessage(
+      "كيف أحفظ موضوعًا؟",
+    ),
+    "contactOpenDialer": MessageLookupByLibrary.simpleMessage(
+      "فتح تطبيق الهاتف",
+    ),
+    "contactPhoneBody": MessageLookupByLibrary.simpleMessage(
+      "افتح تطبيق الهاتف باستخدام الرقم أدناه.",
+    ),
+    "contactPhoneUnavailable": MessageLookupByLibrary.simpleMessage(
+      "تعذر فتح تطبيق الهاتف",
+    ),
     "continueText": MessageLookupByLibrary.simpleMessage("متابعة"),
     "couldNotLaunchMaps": MessageLookupByLibrary.simpleMessage(
       "تعذر فتح خرائط ياندكس أو خرائط جوجل.",
@@ -4692,10 +4744,10 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "tanswer": MessageLookupByLibrary.simpleMessage("إجابة"),
     "tanswer1": MessageLookupByLibrary.simpleMessage(
-      "لا تحتاج إلى إعادة تعيين كلمة المرور لأنك تقوم بتسجيل الدخول تلقائيًا باستخدام حساب جوجل.",
+      "اختر تسجيل الدخول باستخدام Google في شاشة الدخول. استخدم حساب Google نفسه للوصول إلى ملفك والمواضيع المحفوظة على جهاز آخر.",
     ),
     "tanswer2": MessageLookupByLibrary.simpleMessage(
-      "استخدم أي من طرق الاتصال المذكورة أعلاه أو قم بزيارة موقعنا لمزيد من الخيارات.",
+      "أدلة الإسعافات الأولية والاختبارات مضمنة في التطبيق. يتطلب تسجيل الدخول ومزامنة الحساب وخرائط المستشفيات اتصالًا بالإنترنت.",
     ),
     "tareYouSureCall112": MessageLookupByLibrary.simpleMessage(
       "هل أنت متأكد أنك تريد الاتصال بالرقم 112؟",
@@ -4762,7 +4814,6 @@ class MessageLookup extends MessageLookupByLibrary {
       "يرجى الاتصال بهذا الرقم مباشرة: ",
     ),
     "tcancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
-    "tchatWithAgent": MessageLookupByLibrary.simpleMessage("الدردشة مع وكيل"),
     "tclear": MessageLookupByLibrary.simpleMessage("مسح"),
     "tclearAll": MessageLookupByLibrary.simpleMessage("مسح الكل"),
     "tclearAllTopics": MessageLookupByLibrary.simpleMessage(
@@ -4773,7 +4824,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "tconfirm": MessageLookupByLibrary.simpleMessage("تأكيد"),
     "tcontactOurSupportTeam": MessageLookupByLibrary.simpleMessage(
-      "اتصل بفريق الدعم لدينا عبر أي من الطرق التالية:",
+      "هل لديك أسئلة حول PSU First Aid؟ تواصل معنا بالبريد أو الهاتف، أو اطلع على الإجابات أدناه.",
     ),
     "tcontactUsIn": MessageLookupByLibrary.simpleMessage(
       "اتصل بنا:\nyvhiku@yandex.ru",
@@ -4786,9 +4837,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "temailCopied": MessageLookupByLibrary.simpleMessage(
       "تم نسخ البريد الإلكتروني",
     ),
-    "temailSupport": MessageLookupByLibrary.simpleMessage(
-      "الدعم عبر البريد الإلكتروني",
-    ),
+    "temailSupport": MessageLookupByLibrary.simpleMessage("راسلنا"),
     "temergencyCall": MessageLookupByLibrary.simpleMessage("مكالمة طوارئ"),
     "temergencyNumber": MessageLookupByLibrary.simpleMessage("رقم الطوارئ"),
     "tenter6DigitCode": MessageLookupByLibrary.simpleMessage(
@@ -4802,16 +4851,12 @@ class MessageLookup extends MessageLookupByLibrary {
       "احصل على المساعدة عبر البريد الإلكتروني",
     ),
     "title": MessageLookupByLibrary.simpleMessage("الكسور"),
-    "tliveChat": MessageLookupByLibrary.simpleMessage("الدردشة المباشرة"),
-    "tliveChatComingSoon": MessageLookupByLibrary.simpleMessage(
-      "الدردشة المباشرة قريبًا!",
-    ),
     "tnoSavedTopicYet": MessageLookupByLibrary.simpleMessage(
       "لا توجد مواضيع محفوظة بعد",
     ),
     "topics": MessageLookupByLibrary.simpleMessage("المواضيع"),
     "totpVerification": MessageLookupByLibrary.simpleMessage("التحقق برمز OTP"),
-    "tphoneSupport": MessageLookupByLibrary.simpleMessage("الدعم الهاتفي"),
+    "tphoneSupport": MessageLookupByLibrary.simpleMessage("الهاتف"),
     "tpleaseContactUsAt": MessageLookupByLibrary.simpleMessage(
       "يرجى الاتصال بنا على:",
     ),
@@ -4851,11 +4896,9 @@ class MessageLookup extends MessageLookupByLibrary {
       "خياراتك وطلبات البيانات",
     ),
     "tquestion": MessageLookupByLibrary.simpleMessage("سؤال"),
-    "tquestion1": MessageLookupByLibrary.simpleMessage(
-      "كيف يمكنني إعادة تعيين كلمة المرور؟",
-    ),
+    "tquestion1": MessageLookupByLibrary.simpleMessage("كيف أسجّل الدخول؟"),
     "tquestion2": MessageLookupByLibrary.simpleMessage(
-      "كيف يمكنني الاتصال بخدمة العملاء؟",
+      "هل يمكنني استخدام التطبيق دون إنترنت؟",
     ),
     "tremove": MessageLookupByLibrary.simpleMessage("إزالة"),
     "tremoveThisTopic": MessageLookupByLibrary.simpleMessage(
@@ -4867,9 +4910,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "tresend": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
     "tretryLoading": MessageLookupByLibrary.simpleMessage("إعادة المحاولة"),
     "tsavedTopics": MessageLookupByLibrary.simpleMessage("المواضيع المحفوظة"),
-    "tsendEmail": MessageLookupByLibrary.simpleMessage("إرسال بريد إلكتروني"),
-    "tstartChat": MessageLookupByLibrary.simpleMessage("ابدأ الدردشة"),
-    "tsubject": MessageLookupByLibrary.simpleMessage("طلب دعم التطبيق"),
+    "tsendEmail": MessageLookupByLibrary.simpleMessage("إرسال بريد"),
+    "tsubject": MessageLookupByLibrary.simpleMessage("دعم PSU First Aid"),
     "ttellOthersAboutYou": MessageLookupByLibrary.simpleMessage(
       "أخبر الآخرين عن نفسك",
     ),
@@ -4878,7 +4920,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "tverification": MessageLookupByLibrary.simpleMessage("التحقق"),
     "tweAreHereToHelp": MessageLookupByLibrary.simpleMessage(
-      "نحن هنا لمساعدتك!",
+      "كيف يمكننا مساعدتك؟",
     ),
     "ufaa_law": MessageLookupByLibrary.simpleMessage(
       "(القانون رقم 220، 1 سبتمبر 2024)",

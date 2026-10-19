@@ -7350,10 +7350,10 @@ class S {
     return Intl.message('tel', name: 'tTel', desc: '', args: []);
   }
 
-  /// `App Support Request`
+  /// `PSU First Aid support`
   String get tsubject {
     return Intl.message(
-      'App Support Request',
+      'PSU First Aid support',
       name: 'tsubject',
       desc: '',
       args: [],
@@ -7440,34 +7440,29 @@ class S {
     );
   }
 
-  /// `We're here to help!`
+  /// `How can we help?`
   String get tweAreHereToHelp {
     return Intl.message(
-      'We\'re here to help!',
+      'How can we help?',
       name: 'tweAreHereToHelp',
       desc: '',
       args: [],
     );
   }
 
-  /// `Contact our support team through any of the following methods:`
+  /// `Questions about PSU First Aid? Contact us by email or phone, or check the answers below.`
   String get tcontactOurSupportTeam {
     return Intl.message(
-      'Contact our support team through any of the following methods:',
+      'Questions about PSU First Aid? Contact us by email or phone, or check the answers below.',
       name: 'tcontactOurSupportTeam',
       desc: '',
       args: [],
     );
   }
 
-  /// `Email Support`
+  /// `Email us`
   String get temailSupport {
-    return Intl.message(
-      'Email Support',
-      name: 'temailSupport',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Email us', name: 'temailSupport', desc: '', args: []);
   }
 
   /// `Get help via email`
@@ -7480,19 +7475,14 @@ class S {
     );
   }
 
-  /// `Send Email`
+  /// `Send email`
   String get tsendEmail {
-    return Intl.message('Send Email', name: 'tsendEmail', desc: '', args: []);
+    return Intl.message('Send email', name: 'tsendEmail', desc: '', args: []);
   }
 
-  /// `Phone Support`
+  /// `Phone`
   String get tphoneSupport {
-    return Intl.message(
-      'Phone Support',
-      name: 'tphoneSupport',
-      desc: '',
-      args: [],
-    );
+    return Intl.message('Phone', name: 'tphoneSupport', desc: '', args: []);
   }
 
   /// `Call our support team`
@@ -7508,36 +7498,6 @@ class S {
   /// `Call Now`
   String get tcallNow {
     return Intl.message('Call Now', name: 'tcallNow', desc: '', args: []);
-  }
-
-  /// `Live Chat`
-  String get tliveChat {
-    return Intl.message('Live Chat', name: 'tliveChat', desc: '', args: []);
-  }
-
-  /// `Chat with an agent`
-  String get tchatWithAgent {
-    return Intl.message(
-      'Chat with an agent',
-      name: 'tchatWithAgent',
-      desc: '',
-      args: [],
-    );
-  }
-
-  /// `Start Chat`
-  String get tstartChat {
-    return Intl.message('Start Chat', name: 'tstartChat', desc: '', args: []);
-  }
-
-  /// `Live chat coming soon!`
-  String get tliveChatComingSoon {
-    return Intl.message(
-      'Live chat coming soon!',
-      name: 'tliveChatComingSoon',
-      desc: '',
-      args: [],
-    );
   }
 
   /// `Frequently Asked Questions`
@@ -7560,40 +7520,40 @@ class S {
     return Intl.message('answer', name: 'tanswer', desc: '', args: []);
   }
 
-  /// `How do I reset my password?`
+  /// `How do I sign in?`
   String get tquestion1 {
     return Intl.message(
-      'How do I reset my password?',
+      'How do I sign in?',
       name: 'tquestion1',
       desc: '',
       args: [],
     );
   }
 
-  /// `You don't need to reset password cause you automatically login to your account using Google Account.`
+  /// `Choose Google sign-in on the login screen. Use the same Google account to access your profile and saved topics on another device.`
   String get tanswer1 {
     return Intl.message(
-      'You don\'t need to reset password cause you automatically login to your account using Google Account.',
+      'Choose Google sign-in on the login screen. Use the same Google account to access your profile and saved topics on another device.',
       name: 'tanswer1',
       desc: '',
       args: [],
     );
   }
 
-  /// `How do I contact customer service?`
+  /// `Can I use the app offline?`
   String get tquestion2 {
     return Intl.message(
-      'How do I contact customer service?',
+      'Can I use the app offline?',
       name: 'tquestion2',
       desc: '',
       args: [],
     );
   }
 
-  /// `Use any of the contact methods above or visit our website for more options.`
+  /// `First-aid guides and quizzes are included in the app. Sign-in, account synchronization and hospital maps need an internet connection.`
   String get tanswer2 {
     return Intl.message(
-      'Use any of the contact methods above or visit our website for more options.',
+      'First-aid guides and quizzes are included in the app. Sign-in, account synchronization and hospital maps need an internet connection.',
       name: 'tanswer2',
       desc: '',
       args: [],
@@ -20790,6 +20750,181 @@ class S {
     return Intl.message(
       'Could not open the link. Please try again.',
       name: 'profileLinkFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `For app questions, feedback and account-data requests.`
+  String get contactEmailBody {
+    return Intl.message(
+      'For app questions, feedback and account-data requests.',
+      name: 'contactEmailBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Open your phone’s dialer using the number below.`
+  String get contactPhoneBody {
+    return Intl.message(
+      'Open your phone’s dialer using the number below.',
+      name: 'contactPhoneBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Open dialer`
+  String get contactOpenDialer {
+    return Intl.message(
+      'Open dialer',
+      name: 'contactOpenDialer',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Copy`
+  String get contactCopy {
+    return Intl.message('Copy', name: 'contactCopy', desc: '', args: []);
+  }
+
+  /// `These contacts are for app support. For a medical emergency, call your local emergency services.`
+  String get contactEmergencyNote {
+    return Intl.message(
+      'These contacts are for app support. For a medical emergency, call your local emergency services.',
+      name: 'contactEmergencyNote',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Quick answers about using the app.`
+  String get contactFaqIntro {
+    return Intl.message(
+      'Quick answers about using the app.',
+      name: 'contactFaqIntro',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `How do I save a topic?`
+  String get contactFaqSavedQ {
+    return Intl.message(
+      'How do I save a topic?',
+      name: 'contactFaqSavedQ',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign in, open a guide and tap its bookmark icon. Find your saved guides in the Saved tab. Use the same account when signing in on another device.`
+  String get contactFaqSavedA {
+    return Intl.message(
+      'Sign in, open a guide and tap its bookmark icon. Find your saved guides in the Saved tab. Use the same account when signing in on another device.',
+      name: 'contactFaqSavedA',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Why can’t I see nearby hospitals?`
+  String get contactFaqMapQ {
+    return Intl.message(
+      'Why can’t I see nearby hospitals?',
+      name: 'contactFaqMapQ',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Check your internet connection. To search around you, enable location services and allow location access when prompted. You can also move the map and choose “Search this area”. Hospital data services may be temporarily unavailable, and listings may be incomplete.`
+  String get contactFaqMapA {
+    return Intl.message(
+      'Check your internet connection. To search around you, enable location services and allow location access when prompted. You can also move the map and choose “Search this area”. Hospital data services may be temporarily unavailable, and listings may be incomplete.',
+      name: 'contactFaqMapA',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What should I include in a bug report?`
+  String get contactFaqReportQ {
+    return Intl.message(
+      'What should I include in a bug report?',
+      name: 'contactFaqReportQ',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tell us what happened, the steps that caused the problem, your device model and the app language. A screenshot can help; remove personal details before sharing it. Never send sign-in verification codes.`
+  String get contactFaqReportA {
+    return Intl.message(
+      'Tell us what happened, the steps that caused the problem, your device model and the app language. A screenshot can help; remove personal details before sharing it. Never send sign-in verification codes.',
+      name: 'contactFaqReportA',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `How do I request access to or deletion of my data?`
+  String get contactFaqDataQ {
+    return Intl.message(
+      'How do I request access to or deletion of my data?',
+      name: 'contactFaqDataQ',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email us using the address above and describe your request. This version has no in-app account deletion control. Signing out or uninstalling the app does not delete your cloud account or profile.`
+  String get contactFaqDataA {
+    return Intl.message(
+      'Email us using the address above and describe your request. This version has no in-app account deletion control. Signing out or uninstalling the app does not delete your cloud account or profile.',
+      name: 'contactFaqDataA',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Could not open an email app`
+  String get contactEmailUnavailable {
+    return Intl.message(
+      'Could not open an email app',
+      name: 'contactEmailUnavailable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Could not open the dialer`
+  String get contactPhoneUnavailable {
+    return Intl.message(
+      'Could not open the dialer',
+      name: 'contactPhoneUnavailable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You can copy the contact details and use another app.`
+  String get contactCopyFallback {
+    return Intl.message(
+      'You can copy the contact details and use another app.',
+      name: 'contactCopyFallback',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Could not copy. Please select the contact details manually.`
+  String get contactCopyFailed {
+    return Intl.message(
+      'Could not copy. Please select the contact details manually.',
+      name: 'contactCopyFailed',
       desc: '',
       args: [],
     );
