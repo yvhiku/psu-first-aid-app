@@ -118,34 +118,34 @@ class _LoginScreenState extends State<LoginScreen> {
                                 context,
                                 listen: false,
                               );
-                              await ap.signInWithGoogle(
-                                context,
-                                () {
-                                  // For new user (navigate to user info)
-                                  setState(() {
-                                    _isLoading = false;
-                                  });
-                                  Navigator.pushReplacement(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (_) =>
-                                          const UserInformationScreen(),
-                                    ),
-                                  );
-                                },
-                                () {
-                                  // For existing user (go straight to NavBar)
-                                  setState(() {
-                                    _isLoading = false;
-                                  });
-                                  Navigator.pushReplacement(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (_) => const NavBar(),
-                                    ),
-                                  );
-                                },
-                              );
+                              try {
+                                await ap.signInWithGoogle(
+                                  context,
+                                  () {
+                                    if (!mounted) return;
+                                    Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (_) =>
+                                            const UserInformationScreen(),
+                                      ),
+                                    );
+                                  },
+                                  () {
+                                    if (!mounted) return;
+                                    Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (_) => const NavBar(),
+                                      ),
+                                    );
+                                  },
+                                );
+                              } finally {
+                                if (mounted) {
+                                  setState(() => _isLoading = false);
+                                }
+                              }
                             },
                             label: Text(S.of(context).tSignInWithGoogle),
                           ),

@@ -1,50 +1,42 @@
 {
   "project_info": {
-    "project_number": "301732570592",
-    "firebase_url": "https://firstaidapp1-811e3-default-rtdb.europe-west1.firebasedatabase.app",
-    "project_id": "firstaidapp1-811e3",
-    "storage_bucket": "firstaidapp1-811e3.firebasestorage.app"
+    "project_number": "1015974037557",
+    "project_id": "psu-first-aid",
+    "storage_bucket": "psu-first-aid.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:301732570592:android:fa101e491a42ad23bcf785",
+        "mobilesdk_app_id": "1:1015974037557:android:530e83a26f3d007cdf497c",
         "android_client_info": {
-          "package_name": "com.example.first_aid_app"
+          "package_name": "com.psu.first_aid_app"
         }
       },
       "oauth_client": [
         {
-          "client_id": "301732570592-lu699u7h1t4g4g05bofm12578j3vj3ck.apps.googleusercontent.com",
+          "client_id": "1015974037557-t2j5e9odfth1un9ip3tc2u8gt8tks1mv.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.first_aid_app",
-            "certificate_hash": "3fc7dd9f453dd4a6fdeebef59c2a5dd1cac27e17"
+            "package_name": "com.psu.first_aid_app",
+            "certificate_hash": "97e82dbd1e86e99b59aca6b68164d3b6dab81465"
           }
         },
         {
-          "client_id": "301732570592-p050j6442pfinimmb4rd5mi5o40c0agc.apps.googleusercontent.com",
+          "client_id": "1015974037557-kdt3a6rk48me25jl3apimjoju9ek1841.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBMded3-zC6r4J91ACn0gkUMlB6grCz_MQ"
+          "current_key": "AIzaSyACDxoWFr71O6UWOOnvKdNOu1W7AxnRGZ4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "301732570592-p050j6442pfinimmb4rd5mi5o40c0agc.apps.googleusercontent.com",
+              "client_id": "1015974037557-kdt3a6rk48me25jl3apimjoju9ek1841.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "301732570592-074uuee6sdig4ukrb4fs03hnd26ufaoc.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.firstAidApp"
-              }
             }
           ]
         }

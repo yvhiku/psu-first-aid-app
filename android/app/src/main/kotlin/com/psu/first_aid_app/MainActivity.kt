@@ -1,4 +1,4 @@
-package com.example.first_aid_app
+package com.psu.first_aid_app
 
 import io.flutter.embedding.android.FlutterActivity
 

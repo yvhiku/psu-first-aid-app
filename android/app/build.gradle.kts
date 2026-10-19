@@ -6,16 +6,14 @@ plugins {
 }
 
 android {
-    // TODO: set this to your real package
-    namespace = "com.example.first_aid_app"
+    namespace = "com.psu.first_aid_app"
 
     // Versions from Flutter’s Gradle plugin
     compileSdk = flutter.compileSdkVersion.toInt()
     ndkVersion = flutter.ndkVersion
 
     defaultConfig {
-        // TODO: set to your real app id
-        applicationId = "com.example.first_aid_app"
+        applicationId = "com.psu.first_aid_app"
 
         // ✅ Kotlin DSL assignments (no minSdkVersion/targetSdkVersion functions)
         minSdk = flutter.minSdkVersion.toInt()

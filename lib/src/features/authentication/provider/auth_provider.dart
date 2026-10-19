@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 import 'package:first_aid_app/src/features/authentication/model/user_model.dart';
@@ -7,9 +8,14 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthProvider1 extends ChangeNotifier {
+  static final Future<void> _googleSignInInitialization =
+      GoogleSignIn.instance.initialize();
+
   User? get _currentUser => FirebaseAuth.instance.currentUser;
 
   /// True if the user is signed in _and_ not anonymous.
@@ -234,17 +240,36 @@ class AuthProvider1 extends ChangeNotifier {
     Function onExistingUser,
   ) async {
     _isLoading = true;
+    _errorMessage = null;
     notifyListeners();
 
     try {
-      final userCredential = await _firebaseAuth.signInWithProvider(
-        GoogleAuthProvider(),
-      );
+      final UserCredential userCredential;
+      if (!kIsWeb && defaultTargetPlatform == TargetPlatform.android) {
+        await _googleSignInInitialization;
+        final googleUser = await GoogleSignIn.instance.authenticate();
+        final idToken = googleUser.authentication.idToken;
+        if (idToken == null) {
+          throw StateError('Google sign-in did not return an ID token.');
+        }
+        userCredential = await _firebaseAuth.signInWithCredential(
+          GoogleAuthProvider.credential(idToken: idToken),
+        );
+      } else {
+        userCredential = await _firebaseAuth.signInWithProvider(
+          GoogleAuthProvider(),
+        );
+      }
 
       if (userCredential.user != null) {
         _uid = userCredential.user!.uid;
 
-        final isNewUser = !(await checkExistingUser());
+        final isNewUser = !(await checkExistingUser().timeout(
+          const Duration(seconds: 20),
+          onTimeout: () => throw TimeoutException(
+            'Could not reach Firestore. Check your internet connection and try again.',
+          ),
+        ));
 
         if (isNewUser) {
           // Wait for user to complete profile (we'll store data later)
@@ -256,11 +281,15 @@ class AuthProvider1 extends ChangeNotifier {
           onExistingUser(); // e.g. navigate to NavBar
         }
       }
-
-      _isLoading = false;
-      notifyListeners();
+    } on GoogleSignInException catch (e) {
+      if (e.code != GoogleSignInExceptionCode.canceled) {
+        _errorMessage = e.description ?? e.toString();
+        if (context.mounted) showSnackBar(context, _errorMessage!);
+      }
     } catch (e) {
-      showSnackBar(context, e.toString());
+      _errorMessage = e.toString();
+      if (context.mounted) showSnackBar(context, _errorMessage!);
+    } finally {
       _isLoading = false;
       notifyListeners();
     }
