@@ -51,7 +51,6 @@ flutter:
 
 
   assets:
-    - assets/illustrations/
     - assets/images/doctor_guide.png
     - assets/icons/user_pin.png
     - assets/icons/hospital_pin.png
