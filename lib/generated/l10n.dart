@@ -6740,10 +6740,10 @@ class S {
     return Intl.message('Continue', name: 'continueText', desc: '', args: []);
   }
 
-  /// `Welcome to PGU First Aid`
+  /// `Welcome to PSU First Aid`
   String get tWelcomeTitle {
     return Intl.message(
-      'Welcome to PGU First Aid',
+      'Welcome to PSU First Aid',
       name: 'tWelcomeTitle',
       desc: '',
       args: [],
@@ -7245,10 +7245,10 @@ class S {
     );
   }
 
-  /// `You’re browsing as a guest.\nSign in to access your profile and settings.`
+  /// `Explore the guides and quizzes as a guest. Sign in to manage your profile and sync saved topics.`
   String get guestProfileMessage {
     return Intl.message(
-      'You’re browsing as a guest.\nSign in to access your profile and settings.',
+      'Explore the guides and quizzes as a guest. Sign in to manage your profile and sync saved topics.',
       name: 'guestProfileMessage',
       desc: '',
       args: [],
@@ -7300,14 +7300,19 @@ class S {
     return Intl.message('Support', name: 'tProfileHeader2', desc: '', args: []);
   }
 
-  /// `Contact US`
+  /// `Contact us`
   String get tContactUs {
-    return Intl.message('Contact US', name: 'tContactUs', desc: '', args: []);
+    return Intl.message('Contact us', name: 'tContactUs', desc: '', args: []);
   }
 
-  /// `Legal`
+  /// `App information`
   String get tProfileHeader3 {
-    return Intl.message('Legal', name: 'tProfileHeader3', desc: '', args: []);
+    return Intl.message(
+      'App information',
+      name: 'tProfileHeader3',
+      desc: '',
+      args: [],
+    );
   }
 
   /// `Privacy Policy`
@@ -7320,10 +7325,10 @@ class S {
     );
   }
 
-  /// `About PGU First Aid`
+  /// `About PSU First Aid`
   String get tAboutUs {
     return Intl.message(
-      'About PGU First Aid',
+      'About PSU First Aid',
       name: 'tAboutUs',
       desc: '',
       args: [],
@@ -7725,20 +7730,20 @@ class S {
     return Intl.message('Call', name: 'tcall', desc: '', args: []);
   }
 
-  /// `About PGU First Aid App`
+  /// `About PSU First Aid`
   String get taboutPGUFA {
     return Intl.message(
-      'About PGU First Aid App',
+      'About PSU First Aid',
       name: 'taboutPGUFA',
       desc: '',
       args: [],
     );
   }
 
-  /// `The PGU First Aid App is designed to provide essential first aid information to users in emergency situations. Developed with students and the public in mind, this app offers easy-to-follow guides on handling common injuries and health emergencies.`
+  /// `PSU First Aid helps students and the wider community learn essential first aid, practice their knowledge and find useful guidance quickly.`
   String get taboutHeader {
     return Intl.message(
-      'The PGU First Aid App is designed to provide essential first aid information to users in emergency situations. Developed with students and the public in mind, this app offers easy-to-follow guides on handling common injuries and health emergencies.',
+      'PSU First Aid helps students and the wider community learn essential first aid, practice their knowledge and find useful guidance quickly.',
       name: 'taboutHeader',
       desc: '',
       args: [],
@@ -7770,10 +7775,10 @@ class S {
     );
   }
 
-  /// `This app was developed as part of a student project at PGU (Penza State University), with the goal of enhancing public safety awareness and response skills.`
+  /// `A student project at Penza State University (PSU), created to support first-aid learning and public safety awareness.`
   String get taboutParagraph2 {
     return Intl.message(
-      'This app was developed as part of a student project at PGU (Penza State University), with the goal of enhancing public safety awareness and response skills.',
+      'A student project at Penza State University (PSU), created to support first-aid learning and public safety awareness.',
       name: 'taboutParagraph2',
       desc: '',
       args: [],
@@ -7790,10 +7795,10 @@ class S {
     );
   }
 
-  /// `This app is intended for educational purposes and general guidance only. It is not a substitute for professional medical advice or training. In a medical emergency, always contact emergency services or a healthcare professional.`
+  /// `This app supports first-aid education and general guidance. It does not replace professional medical advice or certified first-aid training. In an emergency, contact emergency services.`
   String get taboutParagraph3 {
     return Intl.message(
-      'This app is intended for educational purposes and general guidance only. It is not a substitute for professional medical advice or training. In a medical emergency, always contact emergency services or a healthcare professional.',
+      'This app supports first-aid education and general guidance. It does not replace professional medical advice or certified first-aid training. In an emergency, contact emergency services.',
       name: 'taboutParagraph3',
       desc: '',
       args: [],
@@ -7830,110 +7835,110 @@ class S {
     );
   }
 
-  /// `Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you use the First Aid App.`
+  /// `How PSU First Aid handles account details, saved guides, on-device preferences and hospital map requests.`
   String get tprivacyPolicyHeader {
     return Intl.message(
-      'Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you use the First Aid App.',
+      'How PSU First Aid handles account details, saved guides, on-device preferences and hospital map requests.',
       name: 'tprivacyPolicyHeader',
       desc: '',
       args: [],
     );
   }
 
-  /// `1. Information We Collect`
+  /// `Account and profile information`
   String get tprivacyQ1 {
     return Intl.message(
-      '1. Information We Collect',
+      'Account and profile information',
       name: 'tprivacyQ1',
       desc: '',
       args: [],
     );
   }
 
-  /// `- Personal information you provide, such as your name and email when signing up.\n- Data related to app usage, saved topics, and preferences.`
+  /// `When you sign in, Firebase Authentication manages your account. Your profile may include your name, email, phone number if provided, bio and profile photo. Profile details and saved topics are stored in Firestore; uploaded profile photos are stored in Firebase Storage. Guest access uses an anonymous Firebase sign-in.`
   String get tprivacyA1 {
     return Intl.message(
-      '- Personal information you provide, such as your name and email when signing up.\n- Data related to app usage, saved topics, and preferences.',
+      'When you sign in, Firebase Authentication manages your account. Your profile may include your name, email, phone number if provided, bio and profile photo. Profile details and saved topics are stored in Firestore; uploaded profile photos are stored in Firebase Storage. Guest access uses an anonymous Firebase sign-in.',
       name: 'tprivacyA1',
       desc: '',
       args: [],
     );
   }
 
-  /// `2. How We Use Your Information`
+  /// `Data on your device`
   String get tprivacyQ2 {
     return Intl.message(
-      '2. How We Use Your Information',
+      'Data on your device',
       name: 'tprivacyQ2',
       desc: '',
       args: [],
     );
   }
 
-  /// `- To provide personalized features like saving topics.\n- To improve the app and user experience.\n- We do NOT share or sell your personal data to third parties.`
+  /// `The app stores language preferences, quiz progress, saved-topic copies and a local profile copy on your device. Viewed map tiles may also be cached. Signing out does not delete your cloud account or profile.`
   String get tprivacyA2 {
     return Intl.message(
-      '- To provide personalized features like saving topics.\n- To improve the app and user experience.\n- We do NOT share or sell your personal data to third parties.',
+      'The app stores language preferences, quiz progress, saved-topic copies and a local profile copy on your device. Viewed map tiles may also be cached. Signing out does not delete your cloud account or profile.',
       name: 'tprivacyA2',
       desc: '',
       args: [],
     );
   }
 
-  /// `3. Data Security`
+  /// `Location and hospital maps`
   String get tprivacyQ3 {
     return Intl.message(
-      '3. Data Security',
+      'Location and hospital maps',
       name: 'tprivacyQ3',
       desc: '',
       args: [],
     );
   }
 
-  /// `We use secure authentication (Firebase Auth) and encrypted cloud storage (Firebase Storage & Firestore) to keep your data safe.`
+  /// `Device location is requested when you choose “Use my location”. You can also search a chosen map area. Map and hospital-data requests send the viewed area or search center to OpenStreetMap tile services and Overpass data services. These providers receive network information such as your IP address. Search data may be held temporarily in memory; location is not saved to your account. The app does not track your location in the background.`
   String get tprivacyA3 {
     return Intl.message(
-      'We use secure authentication (Firebase Auth) and encrypted cloud storage (Firebase Storage & Firestore) to keep your data safe.',
+      'Device location is requested when you choose “Use my location”. You can also search a chosen map area. Map and hospital-data requests send the viewed area or search center to OpenStreetMap tile services and Overpass data services. These providers receive network information such as your IP address. Search data may be held temporarily in memory; location is not saved to your account. The app does not track your location in the background.',
       name: 'tprivacyA3',
       desc: '',
       args: [],
     );
   }
 
-  /// `4. Your Choices`
+  /// `Services that process data`
   String get tprivacyQ4 {
     return Intl.message(
-      '4. Your Choices',
+      'Services that process data',
       name: 'tprivacyQ4',
       desc: '',
       args: [],
     );
   }
 
-  /// `- You can delete your account and all data at any time.\n- Contact us for any questions or data requests.`
+  /// `Firebase and sign-in providers process the information needed for authentication, profile storage and synchronization. Firebase also processes technical information for security and abuse prevention. Map services process requests needed to show tiles and hospital listings. These providers handle data under their own policies. External email, phone and directions actions open other apps or websites.`
   String get tprivacyA4 {
     return Intl.message(
-      '- You can delete your account and all data at any time.\n- Contact us for any questions or data requests.',
+      'Firebase and sign-in providers process the information needed for authentication, profile storage and synchronization. Firebase also processes technical information for security and abuse prevention. Map services process requests needed to show tiles and hospital listings. These providers handle data under their own policies. External email, phone and directions actions open other apps or websites.',
       name: 'tprivacyA4',
       desc: '',
       args: [],
     );
   }
 
-  /// `5. Changes to This Policy`
+  /// `Your choices and data requests`
   String get tprivacyQ5 {
     return Intl.message(
-      '5. Changes to This Policy',
+      'Your choices and data requests',
       name: 'tprivacyQ5',
       desc: '',
       args: [],
     );
   }
 
-  /// `We may update this policy from time to time. We will notify you of any major changes.`
+  /// `You can edit your profile, remove saved topics and manage location permission in your device settings. For questions about access to or deletion of account data, contact support below. This version has no in-app account deletion control. Uninstalling the app does not delete information stored in your cloud account.`
   String get tprivacyA5 {
     return Intl.message(
-      'We may update this policy from time to time. We will notify you of any major changes.',
+      'You can edit your profile, remove saved topics and manage location permission in your device settings. For questions about access to or deletion of account data, contact support below. This version has no in-app account deletion control. Uninstalling the app does not delete information stored in your cloud account.',
       name: 'tprivacyA5',
       desc: '',
       args: [],
@@ -20445,6 +20450,346 @@ class S {
     return Intl.message(
       'Remove saved guide',
       name: 'guideRemoveSaved',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `PSU First Aid`
+  String get appDisplayName {
+    return Intl.message(
+      'PSU First Aid',
+      name: 'appDisplayName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Penza State University`
+  String get psuUniversity {
+    return Intl.message(
+      'Penza State University',
+      name: 'psuUniversity',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your account, preferences and app information.`
+  String get profileIntro {
+    return Intl.message(
+      'Your account, preferences and app information.',
+      name: 'profileIntro',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome, guest`
+  String get profileGuestTitle {
+    return Intl.message(
+      'Welcome, guest',
+      name: 'profileGuestTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Loading your profile…`
+  String get profileLoading {
+    return Intl.message(
+      'Loading your profile…',
+      name: 'profileLoading',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Could not load your profile`
+  String get profileLoadFailed {
+    return Intl.message(
+      'Could not load your profile',
+      name: 'profileLoadFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Try again to load your account details. You can still use the settings and information below.`
+  String get profileRetryBody {
+    return Intl.message(
+      'Try again to load your account details. You can still use the settings and information below.',
+      name: 'profileRetryBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your profile`
+  String get profileMember {
+    return Intl.message(
+      'Your profile',
+      name: 'profileMember',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name, photo and bio`
+  String get profileEditBody {
+    return Intl.message(
+      'Name, photo and bio',
+      name: 'profileEditBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Questions, feedback and data requests`
+  String get profileContactBody {
+    return Intl.message(
+      'Questions, feedback and data requests',
+      name: 'profileContactBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Accounts, saved guides and location`
+  String get profilePrivacyBody {
+    return Intl.message(
+      'Accounts, saved guides and location',
+      name: 'profilePrivacyBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Could not sign out. Please try again.`
+  String get profileLogoutFailed {
+    return Intl.message(
+      'Could not sign out. Please try again.',
+      name: 'profileLogoutFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Learn. Practice. Be prepared.`
+  String get aboutTagline {
+    return Intl.message(
+      'Learn. Practice. Be prepared.',
+      name: 'aboutTagline',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{count} topics`
+  String aboutGuidesCount(String count) {
+    return Intl.message(
+      '$count topics',
+      name: 'aboutGuidesCount',
+      desc: '',
+      args: [count],
+    );
+  }
+
+  /// `{count} practice questions`
+  String aboutQuizCount(String count) {
+    return Intl.message(
+      '$count practice questions',
+      name: 'aboutQuizCount',
+      desc: '',
+      args: [count],
+    );
+  }
+
+  /// `Read the guides`
+  String get aboutLearnTitle {
+    return Intl.message(
+      'Read the guides',
+      name: 'aboutLearnTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Step-by-step guidance for common injuries and medical emergencies.`
+  String get aboutLearnBody {
+    return Intl.message(
+      'Step-by-step guidance for common injuries and medical emergencies.',
+      name: 'aboutLearnBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Check your knowledge`
+  String get aboutPracticeTitle {
+    return Intl.message(
+      'Check your knowledge',
+      name: 'aboutPracticeTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Topic quizzes with feedback and explanations for every answer.`
+  String get aboutPracticeBody {
+    return Intl.message(
+      'Topic quizzes with feedback and explanations for every answer.',
+      name: 'aboutPracticeBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Keep guides close`
+  String get aboutSaveTitle {
+    return Intl.message(
+      'Keep guides close',
+      name: 'aboutSaveTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save useful topics to your account for quick access.`
+  String get aboutSaveBody {
+    return Intl.message(
+      'Save useful topics to your account for quick access.',
+      name: 'aboutSaveBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Find nearby hospitals`
+  String get aboutMapTitle {
+    return Intl.message(
+      'Find nearby hospitals',
+      name: 'aboutMapTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search hospital map listings around your location or a chosen area. Internet access is required.`
+  String get aboutMapBody {
+    return Intl.message(
+      'Search hospital map listings around your location or a chosen area. Internet access is required.',
+      name: 'aboutMapBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `What works offline?`
+  String get aboutOfflineTitle {
+    return Intl.message(
+      'What works offline?',
+      name: 'aboutOfflineTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Guides and quizzes are bundled in the app. Sign-in, cloud sync and hospital maps need internet access.`
+  String get aboutOfflineBody {
+    return Intl.message(
+      'Guides and quizzes are bundled in the app. Sign-in, cloud sync and hospital maps need internet access.',
+      name: 'aboutOfflineBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `A student project`
+  String get aboutProjectTitle {
+    return Intl.message(
+      'A student project',
+      name: 'aboutProjectTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Learning and emergency care`
+  String get aboutSafetyTitle {
+    return Intl.message(
+      'Learning and emergency care',
+      name: 'aboutSafetyTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your data, explained`
+  String get privacyHeadline {
+    return Intl.message(
+      'Your data, explained',
+      name: 'privacyHeadline',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Changes to this policy`
+  String get privacyUpdatesTitle {
+    return Intl.message(
+      'Changes to this policy',
+      name: 'privacyUpdatesTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This policy may change when app features or data handling change. Check this screen for the current text.`
+  String get privacyUpdatesBody {
+    return Intl.message(
+      'This policy may change when app features or data handling change. Check this screen for the current text.',
+      name: 'privacyUpdatesBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Questions about your data?`
+  String get privacyContactTitle {
+    return Intl.message(
+      'Questions about your data?',
+      name: 'privacyContactTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Use the existing support email for privacy questions and account-data requests.`
+  String get privacyContactBody {
+    return Intl.message(
+      'Use the existing support email for privacy questions and account-data requests.',
+      name: 'privacyContactBody',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Provider privacy information`
+  String get privacyProvidersTitle {
+    return Intl.message(
+      'Provider privacy information',
+      name: 'privacyProvidersTitle',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Could not open the link. Please try again.`
+  String get profileLinkFailed {
+    return Intl.message(
+      'Could not open the link. Please try again.',
+      name: 'profileLinkFailed',
       desc: '',
       args: [],
     );

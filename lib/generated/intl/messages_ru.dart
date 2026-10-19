@@ -20,30 +20,34 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ru';
 
-  static String m0(count) => "Шагов: ${count}";
+  static String m0(count) => "Тем: ${count}";
 
-  static String m1(completed, total) =>
+  static String m1(count) => "Учебных вопросов: ${count}";
+
+  static String m2(count) => "Шагов: ${count}";
+
+  static String m3(completed, total) =>
       "Пройдено тестов: ${completed} из ${total}";
 
-  static String m2(count) => "Тем: ${count}";
+  static String m4(count) => "Тем: ${count}";
 
-  static String m3(count) => "Найдено больниц: ${count}";
+  static String m5(count) => "Найдено больниц: ${count}";
 
-  static String m4(distance) => "${distance} км · по прямой";
+  static String m6(distance) => "${distance} км · по прямой";
 
-  static String m5(count) => "${count} км";
+  static String m7(count) => "${count} км";
 
-  static String m6(time) => "Данные получены в ${time}";
+  static String m8(time) => "Данные получены в ${time}";
 
-  static String m7(current, total) => "Вопрос ${current} из ${total}";
+  static String m9(current, total) => "Вопрос ${current} из ${total}";
 
-  static String m8(count) => "Все сохранённые (${count})";
+  static String m10(count) => "Все сохранённые (${count})";
 
-  static String m9(count) => "Сохранено: ${count}";
+  static String m11(count) => "Сохранено: ${count}";
 
-  static String m10(topic) => "Убрать «${topic}» из сохранённого";
+  static String m12(topic) => "Убрать «${topic}» из сохранённого";
 
-  static String m11(topic) => "«${topic}» удалено из сохранённого";
+  static String m13(topic) => "«${topic}» удалено из сохранённого";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -52,6 +56,47 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "ChokingTitle": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при удушье",
+    ),
+    "aboutGuidesCount": m0,
+    "aboutLearnBody": MessageLookupByLibrary.simpleMessage(
+      "Пошаговые инструкции для распространённых травм и неотложных состояний.",
+    ),
+    "aboutLearnTitle": MessageLookupByLibrary.simpleMessage(
+      "Изучайте руководства",
+    ),
+    "aboutMapBody": MessageLookupByLibrary.simpleMessage(
+      "Ищите больницы на карте рядом с вами или в выбранной области. Требуется интернет.",
+    ),
+    "aboutMapTitle": MessageLookupByLibrary.simpleMessage(
+      "Ищите больницы рядом",
+    ),
+    "aboutOfflineBody": MessageLookupByLibrary.simpleMessage(
+      "Руководства и тесты включены в приложение. Для входа, облачной синхронизации и карт больниц нужен интернет.",
+    ),
+    "aboutOfflineTitle": MessageLookupByLibrary.simpleMessage(
+      "Что доступно без интернета?",
+    ),
+    "aboutPracticeBody": MessageLookupByLibrary.simpleMessage(
+      "Тесты по темам с обратной связью и пояснениями к каждому ответу.",
+    ),
+    "aboutPracticeTitle": MessageLookupByLibrary.simpleMessage(
+      "Проверяйте знания",
+    ),
+    "aboutProjectTitle": MessageLookupByLibrary.simpleMessage(
+      "Студенческий проект",
+    ),
+    "aboutQuizCount": m1,
+    "aboutSafetyTitle": MessageLookupByLibrary.simpleMessage(
+      "Обучение и экстренная помощь",
+    ),
+    "aboutSaveBody": MessageLookupByLibrary.simpleMessage(
+      "Сохраняйте нужные темы в аккаунте для быстрого доступа.",
+    ),
+    "aboutSaveTitle": MessageLookupByLibrary.simpleMessage(
+      "Сохраняйте полезное",
+    ),
+    "aboutTagline": MessageLookupByLibrary.simpleMessage(
+      "Учитесь. Практикуйтесь. Будьте готовы.",
     ),
     "addedToSavedTopics": MessageLookupByLibrary.simpleMessage(
       "Добавлено в сохраненные темы",
@@ -237,6 +282,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "allergic_reactions_q9_opt4": MessageLookupByLibrary.simpleMessage(
       "Сделать неизвестную инъекцию",
     ),
+    "appDisplayName": MessageLookupByLibrary.simpleMessage("PSU First Aid"),
     "areyousureyouwanttologout": MessageLookupByLibrary.simpleMessage(
       "Вы уверены, что хотите выйти?",
     ),
@@ -2449,7 +2495,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Только при кровотечении",
     ),
     "guestProfileMessage": MessageLookupByLibrary.simpleMessage(
-      "Вы просматриваете как гость.\n Войдите, чтобы получить доступ к вашему профилю и настройкам.",
+      "Изучайте руководства и проходите тесты как гость. Войдите, чтобы управлять профилем и синхронизировать сохранённые темы.",
     ),
     "guideCall112": MessageLookupByLibrary.simpleMessage("Позвонить 112"),
     "guideEmergency": MessageLookupByLibrary.simpleMessage(
@@ -2465,7 +2511,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "guideStepByStep": MessageLookupByLibrary.simpleMessage(
       "ПОШАГОВОЕ РУКОВОДСТВО",
     ),
-    "guideStepCount": m0,
+    "guideStepCount": m2,
     "headInjuryHeading": MessageLookupByLibrary.simpleMessage(
       "Первая помощь при травме головы",
     ),
@@ -2946,11 +2992,11 @@ class MessageLookup extends MessageLookupByLibrary {
     "homeQuickTitle": MessageLookupByLibrary.simpleMessage(
       "Быстрый доступ к помощи",
     ),
-    "homeQuizProgress": m1,
+    "homeQuizProgress": m3,
     "homeTagline": MessageLookupByLibrary.simpleMessage(
       "Знания, которые помогают.",
     ),
-    "homeTopicCount": m2,
+    "homeTopicCount": m4,
     "homeUseLocation": MessageLookupByLibrary.simpleMessage(
       "Моё местоположение",
     ),
@@ -2960,7 +3006,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "hospitalChooseArea": MessageLookupByLibrary.simpleMessage(
       "Переместите и увеличьте карту, затем запустите поиск.",
     ),
-    "hospitalCount": m3,
+    "hospitalCount": m5,
     "hospitalDenied": MessageLookupByLibrary.simpleMessage(
       "Доступ к геопозиции отклонён. Можно выбрать область на карте.",
     ),
@@ -2968,7 +3014,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Доступ к геопозиции заблокирован. Разрешите его в настройках или выберите область на карте.",
     ),
     "hospitalDirections": MessageLookupByLibrary.simpleMessage("Маршрут"),
-    "hospitalDistance": m4,
+    "hospitalDistance": m6,
     "hospitalDistanceNote": MessageLookupByLibrary.simpleMessage(
       "Расстояния указаны по прямой от центра поиска. Данные могут быть неполными или устаревшими; доступность экстренной помощи не проверена.",
     ),
@@ -3010,7 +3056,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Часть карты не загрузилась. Список больниц по-прежнему доступен.",
     ),
     "hospitalRadius": MessageLookupByLibrary.simpleMessage("Радиус поиска"),
-    "hospitalRadiusKm": m5,
+    "hospitalRadiusKm": m7,
     "hospitalRateLimited": MessageLookupByLibrary.simpleMessage(
       "Сервис поиска больниц занят. Повторите попытку через минуту.",
     ),
@@ -3025,7 +3071,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Открыть настройки",
     ),
     "hospitalUnnamed": MessageLookupByLibrary.simpleMessage("Больница"),
-    "hospitalUpdated": m6,
+    "hospitalUpdated": m8,
     "hospitalYou": MessageLookupByLibrary.simpleMessage("Ваше местоположение"),
     "intro": MessageLookupByLibrary.simpleMessage(
       "Перелом - это сломанная кость. Правильная первая помощь может предотвратить осложнения.",
@@ -3236,7 +3282,57 @@ class MessageLookup extends MessageLookupByLibrary {
     "poisons_q9_opt4": MessageLookupByLibrary.simpleMessage(
       "Попробовать на вкус",
     ),
+    "privacyContactBody": MessageLookupByLibrary.simpleMessage(
+      "Используйте почту поддержки для вопросов о конфиденциальности и запросов о данных аккаунта.",
+    ),
+    "privacyContactTitle": MessageLookupByLibrary.simpleMessage(
+      "Есть вопросы о ваших данных?",
+    ),
+    "privacyHeadline": MessageLookupByLibrary.simpleMessage(
+      "Как используются ваши данные",
+    ),
+    "privacyProvidersTitle": MessageLookupByLibrary.simpleMessage(
+      "Политики поставщиков",
+    ),
+    "privacyUpdatesBody": MessageLookupByLibrary.simpleMessage(
+      "Политика может меняться при изменении функций приложения или обработки данных. Актуальный текст доступен на этом экране.",
+    ),
+    "privacyUpdatesTitle": MessageLookupByLibrary.simpleMessage(
+      "Изменения политики",
+    ),
     "profile": MessageLookupByLibrary.simpleMessage("Профиль"),
+    "profileContactBody": MessageLookupByLibrary.simpleMessage(
+      "Вопросы, отзывы и запросы о данных",
+    ),
+    "profileEditBody": MessageLookupByLibrary.simpleMessage(
+      "Имя, фото и информация о себе",
+    ),
+    "profileGuestTitle": MessageLookupByLibrary.simpleMessage(
+      "Вы вошли как гость",
+    ),
+    "profileIntro": MessageLookupByLibrary.simpleMessage(
+      "Ваш аккаунт, настройки и информация о приложении.",
+    ),
+    "profileLinkFailed": MessageLookupByLibrary.simpleMessage(
+      "Не удалось открыть ссылку. Попробуйте ещё раз.",
+    ),
+    "profileLoadFailed": MessageLookupByLibrary.simpleMessage(
+      "Не удалось загрузить профиль",
+    ),
+    "profileLoading": MessageLookupByLibrary.simpleMessage("Загрузка профиля…"),
+    "profileLogoutFailed": MessageLookupByLibrary.simpleMessage(
+      "Не удалось выйти. Попробуйте ещё раз.",
+    ),
+    "profileMember": MessageLookupByLibrary.simpleMessage("Ваш профиль"),
+    "profilePrivacyBody": MessageLookupByLibrary.simpleMessage(
+      "Аккаунт, сохранённые темы и геолокация",
+    ),
+    "profileRetryBody": MessageLookupByLibrary.simpleMessage(
+      "Попробуйте загрузить данные аккаунта ещё раз. Настройки и информация ниже остаются доступны.",
+    ),
+    "psuUniversity": MessageLookupByLibrary.simpleMessage(
+      "Пензенский государственный университет",
+    ),
     "quizUiAccuracy": MessageLookupByLibrary.simpleMessage("ТОЧНОСТЬ"),
     "quizUiActive": MessageLookupByLibrary.simpleMessage("Текущий тест"),
     "quizUiAnswer": MessageLookupByLibrary.simpleMessage("Правильный ответ"),
@@ -3249,7 +3345,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "quizUiConfirm": MessageLookupByLibrary.simpleMessage("Подтвердить ответ"),
     "quizUiCorrect": MessageLookupByLibrary.simpleMessage("Верный ответ"),
     "quizUiCorrectMetric": MessageLookupByLibrary.simpleMessage("ВЕРНО"),
-    "quizUiCount": m7,
+    "quizUiCount": m9,
     "quizUiEducationalNotice": MessageLookupByLibrary.simpleMessage(
       "Только учебный материал. Следуйте местным экстренным рекомендациям и актуальному сертифицированному обучению первой помощи.",
     ),
@@ -3558,7 +3654,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "savedActionError": MessageLookupByLibrary.simpleMessage(
       "Не удалось обновить сохранённое. Повторите попытку.",
     ),
-    "savedAllFilter": m8,
+    "savedAllFilter": m10,
     "savedChooseQuiz": MessageLookupByLibrary.simpleMessage("Выбрать тест"),
     "savedClearBody": MessageLookupByLibrary.simpleMessage(
       "Будут удалены закладки. Руководства останутся доступны в разделе «Темы».",
@@ -3567,7 +3663,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "savedClearTitle": MessageLookupByLibrary.simpleMessage(
       "Очистить сохранённые темы?",
     ),
-    "savedCount": m9,
+    "savedCount": m11,
     "savedEmptyBody": MessageLookupByLibrary.simpleMessage(
       "Сохраняйте темы для быстрого доступа. Откройте руководство и нажмите значок закладки — оно появится здесь.",
     ),
@@ -3607,8 +3703,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "savedPracticeTitle": MessageLookupByLibrary.simpleMessage(
       "Практика по сохранённым темам",
     ),
-    "savedRemoveTooltip": m10,
-    "savedRemovedMessage": m11,
+    "savedRemoveTooltip": m12,
+    "savedRemovedMessage": m13,
     "savedResetFilters": MessageLookupByLibrary.simpleMessage(
       "Показать все сохранённые",
     ),
@@ -4656,9 +4752,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "stroke_q9_opt4": MessageLookupByLibrary.simpleMessage(
       "Только после падения",
     ),
-    "tAboutUs": MessageLookupByLibrary.simpleMessage(
-      "О приложении PGU First Aid",
-    ),
+    "tAboutUs": MessageLookupByLibrary.simpleMessage("О PSU First Aid"),
     "tAllTopics": MessageLookupByLibrary.simpleMessage("Все темы"),
     "tAllergicReaction": MessageLookupByLibrary.simpleMessage(
       "Аллергическая реакция",
@@ -4794,9 +4888,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "tProfile": MessageLookupByLibrary.simpleMessage("Профиль"),
     "tProfileHeader1": MessageLookupByLibrary.simpleMessage("Настройки"),
     "tProfileHeader2": MessageLookupByLibrary.simpleMessage("Поддержка"),
-    "tProfileHeader3": MessageLookupByLibrary.simpleMessage(
-      "Правовая информация",
-    ),
+    "tProfileHeader3": MessageLookupByLibrary.simpleMessage("О приложении"),
     "tRecoveryPos": MessageLookupByLibrary.simpleMessage("Поза восстановления"),
     "tRememberMe": MessageLookupByLibrary.simpleMessage("Запомнить меня?"),
     "tResetEmail": MessageLookupByLibrary.simpleMessage(
@@ -4827,11 +4919,11 @@ class MessageLookup extends MessageLookupByLibrary {
       "Ваше краткое руководство по первой помощи и экстренной помощи!",
     ),
     "tWelcomeTitle": MessageLookupByLibrary.simpleMessage(
-      "Добро пожаловать в PGU First Aid",
+      "Добро пожаловать в PSU First Aid",
     ),
     "tWoundCare": MessageLookupByLibrary.simpleMessage("Уход за ранами"),
     "taboutHeader": MessageLookupByLibrary.simpleMessage(
-      "Приложение PGU First Aid разработано для предоставления важной информации о первой помощи в экстренных ситуациях. Разработанное для студентов и широкой публики, это приложение предлагает простые инструкции по оказанию первой помощи при распространенных травмах и неотложных состояниях.",
+      "PSU First Aid помогает студентам и всем желающим изучать основы первой помощи, проверять свои знания и быстро находить полезные инструкции.",
     ),
     "taboutHeader1": MessageLookupByLibrary.simpleMessage("Функции:"),
     "taboutHeader2": MessageLookupByLibrary.simpleMessage(
@@ -4841,17 +4933,15 @@ class MessageLookup extends MessageLookupByLibrary {
       "Отказ от ответственности:",
     ),
     "taboutHeader4": MessageLookupByLibrary.simpleMessage("Свяжитесь с нами:"),
-    "taboutPGUFA": MessageLookupByLibrary.simpleMessage(
-      "О приложении PGU First Aid",
-    ),
+    "taboutPGUFA": MessageLookupByLibrary.simpleMessage("О PSU First Aid"),
     "taboutParagraph": MessageLookupByLibrary.simpleMessage(
       "- Пошаговые инструкции по оказанию первой помощи.\n- Темы включают СЛР, ожоги, удушье, переломы, кровотечение и многое другое.\n- Доступ к важной информации в оффлайн-режиме.\n- Простой и понятный интерфейс для быстрой навигации.",
     ),
     "taboutParagraph2": MessageLookupByLibrary.simpleMessage(
-      "Это приложение было разработано как часть студенческого проекта в Пензенском государственном университете (ПГУ) с целью повышения осведомленности о безопасности и навыках реагирования.",
+      "Студенческий проект Пензенского государственного университета (PSU), созданный для изучения первой помощи и повышения осведомлённости о безопасности.",
     ),
     "taboutParagraph3": MessageLookupByLibrary.simpleMessage(
-      "Это приложение предназначено только для образовательных целей и общего руководства. Оно не заменяет профессиональную медицинскую консультацию или обучение. В медицинских чрезвычайных ситуациях всегда обращайтесь в службы экстренной помощи или к медицинскому специалисту.",
+      "Приложение помогает изучать первую помощь и содержит общие рекомендации. Оно не заменяет профессиональную медицинскую консультацию или сертифицированное обучение первой помощи. В экстренной ситуации звоните в экстренные службы.",
     ),
     "taboutParagraph4": MessageLookupByLibrary.simpleMessage(
       "Для обратной связи или вопросов, пожалуйста, свяжитесь:\nyvhiku@yandex.ru",
@@ -5067,38 +5157,38 @@ class MessageLookup extends MessageLookupByLibrary {
       "Пожалуйста, загрузите фото профиля",
     ),
     "tprivacyA1": MessageLookupByLibrary.simpleMessage(
-      "- Личная информация, которую вы предоставляете, например, имя и электронная почта при регистрации.\n- Данные об использовании приложения, сохраненные темы и предпочтения.",
+      "Вход в аккаунт обеспечивает Firebase Authentication. Профиль может содержать имя, электронную почту, номер телефона, если он указан, информацию о себе и фото. Данные профиля и сохранённые темы хранятся в Firestore, загруженные фото — в Firebase Storage. Гостевой режим использует анонимный вход Firebase.",
     ),
     "tprivacyA2": MessageLookupByLibrary.simpleMessage(
-      "- Для предоставления персонализированных функций, таких как сохранение тем.\n- Для улучшения приложения и пользовательского опыта.\n- Мы НЕ передаем и не продаем ваши личные данные третьим лицам.",
+      "Приложение хранит на устройстве язык, результаты тестов, копии сохранённых тем и локальную копию профиля. Просмотренные фрагменты карт также могут кешироваться. Выход не удаляет облачный аккаунт или профиль.",
     ),
     "tprivacyA3": MessageLookupByLibrary.simpleMessage(
-      "Мы используем безопасную аутентификацию (Firebase Auth) и зашифрованное облачное хранилище (Firebase Storage & Firestore) для защиты ваших данных.",
+      "Местоположение запрашивается при выборе «Использовать моё местоположение». Можно искать и в выбранной области карты. Запросы карт и больниц передают просматриваемую область или центр поиска сервисам карт OpenStreetMap и данных Overpass. Эти сервисы получают сетевые сведения, например IP-адрес. Данные поиска могут временно храниться в памяти; местоположение не сохраняется в аккаунте. Приложение не отслеживает геолокацию в фоне.",
     ),
     "tprivacyA4": MessageLookupByLibrary.simpleMessage(
-      "- Вы можете удалить свой аккаунт и все данные в любое время.\n- Свяжитесь с нами по любым вопросам или запросам данных.",
+      "Firebase и сервисы входа обрабатывают сведения, необходимые для авторизации, хранения профиля и синхронизации. Firebase также обрабатывает технические данные для безопасности и предотвращения злоупотреблений. Картографические сервисы обрабатывают запросы карт и больниц. Эти поставщики используют собственные политики. Действия с почтой, телефоном и маршрутами открывают другие приложения или сайты.",
     ),
     "tprivacyA5": MessageLookupByLibrary.simpleMessage(
-      "Мы можем обновлять эту политику время от времени. Мы уведомим вас о любых существенных изменениях.",
+      "Вы можете редактировать профиль, удалять сохранённые темы и управлять разрешением геолокации в настройках устройства. По вопросам доступа к данным аккаунта или их удаления обращайтесь в поддержку ниже. В этой версии нет функции удаления аккаунта внутри приложения. Удаление приложения не удаляет данные облачного аккаунта.",
     ),
     "tprivacyPolicy": MessageLookupByLibrary.simpleMessage(
       "Политика конфиденциальности",
     ),
     "tprivacyPolicyHeader": MessageLookupByLibrary.simpleMessage(
-      "Ваша конфиденциальность важна для нас. Эта Политика конфиденциальности объясняет, как мы собираем, используем и защищаем вашу информацию при использовании приложения First Aid.",
+      "Как PSU First Aid обрабатывает данные аккаунта, сохранённые темы, настройки на устройстве и запросы карты больниц.",
     ),
-    "tprivacyQ1": MessageLookupByLibrary.simpleMessage(
-      "1. Какую информацию мы собираем",
-    ),
+    "tprivacyQ1": MessageLookupByLibrary.simpleMessage("Аккаунт и профиль"),
     "tprivacyQ2": MessageLookupByLibrary.simpleMessage(
-      "2. Как мы используем вашу информацию",
+      "Данные на вашем устройстве",
     ),
     "tprivacyQ3": MessageLookupByLibrary.simpleMessage(
-      "3. Безопасность данных",
+      "Геолокация и карты больниц",
     ),
-    "tprivacyQ4": MessageLookupByLibrary.simpleMessage("4. Ваши права"),
+    "tprivacyQ4": MessageLookupByLibrary.simpleMessage(
+      "Сервисы, обрабатывающие данные",
+    ),
     "tprivacyQ5": MessageLookupByLibrary.simpleMessage(
-      "5. Изменения в политике",
+      "Ваши настройки и запросы о данных",
     ),
     "tquestion": MessageLookupByLibrary.simpleMessage("вопрос"),
     "tquestion1": MessageLookupByLibrary.simpleMessage("Как сбросить пароль?"),

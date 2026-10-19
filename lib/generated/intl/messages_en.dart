@@ -20,30 +20,34 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
-  static String m0(count) => "${count} steps";
+  static String m0(count) => "${count} topics";
 
-  static String m1(completed, total) =>
+  static String m1(count) => "${count} practice questions";
+
+  static String m2(count) => "${count} steps";
+
+  static String m3(completed, total) =>
       "${completed} of ${total} topic quizzes completed";
 
-  static String m2(count) => "${count} topics";
+  static String m4(count) => "${count} topics";
 
-  static String m3(count) => "${count} hospitals found";
+  static String m5(count) => "${count} hospitals found";
 
-  static String m4(distance) => "${distance} km away · straight line";
+  static String m6(distance) => "${distance} km away · straight line";
 
-  static String m5(count) => "${count} km";
+  static String m7(count) => "${count} km";
 
-  static String m6(time) => "Fetched at ${time}";
+  static String m8(time) => "Fetched at ${time}";
 
-  static String m7(current, total) => "Question ${current} of ${total}";
+  static String m9(current, total) => "Question ${current} of ${total}";
 
-  static String m8(count) => "All saved (${count})";
+  static String m10(count) => "All saved (${count})";
 
-  static String m9(count) => "Saved: ${count}";
+  static String m11(count) => "Saved: ${count}";
 
-  static String m10(topic) => "Remove ${topic} from saved";
+  static String m12(topic) => "Remove ${topic} from saved";
 
-  static String m11(topic) => "${topic} removed from saved";
+  static String m13(topic) => "${topic} removed from saved";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -51,6 +55,43 @@ class MessageLookup extends MessageLookupByLibrary {
       "Choking occurs when an object blocks the airway, preventing normal breathing.",
     ),
     "ChokingTitle": MessageLookupByLibrary.simpleMessage("Choking First Aid"),
+    "aboutGuidesCount": m0,
+    "aboutLearnBody": MessageLookupByLibrary.simpleMessage(
+      "Step-by-step guidance for common injuries and medical emergencies.",
+    ),
+    "aboutLearnTitle": MessageLookupByLibrary.simpleMessage("Read the guides"),
+    "aboutMapBody": MessageLookupByLibrary.simpleMessage(
+      "Search hospital map listings around your location or a chosen area. Internet access is required.",
+    ),
+    "aboutMapTitle": MessageLookupByLibrary.simpleMessage(
+      "Find nearby hospitals",
+    ),
+    "aboutOfflineBody": MessageLookupByLibrary.simpleMessage(
+      "Guides and quizzes are bundled in the app. Sign-in, cloud sync and hospital maps need internet access.",
+    ),
+    "aboutOfflineTitle": MessageLookupByLibrary.simpleMessage(
+      "What works offline?",
+    ),
+    "aboutPracticeBody": MessageLookupByLibrary.simpleMessage(
+      "Topic quizzes with feedback and explanations for every answer.",
+    ),
+    "aboutPracticeTitle": MessageLookupByLibrary.simpleMessage(
+      "Check your knowledge",
+    ),
+    "aboutProjectTitle": MessageLookupByLibrary.simpleMessage(
+      "A student project",
+    ),
+    "aboutQuizCount": m1,
+    "aboutSafetyTitle": MessageLookupByLibrary.simpleMessage(
+      "Learning and emergency care",
+    ),
+    "aboutSaveBody": MessageLookupByLibrary.simpleMessage(
+      "Save useful topics to your account for quick access.",
+    ),
+    "aboutSaveTitle": MessageLookupByLibrary.simpleMessage("Keep guides close"),
+    "aboutTagline": MessageLookupByLibrary.simpleMessage(
+      "Learn. Practice. Be prepared.",
+    ),
     "addedToSavedTopics": MessageLookupByLibrary.simpleMessage(
       "Added to saved topics",
     ),
@@ -237,6 +278,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "allergic_reactions_q9_opt4": MessageLookupByLibrary.simpleMessage(
       "Give an unknown injection",
     ),
+    "appDisplayName": MessageLookupByLibrary.simpleMessage("PSU First Aid"),
     "areyousureyouwanttologout": MessageLookupByLibrary.simpleMessage(
       "Are you sure you want to log out?",
     ),
@@ -2447,7 +2489,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Only if there is bleeding",
     ),
     "guestProfileMessage": MessageLookupByLibrary.simpleMessage(
-      "You’re browsing as a guest.\nSign in to access your profile and settings.",
+      "Explore the guides and quizzes as a guest. Sign in to manage your profile and sync saved topics.",
     ),
     "guideCall112": MessageLookupByLibrary.simpleMessage("Call 112"),
     "guideEmergency": MessageLookupByLibrary.simpleMessage("Need urgent help?"),
@@ -2459,7 +2501,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "guideStepByStep": MessageLookupByLibrary.simpleMessage(
       "STEP-BY-STEP GUIDE",
     ),
-    "guideStepCount": m0,
+    "guideStepCount": m2,
     "headInjuryHeading": MessageLookupByLibrary.simpleMessage(
       "Head Injury First Aid",
     ),
@@ -2932,17 +2974,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "homeQuickTitle": MessageLookupByLibrary.simpleMessage(
       "Quick first aid guides",
     ),
-    "homeQuizProgress": m1,
+    "homeQuizProgress": m3,
     "homeTagline": MessageLookupByLibrary.simpleMessage(
       "A little knowledge. A helping hand.",
     ),
-    "homeTopicCount": m2,
+    "homeTopicCount": m4,
     "homeUseLocation": MessageLookupByLibrary.simpleMessage("Use my location"),
     "hospitalCall": MessageLookupByLibrary.simpleMessage("Call hospital"),
     "hospitalChooseArea": MessageLookupByLibrary.simpleMessage(
       "Move and zoom the map, then search this area.",
     ),
-    "hospitalCount": m3,
+    "hospitalCount": m5,
     "hospitalDenied": MessageLookupByLibrary.simpleMessage(
       "Location access was declined. You can choose an area on the map instead.",
     ),
@@ -2950,7 +2992,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Location permission is blocked. Enable it in app settings or choose an area on the map.",
     ),
     "hospitalDirections": MessageLookupByLibrary.simpleMessage("Directions"),
-    "hospitalDistance": m4,
+    "hospitalDistance": m6,
     "hospitalDistanceNote": MessageLookupByLibrary.simpleMessage(
       "Distances are straight-line estimates from the search center. Map listings may be incomplete or outdated; emergency availability is not verified.",
     ),
@@ -2992,7 +3034,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "Some map tiles could not load. The hospital list is still available.",
     ),
     "hospitalRadius": MessageLookupByLibrary.simpleMessage("Search radius"),
-    "hospitalRadiusKm": m5,
+    "hospitalRadiusKm": m7,
     "hospitalRateLimited": MessageLookupByLibrary.simpleMessage(
       "The hospital search service is busy. Please try again in a minute.",
     ),
@@ -3005,7 +3047,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "hospitalSettings": MessageLookupByLibrary.simpleMessage("Open settings"),
     "hospitalUnnamed": MessageLookupByLibrary.simpleMessage("Hospital"),
-    "hospitalUpdated": m6,
+    "hospitalUpdated": m8,
     "hospitalYou": MessageLookupByLibrary.simpleMessage("Your location"),
     "intro": MessageLookupByLibrary.simpleMessage(
       "A fracture is a broken bone. Proper first aid can prevent complications.",
@@ -3226,7 +3268,57 @@ class MessageLookup extends MessageLookupByLibrary {
     "poisons_q9_opt4": MessageLookupByLibrary.simpleMessage(
       "Taste it to identify it",
     ),
+    "privacyContactBody": MessageLookupByLibrary.simpleMessage(
+      "Use the existing support email for privacy questions and account-data requests.",
+    ),
+    "privacyContactTitle": MessageLookupByLibrary.simpleMessage(
+      "Questions about your data?",
+    ),
+    "privacyHeadline": MessageLookupByLibrary.simpleMessage(
+      "Your data, explained",
+    ),
+    "privacyProvidersTitle": MessageLookupByLibrary.simpleMessage(
+      "Provider privacy information",
+    ),
+    "privacyUpdatesBody": MessageLookupByLibrary.simpleMessage(
+      "This policy may change when app features or data handling change. Check this screen for the current text.",
+    ),
+    "privacyUpdatesTitle": MessageLookupByLibrary.simpleMessage(
+      "Changes to this policy",
+    ),
     "profile": MessageLookupByLibrary.simpleMessage("Profile"),
+    "profileContactBody": MessageLookupByLibrary.simpleMessage(
+      "Questions, feedback and data requests",
+    ),
+    "profileEditBody": MessageLookupByLibrary.simpleMessage(
+      "Name, photo and bio",
+    ),
+    "profileGuestTitle": MessageLookupByLibrary.simpleMessage("Welcome, guest"),
+    "profileIntro": MessageLookupByLibrary.simpleMessage(
+      "Your account, preferences and app information.",
+    ),
+    "profileLinkFailed": MessageLookupByLibrary.simpleMessage(
+      "Could not open the link. Please try again.",
+    ),
+    "profileLoadFailed": MessageLookupByLibrary.simpleMessage(
+      "Could not load your profile",
+    ),
+    "profileLoading": MessageLookupByLibrary.simpleMessage(
+      "Loading your profile…",
+    ),
+    "profileLogoutFailed": MessageLookupByLibrary.simpleMessage(
+      "Could not sign out. Please try again.",
+    ),
+    "profileMember": MessageLookupByLibrary.simpleMessage("Your profile"),
+    "profilePrivacyBody": MessageLookupByLibrary.simpleMessage(
+      "Accounts, saved guides and location",
+    ),
+    "profileRetryBody": MessageLookupByLibrary.simpleMessage(
+      "Try again to load your account details. You can still use the settings and information below.",
+    ),
+    "psuUniversity": MessageLookupByLibrary.simpleMessage(
+      "Penza State University",
+    ),
     "questionCount": MessageLookupByLibrary.simpleMessage("Question"),
     "quizUiAccuracy": MessageLookupByLibrary.simpleMessage("ACCURACY"),
     "quizUiActive": MessageLookupByLibrary.simpleMessage("Active quiz session"),
@@ -3242,7 +3334,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "quizUiConfirm": MessageLookupByLibrary.simpleMessage("Confirm answer"),
     "quizUiCorrect": MessageLookupByLibrary.simpleMessage("Correct answer"),
     "quizUiCorrectMetric": MessageLookupByLibrary.simpleMessage("CORRECT"),
-    "quizUiCount": m7,
+    "quizUiCount": m9,
     "quizUiEducationalNotice": MessageLookupByLibrary.simpleMessage(
       "Educational content only. Follow local emergency guidance and current certified first-aid training.",
     ),
@@ -3549,7 +3641,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "savedActionError": MessageLookupByLibrary.simpleMessage(
       "Could not update saved topics. Please try again.",
     ),
-    "savedAllFilter": m8,
+    "savedAllFilter": m10,
     "savedChooseQuiz": MessageLookupByLibrary.simpleMessage("Choose a quiz"),
     "savedClearBody": MessageLookupByLibrary.simpleMessage(
       "This removes your saved bookmarks. The guides remain available in Topics.",
@@ -3558,7 +3650,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "savedClearTitle": MessageLookupByLibrary.simpleMessage(
       "Clear saved topics?",
     ),
-    "savedCount": m9,
+    "savedCount": m11,
     "savedEmptyBody": MessageLookupByLibrary.simpleMessage(
       "Save topics you want to find quickly. Open a guide and tap its bookmark to keep it here.",
     ),
@@ -3594,8 +3686,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "savedPracticeTitle": MessageLookupByLibrary.simpleMessage(
       "Practice from your saved topics",
     ),
-    "savedRemoveTooltip": m10,
-    "savedRemovedMessage": m11,
+    "savedRemoveTooltip": m12,
+    "savedRemovedMessage": m13,
     "savedResetFilters": MessageLookupByLibrary.simpleMessage(
       "Show all saved topics",
     ),
@@ -4647,7 +4739,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "stroke_q9_opt3": MessageLookupByLibrary.simpleMessage("Only during sleep"),
     "stroke_q9_opt4": MessageLookupByLibrary.simpleMessage("Only after a fall"),
-    "tAboutUs": MessageLookupByLibrary.simpleMessage("About PGU First Aid"),
+    "tAboutUs": MessageLookupByLibrary.simpleMessage("About PSU First Aid"),
     "tAllTopics": MessageLookupByLibrary.simpleMessage("All Topics"),
     "tAllergicReaction": MessageLookupByLibrary.simpleMessage(
       "Allergic Reaction",
@@ -4714,7 +4806,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "tConfirmPass": MessageLookupByLibrary.simpleMessage("Confirm Password"),
     "tContactSupport": MessageLookupByLibrary.simpleMessage("Contact Support"),
-    "tContactUs": MessageLookupByLibrary.simpleMessage("Contact US"),
+    "tContactUs": MessageLookupByLibrary.simpleMessage("Contact us"),
     "tCopy": MessageLookupByLibrary.simpleMessage("COPY"),
     "tCpr": MessageLookupByLibrary.simpleMessage("CPR"),
     "tDiabetics": MessageLookupByLibrary.simpleMessage("Diabetics"),
@@ -4769,7 +4861,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "tProfile": MessageLookupByLibrary.simpleMessage("Profile"),
     "tProfileHeader1": MessageLookupByLibrary.simpleMessage("Settings"),
     "tProfileHeader2": MessageLookupByLibrary.simpleMessage("Support"),
-    "tProfileHeader3": MessageLookupByLibrary.simpleMessage("Legal"),
+    "tProfileHeader3": MessageLookupByLibrary.simpleMessage("App information"),
     "tRecoveryPos": MessageLookupByLibrary.simpleMessage("Recovery Position"),
     "tRememberMe": MessageLookupByLibrary.simpleMessage("Remember Me?"),
     "tResetEmail": MessageLookupByLibrary.simpleMessage(
@@ -4802,11 +4894,11 @@ class MessageLookup extends MessageLookupByLibrary {
       "Your Quick Guide to First Aid & Emergency Care!",
     ),
     "tWelcomeTitle": MessageLookupByLibrary.simpleMessage(
-      "Welcome to PGU First Aid",
+      "Welcome to PSU First Aid",
     ),
     "tWoundCare": MessageLookupByLibrary.simpleMessage("Wound Care"),
     "taboutHeader": MessageLookupByLibrary.simpleMessage(
-      "The PGU First Aid App is designed to provide essential first aid information to users in emergency situations. Developed with students and the public in mind, this app offers easy-to-follow guides on handling common injuries and health emergencies.",
+      "PSU First Aid helps students and the wider community learn essential first aid, practice their knowledge and find useful guidance quickly.",
     ),
     "taboutHeader1": MessageLookupByLibrary.simpleMessage("Features:"),
     "taboutHeader2": MessageLookupByLibrary.simpleMessage(
@@ -4814,17 +4906,15 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "taboutHeader3": MessageLookupByLibrary.simpleMessage("Disclaimer:"),
     "taboutHeader4": MessageLookupByLibrary.simpleMessage("Contact Us:"),
-    "taboutPGUFA": MessageLookupByLibrary.simpleMessage(
-      "About PGU First Aid App",
-    ),
+    "taboutPGUFA": MessageLookupByLibrary.simpleMessage("About PSU First Aid"),
     "taboutParagraph": MessageLookupByLibrary.simpleMessage(
       "- Step-by-step instructions for first aid procedures.\n- Topics include CPR, burns, choking, fractures, bleeding, and more.\n- Offline access to vital information.\n- Clean and simple interface for quick navigation.",
     ),
     "taboutParagraph2": MessageLookupByLibrary.simpleMessage(
-      "This app was developed as part of a student project at PGU (Penza State University), with the goal of enhancing public safety awareness and response skills.",
+      "A student project at Penza State University (PSU), created to support first-aid learning and public safety awareness.",
     ),
     "taboutParagraph3": MessageLookupByLibrary.simpleMessage(
-      "This app is intended for educational purposes and general guidance only. It is not a substitute for professional medical advice or training. In a medical emergency, always contact emergency services or a healthcare professional.",
+      "This app supports first-aid education and general guidance. It does not replace professional medical advice or certified first-aid training. In an emergency, contact emergency services.",
     ),
     "taboutParagraph4": MessageLookupByLibrary.simpleMessage(
       "For feedback or inquiries, please contact:\nyvhiku@yandex.ru",
@@ -5030,34 +5120,36 @@ class MessageLookup extends MessageLookupByLibrary {
       "Please upload your profile photo",
     ),
     "tprivacyA1": MessageLookupByLibrary.simpleMessage(
-      "- Personal information you provide, such as your name and email when signing up.\n- Data related to app usage, saved topics, and preferences.",
+      "When you sign in, Firebase Authentication manages your account. Your profile may include your name, email, phone number if provided, bio and profile photo. Profile details and saved topics are stored in Firestore; uploaded profile photos are stored in Firebase Storage. Guest access uses an anonymous Firebase sign-in.",
     ),
     "tprivacyA2": MessageLookupByLibrary.simpleMessage(
-      "- To provide personalized features like saving topics.\n- To improve the app and user experience.\n- We do NOT share or sell your personal data to third parties.",
+      "The app stores language preferences, quiz progress, saved-topic copies and a local profile copy on your device. Viewed map tiles may also be cached. Signing out does not delete your cloud account or profile.",
     ),
     "tprivacyA3": MessageLookupByLibrary.simpleMessage(
-      "We use secure authentication (Firebase Auth) and encrypted cloud storage (Firebase Storage & Firestore) to keep your data safe.",
+      "Device location is requested when you choose “Use my location”. You can also search a chosen map area. Map and hospital-data requests send the viewed area or search center to OpenStreetMap tile services and Overpass data services. These providers receive network information such as your IP address. Search data may be held temporarily in memory; location is not saved to your account. The app does not track your location in the background.",
     ),
     "tprivacyA4": MessageLookupByLibrary.simpleMessage(
-      "- You can delete your account and all data at any time.\n- Contact us for any questions or data requests.",
+      "Firebase and sign-in providers process the information needed for authentication, profile storage and synchronization. Firebase also processes technical information for security and abuse prevention. Map services process requests needed to show tiles and hospital listings. These providers handle data under their own policies. External email, phone and directions actions open other apps or websites.",
     ),
     "tprivacyA5": MessageLookupByLibrary.simpleMessage(
-      "We may update this policy from time to time. We will notify you of any major changes.",
+      "You can edit your profile, remove saved topics and manage location permission in your device settings. For questions about access to or deletion of account data, contact support below. This version has no in-app account deletion control. Uninstalling the app does not delete information stored in your cloud account.",
     ),
     "tprivacyPolicy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
     "tprivacyPolicyHeader": MessageLookupByLibrary.simpleMessage(
-      "Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you use the First Aid App.",
+      "How PSU First Aid handles account details, saved guides, on-device preferences and hospital map requests.",
     ),
     "tprivacyQ1": MessageLookupByLibrary.simpleMessage(
-      "1. Information We Collect",
+      "Account and profile information",
     ),
-    "tprivacyQ2": MessageLookupByLibrary.simpleMessage(
-      "2. How We Use Your Information",
+    "tprivacyQ2": MessageLookupByLibrary.simpleMessage("Data on your device"),
+    "tprivacyQ3": MessageLookupByLibrary.simpleMessage(
+      "Location and hospital maps",
     ),
-    "tprivacyQ3": MessageLookupByLibrary.simpleMessage("3. Data Security"),
-    "tprivacyQ4": MessageLookupByLibrary.simpleMessage("4. Your Choices"),
+    "tprivacyQ4": MessageLookupByLibrary.simpleMessage(
+      "Services that process data",
+    ),
     "tprivacyQ5": MessageLookupByLibrary.simpleMessage(
-      "5. Changes to This Policy",
+      "Your choices and data requests",
     ),
     "tquestion": MessageLookupByLibrary.simpleMessage("question"),
     "tquestion1": MessageLookupByLibrary.simpleMessage(

@@ -1,4 +1,4 @@
-const String tWelcomeTitle = "Welcome to PGU First Aid";
+const String tWelcomeTitle = "Welcome to PSU First Aid";
 const String tWelcomeSubTitle =
     "Your Quick Guide to First Aid & Emergency Care!";
 const String tLogin = " Login";
@@ -74,7 +74,7 @@ const String tProfileHeader2 = "Support";
 const String tContactUs = "Contact US";
 const String tProfileHeader3 = "Legal";
 const String tPrivacyPol = "Privacy Policy";
-const String tAboutUs = "About PGU First Aid";
+const String tAboutUs = "About PSU First Aid";
 
 const String tPhoneNumber = "+79960808085";
 const String tTel = "tel";
@@ -126,9 +126,9 @@ const String tEmergencycall = 'EMERGENCY call';
 const String tAreyousure = 'Are you sure you want to call 112?';
 const String tCancel = 'Cancel';
 const String tCall = 'Call';
-const String tAboutPGUFA = 'About PGU First Aid App';
+const String tAboutPGUFA = 'About PSU First Aid App';
 const String taboutHeader =
-    'The PGU First Aid App is designed to provide essential first aid information to users in emergency situations. Developed with students and the public in mind, this app offers easy-to-follow guides on handling common injuries and health emergencies.';
+    "PSU First Aid helps students and the wider community learn essential first aid, practice their knowledge and find useful guidance quickly.";
 const String taboutHeader1 = 'Features:';
 const String taboutparagraph =
     '- Step-by-step instructions for first aid procedures.\n'
@@ -137,35 +137,31 @@ const String taboutparagraph =
     '- Clean and simple interface for quick navigation.';
 const String taboutHeader2 = 'Who Developed This App?';
 const String taboutparagraph2 =
-    'This app was developed as part of a student project at PGU (Penza State University), with the goal of enhancing public safety awareness and response skills.';
+    "A student project at Penza State University (PSU), created to support first-aid learning and public safety awareness.";
 const String taboutHeader3 = 'Disclaimer:';
 const String taboutparagraph3 =
-    'This app is intended for educational purposes and general guidance only. It is not a substitute for professional medical advice or training. In a medical emergency, always contact emergency services or a healthcare professional.';
+    "This app supports first-aid education and general guidance. It does not replace professional medical advice or certified first-aid training. In an emergency, contact emergency services.";
 const String taboutHeader4 = 'Contact Us:';
 const String taboutparagraph4 =
     'For feedback or inquiries, please contact:\nyvhiku@yandex.ru';
 const String tPrivacyPolicy = 'Privacy Policy';
 const String tPrivacyPolicyHeader =
-    'Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you use the First Aid App.';
-const String tPrivacyQ1 = '1. Information We Collect';
+    "How PSU First Aid handles account details, saved guides, on-device preferences and hospital map requests.";
+const String tPrivacyQ1 = "Account and profile information";
 const String tPrivacyA1 =
-    '- Personal information you provide, such as your name and email when signing up.\n'
-    '- Data related to app usage, saved topics, and preferences.';
-const String tPrivacyQ2 = '2. How We Use Your Information';
+    "When you sign in, Firebase Authentication manages your account. Your profile may include your name, email, phone number if provided, bio and profile photo. Profile details and saved topics are stored in Firestore; uploaded profile photos are stored in Firebase Storage. Guest access uses an anonymous Firebase sign-in.";
+const String tPrivacyQ2 = "Data on your device";
 const String tPrivacyA2 =
-    '- To provide personalized features like saving topics.\n'
-    '- To improve the app and user experience.\n'
-    '- We do NOT share or sell your personal data to third parties.';
-const String tPrivacyQ3 = '3. Data Security';
+    "The app stores language preferences, quiz progress, saved-topic copies and a local profile copy on your device. Viewed map tiles may also be cached. Signing out does not delete your cloud account or profile.";
+const String tPrivacyQ3 = "Location and hospital maps";
 const String tPrivacyA3 =
-    'We use secure authentication (Firebase Auth) and encrypted cloud storage (Firebase Storage & Firestore) to keep your data safe.';
-const String tPrivacyQ4 = '4. Your Choices';
+    "Device location is requested when you choose “Use my location”. You can also search a chosen map area. Map and hospital-data requests send the viewed area or search center to OpenStreetMap tile services and Overpass data services. These providers receive network information such as your IP address. Search data may be held temporarily in memory; location is not saved to your account. The app does not track your location in the background.";
+const String tPrivacyQ4 = "Services that process data";
 const String tPrivacyA4 =
-    '- You can delete your account and all data at any time.\n'
-    '- Contact us for any questions or data requests.';
-const String tPrivacyQ5 = '5. Changes to This Policy';
+    "Firebase and sign-in providers process the information needed for authentication, profile storage and synchronization. Firebase also processes technical information for security and abuse prevention. Map services process requests needed to show tiles and hospital listings. These providers handle data under their own policies. External email, phone and directions actions open other apps or websites.";
+const String tPrivacyQ5 = "Your choices and data requests";
 const String tPrivacyA5 =
-    'We may update this policy from time to time. We will notify you of any major changes.';
+    "You can edit your profile, remove saved topics and manage location permission in your device settings. For questions about access to or deletion of account data, contact support below. This version has no in-app account deletion control. Uninstalling the app does not delete information stored in your cloud account.";
 const String tcontactUsIn = 'Contact Us:\nyvhiku@yandex.ru';
 const String tUserNotFound = 'No user data found';
 const String tRetryLaoding = 'Retry Loading';
@@ -409,21 +405,29 @@ const String tMotetopics = 'More First Aid Topics';
 const String diabeticsTitle = 'Diabetics';
 const String diabeticsAppBarTitle = 'Diabetics';
 const String diabeticsHeader = 'Diabetic Emergency First Aid';
-const String diabeticsIntro = 'Recognizing and managing diabetic emergencies such as hypoglycemia (low blood sugar) is critical.';
+const String diabeticsIntro =
+    'Recognizing and managing diabetic emergencies such as hypoglycemia (low blood sugar) is critical.';
 const String diabeticsSignsTitle = 'Signs of Low Blood Sugar (Hypoglycemia):';
-const String diabeticsSignsList = '- Shakiness, sweating, confusion, dizziness, irritability, headache';
+const String diabeticsSignsList =
+    '- Shakiness, sweating, confusion, dizziness, irritability, headache';
 const String diabeticsStepsTitle = 'First Aid Steps:';
 const String diabeticsStep1Title = 'Check Responsiveness';
-const String diabeticsStep1Desc = 'If the person is conscious, ask if they have diabetes.';
+const String diabeticsStep1Desc =
+    'If the person is conscious, ask if they have diabetes.';
 const String diabeticsStep2Title = 'Give Sugar';
-const String diabeticsStep2Desc = 'Give 15-20 grams of fast-acting sugar (fruit juice, glucose tablets, candy).';
+const String diabeticsStep2Desc =
+    'Give 15-20 grams of fast-acting sugar (fruit juice, glucose tablets, candy).';
 const String diabeticsStep3Title = 'Wait and Monitor';
-const String diabeticsStep3Desc = 'Wait 15 minutes, then recheck symptoms. Repeat sugar intake if needed.';
+const String diabeticsStep3Desc =
+    'Wait 15 minutes, then recheck symptoms. Repeat sugar intake if needed.';
 const String diabeticsStep4Title = 'Call Emergency Services';
-const String diabeticsStep4Desc = 'If the person loses consciousness, becomes confused, or symptoms worsen, call for help immediately.';
+const String diabeticsStep4Desc =
+    'If the person loses consciousness, becomes confused, or symptoms worsen, call for help immediately.';
 const String diabeticsNotesTitle = 'Important Notes:';
-const String diabeticsNote1 = 'Do NOT give food or drink if the person is unconscious.';
-const String diabeticsNote2 = 'If unconscious, place in recovery position and call emergency services.';
+const String diabeticsNote1 =
+    'Do NOT give food or drink if the person is unconscious.';
+const String diabeticsNote2 =
+    'If unconscious, place in recovery position and call emergency services.';
 //drug_overdose
 const String drugOverdoseTitle = 'Drug Overdose';
 const String drugOverdoseMainHeading = 'Drug Overdose First Aid';
@@ -437,19 +441,24 @@ const String drugOverdoseSigns4 = '- Vomiting, pale or clammy skin';
 
 const String drugOverdoseStepsHeading = 'First Aid Steps:';
 const String drugOverdoseStep1Title = 'Call Emergency Services';
-const String drugOverdoseStep1Desc = 'Immediately call for professional medical help.';
+const String drugOverdoseStep1Desc =
+    'Immediately call for professional medical help.';
 
 const String drugOverdoseStep2Title = 'Ensure Safety';
-const String drugOverdoseStep2Desc = 'Make sure the person and yourself are safe from harm.';
+const String drugOverdoseStep2Desc =
+    'Make sure the person and yourself are safe from harm.';
 
 const String drugOverdoseStep3Title = 'Check Responsiveness and Breathing';
-const String drugOverdoseStep3Desc = 'If unresponsive, check if they are breathing.';
+const String drugOverdoseStep3Desc =
+    'If unresponsive, check if they are breathing.';
 
 const String drugOverdoseStep4Title = 'Perform CPR if Needed';
-const String drugOverdoseStep4Desc = 'If no breathing or pulse, start CPR until help arrives.';
+const String drugOverdoseStep4Desc =
+    'If no breathing or pulse, start CPR until help arrives.';
 
 const String drugOverdoseStep5Title = 'Place in Recovery Position';
-const String drugOverdoseStep5Desc = 'If breathing but unconscious, place on their side to keep airway clear.';
+const String drugOverdoseStep5Desc =
+    'If breathing but unconscious, place on their side to keep airway clear.';
 
 const String drugOverdoseImportantNotes = 'Important Notes:';
 const String drugOverdoseNote1 =
@@ -457,34 +466,32 @@ const String drugOverdoseNote1 =
 const String drugOverdoseNote2 =
     'Try to identify the substance involved to inform emergency responders.';
 
- const String title = 'Eye Injury';
-   const String heading = 'Eye Injury First Aid';
-   const String intro =
-      'Proper first aid for eye injuries can prevent further damage.';
-   const String typesHeading = 'Types of Eye Injuries:';
-   const String type1 = '- Foreign objects in the eye';
-   const String type2 = '- Chemical splashes';
-   const String type3 = '- Cuts or punctures';
+const String title = 'Eye Injury';
+const String heading = 'Eye Injury First Aid';
+const String intro =
+    'Proper first aid for eye injuries can prevent further damage.';
+const String typesHeading = 'Types of Eye Injuries:';
+const String type1 = '- Foreign objects in the eye';
+const String type2 = '- Chemical splashes';
+const String type3 = '- Cuts or punctures';
 
-   const String stepsHeading = 'First Aid Steps:';
-   const String step1Title = 'Do NOT Rub the Eye';
-   const String step1Desc = 'Rubbing can cause further damage.';
-   const String step2Title = 'Flush with Clean Water';
-   const String step2Desc =
-      'If chemicals or foreign particles are present, rinse eye gently with water for at least 15 minutes.';
-   const String step3Title = 'Cover the Eye';
-   const String step3Desc =
-      'Use a clean cloth or eye shield to protect the injured eye without applying pressure.';
-   const String step4Title = 'Seek Medical Attention';
-   const String step4Desc =
-      'For serious injuries or if pain persists, go to emergency care immediately.';
+const String stepsHeading = 'First Aid Steps:';
+const String step1Title = 'Do NOT Rub the Eye';
+const String step1Desc = 'Rubbing can cause further damage.';
+const String step2Title = 'Flush with Clean Water';
+const String step2Desc =
+    'If chemicals or foreign particles are present, rinse eye gently with water for at least 15 minutes.';
+const String step3Title = 'Cover the Eye';
+const String step3Desc =
+    'Use a clean cloth or eye shield to protect the injured eye without applying pressure.';
+const String step4Title = 'Seek Medical Attention';
+const String step4Desc =
+    'For serious injuries or if pain persists, go to emergency care immediately.';
 
-   const String notesHeading = 'Important Notes:';
-   const String note1 = 'Do not try to remove embedded objects.';
-   const String note2 =
-      'Avoid using any medication or ointment unless prescribed.';
-
-
+const String notesHeading = 'Important Notes:';
+const String note1 = 'Do not try to remove embedded objects.';
+const String note2 =
+    'Avoid using any medication or ointment unless prescribed.';
 
 // Strings for FracturesScreen
 const String fracturesTitle = 'Fractures';
@@ -500,7 +507,8 @@ const String fracturesSign4 = '- Difficulty moving the limb';
 
 const String fracturesStepsHeading = 'First Aid Steps:';
 const String fracturesStep1Title = 'Immobilize the Area';
-const String fracturesStep1Desc = 'Keep the injured area still and avoid movement.';
+const String fracturesStep1Desc =
+    'Keep the injured area still and avoid movement.';
 const String fracturesStep2Title = 'Apply a Splint';
 const String fracturesStep2Desc =
     'Use a padded splint to support the injury without forcing it into place.';
@@ -512,7 +520,8 @@ const String fracturesStep4Desc =
     'Call emergency services or take the person to hospital promptly.';
 
 const String fracturesNotesHeading = 'Important Notes:';
-const String fracturesNote1 = 'Do NOT try to realign the bone or push it back in place.';
+const String fracturesNote1 =
+    'Do NOT try to realign the bone or push it back in place.';
 const String fracturesNote2 =
     'If bleeding, apply pressure around the wound (not directly on the bone).';
 // Head Injury Screen Strings
@@ -523,34 +532,43 @@ const String headInjuryIntro =
 
 const String headInjuryStepsHeading = 'First Aid Steps:';
 const String headInjuryStep1Title = 'Keep the person still and calm.';
-const String headInjuryStep1Desc = 'Avoid moving the head or neck to prevent spinal injury.';
-const String headInjuryStep2Title = 'Check for any bleeding or wounds on the head.';
+const String headInjuryStep1Desc =
+    'Avoid moving the head or neck to prevent spinal injury.';
+const String headInjuryStep2Title =
+    'Check for any bleeding or wounds on the head.';
 const String headInjuryStep2Desc =
     'Apply gentle pressure with a clean cloth if bleeding is present.';
-const String headInjuryStep3Title = 'If the person is unconscious, ensure the airway is clear.';
+const String headInjuryStep3Title =
+    'If the person is unconscious, ensure the airway is clear.';
 const String headInjuryStep4Title =
     'If vomiting occurs, turn the person onto their side to prevent choking.';
 const String headInjuryStep5Title = 'Call emergency services immediately.';
 
 const String headInjuryNotesHeading = 'Important Notes:';
 const String headInjuryNote1 = 'Do not give the person food or drink.';
-const String headInjuryNote2 = 'Avoid applying ice or cold packs without medical advice.';
+const String headInjuryNote2 =
+    'Avoid applying ice or cold packs without medical advice.';
 // Titles and Headings
 const String heartConditionTitle = 'Heart Conditions';
 const String heartConditionHeading = 'Heart Conditions First Aid';
-const String heartConditionIntro = 'Immediate aid for heart conditions can save lives. Recognize symptoms and act quickly.';
+const String heartConditionIntro =
+    'Immediate aid for heart conditions can save lives. Recognize symptoms and act quickly.';
 const String heartConditionStepsHeading = 'First Aid Steps:';
 const String heartConditionNotesHeading = 'Important Notes:';
 
 // Steps
 const String heartConditionStep1 = 'Call emergency services immediately.';
-const String heartConditionStep2 = 'Help the person to rest in a comfortable position.';
+const String heartConditionStep2 =
+    'Help the person to rest in a comfortable position.';
 const String heartConditionStep3 = 'Loosen any tight clothing.';
-const String heartConditionStep4 = 'If the person is unconscious but breathing, place them in the recovery position.';
-const String heartConditionStep5 = 'If trained and the person is not breathing, start CPR immediately.';
+const String heartConditionStep4 =
+    'If the person is unconscious but breathing, place them in the recovery position.';
+const String heartConditionStep5 =
+    'If trained and the person is not breathing, start CPR immediately.';
 
 // Notes
-const String heartConditionNote1 = 'Do not give the person any medication unless prescribed.';
+const String heartConditionNote1 =
+    'Do not give the person any medication unless prescribed.';
 const String heartConditionNote2 = 'Stay calm and provide reassurance.';
 
 // Saved topics snackbar text
@@ -564,60 +582,86 @@ const String poisonStepsHeading = 'First Aid Steps:';
 const String poisonNotesHeading = 'Important Notes:';
 
 // Steps
-const String poisonStep1 = 'Remove the person from the source of poison if safe to do so.';
-const String poisonStep2 = 'Call emergency services immediately or a poison control center.';
-const String poisonStep3 = 'Check the person’s airway, breathing, and circulation.';
-const String poisonStep4 = 'If the person is unconscious and not breathing, begin CPR.';
-const String poisonStep5 = 'Do not induce vomiting unless instructed by a medical professional.';
+const String poisonStep1 =
+    'Remove the person from the source of poison if safe to do so.';
+const String poisonStep2 =
+    'Call emergency services immediately or a poison control center.';
+const String poisonStep3 =
+    'Check the person’s airway, breathing, and circulation.';
+const String poisonStep4 =
+    'If the person is unconscious and not breathing, begin CPR.';
+const String poisonStep5 =
+    'Do not induce vomiting unless instructed by a medical professional.';
 
 // Notes
-const String poisonNote1 = 'Try to identify the poison and keep the container or sample for medical staff.';
-const String poisonNote2 = 'Avoid giving food, drinks, or medications without medical advice.';
+const String poisonNote1 =
+    'Try to identify the poison and keep the container or sample for medical staff.';
+const String poisonNote2 =
+    'Avoid giving food, drinks, or medications without medical advice.';
 
 // Titles and Headings
 const String recoveryPositionTitle = 'Recovery Position';
 const String recoveryPositionHeading = 'Recovery Position';
-const String recoveryPositionIntro = 'The recovery position helps keep the airway clear and open. It also ensures that any fluids can drain from the mouth and prevents choking.';
-const String recoveryPositionStepsHeading = 'Steps to place someone in the recovery position:';
+const String recoveryPositionIntro =
+    'The recovery position helps keep the airway clear and open. It also ensures that any fluids can drain from the mouth and prevents choking.';
+const String recoveryPositionStepsHeading =
+    'Steps to place someone in the recovery position:';
 const String recoveryPositionImportantHeading = 'Important:';
 
 // Steps
 const String recoveryPositionStep1 = 'Kneel beside the person.';
-const String recoveryPositionStep2 = 'Place the arm nearest to you at a right angle to their body, with the elbow bent and the palm facing upwards.';
-const String recoveryPositionStep3 = 'Bring their far arm across the chest and hold the back of their hand against their cheek closest to you.';
+const String recoveryPositionStep2 =
+    'Place the arm nearest to you at a right angle to their body, with the elbow bent and the palm facing upwards.';
+const String recoveryPositionStep3 =
+    'Bring their far arm across the chest and hold the back of their hand against their cheek closest to you.';
 const String recoveryPositionStep4 = 'Bend the far knee up to a right angle.';
-const String recoveryPositionStep5 = 'Carefully roll the person onto their side by pulling on the bent knee.';
-const String recoveryPositionStep6 = 'Adjust the top leg so that both the hip and knee are bent at right angles.';
-const String recoveryPositionStep7 = 'Tilt the head back slightly to keep the airway open.';
-const String recoveryPositionStep8 = 'Make sure their mouth is open to allow any fluids to drain.';
+const String recoveryPositionStep5 =
+    'Carefully roll the person onto their side by pulling on the bent knee.';
+const String recoveryPositionStep6 =
+    'Adjust the top leg so that both the hip and knee are bent at right angles.';
+const String recoveryPositionStep7 =
+    'Tilt the head back slightly to keep the airway open.';
+const String recoveryPositionStep8 =
+    'Make sure their mouth is open to allow any fluids to drain.';
 
 // Important notes bullets
-const String recoveryPositionNote1 = 'Call emergency services if the person is unconscious.';
+const String recoveryPositionNote1 =
+    'Call emergency services if the person is unconscious.';
 const String recoveryPositionNote2 = 'Stay with the person until help arrives.';
 const String recoveryPositionNote3 = 'Check breathing regularly.';
 // Titles and Headings
 const String seizuresTitle = 'Seizures';
 const String seizuresHeading = 'Seizures';
-const String seizuresIntro = 'A seizure is a sudden, uncontrolled electrical disturbance in the brain. It can cause changes in behavior, movements, or consciousness.';
+const String seizuresIntro =
+    'A seizure is a sudden, uncontrolled electrical disturbance in the brain. It can cause changes in behavior, movements, or consciousness.';
 const String seizuresFirstAidHeading = 'First Aid for Seizures:';
 const String seizuresImportantHeading = 'Important:';
 
 // Steps
-const String seizuresStep1 = 'Stay calm and keep others away from the person to avoid injury.';
-const String seizuresStep2 = 'Protect their head by placing something soft underneath.';
-const String seizuresStep3 = 'Turn the person onto their side to keep the airway clear.';
-const String seizuresStep4 = 'Do not restrain their movements or put anything in their mouth.';
-const String seizuresStep5 = 'Time the seizure. If it lasts longer than 5 minutes, call emergency services.';
-const String seizuresStep6 = 'After the seizure, comfort and reassure the person as they regain consciousness.';
+const String seizuresStep1 =
+    'Stay calm and keep others away from the person to avoid injury.';
+const String seizuresStep2 =
+    'Protect their head by placing something soft underneath.';
+const String seizuresStep3 =
+    'Turn the person onto their side to keep the airway clear.';
+const String seizuresStep4 =
+    'Do not restrain their movements or put anything in their mouth.';
+const String seizuresStep5 =
+    'Time the seizure. If it lasts longer than 5 minutes, call emergency services.';
+const String seizuresStep6 =
+    'After the seizure, comfort and reassure the person as they regain consciousness.';
 
 // Important notes
-const String seizuresNote1 = 'Call emergency services if this is the person’s first seizure.';
-const String seizuresNote2 = 'Seek medical help if the person has trouble breathing or does not wake up after the seizure.';
+const String seizuresNote1 =
+    'Call emergency services if this is the person’s first seizure.';
+const String seizuresNote2 =
+    'Seek medical help if the person has trouble breathing or does not wake up after the seizure.';
 
 // Titles and Headings
 const String shockTitle = 'Shock';
 const String shockHeading = 'Shock';
-const String shockIntro = 'Shock is a life-threatening condition that occurs when the body is not getting enough blood flow, leading to organ failure.';
+const String shockIntro =
+    'Shock is a life-threatening condition that occurs when the body is not getting enough blood flow, leading to organ failure.';
 const String shockSignsHeading = 'Signs of Shock:';
 const String shockFirstAidHeading = 'First Aid for Shock:';
 
@@ -631,13 +675,16 @@ const String shockSign5 = 'Nausea or vomiting';
 // Steps
 const String shockStep1 = 'Call emergency services immediately.';
 const String shockStep2 = 'Lay the person down on their back.';
-const String shockStep3 = 'Elevate the legs about 12 inches unless there is an injury that prevents this.';
+const String shockStep3 =
+    'Elevate the legs about 12 inches unless there is an injury that prevents this.';
 const String shockStep4 = 'Keep the person warm and comfortable.';
 const String shockStep5 = 'Do not give the person anything to eat or drink.';
-const String shockStep6 = 'Monitor breathing and be prepared to perform CPR if necessary.';
+const String shockStep6 =
+    'Monitor breathing and be prepared to perform CPR if necessary.';
 
 const String spinalTitle = 'Spinal Injury';
-const String spinalIntro = 'A spinal injury involves damage to the spinal cord or bones of the spine, potentially leading to paralysis or loss of sensation.';
+const String spinalIntro =
+    'A spinal injury involves damage to the spinal cord or bones of the spine, potentially leading to paralysis or loss of sensation.';
 
 const String spinalSignsHeading = 'Signs of Spinal Injury:';
 const String spinalSign1 = 'Severe pain or pressure in neck or back';
@@ -648,61 +695,91 @@ const String spinalSign5 = 'Difficulty breathing';
 
 const String spinalFirstAidHeading = 'First Aid for Spinal Injury:';
 const String spinalStep1 = 'Call emergency services immediately.';
-const String spinalStep2 = 'Do not move the injured person unless absolutely necessary.';
-const String spinalStep3 = 'If movement is necessary, stabilize the head and neck to prevent further injury.';
+const String spinalStep2 =
+    'Do not move the injured person unless absolutely necessary.';
+const String spinalStep3 =
+    'If movement is necessary, stabilize the head and neck to prevent further injury.';
 const String spinalStep4 = 'Keep the person lying flat and still.';
-const String spinalStep5 = 'Monitor breathing and be prepared to perform CPR if necessary.';
+const String spinalStep5 =
+    'Monitor breathing and be prepared to perform CPR if necessary.';
 const String spinalStep6 = 'Reassure the injured person and keep them calm.';
 
 const String sprainsStrainsTitle = 'Sprains and Strains';
-const String sprainsStrainsIntro = 'Sprains are injuries to ligaments (tissue connecting bones), and strains are injuries to muscles or tendons.';
+const String sprainsStrainsIntro =
+    'Sprains are injuries to ligaments (tissue connecting bones), and strains are injuries to muscles or tendons.';
 
 const String sprainsStrainsSignsHeading = 'Signs:';
 const String sprainsStrainsSign1 = 'Pain and swelling';
 const String sprainsStrainsSign2 = 'Bruising or discoloration';
-const String sprainsStrainsSign3 = 'Limited ability to move the affected joint or muscle';
+const String sprainsStrainsSign3 =
+    'Limited ability to move the affected joint or muscle';
 const String sprainsStrainsSign4 = 'Muscle spasms or weakness';
 
-const String sprainsStrainsFirstAidHeading = 'First Aid for Sprains and Strains:';
-const String sprainsStrainsStep1 = 'Rest the injured area and avoid putting weight on it.';
-const String sprainsStrainsStep2 = 'Apply ice packs for 15-20 minutes every 2-3 hours to reduce swelling.';
-const String sprainsStrainsStep3 = 'Compress the area with an elastic bandage, but not too tightly.';
-const String sprainsStrainsStep4 = 'Elevate the injured limb above heart level to reduce swelling.';
-const String sprainsStrainsStep5 = 'Take over-the-counter pain relief if needed.';
-const String sprainsStrainsStep6 = 'Seek medical help if severe pain, swelling, or inability to move persists.';
+const String sprainsStrainsFirstAidHeading =
+    'First Aid for Sprains and Strains:';
+const String sprainsStrainsStep1 =
+    'Rest the injured area and avoid putting weight on it.';
+const String sprainsStrainsStep2 =
+    'Apply ice packs for 15-20 minutes every 2-3 hours to reduce swelling.';
+const String sprainsStrainsStep3 =
+    'Compress the area with an elastic bandage, but not too tightly.';
+const String sprainsStrainsStep4 =
+    'Elevate the injured limb above heart level to reduce swelling.';
+const String sprainsStrainsStep5 =
+    'Take over-the-counter pain relief if needed.';
+const String sprainsStrainsStep6 =
+    'Seek medical help if severe pain, swelling, or inability to move persists.';
 
 const String strokeTitle = 'Stroke';
-const String strokeIntro = 'A stroke occurs when blood flow to part of the brain is interrupted or reduced, depriving brain tissue of oxygen and nutrients.';
+const String strokeIntro =
+    'A stroke occurs when blood flow to part of the brain is interrupted or reduced, depriving brain tissue of oxygen and nutrients.';
 
 const String strokeSignsHeading = 'Signs and Symptoms:';
-const String strokeSign1 = 'Sudden numbness or weakness of face, arm, or leg, especially on one side of the body';
-const String strokeSign2 = 'Confusion, trouble speaking or understanding speech';
+const String strokeSign1 =
+    'Sudden numbness or weakness of face, arm, or leg, especially on one side of the body';
+const String strokeSign2 =
+    'Confusion, trouble speaking or understanding speech';
 const String strokeSign3 = 'Trouble seeing in one or both eyes';
-const String strokeSign4 = 'Difficulty walking, dizziness, loss of balance or coordination';
+const String strokeSign4 =
+    'Difficulty walking, dizziness, loss of balance or coordination';
 const String strokeSign5 = 'Severe headache with no known cause';
 
 const String strokeFirstAidHeading = 'First Aid for Stroke:';
-const String strokeStep1 = 'Call emergency services immediately. Time is critical.';
-const String strokeStep2 = 'Keep the person safe and comfortable; help them sit or lie down.';
-const String strokeStep3 = 'If unconscious but breathing, place in the recovery position.';
+const String strokeStep1 =
+    'Call emergency services immediately. Time is critical.';
+const String strokeStep2 =
+    'Keep the person safe and comfortable; help them sit or lie down.';
+const String strokeStep3 =
+    'If unconscious but breathing, place in the recovery position.';
 const String strokeStep4 = 'Do not give food, drink, or medication.';
-const String strokeStep5 = 'Monitor their breathing and responsiveness until help arrives.';
+const String strokeStep5 =
+    'Monitor their breathing and responsiveness until help arrives.';
 
 const String woundCareTitle = 'Wound Care';
-const String woundCareIntro = 'Proper wound care helps prevent infection and promotes faster healing.';
+const String woundCareIntro =
+    'Proper wound care helps prevent infection and promotes faster healing.';
 
 const String woundCareStepsHeading = 'Steps for Basic Wound Care:';
-const String woundCareStep1 = 'Wash your hands thoroughly before touching the wound.';
-const String woundCareStep2 = 'Stop the bleeding by applying gentle pressure with a clean cloth.';
-const String woundCareStep3 = 'Clean the wound with clean water. Avoid using hydrogen peroxide or iodine directly as they may damage tissue.';
-const String woundCareStep4 = 'Apply an antibiotic ointment to prevent infection.';
-const String woundCareStep5 = 'Cover the wound with a sterile bandage or dressing.';
-const String woundCareStep6 = 'Change the dressing daily or whenever it becomes wet or dirty.';
-const String woundCareStep7 = 'Watch for signs of infection: increased redness, swelling, warmth, pain, or pus.';
+const String woundCareStep1 =
+    'Wash your hands thoroughly before touching the wound.';
+const String woundCareStep2 =
+    'Stop the bleeding by applying gentle pressure with a clean cloth.';
+const String woundCareStep3 =
+    'Clean the wound with clean water. Avoid using hydrogen peroxide or iodine directly as they may damage tissue.';
+const String woundCareStep4 =
+    'Apply an antibiotic ointment to prevent infection.';
+const String woundCareStep5 =
+    'Cover the wound with a sterile bandage or dressing.';
+const String woundCareStep6 =
+    'Change the dressing daily or whenever it becomes wet or dirty.';
+const String woundCareStep7 =
+    'Watch for signs of infection: increased redness, swelling, warmth, pain, or pus.';
 
 const String woundCareMedicalHelpHeading = 'When to Seek Medical Help:';
-const String woundCareMedicalHelp1 = 'The wound is deep, large, or won’t stop bleeding.';
+const String woundCareMedicalHelp1 =
+    'The wound is deep, large, or won’t stop bleeding.';
 const String woundCareMedicalHelp2 = 'You see signs of infection.';
-const String woundCareMedicalHelp3 = 'The wound was caused by a dirty or rusty object, or an animal bite.';
-const String woundCareMedicalHelp4 = 'You have not had a tetanus shot in the last 5 years.';
-
+const String woundCareMedicalHelp3 =
+    'The wound was caused by a dirty or rusty object, or an animal bite.';
+const String woundCareMedicalHelp4 =
+    'You have not had a tetanus shot in the last 5 years.';

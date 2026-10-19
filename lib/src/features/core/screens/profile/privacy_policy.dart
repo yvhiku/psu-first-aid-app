@@ -1,81 +1,114 @@
 import 'package:first_aid_app/generated/l10n.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+import '../quizes/quiz_widgets.dart';
+import 'profile_widgets.dart';
 
-// Static screen that shows your app's privacy policy using localized strings
 class PrivacyPolicyScreen extends StatelessWidget {
   const PrivacyPolicyScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
-    // Base and bold styles for consistent text formatting
-    final baseStyle = TextStyle(fontFamily: 'Poppins', fontSize: 16);
-    final boldStyle = TextStyle(
-      fontFamily: 'Poppins',
-      fontSize: 16,
-      fontWeight: FontWeight.bold,
-    );
-
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          S.of(context).tprivacyPolicy,
-          style: TextStyle(fontFamily: 'Poppins'),
+    final s = S.of(context);
+    return ProfilePage(
+      title: s.tprivacyPolicy,
+      children: [
+        Container(
+          width: 60,
+          height: 60,
+          alignment: AlignmentDirectional.centerStart,
+          child: const Icon(
+            Icons.verified_user_outlined,
+            size: 40,
+            color: QuizColors.primary,
+          ),
         ),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: ListView(
+        const SizedBox(height: 12),
+        Text(
+          s.privacyHeadline,
+          style: const TextStyle(
+            fontSize: 25,
+            height: 1.3,
+            fontWeight: FontWeight.w800,
+          ),
+        ),
+        const SizedBox(height: 12),
+        Text(
+          s.tprivacyPolicyHeader,
+          style: const TextStyle(
+            fontSize: 15,
+            height: 1.7,
+            color: QuizColors.muted,
+          ),
+        ),
+        const SizedBox(height: 24),
+        InformationSection(
+          icon: Icons.person_outline_rounded,
+          title: s.tprivacyQ1,
+          body: s.tprivacyA1,
+        ),
+        InformationSection(
+          icon: Icons.phone_android_outlined,
+          title: s.tprivacyQ2,
+          body: s.tprivacyA2,
+        ),
+        InformationSection(
+          icon: Icons.location_on_outlined,
+          title: s.tprivacyQ3,
+          body: s.tprivacyA3,
+        ),
+        InformationSection(
+          icon: Icons.cloud_outlined,
+          title: s.tprivacyQ4,
+          body: s.tprivacyA4,
+        ),
+        InformationSection(
+          key: const Key('privacy-choices'),
+          icon: Icons.tune_rounded,
+          title: s.tprivacyQ5,
+          body: s.tprivacyA5,
+        ),
+        InformationSection(
+          icon: Icons.update_rounded,
+          title: s.privacyUpdatesTitle,
+          body: s.privacyUpdatesBody,
+        ),
+        ProfileSection(
+          title: s.privacyProvidersTitle,
           children: [
-            // Main title
-            Text(
-              S.of(context).tprivacyPolicy,
-              style: TextStyle(
-                fontFamily: 'Poppins',
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+            ProfileMenuItem(
+              icon: Icons.open_in_new_rounded,
+              title: 'Firebase',
+              onTap: () => _openProviderPolicy(
+                context,
+                Uri.parse('https://firebase.google.com/support/privacy'),
               ),
             ),
-            const SizedBox(height: 16),
-
-            // Introduction paragraph
-            Text(S.of(context).tprivacyPolicyHeader, style: baseStyle),
-            const SizedBox(height: 24),
-
-            // Question 1 section
-            Text(S.of(context).tprivacyQ1, style: boldStyle),
-            const SizedBox(height: 8),
-            Text(S.of(context).tprivacyA1, style: baseStyle),
-            const SizedBox(height: 24),
-
-            // Question 2 section
-            Text(S.of(context).tprivacyQ2, style: boldStyle),
-            const SizedBox(height: 8),
-            Text(S.of(context).tprivacyA2, style: baseStyle),
-            const SizedBox(height: 24),
-
-            // Question 3 section
-            Text(S.of(context).tprivacyQ3, style: boldStyle),
-            const SizedBox(height: 8),
-            Text(S.of(context).tprivacyA3, style: baseStyle),
-            const SizedBox(height: 24),
-
-            // Question 4 section
-            Text(S.of(context).tprivacyQ4, style: boldStyle),
-            const SizedBox(height: 8),
-            Text(S.of(context).tprivacyA4, style: baseStyle),
-            const SizedBox(height: 24),
-
-            // Question 5 section
-            Text(S.of(context).tprivacyQ5, style: boldStyle),
-            const SizedBox(height: 8),
-            Text(S.of(context).tprivacyA5, style: baseStyle),
-            const SizedBox(height: 24),
-
-            // Contact us footer
-            Text(S.of(context).tcontactUsIn, style: baseStyle),
+            ProfileMenuItem(
+              icon: Icons.open_in_new_rounded,
+              title: 'OpenStreetMap',
+              onTap: () => _openProviderPolicy(
+                context,
+                Uri.parse('https://osmfoundation.org/wiki/Privacy_Policy'),
+              ),
+            ),
           ],
         ),
-      ),
+        const SizedBox(height: 24),
+        const InformationContactCard(privacy: true),
+      ],
     );
+  }
+
+  Future<void> _openProviderPolicy(BuildContext context, Uri uri) async {
+    try {
+      if (await launchUrl(uri, mode: LaunchMode.externalApplication)) return;
+    } catch (_) {
+      /* Show the localized failure below. */
+    }
+    if (context.mounted) {
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text(S.of(context).profileLinkFailed)));
+    }
   }
 }

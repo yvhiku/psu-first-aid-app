@@ -20,30 +20,34 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ar';
 
-  static String m0(count) => "عدد الخطوات: ${count}";
+  static String m0(count) => "عدد المواضيع: ${count}";
 
-  static String m1(completed, total) =>
+  static String m1(count) => "أسئلة تدريبية: ${count}";
+
+  static String m2(count) => "عدد الخطوات: ${count}";
+
+  static String m3(completed, total) =>
       "أكملت ${completed} من ${total} اختبارًا";
 
-  static String m2(count) => "${count} موضوعًا";
+  static String m4(count) => "${count} موضوعًا";
 
-  static String m3(count) => "تم العثور على ${count} مستشفى";
+  static String m5(count) => "تم العثور على ${count} مستشفى";
 
-  static String m4(distance) => "يبعد ${distance} كم · بخط مستقيم";
+  static String m6(distance) => "يبعد ${distance} كم · بخط مستقيم";
 
-  static String m5(count) => "${count} كم";
+  static String m7(count) => "${count} كم";
 
-  static String m6(time) => "جُلبت البيانات في ${time}";
+  static String m8(time) => "جُلبت البيانات في ${time}";
 
-  static String m7(current, total) => "السؤال ${current} من ${total}";
+  static String m9(current, total) => "السؤال ${current} من ${total}";
 
-  static String m8(count) => "كل المحفوظات (${count})";
+  static String m10(count) => "كل المحفوظات (${count})";
 
-  static String m9(count) => "المحفوظة: ${count}";
+  static String m11(count) => "المحفوظة: ${count}";
 
-  static String m10(topic) => "إزالة ${topic} من المحفوظات";
+  static String m12(topic) => "إزالة ${topic} من المحفوظات";
 
-  static String m11(topic) => "أُزيل ${topic} من المحفوظات";
+  static String m13(topic) => "أُزيل ${topic} من المحفوظات";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
@@ -52,6 +56,41 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "ChokingTitle": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية للاختناق",
+    ),
+    "aboutGuidesCount": m0,
+    "aboutLearnBody": MessageLookupByLibrary.simpleMessage(
+      "إرشادات خطوة بخطوة للإصابات الشائعة والحالات الطبية الطارئة.",
+    ),
+    "aboutLearnTitle": MessageLookupByLibrary.simpleMessage("اقرأ الأدلة"),
+    "aboutMapBody": MessageLookupByLibrary.simpleMessage(
+      "ابحث في بيانات المستشفيات على الخريطة حول موقعك أو في منطقة تختارها. يلزم اتصال بالإنترنت.",
+    ),
+    "aboutMapTitle": MessageLookupByLibrary.simpleMessage(
+      "اعثر على مستشفيات قريبة",
+    ),
+    "aboutOfflineBody": MessageLookupByLibrary.simpleMessage(
+      "الأدلة والاختبارات مضمنة في التطبيق. يتطلب تسجيل الدخول والمزامنة السحابية وخرائط المستشفيات اتصالًا بالإنترنت.",
+    ),
+    "aboutOfflineTitle": MessageLookupByLibrary.simpleMessage(
+      "ما الذي يعمل دون إنترنت؟",
+    ),
+    "aboutPracticeBody": MessageLookupByLibrary.simpleMessage(
+      "اختبارات لكل موضوع مع ملاحظات وشروحات لكل إجابة.",
+    ),
+    "aboutPracticeTitle": MessageLookupByLibrary.simpleMessage("اختبر معرفتك"),
+    "aboutProjectTitle": MessageLookupByLibrary.simpleMessage("مشروع طلابي"),
+    "aboutQuizCount": m1,
+    "aboutSafetyTitle": MessageLookupByLibrary.simpleMessage(
+      "التعلم والرعاية في الطوارئ",
+    ),
+    "aboutSaveBody": MessageLookupByLibrary.simpleMessage(
+      "احفظ المواضيع المفيدة في حسابك للوصول إليها بسرعة.",
+    ),
+    "aboutSaveTitle": MessageLookupByLibrary.simpleMessage(
+      "احتفظ بالأدلة المهمة",
+    ),
+    "aboutTagline": MessageLookupByLibrary.simpleMessage(
+      "تعلّم. تدرّب. كن مستعدًا.",
     ),
     "addedToSavedTopics": MessageLookupByLibrary.simpleMessage(
       "تمت الإضافة إلى المواضيع المحفوظة",
@@ -237,6 +276,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "allergic_reactions_q9_opt4": MessageLookupByLibrary.simpleMessage(
       "أعطه حقنة مجهولة",
     ),
+    "appDisplayName": MessageLookupByLibrary.simpleMessage("PSU First Aid"),
     "areyousureyouwanttologout": MessageLookupByLibrary.simpleMessage(
       "هل أنت متأكد أنك تريد تسجيل الخروج؟",
     ),
@@ -2301,7 +2341,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "fractures_q9_opt4": MessageLookupByLibrary.simpleMessage("فقط مع نزف"),
     "guestProfileMessage": MessageLookupByLibrary.simpleMessage(
-      "أنت تتصفح كضيف.\nقم بتسجيل الدخول للوصول إلى ملفك الشخصي والإعدادات.",
+      "تصفح الأدلة والاختبارات كضيف. سجّل الدخول لإدارة ملفك الشخصي ومزامنة المواضيع المحفوظة.",
     ),
     "guideCall112": MessageLookupByLibrary.simpleMessage("اتصل بالرقم 112"),
     "guideEmergency": MessageLookupByLibrary.simpleMessage(
@@ -2313,7 +2353,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "guideSave": MessageLookupByLibrary.simpleMessage("حفظ الدليل"),
     "guideStepByStep": MessageLookupByLibrary.simpleMessage("دليل خطوة بخطوة"),
-    "guideStepCount": m0,
+    "guideStepCount": m2,
     "headInjuryHeading": MessageLookupByLibrary.simpleMessage(
       "الإسعافات الأولية لإصابات الرأس",
     ),
@@ -2768,17 +2808,17 @@ class MessageLookup extends MessageLookupByLibrary {
       "اعثر على الدليل الذي تحتاجه.",
     ),
     "homeQuickTitle": MessageLookupByLibrary.simpleMessage("أدلة إسعاف سريعة"),
-    "homeQuizProgress": m1,
+    "homeQuizProgress": m3,
     "homeTagline": MessageLookupByLibrary.simpleMessage(
       "معرفة بسيطة، ومساعدة تصنع فرقًا.",
     ),
-    "homeTopicCount": m2,
+    "homeTopicCount": m4,
     "homeUseLocation": MessageLookupByLibrary.simpleMessage("استخدم موقعي"),
     "hospitalCall": MessageLookupByLibrary.simpleMessage("الاتصال بالمستشفى"),
     "hospitalChooseArea": MessageLookupByLibrary.simpleMessage(
       "حرّك الخريطة وكبّرها ثم ابحث في المنطقة.",
     ),
-    "hospitalCount": m3,
+    "hospitalCount": m5,
     "hospitalDenied": MessageLookupByLibrary.simpleMessage(
       "لم يُسمح بالوصول للموقع. يمكنك اختيار منطقة على الخريطة بدلًا من ذلك.",
     ),
@@ -2786,7 +2826,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "إذن الموقع محظور. فعّله من إعدادات التطبيق أو اختر منطقة على الخريطة.",
     ),
     "hospitalDirections": MessageLookupByLibrary.simpleMessage("الاتجاهات"),
-    "hospitalDistance": m4,
+    "hospitalDistance": m6,
     "hospitalDistanceNote": MessageLookupByLibrary.simpleMessage(
       "المسافات تقديرية بخط مستقيم من مركز البحث. قد تكون البيانات ناقصة أو قديمة؛ توفر خدمة الطوارئ غير مُتحقّق منه.",
     ),
@@ -2830,7 +2870,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "تعذر تحميل بعض أجزاء الخريطة. لا تزال قائمة المستشفيات متاحة.",
     ),
     "hospitalRadius": MessageLookupByLibrary.simpleMessage("نطاق البحث"),
-    "hospitalRadiusKm": m5,
+    "hospitalRadiusKm": m7,
     "hospitalRateLimited": MessageLookupByLibrary.simpleMessage(
       "خدمة البحث عن المستشفيات مشغولة. حاول مجددًا بعد دقيقة.",
     ),
@@ -2841,7 +2881,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "hospitalSearchCenter": MessageLookupByLibrary.simpleMessage("مركز البحث"),
     "hospitalSettings": MessageLookupByLibrary.simpleMessage("فتح الإعدادات"),
     "hospitalUnnamed": MessageLookupByLibrary.simpleMessage("مستشفى"),
-    "hospitalUpdated": m6,
+    "hospitalUpdated": m8,
     "hospitalYou": MessageLookupByLibrary.simpleMessage("موقعك"),
     "intro": MessageLookupByLibrary.simpleMessage(
       "الكسر هو كسر في العظم. الإسعافات الأولية الصحيحة يمكن أن تمنع المضاعفات.",
@@ -3040,7 +3080,55 @@ class MessageLookup extends MessageLookupByLibrary {
     "poisons_q9_opt4": MessageLookupByLibrary.simpleMessage(
       "تذوقها للتعرف عليها",
     ),
+    "privacyContactBody": MessageLookupByLibrary.simpleMessage(
+      "استخدم بريد الدعم للاستفسارات المتعلقة بالخصوصية وطلبات بيانات الحساب.",
+    ),
+    "privacyContactTitle": MessageLookupByLibrary.simpleMessage(
+      "هل لديك أسئلة حول بياناتك؟",
+    ),
+    "privacyHeadline": MessageLookupByLibrary.simpleMessage("بياناتك بوضوح"),
+    "privacyProvidersTitle": MessageLookupByLibrary.simpleMessage(
+      "خصوصية مزودي الخدمات",
+    ),
+    "privacyUpdatesBody": MessageLookupByLibrary.simpleMessage(
+      "قد تتغير هذه السياسة عند تغيير ميزات التطبيق أو طريقة التعامل مع البيانات. راجع هذه الشاشة للاطلاع على النص الحالي.",
+    ),
+    "privacyUpdatesTitle": MessageLookupByLibrary.simpleMessage(
+      "تغييرات هذه السياسة",
+    ),
     "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
+    "profileContactBody": MessageLookupByLibrary.simpleMessage(
+      "الأسئلة والملاحظات وطلبات البيانات",
+    ),
+    "profileEditBody": MessageLookupByLibrary.simpleMessage(
+      "الاسم والصورة والنبذة",
+    ),
+    "profileGuestTitle": MessageLookupByLibrary.simpleMessage("مرحبًا بك كضيف"),
+    "profileIntro": MessageLookupByLibrary.simpleMessage(
+      "حسابك وتفضيلاتك ومعلومات التطبيق.",
+    ),
+    "profileLinkFailed": MessageLookupByLibrary.simpleMessage(
+      "تعذر فتح الرابط. حاول مجددًا.",
+    ),
+    "profileLoadFailed": MessageLookupByLibrary.simpleMessage(
+      "تعذر تحميل ملفك الشخصي",
+    ),
+    "profileLoading": MessageLookupByLibrary.simpleMessage(
+      "جارٍ تحميل ملفك الشخصي…",
+    ),
+    "profileLogoutFailed": MessageLookupByLibrary.simpleMessage(
+      "تعذر تسجيل الخروج. حاول مجددًا.",
+    ),
+    "profileMember": MessageLookupByLibrary.simpleMessage("ملفك الشخصي"),
+    "profilePrivacyBody": MessageLookupByLibrary.simpleMessage(
+      "الحسابات والأدلة المحفوظة والموقع",
+    ),
+    "profileRetryBody": MessageLookupByLibrary.simpleMessage(
+      "حاول مجددًا لتحميل بيانات حسابك. يمكنك استخدام الإعدادات والمعلومات أدناه.",
+    ),
+    "psuUniversity": MessageLookupByLibrary.simpleMessage(
+      "جامعة بينزا الحكومية",
+    ),
     "quizUiAccuracy": MessageLookupByLibrary.simpleMessage("الدقة"),
     "quizUiActive": MessageLookupByLibrary.simpleMessage("جلسة الاختبار"),
     "quizUiAnswer": MessageLookupByLibrary.simpleMessage("الإجابة الصحيحة"),
@@ -3051,7 +3139,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "quizUiConfirm": MessageLookupByLibrary.simpleMessage("تأكيد الإجابة"),
     "quizUiCorrect": MessageLookupByLibrary.simpleMessage("إجابة صحيحة"),
     "quizUiCorrectMetric": MessageLookupByLibrary.simpleMessage("الصحيح"),
-    "quizUiCount": m7,
+    "quizUiCount": m9,
     "quizUiEducationalNotice": MessageLookupByLibrary.simpleMessage(
       "محتوى تعليمي فقط. اتبع إرشادات الطوارئ المحلية والتدريب المعتمد الحديث في الإسعافات الأولية.",
     ),
@@ -3344,7 +3432,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "savedActionError": MessageLookupByLibrary.simpleMessage(
       "تعذر تحديث المواضيع المحفوظة. حاول مجددًا.",
     ),
-    "savedAllFilter": m8,
+    "savedAllFilter": m10,
     "savedChooseQuiz": MessageLookupByLibrary.simpleMessage("اختر اختبارًا"),
     "savedClearBody": MessageLookupByLibrary.simpleMessage(
       "سيزيل هذا علامات الحفظ. ستظل الأدلة متاحة في صفحة المواضيع.",
@@ -3353,7 +3441,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "savedClearTitle": MessageLookupByLibrary.simpleMessage(
       "مسح المواضيع المحفوظة؟",
     ),
-    "savedCount": m9,
+    "savedCount": m11,
     "savedEmptyBody": MessageLookupByLibrary.simpleMessage(
       "احفظ المواضيع التي تريد الوصول إليها بسرعة. افتح الدليل واضغط على علامة الحفظ ليظهر هنا.",
     ),
@@ -3391,8 +3479,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "savedPracticeTitle": MessageLookupByLibrary.simpleMessage(
       "تدرّب على مواضيعك المحفوظة",
     ),
-    "savedRemoveTooltip": m10,
-    "savedRemovedMessage": m11,
+    "savedRemoveTooltip": m12,
+    "savedRemovedMessage": m13,
     "savedResetFilters": MessageLookupByLibrary.simpleMessage(
       "عرض كل المواضيع المحفوظة",
     ),
@@ -4356,9 +4444,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "stroke_q9_opt3": MessageLookupByLibrary.simpleMessage("أثناء النوم فقط"),
     "stroke_q9_opt4": MessageLookupByLibrary.simpleMessage("بعد سقوط فقط"),
-    "tAboutUs": MessageLookupByLibrary.simpleMessage(
-      "حول تطبيق PGU للإسعافات الأولية",
-    ),
+    "tAboutUs": MessageLookupByLibrary.simpleMessage("حول PSU First Aid"),
     "tAllTopics": MessageLookupByLibrary.simpleMessage("جميع المواضيع"),
     "tAllergicReaction": MessageLookupByLibrary.simpleMessage("الحساسية"),
     "tAlreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
@@ -4423,7 +4509,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "tConfirmPass": MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
     "tContactSupport": MessageLookupByLibrary.simpleMessage("اتصل بالدعم"),
-    "tContactUs": MessageLookupByLibrary.simpleMessage("اتصل بنا"),
+    "tContactUs": MessageLookupByLibrary.simpleMessage("تواصل معنا"),
     "tCopy": MessageLookupByLibrary.simpleMessage("نسخ"),
     "tCpr": MessageLookupByLibrary.simpleMessage("إنعاش القلب"),
     "tDiabetics": MessageLookupByLibrary.simpleMessage("السكري"),
@@ -4476,7 +4562,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "tProfile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
     "tProfileHeader1": MessageLookupByLibrary.simpleMessage("الإعدادات"),
     "tProfileHeader2": MessageLookupByLibrary.simpleMessage("الدعم"),
-    "tProfileHeader3": MessageLookupByLibrary.simpleMessage("قانوني"),
+    "tProfileHeader3": MessageLookupByLibrary.simpleMessage("معلومات التطبيق"),
     "tRecoveryPos": MessageLookupByLibrary.simpleMessage("وضعية التعافي"),
     "tRememberMe": MessageLookupByLibrary.simpleMessage("تذكرني؟"),
     "tResetEmail": MessageLookupByLibrary.simpleMessage(
@@ -4509,11 +4595,11 @@ class MessageLookup extends MessageLookupByLibrary {
       "دليلك السريع للإسعافات الأولية والرعاية الطارئة!",
     ),
     "tWelcomeTitle": MessageLookupByLibrary.simpleMessage(
-      "مرحبًا بكم في الإسعافات الأولية PGU",
+      "مرحبًا بكم في الإسعافات الأولية PSU",
     ),
     "tWoundCare": MessageLookupByLibrary.simpleMessage("العناية بالجروح"),
     "taboutHeader": MessageLookupByLibrary.simpleMessage(
-      "تم تصميم تطبيق PGU للإسعافات الأولية لتقديم معلومات أساسية عن الإسعافات الأولية للمستخدمين في حالات الطوارئ. تم تطوير هذا التطبيق مع وضع الطلاب والجمهور في الاعتبار، حيث يوفر أدلة سهلة المتابعة للتعامل مع الإصابات وحالات الطوارئ الصحية الشائعة.",
+      "يساعد PSU First Aid الطلاب وأفراد المجتمع على تعلم أساسيات الإسعافات الأولية واختبار معرفتهم والوصول بسرعة إلى إرشادات مفيدة.",
     ),
     "taboutHeader1": MessageLookupByLibrary.simpleMessage("الميزات:"),
     "taboutHeader2": MessageLookupByLibrary.simpleMessage(
@@ -4521,17 +4607,15 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "taboutHeader3": MessageLookupByLibrary.simpleMessage("إخلاء المسؤولية:"),
     "taboutHeader4": MessageLookupByLibrary.simpleMessage("اتصل بنا:"),
-    "taboutPGUFA": MessageLookupByLibrary.simpleMessage(
-      "حول تطبيق PGU للإسعافات الأولية",
-    ),
+    "taboutPGUFA": MessageLookupByLibrary.simpleMessage("حول PSU First Aid"),
     "taboutParagraph": MessageLookupByLibrary.simpleMessage(
       "- تعليمات خطوة بخطوة لإجراءات الإسعافات الأولية.\n- مواضيع تشمل إنعاش القلب والرئتين، الحروق، الاختناق، الكسور، النزيف، والمزيد.\n- الوصول إلى المعلومات الحيوية دون اتصال بالإنترنت.\n- واجهة بسيطة وسهلة للتنقل السريع.",
     ),
     "taboutParagraph2": MessageLookupByLibrary.simpleMessage(
-      "تم تطوير هذا التطبيق كجزء من مشروع طلابي في جامعة بينزا الحكومية (PGU)، بهدف تعزيز الوعي العام بمهارات السلامة والاستجابة.",
+      "مشروع طلابي في جامعة بينزا الحكومية (PSU)، أُنشئ لدعم تعلم الإسعافات الأولية وتعزيز الوعي بالسلامة العامة.",
     ),
     "taboutParagraph3": MessageLookupByLibrary.simpleMessage(
-      "يهدف هذا التطبيق إلى الأغراض التعليمية والإرشاد العام فقط. وهو ليس بديلاً عن المشورة الطبية المهنية أو التدريب. في حالات الطوارئ الطبية، اتصل دائمًا بخدمات الطوارئ أو أخصائي الرعاية الصحية.",
+      "يدعم هذا التطبيق تعلم الإسعافات الأولية ويقدم إرشادات عامة. ولا يحل محل المشورة الطبية المتخصصة أو التدريب المعتمد على الإسعافات الأولية. في حالات الطوارئ، اتصل بخدمات الطوارئ.",
     ),
     "taboutParagraph4": MessageLookupByLibrary.simpleMessage(
       "للتعليقات أو الاستفسارات، يرجى الاتصال:\nyvhiku@yandex.ru",
@@ -4735,34 +4819,36 @@ class MessageLookup extends MessageLookupByLibrary {
       "يرجى تحميل صورة الملف الشخصي",
     ),
     "tprivacyA1": MessageLookupByLibrary.simpleMessage(
-      "- المعلومات الشخصية التي تقدمها، مثل اسمك وبريدك الإلكتروني عند التسجيل.\n- البيانات المتعلقة باستخدام التطبيق، المواضيع المحفوظة، والتفضيلات.",
+      "عند تسجيل الدخول، تدير Firebase Authentication حسابك. قد يتضمن ملفك اسمك وبريدك الإلكتروني ورقم هاتفك إن قدمته ونبذتك وصورتك. تُخزن بيانات الملف والمواضيع المحفوظة في Firestore، والصور المرفوعة في Firebase Storage. يستخدم وضع الضيف تسجيل دخول مجهولًا عبر Firebase.",
     ),
     "tprivacyA2": MessageLookupByLibrary.simpleMessage(
-      "- لتوفير ميزات مخصصة مثل حفظ المواضيع.\n- لتحسين التطبيق وتجربة المستخدم.\n- نحن لا نشارك أو نبيع بياناتك الشخصية لأطراف ثالثة.",
+      "يخزن التطبيق على جهازك تفضيلات اللغة وتقدم الاختبارات ونسخًا من المواضيع المحفوظة ونسخة محلية من ملفك الشخصي. وقد تُخزن أجزاء الخرائط المعروضة مؤقتًا أيضًا. لا يؤدي تسجيل الخروج إلى حذف حسابك أو ملفك السحابي.",
     ),
     "tprivacyA3": MessageLookupByLibrary.simpleMessage(
-      "نستخدم مصادقة آمنة (Firebase Auth) وتخزين سحابي مشفر (Firebase Storage & Firestore) لحماية بياناتك.",
+      "يُطلب موقع الجهاز عند اختيار «استخدم موقعي». ويمكنك البحث في منطقة تختارها على الخريطة. ترسل طلبات الخرائط وبيانات المستشفيات المنطقة المعروضة أو مركز البحث إلى خدمات خرائط OpenStreetMap وخدمات بيانات Overpass. تتلقى هذه الخدمات معلومات الشبكة مثل عنوان IP. قد تُحتفظ بيانات البحث مؤقتًا في الذاكرة، ولا يُحفظ موقعك في حسابك. لا يتتبع التطبيق موقعك في الخلفية.",
     ),
     "tprivacyA4": MessageLookupByLibrary.simpleMessage(
-      "- يمكنك حذف حسابك وبياناتك في أي وقت.\n- اتصل بنا لأي استفسارات أو طلبات بيانات.",
+      "تعالج Firebase ومزودو تسجيل الدخول المعلومات اللازمة للمصادقة وتخزين الملف والمزامنة. وتعالج Firebase أيضًا معلومات تقنية للأمان ومنع إساءة الاستخدام. وتعالج خدمات الخرائط الطلبات اللازمة لعرض الخرائط وبيانات المستشفيات. تتعامل هذه الخدمات مع البيانات وفق سياساتها الخاصة. تفتح إجراءات البريد والهاتف والاتجاهات تطبيقات أو مواقع أخرى.",
     ),
     "tprivacyA5": MessageLookupByLibrary.simpleMessage(
-      "قد نقوم بتحديث هذه السياسة من وقت لآخر. وسنخطرك بأي تغييرات كبيرة.",
+      "يمكنك تعديل ملفك وإزالة المواضيع المحفوظة وإدارة إذن الموقع من إعدادات جهازك. للأسئلة المتعلقة بالوصول إلى بيانات الحساب أو حذفها، تواصل مع الدعم أدناه. لا يتوفر في هذا الإصدار زر لحذف الحساب داخل التطبيق. لا يؤدي إلغاء تثبيت التطبيق إلى حذف بيانات حسابك السحابي.",
     ),
     "tprivacyPolicy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
     "tprivacyPolicyHeader": MessageLookupByLibrary.simpleMessage(
-      "خصوصيتك مهمة بالنسبة لنا. توضح سياسة الخصوصية هذه كيفية جمعنا واستخدامنا وحماية معلوماتك عند استخدام تطبيق الإسعافات الأولية.",
+      "كيف يتعامل PSU First Aid مع بيانات الحساب والأدلة المحفوظة والتفضيلات على الجهاز وطلبات خريطة المستشفيات.",
     ),
     "tprivacyQ1": MessageLookupByLibrary.simpleMessage(
-      "1. المعلومات التي نجمعها",
+      "معلومات الحساب والملف الشخصي",
     ),
-    "tprivacyQ2": MessageLookupByLibrary.simpleMessage(
-      "2. كيفية استخدام معلوماتك",
+    "tprivacyQ2": MessageLookupByLibrary.simpleMessage("البيانات على جهازك"),
+    "tprivacyQ3": MessageLookupByLibrary.simpleMessage(
+      "الموقع وخرائط المستشفيات",
     ),
-    "tprivacyQ3": MessageLookupByLibrary.simpleMessage("3. أمان البيانات"),
-    "tprivacyQ4": MessageLookupByLibrary.simpleMessage("4. خياراتك"),
+    "tprivacyQ4": MessageLookupByLibrary.simpleMessage(
+      "الخدمات التي تعالج البيانات",
+    ),
     "tprivacyQ5": MessageLookupByLibrary.simpleMessage(
-      "5. التغييرات على هذه السياسة",
+      "خياراتك وطلبات البيانات",
     ),
     "tquestion": MessageLookupByLibrary.simpleMessage("سؤال"),
     "tquestion1": MessageLookupByLibrary.simpleMessage(
